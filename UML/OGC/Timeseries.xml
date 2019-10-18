@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xmi:XMI xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:GML="http://www.sparxsystems.com/profiles/GML/1.0" xmlns:thecustomprofile="http://www.sparxsystems.com/profiles/thecustomprofile/1.0">
+	<xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5"/>
+	<uml:Model xmi:type="uml:Model" name="EA_Model" visibility="public">
+		<packagedElement xmi:type="uml:Package" xmi:id="EAPK_933BBBD7_EDB3_4b58_AFAC_A53A22C703DD" name="OGC TimeseriesML" visibility="public">
+			<packagedElement xmi:type="uml:Class" xmi:id="EAID_6210A339_83E6_4d60_BEBF_779099B92D5E" name="TimeseriesDomainRange" visibility="public"/>
+			<packagedElement xmi:type="uml:Association" xmi:id="EAID_4E78B3B8_5EB8_4656_9059_13160B2DC00B" visibility="public">
+				<memberEnd xmi:idref="EAID_dst78B3B8_5EB8_4656_9059_13160B2DC00B"/>
+				<memberEnd xmi:idref="EAID_src78B3B8_5EB8_4656_9059_13160B2DC00B"/>
+				<ownedEnd xmi:type="uml:Property" xmi:id="EAID_src78B3B8_5EB8_4656_9059_13160B2DC00B" visibility="public" association="EAID_4E78B3B8_5EB8_4656_9059_13160B2DC00B" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="none">
+					<type xmi:idref="EAID_3BCEAE64_F977_46b5_A08C_A29D52216B04"/>
+				</ownedEnd>
+			</packagedElement>
+			<packagedElement xmi:type="uml:Class" xmi:id="EAID_48A22857_2C51_42af_9DDC_A471997CAFAA" name="TimeseriesTVP" visibility="public"/>
+			<packagedElement xmi:type="uml:Association" xmi:id="EAID_CA6ED5DE_D5B5_4e29_924B_1B385F1D3308" visibility="public">
+				<memberEnd xmi:idref="EAID_dst6ED5DE_D5B5_4e29_924B_1B385F1D3308"/>
+				<memberEnd xmi:idref="EAID_src6ED5DE_D5B5_4e29_924B_1B385F1D3308"/>
+				<ownedEnd xmi:type="uml:Property" xmi:id="EAID_src6ED5DE_D5B5_4e29_924B_1B385F1D3308" visibility="public" association="EAID_CA6ED5DE_D5B5_4e29_924B_1B385F1D3308" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="none">
+					<type xmi:idref="EAID_3BCEAE64_F977_46b5_A08C_A29D52216B04"/>
+				</ownedEnd>
+			</packagedElement>
+		</packagedElement>
+		<thecustomprofile:UML_Profile_for_GML_Applications_Schemas__FeatureType base_Class="EAID_6210A339_83E6_4d60_BEBF_779099B92D5E" __EAStereoName="UML Profile for GML Applications Schemas::FeatureType"/>
+		<GML:FeatureType base_Class="EAID_6210A339_83E6_4d60_BEBF_779099B92D5E" noPropertyType="false" isCollection="false" byValuePropertyType="false"/>
+		<thecustomprofile:UML_Profile_for_GML_Applications_Schemas__FeatureType base_Class="EAID_48A22857_2C51_42af_9DDC_A471997CAFAA" __EAStereoName="UML Profile for GML Applications Schemas::FeatureType"/>
+		<GML:FeatureType base_Class="EAID_48A22857_2C51_42af_9DDC_A471997CAFAA" noPropertyType="false" isCollection="false" byValuePropertyType="false"/>
+	</uml:Model>
+	<xmi:Extension extender="Enterprise Architect" extenderID="6.5">
+		<elements>
+			<element xmi:idref="EAPK_933BBBD7_EDB3_4b58_AFAC_A53A22C703DD" xmi:type="uml:Package" name="OGC TimeseriesML" scope="public">
+				<model package2="EAID_933BBBD7_EDB3_4b58_AFAC_A53A22C703DD" package="EAPK_7782B785_5E24_4371_BC18_F660E2B6E094" tpos="0" ea_localid="811" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="kolbe/kutzner" version="1.0" phase="1.0" created="2017-12-13 14:14:00" modified="2017-12-23 00:05:18" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="OGC"/>
+				<packageproperties version="1.0"/>
+				<paths/>
+				<times created="2017-12-13 14:14:00" modified="2017-12-23 00:11:27"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAID_6210A339_83E6_4d60_BEBF_779099B92D5E" xmi:type="uml:Class" name="TimeseriesDomainRange" scope="public">
+				<model package="EAPK_933BBBD7_EDB3_4b58_AFAC_A53A22C703DD" tpos="0" ea_localid="7745" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Class" nType="0" scope="public" stereotype="FeatureType" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="kolbe/kutzner" version="1.0" phase="1.0" created="2017-12-13 14:21:44" modified="2017-12-23 00:05:34" complexity="1" status="Proposed"/>
+				<code product_name="Java" gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_ED33D65F_2D66_502d_9CB8_C96B9BD4FAA3" name="byValuePropertyType" value="false#NOTES#Values: true | false&#xA;Default: false&#xA;Description: Create a property type that requires that the instance is encoded inline (applies to ISO 19136:2007 encoding rule).&#xA;" modelElement="EAID_6210A339_83E6_4d60_BEBF_779099B92D5E"/>
+					<tag xmi:id="EAID_26B33348_746F_d874_BABA_8048CB1CFD52" name="isCollection" value="false#NOTES#Values: true | false&#xA;Default: false&#xA;Description: Identifies the feature type as a feature collection.&#xA;" modelElement="EAID_6210A339_83E6_4d60_BEBF_779099B92D5E"/>
+					<tag xmi:id="EAID_F9638764_222B_cc22_89F9_B07DE92A0761" name="noPropertyType" value="false#NOTES#Values: true | false&#xA;Default: false&#xA;Description: Surpress creation of a standard property type that supports inline or by-reference encoding (applies to ISO 19136:2007 encoding rule).&#xA;" modelElement="EAID_6210A339_83E6_4d60_BEBF_779099B92D5E"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={0BAB199C-D4FF-4279-96F1-BB7742659C64}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=FeatureType;GUID={AD2C92CF-CE91-452c-8673-79ADC0F6E088};FQName=UML Profile for GML Applications Schemas::FeatureType;@ENDSTEREO;$DES;$CLT={6210A339-83E6-4d60-BEBF-779099B92D5E}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="OGC TimeseriesML"/>
+				<links>
+					<Association xmi:id="EAID_4E78B3B8_5EB8_4656_9059_13160B2DC00B" start="EAID_3BCEAE64_F977_46b5_A08C_A29D52216B04" end="EAID_6210A339_83E6_4d60_BEBF_779099B92D5E"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_48A22857_2C51_42af_9DDC_A471997CAFAA" xmi:type="uml:Class" name="TimeseriesTVP" scope="public">
+				<model package="EAPK_933BBBD7_EDB3_4b58_AFAC_A53A22C703DD" tpos="0" ea_localid="7744" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Class" nType="0" scope="public" stereotype="FeatureType" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="kolbe/kutzner" version="1.0" phase="1.0" created="2017-12-13 14:21:34" modified="2017-12-23 00:21:52" complexity="1" status="Proposed"/>
+				<code product_name="Java" gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_ED33D65F_2D66_502d_B853_0BD2C4527261" name="byValuePropertyType" value="false#NOTES#Values: true | false&#xA;Default: false&#xA;Description: Create a property type that requires that the instance is encoded inline (applies to ISO 19136:2007 encoding rule).&#xA;" modelElement="EAID_48A22857_2C51_42af_9DDC_A471997CAFAA"/>
+					<tag xmi:id="EAID_26B33348_746F_d874_A342_6BA9404CD9AB" name="isCollection" value="false#NOTES#Values: true | false&#xA;Default: false&#xA;Description: Identifies the feature type as a feature collection.&#xA;" modelElement="EAID_48A22857_2C51_42af_9DDC_A471997CAFAA"/>
+					<tag xmi:id="EAID_F9638764_222B_cc22_8348_7998E003F6E6" name="noPropertyType" value="false#NOTES#Values: true | false&#xA;Default: false&#xA;Description: Surpress creation of a standard property type that supports inline or by-reference encoding (applies to ISO 19136:2007 encoding rule).&#xA;" modelElement="EAID_48A22857_2C51_42af_9DDC_A471997CAFAA"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={94E10BF1-DE51-48e1-B375-9A57C7470C7E}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=FeatureType;GUID={AD2C92CF-CE91-452c-8673-79ADC0F6E088};FQName=UML Profile for GML Applications Schemas::FeatureType;@ENDSTEREO;$DES;$CLT={48A22857-2C51-42af-9DDC-A471997CAFAA}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="OGC TimeseriesML"/>
+				<links>
+					<Association xmi:id="EAID_CA6ED5DE_D5B5_4e29_924B_1B385F1D3308" start="EAID_3BCEAE64_F977_46b5_A08C_A29D52216B04" end="EAID_48A22857_2C51_42af_9DDC_A471997CAFAA"/>
+				</links>
+			</element>
+		</elements>
+		<connectors>
+			<connector xmi:idref="EAID_4E78B3B8_5EB8_4656_9059_13160B2DC00B">
+				<source xmi:idref="EAID_3BCEAE64_F977_46b5_A08C_A29D52216B04">
+					<model ea_localid="7732" type="Class" name="AtomicTimeseries"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="composite" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_6210A339_83E6_4d60_BEBF_779099B92D5E">
+					<model ea_localid="7745" type="Class" name="TimeseriesDomainRange"/>
+					<role name="dynamicDataDR" stereotype="Property" visibility="Public" targetScope="instance"/>
+					<type multiplicity="0..1" aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs value="$XREFPROP=$XID={CE0C2D7C-C6BE-4e4c-803B-BEFBB98119C0}$XID;$NAM=Stereotypes$NAM;$TYP=connectorDestEnd property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Property;FQName=CityGML::Property;@ENDSTEREO;$DES;$CLT={4E78B3B8-5EB8-4656-9059-13160B2DC00B}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+					<tags>
+						<tag xmi:id="EAID_08A8199D_FE63_35fe_92B8_600B69F9E6E1" name="isMetadata" value="false$ea_notes=Values: True,False&#xA;Default: false&#xA;Description: Indicates whether the property is considered metadata about the instance - and not information about the phenomenon in the real world.&#xA;"/>
+						<tag xmi:id="EAID_37DFCA0A_B550_b0b5_9C57_C79C24180C6C" name="inlineOrByReference" value="inlineOrByReference$ea_notes=Values: inline,byReference,inlineOrByReference&#xA;Default: inlineOrByReference&#xA;Description: Controls whether property values may be encoded inline or by reference.&#xA;"/>
+						<tag xmi:id="EAID_E810E922_58E8_b658_A444_313A59A0AF1C" name="sequenceNumber" value="1$ea_notes= Unique integer value for properties of the type used to sort properties.&#xA;"/>
+					</tags>
+				</target>
+				<model ea_localid="9187"/>
+				<properties ea_type="Association" direction="Source -&gt; Destination"/>
+				<modifiers isRoot="false" isLeaf="false"/>
+				<parameterSubstitutions/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels rb="0..1" rt="+dynamicDataDR&#xA;«Property»"/>
+				<extendedProperties/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_CA6ED5DE_D5B5_4e29_924B_1B385F1D3308">
+				<source xmi:idref="EAID_3BCEAE64_F977_46b5_A08C_A29D52216B04">
+					<model ea_localid="7732" type="Class" name="AtomicTimeseries"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="composite" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_48A22857_2C51_42af_9DDC_A471997CAFAA">
+					<model ea_localid="7744" type="Class" name="TimeseriesTVP"/>
+					<role name="dynamicDataTVP" stereotype="Property" visibility="Public" targetScope="instance"/>
+					<type multiplicity="0..1" aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs value="$XREFPROP=$XID={D422520E-0B64-42b3-BF79-6C370A96E20C}$XID;$NAM=Stereotypes$NAM;$TYP=connectorDestEnd property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Property;FQName=CityGML::Property;@ENDSTEREO;$DES;$CLT={CA6ED5DE-D5B5-4e29-924B-1B385F1D3308}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+					<tags>
+						<tag xmi:id="EAID_08A8199D_FE63_35fe_B048_7C8DBE636119" name="isMetadata" value="false$ea_notes=Values: True,False&#xA;Default: false&#xA;Description: Indicates whether the property is considered metadata about the instance - and not information about the phenomenon in the real world.&#xA;"/>
+						<tag xmi:id="EAID_37DFCA0A_B550_b0b5_874B_F99EA72945A1" name="inlineOrByReference" value="inlineOrByReference$ea_notes=Values: inline,byReference,inlineOrByReference&#xA;Default: inlineOrByReference&#xA;Description: Controls whether property values may be encoded inline or by reference.&#xA;"/>
+						<tag xmi:id="EAID_E810E922_58E8_b658_9956_8805A9F54F22" name="sequenceNumber" value="2$ea_notes= Unique integer value for properties of the type used to sort properties.&#xA;"/>
+					</tags>
+				</target>
+				<model ea_localid="9188"/>
+				<properties ea_type="Association" direction="Source -&gt; Destination"/>
+				<modifiers isRoot="false" isLeaf="false"/>
+				<parameterSubstitutions/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels rb="0..1" rt="+dynamicDataTVP&#xA;«Property»"/>
+				<extendedProperties/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_68E25670_5809_4fda_945F_0FD1B04E733D">
+				<source xmi:idref="EAID_369E0123_00FC_4098_BEF2_3BB506B2012A">
+					<model ea_localid="1" type="Package" name="CityGML"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_933BBBD7_EDB3_4b58_AFAC_A53A22C703DD">
+					<model ea_localid="7741" type="Package" name="OGC TimeseriesML"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="9272"/>
+				<properties ea_type="Usage" direction="Source -&gt; Destination"/>
+				<modifiers isRoot="false" isLeaf="false"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels mb="«use»"/>
+				<extendedProperties conditional="«use»" virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+		</connectors>
+		<primitivetypes>
+			<packagedElement xmi:type="uml:Package" xmi:id="EAPrimitiveTypesPackage" name="EA_PrimitiveTypes_Package" visibility="public"/>
+		</primitivetypes>
+		<profiles>
+			<uml:Profile xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1/" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmi:id="1BE46C37-5" nsPrefix="GML" name="GML" metamodelReference="mmref01">
+				<ownedComment xmi:type="uml:Comment" xmi:id="comment01" annotatedElement="1BE46C37-5">
+					<body>UML Profile for GML Version:1.0</body>
+				</ownedComment>
+				<packageImport xmi:id="mmref01">
+					<importedPackage href="http://schema.omg.org/spec/UML/2.1/"/>
+				</packageImport>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Aggregation" name="Aggregation">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Aggregation-base_Association" name="base_Association" association="Association_Aggregation">
+						<type href="http://schema.omg.org/spec/UML/2.1/Association"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Association_Aggregation" name="A_Association_Aggregation" memberEnd="extension_Aggregation Aggregation-base_Association">
+					<ownedEnd xmi:id="extension_Aggregation" name="extension_Aggregation" type="Aggregation" isComposite="true" lower="0" upper="1" memberEnd="extension_Aggregation Aggregation-base_Association"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Union" name="Union">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Union-base_Class" name="base_Class" association="Class_Union">
+						<type href="http://schema.omg.org/spec/UML/2.1/Class"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Union-noPropertyType" name="noPropertyType">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Union-isCollection" name="isCollection">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Class_Union" name="A_Class_Union" memberEnd="extension_Union Union-base_Class">
+					<ownedEnd xmi:id="extension_Union" name="extension_Union" type="Union" isComposite="true" lower="0" upper="1" memberEnd="extension_Union Union-base_Class"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="CodeList" name="CodeList">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="CodeList-base_Class" name="base_Class" association="Class_CodeList">
+						<type href="http://schema.omg.org/spec/UML/2.1/Class"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="CodeList-asDictionary" name="asDictionary">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="CodeList-defaultCodeSpace" name="defaultCodeSpace">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Class_CodeList" name="A_Class_CodeList" memberEnd="extension_CodeList CodeList-base_Class">
+					<ownedEnd xmi:id="extension_CodeList" name="extension_CodeList" type="CodeList" isComposite="true" lower="0" upper="1" memberEnd="extension_CodeList CodeList-base_Class"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="ApplicationSchema" name="ApplicationSchema">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ApplicationSchema-base_Package" name="base_Package" association="Package_ApplicationSchema">
+						<type href="http://schema.omg.org/spec/UML/2.1/Package"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ApplicationSchema-version" name="version">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ApplicationSchema-gmlProfileSchema" name="gmlProfileSchema">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ApplicationSchema-xsdDocument" name="xsdDocument">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ApplicationSchema-xmlns" name="xmlns">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ApplicationSchema-targetNamespace" name="targetNamespace">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Package_ApplicationSchema" name="A_Package_ApplicationSchema" memberEnd="extension_ApplicationSchema ApplicationSchema-base_Package">
+					<ownedEnd xmi:id="extension_ApplicationSchema" name="extension_ApplicationSchema" type="ApplicationSchema" isComposite="true" lower="0" upper="1" memberEnd="extension_ApplicationSchema ApplicationSchema-base_Package"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="FeatureType" name="FeatureType">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="FeatureType-base_Class" name="base_Class" association="Class_FeatureType">
+						<type href="http://schema.omg.org/spec/UML/2.1/Class"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="FeatureType-noPropertyType" name="noPropertyType">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="FeatureType-isCollection" name="isCollection">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="FeatureType-byValuePropertyType" name="byValuePropertyType">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Class_FeatureType" name="A_Class_FeatureType" memberEnd="extension_FeatureType FeatureType-base_Class">
+					<ownedEnd xmi:id="extension_FeatureType" name="extension_FeatureType" type="FeatureType" isComposite="true" lower="0" upper="1" memberEnd="extension_FeatureType FeatureType-base_Class"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Leaf" name="Leaf">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Leaf-base_Package" name="base_Package" association="Package_Leaf">
+						<type href="http://schema.omg.org/spec/UML/2.1/Package"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Leaf-xsdDocument" name="xsdDocument">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Package_Leaf" name="A_Package_Leaf" memberEnd="extension_Leaf Leaf-base_Package">
+					<ownedEnd xmi:id="extension_Leaf" name="extension_Leaf" type="Leaf" isComposite="true" lower="0" upper="1" memberEnd="extension_Leaf Leaf-base_Package"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="DataType" name="DataType">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="DataType-base_Class" name="base_Class" association="Class_DataType">
+						<type href="http://schema.omg.org/spec/UML/2.1/Class"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="DataType-noPropertyType" name="noPropertyType">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="DataType-isCollection" name="isCollection">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Class_DataType" name="A_Class_DataType" memberEnd="extension_DataType DataType-base_Class">
+					<ownedEnd xmi:id="extension_DataType" name="extension_DataType" type="DataType" isComposite="true" lower="0" upper="1" memberEnd="extension_DataType DataType-base_Class"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Type" name="Type">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Type-base_Class" name="base_Class" association="Class_Type">
+						<type href="http://schema.omg.org/spec/UML/2.1/Class"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Type-xmlSchemaType" name="xmlSchemaType">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Type-noPropertyType" name="noPropertyType">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Type-isCollection" name="isCollection">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Type-byValuePropertyType" name="byValuePropertyType">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Class_Type" name="A_Class_Type" memberEnd="extension_Type Type-base_Class">
+					<ownedEnd xmi:id="extension_Type" name="extension_Type" type="Type" isComposite="true" lower="0" upper="1" memberEnd="extension_Type Type-base_Class"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Composition" name="Composition">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Composition-base_Association" name="base_Association" association="Association_Composition">
+						<type href="http://schema.omg.org/spec/UML/2.1/Association"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Association_Composition" name="A_Association_Composition" memberEnd="extension_Composition Composition-base_Association">
+					<ownedEnd xmi:id="extension_Composition" name="extension_Composition" type="Composition" isComposite="true" lower="0" upper="1" memberEnd="extension_Composition Composition-base_Association"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Enumeration" name="Enumeration">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Enumeration-base_Enumeration" name="base_Enumeration" association="Enumeration_Enumeration">
+						<type href="http://schema.omg.org/spec/UML/2.1/Enumeration"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Enumeration_Enumeration" name="A_Enumeration_Enumeration" memberEnd="extension_Enumeration Enumeration-base_Enumeration">
+					<ownedEnd xmi:id="extension_Enumeration" name="extension_Enumeration" type="Enumeration" isComposite="true" lower="0" upper="1" memberEnd="extension_Enumeration Enumeration-base_Enumeration"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="property" name="property">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="property-base_AssociationEnd" name="base_AssociationEnd" association="AssociationEnd_property">
+						<type href="http://schema.omg.org/spec/UML/2.1/AssociationEnd"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="property-base_Attribute" name="base_Attribute" association="Attribute_property">
+						<type href="http://schema.omg.org/spec/UML/2.1/Attribute"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="property-isMetadata" name="isMetadata">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="property-inlineOrByReference" name="inlineOrByReference">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="property-sequenceNumber" name="sequenceNumber">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="AssociationEnd_property" name="A_AssociationEnd_property" memberEnd="extension_property property-base_AssociationEnd">
+					<ownedEnd xmi:id="extension_property" name="extension_property" type="property" isComposite="true" lower="0" upper="1" memberEnd="extension_property property-base_AssociationEnd"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Attribute_property" name="A_Attribute_property" memberEnd="extension_property property-base_Attribute">
+					<ownedEnd xmi:id="extension_property" name="extension_property" type="property" isComposite="true" lower="0" upper="1" memberEnd="extension_property property-base_Attribute"/>
+				</packagedElement>
+			</uml:Profile>
+			<uml:Profile xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1/" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmi:id="thecustomprofile" nsPrefix="thecustomprofile" name="thecustomprofile" metamodelReference="mmref01">
+				<ownedComment xmi:type="uml:Comment" xmi:id="comment01" annotatedElement="thecustomprofile">
+					<body> Version:1.0</body>
+				</ownedComment>
+				<packageImport xmi:id="mmref01">
+					<importedPackage href="http://schema.omg.org/spec/UML/2.1/"/>
+				</packageImport>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="UML Profile for GML Applications Schemas::FeatureType" name="UML Profile for GML Applications Schemas::FeatureType">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="UML Profile for GML Applications Schemas::FeatureType-base_Class" name="base_Class" association="Class_UML Profile for GML Applications Schemas::FeatureType">
+						<type href="http://schema.omg.org/spec/UML/2.1/Class"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Class_UML Profile for GML Applications Schemas::FeatureType" name="A_Class_UML Profile for GML Applications Schemas::FeatureType" memberEnd="extension_UML Profile for GML Applications Schemas::FeatureType UML Profile for GML Applications Schemas::FeatureType-base_Class">
+					<ownedEnd xmi:id="extension_UML Profile for GML Applications Schemas::FeatureType" name="extension_UML Profile for GML Applications Schemas::FeatureType" type="UML Profile for GML Applications Schemas::FeatureType" isComposite="true" lower="0" upper="1" memberEnd="extension_UML Profile for GML Applications Schemas::FeatureType UML Profile for GML Applications Schemas::FeatureType-base_Class"/>
+				</packagedElement>
+			</uml:Profile>
+		</profiles>
+		<diagrams>
+			<diagram xmi:id="EAID_ACBFBDEA_FC4C_49a3_AB81_C643AB202BDF">
+				<model package="EAPK_933BBBD7_EDB3_4b58_AFAC_A53A22C703DD" localID="3568" owner="EAPK_933BBBD7_EDB3_4b58_AFAC_A53A22C703DD"/>
+				<properties name="TimeseriesML" type="Logical"/>
+				<project author="kolbe/kutzner" version="1.0" created="2017-12-13 00:00:00" modified="2017-12-23 00:05:26"/>
+				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=827;DocSize.cy=1169;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AllDockable=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ProfileData=;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;SaveTag=A16C3308;"/>
+				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:Calibri,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
+				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<extendedProperties/>
+				<elements>
+					<element geometry="Left=414;Top=124;Right=542;Bottom=194;" subject="EAID_6210A339_83E6_4d60_BEBF_779099B92D5E" seqno="1" style="DUID=DFC15253;HideIcon=0;"/>
+					<element geometry="Left=178;Top=125;Right=268;Bottom=195;" subject="EAID_48A22857_2C51_42af_9DDC_A471997CAFAA" seqno="2" style="DUID=B739678C;HideIcon=0;"/>
+				</elements>
+			</diagram>
+		</diagrams>
+	</xmi:Extension>
+</xmi:XMI>
