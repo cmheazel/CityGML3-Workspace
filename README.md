@@ -14,7 +14,7 @@ Resources
 The repo is organized as follows:
 
 * archive - This section contains historical files.
-* best_practice - This is non-normative information essentiall for the correct use of the CityGML Conceptual Model.
+* best_practice - This is non-normative information essential for the correct use of the CityGML Conceptual Model.
 * codelists - TBD - codelists should live in an on-line registery. This directory could contain the contents of the on-line directories.
 * encodings - Schema for the implemetation of the CityGML Conceptual (UML) model. 
 * examples - Sample documents from each of the encodings.
