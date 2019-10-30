@@ -1,0 +1,7 @@
+[[reg_transportation_refIntegrity]]
+[width="90%",cols="2,6"]
+|===
+^|*Requirement  {counter:req-id}* |*/req/transportation/refInteg* 
+^|A |The trafficArea property (type: TrafficAreaPropertyType) of the element TransportationComplex may contain a TrafficArea element inline or an XLink reference to a remote TrafficArea element using the XLink concept of GML 3.1.1. In the latter case, the `xlink:href` attribute of the trafficArea property may only point to a remote TrafficArea element (where remote TrafficArea elements are located in another document or elsewhere in the same document). Either the contained element or the reference must be given, but neither both nor none.
+^|B |The auxiliaryTrafficArea property (type: TrafficAreaPropertyType) of the element TransportationCom-plex may contain an AuxiliaryTrafficArea element inline or an XLink reference to a remote Auxilia-ryTrafficArea element using the XLink concept of GML 3.1.1. In the latter case, the `xlink:href` attribute of the auxiliaryTrafficArea property may only point to a remote AuxiliaryTrafficArea element (where remote AuxiliaryTrafficArea elements are located in another document or elsewhere in the same docu-ment). Either the contained element or the reference must be given, but neither both nor none.
+|===

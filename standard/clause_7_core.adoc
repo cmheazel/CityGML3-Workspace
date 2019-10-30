@@ -1,26 +1,106 @@
-== Clause containing normative material
-Paragraph
+== CityGML Conceptual Model Requirements
+_Discussion about how the UML model is the definitive source for the Conceptual Model. This section will provide an overview of the UML model and the requirements for applying that model for the creation of an encoding standard._
 
-=== Requirement Class A or Requirement A Example
-Paragraph – intro text for the requirement class.
+=== Requirement Class Core
 
-Use the following table for Requirements Classes.
+_Brief intro to the core class_
 
-include::requirements/requirements_class.adoc[]
+_UML models as needed with description of key classes (should be taked from the class description)_
 
-==== Requirement 1
-Paragraph - intro text for the requirement.
+For more information, see the CityGML Concetual Model https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#TBD[Best Practices].
 
-Use the following table for Requirements, number sequentially.
+include::requirements/requirements_class_core.adoc[]
 
-include::requirements/requirement.adoc[]
+include::requirements/core/REQ_Core_Base.adoc[]
 
-Dictionary tables for requirements can be added as necessary. Modify the following example as needed.
+include::requirements/core/REQ_Core_RefIntegrity.adoc[]
 
-[width="90%",options="header"]
-|===
-|Names |Definition |Data types and values |Multiplicity and use
-|name 1 |definition of name 1 |float |One or more (mandatory)
-|name 2 |definition of name 2 |character string type, not empty |Zero or one (optional)
-|name 3 |definition of name 3 |GML:: Point PropertyType |One (mandatory)
-|===
+=== Requirement Class Relief
+
+_Brief intro to the core class_
+
+_UML models as needed with description of key classes (should be taked from the class description)_
+
+For more information, see the CityGML Concetual Model https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#TBD[Best Practices].
+
+include::requirements/requirements_class_Relief.adoc[]
+
+include::requirements/relief/REQ_Relief_Base.adoc[]
+
+include::requirements/relief/REQ_Relief_RefIntegrity.adoc[]
+
+==== Requirement Class Building
+
+_Brief intro to the core class_
+
+_UML models as needed with description of key classes (should be taked from the class description)_
+
+For more information, see the CityGML Concetual Model https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#TBD[Best Practices].
+
+include::requirements/requirements_class_building.adoc[]
+
+include::requirements/building/REQ_Building_Base.adoc[]
+
+include::requirements/building/REQ_Building_Restrictions.adoc[]
+
+include::requirements/building/REQ_Building_RefIntegrity.adoc[]
+
+=== Requirement Class Tunnel
+
+_Brief intro to the core class_
+
+_UML models as needed with description of key classes (should be taked from the class description)_
+
+For more information, see the CityGML Concetual Model https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#TBD[Best Practices].
+
+include::requirements/requirements_class_tunnel.adoc[]
+
+include::requirements/tunnel/REQ_Tunnel_Base.adoc[]
+
+include::requirements/tunnel/REQ_Tunnel_RefIntegrity.adoc[]
+
+=== Requirement Class Bridge
+
+_Brief intro to the core class_
+
+_UML models as needed with description of key classes (should be taked from the class description)_
+
+For more information, see the CityGML Concetual Model https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#TBD[Best Practices].
+
+include::requirements/requirements_class_Bridge.adoc[]
+
+include::requirements/bridge/REQ_Bridge_Base.adoc[]
+
+include::requirements/bridge/REQ_Bridge_Restrictions.adoc[]
+
+include::requirements/bridge/REQ_Bridge_RefIntegrity.adoc[]
+
+=== Requirement Class Water Body
+
+_Brief intro to the core class_
+
+_UML models as needed with description of key classes (should be taked from the class description)_
+
+For more information, see the CityGML Concetual Model https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#TBD[Best Practices].
+
+include::requirements/requirements_class_waterbody.adoc[]
+
+include::requirements/waterbody/REQ_Waterbody_Base.adoc[]
+
+include::requirements/waterbody/REQ_Waterbody_RefIntegrity.adoc[]
+
+=== Requirements Class Transportation
+
+_Brief intro to the core class_
+
+_UML models as needed with description of key classes (should be taked from the class description)_
+
+For more information, see the CityGML Concetual Model https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#TBD[Best Practices].
+
+include::requirements/requirements_class_transportation.adoc[]
+
+include::requirements/transportation/REQ_Transportation_Base.adoc[]
+
+include::requirements/transportation/REQ_Transportation_RefIntegrity.adoc[]
+
+

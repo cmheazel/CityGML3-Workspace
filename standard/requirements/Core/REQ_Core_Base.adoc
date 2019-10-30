@@ -1,0 +1,9 @@
+[[reg_core_base]]
+[width="90%",cols="2,6"]
+|===
+^|*Requirement  {counter:req-id}* |*/req/core/base* 
+^|A |The CityModel element (type: CityModelType, substitutionGroup: gml:_FeatureCollection) shall only contain cityObjectMember elements (type: gml:FeaturePropertyType), app:appearanceMember ele-ments (type: app:AppearancePropertyType), and gml:featureMember elements (type: gml:FeaturePropertyType) as feature members.
+^|B |The type ExternalObjectReference introduces the two elements name (type: xs:string) and uri (type: xs:anyURI). The external reference may be specified by either of them. However, if the informationSys-tem property element (type: xs:anyURI) of the type ExternalReferenceType is not provided, the uri ele-ment of ExternalObjectReference must be given.
+^|C |In order to represent address information about a feature, the corresponding thematic class of the feature shall define a property of the type AddressPropertyType. Thus, for all CityGML extension modules on-ly the type AddressPropertyType shall be used for elements providing address information.
+^|D |Since the concept of implicit geometries (cf. chapter 8.2) is part of the CityGML Core module, the con-formance requirements introduced for implicit geometries (cf. chapter 8.3.3) are part of the conform-ance requirements of the core.
+|===

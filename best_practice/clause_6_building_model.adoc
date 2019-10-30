@@ -1,8 +1,10 @@
 [bp_building]]
-== Building Model
+=== Building Model
 The building model is one of the most detailed thematic concepts of CityGML. It allows for the representation of thematic and spatial aspects of buildings and building parts in five levels of detail, LOD0 to LOD4. The building model of CityGML is defined by the thematic extension module Building (cf. chapter 7). Fig. 26 provides examples of 3D city and building models in LOD1 – 4.
 
-NOTE: insert Fig 26
+.Examples for city or building models in LOD1 (upper left), LOD2 (upper right), LOD3 (lower left), and LOD4 (lower right) (source: District of Recklinghausen, m-g-h ingenieure+architekten GmbH).
+
+image::images/Fig26.jpg[]
 
 The UML diagram of the building model is depicted in Fig. 27, for the XML schema definition see annex A.4 and below. The pivotal class of the model is _AbstractBuilding, which is a subclass of the thematic class _Site (and transitively of the root class _CityObject). _AbstractBuilding is specialised either to a Building or to a BuildingPart. Since an _AbstractBuilding consists of BuildingParts, which again are _AbstractBuildings, an aggregation hierarchy of arbitrary depth may be realised. As subclass of the root class _CityObject, an _AbstractBuilding inherits all properties from _CityObject like the GML3 standard feature properties (gml:name etc.) and the CityGML specific properties like ExternalReferences (cf. chapter 6.7). Further properties not explicitly covered by _AbstractBuilding may be modelled as generic attributes provided by the CityGML Generics module (cf. chapter 10.12) or using the CityGML Application Domain Extension mechanism (cf. chapter 10.13).
 
@@ -22,25 +24,26 @@ In LOD3, the openings in _BoundarySurface objects (doors and windows) can be rep
 
 The visible surface of a room is represented geometrically as a Solid or MultiSurface. Semantically, the surface can be structured into specialised _BoundarySurfaces, representing floor (FloorSurface), ceiling (CeilingSur-face), and interior walls (InteriorWallSurface). Room furniture, like tables and chairs, can be represented in the CityGML building model with the class BuildingFurniture. A BuildingFurniture may have the attributes class, function and usage. Annexes G.1 to G.6 provide example CityGML documents containing a single building model which is subsequently refined from a coarse LOD0 representation up to a semantically rich and geomet-ric-topologically sound LOD4 model including the building interior.
 
-=== Building and Building Part
+==== Building and Building Part
 
 NOTE: Version 2.0 uses XML schema to illustrate this section. Replace those schema with UML.
 
-==== BuildingType, Building
+===== BuildingType, Building
 
 NOTE: Insert BuildingType, Building UML
 
 The Building class is one of the two subclasses of _AbstractBuilding. If a building only consists of one (homo-geneous) part, this class shall be used. A building composed of structural segments differing in, for example the number of storeys or the roof type has to be separated into one Building having one or more additional Build-ingPart (see Fig. 28). The geometry and non-spatial properties of the central part of the building should be represented in the aggregating Building feature.
 
-==== BuildingType, Building Part
+===== BuildingType, Building Part
 
 NOTE: Insert BuildingType, Building Part UML
 
 The class BuildingPart is derived from _AbstractBuilding. It is used to model a structural part of a building (see Fig. 28). A BuildingPart object should be uniquely related to exactly one building or building part object.
 
-NOTE: image::images/fig_28.png[]
+.Examples of buildings consisting of one and two building parts (source: City of Coburg)
+image::images/Fig28.jpg[]
 
-==== AbstractBuildingType, _AbstractBuilding
+===== AbstractBuildingType, _AbstractBuilding
 
 NOTE: AbstractBuildingType, _AbstractBuilding UML
 
@@ -120,9 +123,9 @@ With respect to the exterior building shell, the LOD4 data model is identical to
 
 Each Building or BuildingPart feature may be assigned zero or more addresses using the address property. The corresponding AddressPropertyType is defined within the CityGML core module (cf. chapter 10.1.4).
 
-=== Outer building installations
+==== Outer building installations
 
-==== BuildingInstallationType, BuildingInstallation 
+===== BuildingInstallationType, BuildingInstallation 
 
 Note: insert BuildingInstallation UML
 

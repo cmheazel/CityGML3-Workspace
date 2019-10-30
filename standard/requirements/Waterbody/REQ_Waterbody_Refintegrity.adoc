@@ -1,0 +1,7 @@
+
+[[reg_waterbody_refintegrity]]
+[width="90%",cols="2,6"]
+|===
+^|*Requirement  {counter:req-id}* |*/req/waterbody/refintegrity* 
+^|A |The boundedBy property (type: BoundedByWaterSurfacePropertyType) of the element WaterBody may contain a _WaterBoundarySurface element inline or an XLink reference to a remote _WaterBoundarySurface element using the XLink concept of GML 3.1.1. In the latter case, the xlink:href attribute of the boundedBy property may only point to a remote _WaterBoundarySurface el-ement (where remote _WaterBoundarySurface elements are located in another document or elsewhere in the same document). Either the contained element or the reference must be given, but neither both nor none.
+|===

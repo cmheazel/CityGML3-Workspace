@@ -1,0 +1,6 @@
+[[reg_relief_base]]
+[width="90%",cols="2,6"]
+|===
+^|*Requirement  {counter:req-id}* |*/req/relief/base* 
+^|A |The gml:Polygon geometry element describing the extent of validity of a _ReliefComponent element us-ing the extent property (type: gml:PolygonPropertyType) of _ReliefComponent shall be given as 2D footprint polygon which may have inner holes.
+|===

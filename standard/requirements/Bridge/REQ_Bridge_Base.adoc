@@ -1,0 +1,6 @@
+[[reg_bridge_base]]
+[width="90%",cols="2,6"]
+|===
+^|*Requirement  {counter:req-id}* |*/req/bridge/base* 
+^|A |If a bridge only consists of one (homogeneous) part, it shall be represented by the element Bridge. However, if a bridge is composed of individual structural segments, it shall be modelled as a Bridge el-ement having one or more additional BridgePart elements. Only the geometry and non-spatial proper-ties of the main part of the bridge should be represented within the aggregating Bridge element.
+|===
