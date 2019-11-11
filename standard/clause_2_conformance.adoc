@@ -1,14 +1,23 @@
 == Conformance
-This standard defines XXXX.
+This Best Practice defines XXXX.
 
-Requirements for N standardization target types are considered:
+Requirements for N target types are considered:
 * AAAA
 * BBBB
 
-Conformance with this standard shall be checked using all the relevant tests specified in Annex A (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site.
+Conformance with this Best Practice shall be checked using all the relevant tests specified in Annex A (normative) of this document.
 
-In order to conform to this OGC® interface standard, a software implementation shall choose to implement:
+In order to conform to this OGC® Best Practice, a software implementation shall choose to implement:
 * Any one of the conformance levels specified in Annex A (normative).
 * Any one of the Distributed Computing Platform profiles specified in Annexes TBD through TBD (normative).
 
-All requirements-classes and conformance-classes described in this document are owned by the standard(s) identified.
+All requirements-classes and conformance-classes described in this document are owned by the document(s) identified.
+
+NOTE: the following is the 2.0 content
+
+Conformance targets addressed by this International standard are CityGML instance documents only. Future revisions of this International Standard may also address consumers or producers as conformance targets.
+Clauses 8 to 10 of this International standard specify separate CityGML XML Schema definitions and normative aspects, i.e. CityGML modules, which shall be used in CityGML instance documents in accordance with clause 7. Implementations are not required to support the full range of capabilities provided by the universe of all CityGML modules. Valid partial implementations are supported following the rules and guidelines for CityGML profiles in chapter 7.2.
+CityGML instance documents claiming conformance to this International Standard shall:
+a) conform to the rules and requirements specified in clauses 7 to 10;
+b) pass all relevant test cases of the abstract test suite in annex B.1;
+c) satisfy all relevant conformance classes of the abstract test suite related to CityGML modules in annex B.2.�

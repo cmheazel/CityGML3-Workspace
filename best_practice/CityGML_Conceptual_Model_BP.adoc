@@ -1,5 +1,5 @@
 :Title: OGC City Geography Markup Language (CityGML) Conceptual Model Best Practice
-:titletext: OGC City Geography Markup Language (CityGML) Conceptual Model Best Practice
+:titletext: {Title}
 :doctype: book
 :encoding: utf-8
 :lang: en
@@ -18,10 +18,10 @@
 |[big]*Open Geospatial Consortium*
 |Submission Date: <yyyy-mm-dd>
 |Approval Date:   <yyyy-mm-dd>
-|Publication Date:   <2019-10-17>
-|External identifier of this OGC(R) document: http://www.opengis.net/doc/{doc-type}/{standard}/{m.n}
+|Publication Date:   <2019-11-11>
+|External identifier of this OGC(R) document: http://www.opengis.net/doc/BP/CityGML/3.0
 |Internal reference number of this OGC(R) document:    YY-nnnrx
-|Version: 0.1
+|Version: 0.2
 |Category: OGC(R) Best Practice
 |Editor:   Charles Heazel
 |===
@@ -50,7 +50,7 @@ Recipients of this document are invited to submit, with their comments, notifica
 [width = "50%", grid = "none"]
 |===
 |Document type:   	OGC® Best Practice
-|Document subtype:
+|Document subtype:   Conceptual Model
 |Document stage:   	Draft
 |Document language: 	English
 |===
@@ -80,9 +80,9 @@ Make sure to complete each included document
 ////
 include::clause_0_front_material.adoc[]
 
-include::clause_1_scope.adoc[]
+include::clause_1_introduction.adoc[]
 
-include::clause_2_conformance.adoc[]
+include::clause_2_scope.adoc[]
 
 include::clause_3_references.adoc[]
 
@@ -90,9 +90,17 @@ include::clause_4_terms_and_definitions.adoc[]
 
 include::clause_5_conventions.adoc[]
 
-include::clause_6_informative_text.adoc[]
+include::clause_6_overview.adoc[]
 
-include::clause_7_normative_text.adoc[]
+include::clause_7_general.adoc[]
+
+include::clause_8_modularization.adoc[]
+
+include::clause_9_spatial_model.adoc[]
+
+include::clause_10_appearance.adoc[]
+
+include::clause_11_thematic_model.adoc[]
 
 <<<
 ////

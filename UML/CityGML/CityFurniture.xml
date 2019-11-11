@@ -1,65 +1,41 @@
 <?xml version="1.0" encoding="windows-1252"?>
-<xmi:XMI xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:GML="http://www.sparxsystems.com/profiles/GML/1.0" xmlns:thecustomprofile="http://www.sparxsystems.com/profiles/thecustomprofile/1.0">
+<xmi:XMI xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:CityGML="http://www.sparxsystems.com/profiles/CityGML/1.0">
 	<xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5"/>
 	<uml:Model xmi:type="uml:Model" name="EA_Model" visibility="public">
 		<packagedElement xmi:type="uml:Package" xmi:id="EAPK_E1321C0B_B95B_44c0_A3EA_3B507911CD78" name="CityFurniture" visibility="public">
-			<ownedComment xmi:type="uml:Comment" xmi:id="EAID_EA240CA5_59CA_4536_9282_0FE50A3639A5" body="The additional class &lt;b&gt;&lt;i&gt;FurnitureSpace &lt;/i&gt;&lt;/b&gt;is required, because &lt;b&gt;&lt;i&gt;CityFurniture &lt;/i&gt;&lt;/b&gt;cannot be at the same time subclass of &lt;b&gt;&lt;i&gt;AbstractToplevelCityObject &lt;/i&gt;&lt;/b&gt;and &lt;b&gt;&lt;i&gt;AbstractOccupiedSpace&lt;/i&gt;&lt;/b&gt;.">
-				<annotatedElement xmi:idref="EAID_21196771_FA12_4b80_92EC_2DDB1B276727"/>
-			</ownedComment>
 			<packageImport xmi:type="uml:PackageImport" xmi:id="EAID_DF522B0F_FE42_4116_BF37_CB3033FBF797" visibility="public" importedPackage="EAPK_FDE7D4FC_4EF3_42d1_9A94_D7340DBBD79F"/>
 			<packagedElement xmi:type="uml:Class" xmi:id="EAID_1D3C3740_F111_4b04_8A6A_8524C9B71E2A" name="CityFurniture" visibility="public">
 				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_B3270C10_39B9_4a12_B749_DCFDD2A3F27A" name="class" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
-					<type xmi:idref="EAID_DD20EA95_5FD0_4d14_9871_FCCEE29651B5"/>
+					<type xmi:idref="EAID_51312984_C1EE_4fa5_B843_247EA0387391"/>
 					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000001_39B9_4a12_B749_DCFDD2A3F27A" value="0"/>
 					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000002_39B9_4a12_B749_DCFDD2A3F27A" value="1"/>
 				</ownedAttribute>
 				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_C6E6E240_513D_491a_88C7_469DE6DB4756" name="function" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
-					<type xmi:idref="EAID_DD20EA95_5FD0_4d14_9871_FCCEE29651B5"/>
+					<type xmi:idref="EAID_E2CB3BD0_C393_47f5_84CF_1116CDBC8D60"/>
 					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000003_513D_491a_88C7_469DE6DB4756" value="0"/>
 					<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000004_513D_491a_88C7_469DE6DB4756" value="-1"/>
 				</ownedAttribute>
 				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_75137AF8_7A8F_4723_A87E_7056FD2CBA23" name="usage" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
-					<type xmi:idref="EAID_DD20EA95_5FD0_4d14_9871_FCCEE29651B5"/>
+					<type xmi:idref="EAID_53A2CBD6_B65D_4dc8_91B3_F010C4246514"/>
 					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000005_7A8F_4723_A87E_7056FD2CBA23" value="0"/>
 					<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000006_7A8F_4723_A87E_7056FD2CBA23" value="-1"/>
 				</ownedAttribute>
-				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dstE81D05_7FC1_444e_AFF4_F58B69380F93" name="furnitureSpace" visibility="public" association="EAID_38E81D05_7FC1_444e_AFF4_F58B69380F93" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="none">
-					<type xmi:idref="EAID_21196771_FA12_4b80_92EC_2DDB1B276727"/>
-					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000007__7FC1_444e_AFF4_F58B69380F93" value="0"/>
-					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000008__7FC1_444e_AFF4_F58B69380F93" value="1"/>
-				</ownedAttribute>
-				<generalization xmi:type="uml:Generalization" xmi:id="EAID_52032F1C_F43A_4301_89CA_A861A24AB399" general="EAID_5B552D5B_D740_4878_B838_E5979E3B6555"/>
-			</packagedElement>
-			<packagedElement xmi:type="uml:Association" xmi:id="EAID_38E81D05_7FC1_444e_AFF4_F58B69380F93" visibility="public">
-				<memberEnd xmi:idref="EAID_dstE81D05_7FC1_444e_AFF4_F58B69380F93"/>
-				<memberEnd xmi:idref="EAID_srcE81D05_7FC1_444e_AFF4_F58B69380F93"/>
-				<ownedEnd xmi:type="uml:Property" xmi:id="EAID_srcE81D05_7FC1_444e_AFF4_F58B69380F93" visibility="public" association="EAID_38E81D05_7FC1_444e_AFF4_F58B69380F93" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="none">
-					<type xmi:idref="EAID_1D3C3740_F111_4b04_8A6A_8524C9B71E2A"/>
-					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000009__7FC1_444e_AFF4_F58B69380F93" value="0"/>
-					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000010__7FC1_444e_AFF4_F58B69380F93" value="1"/>
-				</ownedEnd>
-			</packagedElement>
-			<packagedElement xmi:type="uml:Class" xmi:id="EAID_21196771_FA12_4b80_92EC_2DDB1B276727" name="FurnitureSpace" visibility="public">
 				<generalization xmi:type="uml:Generalization" xmi:id="EAID_E2DE2363_0484_4da9_8988_A8018072780C" general="EAID_599046F5_43BB_4199_B9A4_3D34B3B628C7"/>
 			</packagedElement>
+			<packagedElement xmi:type="uml:Class" xmi:id="EAID_51312984_C1EE_4fa5_B843_247EA0387391" name="CityFurnitureClassValue" visibility="public"/>
+			<packagedElement xmi:type="uml:Class" xmi:id="EAID_E2CB3BD0_C393_47f5_84CF_1116CDBC8D60" name="CityFurnitureFunctionValue" visibility="public"/>
+			<packagedElement xmi:type="uml:Class" xmi:id="EAID_53A2CBD6_B65D_4dc8_91B3_F010C4246514" name="CityFurnitureUsageValue" visibility="public"/>
 			<packagedElement xmi:type="uml:Class" xmi:id="EAID_41F37A2F_533C_4a7a_BB20_6F59474702CA" visibility="public"/>
+			<packagedElement xmi:type="uml:Class" xmi:id="EAID_79DD8F95_DACD_4226_A96F_42AA1ACC6996" visibility="public"/>
 		</packagedElement>
-		<thecustomprofile:gmlMixin base_Class="EAID_1D3C3740_F111_4b04_8A6A_8524C9B71E2A" gmlMixin="false"/>
-		<GML:FeatureType base_Class="EAID_1D3C3740_F111_4b04_8A6A_8524C9B71E2A" noPropertyType="false" isCollection="false" byValuePropertyType="false"/>
-		<thecustomprofile:CityGML__FeatureType base_Class="EAID_1D3C3740_F111_4b04_8A6A_8524C9B71E2A" __EAStereoName="CityGML::FeatureType"/>
-		<GML:property base_Property="EAID_B3270C10_39B9_4a12_B749_DCFDD2A3F27A" isMetadata="false" inlineOrByReference="inlineOrByReference" sequenceNumber="1"/>
-		<thecustomprofile:CityGML__Property base_Property="EAID_B3270C10_39B9_4a12_B749_DCFDD2A3F27A" __EAStereoName="CityGML::Property"/>
-		<GML:property base_Property="EAID_C6E6E240_513D_491a_88C7_469DE6DB4756" isMetadata="false" inlineOrByReference="inlineOrByReference" sequenceNumber="2"/>
-		<thecustomprofile:CityGML__Property base_Property="EAID_C6E6E240_513D_491a_88C7_469DE6DB4756" __EAStereoName="CityGML::Property"/>
-		<GML:property base_Property="EAID_75137AF8_7A8F_4723_A87E_7056FD2CBA23" isMetadata="false" inlineOrByReference="inlineOrByReference" sequenceNumber="3"/>
-		<thecustomprofile:CityGML__Property base_Property="EAID_75137AF8_7A8F_4723_A87E_7056FD2CBA23" __EAStereoName="CityGML::Property"/>
-		<GML:property base_Property="EAID_dstE81D05_7FC1_444e_AFF4_F58B69380F93" isMetadata="false$ea_notes=Values: True,False&#xA;Default: false&#xA;Description: Indicates whether the property is considered metadata about the instance - and not information about the phenomenon in the real world.&#xA;" inlineOrByReference="inlineOrByReference$ea_notes=Values: inline,byReference,inlineOrByReference&#xA;Default: inlineOrByReference&#xA;Description: Controls whether property values may be encoded inline or by reference.&#xA;" sequenceNumber="4$ea_notes= Unique integer value for properties of the type used to sort properties.&#xA;"/>
-		<thecustomprofile:CityGML__Property base_Property="EAID_dstE81D05_7FC1_444e_AFF4_F58B69380F93" __EAStereoName="CityGML::Property"/>
-		<thecustomprofile:gmlMixin base_Class="EAID_21196771_FA12_4b80_92EC_2DDB1B276727" gmlMixin="false"/>
-		<GML:FeatureType base_Class="EAID_21196771_FA12_4b80_92EC_2DDB1B276727" noPropertyType="false" isCollection="false" byValuePropertyType="false"/>
-		<thecustomprofile:CityGML__FeatureType base_Class="EAID_21196771_FA12_4b80_92EC_2DDB1B276727" __EAStereoName="CityGML::FeatureType"/>
-		<thecustomprofile:CityGML__ApplicationSchema base_Package="EAPK_E1321C0B_B95B_44c0_A3EA_3B507911CD78" __EAStereoName="CityGML::ApplicationSchema"/>
-		<GML:ApplicationSchema base_Package="EAPK_E1321C0B_B95B_44c0_A3EA_3B507911CD78" version="3.0.0" xsdDocument="cityFurniture.xsd" xmlns="frn" targetNamespace="http://www.opengis.net/citygml/cityfurniture/3.0"/>
+		<CityGML:TopLevelFeatureType base_Class="EAID_1D3C3740_F111_4b04_8A6A_8524C9B71E2A" gmlMixin="false" noPropertyType="false" isCollection="false" byValuePropertyType="false"/>
+		<CityGML:Property base_Property="EAID_B3270C10_39B9_4a12_B749_DCFDD2A3F27A" isMetadata="false" inlineOrByReference="inlineOrByReference" sequenceNumber="1"/>
+		<CityGML:Property base_Property="EAID_C6E6E240_513D_491a_88C7_469DE6DB4756" isMetadata="false" inlineOrByReference="inlineOrByReference" sequenceNumber="2"/>
+		<CityGML:Property base_Property="EAID_75137AF8_7A8F_4723_A87E_7056FD2CBA23" isMetadata="false" inlineOrByReference="inlineOrByReference" sequenceNumber="3"/>
+		<CityGML:CodeList base_Class="EAID_51312984_C1EE_4fa5_B843_247EA0387391" asDictionary="true"/>
+		<CityGML:CodeList base_Class="EAID_E2CB3BD0_C393_47f5_84CF_1116CDBC8D60" asDictionary="true"/>
+		<CityGML:CodeList base_Class="EAID_53A2CBD6_B65D_4dc8_91B3_F010C4246514" asDictionary="true"/>
+		<CityGML:ApplicationSchema base_Package="EAPK_E1321C0B_B95B_44c0_A3EA_3B507911CD78" version="3.0.0" language="en" xsdDocument="cityFurniture.xsd" xmlns="frn" targetNamespace="http://www.opengis.net/citygml/cityfurniture/3.0"/>
 	</uml:Model>
 	<xmi:Extension extender="Enterprise Architect" extenderID="6.5">
 		<elements>
@@ -71,6 +47,7 @@
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags>
 					<tag xmi:id="EAID_48460EC2_A4E8_72a4_A360_3CA9F701E5B6" name="gmlProfileSchema" value="#NOTES#Description: URL of the schema location of a GML profile (optional)&#xA;" modelElement="EAID_E1321C0B_B95B_44c0_A3EA_3B507911CD78"/>
+					<tag xmi:id="EAID_DEB7F7C4_CC2A_41cc_A1EF_E91A043C7641" name="language" value="en" modelElement="EAID_E1321C0B_B95B_44c0_A3EA_3B507911CD78"/>
 					<tag xmi:id="EAID_393CD814_DD9A_9cdd_9FC4_87BEBA6B74F7" name="targetNamespace" value="http://www.opengis.net/citygml/cityfurniture/3.0#NOTES#Description: Target XML namespace of the application schema&#xA;" modelElement="EAID_E1321C0B_B95B_44c0_A3EA_3B507911CD78"/>
 					<tag xmi:id="EAID_6F40CEE6_AE8C_0eae_B5C3_2B4109F0153F" name="version" value="3.0.0#NOTES#Description: Current version of the application schema&#xA;" modelElement="EAID_E1321C0B_B95B_44c0_A3EA_3B507911CD78"/>
 					<tag xmi:id="EAID_08B91BD2_D9F8_1ed9_8768_41AB67546CFE" name="xmlns" value="frn#NOTES#Description: Namespace prefix to be used as short form of the target namespace&#xA;" modelElement="EAID_E1321C0B_B95B_44c0_A3EA_3B507911CD78"/>
@@ -85,101 +62,122 @@
 			</element>
 			<element xmi:idref="EAID_1D3C3740_F111_4b04_8A6A_8524C9B71E2A" xmi:type="uml:Class" name="CityFurniture" scope="public">
 				<model package="EAPK_E1321C0B_B95B_44c0_A3EA_3B507911CD78" tpos="0" ea_localid="84" ea_eleType="element"/>
-				<properties documentation="Wikipedia: City furniture is a collective term for objects and pieces of equipment installed on streets and roads for various purposes. It includes benches, traffic barriers, bollards, post boxes, phone boxes, streetlamps, traffic lights, traffic signs, bus stops, tram stops, taxi stands, public lavatories, fountains, watering troughs, memorials, public sculptures, and waste receptacles." isSpecification="false" sType="Class" nType="0" scope="public" stereotype="FeatureType" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
-				<project author="ebbinghaus" version="1.0" phase="1.0" created="2012-07-09 12:38:17" modified="2018-02-26 17:29:39" complexity="1" status="Proposed"/>
+				<properties documentation="City furniture is a collective term for objects and pieces of equipment installed on streets and roads for various purposes. It includes benches, traffic barriers, bollards, post boxes, phone boxes, streetlamps, traffic lights, traffic signs, bus stops, tram stops, taxi stands, public lavatories, fountains, watering troughs, memorials, public sculptures, and waste receptacles. [Wikipedia]" isSpecification="false" sType="Class" nType="0" scope="public" stereotype="TopLevelFeatureType" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="ebbinghaus" version="1.0" phase="1.0" created="2012-07-09 12:38:17" modified="2018-10-18 15:00:10" complexity="1" status="Proposed"/>
 				<code product_name="Java" gentype="Java"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags>
-					<tag xmi:id="EAID_ED33D65F_A24E_81a2_90DA_C35BCF4B0373" name="byValuePropertyType" value="false#NOTES#Values: True,False&#xA;Default: false&#xA;Description: Create a property type that requires that the instance is encoded inline.&#xA;" modelElement="EAID_1D3C3740_F111_4b04_8A6A_8524C9B71E2A"/>
-					<tag xmi:id="EAID_D8E5B7C5_7754_6c77_85AE_798C1E841B02" name="gmlMixin" value="false#NOTES#Values: True,False&#xA;Default: false&#xA;Description: Identifies the feature type as a mixin class.&#xA;" modelElement="EAID_1D3C3740_F111_4b04_8A6A_8524C9B71E2A"/>
-					<tag xmi:id="EAID_26B33348_1E57_d91e_A7B6_D891A6148AA8" name="isCollection" value="false#NOTES#Values: True,False&#xA;Default: false&#xA;Description: Identifies the feature type as a feature collection.&#xA;" modelElement="EAID_1D3C3740_F111_4b04_8A6A_8524C9B71E2A"/>
-					<tag xmi:id="EAID_F9638764_E613_9ee6_A908_77BBD8530F6C" name="noPropertyType" value="false#NOTES#Values: True,False&#xA;Default: false&#xA;Description: Suppress creation of a standard property type that supports inline or by-reference encoding.&#xA;" modelElement="EAID_1D3C3740_F111_4b04_8A6A_8524C9B71E2A"/>
+					<tag xmi:id="EAID_ED33D65F_A24E_81a2_83BB_A7F65E0920DB" name="byValuePropertyType" value="false#NOTES#Values: True,False&#xA;Default: false&#xA;Description: Create a property type that requires that the instance is encoded inline.&#xA;" modelElement="EAID_1D3C3740_F111_4b04_8A6A_8524C9B71E2A"/>
+					<tag xmi:id="EAID_D8E5B7C5_7754_6c77_A2F1_BC5D751CE01E" name="gmlMixin" value="false#NOTES#Values: True,False&#xA;Default: false&#xA;Description: Identifies the feature type as a mixin class.&#xA;" modelElement="EAID_1D3C3740_F111_4b04_8A6A_8524C9B71E2A"/>
+					<tag xmi:id="EAID_26B33348_1E57_d91e_9E6C_EB18DBEAA4D2" name="isCollection" value="false#NOTES#Values: True,False&#xA;Default: false&#xA;Description: Identifies the feature type as a feature collection.&#xA;" modelElement="EAID_1D3C3740_F111_4b04_8A6A_8524C9B71E2A"/>
+					<tag xmi:id="EAID_F9638764_E613_9ee6_A574_4A609A3037B4" name="noPropertyType" value="false#NOTES#Values: True,False&#xA;Default: false&#xA;Description: Suppress creation of a standard property type that supports inline or by-reference encoding.&#xA;" modelElement="EAID_1D3C3740_F111_4b04_8A6A_8524C9B71E2A"/>
 				</tags>
-				<xrefs value="$XREFPROP=$XID={2389509D-35A6-4a01-B8F2-8404AB9F55F4}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=FeatureType;FQName=CityGML::FeatureType;@ENDSTEREO;$DES;$CLT={1D3C3740-F111-4b04-8A6A-8524C9B71E2A}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;$XREFPROP=$XID={BFE520B2-B252-4a00-9B47-A66C6DA8613D}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=isActive@ENDNAME;@TYPE=Boolean@ENDTYPE;@VALU=0@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={1D3C3740-F111-4b04-8A6A-8524C9B71E2A}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<xrefs value="$XREFPROP=$XID={884FDEC9-A922-4d4e-95B8-041F259C7948}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=TopLevelFeatureType;FQName=CityGML::TopLevelFeatureType;@ENDSTEREO;$DES;$CLT={1D3C3740-F111-4b04-8A6A-8524C9B71E2A}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;$XREFPROP=$XID={BFE520B2-B252-4a00-9B47-A66C6DA8613D}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=isActive@ENDNAME;@TYPE=Boolean@ENDTYPE;@VALU=0@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={1D3C3740-F111-4b04-8A6A-8524C9B71E2A}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="CityFurniture"/>
 				<attributes>
 					<attribute xmi:idref="EAID_B3270C10_39B9_4a12_B749_DCFDD2A3F27A" name="class" scope="Public">
 						<initial/>
-						<documentation value="SIG3D: Classification of CityFurniture as given by the relevant national regulations, information communities, or specific applications. "/>
+						<documentation value="Classification of CityFurniture as given by the relevant national regulations, information communities, or specific applications. [SIG3D]"/>
 						<model ea_localid="135" ea_guid="{B3270C10-39B9-4a12-B749-DCFDD2A3F27A}"/>
-						<properties type="Code" derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
+						<properties type="CityFurnitureClassValue" derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
 						<containment containment="Not Specified" position="0"/>
 						<stereotype stereotype="Property"/>
 						<bounds lower="0" upper="1"/>
 						<options/>
 						<style/>
-						<styleex value="IsLiteral=0;volatile=0;"/>
+						<styleex value="IsLiteral=0;volatile=0;union=0;"/>
 						<tags>
 							<tag xmi:id="EAID_E810E922_58E8_b658_9053_E6721234DD6C" name="sequenceNumber" value="1" notes="Description: Unique integer value for properties of the type used to sort properties.&#xA;"/>
 							<tag xmi:id="EAID_37DFCA0A_B550_b0b5_9450_3738119EDCDB" name="inlineOrByReference" value="inlineOrByReference" notes="Values: inline,byReference,inlineOrByReference&#xA;Default: inlineOrByReference&#xA;Description: Controls whether property values may be encoded inline or by reference.&#xA;"/>
 							<tag xmi:id="EAID_08A8199D_FE63_35fe_A8E8_82C036134273" name="isMetadata" value="false" notes="Values: True,False&#xA;Default: false&#xA;Description: Indicates whether the property is considered metadata about the instance - and not information about the phenomenon in the real world.&#xA;"/>
+							<tag xmi:id="EAID_BCD3CBEE_9454_f194_855D_C2E641072B41" name="xsdEncodingRule" notes="Values: notEncoded,iso19136_2007,gml33,citygml&#xA;"/>
 						</tags>
 						<xrefs value="$XREFPROP=$XID={43EF9A6B-101D-4ed6-8375-A5DCA1E3D022}$XID;$NAM=Stereotypes$NAM;$TYP=attribute property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Property;FQName=CityGML::Property;@ENDSTEREO;$DES;$CLT={B3270C10-39B9-4a12-B749-DCFDD2A3F27A}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 					</attribute>
 					<attribute xmi:idref="EAID_C6E6E240_513D_491a_88C7_469DE6DB4756" name="function" scope="Public">
 						<initial/>
-						<documentation value="SIG3D: Specified function of CityFurniture as given by the relevant national regulations, information communities, or specific applications. "/>
+						<documentation value="Specified function of CityFurniture as given by the relevant national regulations, information communities, or specific applications. [SIG3D]"/>
 						<model ea_localid="136" ea_guid="{C6E6E240-513D-491a-88C7-469DE6DB4756}"/>
-						<properties type="Code" derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
+						<properties type="CityFurnitureFunctionValue" derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
 						<containment containment="Not Specified" position="1"/>
 						<stereotype stereotype="Property"/>
 						<bounds lower="0" upper="*"/>
 						<options/>
 						<style/>
-						<styleex value="IsLiteral=0;volatile=0;"/>
+						<styleex value="IsLiteral=0;volatile=0;union=0;"/>
 						<tags>
 							<tag xmi:id="EAID_E810E922_58E8_b658_86D0_8F2CB3441D97" name="sequenceNumber" value="2" notes="Description: Unique integer value for properties of the type used to sort properties.&#xA;"/>
 							<tag xmi:id="EAID_37DFCA0A_B550_b0b5_86F8_DCFDAF8599D3" name="inlineOrByReference" value="inlineOrByReference" notes="Values: inline,byReference,inlineOrByReference&#xA;Default: inlineOrByReference&#xA;Description: Controls whether property values may be encoded inline or by reference.&#xA;"/>
 							<tag xmi:id="EAID_08A8199D_FE63_35fe_9636_6D043DC1CAAC" name="isMetadata" value="false" notes="Values: True,False&#xA;Default: false&#xA;Description: Indicates whether the property is considered metadata about the instance - and not information about the phenomenon in the real world.&#xA;"/>
+							<tag xmi:id="EAID_BCD3CBEE_9454_f194_B52A_9F8331535A18" name="xsdEncodingRule" notes="Values: notEncoded,iso19136_2007,gml33,citygml&#xA;"/>
 						</tags>
 						<xrefs value="$XREFPROP=$XID={14F56CFD-5143-4af3-9D4D-809E3D5AA04A}$XID;$NAM=Stereotypes$NAM;$TYP=attribute property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Property;FQName=CityGML::Property;@ENDSTEREO;$DES;$CLT={C6E6E240-513D-491a-88C7-469DE6DB4756}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 					</attribute>
 					<attribute xmi:idref="EAID_75137AF8_7A8F_4723_A87E_7056FD2CBA23" name="usage" scope="Public">
 						<initial/>
-						<documentation value="SIG3D: Actual usage of CityFurniture as given by the relevant national regulations, information communities, or specific applications. "/>
+						<documentation value="Actual usage of CityFurniture as given by the relevant national regulations, information communities, or specific applications. [SIG3D]"/>
 						<model ea_localid="137" ea_guid="{75137AF8-7A8F-4723-A87E-7056FD2CBA23}"/>
-						<properties type="Code" derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
+						<properties type="CityFurnitureUsageValue" derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
 						<containment containment="Not Specified" position="2"/>
 						<stereotype stereotype="Property"/>
 						<bounds lower="0" upper="*"/>
 						<options/>
 						<style/>
-						<styleex value="IsLiteral=0;volatile=0;"/>
+						<styleex value="IsLiteral=0;volatile=0;union=0;"/>
 						<tags>
 							<tag xmi:id="EAID_E810E922_58E8_b658_BA83_64B36D19D6FF" name="sequenceNumber" value="3" notes="Description: Unique integer value for properties of the type used to sort properties.&#xA;"/>
 							<tag xmi:id="EAID_37DFCA0A_B550_b0b5_B404_53B1EAB0B9AC" name="inlineOrByReference" value="inlineOrByReference" notes="Values: inline,byReference,inlineOrByReference&#xA;Default: inlineOrByReference&#xA;Description: Controls whether property values may be encoded inline or by reference.&#xA;"/>
 							<tag xmi:id="EAID_08A8199D_FE63_35fe_B759_D036BF3C6A58" name="isMetadata" value="false" notes="Values: True,False&#xA;Default: false&#xA;Description: Indicates whether the property is considered metadata about the instance - and not information about the phenomenon in the real world.&#xA;"/>
+							<tag xmi:id="EAID_BCD3CBEE_9454_f194_A40A_BB9C16C8E07D" name="xsdEncodingRule" notes="Values: notEncoded,iso19136_2007,gml33,citygml&#xA;"/>
 						</tags>
 						<xrefs value="$XREFPROP=$XID={880C45B9-25EC-44d6-9E13-AFA2F4794195}$XID;$NAM=Stereotypes$NAM;$TYP=attribute property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Property;FQName=CityGML::Property;@ENDSTEREO;$DES;$CLT={75137AF8-7A8F-4723-A87E-7056FD2CBA23}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 					</attribute>
 				</attributes>
+				<constraints>
+					<constraint name="sdf" description="inv: function='sdf'" type="OCL" weight="0.00" status="Approved"/>
+				</constraints>
 				<links>
-					<Association xmi:id="EAID_38E81D05_7FC1_444e_AFF4_F58B69380F93" start="EAID_1D3C3740_F111_4b04_8A6A_8524C9B71E2A" end="EAID_21196771_FA12_4b80_92EC_2DDB1B276727"/>
-					<Generalization xmi:id="EAID_52032F1C_F43A_4301_89CA_A861A24AB399" start="EAID_1D3C3740_F111_4b04_8A6A_8524C9B71E2A" end="EAID_5B552D5B_D740_4878_B838_E5979E3B6555"/>
+					<Generalization xmi:id="EAID_E2DE2363_0484_4da9_8988_A8018072780C" start="EAID_1D3C3740_F111_4b04_8A6A_8524C9B71E2A" end="EAID_599046F5_43BB_4199_B9A4_3D34B3B628C7"/>
 				</links>
 			</element>
-			<element xmi:idref="EAID_21196771_FA12_4b80_92EC_2DDB1B276727" xmi:type="uml:Class" name="FurnitureSpace" scope="public">
-				<model package="EAPK_E1321C0B_B95B_44c0_A3EA_3B507911CD78" tpos="0" ea_localid="7693" ea_eleType="element"/>
-				<properties isSpecification="false" sType="Class" nType="0" scope="public" stereotype="FeatureType" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
-				<project author="kolbe/kutzner" version="1.0" phase="1.0" created="2017-11-29 18:12:41" modified="2018-02-26 17:29:42" complexity="1" status="Proposed"/>
+			<element xmi:idref="EAID_51312984_C1EE_4fa5_B843_247EA0387391" xmi:type="uml:Class" name="CityFurnitureClassValue" scope="public">
+				<model package="EAPK_E1321C0B_B95B_44c0_A3EA_3B507911CD78" tpos="0" ea_localid="7994" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Class" nType="0" scope="public" stereotype="CodeList" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="Tatjana" version="1.0" phase="1.0" created="2019-09-27 19:21:57" modified="2019-09-30 17:00:21" complexity="1" status="Proposed"/>
 				<code product_name="Java" gentype="Java"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags>
-					<tag xmi:id="EAID_ED33D65F_A24E_81a2_B51A_7CA2CBFB8BD5" name="byValuePropertyType" value="false#NOTES#Values: True,False&#xA;Default: false&#xA;Description: Create a property type that requires that the instance is encoded inline.&#xA;" modelElement="EAID_21196771_FA12_4b80_92EC_2DDB1B276727"/>
-					<tag xmi:id="EAID_D8E5B7C5_7754_6c77_A829_1872784C4110" name="gmlMixin" value="false#NOTES#Values: True,False&#xA;Default: false&#xA;Description: Identifies the feature type as a mixin class.&#xA;" modelElement="EAID_21196771_FA12_4b80_92EC_2DDB1B276727"/>
-					<tag xmi:id="EAID_26B33348_1E57_d91e_8DCB_E57A71B605B5" name="isCollection" value="false#NOTES#Values: True,False&#xA;Default: false&#xA;Description: Identifies the feature type as a feature collection.&#xA;" modelElement="EAID_21196771_FA12_4b80_92EC_2DDB1B276727"/>
-					<tag xmi:id="EAID_F9638764_E613_9ee6_BC08_FA0F3DE3786A" name="noPropertyType" value="false#NOTES#Values: True,False&#xA;Default: false&#xA;Description: Suppress creation of a standard property type that supports inline or by-reference encoding.&#xA;" modelElement="EAID_21196771_FA12_4b80_92EC_2DDB1B276727"/>
+					<tag xmi:id="EAID_0BE3FA2A_79E2_1979_A264_7CF86A9225B9" name="asDictionary" value="true#NOTES#Values: True,False&#xA;Default: true&#xA;Description: Encode code list as externally managed dictionary.&#xA;" modelElement="EAID_51312984_C1EE_4fa5_B843_247EA0387391"/>
 				</tags>
-				<xrefs value="$XREFPROP=$XID={09063160-C750-4d63-B8CC-4A5071DF3166}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=FeatureType;FQName=CityGML::FeatureType;@ENDSTEREO;$DES;$CLT={21196771-FA12-4b80-92EC-2DDB1B276727}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
-				<extendedProperties tagged="0" package_name="CityFurniture"/>
-				<links>
-					<Generalization xmi:id="EAID_E2DE2363_0484_4da9_8988_A8018072780C" start="EAID_21196771_FA12_4b80_92EC_2DDB1B276727" end="EAID_599046F5_43BB_4199_B9A4_3D34B3B628C7"/>
-					<Association xmi:id="EAID_38E81D05_7FC1_444e_AFF4_F58B69380F93" start="EAID_1D3C3740_F111_4b04_8A6A_8524C9B71E2A" end="EAID_21196771_FA12_4b80_92EC_2DDB1B276727"/>
-					<NoteLink xmi:id="EAID_73F22443_AC83_4241_9ECD_3404F7142600" start="EAID_EA240CA5_59CA_4536_9282_0FE50A3639A5" end="EAID_21196771_FA12_4b80_92EC_2DDB1B276727"/>
-				</links>
+				<xrefs value="$XREFPROP=$XID={D517F0DE-09E6-46dd-9C0A-304D1C5D523A}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=CodeList;FQName=CityGML::CodeList;@ENDSTEREO;$DES;$CLT={51312984-C1EE-4fa5-B843-247EA0387391}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="CityFurniture" ea_attsclassified="{B3270C10-39B9-4a12-B749-DCFDD2A3F27A}"/>
+			</element>
+			<element xmi:idref="EAID_E2CB3BD0_C393_47f5_84CF_1116CDBC8D60" xmi:type="uml:Class" name="CityFurnitureFunctionValue" scope="public">
+				<model package="EAPK_E1321C0B_B95B_44c0_A3EA_3B507911CD78" tpos="0" ea_localid="7995" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Class" nType="0" scope="public" stereotype="CodeList" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="Tatjana" version="1.0" phase="1.0" created="2019-09-27 19:22:07" modified="2019-09-30 17:00:21" complexity="1" status="Proposed"/>
+				<code product_name="Java" gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_0BE3FA2A_79E2_1979_BA99_CB7C64A835FA" name="asDictionary" value="true#NOTES#Values: True,False&#xA;Default: true&#xA;Description: Encode code list as externally managed dictionary.&#xA;" modelElement="EAID_E2CB3BD0_C393_47f5_84CF_1116CDBC8D60"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={5D7A0CE3-C9C4-4ca1-BBAB-052755B794C5}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=CodeList;FQName=CityGML::CodeList;@ENDSTEREO;$DES;$CLT={E2CB3BD0-C393-47f5-84CF-1116CDBC8D60}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="CityFurniture" ea_attsclassified="{C6E6E240-513D-491a-88C7-469DE6DB4756}"/>
+			</element>
+			<element xmi:idref="EAID_53A2CBD6_B65D_4dc8_91B3_F010C4246514" xmi:type="uml:Class" name="CityFurnitureUsageValue" scope="public">
+				<model package="EAPK_E1321C0B_B95B_44c0_A3EA_3B507911CD78" tpos="0" ea_localid="7996" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Class" nType="0" scope="public" stereotype="CodeList" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="Tatjana" version="1.0" phase="1.0" created="2019-09-27 19:22:19" modified="2019-09-30 17:00:21" complexity="1" status="Proposed"/>
+				<code product_name="Java" gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_0BE3FA2A_79E2_1979_8835_89D860052276" name="asDictionary" value="true#NOTES#Values: True,False&#xA;Default: true&#xA;Description: Encode code list as externally managed dictionary.&#xA;" modelElement="EAID_53A2CBD6_B65D_4dc8_91B3_F010C4246514"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={F1F2E319-5A1E-44e0-9EE3-E2EFFC747D57}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=CodeList;FQName=CityGML::CodeList;@ENDSTEREO;$DES;$CLT={53A2CBD6-B65D-4dc8-91B3-F010C4246514}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="CityFurniture" ea_attsclassified="{75137AF8-7A8F-4723-A87E-7056FD2CBA23}"/>
 			</element>
 			<element xmi:idref="EAID_41F37A2F_533C_4a7a_BB20_6F59474702CA" xmi:type="uml:Text" scope="public">
 				<model package="EAPK_E1321C0B_B95B_44c0_A3EA_3B507911CD78" tpos="0" ea_localid="7752" ea_eleType="element"/>
@@ -191,97 +189,21 @@
 				<xrefs/>
 				<extendedProperties tagged="0" package_name="CityFurniture"/>
 			</element>
-			<element xmi:idref="EAID_EA240CA5_59CA_4536_9282_0FE50A3639A5" xmi:type="uml:Note" scope="public">
-				<model package="EAPK_E1321C0B_B95B_44c0_A3EA_3B507911CD78" tpos="0" ea_localid="7717" ea_eleType="element"/>
-				<properties documentation="The additional class &lt;b&gt;&lt;i&gt;FurnitureSpace &lt;/i&gt;&lt;/b&gt;is required, because &lt;b&gt;&lt;i&gt;CityFurniture &lt;/i&gt;&lt;/b&gt;cannot be at the same time subclass of &lt;b&gt;&lt;i&gt;AbstractToplevelCityObject &lt;/i&gt;&lt;/b&gt;and &lt;b&gt;&lt;i&gt;AbstractOccupiedSpace&lt;/i&gt;&lt;/b&gt;." isSpecification="false" sType="Note" nType="0" scope="public"/>
-				<project author="kolbe/kutzner" version="1.0" phase="1.0" created="2017-12-12 15:45:48" modified="2018-02-27 16:01:40" complexity="1" status="Proposed"/>
+			<element xmi:idref="EAID_79DD8F95_DACD_4226_A96F_42AA1ACC6996" xmi:type="uml:Text" scope="public">
+				<model package="EAPK_E1321C0B_B95B_44c0_A3EA_3B507911CD78" tpos="0" ea_localid="8075" ea_eleType="element"/>
+				<properties documentation="&lt;b&gt;CityFurniture module - Code lists&lt;/b&gt;" isSpecification="false" sType="Text" nType="0" scope="public"/>
+				<project author="Tatjana" version="1.0" phase="1.0" created="2019-09-30 17:00:21" modified="2019-09-30 17:00:33" complexity="1" status="Proposed"/>
 				<code gentype="&lt;none&gt;"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags/>
 				<xrefs/>
 				<extendedProperties tagged="0" package_name="CityFurniture"/>
-				<links>
-					<NoteLink xmi:id="EAID_73F22443_AC83_4241_9ECD_3404F7142600" start="EAID_EA240CA5_59CA_4536_9282_0FE50A3639A5" end="EAID_21196771_FA12_4b80_92EC_2DDB1B276727"/>
-				</links>
 			</element>
 		</elements>
 		<connectors>
-			<connector xmi:idref="EAID_38E81D05_7FC1_444e_AFF4_F58B69380F93">
-				<source xmi:idref="EAID_1D3C3740_F111_4b04_8A6A_8524C9B71E2A">
-					<model ea_localid="84" type="Class" name="CityFurniture"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type multiplicity="0..1" aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</source>
-				<target xmi:idref="EAID_21196771_FA12_4b80_92EC_2DDB1B276727">
-					<model ea_localid="7693" type="Class" name="FurnitureSpace"/>
-					<role name="furnitureSpace" stereotype="Property" visibility="Public" targetScope="instance"/>
-					<type multiplicity="0..1" aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
-					<documentation/>
-					<xrefs value="$XREFPROP=$XID={57C90415-1253-4e9c-B60A-54CAF513F1D5}$XID;$NAM=Stereotypes$NAM;$TYP=connectorDestEnd property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=Property;FQName=CityGML::Property;@ENDSTEREO;$DES;$CLT={38E81D05-7FC1-444e-AFF4-F58B69380F93}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
-					<tags>
-						<tag xmi:id="EAID_08A8199D_FE63_35fe_8272_6C71F9AC74A9" name="isMetadata" value="false$ea_notes=Values: True,False&#xA;Default: false&#xA;Description: Indicates whether the property is considered metadata about the instance - and not information about the phenomenon in the real world.&#xA;"/>
-						<tag xmi:id="EAID_37DFCA0A_B550_b0b5_B8B3_C01B27EF6E26" name="inlineOrByReference" value="inlineOrByReference$ea_notes=Values: inline,byReference,inlineOrByReference&#xA;Default: inlineOrByReference&#xA;Description: Controls whether property values may be encoded inline or by reference.&#xA;"/>
-						<tag xmi:id="EAID_E810E922_58E8_b658_8FC1_842F85C05F4E" name="sequenceNumber" value="4$ea_notes= Unique integer value for properties of the type used to sort properties.&#xA;"/>
-					</tags>
-				</target>
-				<model ea_localid="9089"/>
-				<properties ea_type="Association" direction="Source -&gt; Destination"/>
-				<modifiers isRoot="false" isLeaf="false"/>
-				<parameterSubstitutions/>
-				<documentation/>
-				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels lb="0..1" rb="0..1" rt="+furnitureSpace&#xA;«Property»"/>
-				<extendedProperties/>
-				<style/>
-				<xrefs/>
-				<tags/>
-			</connector>
-			<connector xmi:idref="EAID_52032F1C_F43A_4301_89CA_A861A24AB399">
-				<source xmi:idref="EAID_1D3C3740_F111_4b04_8A6A_8524C9B71E2A">
-					<model ea_localid="84" type="Class" name="CityFurniture"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</source>
-				<target xmi:idref="EAID_5B552D5B_D740_4878_B838_E5979E3B6555">
-					<model ea_localid="7628" type="Class" name="AbstractTopLevelCityObject"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</target>
-				<model ea_localid="9090"/>
-				<properties ea_type="Generalization" direction="Source -&gt; Destination"/>
-				<parameterSubstitutions/>
-				<documentation/>
-				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels/>
-				<extendedProperties virtualInheritance="0"/>
-				<style/>
-				<xrefs/>
-				<tags/>
-			</connector>
 			<connector xmi:idref="EAID_E2DE2363_0484_4da9_8988_A8018072780C">
-				<source xmi:idref="EAID_21196771_FA12_4b80_92EC_2DDB1B276727">
-					<model ea_localid="7693" type="Class" name="FurnitureSpace"/>
+				<source xmi:idref="EAID_1D3C3740_F111_4b04_8A6A_8524C9B71E2A">
+					<model ea_localid="84" type="Class" name="CityFurniture"/>
 					<role visibility="Public" targetScope="instance"/>
 					<type aggregation="none" containment="Unspecified"/>
 					<constraints/>
@@ -305,40 +227,6 @@
 				<model ea_localid="9091"/>
 				<properties ea_type="Generalization" direction="Source -&gt; Destination"/>
 				<parameterSubstitutions/>
-				<documentation/>
-				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels/>
-				<extendedProperties virtualInheritance="0"/>
-				<style/>
-				<xrefs/>
-				<tags/>
-			</connector>
-			<connector xmi:idref="EAID_73F22443_AC83_4241_9ECD_3404F7142600">
-				<source xmi:idref="EAID_EA240CA5_59CA_4536_9282_0FE50A3639A5">
-					<model ea_localid="7717" type="Note"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</source>
-				<target xmi:idref="EAID_21196771_FA12_4b80_92EC_2DDB1B276727">
-					<model ea_localid="7693" type="Class" name="FurnitureSpace"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</target>
-				<model ea_localid="9147"/>
-				<properties ea_type="NoteLink" direction="Source -&gt; Destination"/>
-				<modifiers isRoot="false" isLeaf="false"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
 				<labels/>
@@ -385,43 +273,46 @@
 			<packagedElement xmi:type="uml:Package" xmi:id="EAPrimitiveTypesPackage" name="EA_PrimitiveTypes_Package" visibility="public"/>
 		</primitivetypes>
 		<profiles>
-			<uml:Profile xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1/" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmi:id="1BE46C37-5" nsPrefix="GML" name="GML" metamodelReference="mmref01">
-				<ownedComment xmi:type="uml:Comment" xmi:id="comment01" annotatedElement="1BE46C37-5">
-					<body>UML Profile for GML Version:1.0</body>
+			<uml:Profile xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1/" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmi:id="FA5634AC-0" nsPrefix="CityGML" name="CityGML" metamodelReference="mmref01">
+				<ownedComment xmi:type="uml:Comment" xmi:id="comment01" annotatedElement="FA5634AC-0">
+					<body>This profile defines a set of stereotypes and tagged values for defining CityGML application schemas. Version:1.0</body>
 				</ownedComment>
 				<packageImport xmi:id="mmref01">
 					<importedPackage href="http://schema.omg.org/spec/UML/2.1/"/>
 				</packageImport>
-				<packagedElement xmi:type="uml:Stereotype" xmi:id="Aggregation" name="Aggregation">
-					<ownedAttribute xmi:type="uml:Property" xmi:id="Aggregation-base_Association" name="base_Association" association="Association_Aggregation">
-						<type href="http://schema.omg.org/spec/UML/2.1/Association"/>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Version" name="Version">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Version-base_Property" name="base_Property" association="Property_Version">
+						<type href="http://schema.omg.org/spec/UML/2.1/Property"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Version-isMetadata" name="isMetadata">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Version-inlineOrByReference" name="inlineOrByReference">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Version-sequenceNumber" name="sequenceNumber">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
 					</ownedAttribute>
 				</packagedElement>
-				<packagedElement xmi:type="uml:Extension" xmi:id="Association_Aggregation" name="A_Association_Aggregation" memberEnd="extension_Aggregation Aggregation-base_Association">
-					<ownedEnd xmi:id="extension_Aggregation" name="extension_Aggregation" type="Aggregation" isComposite="true" lower="0" upper="1" memberEnd="extension_Aggregation Aggregation-base_Association"/>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Property_Version" name="A_Property_Version" memberEnd="extension_Version Version-base_Property">
+					<ownedEnd xmi:id="extension_Version" name="extension_Version" type="Version" isComposite="true" lower="0" upper="1" memberEnd="extension_Version Version-base_Property"/>
 				</packagedElement>
 				<packagedElement xmi:type="uml:Stereotype" xmi:id="Union" name="Union">
-					<ownedAttribute xmi:type="uml:Property" xmi:id="Union-base_Class" name="base_Class" association="Class_Union">
-						<type href="http://schema.omg.org/spec/UML/2.1/Class"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Union-base_DataType" name="base_DataType" association="DataType_Union">
+						<type href="http://schema.omg.org/spec/UML/2.1/DataType"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="Union-noPropertyType" name="noPropertyType">
 						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
 					</ownedAttribute>
-					<ownedAttribute xmi:type="uml:Property" xmi:id="Union-isCollection" name="isCollection">
-						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
-					</ownedAttribute>
 				</packagedElement>
-				<packagedElement xmi:type="uml:Extension" xmi:id="Class_Union" name="A_Class_Union" memberEnd="extension_Union Union-base_Class">
-					<ownedEnd xmi:id="extension_Union" name="extension_Union" type="Union" isComposite="true" lower="0" upper="1" memberEnd="extension_Union Union-base_Class"/>
+				<packagedElement xmi:type="uml:Extension" xmi:id="DataType_Union" name="A_DataType_Union" memberEnd="extension_Union Union-base_DataType">
+					<ownedEnd xmi:id="extension_Union" name="extension_Union" type="Union" isComposite="true" lower="0" upper="1" memberEnd="extension_Union Union-base_DataType"/>
 				</packagedElement>
 				<packagedElement xmi:type="uml:Stereotype" xmi:id="CodeList" name="CodeList">
 					<ownedAttribute xmi:type="uml:Property" xmi:id="CodeList-base_Class" name="base_Class" association="Class_CodeList">
 						<type href="http://schema.omg.org/spec/UML/2.1/Class"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="CodeList-asDictionary" name="asDictionary">
-						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
-					</ownedAttribute>
-					<ownedAttribute xmi:type="uml:Property" xmi:id="CodeList-defaultCodeSpace" name="defaultCodeSpace">
 						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
 					</ownedAttribute>
 				</packagedElement>
@@ -433,6 +324,9 @@
 						<type href="http://schema.omg.org/spec/UML/2.1/Package"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="ApplicationSchema-version" name="version">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ApplicationSchema-language" name="language">
 						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="ApplicationSchema-gmlProfileSchema" name="gmlProfileSchema">
@@ -455,6 +349,9 @@
 					<ownedAttribute xmi:type="uml:Property" xmi:id="FeatureType-base_Class" name="base_Class" association="Class_FeatureType">
 						<type href="http://schema.omg.org/spec/UML/2.1/Class"/>
 					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="FeatureType-gmlMixin" name="gmlMixin">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="FeatureType-noPropertyType" name="noPropertyType">
 						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
 					</ownedAttribute>
@@ -472,6 +369,9 @@
 					<ownedAttribute xmi:type="uml:Property" xmi:id="Leaf-base_Package" name="base_Package" association="Package_Leaf">
 						<type href="http://schema.omg.org/spec/UML/2.1/Package"/>
 					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Leaf-xsdEncodingRule" name="xsdEncodingRule">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="Leaf-xsdDocument" name="xsdDocument">
 						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
 					</ownedAttribute>
@@ -479,19 +379,36 @@
 				<packagedElement xmi:type="uml:Extension" xmi:id="Package_Leaf" name="A_Package_Leaf" memberEnd="extension_Leaf Leaf-base_Package">
 					<ownedEnd xmi:id="extension_Leaf" name="extension_Leaf" type="Leaf" isComposite="true" lower="0" upper="1" memberEnd="extension_Leaf Leaf-base_Package"/>
 				</packagedElement>
-				<packagedElement xmi:type="uml:Stereotype" xmi:id="DataType" name="DataType">
-					<ownedAttribute xmi:type="uml:Property" xmi:id="DataType-base_Class" name="base_Class" association="Class_DataType">
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="ObjectType" name="ObjectType">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ObjectType-base_Class" name="base_Class" association="Class_ObjectType">
 						<type href="http://schema.omg.org/spec/UML/2.1/Class"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ObjectType-noPropertyType" name="noPropertyType">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ObjectType-isCollection" name="isCollection">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ObjectType-byValuePropertyType" name="byValuePropertyType">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Class_ObjectType" name="A_Class_ObjectType" memberEnd="extension_ObjectType ObjectType-base_Class">
+					<ownedEnd xmi:id="extension_ObjectType" name="extension_ObjectType" type="ObjectType" isComposite="true" lower="0" upper="1" memberEnd="extension_ObjectType ObjectType-base_Class"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="DataType" name="DataType">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="DataType-base_DataType" name="base_DataType" association="DataType_DataType">
+						<type href="http://schema.omg.org/spec/UML/2.1/DataType"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="DataType-xsdEncodingRule" name="xsdEncodingRule">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="DataType-noPropertyType" name="noPropertyType">
 						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
 					</ownedAttribute>
-					<ownedAttribute xmi:type="uml:Property" xmi:id="DataType-isCollection" name="isCollection">
-						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
-					</ownedAttribute>
 				</packagedElement>
-				<packagedElement xmi:type="uml:Extension" xmi:id="Class_DataType" name="A_Class_DataType" memberEnd="extension_DataType DataType-base_Class">
-					<ownedEnd xmi:id="extension_DataType" name="extension_DataType" type="DataType" isComposite="true" lower="0" upper="1" memberEnd="extension_DataType DataType-base_Class"/>
+				<packagedElement xmi:type="uml:Extension" xmi:id="DataType_DataType" name="A_DataType_DataType" memberEnd="extension_DataType DataType-base_DataType">
+					<ownedEnd xmi:id="extension_DataType" name="extension_DataType" type="DataType" isComposite="true" lower="0" upper="1" memberEnd="extension_DataType DataType-base_DataType"/>
 				</packagedElement>
 				<packagedElement xmi:type="uml:Stereotype" xmi:id="Type" name="Type">
 					<ownedAttribute xmi:type="uml:Property" xmi:id="Type-base_Class" name="base_Class" association="Class_Type">
@@ -513,87 +430,57 @@
 				<packagedElement xmi:type="uml:Extension" xmi:id="Class_Type" name="A_Class_Type" memberEnd="extension_Type Type-base_Class">
 					<ownedEnd xmi:id="extension_Type" name="extension_Type" type="Type" isComposite="true" lower="0" upper="1" memberEnd="extension_Type Type-base_Class"/>
 				</packagedElement>
-				<packagedElement xmi:type="uml:Stereotype" xmi:id="Composition" name="Composition">
-					<ownedAttribute xmi:type="uml:Property" xmi:id="Composition-base_Association" name="base_Association" association="Association_Composition">
-						<type href="http://schema.omg.org/spec/UML/2.1/Association"/>
-					</ownedAttribute>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="TopLevelFeatureType" name="TopLevelFeatureType">
+					<generalization xmi:type="uml:Generalization" xmi:id="TopLevelFeatureType_FeatureType_generalization" general="FeatureType"/>
 				</packagedElement>
-				<packagedElement xmi:type="uml:Extension" xmi:id="Association_Composition" name="A_Association_Composition" memberEnd="extension_Composition Composition-base_Association">
-					<ownedEnd xmi:id="extension_Composition" name="extension_Composition" type="Composition" isComposite="true" lower="0" upper="1" memberEnd="extension_Composition Composition-base_Association"/>
-				</packagedElement>
-				<packagedElement xmi:type="uml:Stereotype" xmi:id="Enumeration" name="Enumeration">
-					<ownedAttribute xmi:type="uml:Property" xmi:id="Enumeration-base_Enumeration" name="base_Enumeration" association="Enumeration_Enumeration">
-						<type href="http://schema.omg.org/spec/UML/2.1/Enumeration"/>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="BasicType" name="BasicType">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="BasicType-base_Class" name="base_Class" association="Class_BasicType">
+						<type href="http://schema.omg.org/spec/UML/2.1/Class"/>
 					</ownedAttribute>
-				</packagedElement>
-				<packagedElement xmi:type="uml:Extension" xmi:id="Enumeration_Enumeration" name="A_Enumeration_Enumeration" memberEnd="extension_Enumeration Enumeration-base_Enumeration">
-					<ownedEnd xmi:id="extension_Enumeration" name="extension_Enumeration" type="Enumeration" isComposite="true" lower="0" upper="1" memberEnd="extension_Enumeration Enumeration-base_Enumeration"/>
-				</packagedElement>
-				<packagedElement xmi:type="uml:Stereotype" xmi:id="property" name="property">
-					<ownedAttribute xmi:type="uml:Property" xmi:id="property-base_AssociationEnd" name="base_AssociationEnd" association="AssociationEnd_property">
-						<type href="http://schema.omg.org/spec/UML/2.1/AssociationEnd"/>
-					</ownedAttribute>
-					<ownedAttribute xmi:type="uml:Property" xmi:id="property-base_Attribute" name="base_Attribute" association="Attribute_property">
-						<type href="http://schema.omg.org/spec/UML/2.1/Attribute"/>
-					</ownedAttribute>
-					<ownedAttribute xmi:type="uml:Property" xmi:id="property-isMetadata" name="isMetadata">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="BasicType-rangeMaximum" name="rangeMaximum">
 						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
 					</ownedAttribute>
-					<ownedAttribute xmi:type="uml:Property" xmi:id="property-inlineOrByReference" name="inlineOrByReference">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="BasicType-xsdEncodingRule" name="xsdEncodingRule">
 						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
 					</ownedAttribute>
-					<ownedAttribute xmi:type="uml:Property" xmi:id="property-sequenceNumber" name="sequenceNumber">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="BasicType-length" name="length">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="BasicType-rangeMinimum" name="rangeMinimum">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="BasicType-base" name="base">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="BasicType-itemType" name="itemType">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="BasicType-pattern" name="pattern">
 						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
 					</ownedAttribute>
 				</packagedElement>
-				<packagedElement xmi:type="uml:Extension" xmi:id="AssociationEnd_property" name="A_AssociationEnd_property" memberEnd="extension_property property-base_AssociationEnd">
-					<ownedEnd xmi:id="extension_property" name="extension_property" type="property" isComposite="true" lower="0" upper="1" memberEnd="extension_property property-base_AssociationEnd"/>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Class_BasicType" name="A_Class_BasicType" memberEnd="extension_BasicType BasicType-base_Class">
+					<ownedEnd xmi:id="extension_BasicType" name="extension_BasicType" type="BasicType" isComposite="true" lower="0" upper="1" memberEnd="extension_BasicType BasicType-base_Class"/>
 				</packagedElement>
-				<packagedElement xmi:type="uml:Extension" xmi:id="Attribute_property" name="A_Attribute_property" memberEnd="extension_property property-base_Attribute">
-					<ownedEnd xmi:id="extension_property" name="extension_property" type="property" isComposite="true" lower="0" upper="1" memberEnd="extension_property property-base_Attribute"/>
-				</packagedElement>
-			</uml:Profile>
-			<uml:Profile xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1/" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmi:id="thecustomprofile" nsPrefix="thecustomprofile" name="thecustomprofile" metamodelReference="mmref01">
-				<ownedComment xmi:type="uml:Comment" xmi:id="comment01" annotatedElement="thecustomprofile">
-					<body> Version:1.0</body>
-				</ownedComment>
-				<packageImport xmi:id="mmref01">
-					<importedPackage href="http://schema.omg.org/spec/UML/2.1/"/>
-				</packageImport>
-				<packagedElement xmi:type="uml:Stereotype" xmi:id="CityGML::Property" name="CityGML::Property">
-					<ownedAttribute xmi:type="uml:Property" xmi:id="CityGML::Property-base_Property" name="base_Property" association="Property_CityGML::Property">
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Property" name="Property">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Property-base_Property" name="base_Property" association="Property_Property">
 						<type href="http://schema.omg.org/spec/UML/2.1/Property"/>
 					</ownedAttribute>
-				</packagedElement>
-				<packagedElement xmi:type="uml:Extension" xmi:id="Property_CityGML::Property" name="A_Property_CityGML::Property" memberEnd="extension_CityGML::Property CityGML::Property-base_Property">
-					<ownedEnd xmi:id="extension_CityGML::Property" name="extension_CityGML::Property" type="CityGML::Property" isComposite="true" lower="0" upper="1" memberEnd="extension_CityGML::Property CityGML::Property-base_Property"/>
-				</packagedElement>
-				<packagedElement xmi:type="uml:Stereotype" xmi:id="CityGML::ApplicationSchema" name="CityGML::ApplicationSchema">
-					<ownedAttribute xmi:type="uml:Property" xmi:id="CityGML::ApplicationSchema-base_Package" name="base_Package" association="Package_CityGML::ApplicationSchema">
-						<type href="http://schema.omg.org/spec/UML/2.1/Package"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Property-xsdEncodingRule" name="xsdEncodingRule">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
 					</ownedAttribute>
-				</packagedElement>
-				<packagedElement xmi:type="uml:Extension" xmi:id="Package_CityGML::ApplicationSchema" name="A_Package_CityGML::ApplicationSchema" memberEnd="extension_CityGML::ApplicationSchema CityGML::ApplicationSchema-base_Package">
-					<ownedEnd xmi:id="extension_CityGML::ApplicationSchema" name="extension_CityGML::ApplicationSchema" type="CityGML::ApplicationSchema" isComposite="true" lower="0" upper="1" memberEnd="extension_CityGML::ApplicationSchema CityGML::ApplicationSchema-base_Package"/>
-				</packagedElement>
-				<packagedElement xmi:type="uml:Stereotype" xmi:id="CityGML::FeatureType" name="CityGML::FeatureType">
-					<ownedAttribute xmi:type="uml:Property" xmi:id="CityGML::FeatureType-base_Class" name="base_Class" association="Class_CityGML::FeatureType">
-						<type href="http://schema.omg.org/spec/UML/2.1/Class"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Property-isMetadata" name="isMetadata">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
 					</ownedAttribute>
-				</packagedElement>
-				<packagedElement xmi:type="uml:Extension" xmi:id="Class_CityGML::FeatureType" name="A_Class_CityGML::FeatureType" memberEnd="extension_CityGML::FeatureType CityGML::FeatureType-base_Class">
-					<ownedEnd xmi:id="extension_CityGML::FeatureType" name="extension_CityGML::FeatureType" type="CityGML::FeatureType" isComposite="true" lower="0" upper="1" memberEnd="extension_CityGML::FeatureType CityGML::FeatureType-base_Class"/>
-				</packagedElement>
-				<packagedElement xmi:type="uml:Stereotype" xmi:id="gmlMixin" name="gmlMixin">
-					<ownedAttribute xmi:type="uml:Property" xmi:id="gmlMixin-base_Class" name="base_Class" association="Class_gmlMixin">
-						<type href="http://schema.omg.org/spec/UML/2.1/Class"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Property-inlineOrByReference" name="inlineOrByReference">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
 					</ownedAttribute>
-					<ownedAttribute xmi:type="uml:Property" xmi:id="gmlMixin-gmlMixin" name="gmlMixin">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Property-sequenceNumber" name="sequenceNumber">
 						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
 					</ownedAttribute>
 				</packagedElement>
-				<packagedElement xmi:type="uml:Extension" xmi:id="Class_gmlMixin" name="A_Class_gmlMixin" memberEnd="extension_gmlMixin gmlMixin-base_Class">
-					<ownedEnd xmi:id="extension_gmlMixin" name="extension_gmlMixin" type="gmlMixin" isComposite="true" lower="0" upper="1" memberEnd="extension_gmlMixin gmlMixin-base_Class"/>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Property_Property" name="A_Property_Property" memberEnd="extension_Property Property-base_Property">
+					<ownedEnd xmi:id="extension_Property" name="extension_Property" type="Property" isComposite="true" lower="0" upper="1" memberEnd="extension_Property Property-base_Property"/>
 				</packagedElement>
 			</uml:Profile>
 		</profiles>
@@ -601,26 +488,35 @@
 			<diagram xmi:id="EAID_31DC5280_C05F_4ed9_AE52_23879253BE57">
 				<model package="EAPK_E1321C0B_B95B_44c0_A3EA_3B507911CD78" localID="7" owner="EAPK_E1321C0B_B95B_44c0_A3EA_3B507911CD78"/>
 				<properties name="CityFurniture" type="Logical"/>
-				<project author="kolbe/kutzner" version="1.0" created="2012-11-27 00:00:00" modified="2018-02-26 17:30:53"/>
-				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=1130;DocSize.cy=795;ShowDetails=0;Orientation=L;Zoom=131;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=1;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AllDockable=0;AdvancedElementProps=1;AdvancedFeatureProps=0;AdvancedConnectorProps=0;m_bElementClassifier=1;SPT=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;HideConnStereotype=1;"/>
-				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=0;AdvancedConnectorProps=0;m_bElementClassifier=1;ProfileData=;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;HideConnStereotype=1;SuppressedCompartments=;Theme=:119;SaveTag=D36C5851;"/>
+				<project author="kolbe/kutzner" version="1.0" created="2012-11-27 00:00:00" modified="2019-09-30 17:01:14"/>
+				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=1130;DocSize.cy=795;ShowDetails=0;Orientation=L;Zoom=131;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=1;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=1;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AllDockable=0;AdvancedElementProps=1;AdvancedFeatureProps=0;AdvancedConnectorProps=0;m_bElementClassifier=1;SPT=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;HideConnStereotype=1;"/>
+				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;Layout=l=20:c=20:d=0:cr=1:la=2:i=1:it=4:a=0:;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=0;AdvancedConnectorProps=0;m_bElementClassifier=1;ProfileData=;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;HideConnStereotype=1;SuppressedCompartments=;Theme=:119;SaveTag=5CB1F4AF;"/>
 				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=0;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:Calibri,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
 				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
 				<extendedProperties/>
 				<elements>
-					<element geometry="Left=333;Top=285;Right=466;Bottom=402;" subject="EAID_1D3C3740_F111_4b04_8A6A_8524C9B71E2A" seqno="1" style="DUID=7017D19B;NSL=0;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;italic=0;ul=0;charset=0;pitch=0;BCol=11796479;HideIcon=0;"/>
-					<element geometry="Left=621;Top=285;Right=733;Bottom=330;" subject="EAID_21196771_FA12_4b80_92EC_2DDB1B276727" seqno="2" style="DUID=05C858C1;HideIcon=0;BCol=11796479;"/>
-					<element geometry="Left=453;Top=95;Right=630;Bottom=124;" subject="EAID_41F37A2F_533C_4a7a_BB20_6F59474702CA" seqno="3" style="DUID=E1ECDA03;font=Gill Sans MT;fontsz=110;bold=0;black=0;italic=0;ul=0;charset=0;pitch=34;BFol=0;"/>
-					<element geometry="Left=571;Top=376;Right=790;Bottom=459;" subject="EAID_EA240CA5_59CA_4536_9282_0FE50A3639A5" seqno="4" style="DUID=E7970D41;"/>
-					<element geometry="Left=607;Top=164;Right=747;Bottom=241;" subject="EAID_599046F5_43BB_4199_B9A4_3D34B3B628C7" seqno="5" style="DUID=036F1EBF;NSL=0;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;HideIcon=0;BCol=16770764;"/>
-					<element geometry="Left=327;Top=164;Right=472;Bottom=241;" subject="EAID_5B552D5B_D740_4878_B838_E5979E3B6555" seqno="6" style="DUID=BEEA2CD2;NSL=0;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;HideIcon=0;BCol=16770764;"/>
-					<element geometry="SX=0;SY=-1;EX=0;EY=-35;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_E2DE2363_0484_4da9_8988_A8018072780C" style="Mode=3;EOID=036F1EBF;SOID=05C858C1;Color=-1;LWidth=0;Hidden=0;"/>
-					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_52032F1C_F43A_4301_89CA_A861A24AB399" style="Mode=3;EOID=BEEA2CD2;SOID=7017D19B;Color=-1;LWidth=0;Hidden=0;"/>
-					<element geometry="SX=66;SY=36;EX=0;EY=1;EDGE=2;$LLB=CX=14:CY=15:OX=7:OY=-27:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LLT=;LMT=;LMB=;LRT=CX=65:CY=30:OX=19:OY=-16:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRB=CX=14:CY=15:OX=-8:OY=-30:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;IRHS=;ILHS=;Path=;" subject="EAID_38E81D05_7FC1_444e_AFF4_F58B69380F93" style="Mode=3;EOID=05C858C1;SOID=7017D19B;Color=-1;LWidth=0;Hidden=0;"/>
-					<element geometry="SX=18;SY=0;EX=21;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_73F22443_AC83_4241_9ECD_3404F7142600" style="Mode=3;EOID=05C858C1;SOID=E7970D41;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="Left=291;Top=280;Right=522;Bottom=400;" subject="EAID_1D3C3740_F111_4b04_8A6A_8524C9B71E2A" seqno="1" style="DUID=7017D19B;NSL=0;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;italic=0;ul=0;charset=0;pitch=0;BCol=11796479;HideIcon=0;"/>
+					<element geometry="Left=335;Top=94;Right=512;Bottom=121;" subject="EAID_41F37A2F_533C_4a7a_BB20_6F59474702CA" seqno="2" style="DUID=E1ECDA03;fontsz=110;bold=0;black=0;italic=0;ul=0;charset=0;pitch=34;BFol=0;font=Arial Narrow;"/>
+					<element geometry="Left=337;Top=161;Right=477;Bottom=238;" subject="EAID_599046F5_43BB_4199_B9A4_3D34B3B628C7" seqno="3" style="DUID=036F1EBF;NSL=0;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;HideIcon=0;BCol=16770764;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=-35;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_E2DE2363_0484_4da9_8988_A8018072780C" style="Mode=3;EOID=036F1EBF;SOID=7017D19B;Color=-1;LWidth=0;Hidden=0;"/>
+				</elements>
+			</diagram>
+			<diagram xmi:id="EAID_CFB28AA3_94FF_46e7_97D6_A5DD9661CDED">
+				<model package="EAPK_E1321C0B_B95B_44c0_A3EA_3B507911CD78" localID="3586" owner="EAPK_E1321C0B_B95B_44c0_A3EA_3B507911CD78"/>
+				<properties name="CityFurniture - Code lists" type="Logical"/>
+				<project author="Tatjana" version="1.0" created="2019-09-27 19:21:44" modified="2019-09-30 17:01:00"/>
+				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=1138;DocSize.cy=795;ShowDetails=0;Orientation=L;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AllDockable=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ProfileData=;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;SaveTag=CC7D0B43;"/>
+				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;SwimlaneFont=lfh:-16,lfw:0,lfi:0,lfu:0,lfs:0,lfface:Calibri,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
+				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<extendedProperties/>
+				<elements>
+					<element geometry="Left=294;Top=120;Right=534;Bottom=140;" subject="EAID_79DD8F95_DACD_4226_A96F_42AA1ACC6996" seqno="1" style="DUID=33EC368A;font=Arial Narrow;fontsz=110;bold=0;black=0;italic=0;ul=0;charset=0;pitch=34;BFol=0;"/>
+					<element geometry="Left=308;Top=311;Right=477;Bottom=360;" subject="EAID_53A2CBD6_B65D_4dc8_91B3_F010C4246514" seqno="2" style="DUID=F7A880E8;HideIcon=0;BCol=11796479;"/>
+					<element geometry="Left=308;Top=249;Right=477;Bottom=298;" subject="EAID_E2CB3BD0_C393_47f5_84CF_1116CDBC8D60" seqno="3" style="DUID=F72713F9;HideIcon=0;BCol=11796479;"/>
+					<element geometry="Left=308;Top=187;Right=477;Bottom=236;" subject="EAID_51312984_C1EE_4fa5_B843_247EA0387391" seqno="4" style="DUID=5747DDA3;HideIcon=0;BCol=11796479;"/>
 				</elements>
 			</diagram>
 		</diagrams>
-		<EAStub xmi:id="EAID_DD20EA95_5FD0_4d14_9871_FCCEE29651B5" name="Code" UMLType="Class"/>
 	</xmi:Extension>
 </xmi:XMI>

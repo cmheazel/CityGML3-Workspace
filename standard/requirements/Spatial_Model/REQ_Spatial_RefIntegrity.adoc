@@ -1,0 +1,6 @@
+[[reg_spatial_refIntegrity]]
+[width="90%",cols="2,6"]
+|===
+^|*Requirement  {counter:req-id}* |*/req/spatial/refIntegrity* 
+^|A |The type ImplicitRepresentationPropertyType may contain an ImplicitGeometry element inline or an XLink reference to a remote ImplicitGeometry element using the XLink concept of GML 3.1.1. In the latter case, the xlink:href attribute of the corresponding property of type ImplicitRepresentationProper-tyType may only point to a remote ImplicitGeometry element (where remote ImplicitGeometry elements are located in another document or elsewhere in the same document). Either the contained element or the reference must be given, but neither both nor none.
+|===

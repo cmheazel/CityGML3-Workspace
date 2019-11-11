@@ -1,45 +1,33 @@
 == References
-The following normative documents contain provisions that, through reference in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies.
+The following normative documents contain provisions that, through reference in this text, constitute provisions of OGC 12-019. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. However, parties to agreements based on this part of OGC 12-019 are encouraged to investigate the possibility of applying the most recent editions of the normative documents indicated below. For undated references, the latest edition of the normative document referred to applies.
 
-[NOTE]
-====
-Insert References here. If there are no references, state “There are no normative references”.
+The following documents are indispensable for the application of the CityGML standard. The geometry model of GML 3.1.1 is used except for some added concepts like implicit geometries (cf. chapter 8.2). The appearance model (cf. chapter 9) draws concepts from both _X3D_ and _COLLADA_. Addresses are represented using the OASIS extensible Address Language _xAL_.
 
-References are to follow the Springer LNCS style, with the exception that optional information may be appended to references: DOIs are added after the date and web resource references may include an access date at the end of the reference in parentheses. See examples from Springer and OGC below.
-
-Smith, T.F., Waterman, M.S.: Identification of Common Molecular Subsequences.
-J. Mol. Biol. 147, 195–197 (1981)
-
-May, P., Ehrlich, H.C., Steinke, T.: ZIB Structure Prediction Pipeline: Composing
-a Complex Biological Workflow through Web Services. In: Nagel, W.E., Walter,
-W.V., Lehner, W. (eds.) Euro-Par 2006. LNCS, vol. 4128, pp. 1148–1158. Springer,
-Heidelberg (2006)
-
-Foster, I., Kesselman, C.: The Grid: Blueprint for a New Computing Infrastructure.
-Morgan Kaufmann, San Francisco (1999)
-
-Czajkowski, K., Fitzgerald, S., Foster, I., Kesselman, C.: Grid Information Services
-for Distributed Resource Sharing. In: 10th IEEE International Symposium on High
-Performance Distributed Computing, pp. 181–184. IEEE Press, New York (2001)
-
-Foster, I., Kesselman, C., Nick, J., Tuecke, S.: The Physiology of the Grid: an Open
-Grid Services Architecture for Distributed Systems Integration. Technical report,
-Global Grid Forum (2002)
-
-National Center for Biotechnology Information, http://www.ncbi.nlm.nih.gov
-
-
-ISO / TC 211: ISO 19115-1:2014 Geographic information -- Metadata -- Part 1: Fundamentals (2014)
-
-ISO / TC 211: ISO 19157:2013 Geographic information -- Data quality (2013)
-
-ISO / TC 211: ISO 19139:2007 Geographic information -- Metadata -- XML schema implementation (2007)
-
-ISO / TC 211: ISO 19115-3: Geographic information -- Metadata -- Part 3: XML schemas (2016)
-
-OGC: OGC 15-097 OGC Geospatial User Feedback Standard. Conceptual Model (2016)
-
-OGC: OGC 12-019, OGC City Geography Markup Language (CityGML) Encoding Standard (2012)
-
-OGC: OGC 14-005r3, OGC IndoorGML (2014)
-====
+* ISO / TC154: ISO 8601:2004, Data elements and interchange formats – Information interchange – Representation of dates and times
+* ISO / TC211: ISO/TS 19103:2005, Geographic Information – Conceptual Schema Language
+* ISO / TC211: ISO 19105:2000, Geographic information – Conformance and testing
+* ISO / TC211: ISO 19107:2003, Geographic Information – Spatial Schema
+* ISO / TC211: ISO 19109:2005, Geographic Information – Rules for Application Schemas
+* ISO / TC211: ISO 19111:2003, Geographic information – Spatial referencing by coordinates
+* ISO / TC211: ISO 19115:2003, Geographic Information – Metadata
+* ISO / TC211: ISO 19123:2005, Geographic Information – Coverages
+* ISO / TC211: ISO/TS 19139:2007, Geographic Information – Metadata – XML schema implementation
+* ISO / TC211: ISO/IEC 19775:2004, X3D Abstract Specification
+* OGC: OpenGIS® Abstract Specification Topic 0, Overview, OGC document 04-084
+* OGC: OpenGIS® Abstract Specification Topic 5, The OpenGIS Feature, OGC document 99-105r2
+* OGC: OpenGIS® Abstract Specification Topic 8, Relations between Features, OGC document 99-108r2
+* OGC: OpenGIS® Abstract Specification Topic 10, Feature Collections, OGC document 99-110
+* OGC: OpenGIS® Geography Markup Language Implementation Specification, Version 3.1.1, OGC document 03-105r1
+* OGC: OpenGIS® GML 3.1.1 Simple Dictionary Profile, Version 1.0.0, OGC document 05-099r2
+* IETF: IETF RFC 2045 & 2046, Multipurpose Internet Mail Extensions (MIME). (November 1996)
+* IETF: IETF RFC 2396, Uniform Resource Identifiers (URI): Generic Syntax. (August 1998)
+* W3C: W3C XLink, XML Linking Language (XLink) Version 1.0. W3C Recommendation (27 June 2001)
+* W3C: W3C XMLName, Namespaces in XML. W3C Recommendation (14 January 1999)
+* W3C: W3C XMLSchema-1, XML Schema Part 1: Structures. W3C Recommendation (2 May 2001)
+* W3C: W3C XMLSchema-2, XML Schema Part 2: Datatypes. W3C Recommendation (2 May 2001)
+* W3C: W3C XPointer, XML Pointer Language (XPointer) Version 1.0. W3C Working Draft (16 August 2002)
+* W3C: W3C XML Base, XML Base, W3C Recommendation (27 June 2001)
+* W3C: W3C XML, Extensible Markup Language (XML) 1.0 (Second Edition), W3C Recommendation (6 October 2000)
+* OASIS (Organization for the Advancement of Structured Information Standards): extensible Address Language (xAL v2.0).
+* Khronos Group Inc.: COLLADA – Digital Asset Schema Release 1.4.1
+* Jelliffe, R: The Schematron Assertion Language 1.5. (2002-10-01)
