@@ -1,0 +1,39 @@
+[[rc_vegetation_section]]
+=== Vegetation
+
+include::requirements/requirements_class_vegetation.adoc[]
+
+TBD
+
+The UML diagram of the Vegetation Model is depicted in <<vegetation-uml,Vegetation UML Diagram>>. The Data Dictionary for the Vegetation Package is provided in section <<Vegetation-dd,Vegetation Model Data Dictionary>>.
+
+[[vegetation-uml]]
+.UML diagram of the Vegetation Model.
+
+image::../figures/Vegetation.png[]
+
+The <<vegetation-uml>> is color coded as follows:
+
+[cols="2,6"]
+|====
+|Yellow |indicates
+|Blue |indicates
+|Pink |indicates
+|====
+
+include::data-dictionaries/Vegetation.adoc[]
+
+==== Additional Information
+
+The following sections provide additional information which may not be readily available through the UML Model.
+
+A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_vegetation_section[here].
+
+==== Requirements
+
+include::requirements/Vegetation/REQ_Vegetation_Base.adoc[]
+
+include::requirements/Vegetation/REQ_Vegetation_RefIntegrity.adoc[]
+
+include::requirements/Vegetation/REQ_Vegetation_Restrictions.adoc[]
+

@@ -1,0 +1,595 @@
+[[Generics-data-dictionary]]
+=== *Generics Model Data Dictionary*
+
+Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} +
+Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
+Parent Package:{nbsp}CityGML
+
+[[GenericLogicalSpace-section]]
+==== *Class GenericLogicalSpace*
+Subclass of <<AbstractLogicalSpace-section,AbstractLogicalSpace>>
+
+|====
+|*Class GenericLogicalSpace*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractLogicalSpace-section,AbstractLogicalSpace>> +
+StereoType:{nbsp}{nbsp} «TopLevelFeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<GenericLogicalSpace-section,GenericLogicalSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractLogicalSpace-section,AbstractLogicalSpace>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericLogicalSpaceClassValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericLogicalSpaceFunctionValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericLogicalSpaceUsageValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[GenericLogicalSpaceClassValue-section]]
+==== *Class GenericLogicalSpaceClassValue*
+Subclass of <<-section,>>
+
+|====
+|*Class GenericLogicalSpaceClassValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[GenericLogicalSpaceFunctionValue-section]]
+==== *Class GenericLogicalSpaceFunctionValue*
+Subclass of <<-section,>>
+
+|====
+|*Class GenericLogicalSpaceFunctionValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[GenericLogicalSpaceUsageValue-section]]
+==== *Class GenericLogicalSpaceUsageValue*
+Subclass of <<-section,>>
+
+|====
+|*Class GenericLogicalSpaceUsageValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[GenericOccupiedSpace-section]]
+==== *Class GenericOccupiedSpace*
+Subclass of <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>>
+
+|====
+|*Class GenericOccupiedSpace*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
+StereoType:{nbsp}{nbsp} «TopLevelFeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<GenericOccupiedSpace-section,GenericOccupiedSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericOccupiedSpaceClassValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericOccupiedSpaceFunctionValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericOccupiedSpaceUsageValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[GenericOccupiedSpaceClassValue-section]]
+==== *Class GenericOccupiedSpaceClassValue*
+Subclass of <<-section,>>
+
+|====
+|*Class GenericOccupiedSpaceClassValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[GenericOccupiedSpaceFunctionValue-section]]
+==== *Class GenericOccupiedSpaceFunctionValue*
+Subclass of <<-section,>>
+
+|====
+|*Class GenericOccupiedSpaceFunctionValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[GenericOccupiedSpaceUsageValue-section]]
+==== *Class GenericOccupiedSpaceUsageValue*
+Subclass of <<-section,>>
+
+|====
+|*Class GenericOccupiedSpaceUsageValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[GenericThematicSurface-section]]
+==== *Class GenericThematicSurface*
+Subclass of <<AbstractThematicSurface-section,AbstractThematicSurface>>
+
+|====
+|*Class GenericThematicSurface*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractThematicSurface-section,AbstractThematicSurface>> +
+StereoType:{nbsp}{nbsp} «TopLevelFeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<GenericThematicSurface-section,GenericThematicSurface>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericThematicSurfaceClassValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericThematicSurfaceFunctionValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericThematicSurfaceUsageValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[GenericThematicSurfaceClassValue-section]]
+==== *Class GenericThematicSurfaceClassValue*
+Subclass of <<-section,>>
+
+|====
+|*Class GenericThematicSurfaceClassValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[GenericThematicSurfaceFunctionValue-section]]
+==== *Class GenericThematicSurfaceFunctionValue*
+Subclass of <<-section,>>
+
+|====
+|*Class GenericThematicSurfaceFunctionValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[GenericThematicSurfaceUsageValue-section]]
+==== *Class GenericThematicSurfaceUsageValue*
+Subclass of <<-section,>>
+
+|====
+|*Class GenericThematicSurfaceUsageValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[GenericUnoccupiedSpace-section]]
+==== *Class GenericUnoccupiedSpace*
+Subclass of <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>>
+
+|====
+|*Class GenericUnoccupiedSpace*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
+StereoType:{nbsp}{nbsp} «TopLevelFeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<GenericUnoccupiedSpace-section,GenericUnoccupiedSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericUnoccupiedSpaceClassValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericUnoccupiedSpaceFunctionValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericUnoccupiedSpaceUsageValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[GenericUnoccupiedSpaceClassValue-section]]
+==== *Class GenericUnoccupiedSpaceClassValue*
+Subclass of <<-section,>>
+
+|====
+|*Class GenericUnoccupiedSpaceClassValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[GenericUnoccupiedSpaceFunctionValue-section]]
+==== *Class GenericUnoccupiedSpaceFunctionValue*
+Subclass of <<-section,>>
+
+|====
+|*Class GenericUnoccupiedSpaceFunctionValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[GenericUnoccupiedSpaceUsageValue-section]]
+==== *Class GenericUnoccupiedSpaceUsageValue*
+Subclass of <<-section,>>
+
+|====
+|*Class GenericUnoccupiedSpaceUsageValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[DateAttribute-section]]
+==== *Class DateAttribute*
+Subclass of <<AbstractGenericAttribute-section,AbstractGenericAttribute>>
+
+|====
+|*Class DateAttribute*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «DataType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<DateAttribute-section,DateAttribute>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}name +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CharacterString +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}value +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Date +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Value of the Generic Attribute.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[DoubleAttribute-section]]
+==== *Class DoubleAttribute*
+Subclass of <<AbstractGenericAttribute-section,AbstractGenericAttribute>>
+
+|====
+|*Class DoubleAttribute*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «DataType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<DoubleAttribute-section,DoubleAttribute>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}name +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CharacterString +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}value +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Real +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Value of the Generic Attribute.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[GenericAttributeSet-section]]
+==== *Class GenericAttributeSet*
+Subclass of <<AbstractGenericAttribute-section,AbstractGenericAttribute>>
+
+|====
+|*Class GenericAttributeSet*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «DataType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<GenericAttributeSet-section,GenericAttributeSet>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} genericAttribute +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<GenericAttributeSet-section,GenericAttributeSet>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}codeSpace +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} URI +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Codespace idcentifier of the Generic AttributeSet.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}name +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CharacterString +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[IntAttribute-section]]
+==== *Class IntAttribute*
+Subclass of <<AbstractGenericAttribute-section,AbstractGenericAttribute>>
+
+|====
+|*Class IntAttribute*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «DataType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<IntAttribute-section,IntAttribute>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}name +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CharacterString +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}value +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Integer +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Value of the Generic Attribute.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[MeasureAttribute-section]]
+==== *Class MeasureAttribute*
+Subclass of <<AbstractGenericAttribute-section,AbstractGenericAttribute>>
+
+|====
+|*Class MeasureAttribute*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «DataType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<MeasureAttribute-section,MeasureAttribute>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}name +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CharacterString +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}value +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Measure +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Value of the Generic Attribute.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[StringAttribute-section]]
+==== *Class StringAttribute*
+Subclass of <<AbstractGenericAttribute-section,AbstractGenericAttribute>>
+
+|====
+|*Class StringAttribute*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «DataType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<StringAttribute-section,StringAttribute>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}name +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CharacterString +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}value +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CharacterString +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Value of the Generic Attribute.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[UriAttribute-section]]
+==== *Class UriAttribute*
+Subclass of <<AbstractGenericAttribute-section,AbstractGenericAttribute>>
+
+|====
+|*Class UriAttribute*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «DataType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<UriAttribute-section,UriAttribute>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}name +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CharacterString +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}value +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} URI +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Value of the Generic Attribute.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+  
+
+
+

@@ -1,0 +1,598 @@
+[[Tunnel-data-dictionary]]
+=== *Tunnel Model Data Dictionary*
+
+Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} +
+Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
+Parent Package:{nbsp}CityGML
+
+[[AbstractTunnel-section]]
+==== *Class AbstractTunnel*
+Subclass of <<AbstractConstruction-section,AbstractConstruction>>
+
+|====
+|*Class AbstractTunnel*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractConstruction-section,AbstractConstruction>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractTunnel-section,AbstractTunnel>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} tunnelFurniture +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<TunnelFurniture-section,TunnelFurniture>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractTunnel-section,AbstractTunnel>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractConstruction-section,AbstractConstruction>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractTunnel-section,AbstractTunnel>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} tunnelInstallation +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<TunnelInstallation-section,TunnelInstallation>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractTunnel-section,AbstractTunnel>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} tunnelConstructiveElement +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<TunnelConstructiveElement-section,TunnelConstructiveElement>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractTunnel-section,AbstractTunnel>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} hollowSpace +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<HollowSpace-section,HollowSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<TunnelPart-section,TunnelPart>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractTunnel-section,AbstractTunnel>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Tunnel-section,Tunnel>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractTunnel-section,AbstractTunnel>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TunnelClassValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Classification of the actual usage of Tunnel or TunnelPart as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TunnelFunctionValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Specified function of Tunnel or TunnelPart as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TunnelUsageValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Actual usage of Tunnel or TunnelPart as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[HollowSpace-section]]
+==== *Class HollowSpace*
+Subclass of <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>>
+
+|====
+|*Class HollowSpace*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<HollowSpace-section,HollowSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<HollowSpace-section,HollowSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} tunnelFurniture +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<TunnelFurniture-section,TunnelFurniture>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<HollowSpace-section,HollowSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<HollowSpace-section,HollowSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} tunnelInstallation +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<TunnelInstallation-section,TunnelInstallation>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractTunnel-section,AbstractTunnel>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} hollowSpace +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<HollowSpace-section,HollowSpace>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} HollowSpaceClassValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Classification of HollowSpace as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} HollowSpaceFunctionValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Specified function of HollowSpace as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} HollowSpaceUsageValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Actual usage of HollowSpace as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[HollowSpaceClassValue-section]]
+==== *Class HollowSpaceClassValue*
+Subclass of <<-section,>>
+
+|====
+|*Class HollowSpaceClassValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[HollowSpaceFunctionValue-section]]
+==== *Class HollowSpaceFunctionValue*
+Subclass of <<-section,>>
+
+|====
+|*Class HollowSpaceFunctionValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[HollowSpaceUsageValue-section]]
+==== *Class HollowSpaceUsageValue*
+Subclass of <<-section,>>
+
+|====
+|*Class HollowSpaceUsageValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[Tunnel-section]]
+==== *Class Tunnel*
+Subclass of <<AbstractTunnel-section,AbstractTunnel>>
+
+|====
+|*Class Tunnel*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractTunnel-section,AbstractTunnel>> +
+StereoType:{nbsp}{nbsp} «TopLevelFeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Tunnel-section,Tunnel>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractTunnel-section,AbstractTunnel>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Tunnel-section,Tunnel>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} tunnelPart +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<TunnelPart-section,TunnelPart>> +
+|*Attributes*
+|
+|==== 
+
+[[TunnelClassValue-section]]
+==== *Class TunnelClassValue*
+Subclass of <<-section,>>
+
+|====
+|*Class TunnelClassValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[TunnelConstructiveElement-section]]
+==== *Class TunnelConstructiveElement*
+Subclass of <<AbstractConstructiveElement-section,AbstractConstructiveElement>>
+
+|====
+|*Class TunnelConstructiveElement*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractConstructiveElement-section,AbstractConstructiveElement>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<TunnelConstructiveElement-section,TunnelConstructiveElement>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractConstructiveElement-section,AbstractConstructiveElement>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractTunnel-section,AbstractTunnel>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} tunnelConstructiveElement +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<TunnelConstructiveElement-section,TunnelConstructiveElement>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TunnelConstructiveElementClassValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TunnelConstructiveElementFunctionValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TunnelConstructiveElementUsageValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[TunnelConstructiveElementClassValue-section]]
+==== *Class TunnelConstructiveElementClassValue*
+Subclass of <<-section,>>
+
+|====
+|*Class TunnelConstructiveElementClassValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[TunnelConstructiveElementFunctionValue-section]]
+==== *Class TunnelConstructiveElementFunctionValue*
+Subclass of <<-section,>>
+
+|====
+|*Class TunnelConstructiveElementFunctionValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[TunnelConstructiveElementUsageValue-section]]
+==== *Class TunnelConstructiveElementUsageValue*
+Subclass of <<-section,>>
+
+|====
+|*Class TunnelConstructiveElementUsageValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[TunnelFunctionValue-section]]
+==== *Class TunnelFunctionValue*
+Subclass of <<-section,>>
+
+|====
+|*Class TunnelFunctionValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[TunnelFurniture-section]]
+==== *Class TunnelFurniture*
+Subclass of <<AbstractFurniture-section,AbstractFurniture>>
+
+|====
+|*Class TunnelFurniture*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractFurniture-section,AbstractFurniture>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<TunnelFurniture-section,TunnelFurniture>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFurniture-section,AbstractFurniture>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractTunnel-section,AbstractTunnel>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} tunnelFurniture +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<TunnelFurniture-section,TunnelFurniture>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<HollowSpace-section,HollowSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} tunnelFurniture +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<TunnelFurniture-section,TunnelFurniture>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TunnelFurnitureClassValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Classification of TunnelFurniture as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TunnelFurnitureFunctionValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Specified function of TunnelFurniture as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TunnelFurnitureUsageValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Actual usage of TunnelFurniture as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[TunnelFurnitureClassValue-section]]
+==== *Class TunnelFurnitureClassValue*
+Subclass of <<-section,>>
+
+|====
+|*Class TunnelFurnitureClassValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[TunnelFurnitureFunctionValue-section]]
+==== *Class TunnelFurnitureFunctionValue*
+Subclass of <<-section,>>
+
+|====
+|*Class TunnelFurnitureFunctionValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[TunnelFurnitureUsageValue-section]]
+==== *Class TunnelFurnitureUsageValue*
+Subclass of <<-section,>>
+
+|====
+|*Class TunnelFurnitureUsageValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[TunnelInstallation-section]]
+==== *Class TunnelInstallation*
+Subclass of <<AbstractInstallation-section,AbstractInstallation>>
+
+|====
+|*Class TunnelInstallation*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractInstallation-section,AbstractInstallation>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<TunnelInstallation-section,TunnelInstallation>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractInstallation-section,AbstractInstallation>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractTunnel-section,AbstractTunnel>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} tunnelInstallation +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<TunnelInstallation-section,TunnelInstallation>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<HollowSpace-section,HollowSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} tunnelInstallation +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<TunnelInstallation-section,TunnelInstallation>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TunnelInstallationClassValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Classification of TunnelInstallation as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TunnelInstallationFunctionValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Specified function of TunnelInstallation as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TunnelInstallationUsageValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Actual usage of TunnelInstallation as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[TunnelInstallationClassValue-section]]
+==== *Class TunnelInstallationClassValue*
+Subclass of <<-section,>>
+
+|====
+|*Class TunnelInstallationClassValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[TunnelInstallationFunctionValue-section]]
+==== *Class TunnelInstallationFunctionValue*
+Subclass of <<-section,>>
+
+|====
+|*Class TunnelInstallationFunctionValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[TunnelInstallationUsageValue-section]]
+==== *Class TunnelInstallationUsageValue*
+Subclass of <<-section,>>
+
+|====
+|*Class TunnelInstallationUsageValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[TunnelPart-section]]
+==== *Class TunnelPart*
+Subclass of <<AbstractTunnel-section,AbstractTunnel>>
+
+|====
+|*Class TunnelPart*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractTunnel-section,AbstractTunnel>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<TunnelPart-section,TunnelPart>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractTunnel-section,AbstractTunnel>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Tunnel-section,Tunnel>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} tunnelPart +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<TunnelPart-section,TunnelPart>> +
+|*Attributes*
+|
+|==== 
+
+[[TunnelUsageValue-section]]
+==== *Class TunnelUsageValue*
+Subclass of <<-section,>>
+
+|====
+|*Class TunnelUsageValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+  
+
+
+

@@ -1,0 +1,962 @@
+[[Building-data-dictionary]]
+=== *Building Model Data Dictionary*
+
+Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} +
+Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
+Parent Package:{nbsp}CityGML
+
+[[AbstractBuilding-section]]
+==== *Class AbstractBuilding*
+Subclass of <<AbstractConstruction-section,AbstractConstruction>>
+
+|====
+|*Class AbstractBuilding*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractConstruction-section,AbstractConstruction>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractBuilding-section,AbstractBuilding>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingConstructiveElement +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingConstructiveElement-section,BuildingConstructiveElement>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractBuilding-section,AbstractBuilding>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} address +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<Address-section,Address>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractBuilding-section,AbstractBuilding>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingSubdivision +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractBuilding-section,AbstractBuilding>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractConstruction-section,AbstractConstruction>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractBuilding-section,AbstractBuilding>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingFurniture +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingFurniture-section,BuildingFurniture>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractBuilding-section,AbstractBuilding>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingRoom +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingRoom-section,BuildingRoom>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractBuilding-section,AbstractBuilding>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingInstallation +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingInstallation-section,BuildingInstallation>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<BuildingPart-section,BuildingPart>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractBuilding-section,AbstractBuilding>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Building-section,Building>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractBuilding-section,AbstractBuilding>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingClassValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Classification of Building or BuildingPart as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingFunctionValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Specified function of Building or BuildingPart as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}roofType +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RoofTypeValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} bSI: Basic configuration of the roof in terms of the different roof shapes.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}storeyHeightsAboveGround +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} MeasureOrNilReasonList +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: List of heights for each storey above ground.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}storeyHeightsBelowGround +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} MeasureOrNilReasonList +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: List of heights for each storey below ground.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}storeysAboveGround +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Integer +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Number of storeys mainly above ground.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}storeysBelowGround +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Integer +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Number of storeys mainly below ground.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingUsageValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Actual usage of Building or BuildingPart as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[AbstractBuildingSubdivision-section]]
+==== *Class AbstractBuildingSubdivision*
+Subclass of <<AbstractLogicalSpace-section,AbstractLogicalSpace>>
+
+|====
+|*Class AbstractBuildingSubdivision*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractLogicalSpace-section,AbstractLogicalSpace>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractLogicalSpace-section,AbstractLogicalSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingInstallation +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingInstallation-section,BuildingInstallation>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingFurniture +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingFurniture-section,BuildingFurniture>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingRoom +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingRoom-section,BuildingRoom>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingConstructiveElement +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingConstructiveElement-section,BuildingConstructiveElement>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Storey-section,Storey>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractBuilding-section,AbstractBuilding>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingSubdivision +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<BuildingUnit-section,BuildingUnit>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingSubdivisionClassValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}elevation +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Elevation +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} [INSPIRE] Vertically-constrained dimensional property consisting of an absolute measure referenced to a well-defined surface which is commonly taken as origin (geoïd, water level, etc.).  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingSubdivisionFunctionValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}sortKey +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Real +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Defines an order among the building unit objects, e.g. for sorting storeys.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingSubdivisionUsageValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[Building-section]]
+==== *Class Building*
+Subclass of <<AbstractBuilding-section,AbstractBuilding>>
+
+|====
+|*Class Building*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractBuilding-section,AbstractBuilding>> +
+StereoType:{nbsp}{nbsp} «TopLevelFeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Building-section,Building>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractBuilding-section,AbstractBuilding>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Building-section,Building>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingPart +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingPart-section,BuildingPart>> +
+|*Attributes*
+|
+|==== 
+
+[[BuildingClassValue-section]]
+==== *Class BuildingClassValue*
+Subclass of <<-section,>>
+
+|====
+|*Class BuildingClassValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[BuildingConstructiveElement-section]]
+==== *Class BuildingConstructiveElement*
+Subclass of <<AbstractConstructiveElement-section,AbstractConstructiveElement>>
+
+|====
+|*Class BuildingConstructiveElement*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractConstructiveElement-section,AbstractConstructiveElement>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<BuildingConstructiveElement-section,BuildingConstructiveElement>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractConstructiveElement-section,AbstractConstructiveElement>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractBuilding-section,AbstractBuilding>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingConstructiveElement +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingConstructiveElement-section,BuildingConstructiveElement>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingConstructiveElement +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingConstructiveElement-section,BuildingConstructiveElement>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingConstructiveElementClassValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingConstructiveElementFunctionValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingConstructiveElementUsageValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[BuildingConstructiveElementClassValue-section]]
+==== *Class BuildingConstructiveElementClassValue*
+Subclass of <<-section,>>
+
+|====
+|*Class BuildingConstructiveElementClassValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[BuildingConstructiveElementFunctionValue-section]]
+==== *Class BuildingConstructiveElementFunctionValue*
+Subclass of <<-section,>>
+
+|====
+|*Class BuildingConstructiveElementFunctionValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[BuildingConstructiveElementUsageValue-section]]
+==== *Class BuildingConstructiveElementUsageValue*
+Subclass of <<-section,>>
+
+|====
+|*Class BuildingConstructiveElementUsageValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[BuildingFunctionValue-section]]
+==== *Class BuildingFunctionValue*
+Subclass of <<-section,>>
+
+|====
+|*Class BuildingFunctionValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[BuildingFurniture-section]]
+==== *Class BuildingFurniture*
+Subclass of <<AbstractFurniture-section,AbstractFurniture>>
+
+|====
+|*Class BuildingFurniture*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractFurniture-section,AbstractFurniture>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<BuildingFurniture-section,BuildingFurniture>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFurniture-section,AbstractFurniture>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingFurniture +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingFurniture-section,BuildingFurniture>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<BuildingRoom-section,BuildingRoom>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingFurniture +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingFurniture-section,BuildingFurniture>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractBuilding-section,AbstractBuilding>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingFurniture +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingFurniture-section,BuildingFurniture>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingFurnitureClassValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Classification of BuildingFurniture as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingFurnitureFunctionValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Specified function of BuildingFurniture as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingFurnitureUsageValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Actual usage of BuildingFurniture as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[BuildingFurnitureClassValue-section]]
+==== *Class BuildingFurnitureClassValue*
+Subclass of <<-section,>>
+
+|====
+|*Class BuildingFurnitureClassValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[BuildingFurnitureFunctionValue-section]]
+==== *Class BuildingFurnitureFunctionValue*
+Subclass of <<-section,>>
+
+|====
+|*Class BuildingFurnitureFunctionValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[BuildingFurnitureUsageValue-section]]
+==== *Class BuildingFurnitureUsageValue*
+Subclass of <<-section,>>
+
+|====
+|*Class BuildingFurnitureUsageValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[BuildingInstallation-section]]
+==== *Class BuildingInstallation*
+Subclass of <<AbstractInstallation-section,AbstractInstallation>>
+
+|====
+|*Class BuildingInstallation*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractInstallation-section,AbstractInstallation>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<BuildingInstallation-section,BuildingInstallation>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractInstallation-section,AbstractInstallation>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingInstallation +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingInstallation-section,BuildingInstallation>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractBuilding-section,AbstractBuilding>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingInstallation +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingInstallation-section,BuildingInstallation>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<BuildingRoom-section,BuildingRoom>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingInstallation +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingInstallation-section,BuildingInstallation>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingInstallationClassValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Classification of BuildingInstallation as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingInstallationFunctionValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Specified function of BuildingInstallation as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingInstallationUsageValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Actual usage of BuildingInstallation as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[BuildingInstallationClassValue-section]]
+==== *Class BuildingInstallationClassValue*
+Subclass of <<-section,>>
+
+|====
+|*Class BuildingInstallationClassValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[BuildingInstallationFunctionValue-section]]
+==== *Class BuildingInstallationFunctionValue*
+Subclass of <<-section,>>
+
+|====
+|*Class BuildingInstallationFunctionValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[BuildingInstallationUsageValue-section]]
+==== *Class BuildingInstallationUsageValue*
+Subclass of <<-section,>>
+
+|====
+|*Class BuildingInstallationUsageValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[BuildingPart-section]]
+==== *Class BuildingPart*
+Subclass of <<AbstractBuilding-section,AbstractBuilding>>
+
+|====
+|*Class BuildingPart*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractBuilding-section,AbstractBuilding>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<BuildingPart-section,BuildingPart>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractBuilding-section,AbstractBuilding>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Building-section,Building>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingPart +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingPart-section,BuildingPart>> +
+|*Attributes*
+|
+|==== 
+
+[[BuildingRoom-section]]
+==== *Class BuildingRoom*
+Subclass of <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>>
+
+|====
+|*Class BuildingRoom*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<BuildingRoom-section,BuildingRoom>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<BuildingRoom-section,BuildingRoom>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingFurniture +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingFurniture-section,BuildingFurniture>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<BuildingRoom-section,BuildingRoom>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<BuildingRoom-section,BuildingRoom>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingInstallation +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingInstallation-section,BuildingInstallation>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingRoom +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingRoom-section,BuildingRoom>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractBuilding-section,AbstractBuilding>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingRoom +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingRoom-section,BuildingRoom>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingRoomClassValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Classification of Room as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingRoomFunctionValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Function of Room as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}roomHeight +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RoomHeight +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Height of the room.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingRoomUsageValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Usage of Room as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[BuildingRoomClassValue-section]]
+==== *Class BuildingRoomClassValue*
+Subclass of <<-section,>>
+
+|====
+|*Class BuildingRoomClassValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[BuildingRoomFunctionValue-section]]
+==== *Class BuildingRoomFunctionValue*
+Subclass of <<-section,>>
+
+|====
+|*Class BuildingRoomFunctionValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[BuildingRoomUsageValue-section]]
+==== *Class BuildingRoomUsageValue*
+Subclass of <<-section,>>
+
+|====
+|*Class BuildingRoomUsageValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[BuildingSubdivisionClassValue-section]]
+==== *Class BuildingSubdivisionClassValue*
+Subclass of <<-section,>>
+
+|====
+|*Class BuildingSubdivisionClassValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[BuildingSubdivisionFunctionValue-section]]
+==== *Class BuildingSubdivisionFunctionValue*
+Subclass of <<-section,>>
+
+|====
+|*Class BuildingSubdivisionFunctionValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[BuildingSubdivisionUsageValue-section]]
+==== *Class BuildingSubdivisionUsageValue*
+Subclass of <<-section,>>
+
+|====
+|*Class BuildingSubdivisionUsageValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[BuildingUnit-section]]
+==== *Class BuildingUnit*
+Subclass of <<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>>
+
+|====
+|*Class BuildingUnit*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<BuildingUnit-section,BuildingUnit>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} address +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<Address-section,Address>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<BuildingUnit-section,BuildingUnit>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Bi-Directional +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp} storey +
+Source Class: {nbsp}{nbsp}{nbsp} <<Storey-section,Storey>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingUnit +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingUnit-section,BuildingUnit>> +
+|*Attributes*
+|
+|==== 
+
+[[BuildingUsageValue-section]]
+==== *Class BuildingUsageValue*
+Subclass of <<-section,>>
+
+|====
+|*Class BuildingUsageValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[RoofTypeValue-section]]
+==== *Class RoofTypeValue*
+Subclass of <<-section,>>
+
+|====
+|*Class RoofTypeValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[RoomElevationReferenceValue-section]]
+==== *Class RoomElevationReferenceValue*
+Subclass of <<-section,>>
+
+|====
+|*Class RoomElevationReferenceValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[Storey-section]]
+==== *Class Storey*
+Subclass of <<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>>
+
+|====
+|*Class Storey*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Bi-Directional +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp} storey +
+Source Class: {nbsp}{nbsp}{nbsp} <<Storey-section,Storey>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingUnit +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingUnit-section,BuildingUnit>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Storey-section,Storey>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Storey-section,Storey>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+|*Attributes*
+|
+|==== 
+
+[[RoomHeight-section]]
+==== *Class RoomHeight*
+Subclass of <<-section,>>
+
+|====
+|*Class RoomHeight*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «DataType»
+|
+|*Associations*
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}highReference +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RoomElevationReferenceValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} [INSPIRE] Element used as the high reference.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}lowReference +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RoomElevationReferenceValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} [INSPIRE] Element as the low reference.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}status +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} HeightStatusValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} [INSPIRE] The way the height has been captured.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}value +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Value of the room height.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+  
+
+

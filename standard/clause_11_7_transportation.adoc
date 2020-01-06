@@ -1,0 +1,37 @@
+[[rc_transportation_section]]
+=== Transportation
+
+include::requirements/requirements_class_transportation.adoc[]
+
+TBD
+
+The UML diagram of the Transportation Model is depicted in <<transportation-uml,Transportation UML Diagram>>. The Data Dictionary for the Transportation Package is provided in section <<Transportation-dd,Transportation Model Data Dictionary>>.
+
+[[transportation-uml]]
+.UML diagram of the Transportation Model.
+
+image::../figures/Transportation.png[]
+
+The <<transportation-uml>> is color coded as follows:
+
+[cols="2,6"]
+|====
+|Yellow |indicates
+|Blue |indicates
+|Pink |indicates
+|====
+
+include::data-dictionaries/Transportation.adoc[]
+
+==== Additional Information
+
+The following sections provide additional information which may not be readily available through the UML Model
+
+A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_transportation_section[here].
+
+==== Requirements
+
+include::requirements/Transportation/REQ_Transportation_Base.adoc[]
+
+include::requirements/Transportation/REQ_Transportation_RefIntegrity.adoc[]
+

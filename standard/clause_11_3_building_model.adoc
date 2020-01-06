@@ -1,32 +1,46 @@
-[[bp_building]]
+[[rc_building-model_section]]
 === Building Model
+
+
+include::requirements/requirements_class_building.adoc[]
+
 The building model is one of the most detailed thematic concepts of CityGML. It allows for the representation of thematic and spatial aspects of buildings and building parts in five levels of detail, LOD0 to LOD4. The building model of CityGML is defined by the thematic extension module Building (cf. chapter 7). Fig. 26 provides examples of 3D city and building models in LOD1 – 4.
 
-The UML diagram of the building model is depicted in <<figure-27,Figure 27>>
+The UML diagram of the building model is depicted in <<building-uml,Building UML Diagram>>. The Data Dictionary for the Building Model Package is provided in section <<Bridge-dd,Building Model Data Dictionary>>.
 
-[[figure-27]]
-.UML diagram of CityGML’s building model. Prefixes are used to indicate XML namespaces associated with model elements. Element names without a prefix are defined within the CityGML Building module.
-image::../figures/Figure_27.png[]
+[[building-uml]]
+.UML diagram of CityGML’s building model.
 
-==== Building and Building Part
+image::../figures/building.png[]
 
-NOTE: Version 2.0 uses XML schema to illustrate this section. Replace those schema with UML.
+The <<building-uml>> is color coded as follows:
+
+[cols="2,6"]
+|====
+|Yellow |indicates
+|Blue |indicates
+|Pink |indicates
+|====
+
+include::data-dictionaries/Building.adoc[]
+
+==== Additional Information
+
+The following sections provide additional information which may not be readily available through the UML Model.
+
+A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_building-model_section[here].
+
+NOTE: The following content is from the previous draft. Is this sort of content useful?
 
 ===== BuildingType, Building
-
-NOTE: Insert BuildingType, Building UML
 
 The Building class is one of the two subclasses of _AbstractBuilding. If a building only consists of one (homo-geneous) part, this class shall be used. A building composed of structural segments differing in, for example the number of storeys or the roof type has to be separated into one Building having one or more additional Build-ingPart (see Fig. 28). The geometry and non-spatial properties of the central part of the building should be represented in the aggregating Building feature.
 
 ===== BuildingType, Building Part
 
-NOTE: Insert BuildingType, Building Part UML
-
 The class BuildingPart is derived from _AbstractBuilding. It is used to model a structural part of a building (see Fig. 28). A BuildingPart object should be uniquely related to exactly one building or building part object.
 
 ===== AbstractBuildingType, _AbstractBuilding
-
-NOTE: AbstractBuildingType, _AbstractBuilding UML
 
 The abstract class _AbstractBuilding contains properties for building attributes, purely geometric representations, and geometric/semantic representations of the building or building part in different levels of detail. The attributes describe:
 
@@ -81,8 +95,6 @@ The abstract class _AbstractBuilding contains properties for building attributes
 |IntBuildingInstallationType
 | | | | |•
 |===
-
-==== Outer building installations
 
 ===== BuildingInstallationType, BuildingInstallation 
 
@@ -197,6 +209,8 @@ In order to model building storeys with CityGML’s generic grouping concept, a 
 * The storey name or number can be stored in the gml:name property. The storey number attribute shall be assigned the value “storeyNo_X” with decimal number X in order to denote that this group repre-sents a storey wrt. a specific number.
 
 In a second step, the CityObjectGroup objects representing different storeys are grouped themselves. By using the generic aggregation concept of CityObjectGroup, the “storeys group” is associated with the corresponding Building or BuildingPart object. The class attribute of the storeys group shall be assigned the value “building storeys”.
+
+==== Requirements
 
 include::requirements/Building/REQ_Building_Base.adoc[]
 

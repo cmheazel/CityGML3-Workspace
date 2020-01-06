@@ -1,0 +1,251 @@
+[[Relief-data-dictionary]]
+=== *Relief Model Data Dictionary*
+
+Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} +
+Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
+Parent Package:{nbsp}CityGML
+
+[[AbstractReliefComponent-section]]
+==== *Class AbstractReliefComponent*
+Subclass of <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>>
+
+|====
+|*Class AbstractReliefComponent*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} extent +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_Surface-section,GM_Surface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<BreaklineRelief-section,BreaklineRelief>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<TINRelief-section,TINRelief>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<MassPointRelief-section,MassPointRelief>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<ReliefFeature-section,ReliefFeature>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} reliefComponent +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} NoteLink +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Note-section,Note>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<RasterRelief-section,RasterRelief>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}lod +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} IntegerBetween0and3 +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Number denoting the LOD of the relief component. The LOD concept for the relief is defined in chapter ...  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[BreaklineRelief-section]]
+==== *Class BreaklineRelief*
+Subclass of <<AbstractReliefComponent-section,AbstractReliefComponent>>
+
+|====
+|*Class BreaklineRelief*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractReliefComponent-section,AbstractReliefComponent>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<BreaklineRelief-section,BreaklineRelief>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} ridgeOrValleyLines +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<BreaklineRelief-section,BreaklineRelief>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<BreaklineRelief-section,BreaklineRelief>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} breaklines +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>> +
+|*Attributes*
+|
+|==== 
+
+[[MassPointRelief-section]]
+==== *Class MassPointRelief*
+Subclass of <<AbstractReliefComponent-section,AbstractReliefComponent>>
+
+|====
+|*Class MassPointRelief*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractReliefComponent-section,AbstractReliefComponent>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<MassPointRelief-section,MassPointRelief>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} reliefPoints +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiPoint-section,GM_MultiPoint>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<MassPointRelief-section,MassPointRelief>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} pointCloud +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractPointCloud-section,AbstractPointCloud>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<MassPointRelief-section,MassPointRelief>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
+|*Attributes*
+|
+|==== 
+
+[[RasterRelief-section]]
+==== *Class RasterRelief*
+Subclass of <<AbstractReliefComponent-section,AbstractReliefComponent>>
+
+|====
+|*Class RasterRelief*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractReliefComponent-section,AbstractReliefComponent>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<RasterRelief-section,RasterRelief>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<RasterRelief-section,RasterRelief>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} grid +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<CV_DiscreteGridPointCoverage-section,CV_DiscreteGridPointCoverage>> +
+|*Attributes*
+|
+|==== 
+
+[[ReliefFeature-section]]
+==== *Class ReliefFeature*
+Subclass of <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>>
+
+|====
+|*Class ReliefFeature*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> +
+StereoType:{nbsp}{nbsp} «TopLevelFeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<ReliefFeature-section,ReliefFeature>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} reliefComponent +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<ReliefFeature-section,ReliefFeature>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}lod +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} IntegerBetween0and3 +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Number denoting the LOD of the relief feature. The LOD concept for the relief is defined in chapter ...  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[TINRelief-section]]
+==== *Class TINRelief*
+Subclass of <<AbstractReliefComponent-section,AbstractReliefComponent>>
+
+|====
+|*Class TINRelief*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractReliefComponent-section,AbstractReliefComponent>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<TINRelief-section,TINRelief>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<TINRelief-section,TINRelief>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} tin +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_TriangulatedSurface-section,GM_TriangulatedSurface>> +
+|*Attributes*
+|
+|==== 
+  
+
+

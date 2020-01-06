@@ -1,0 +1,2168 @@
+[[Core-data-dictionary]]
+=== *Core Model Data Dictionary*
+
+Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} +
+Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
+Parent Package:{nbsp}CityGML
+
+[[AbstractAppearance-section]]
+==== *Class AbstractAppearance*
+Subclass of <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>>
+
+|====
+|*Class AbstractAppearance*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractAppearance-section,AbstractAppearance>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} appearance +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractAppearance-section,AbstractAppearance>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<CityModel-section,CityModel>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} appearanceMember +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractAppearance-section,AbstractAppearance>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<ImplicitGeometry-section,ImplicitGeometry>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} appearance +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractAppearance-section,AbstractAppearance>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Appearance-section,Appearance>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractAppearance-section,AbstractAppearance>> +
+|*Attributes*
+|
+|==== 
+
+[[AbstractCityObject-section]]
+==== *Class AbstractCityObject*
+Subclass of <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>>
+
+|====
+|*Class AbstractCityObject*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} appearance +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractAppearance-section,AbstractAppearance>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} externalReference +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<ExternalReference-section,ExternalReference>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} dynamizer +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractDynamizer-section,AbstractDynamizer>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} generalizesTo +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} genericAttribute +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AssociationClass +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} relatedTo +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<CityModel-section,CityModel>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} cityObjectMember +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AssociationClass +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<CityObjectGroup-section,CityObjectGroup>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} groupMember +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<SensorConnection-section,SensorConnection>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} sensorLocation +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<CityObjectGroup-section,CityObjectGroup>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} parent +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} generalizesTo +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractSpace-section,AbstractSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AssociationClass +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} relatedTo +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}relativeToTerrain +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RelativeToTerrain +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Vertical position of the AbstractCityObject relative to the surrounding terrain.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}relativeToWater +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RelativeToWater +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Vertical position of the AbstractCityObject relative to a surrounding water surface.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[AbstractDynamizer-section]]
+==== *Class AbstractDynamizer*
+Subclass of <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>>
+
+|====
+|*Class AbstractDynamizer*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractDynamizer-section,AbstractDynamizer>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} dynamizer +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractDynamizer-section,AbstractDynamizer>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Dynamizer-section,Dynamizer>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractDynamizer-section,AbstractDynamizer>> +
+|*Attributes*
+|
+|==== 
+
+[[AbstractFeatureWithLifespan-section]]
+==== *Class AbstractFeatureWithLifespan*
+Subclass of <<AnyFeature-section,AnyFeature>>
+
+|====
+|*Class AbstractFeatureWithLifespan*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AnyFeature-section,AnyFeature>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AnyFeature-section,AnyFeature>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractVersion-section,AbstractVersion>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Transaction-section,Transaction>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} oldFeature +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractAppearance-section,AbstractAppearance>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Version-section,Version>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} versionMember +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractVersionTransition-section,AbstractVersionTransition>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} NoteLink +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Note-section,Note>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<CityModel-section,CityModel>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Transaction-section,Transaction>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} newFeature +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractDynamizer-section,AbstractDynamizer>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}creationDate +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DateTime +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}terminationDate +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DateTime +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}validFrom +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DateTime +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}validTo +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DateTime +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[AbstractLogicalSpace-section]]
+==== *Class AbstractLogicalSpace*
+Subclass of <<AbstractSpace-section,AbstractSpace>>
+
+|====
+|*Class AbstractLogicalSpace*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractSpace-section,AbstractSpace>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractLogicalSpace-section,AbstractLogicalSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractSpace-section,AbstractSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<CityObjectGroup-section,CityObjectGroup>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractLogicalSpace-section,AbstractLogicalSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<GenericLogicalSpace-section,GenericLogicalSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractLogicalSpace-section,AbstractLogicalSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractLogicalSpace-section,AbstractLogicalSpace>> +
+|*Attributes*
+|
+|==== 
+
+[[AbstractOccupiedSpace-section]]
+==== *Class AbstractOccupiedSpace*
+Subclass of <<AbstractPhysicalSpace-section,AbstractPhysicalSpace>>
+
+|====
+|*Class AbstractOccupiedSpace*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractPhysicalSpace-section,AbstractPhysicalSpace>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod2ImplicitRepresentation +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<ImplicitGeometry-section,ImplicitGeometry>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractPhysicalSpace-section,AbstractPhysicalSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod1ImplicitRepresentation +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<ImplicitGeometry-section,ImplicitGeometry>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod3ImplicitRepresentation +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<ImplicitGeometry-section,ImplicitGeometry>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractFurniture-section,AbstractFurniture>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<WaterBody-section,WaterBody>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<GenericOccupiedSpace-section,GenericOccupiedSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractConstructiveElement-section,AbstractConstructiveElement>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractVegetationObject-section,AbstractVegetationObject>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractInstallation-section,AbstractInstallation>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<CityFurniture-section,CityFurniture>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractConstruction-section,AbstractConstruction>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractFillingElement-section,AbstractFillingElement>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
+|*Attributes*
+|
+|==== 
+
+[[AbstractPhysicalSpace-section]]
+==== *Class AbstractPhysicalSpace*
+Subclass of <<AbstractSpace-section,AbstractSpace>>
+
+|====
+|*Class AbstractPhysicalSpace*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractSpace-section,AbstractSpace>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractPhysicalSpace-section,AbstractPhysicalSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractSpace-section,AbstractSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractPhysicalSpace-section,AbstractPhysicalSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} pointCloud +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractPointCloud-section,AbstractPointCloud>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractPhysicalSpace-section,AbstractPhysicalSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod3TerrainIntersectionCurve +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractPhysicalSpace-section,AbstractPhysicalSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod2TerrainIntersectionCurve +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractPhysicalSpace-section,AbstractPhysicalSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod1TerrainIntersectionCurve +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractPhysicalSpace-section,AbstractPhysicalSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractPhysicalSpace-section,AbstractPhysicalSpace>> +
+|*Attributes*
+|
+|==== 
+
+[[AbstractPointCloud-section]]
+==== *Class AbstractPointCloud*
+Subclass of <<-section,>>
+
+|====
+|*Class AbstractPointCloud*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<PointCloud-section,PointCloud>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractPointCloud-section,AbstractPointCloud>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<MassPointRelief-section,MassPointRelief>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} pointCloud +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractPointCloud-section,AbstractPointCloud>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractPhysicalSpace-section,AbstractPhysicalSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} pointCloud +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractPointCloud-section,AbstractPointCloud>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} pointCloud +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractPointCloud-section,AbstractPointCloud>> +
+|*Attributes*
+|
+|==== 
+
+[[AbstractSpace-section]]
+==== *Class AbstractSpace*
+Subclass of <<AbstractCityObject-section,AbstractCityObject>>
+
+|====
+|*Class AbstractSpace*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractCityObject-section,AbstractCityObject>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractSpace-section,AbstractSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod3MultiCurve +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractSpace-section,AbstractSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod2MultiSurface +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractSpace-section,AbstractSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod3Solid +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_Solid-section,GM_Solid>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractSpace-section,AbstractSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod2Solid +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_Solid-section,GM_Solid>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractSpace-section,AbstractSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod1Solid +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_Solid-section,GM_Solid>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractSpace-section,AbstractSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod0Point +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_Point-section,GM_Point>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp} bounds +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractSpace-section,AbstractSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractSpace-section,AbstractSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod0MultiSurface +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractSpace-section,AbstractSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod2MultiCurve +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractSpace-section,AbstractSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod3MultiSurface +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractSpace-section,AbstractSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod0MultiCurve +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractSpace-section,AbstractSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractPhysicalSpace-section,AbstractPhysicalSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractSpace-section,AbstractSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractLogicalSpace-section,AbstractLogicalSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractSpace-section,AbstractSpace>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}area +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} QualifiedArea +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}spaceType +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SpaceType +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Degree of openness of an abstract space.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}volume +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} QualifiedVolume +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[AbstractSpaceBoundary-section]]
+==== *Class AbstractSpaceBoundary*
+Subclass of <<AbstractCityObject-section,AbstractCityObject>>
+
+|====
+|*Class AbstractSpaceBoundary*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractCityObject-section,AbstractCityObject>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp} bounds +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractSpace-section,AbstractSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<ReliefFeature-section,ReliefFeature>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> +
+|*Attributes*
+|
+|==== 
+
+[[AbstractThematicSurface-section]]
+==== *Class AbstractThematicSurface*
+Subclass of <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>>
+
+|====
+|*Class AbstractThematicSurface*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod1MultiSurface +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod0MultiSurface +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod2MultiSurface +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod3MultiSurface +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod0MultiCurve +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} pointCloud +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractPointCloud-section,AbstractPointCloud>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<TrafficArea-section,TrafficArea>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractInstallation-section,AbstractInstallation>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<BuildingRoom-section,BuildingRoom>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractConstructionSurface-section,AbstractConstructionSurface>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Storey-section,Storey>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Marking-section,Marking>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractConstruction-section,AbstractConstruction>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<LandUse-section,LandUse>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<BridgeRoom-section,BridgeRoom>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractConstructiveElement-section,AbstractConstructiveElement>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<HoleSurface-section,HoleSurface>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractFillingSurface-section,AbstractFillingSurface>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Hole-section,Hole>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<HollowSpace-section,HollowSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<ClosureSurface-section,ClosureSurface>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<GenericThematicSurface-section,GenericThematicSurface>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AuxiliaryTrafficArea-section,AuxiliaryTrafficArea>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}area +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} QualifiedArea +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[AbstractUnoccupiedSpace-section]]
+==== *Class AbstractUnoccupiedSpace*
+Subclass of <<AbstractPhysicalSpace-section,AbstractPhysicalSpace>>
+
+|====
+|*Class AbstractUnoccupiedSpace*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractPhysicalSpace-section,AbstractPhysicalSpace>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractPhysicalSpace-section,AbstractPhysicalSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<GenericUnoccupiedSpace-section,GenericUnoccupiedSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractTransportationSpace-section,AbstractTransportationSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<BuildingRoom-section,BuildingRoom>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<BridgeRoom-section,BridgeRoom>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<TrafficSpace-section,TrafficSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AuxiliaryTrafficSpace-section,AuxiliaryTrafficSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Hole-section,Hole>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<HollowSpace-section,HollowSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<ClearanceSpace-section,ClearanceSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
+|*Attributes*
+|
+|==== 
+
+[[AbstractVersion-section]]
+==== *Class AbstractVersion*
+Subclass of <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>>
+
+|====
+|*Class AbstractVersion*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractVersion-section,AbstractVersion>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<CityModel-section,CityModel>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} versionMember +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractVersion-section,AbstractVersion>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Version-section,Version>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractVersion-section,AbstractVersion>> +
+|*Attributes*
+|
+|==== 
+
+[[AbstractVersionTransition-section]]
+==== *Class AbstractVersionTransition*
+Subclass of <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>>
+
+|====
+|*Class AbstractVersionTransition*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractVersionTransition-section,AbstractVersionTransition>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<CityModel-section,CityModel>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} versionTransitionMember +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractVersionTransition-section,AbstractVersionTransition>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<VersionTransition-section,VersionTransition>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractVersionTransition-section,AbstractVersionTransition>> +
+|*Attributes*
+|
+|==== 
+
+[[Address-section]]
+==== *Class Address*
+Subclass of <<-section,>>
+
+|====
+|*Class Address*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Address-section,Address>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} xalAddress +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<XALAddressDetails-section,XALAddressDetails>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Address-section,Address>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} multiPoint +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiPoint-section,GM_MultiPoint>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<DoorSurface-section,DoorSurface>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} address +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<Address-section,Address>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractBridge-section,AbstractBridge>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} address +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<Address-section,Address>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractBuilding-section,AbstractBuilding>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} address +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<Address-section,Address>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<BuildingUnit-section,BuildingUnit>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} address +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<Address-section,Address>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Door-section,Door>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} address +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<Address-section,Address>> +
+|*Attributes*
+|
+|==== 
+
+[[CityModel-section]]
+==== *Class CityModel*
+Subclass of <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>>
+
+|====
+|*Class CityModel*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<CityModel-section,CityModel>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} cityObjectMember +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<CityModel-section,CityModel>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} versionMember +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractVersion-section,AbstractVersion>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<CityModel-section,CityModel>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} versionTransitionMember +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractVersionTransition-section,AbstractVersionTransition>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<CityModel-section,CityModel>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} appearanceMember +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractAppearance-section,AbstractAppearance>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<CityModel-section,CityModel>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} featureMember +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AnyFeature-section,AnyFeature>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<CityModel-section,CityModel>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}engineeringCRS +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} EngineeringCRS +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[CityObjectRelation-section]]
+==== *Class CityObjectRelation*
+Subclass of <<-section,>>
+
+|====
+|*Class CityObjectRelation*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} 
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<CityObjectRelation-section,CityObjectRelation>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} genericAttribute +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}relationType +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RelationTypeValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[ClosureSurface-section]]
+==== *Class ClosureSurface*
+Subclass of <<AbstractThematicSurface-section,AbstractThematicSurface>>
+
+|====
+|*Class ClosureSurface*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<AbstractThematicSurface-section,AbstractThematicSurface>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<ClosureSurface-section,ClosureSurface>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+|*Attributes*
+|
+|==== 
+
+[[DoubleBetween0and1-section]]
+==== *Class DoubleBetween0and1*
+Subclass of <<-section,>>
+
+|====
+|*Class DoubleBetween0and1*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «BasicType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} NoteLink +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Note-section,Note>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<DoubleBetween0and1-section,DoubleBetween0and1>> +
+|*Attributes*
+|
+|==== 
+
+[[DoubleBetween0and1List-section]]
+==== *Class DoubleBetween0and1List*
+Subclass of <<-section,>>
+
+|====
+|*Class DoubleBetween0and1List*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «BasicType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Color-section,Color>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<DoubleBetween0and1List-section,DoubleBetween0and1List>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<ColorPlusOpacity-section,ColorPlusOpacity>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<DoubleBetween0and1List-section,DoubleBetween0and1List>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}list +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DoubleBetween0and1 +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|
+|==== 
+
+[[DoubleList-section]]
+==== *Class DoubleList*
+Subclass of <<-section,>>
+
+|====
+|*Class DoubleList*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «BasicType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<TransformationMatrix4x4-section,TransformationMatrix4x4>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<DoubleList-section,DoubleList>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<TransformationMatrix3x4-section,TransformationMatrix3x4>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<DoubleList-section,DoubleList>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<TransformationMatrix2x2-section,TransformationMatrix2x2>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<DoubleList-section,DoubleList>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}list +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Real +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|
+|==== 
+
+[[ImplicitGeometry-section]]
+==== *Class ImplicitGeometry*
+Subclass of <<-section,>>
+
+|====
+|*Class ImplicitGeometry*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «ObjectType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<ImplicitGeometry-section,ImplicitGeometry>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} appearance +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractAppearance-section,AbstractAppearance>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<ImplicitGeometry-section,ImplicitGeometry>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} relativeGMLGeometry +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_Object-section,GM_Object>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<ImplicitGeometry-section,ImplicitGeometry>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} referencePoint +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_Point-section,GM_Point>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod2ImplicitRepresentation +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<ImplicitGeometry-section,ImplicitGeometry>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod1ImplicitRepresentation +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<ImplicitGeometry-section,ImplicitGeometry>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod3ImplicitRepresentation +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<ImplicitGeometry-section,ImplicitGeometry>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}libraryObject +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} URI +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: External link to a prototype geometry.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}mimeType +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} MimeValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Mime type of the referenced external geometric object (attribute libraryObject).  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}transformationMatrix +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TransformationMatrix4x4 +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Mathematical transformation (translation, rotation and scaling) between the prototype geometry and the actual spatial position of the object.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[IntegerBetween0and3-section]]
+==== *Class IntegerBetween0and3*
+Subclass of <<-section,>>
+
+|====
+|*Class IntegerBetween0and3*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «BasicType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} NoteLink +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Note-section,Note>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<IntegerBetween0and3-section,IntegerBetween0and3>> +
+|*Attributes*
+|
+|==== 
+
+[[IntervalValue-section]]
+==== *Class IntervalValue*
+Subclass of <<-section,>>
+
+|====
+|*Class IntervalValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} NoteLink +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Note-section,Note>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<IntervalValue-section,IntervalValue>> +
+|*Attributes*
+|
+|==== 
+
+[[MimeValue-section]]
+==== *Class MimeValue*
+Subclass of <<-section,>>
+
+|====
+|*Class MimeValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|*Attributes*
+|
+|==== 
+
+[[OccupantTypeValue-section]]
+==== *Class OccupantTypeValue*
+Subclass of <<-section,>>
+
+|====
+|*Class OccupantTypeValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} NoteLink +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Note-section,Note>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<OccupantTypeValue-section,OccupantTypeValue>> +
+|*Attributes*
+|
+|==== 
+
+[[OtherRelationTypeValue-section]]
+==== *Class OtherRelationTypeValue*
+Subclass of <<RelationTypeValue-section,RelationTypeValue>>
+
+|====
+|*Class OtherRelationTypeValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<RelationTypeValue-section,RelationTypeValue>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<OtherRelationTypeValue-section,OtherRelationTypeValue>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<RelationTypeValue-section,RelationTypeValue>> +
+|*Attributes*
+|
+|==== 
+
+[[QualifiedAreaValue-section]]
+==== *Class QualifiedAreaValue*
+Subclass of <<-section,>>
+
+|====
+|*Class QualifiedAreaValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} NoteLink +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Note-section,Note>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<QualifiedAreaValue-section,QualifiedAreaValue>> +
+|*Attributes*
+|
+|==== 
+
+[[QualifiedVolumeValue-section]]
+==== *Class QualifiedVolumeValue*
+Subclass of <<-section,>>
+
+|====
+|*Class QualifiedVolumeValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} NoteLink +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Note-section,Note>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<QualifiedVolumeValue-section,QualifiedVolumeValue>> +
+|*Attributes*
+|
+|==== 
+
+[[RelationTypeValue-section]]
+==== *Class RelationTypeValue*
+Subclass of <<-section,>>
+
+|====
+|*Class RelationTypeValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<TemporalRelationTypeValue-section,TemporalRelationTypeValue>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<RelationTypeValue-section,RelationTypeValue>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<TopologicRelationTypeValue-section,TopologicRelationTypeValue>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<RelationTypeValue-section,RelationTypeValue>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<OtherRelationTypeValue-section,OtherRelationTypeValue>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<RelationTypeValue-section,RelationTypeValue>> +
+|*Attributes*
+|
+|==== 
+
+[[TemporalRelationTypeValue-section]]
+==== *Class TemporalRelationTypeValue*
+Subclass of <<RelationTypeValue-section,RelationTypeValue>>
+
+|====
+|*Class TemporalRelationTypeValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<RelationTypeValue-section,RelationTypeValue>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<TemporalRelationTypeValue-section,TemporalRelationTypeValue>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<RelationTypeValue-section,RelationTypeValue>> +
+|*Attributes*
+|
+|==== 
+
+[[TopologicRelationTypeValue-section]]
+==== *Class TopologicRelationTypeValue*
+Subclass of <<RelationTypeValue-section,RelationTypeValue>>
+
+|====
+|*Class TopologicRelationTypeValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<RelationTypeValue-section,RelationTypeValue>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<TopologicRelationTypeValue-section,TopologicRelationTypeValue>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<RelationTypeValue-section,RelationTypeValue>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} NoteLink +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Note-section,Note>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<TopologicRelationTypeValue-section,TopologicRelationTypeValue>> +
+|*Attributes*
+|
+|==== 
+
+[[TransformationMatrix2x2-section]]
+==== *Class TransformationMatrix2x2*
+Subclass of <<DoubleList-section,DoubleList>>
+
+|====
+|*Class TransformationMatrix2x2*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<DoubleList-section,DoubleList>> +
+StereoType:{nbsp}{nbsp} «BasicType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<TransformationMatrix2x2-section,TransformationMatrix2x2>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<DoubleList-section,DoubleList>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} NoteLink +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Note-section,Note>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<TransformationMatrix2x2-section,TransformationMatrix2x2>> +
+|*Attributes*
+|
+|==== 
+
+[[TransformationMatrix3x4-section]]
+==== *Class TransformationMatrix3x4*
+Subclass of <<DoubleList-section,DoubleList>>
+
+|====
+|*Class TransformationMatrix3x4*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<DoubleList-section,DoubleList>> +
+StereoType:{nbsp}{nbsp} «BasicType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<TransformationMatrix3x4-section,TransformationMatrix3x4>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<DoubleList-section,DoubleList>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} NoteLink +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Note-section,Note>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<TransformationMatrix3x4-section,TransformationMatrix3x4>> +
+|*Attributes*
+|
+|==== 
+
+[[TransformationMatrix4x4-section]]
+==== *Class TransformationMatrix4x4*
+Subclass of <<DoubleList-section,DoubleList>>
+
+|====
+|*Class TransformationMatrix4x4*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<DoubleList-section,DoubleList>> +
+StereoType:{nbsp}{nbsp} «BasicType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<TransformationMatrix4x4-section,TransformationMatrix4x4>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<DoubleList-section,DoubleList>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} NoteLink +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Note-section,Note>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<TransformationMatrix4x4-section,TransformationMatrix4x4>> +
+|*Attributes*
+|
+|==== 
+
+[[AbstractGenericAttribute-section]]
+==== *Class AbstractGenericAttribute*
+Subclass of <<-section,>>
+
+|====
+|*Class AbstractGenericAttribute*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «DataType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<CityObjectRelation-section,CityObjectRelation>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} genericAttribute +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<GenericAttributeSet-section,GenericAttributeSet>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<StringAttribute-section,StringAttribute>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<UriAttribute-section,UriAttribute>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<GenericAttributeSet-section,GenericAttributeSet>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} genericAttribute +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<MeasureAttribute-section,MeasureAttribute>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<DoubleAttribute-section,DoubleAttribute>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<IntAttribute-section,IntAttribute>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} genericAttribute +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>> +
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<DateAttribute-section,DateAttribute>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>> +
+|*Attributes*
+|
+|==== 
+
+[[ExternalReference-section]]
+==== *Class ExternalReference*
+Subclass of <<-section,>>
+
+|====
+|*Class ExternalReference*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «DataType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} externalReference +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<ExternalReference-section,ExternalReference>> +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}informationSystem +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} URI +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: URL or URN of the information system or data set.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}relationType +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} URI +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}targetResource +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} URI +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Referenced object in the external information system or data set.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[Occupancy-section]]
+==== *Class Occupancy*
+Subclass of <<-section,>>
+
+|====
+|*Class Occupancy*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «DataType»
+|
+|*Associations*
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}interval +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} IntervalValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}numberOfOccupants +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Integer +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}occupantType +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} OccupantTypeValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[QualifiedArea-section]]
+==== *Class QualifiedArea*
+Subclass of <<-section,>>
+
+|====
+|*Class QualifiedArea*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «DataType»
+|
+|*Associations*
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}area +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Area +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}typeOfArea +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} QualifiedAreaValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[QualifiedVolume-section]]
+==== *Class QualifiedVolume*
+Subclass of <<-section,>>
+
+|====
+|*Class QualifiedVolume*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «DataType»
+|
+|*Associations*
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}typeOfVolume +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} QualifiedVolumeValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}volume +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Volume +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[RelativeToTerrain-section]]
+==== *Class RelativeToTerrain*
+Subclass of <<-section,>>
+
+|====
+|*Class RelativeToTerrain*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} 
+|
+|*Associations*
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}entirelyAboveTerrain +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Object is located entirely above terrain.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}substantiallyAboveTerrain +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Most, but not all parts of the object are located above terrain.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}substantiallyAboveAndBelowTerrain +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Parts of the object are located above terrain, and other parts below terrain.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}substantiallyBelowTerrain +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Most, but not all parts of the object are located below terrain.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}entirelyBelowTerrain +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: All parts of the object are located below terrain.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|
+|==== 
+
+[[RelativeToWater-section]]
+==== *Class RelativeToWater*
+Subclass of <<-section,>>
+
+|====
+|*Class RelativeToWater*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} 
+|
+|*Associations*
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}entirelyAboveWaterSurface +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Object is located entirely above water surface.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}substantiallyAboveWaterSurface +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Most, but not all parts of the object are located above water surface.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}substantiallyAboveAndBelowWaterSurface +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Parts of the object are located above water surface, and other parts below water surface.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}substantiallyBelowWaterSurface +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Most, but not all parts of the object are located below water surface.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}entirelyBelowWaterSurface +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: All parts of the object are located below water surface.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}temporarilyAboveAndBelowWaterSurface +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: The height of the water surface is varying and the object temporily is located above or below water level.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|
+|==== 
+
+[[SpaceType-section]]
+==== *Class SpaceType*
+Subclass of <<-section,>>
+
+|====
+|*Class SpaceType*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} 
+|
+|*Associations*
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}closed +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundaries at all sides  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}open +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary at the bottom only  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}semiOpen +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} at least one side has a boundary  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|
+|==== 
+
+[[XALAddressDetails-section]]
+==== *Class XALAddressDetails*
+Subclass of <<-section,>>
+
+|====
+|*Class XALAddressDetails*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subtype Of: {nbsp}{nbsp}<<-section,>> +
+StereoType:{nbsp}{nbsp} «DataType»
+|
+|*Associations*
+|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
+Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
+Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
+Source Class: {nbsp}{nbsp}{nbsp} <<Address-section,Address>> +
+Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} xalAddress +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<XALAddressDetails-section,XALAddressDetails>> +
+|*Attributes*
+|
+|==== 
+  
+
+

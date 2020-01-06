@@ -1,0 +1,39 @@
+[[rc_land-use_section]]
+=== Land Use
+
+include::requirements/requirements_class_landuse.adoc[]
+
+TBD
+
+The UML diagram of the Land Use Model is depicted in <<landuse-uml,Land Use UML Diagram>>. The Data Dictionary for the Land Use Package is provided in section <<LandUse-dd,Land Use Data Dictionary>>.
+
+[[landuse-uml]]
+.UML diagram of the Land Use Model.
+
+image::../figures/LandUse.png[]
+
+The <<landuse-uml>> is color coded as follows:
+
+[cols="2,6"]
+|====
+|Yellow |indicates
+|Blue |indicates
+|Pink |indicates
+|====
+
+include::data-dictionaries/LandUse.adoc[]
+
+==== Additional Information
+
+The following sections provide additional information which may not be readily available through the UML Model.
+
+A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_landuse_section[here].
+
+==== Requirements
+
+include::requirements/LandUse/REQ_LandUse_Base.adoc[]
+
+include::requirements/LandUse/REQ_LandUse_RefIntegrity.adoc[]
+
+include::requirements/LandUse/REQ_LandUse_Restrictions.adoc[]
+
