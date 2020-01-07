@@ -1,0 +1,9 @@
+[[req_Appearance_TexCoordGen]]
+[width="90%",cols="2,6"]
+|===
+^|*Requirement  {counter:req-id}* |*/req/Appearance/TexCoordGen>* 
+^|A |The Implementation Specification SHALL contain an element with the same definition as the TexCoordGen UML class as documented in the TexCoordGen section of the <<TexCoordGen-section,Appearance Data Dictionary>>.
+^|B |The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the TexCoordGen UML class as documented in the TexCoordGen section of the <<TexCoordGen-section,Appearance Data Dictionary>>.
+^|C |The implementation Specification SHALL represent the attributes of the TexCoordGen UML class; including the name, definition, type, and cardinality of those documented in the TexCoordGen section of the <<TexCoordGen-section,Appearance Data Dictionary>>.
+^|D |The implementation Specification SHALL represent the attributes of all parent classes of the the TexCoordGen UML class; including the name, definition, type, and cardinality of those documented in the TexCoordGen section of the <<TexCoordGen-section,Appearance Data Dictionary>>.
+|===
