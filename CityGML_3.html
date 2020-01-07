@@ -4223,7 +4223,7 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <br></p
 </div>
 <div class="sect3">
 <h4 id="_requirements"><a class="anchor" href="#_requirements"></a>11.1.16. Requirements</h4>
-<table id="req_appearance_base" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_Appearance_AbstractSurfaceData" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -4231,27 +4231,27 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <br></p
 <tbody>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  3</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/appearance/base</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Appearance/AbstractSurfaceData</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A surface geometry object may be the target of at most two textures and two materials (one for front and back respectively) per theme.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL contain an element with the same definition as the AbstractSurfaceData UML class as documented in the AbstractSurfaceData section of the <a href="#AbstractSurfaceData-section">Appearance Data Dictionary</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The referencePoint property (type: gml:PointPropertyType) of the element GeoreferencedTexture may only contain or reference a point geometry object with 2D coordinate values.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the AbstractSurfaceData UML class as documented in the AbstractSurfaceData section of the <a href="#AbstractSurfaceData-section">Appearance Data Dictionary</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Texture coordinates given by the textureCoordinates property of the element TexCoordList define an explicit mapping of a surface’s boundary points to points in texture space. Each boundary point of the surface must receive a corresponding coordinate pair in texture space. The coordinate pair in texture space shall be given as two doubles per boundary point. The order of the coordinate pairs must follow the order of the boundary points in the CityGML document (regardless of a possibly flipped surface orientation). Each gml:LinearRing composing the boundary of the target surface geometry object re-quires its own set of texture coordinates.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the AbstractSurfaceData UML class; including the name, definition, type, and cardinality of those documented in the AbstractSurfaceData section of the <a href="#AbstractSurfaceData-section">Appearance Data Dictionary</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A GeoreferencedTexture element must provide either internal or external georeference, otherwise it is invalid. Internal georeference shall be declared by the referencePoint property (type: gml:PointPropertyType) and the orientation property (type: core:TransformationMatrix2x2Type) of the element GeoreferencedTexture. External georeference may be provided by the texture image file itself (e.g. GeoTIFF) or by an accompanying world file.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the AbstractSurfaceData UML class; including the name, definition, type, and cardinality of those documented in the AbstractSurfaceData section of the <a href="#AbstractSurfaceData-section">Appearance Data Dictionary</a>.</p></td>
 </tr>
 </tbody>
 </table>
-<table id="req_appearance_refIntegrity" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_Appearance_AbstractTexture" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -4259,39 +4259,359 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <br></p
 <tbody>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  4</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/appearance/refIntegrity</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Appearance/AbstractTexture</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The appearanceMember element (type: AppearancePropertyType) may contain an Appearance element inline or an XLink reference to a remote Appearance element using the XLink concept of GML 3.1.1. In the latter case, the xlink:href attribute of the appearanceMember element may only point to a remote Appearance element (where remote Appearance elements are located in another document or elsewhere in the same document). Either the contained element or the reference must be given, but neither both nor none.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL contain an element with the same definition as the AbstractTexture UML class as documented in the AbstractTexture section of the <a href="#AbstractTexture-section">Appearance Data Dictionary</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The appearance property (type: AppearancePropertyType) of the element core:_CityObject may con-tain an Appearance element inline or an XLink reference to a remote Appearance element using the XLink concept of GML 3.1.1. In the latter case, the xlink:href attribute of the appearance property may only point to a remote Appearance element (where remote Appearance elements are located in another document or elsewhere in the same document). Either the contained element or the reference must be given, but neither both nor none.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the AbstractTexture UML class as documented in the AbstractTexture section of the <a href="#AbstractTexture-section">Appearance Data Dictionary</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The surfaceDataMember property (type: SurfaceDataPropertyType) of the element Appearance may contain a _SurfaceData element inline or an XLink reference to a remote _SurfaceData element using the XLink concept of GML 3.1.1. In the latter case, the xlink:href attribute of the surfaceDataMember property may only point to a remote _SurfaceData element (where remote _SurfaceData elements are located in another document or elsewhere in the same document). Either the contained element or the reference must be given, but neither both nor none.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the AbstractTexture UML class; including the name, definition, type, and cardinality of those documented in the AbstractTexture section of the <a href="#AbstractTexture-section">Appearance Data Dictionary</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The target property (type: TextureAssociationType) of the element ParameterizedTexture may contain a _TextureParameterization element inline or an XLink reference to a remote _ TextureParameterization element using the XLink concept of GML 3.1.1. In the latter case, the xlink:href attribute of the target property may only point to a remote _ TextureParameterization element (where remote _ TexturePa-rameterization elements are located in another document or elsewhere in the same document). Either the contained element or the reference must be given, but neither both nor none.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the AbstractTexture UML class; including the name, definition, type, and cardinality of those documented in the AbstractTexture section of the <a href="#AbstractTexture-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_Appearance_Appearance" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  5</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Appearance/Appearance</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">E</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The target property (type xs:anyURI) of the element GeoreferencedTexture shall specify the gml:id of the target surface geometry object which may only be of type gml:AbstractSurfaceType or gml:MultiSurface.</p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL contain an element with the same definition as the Appearance UML class as documented in the Appearance section of the <a href="#Appearance-section">Appearance Data Dictionary</a>.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">F</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The uri attribute of the complex type TextureAssociationType shall specify the gml:id of the target sur-face geometry object which may only be of type gml:AbstractSurfaceType or gml:MultiSurface.</p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the Appearance UML class as documented in the Appearance section of the <a href="#Appearance-section">Appearance Data Dictionary</a>.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">G</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The ring attribute of the textureCoordinates property of the element TexCoordList shall specify the gml:id of the target surface geometry object which may only be of type gml:LinearRing.</p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the Appearance UML class; including the name, definition, type, and cardinality of those documented in the Appearance section of the <a href="#Appearance-section">Appearance Data Dictionary</a>.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">H</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The target property (type xs:anyURI) of the element X3DMaterial shall specify the gml:id of the target surface geometry object which may only be of type gml:AbstractSurfaceType or gml:MultiSurface.</p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the Appearance UML class; including the name, definition, type, and cardinality of those documented in the Appearance section of the <a href="#Appearance-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_Appearance_Color" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  6</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Appearance/Color</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Any use of the Color type in the Implementation Specification SHALL have the same definition as the Color UML class as documented in the Color section of the <a href="#Color-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the Color UML class as documented in the Color section of the <a href="#Color-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the Color UML class; including the name, definition, type, and cardinality of those documented in the Color section of the <a href="#Color-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the Color UML class; including the name, definition, type, and cardinality of those documented in the Color section of the <a href="#Color-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_Appearance_ColorPlusOpacity" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  7</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Appearance/ColorPlusOpacity</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Any use of the ColorPlusOpacity type in the Implementation Specification SHALL have the same definition as the ColorPlusOpacity UML class as documented in the ColorPlusOpacity section of the <a href="#ColorPlusOpacity-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the ColorPlusOpacity UML class as documented in the ColorPlusOpacity section of the <a href="#ColorPlusOpacity-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the ColorPlusOpacity UML class; including the name, definition, type, and cardinality of those documented in the ColorPlusOpacity section of the <a href="#ColorPlusOpacity-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the ColorPlusOpacity UML class; including the name, definition, type, and cardinality of those documented in the ColorPlusOpacity section of the <a href="#ColorPlusOpacity-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_Appearance_GeoreferencedTexture" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  8</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Appearance/GeoreferencedTexture</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL contain an element with the same definition as the GeoreferencedTexture UML class as documented in the GeoreferencedTexture section of the <a href="#GeoreferencedTexture-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the GeoreferencedTexture UML class as documented in the GeoreferencedTexture section of the <a href="#GeoreferencedTexture-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the GeoreferencedTexture UML class; including the name, definition, type, and cardinality of those documented in the GeoreferencedTexture section of the <a href="#GeoreferencedTexture-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the GeoreferencedTexture UML class; including the name, definition, type, and cardinality of those documented in the GeoreferencedTexture section of the <a href="#GeoreferencedTexture-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_Appearance_ParameterizedTexture" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  9</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Appearance/ParameterizedTexture</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL contain an element with the same definition as the ParameterizedTexture UML class as documented in the ParameterizedTexture section of the <a href="#ParameterizedTexture-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the ParameterizedTexture UML class as documented in the ParameterizedTexture section of the <a href="#ParameterizedTexture-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the ParameterizedTexture UML class; including the name, definition, type, and cardinality of those documented in the ParameterizedTexture section of the <a href="#ParameterizedTexture-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the ParameterizedTexture UML class; including the name, definition, type, and cardinality of those documented in the ParameterizedTexture section of the <a href="#ParameterizedTexture-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_Appearance_TextureAssociation" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  10</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Appearance/TextureAssociation</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL contain an element with the same definition as the TextureAssociation UML class as documented in the TextureAssociation section of the <a href="#TextureAssociation-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the TextureAssociation UML class as documented in the TextureAssociation section of the <a href="#TextureAssociation-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the TextureAssociation UML class; including the name, definition, type, and cardinality of those documented in the TextureAssociation section of the <a href="#TextureAssociation-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the TextureAssociation UML class; including the name, definition, type, and cardinality of those documented in the TextureAssociation section of the <a href="#TextureAssociation-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_Appearance_X3DMaterial" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  11</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Appearance/X3DMaterial</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL contain an element with the same definition as the X3DMaterial UML class as documented in the X3DMaterial section of the <a href="#X3DMaterial-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the X3DMaterial UML class as documented in the X3DMaterial section of the <a href="#X3DMaterial-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the X3DMaterial UML class; including the name, definition, type, and cardinality of those documented in the X3DMaterial section of the <a href="#X3DMaterial-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the X3DMaterial UML class; including the name, definition, type, and cardinality of those documented in the X3DMaterial section of the <a href="#X3DMaterial-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_Appearance_AbstractTextureParameterization" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  12</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Appearance/AbstractTextureParameterization</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Any use of the AbstractTextureParameterization type in the Implementation Specification SHALL have the same definition as the AbstractTextureParameterization UML class as documented in the AbstractTextureParameterization section of the <a href="#AbstractTextureParameterization-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the AbstractTextureParameterization UML class as documented in the AbstractTextureParameterization section of the <a href="#AbstractTextureParameterization-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the AbstractTextureParameterization UML class; including the name, definition, type, and cardinality of those documented in the AbstractTextureParameterization section of the <a href="#AbstractTextureParameterization-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the AbstractTextureParameterization UML class; including the name, definition, type, and cardinality of those documented in the AbstractTextureParameterization section of the <a href="#AbstractTextureParameterization-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_Appearance_TexCoordGen" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  13</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Appearance/TexCoordGen</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Any use of the TexCoordGen type in the Implementation Specification SHALL have the same definition as the TexCoordGen UML class as documented in the TexCoordGen section of the <a href="#TexCoordGen-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the TexCoordGen UML class as documented in the TexCoordGen section of the <a href="#TexCoordGen-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the TexCoordGen UML class; including the name, definition, type, and cardinality of those documented in the TexCoordGen section of the <a href="#TexCoordGen-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the TexCoordGen UML class; including the name, definition, type, and cardinality of those documented in the TexCoordGen section of the <a href="#TexCoordGen-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_Appearance_TexCoordList" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  14</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Appearance/TexCoordList</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Any use of the TexCoordList type in the Implementation Specification SHALL have the same definition as the TexCoordList UML class as documented in the TexCoordList section of the <a href="#TexCoordList-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the TexCoordList UML class as documented in the TexCoordList section of the <a href="#TexCoordList-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the TexCoordList UML class; including the name, definition, type, and cardinality of those documented in the TexCoordList section of the <a href="#TexCoordList-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the TexCoordList UML class; including the name, definition, type, and cardinality of those documented in the TexCoordList section of the <a href="#TexCoordList-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_Appearance_TextureType" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  15</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Appearance/TextureType</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Any use of the TextureType type in the Implementation Specification SHALL have the same definition as the TextureType UML class as documented in the TextureType section of the <a href="#TextureType-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the TextureType UML class as documented in the TextureType section of the <a href="#TextureType-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the TextureType UML class; including the name, definition, type, and cardinality of those documented in the TextureType section of the <a href="#TextureType-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the TextureType UML class; including the name, definition, type, and cardinality of those documented in the TextureType section of the <a href="#TextureType-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+</tbody>
+</table>
+<table id="req_Appearance_WrapMode" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  16</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Appearance/WrapMode</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Any use of the WrapMode type in the Implementation Specification SHALL have the same definition as the WrapMode UML class as documented in the WrapMode section of the <a href="#WrapMode-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the WrapMode UML class as documented in the WrapMode section of the <a href="#WrapMode-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the WrapMode UML class; including the name, definition, type, and cardinality of those documented in the WrapMode section of the <a href="#WrapMode-section">Appearance Data Dictionary</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the WrapMode UML class; including the name, definition, type, and cardinality of those documented in the WrapMode section of the <a href="#WrapMode-section">Appearance Data Dictionary</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -7744,7 +8064,7 @@ Target Class: &#160;&#160;&#160;&#160; <a href="#XALAddressDetails-section">XALA
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  5</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  17</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/core/base</strong></p></td>
 </tr>
 <tr>
@@ -7772,7 +8092,7 @@ Target Class: &#160;&#160;&#160;&#160; <a href="#XALAddressDetails-section">XALA
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  6</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  18</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/core/refIntegrity</strong></p></td>
 </tr>
 <tr>
@@ -8268,7 +8588,7 @@ Target Class: &#160;&#160;&#160;&#160; <a href="#GM_TriangulatedSurface-section"
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  7</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  19</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/relief/base</strong></p></td>
 </tr>
 <tr>
@@ -8284,7 +8604,7 @@ Target Class: &#160;&#160;&#160;&#160; <a href="#GM_TriangulatedSurface-section"
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  8</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  20</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/relief/refIntegrity</strong></p></td>
 </tr>
 <tr>
@@ -10519,7 +10839,7 @@ insert IntBuildingInstallationType, IntBuildingInstallation UML
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  9</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  21</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/building/base</strong></p></td>
 </tr>
 <tr>
@@ -10535,7 +10855,7 @@ insert IntBuildingInstallationType, IntBuildingInstallation UML
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  10</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  22</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/building/refIntegrity</strong></p></td>
 </tr>
 <tr>
@@ -10619,7 +10939,7 @@ insert IntBuildingInstallationType, IntBuildingInstallation UML
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  11</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  23</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/building/restrictions</strong></p></td>
 </tr>
 <tr>
@@ -11804,7 +12124,7 @@ StereoType:&#160;&#160; «CodeList»</p></td>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  12</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  24</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/tunnel/base</strong></p></td>
 </tr>
 <tr>
@@ -11820,7 +12140,7 @@ StereoType:&#160;&#160; «CodeList»</p></td>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  13</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  25</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/tunnel/refIntegrity</strong></p></td>
 </tr>
 <tr>
@@ -11895,7 +12215,7 @@ StereoType:&#160;&#160; «CodeList»</p></td>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  14</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  26</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/tunnel/restrictions</strong></p></td>
 </tr>
 <tr>
@@ -13093,7 +13413,7 @@ StereoType:&#160;&#160; «CodeList»</p></td>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  15</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  27</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/bridge/base</strong></p></td>
 </tr>
 <tr>
@@ -13109,7 +13429,7 @@ StereoType:&#160;&#160; «CodeList»</p></td>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  16</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  28</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/bridge/refIntegrity</strong></p></td>
 </tr>
 <tr>
@@ -13201,7 +13521,7 @@ StereoType:&#160;&#160; «CodeList»</p></td>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  17</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  29</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/bridge/restrictions</strong></p></td>
 </tr>
 <tr>
@@ -13705,7 +14025,7 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; «Prope
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  18</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  30</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/waterbody/base</strong></p></td>
 </tr>
 <tr>
@@ -13733,7 +14053,7 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; «Prope
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  19</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  31</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/waterbody/refintegrity</strong></p></td>
 </tr>
 <tr>
@@ -16461,7 +16781,7 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <br></p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  20</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  32</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/transportation/base</strong></p></td>
 </tr>
 <tr>
@@ -16481,7 +16801,7 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <br></p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  21</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  33</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/transportation/refInteg</strong></p></td>
 </tr>
 <tr>
@@ -17065,7 +17385,7 @@ StereoType:&#160;&#160; «CodeList»</p></td>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  22</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  34</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/vegetation/base</strong></p></td>
 </tr>
 <tr>
@@ -17081,7 +17401,7 @@ StereoType:&#160;&#160; «CodeList»</p></td>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  23</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  35</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/vegetation/refIntegrity</strong></p></td>
 </tr>
 <tr>
@@ -17097,7 +17417,7 @@ StereoType:&#160;&#160; «CodeList»</p></td>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  24</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  36</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/vegetation/restrictions</strong></p></td>
 </tr>
 <tr>
@@ -17359,7 +17679,7 @@ StereoType:&#160;&#160; «CodeList»</p></td>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  25</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  37</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/cityfurniture/base</strong></p></td>
 </tr>
 <tr>
@@ -17375,7 +17695,7 @@ StereoType:&#160;&#160; «CodeList»</p></td>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  26</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  38</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/cityfurniture/refIntegrity</strong></p></td>
 </tr>
 <tr>
@@ -17391,7 +17711,7 @@ StereoType:&#160;&#160; «CodeList»</p></td>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  27</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  39</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/cityfurniture/restrictions</strong></p></td>
 </tr>
 <tr>
@@ -17653,7 +17973,7 @@ StereoType:&#160;&#160; «CodeList»</p></td>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  28</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  40</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/landuse/base</strong></p></td>
 </tr>
 <tr>
@@ -17669,7 +17989,7 @@ StereoType:&#160;&#160; «CodeList»</p></td>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  29</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  41</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/landuse/refIntegrity</strong></p></td>
 </tr>
 <tr>
@@ -17685,7 +18005,7 @@ StereoType:&#160;&#160; «CodeList»</p></td>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  30</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  42</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/landuse/restrictions</strong></p></td>
 </tr>
 <tr>
@@ -18005,7 +18325,7 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; «Prope
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  31</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  43</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/cityobjectgroup/base</strong></p></td>
 </tr>
 <tr>
@@ -18021,7 +18341,7 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; «Prope
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  32</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  44</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/cityobjectgroup/refIntegrity</strong></p></td>
 </tr>
 <tr>
@@ -18037,7 +18357,7 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; «Prope
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  33</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  45</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/cityobjectgroup/restrictions</strong></p></td>
 </tr>
 <tr>
@@ -19186,7 +19506,7 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; «Prope
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  34</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  46</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/generics/base</strong></p></td>
 </tr>
 <tr>
@@ -19202,7 +19522,7 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; «Prope
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  35</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  47</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/generics/refIntegrity</strong></p></td>
 </tr>
 <tr>
@@ -19218,7 +19538,7 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; «Prope
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  36</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  48</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/generics/restrictions</strong></p></td>
 </tr>
 <tr>
@@ -21345,7 +21665,7 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <br></p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  37</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  49</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/construction/base</strong></p></td>
 </tr>
 <tr>
@@ -21361,7 +21681,7 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <br></p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  38</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  50</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/construction/refIntegrity</strong></p></td>
 </tr>
 <tr>
@@ -21377,7 +21697,7 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <br></p
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  39</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  51</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/construction/restrictions</strong></p></td>
 </tr>
 <tr>
@@ -22632,7 +22952,7 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; «Prope
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  40</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  52</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/dynamizer/base</strong></p></td>
 </tr>
 <tr>
@@ -22648,7 +22968,7 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; «Prope
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  41</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  53</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/dynamizer/refIntegrity</strong></p></td>
 </tr>
 <tr>
@@ -22664,7 +22984,7 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; «Prope
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  42</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  54</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/dynamizer/restrictions</strong></p></td>
 </tr>
 <tr>
