@@ -9,6 +9,8 @@ Parent Package:{nbsp}CityGML
 ==== *Class AbstractBridge*
 Subclass of <<AbstractConstruction-section,AbstractConstruction>>
 
+include::../requirements/Bridge/REQ_Bridge_AbstractBridge.adoc[]
+
 |====
 |*Class AbstractBridge*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -104,6 +106,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class Bridge*
 Subclass of <<AbstractBridge-section,AbstractBridge>>
 
+include::../requirements/Bridge/REQ_Bridge_Bridge.adoc[]
+
 |====
 |*Class Bridge*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -133,6 +137,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractBridge-section,AbstractBridge>>
 ==== *Class BridgeClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Bridge/REQ_Bridge_BridgeClassValue.adoc[]
+
 |====
 |*Class BridgeClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -147,6 +153,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[BridgeConstructiveElement-section]]
 ==== *Class BridgeConstructiveElement*
 Subclass of <<AbstractConstructiveElement-section,AbstractConstructiveElement>>
+
+include::../requirements/Bridge/REQ_Bridge_BridgeConstructiveElement.adoc[]
 
 |====
 |*Class BridgeConstructiveElement*
@@ -195,6 +203,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class BridgeConstructiveElementClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Bridge/REQ_Bridge_BridgeConstructiveElementClassValue.adoc[]
+
 |====
 |*Class BridgeConstructiveElementClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -209,6 +219,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[BridgeConstructiveElementFunctionValue-section]]
 ==== *Class BridgeConstructiveElementFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Bridge/REQ_Bridge_BridgeConstructiveElementFunctionValue.adoc[]
 
 |====
 |*Class BridgeConstructiveElementFunctionValue*
@@ -225,6 +237,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class BridgeConstructiveElementUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Bridge/REQ_Bridge_BridgeConstructiveElementUsageValue.adoc[]
+
 |====
 |*Class BridgeConstructiveElementUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -240,6 +254,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class BridgeFunctionValue*
 Subclass of <<-section,>>
 
+include::../requirements/Bridge/REQ_Bridge_BridgeFunctionValue.adoc[]
+
 |====
 |*Class BridgeFunctionValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -254,6 +270,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[BridgeFurniture-section]]
 ==== *Class BridgeFurniture*
 Subclass of <<AbstractFurniture-section,AbstractFurniture>>
+
+include::../requirements/Bridge/REQ_Bridge_BridgeFurniture.adoc[]
 
 |====
 |*Class BridgeFurniture*
@@ -309,6 +327,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class BridgeFurnitureClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Bridge/REQ_Bridge_BridgeFurnitureClassValue.adoc[]
+
 |====
 |*Class BridgeFurnitureClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -323,6 +343,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[BridgeFurnitureFunctionValue-section]]
 ==== *Class BridgeFurnitureFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Bridge/REQ_Bridge_BridgeFurnitureFunctionValue.adoc[]
 
 |====
 |*Class BridgeFurnitureFunctionValue*
@@ -339,6 +361,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class BridgeFurnitureUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Bridge/REQ_Bridge_BridgeFurnitureUsageValue.adoc[]
+
 |====
 |*Class BridgeFurnitureUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -353,6 +377,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[BridgeInstallation-section]]
 ==== *Class BridgeInstallation*
 Subclass of <<AbstractInstallation-section,AbstractInstallation>>
+
+include::../requirements/Bridge/REQ_Bridge_BridgeInstallation.adoc[]
 
 |====
 |*Class BridgeInstallation*
@@ -408,6 +434,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class BridgeInstallationClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Bridge/REQ_Bridge_BridgeInstallationClassValue.adoc[]
+
 |====
 |*Class BridgeInstallationClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -422,6 +450,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[BridgeInstallationFunctionValue-section]]
 ==== *Class BridgeInstallationFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Bridge/REQ_Bridge_BridgeInstallationFunctionValue.adoc[]
 
 |====
 |*Class BridgeInstallationFunctionValue*
@@ -438,6 +468,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class BridgeInstallationUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Bridge/REQ_Bridge_BridgeInstallationUsageValue.adoc[]
+
 |====
 |*Class BridgeInstallationUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -452,6 +484,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[BridgePart-section]]
 ==== *Class BridgePart*
 Subclass of <<AbstractBridge-section,AbstractBridge>>
+
+include::../requirements/Bridge/REQ_Bridge_BridgePart.adoc[]
 
 |====
 |*Class BridgePart*
@@ -481,6 +515,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BridgePart-section,BridgePart>> +
 [[BridgeRoom-section]]
 ==== *Class BridgeRoom*
 Subclass of <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>>
+
+include::../requirements/Bridge/REQ_Bridge_BridgeRoom.adoc[]
 
 |====
 |*Class BridgeRoom*
@@ -550,6 +586,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class BridgeRoomClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Bridge/REQ_Bridge_BridgeRoomClassValue.adoc[]
+
 |====
 |*Class BridgeRoomClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -564,6 +602,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[BridgeRoomFunctionValue-section]]
 ==== *Class BridgeRoomFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Bridge/REQ_Bridge_BridgeRoomFunctionValue.adoc[]
 
 |====
 |*Class BridgeRoomFunctionValue*
@@ -580,6 +620,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class BridgeRoomUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Bridge/REQ_Bridge_BridgeRoomUsageValue.adoc[]
+
 |====
 |*Class BridgeRoomUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -595,6 +637,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class BridgeUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Bridge/REQ_Bridge_BridgeUsageValue.adoc[]
+
 |====
 |*Class BridgeUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -606,6 +650,5 @@ StereoType:{nbsp}{nbsp} «CodeList»
 |
 |==== 
   
-
 
 

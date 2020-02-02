@@ -1,0 +1,9 @@
+[[req_Construction_Elevation]]
+[width="90%",cols="2,6"]
+|===
+^|*Requirement  {counter:req-id}* |*/req/Construction/Elevation* 
+^|A |Any use of the Elevation type in the Implementation Specification SHALL have the same definition as the Elevation UML class as documented in the Elevation section of the <<Elevation-section,Construction Data Dictionary>>.
+^|B |The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the Elevation UML class as documented in the Elevation section of the <<Elevation-section,Construction Data Dictionary>>.
+^|C |The implementation Specification SHALL represent the attributes of the Elevation UML class; including the name, definition, type, and cardinality of those documented in the Elevation section of the <<Elevation-section,Construction Data Dictionary>>.
+^|D |The implementation Specification SHALL represent the attributes of all parent classes of the the Elevation UML class; including the name, definition, type, and cardinality of those documented in the Elevation section of the <<Elevation-section,Construction Data Dictionary>>.
+|===

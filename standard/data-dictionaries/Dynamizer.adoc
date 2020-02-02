@@ -9,6 +9,8 @@ Parent Package:{nbsp}CityGML
 ==== *Class AbstractAtomicTimeseries*
 Subclass of <<AbstractTimeseries-section,AbstractTimeseries>>
 
+include::../requirements/Dynamizer/REQ_Dynamizer_AbstractAtomicTimeseries.adoc[]
+
 |====
 |*Class AbstractAtomicTimeseries*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -63,6 +65,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 [[AbstractTimeseries-section]]
 ==== *Class AbstractTimeseries*
 Subclass of <<-section,>>
+
+include::../requirements/Dynamizer/REQ_Dynamizer_AbstractTimeseries.adoc[]
 
 |====
 |*Class AbstractTimeseries*
@@ -119,6 +123,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class AuthenticationValue*
 Subclass of <<-section,>>
 
+include::../requirements/Dynamizer/REQ_Dynamizer_AuthenticationValue.adoc[]
+
 |====
 |*Class AuthenticationValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -140,6 +146,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AuthenticationValue-section,Authenticat
 [[CompositeTimeseries-section]]
 ==== *Class CompositeTimeseries*
 Subclass of <<AbstractTimeseries-section,AbstractTimeseries>>
+
+include::../requirements/Dynamizer/REQ_Dynamizer_CompositeTimeseries.adoc[]
 
 |====
 |*Class CompositeTimeseries*
@@ -169,6 +177,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractTimeseries-section,AbstractTime
 [[Dynamizer-section]]
 ==== *Class Dynamizer*
 Subclass of <<AbstractDynamizer-section,AbstractDynamizer>>
+
+include::../requirements/Dynamizer/REQ_Dynamizer_Dynamizer.adoc[]
 
 |====
 |*Class Dynamizer*
@@ -224,6 +234,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class GenericTimeseries*
 Subclass of <<AbstractAtomicTimeseries-section,AbstractAtomicTimeseries>>
 
+include::../requirements/Dynamizer/REQ_Dynamizer_GenericTimeseries.adoc[]
+
 |====
 |*Class GenericTimeseries*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -266,6 +278,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class SensorConnectionValue*
 Subclass of <<-section,>>
 
+include::../requirements/Dynamizer/REQ_Dynamizer_SensorConnectionValue.adoc[]
+
 |====
 |*Class SensorConnectionValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -287,6 +301,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<SensorConnectionValue-section,SensorCon
 [[StandardFileTimeseries-section]]
 ==== *Class StandardFileTimeseries*
 Subclass of <<AbstractAtomicTimeseries-section,AbstractAtomicTimeseries>>
+
+include::../requirements/Dynamizer/REQ_Dynamizer_StandardFileTimeseries.adoc[]
 
 |====
 |*Class StandardFileTimeseries*
@@ -328,6 +344,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class StandardFileValue*
 Subclass of <<-section,>>
 
+include::../requirements/Dynamizer/REQ_Dynamizer_StandardFileValue.adoc[]
+
 |====
 |*Class StandardFileValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -349,6 +367,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<StandardFileValue-section,StandardFileV
 [[TabulatedFileTimeseries-section]]
 ==== *Class TabulatedFileTimeseries*
 Subclass of <<AbstractAtomicTimeseries-section,AbstractAtomicTimeseries>>
+
+include::../requirements/Dynamizer/REQ_Dynamizer_TabulatedFileTimeseries.adoc[]
 
 |====
 |*Class TabulatedFileTimeseries*
@@ -463,6 +483,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class TabulatedFileValue*
 Subclass of <<-section,>>
 
+include::../requirements/Dynamizer/REQ_Dynamizer_TabulatedFileValue.adoc[]
+
 |====
 |*Class TabulatedFileValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -484,6 +506,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<TabulatedFileValue-section,TabulatedFil
 [[SensorConnection-section]]
 ==== *Class SensorConnection*
 Subclass of <<-section,>>
+
+include::../requirements/Dynamizer/REQ_Dynamizer_SensorConnection.adoc[]
 
 |====
 |*Class SensorConnection*
@@ -592,6 +616,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class TimeseriesComponent*
 Subclass of <<-section,>>
 
+include::../requirements/Dynamizer/REQ_Dynamizer_TimeseriesComponent.adoc[]
+
 |====
 |*Class TimeseriesComponent*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -632,6 +658,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 [[TimeseriesValue-section]]
 ==== *Class TimeseriesValue*
 Subclass of <<-section,>>
+
+include::../requirements/Dynamizer/REQ_Dynamizer_TimeseriesValue.adoc[]
 
 |====
 |*Class TimeseriesValue*
@@ -695,6 +723,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 [[TimeValuePair-section]]
 ==== *Class TimeValuePair*
 Subclass of <<-section,>>
+
+include::../requirements/Dynamizer/REQ_Dynamizer_TimeValuePair.adoc[]
 
 |====
 |*Class TimeValuePair*
@@ -775,6 +805,5 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 |
 |==== 
   
-
 
 

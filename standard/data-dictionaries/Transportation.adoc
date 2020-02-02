@@ -9,6 +9,8 @@ Parent Package:{nbsp}CityGML
 ==== *Class AbstractTransportationSpace*
 Subclass of <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>>
 
+include::../requirements/Transportation/REQ_Transportation_AbstractTransportationSpace.adoc[]
+
 |====
 |*Class AbstractTransportationSpace*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -120,6 +122,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class AuxiliaryTrafficArea*
 Subclass of <<AbstractThematicSurface-section,AbstractThematicSurface>>
 
+include::../requirements/Transportation/REQ_Transportation_AuxiliaryTrafficArea.adoc[]
+
 |====
 |*Class AuxiliaryTrafficArea*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -173,6 +177,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class AuxiliaryTrafficAreaClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_AuxiliaryTrafficAreaClassValue.adoc[]
+
 |====
 |*Class AuxiliaryTrafficAreaClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -187,6 +193,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[AuxiliaryTrafficAreaFunctionValue-section]]
 ==== *Class AuxiliaryTrafficAreaFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Transportation/REQ_Transportation_AuxiliaryTrafficAreaFunctionValue.adoc[]
 
 |====
 |*Class AuxiliaryTrafficAreaFunctionValue*
@@ -203,6 +211,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class AuxiliaryTrafficAreaUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_AuxiliaryTrafficAreaUsageValue.adoc[]
+
 |====
 |*Class AuxiliaryTrafficAreaUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -217,6 +227,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[AuxiliaryTrafficSpace-section]]
 ==== *Class AuxiliaryTrafficSpace*
 Subclass of <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>>
+
+include::../requirements/Transportation/REQ_Transportation_AuxiliaryTrafficSpace.adoc[]
 
 |====
 |*Class AuxiliaryTrafficSpace*
@@ -278,6 +290,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class AuxiliaryTrafficSpaceClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_AuxiliaryTrafficSpaceClassValue.adoc[]
+
 |====
 |*Class AuxiliaryTrafficSpaceClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -292,6 +306,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[AuxiliaryTrafficSpaceFunctionValue-section]]
 ==== *Class AuxiliaryTrafficSpaceFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Transportation/REQ_Transportation_AuxiliaryTrafficSpaceFunctionValue.adoc[]
 
 |====
 |*Class AuxiliaryTrafficSpaceFunctionValue*
@@ -308,6 +324,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class AuxiliaryTrafficSpaceUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_AuxiliaryTrafficSpaceUsageValue.adoc[]
+
 |====
 |*Class AuxiliaryTrafficSpaceUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -322,6 +340,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[ClearanceSpace-section]]
 ==== *Class ClearanceSpace*
 Subclass of <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>>
+
+include::../requirements/Transportation/REQ_Transportation_ClearanceSpace.adoc[]
 
 |====
 |*Class ClearanceSpace*
@@ -358,6 +378,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class ClearanceSpaceClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_ClearanceSpaceClassValue.adoc[]
+
 |====
 |*Class ClearanceSpaceClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -372,6 +394,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[Hole-section]]
 ==== *Class Hole*
 Subclass of <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>>
+
+include::../requirements/Transportation/REQ_Transportation_Hole.adoc[]
 
 |====
 |*Class Hole*
@@ -415,6 +439,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class HoleClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_HoleClassValue.adoc[]
+
 |====
 |*Class HoleClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -437,6 +463,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<HoleClassValue-section,HoleClassValue>>
 ==== *Class HoleSurface*
 Subclass of <<AbstractThematicSurface-section,AbstractThematicSurface>>
 
+include::../requirements/Transportation/REQ_Transportation_HoleSurface.adoc[]
+
 |====
 |*Class HoleSurface*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -458,6 +486,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,Abstrac
 [[Intersection-section]]
 ==== *Class Intersection*
 Subclass of <<AbstractTransportationSpace-section,AbstractTransportationSpace>>
+
+include::../requirements/Transportation/REQ_Transportation_Intersection.adoc[]
 
 |====
 |*Class Intersection*
@@ -515,6 +545,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class IntersectionClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_IntersectionClassValue.adoc[]
+
 |====
 |*Class IntersectionClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -529,6 +561,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[Marking-section]]
 ==== *Class Marking*
 Subclass of <<AbstractThematicSurface-section,AbstractThematicSurface>>
+
+include::../requirements/Transportation/REQ_Transportation_Marking.adoc[]
 
 |====
 |*Class Marking*
@@ -565,6 +599,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class MarkingClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_MarkingClassValue.adoc[]
+
 |====
 |*Class MarkingClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -579,6 +615,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[Railway-section]]
 ==== *Class Railway*
 Subclass of <<AbstractTransportationSpace-section,AbstractTransportationSpace>>
+
+include::../requirements/Transportation/REQ_Transportation_Railway.adoc[]
 
 |====
 |*Class Railway*
@@ -634,6 +672,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class RailwayClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_RailwayClassValue.adoc[]
+
 |====
 |*Class RailwayClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -648,6 +688,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[RailwayFunctionValue-section]]
 ==== *Class RailwayFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Transportation/REQ_Transportation_RailwayFunctionValue.adoc[]
 
 |====
 |*Class RailwayFunctionValue*
@@ -664,6 +706,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class RailwayUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_RailwayUsageValue.adoc[]
+
 |====
 |*Class RailwayUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -678,6 +722,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[Road-section]]
 ==== *Class Road*
 Subclass of <<AbstractTransportationSpace-section,AbstractTransportationSpace>>
+
+include::../requirements/Transportation/REQ_Transportation_Road.adoc[]
 
 |====
 |*Class Road*
@@ -733,6 +779,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class RoadClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_RoadClassValue.adoc[]
+
 |====
 |*Class RoadClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -747,6 +795,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[RoadFunctionValue-section]]
 ==== *Class RoadFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Transportation/REQ_Transportation_RoadFunctionValue.adoc[]
 
 |====
 |*Class RoadFunctionValue*
@@ -763,6 +813,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class RoadUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_RoadUsageValue.adoc[]
+
 |====
 |*Class RoadUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -777,6 +829,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[Section-section]]
 ==== *Class Section*
 Subclass of <<AbstractTransportationSpace-section,AbstractTransportationSpace>>
+
+include::../requirements/Transportation/REQ_Transportation_Section.adoc[]
 
 |====
 |*Class Section*
@@ -834,6 +888,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class SectionClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_SectionClassValue.adoc[]
+
 |====
 |*Class SectionClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -848,6 +904,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[Square-section]]
 ==== *Class Square*
 Subclass of <<AbstractTransportationSpace-section,AbstractTransportationSpace>>
+
+include::../requirements/Transportation/REQ_Transportation_Square.adoc[]
 
 |====
 |*Class Square*
@@ -889,6 +947,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class SquareClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_SquareClassValue.adoc[]
+
 |====
 |*Class SquareClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -903,6 +963,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[SquareFunctionValue-section]]
 ==== *Class SquareFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Transportation/REQ_Transportation_SquareFunctionValue.adoc[]
 
 |====
 |*Class SquareFunctionValue*
@@ -919,6 +981,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class SquareUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_SquareUsageValue.adoc[]
+
 |====
 |*Class SquareUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -934,6 +998,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class SurfaceMaterialValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_SurfaceMaterialValue.adoc[]
+
 |====
 |*Class SurfaceMaterialValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -948,6 +1014,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[Track-section]]
 ==== *Class Track*
 Subclass of <<AbstractTransportationSpace-section,AbstractTransportationSpace>>
+
+include::../requirements/Transportation/REQ_Transportation_Track.adoc[]
 
 |====
 |*Class Track*
@@ -1003,6 +1071,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class TrackClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_TrackClassValue.adoc[]
+
 |====
 |*Class TrackClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1017,6 +1087,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[TrackFunctionValue-section]]
 ==== *Class TrackFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Transportation/REQ_Transportation_TrackFunctionValue.adoc[]
 
 |====
 |*Class TrackFunctionValue*
@@ -1033,6 +1105,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class TrackUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_TrackUsageValue.adoc[]
+
 |====
 |*Class TrackUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1047,6 +1121,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[TrafficArea-section]]
 ==== *Class TrafficArea*
 Subclass of <<AbstractThematicSurface-section,AbstractThematicSurface>>
+
+include::../requirements/Transportation/REQ_Transportation_TrafficArea.adoc[]
 
 |====
 |*Class TrafficArea*
@@ -1101,6 +1177,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class TrafficAreaClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_TrafficAreaClassValue.adoc[]
+
 |====
 |*Class TrafficAreaClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1115,6 +1193,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[TrafficAreaFunctionValue-section]]
 ==== *Class TrafficAreaFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Transportation/REQ_Transportation_TrafficAreaFunctionValue.adoc[]
 
 |====
 |*Class TrafficAreaFunctionValue*
@@ -1131,6 +1211,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class TrafficAreaUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_TrafficAreaUsageValue.adoc[]
+
 |====
 |*Class TrafficAreaUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1145,6 +1227,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[TrafficSpace-section]]
 ==== *Class TrafficSpace*
 Subclass of <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>>
+
+include::../requirements/Transportation/REQ_Transportation_TrafficSpace.adoc[]
 
 |====
 |*Class TrafficSpace*
@@ -1253,6 +1337,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class TrafficSpaceClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_TrafficSpaceClassValue.adoc[]
+
 |====
 |*Class TrafficSpaceClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1267,6 +1353,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[TrafficSpaceFunctionValue-section]]
 ==== *Class TrafficSpaceFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Transportation/REQ_Transportation_TrafficSpaceFunctionValue.adoc[]
 
 |====
 |*Class TrafficSpaceFunctionValue*
@@ -1283,6 +1371,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class TrafficSpaceUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_TrafficSpaceUsageValue.adoc[]
+
 |====
 |*Class TrafficSpaceUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1297,6 +1387,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[TransportationSpaceClassValue-section]]
 ==== *Class TransportationSpaceClassValue*
 Subclass of <<-section,>>
+
+include::../requirements/Transportation/REQ_Transportation_TransportationSpaceClassValue.adoc[]
 
 |====
 |*Class TransportationSpaceClassValue*
@@ -1313,6 +1405,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class TransportationSpaceFunctionValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_TransportationSpaceFunctionValue.adoc[]
+
 |====
 |*Class TransportationSpaceFunctionValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1328,6 +1422,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class TransportationSpaceUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_TransportationSpaceUsageValue.adoc[]
+
 |====
 |*Class TransportationSpaceUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1342,6 +1438,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[Waterway-section]]
 ==== *Class Waterway*
 Subclass of <<AbstractTransportationSpace-section,AbstractTransportationSpace>>
+
+include::../requirements/Transportation/REQ_Transportation_Waterway.adoc[]
 
 |====
 |*Class Waterway*
@@ -1397,6 +1495,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class WaterwayClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_WaterwayClassValue.adoc[]
+
 |====
 |*Class WaterwayClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1411,6 +1511,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[WaterwayFunctionValue-section]]
 ==== *Class WaterwayFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Transportation/REQ_Transportation_WaterwayFunctionValue.adoc[]
 
 |====
 |*Class WaterwayFunctionValue*
@@ -1427,6 +1529,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class WaterwayUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Transportation/REQ_Transportation_WaterwayUsageValue.adoc[]
+
 |====
 |*Class WaterwayUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1441,6 +1545,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[GranularityValue-section]]
 ==== *Class GranularityValue*
 Subclass of <<-section,>>
+
+include::../requirements/Transportation/REQ_Transportation_GranularityValue.adoc[]
 
 |====
 |*Class GranularityValue*
@@ -1468,6 +1574,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 [[TrafficDirectionValue-section]]
 ==== *Class TrafficDirectionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Transportation/REQ_Transportation_TrafficDirectionValue.adoc[]
 
 |====
 |*Class TrafficDirectionValue*

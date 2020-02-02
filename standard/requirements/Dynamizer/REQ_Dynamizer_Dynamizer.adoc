@@ -1,0 +1,9 @@
+[[req_Dynamizer_Dynamizer]]
+[width="90%",cols="2,6"]
+|===
+^|*Requirement  {counter:req-id}* |*/req/Dynamizer/Dynamizer* 
+^|A |The Implementation Specification SHALL contain an element with the same definition as the Dynamizer UML class as documented in the Dynamizer section of the <<Dynamizer-section,Dynamizer Data Dictionary>>.
+^|B |The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the Dynamizer UML class as documented in the Dynamizer section of the <<Dynamizer-section,Dynamizer Data Dictionary>>.
+^|C |The implementation Specification SHALL represent the attributes of the Dynamizer UML class; including the name, definition, type, and cardinality of those documented in the Dynamizer section of the <<Dynamizer-section,Dynamizer Data Dictionary>>.
+^|D |The implementation Specification SHALL represent the attributes of all parent classes of the the Dynamizer UML class; including the name, definition, type, and cardinality of those documented in the Dynamizer section of the <<Dynamizer-section,Dynamizer Data Dictionary>>.
+|===

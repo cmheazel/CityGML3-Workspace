@@ -1,0 +1,9 @@
+[[req_CityObjectGroup_CityObjectGroup]]
+[width="90%",cols="2,6"]
+|===
+^|*Requirement  {counter:req-id}* |*/req/CityObjectGroup/CityObjectGroup* 
+^|A |The Implementation Specification SHALL contain an element with the same definition as the CityObjectGroup UML class as documented in the CityObjectGroup section of the <<CityObjectGroup-section,CityObjectGroup Data Dictionary>>.
+^|B |The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the CityObjectGroup UML class as documented in the CityObjectGroup section of the <<CityObjectGroup-section,CityObjectGroup Data Dictionary>>.
+^|C |The implementation Specification SHALL represent the attributes of the CityObjectGroup UML class; including the name, definition, type, and cardinality of those documented in the CityObjectGroup section of the <<CityObjectGroup-section,CityObjectGroup Data Dictionary>>.
+^|D |The implementation Specification SHALL represent the attributes of all parent classes of the the CityObjectGroup UML class; including the name, definition, type, and cardinality of those documented in the CityObjectGroup section of the <<CityObjectGroup-section,CityObjectGroup Data Dictionary>>.
+|===

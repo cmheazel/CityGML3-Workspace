@@ -9,6 +9,8 @@ Parent Package:{nbsp}CityGML
 ==== *Class AbstractConstruction*
 Subclass of <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>>
 
+include::../requirements/Construction/REQ_Construction_AbstractConstruction.adoc[]
+
 |====
 |*Class AbstractConstruction*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -108,6 +110,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class AbstractConstructionSurface*
 Subclass of <<AbstractThematicSurface-section,AbstractThematicSurface>>
 
+include::../requirements/Construction/REQ_Construction_AbstractConstructionSurface.adoc[]
+
 |====
 |*Class AbstractConstructionSurface*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -193,6 +197,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractConstructionSurface-section,Abs
 ==== *Class AbstractConstructiveElement*
 Subclass of <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>>
 
+include::../requirements/Construction/REQ_Construction_AbstractConstructiveElement.adoc[]
+
 |====
 |*Class AbstractConstructiveElement*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -256,6 +262,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class AbstractFillingElement*
 Subclass of <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>>
 
+include::../requirements/Construction/REQ_Construction_AbstractFillingElement.adoc[]
+
 |====
 |*Class AbstractFillingElement*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -298,6 +306,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFillingElement-section,Abstract
 [[AbstractFillingSurface-section]]
 ==== *Class AbstractFillingSurface*
 Subclass of <<AbstractThematicSurface-section,AbstractThematicSurface>>
+
+include::../requirements/Construction/REQ_Construction_AbstractFillingSurface.adoc[]
 
 |====
 |*Class AbstractFillingSurface*
@@ -342,6 +352,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFillingSurface-section,Abstract
 ==== *Class AbstractFurniture*
 Subclass of <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>>
 
+include::../requirements/Construction/REQ_Construction_AbstractFurniture.adoc[]
+
 |====
 |*Class AbstractFurniture*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -384,6 +396,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFurniture-section,AbstractFurni
 [[AbstractInstallation-section]]
 ==== *Class AbstractInstallation*
 Subclass of <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>>
+
+include::../requirements/Construction/REQ_Construction_AbstractInstallation.adoc[]
 
 |====
 |*Class AbstractInstallation*
@@ -441,6 +455,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class CeilingSurface*
 Subclass of <<AbstractConstructionSurface-section,AbstractConstructionSurface>>
 
+include::../requirements/Construction/REQ_Construction_CeilingSurface.adoc[]
+
 |====
 |*Class CeilingSurface*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -462,6 +478,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractConstructionSurface-section,Abs
 [[Door-section]]
 ==== *Class Door*
 Subclass of <<AbstractFillingElement-section,AbstractFillingElement>>
+
+include::../requirements/Construction/REQ_Construction_Door.adoc[]
 
 |====
 |*Class Door*
@@ -517,6 +535,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class DoorClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Construction/REQ_Construction_DoorClassValue.adoc[]
+
 |====
 |*Class DoorClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -532,6 +552,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class DoorFunctionValue*
 Subclass of <<-section,>>
 
+include::../requirements/Construction/REQ_Construction_DoorFunctionValue.adoc[]
+
 |====
 |*Class DoorFunctionValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -546,6 +568,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[DoorSurface-section]]
 ==== *Class DoorSurface*
 Subclass of <<AbstractFillingSurface-section,AbstractFillingSurface>>
+
+include::../requirements/Construction/REQ_Construction_DoorSurface.adoc[]
 
 |====
 |*Class DoorSurface*
@@ -583,6 +607,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<DoorSurface-section,DoorSurface>> +
 ==== *Class DoorUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Construction/REQ_Construction_DoorUsageValue.adoc[]
+
 |====
 |*Class DoorUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -597,6 +623,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[ElevationReferenceValue-section]]
 ==== *Class ElevationReferenceValue*
 Subclass of <<-section,>>
+
+include::../requirements/Construction/REQ_Construction_ElevationReferenceValue.adoc[]
 
 |====
 |*Class ElevationReferenceValue*
@@ -620,6 +648,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<ElevationReferenceValue-section,Elevati
 ==== *Class EventValue*
 Subclass of <<-section,>>
 
+include::../requirements/Construction/REQ_Construction_EventValue.adoc[]
+
 |====
 |*Class EventValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -641,6 +671,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<EventValue-section,EventValue>> +
 [[FloorSurface-section]]
 ==== *Class FloorSurface*
 Subclass of <<AbstractConstructionSurface-section,AbstractConstructionSurface>>
+
+include::../requirements/Construction/REQ_Construction_FloorSurface.adoc[]
 
 |====
 |*Class FloorSurface*
@@ -664,6 +696,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractConstructionSurface-section,Abs
 ==== *Class GroundSurface*
 Subclass of <<AbstractConstructionSurface-section,AbstractConstructionSurface>>
 
+include::../requirements/Construction/REQ_Construction_GroundSurface.adoc[]
+
 |====
 |*Class GroundSurface*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -686,6 +720,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractConstructionSurface-section,Abs
 ==== *Class InteriorWallSurface*
 Subclass of <<AbstractConstructionSurface-section,AbstractConstructionSurface>>
 
+include::../requirements/Construction/REQ_Construction_InteriorWallSurface.adoc[]
+
 |====
 |*Class InteriorWallSurface*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -707,6 +743,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractConstructionSurface-section,Abs
 [[OtherConstruction-section]]
 ==== *Class OtherConstruction*
 Subclass of <<AbstractConstruction-section,AbstractConstruction>>
+
+include::../requirements/Construction/REQ_Construction_OtherConstruction.adoc[]
 
 |====
 |*Class OtherConstruction*
@@ -748,6 +786,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class OtherConstructionClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Construction/REQ_Construction_OtherConstructionClassValue.adoc[]
+
 |====
 |*Class OtherConstructionClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -762,6 +802,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[OtherConstructionFunctionValue-section]]
 ==== *Class OtherConstructionFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Construction/REQ_Construction_OtherConstructionFunctionValue.adoc[]
 
 |====
 |*Class OtherConstructionFunctionValue*
@@ -778,6 +820,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class OtherConstructionUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Construction/REQ_Construction_OtherConstructionUsageValue.adoc[]
+
 |====
 |*Class OtherConstructionUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -792,6 +836,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[OuterCeilingSurface-section]]
 ==== *Class OuterCeilingSurface*
 Subclass of <<AbstractConstructionSurface-section,AbstractConstructionSurface>>
+
+include::../requirements/Construction/REQ_Construction_OuterCeilingSurface.adoc[]
 
 |====
 |*Class OuterCeilingSurface*
@@ -815,6 +861,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractConstructionSurface-section,Abs
 ==== *Class OuterFloorSurface*
 Subclass of <<AbstractConstructionSurface-section,AbstractConstructionSurface>>
 
+include::../requirements/Construction/REQ_Construction_OuterFloorSurface.adoc[]
+
 |====
 |*Class OuterFloorSurface*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -836,6 +884,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractConstructionSurface-section,Abs
 [[RoofSurface-section]]
 ==== *Class RoofSurface*
 Subclass of <<AbstractConstructionSurface-section,AbstractConstructionSurface>>
+
+include::../requirements/Construction/REQ_Construction_RoofSurface.adoc[]
 
 |====
 |*Class RoofSurface*
@@ -859,6 +909,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractConstructionSurface-section,Abs
 ==== *Class WallSurface*
 Subclass of <<AbstractConstructionSurface-section,AbstractConstructionSurface>>
 
+include::../requirements/Construction/REQ_Construction_WallSurface.adoc[]
+
 |====
 |*Class WallSurface*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -880,6 +932,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractConstructionSurface-section,Abs
 [[Window-section]]
 ==== *Class Window*
 Subclass of <<AbstractFillingElement-section,AbstractFillingElement>>
+
+include::../requirements/Construction/REQ_Construction_Window.adoc[]
 
 |====
 |*Class Window*
@@ -928,6 +982,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class WindowClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Construction/REQ_Construction_WindowClassValue.adoc[]
+
 |====
 |*Class WindowClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -943,6 +999,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class WindowFunctionValue*
 Subclass of <<-section,>>
 
+include::../requirements/Construction/REQ_Construction_WindowFunctionValue.adoc[]
+
 |====
 |*Class WindowFunctionValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -957,6 +1015,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[WindowSurface-section]]
 ==== *Class WindowSurface*
 Subclass of <<AbstractFillingSurface-section,AbstractFillingSurface>>
+
+include::../requirements/Construction/REQ_Construction_WindowSurface.adoc[]
 
 |====
 |*Class WindowSurface*
@@ -987,6 +1047,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<WindowSurface-section,WindowSurface>> +
 ==== *Class WindowUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Construction/REQ_Construction_WindowUsageValue.adoc[]
+
 |====
 |*Class WindowUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1001,6 +1063,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[ConditionOfConstructionValue-section]]
 ==== *Class ConditionOfConstructionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Construction/REQ_Construction_ConditionOfConstructionValue.adoc[]
 
 |====
 |*Class ConditionOfConstructionValue*
@@ -1053,6 +1117,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 ==== *Class ConstructionEvent*
 Subclass of <<-section,>>
 
+include::../requirements/Construction/REQ_Construction_ConstructionEvent.adoc[]
+
 |====
 |*Class ConstructionEvent*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1086,6 +1152,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class Elevation*
 Subclass of <<-section,>>
 
+include::../requirements/Construction/REQ_Construction_Elevation.adoc[]
+
 |====
 |*Class Elevation*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1112,6 +1180,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 [[Height-section]]
 ==== *Class Height*
 Subclass of <<-section,>>
+
+include::../requirements/Construction/REQ_Construction_Height.adoc[]
 
 |====
 |*Class Height*
@@ -1152,6 +1222,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class HeightStatusValue*
 Subclass of <<-section,>>
 
+include::../requirements/Construction/REQ_Construction_HeightStatusValue.adoc[]
+
 |====
 |*Class HeightStatusValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1178,6 +1250,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 [[RelationToConstruction-section]]
 ==== *Class RelationToConstruction*
 Subclass of <<-section,>>
+
+include::../requirements/Construction/REQ_Construction_RelationToConstruction.adoc[]
 
 |====
 |*Class RelationToConstruction*

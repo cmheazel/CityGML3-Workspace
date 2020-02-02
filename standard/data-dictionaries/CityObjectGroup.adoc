@@ -9,6 +9,8 @@ Parent Package:{nbsp}CityGML
 ==== *Class CityObjectGroup*
 Subclass of <<AbstractLogicalSpace-section,AbstractLogicalSpace>>
 
+include::../requirements/CityObjectGroup/REQ_CityObjectGroup_CityObjectGroup.adoc[]
+
 |====
 |*Class CityObjectGroup*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -63,6 +65,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class CityObjectGroupClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/CityObjectGroup/REQ_CityObjectGroup_CityObjectGroupClassValue.adoc[]
+
 |====
 |*Class CityObjectGroupClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -77,6 +81,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[CityObjectGroupFunctionValue-section]]
 ==== *Class CityObjectGroupFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/CityObjectGroup/REQ_CityObjectGroup_CityObjectGroupFunctionValue.adoc[]
 
 |====
 |*Class CityObjectGroupFunctionValue*
@@ -93,6 +99,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class CityObjectGroupUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/CityObjectGroup/REQ_CityObjectGroup_CityObjectGroupUsageValue.adoc[]
+
 |====
 |*Class CityObjectGroupUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -107,6 +115,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[Role-section]]
 ==== *Class Role*
 Subclass of <<-section,>>
+
+include::../requirements/CityObjectGroup/REQ_CityObjectGroup_Role.adoc[]
 
 |====
 |*Class Role*

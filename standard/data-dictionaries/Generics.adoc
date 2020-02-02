@@ -9,6 +9,8 @@ Parent Package:{nbsp}CityGML
 ==== *Class GenericLogicalSpace*
 Subclass of <<AbstractLogicalSpace-section,AbstractLogicalSpace>>
 
+include::../requirements/Generics/REQ_Generics_GenericLogicalSpace.adoc[]
+
 |====
 |*Class GenericLogicalSpace*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -49,6 +51,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class GenericLogicalSpaceClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Generics/REQ_Generics_GenericLogicalSpaceClassValue.adoc[]
+
 |====
 |*Class GenericLogicalSpaceClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -63,6 +67,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[GenericLogicalSpaceFunctionValue-section]]
 ==== *Class GenericLogicalSpaceFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Generics/REQ_Generics_GenericLogicalSpaceFunctionValue.adoc[]
 
 |====
 |*Class GenericLogicalSpaceFunctionValue*
@@ -79,6 +85,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class GenericLogicalSpaceUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Generics/REQ_Generics_GenericLogicalSpaceUsageValue.adoc[]
+
 |====
 |*Class GenericLogicalSpaceUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -93,6 +101,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[GenericOccupiedSpace-section]]
 ==== *Class GenericOccupiedSpace*
 Subclass of <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>>
+
+include::../requirements/Generics/REQ_Generics_GenericOccupiedSpace.adoc[]
 
 |====
 |*Class GenericOccupiedSpace*
@@ -134,6 +144,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class GenericOccupiedSpaceClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Generics/REQ_Generics_GenericOccupiedSpaceClassValue.adoc[]
+
 |====
 |*Class GenericOccupiedSpaceClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -148,6 +160,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[GenericOccupiedSpaceFunctionValue-section]]
 ==== *Class GenericOccupiedSpaceFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Generics/REQ_Generics_GenericOccupiedSpaceFunctionValue.adoc[]
 
 |====
 |*Class GenericOccupiedSpaceFunctionValue*
@@ -164,6 +178,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class GenericOccupiedSpaceUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Generics/REQ_Generics_GenericOccupiedSpaceUsageValue.adoc[]
+
 |====
 |*Class GenericOccupiedSpaceUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -178,6 +194,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[GenericThematicSurface-section]]
 ==== *Class GenericThematicSurface*
 Subclass of <<AbstractThematicSurface-section,AbstractThematicSurface>>
+
+include::../requirements/Generics/REQ_Generics_GenericThematicSurface.adoc[]
 
 |====
 |*Class GenericThematicSurface*
@@ -219,6 +237,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class GenericThematicSurfaceClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Generics/REQ_Generics_GenericThematicSurfaceClassValue.adoc[]
+
 |====
 |*Class GenericThematicSurfaceClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -233,6 +253,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[GenericThematicSurfaceFunctionValue-section]]
 ==== *Class GenericThematicSurfaceFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Generics/REQ_Generics_GenericThematicSurfaceFunctionValue.adoc[]
 
 |====
 |*Class GenericThematicSurfaceFunctionValue*
@@ -249,6 +271,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class GenericThematicSurfaceUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Generics/REQ_Generics_GenericThematicSurfaceUsageValue.adoc[]
+
 |====
 |*Class GenericThematicSurfaceUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -263,6 +287,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[GenericUnoccupiedSpace-section]]
 ==== *Class GenericUnoccupiedSpace*
 Subclass of <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>>
+
+include::../requirements/Generics/REQ_Generics_GenericUnoccupiedSpace.adoc[]
 
 |====
 |*Class GenericUnoccupiedSpace*
@@ -304,6 +330,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class GenericUnoccupiedSpaceClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Generics/REQ_Generics_GenericUnoccupiedSpaceClassValue.adoc[]
+
 |====
 |*Class GenericUnoccupiedSpaceClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -318,6 +346,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[GenericUnoccupiedSpaceFunctionValue-section]]
 ==== *Class GenericUnoccupiedSpaceFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Generics/REQ_Generics_GenericUnoccupiedSpaceFunctionValue.adoc[]
 
 |====
 |*Class GenericUnoccupiedSpaceFunctionValue*
@@ -334,6 +364,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class GenericUnoccupiedSpaceUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Generics/REQ_Generics_GenericUnoccupiedSpaceUsageValue.adoc[]
+
 |====
 |*Class GenericUnoccupiedSpaceUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -348,6 +380,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[DateAttribute-section]]
 ==== *Class DateAttribute*
 Subclass of <<AbstractGenericAttribute-section,AbstractGenericAttribute>>
+
+include::../requirements/Generics/REQ_Generics_DateAttribute.adoc[]
 
 |====
 |*Class DateAttribute*
@@ -383,6 +417,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class DoubleAttribute*
 Subclass of <<AbstractGenericAttribute-section,AbstractGenericAttribute>>
 
+include::../requirements/Generics/REQ_Generics_DoubleAttribute.adoc[]
+
 |====
 |*Class DoubleAttribute*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -416,6 +452,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 [[GenericAttributeSet-section]]
 ==== *Class GenericAttributeSet*
 Subclass of <<AbstractGenericAttribute-section,AbstractGenericAttribute>>
+
+include::../requirements/Generics/REQ_Generics_GenericAttributeSet.adoc[]
 
 |====
 |*Class GenericAttributeSet*
@@ -458,6 +496,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class IntAttribute*
 Subclass of <<AbstractGenericAttribute-section,AbstractGenericAttribute>>
 
+include::../requirements/Generics/REQ_Generics_IntAttribute.adoc[]
+
 |====
 |*Class IntAttribute*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -491,6 +531,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 [[MeasureAttribute-section]]
 ==== *Class MeasureAttribute*
 Subclass of <<AbstractGenericAttribute-section,AbstractGenericAttribute>>
+
+include::../requirements/Generics/REQ_Generics_MeasureAttribute.adoc[]
 
 |====
 |*Class MeasureAttribute*
@@ -526,6 +568,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class StringAttribute*
 Subclass of <<AbstractGenericAttribute-section,AbstractGenericAttribute>>
 
+include::../requirements/Generics/REQ_Generics_StringAttribute.adoc[]
+
 |====
 |*Class StringAttribute*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -559,6 +603,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 [[UriAttribute-section]]
 ==== *Class UriAttribute*
 Subclass of <<AbstractGenericAttribute-section,AbstractGenericAttribute>>
+
+include::../requirements/Generics/REQ_Generics_UriAttribute.adoc[]
 
 |====
 |*Class UriAttribute*

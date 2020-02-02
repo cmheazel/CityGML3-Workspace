@@ -1,0 +1,9 @@
+[[req_Core_CityObjectRelation]]
+[width="90%",cols="2,6"]
+|===
+^|*Requirement  {counter:req-id}* |*/req/Core/CityObjectRelation* 
+^|A |Any use of the CityObjectRelation type in the Implementation Specification SHALL have the same definition as the CityObjectRelation UML class as documented in the CityObjectRelation section of the <<CityObjectRelation-section,Core Data Dictionary>>.
+^|B |The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the CityObjectRelation UML class as documented in the CityObjectRelation section of the <<CityObjectRelation-section,Core Data Dictionary>>.
+^|C |The implementation Specification SHALL represent the attributes of the CityObjectRelation UML class; including the name, definition, type, and cardinality of those documented in the CityObjectRelation section of the <<CityObjectRelation-section,Core Data Dictionary>>.
+^|D |The implementation Specification SHALL represent the attributes of all parent classes of the the CityObjectRelation UML class; including the name, definition, type, and cardinality of those documented in the CityObjectRelation section of the <<CityObjectRelation-section,Core Data Dictionary>>.
+|===

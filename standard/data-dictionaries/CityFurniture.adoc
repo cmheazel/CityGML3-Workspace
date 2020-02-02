@@ -9,6 +9,8 @@ Parent Package:{nbsp}CityGML
 ==== *Class CityFurniture*
 Subclass of <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>>
 
+include::../requirements/CityFurniture/REQ_CityFurniture_CityFurniture.adoc[]
+
 |====
 |*Class CityFurniture*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -49,6 +51,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class CityFurnitureClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/CityFurniture/REQ_CityFurniture_CityFurnitureClassValue.adoc[]
+
 |====
 |*Class CityFurnitureClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -64,6 +68,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class CityFurnitureFunctionValue*
 Subclass of <<-section,>>
 
+include::../requirements/CityFurniture/REQ_CityFurniture_CityFurnitureFunctionValue.adoc[]
+
 |====
 |*Class CityFurnitureFunctionValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -78,6 +84,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[CityFurnitureUsageValue-section]]
 ==== *Class CityFurnitureUsageValue*
 Subclass of <<-section,>>
+
+include::../requirements/CityFurniture/REQ_CityFurniture_CityFurnitureUsageValue.adoc[]
 
 |====
 |*Class CityFurnitureUsageValue*

@@ -9,6 +9,8 @@ Parent Package:{nbsp}CityGML
 ==== *Class AbstractVegetationObject*
 Subclass of <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>>
 
+include::../requirements/Vegetation/REQ_Vegetation_AbstractVegetationObject.adoc[]
+
 |====
 |*Class AbstractVegetationObject*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -44,6 +46,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractVegetationObject-section,Abstra
 [[PlantCover-section]]
 ==== *Class PlantCover*
 Subclass of <<AbstractVegetationObject-section,AbstractVegetationObject>>
+
+include::../requirements/Vegetation/REQ_Vegetation_PlantCover.adoc[]
 
 |====
 |*Class PlantCover*
@@ -103,6 +107,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class PlantCoverClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Vegetation/REQ_Vegetation_PlantCoverClassValue.adoc[]
+
 |====
 |*Class PlantCoverClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -117,6 +123,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[PlantCoverFunctionValue-section]]
 ==== *Class PlantCoverFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Vegetation/REQ_Vegetation_PlantCoverFunctionValue.adoc[]
 
 |====
 |*Class PlantCoverFunctionValue*
@@ -133,6 +141,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class PlantCoverUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Vegetation/REQ_Vegetation_PlantCoverUsageValue.adoc[]
+
 |====
 |*Class PlantCoverUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -147,6 +157,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[SolitaryVegetationObject-section]]
 ==== *Class SolitaryVegetationObject*
 Subclass of <<AbstractVegetationObject-section,AbstractVegetationObject>>
+
+include::../requirements/Vegetation/REQ_Vegetation_SolitaryVegetationObject.adoc[]
 
 |====
 |*Class SolitaryVegetationObject*
@@ -224,6 +236,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class SolitaryVegetationObjectClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Vegetation/REQ_Vegetation_SolitaryVegetationObjectClassValue.adoc[]
+
 |====
 |*Class SolitaryVegetationObjectClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -238,6 +252,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[SolitaryVegetationObjectFunctionValue-section]]
 ==== *Class SolitaryVegetationObjectFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Vegetation/REQ_Vegetation_SolitaryVegetationObjectFunctionValue.adoc[]
 
 |====
 |*Class SolitaryVegetationObjectFunctionValue*
@@ -254,6 +270,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class SolitaryVegetationObjectUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Vegetation/REQ_Vegetation_SolitaryVegetationObjectUsageValue.adoc[]
+
 |====
 |*Class SolitaryVegetationObjectUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -269,6 +287,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class SpeciesValue*
 Subclass of <<-section,>>
 
+include::../requirements/Vegetation/REQ_Vegetation_SpeciesValue.adoc[]
+
 |====
 |*Class SpeciesValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -280,5 +300,6 @@ StereoType:{nbsp}{nbsp} «CodeList»
 |
 |==== 
   
+
 
 

@@ -210,10 +210,3 @@ In order to model building storeys with CityGML’s generic grouping concept, a 
 
 In a second step, the CityObjectGroup objects representing different storeys are grouped themselves. By using the generic aggregation concept of CityObjectGroup, the “storeys group” is associated with the corresponding Building or BuildingPart object. The class attribute of the storeys group shall be assigned the value “building storeys”.
 
-==== Requirements
-
-include::requirements/Building/REQ_Building_Base.adoc[]
-
-include::requirements/Building/REQ_Building_RefIntegrity.adoc[]
-
-include::requirements/Building/REQ_Building_Restrictions.adoc[]

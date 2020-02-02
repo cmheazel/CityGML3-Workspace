@@ -9,6 +9,8 @@ Parent Package:{nbsp}CityGML
 ==== *Class AbstractTunnel*
 Subclass of <<AbstractConstruction-section,AbstractConstruction>>
 
+include::../requirements/Tunnel/REQ_Tunnel_AbstractTunnel.adoc[]
+
 |====
 |*Class AbstractTunnel*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -91,6 +93,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class HollowSpace*
 Subclass of <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>>
 
+include::../requirements/Tunnel/REQ_Tunnel_HollowSpace.adoc[]
+
 |====
 |*Class HollowSpace*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -159,6 +163,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class HollowSpaceClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Tunnel/REQ_Tunnel_HollowSpaceClassValue.adoc[]
+
 |====
 |*Class HollowSpaceClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -173,6 +179,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[HollowSpaceFunctionValue-section]]
 ==== *Class HollowSpaceFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Tunnel/REQ_Tunnel_HollowSpaceFunctionValue.adoc[]
 
 |====
 |*Class HollowSpaceFunctionValue*
@@ -189,6 +197,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class HollowSpaceUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Tunnel/REQ_Tunnel_HollowSpaceUsageValue.adoc[]
+
 |====
 |*Class HollowSpaceUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -203,6 +213,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[Tunnel-section]]
 ==== *Class Tunnel*
 Subclass of <<AbstractTunnel-section,AbstractTunnel>>
+
+include::../requirements/Tunnel/REQ_Tunnel_Tunnel.adoc[]
 
 |====
 |*Class Tunnel*
@@ -233,6 +245,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<TunnelPart-section,TunnelPart>> +
 ==== *Class TunnelClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Tunnel/REQ_Tunnel_TunnelClassValue.adoc[]
+
 |====
 |*Class TunnelClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -247,6 +261,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[TunnelConstructiveElement-section]]
 ==== *Class TunnelConstructiveElement*
 Subclass of <<AbstractConstructiveElement-section,AbstractConstructiveElement>>
+
+include::../requirements/Tunnel/REQ_Tunnel_TunnelConstructiveElement.adoc[]
 
 |====
 |*Class TunnelConstructiveElement*
@@ -295,6 +311,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class TunnelConstructiveElementClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Tunnel/REQ_Tunnel_TunnelConstructiveElementClassValue.adoc[]
+
 |====
 |*Class TunnelConstructiveElementClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -309,6 +327,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[TunnelConstructiveElementFunctionValue-section]]
 ==== *Class TunnelConstructiveElementFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Tunnel/REQ_Tunnel_TunnelConstructiveElementFunctionValue.adoc[]
 
 |====
 |*Class TunnelConstructiveElementFunctionValue*
@@ -325,6 +345,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class TunnelConstructiveElementUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Tunnel/REQ_Tunnel_TunnelConstructiveElementUsageValue.adoc[]
+
 |====
 |*Class TunnelConstructiveElementUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -340,6 +362,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class TunnelFunctionValue*
 Subclass of <<-section,>>
 
+include::../requirements/Tunnel/REQ_Tunnel_TunnelFunctionValue.adoc[]
+
 |====
 |*Class TunnelFunctionValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -354,6 +378,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[TunnelFurniture-section]]
 ==== *Class TunnelFurniture*
 Subclass of <<AbstractFurniture-section,AbstractFurniture>>
+
+include::../requirements/Tunnel/REQ_Tunnel_TunnelFurniture.adoc[]
 
 |====
 |*Class TunnelFurniture*
@@ -409,6 +435,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class TunnelFurnitureClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Tunnel/REQ_Tunnel_TunnelFurnitureClassValue.adoc[]
+
 |====
 |*Class TunnelFurnitureClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -423,6 +451,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[TunnelFurnitureFunctionValue-section]]
 ==== *Class TunnelFurnitureFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Tunnel/REQ_Tunnel_TunnelFurnitureFunctionValue.adoc[]
 
 |====
 |*Class TunnelFurnitureFunctionValue*
@@ -439,6 +469,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class TunnelFurnitureUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Tunnel/REQ_Tunnel_TunnelFurnitureUsageValue.adoc[]
+
 |====
 |*Class TunnelFurnitureUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -453,6 +485,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[TunnelInstallation-section]]
 ==== *Class TunnelInstallation*
 Subclass of <<AbstractInstallation-section,AbstractInstallation>>
+
+include::../requirements/Tunnel/REQ_Tunnel_TunnelInstallation.adoc[]
 
 |====
 |*Class TunnelInstallation*
@@ -508,6 +542,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class TunnelInstallationClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Tunnel/REQ_Tunnel_TunnelInstallationClassValue.adoc[]
+
 |====
 |*Class TunnelInstallationClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -522,6 +558,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[TunnelInstallationFunctionValue-section]]
 ==== *Class TunnelInstallationFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Tunnel/REQ_Tunnel_TunnelInstallationFunctionValue.adoc[]
 
 |====
 |*Class TunnelInstallationFunctionValue*
@@ -538,6 +576,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class TunnelInstallationUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Tunnel/REQ_Tunnel_TunnelInstallationUsageValue.adoc[]
+
 |====
 |*Class TunnelInstallationUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -552,6 +592,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[TunnelPart-section]]
 ==== *Class TunnelPart*
 Subclass of <<AbstractTunnel-section,AbstractTunnel>>
+
+include::../requirements/Tunnel/REQ_Tunnel_TunnelPart.adoc[]
 
 |====
 |*Class TunnelPart*
@@ -582,6 +624,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<TunnelPart-section,TunnelPart>> +
 ==== *Class TunnelUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Tunnel/REQ_Tunnel_TunnelUsageValue.adoc[]
+
 |====
 |*Class TunnelUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -593,6 +637,5 @@ StereoType:{nbsp}{nbsp} «CodeList»
 |
 |==== 
   
-
 
 

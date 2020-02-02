@@ -9,6 +9,8 @@ Parent Package:{nbsp}CityGML
 ==== *Class AbstractAppearance*
 Subclass of <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>>
 
+include::../requirements/Core/REQ_Core_AbstractAppearance.adoc[]
+
 |====
 |*Class AbstractAppearance*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -58,6 +60,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractAppearance-section,AbstractAppe
 [[AbstractCityObject-section]]
 ==== *Class AbstractCityObject*
 Subclass of <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>>
+
+include::../requirements/Core/REQ_Core_AbstractCityObject.adoc[]
 
 |====
 |*Class AbstractCityObject*
@@ -191,6 +195,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class AbstractDynamizer*
 Subclass of <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>>
 
+include::../requirements/Core/REQ_Core_AbstractDynamizer.adoc[]
+
 |====
 |*Class AbstractDynamizer*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -226,6 +232,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractDynamizer-section,AbstractDynam
 [[AbstractFeatureWithLifespan-section]]
 ==== *Class AbstractFeatureWithLifespan*
 Subclass of <<AnyFeature-section,AnyFeature>>
+
+include::../requirements/Core/REQ_Core_AbstractFeatureWithLifespan.adoc[]
 
 |====
 |*Class AbstractFeatureWithLifespan*
@@ -343,6 +351,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class AbstractLogicalSpace*
 Subclass of <<AbstractSpace-section,AbstractSpace>>
 
+include::../requirements/Core/REQ_Core_AbstractLogicalSpace.adoc[]
+
 |====
 |*Class AbstractLogicalSpace*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -385,6 +395,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractLogicalSpace-section,AbstractLo
 [[AbstractOccupiedSpace-section]]
 ==== *Class AbstractOccupiedSpace*
 Subclass of <<AbstractPhysicalSpace-section,AbstractPhysicalSpace>>
+
+include::../requirements/Core/REQ_Core_AbstractOccupiedSpace.adoc[]
 
 |====
 |*Class AbstractOccupiedSpace*
@@ -492,6 +504,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractO
 ==== *Class AbstractPhysicalSpace*
 Subclass of <<AbstractSpace-section,AbstractSpace>>
 
+include::../requirements/Core/REQ_Core_AbstractPhysicalSpace.adoc[]
+
 |====
 |*Class AbstractPhysicalSpace*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -556,6 +570,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractPhysicalSpace-section,AbstractP
 ==== *Class AbstractPointCloud*
 Subclass of <<-section,>>
 
+include::../requirements/Core/REQ_Core_AbstractPointCloud.adoc[]
+
 |====
 |*Class AbstractPointCloud*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -598,6 +614,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractPointCloud-section,AbstractPoin
 [[AbstractSpace-section]]
 ==== *Class AbstractSpace*
 Subclass of <<AbstractCityObject-section,AbstractCityObject>>
+
+include::../requirements/Core/REQ_Core_AbstractSpace.adoc[]
 
 |====
 |*Class AbstractSpace*
@@ -730,6 +748,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class AbstractSpaceBoundary*
 Subclass of <<AbstractCityObject-section,AbstractCityObject>>
 
+include::../requirements/Core/REQ_Core_AbstractSpaceBoundary.adoc[]
+
 |====
 |*Class AbstractSpaceBoundary*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -779,6 +799,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractSpaceBoundary-section,AbstractS
 [[AbstractThematicSurface-section]]
 ==== *Class AbstractThematicSurface*
 Subclass of <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>>
+
+include::../requirements/Core/REQ_Core_AbstractThematicSurface.adoc[]
 
 |====
 |*Class AbstractThematicSurface*
@@ -976,6 +998,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class AbstractUnoccupiedSpace*
 Subclass of <<AbstractPhysicalSpace-section,AbstractPhysicalSpace>>
 
+include::../requirements/Core/REQ_Core_AbstractUnoccupiedSpace.adoc[]
+
 |====
 |*Class AbstractUnoccupiedSpace*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1061,6 +1085,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractUnoccupiedSpace-section,Abstrac
 ==== *Class AbstractVersion*
 Subclass of <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>>
 
+include::../requirements/Core/REQ_Core_AbstractVersion.adoc[]
+
 |====
 |*Class AbstractVersion*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1097,6 +1123,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractVersion-section,AbstractVersion
 ==== *Class AbstractVersionTransition*
 Subclass of <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>>
 
+include::../requirements/Core/REQ_Core_AbstractVersionTransition.adoc[]
+
 |====
 |*Class AbstractVersionTransition*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1132,6 +1160,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractVersionTransition-section,Abstr
 [[Address-section]]
 ==== *Class Address*
 Subclass of <<-section,>>
+
+include::../requirements/Core/REQ_Core_Address.adoc[]
 
 |====
 |*Class Address*
@@ -1197,6 +1227,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<Address-section,Address>> +
 ==== *Class CityModel*
 Subclass of <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>>
 
+include::../requirements/Core/REQ_Core_CityModel.adoc[]
+
 |====
 |*Class CityModel*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1260,6 +1292,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class CityObjectRelation*
 Subclass of <<-section,>>
 
+include::../requirements/Core/REQ_Core_CityObjectRelation.adoc[]
+
 |====
 |*Class CityObjectRelation*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1288,6 +1322,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class ClosureSurface*
 Subclass of <<AbstractThematicSurface-section,AbstractThematicSurface>>
 
+include::../requirements/Core/REQ_Core_ClosureSurface.adoc[]
+
 |====
 |*Class ClosureSurface*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1310,6 +1346,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,Abstrac
 ==== *Class DoubleBetween0and1*
 Subclass of <<-section,>>
 
+include::../requirements/Core/REQ_Core_DoubleBetween0and1.adoc[]
+
 |====
 |*Class DoubleBetween0and1*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1331,6 +1369,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<DoubleBetween0and1-section,DoubleBetwee
 [[DoubleBetween0and1List-section]]
 ==== *Class DoubleBetween0and1List*
 Subclass of <<-section,>>
+
+include::../requirements/Core/REQ_Core_DoubleBetween0and1List.adoc[]
 
 |====
 |*Class DoubleBetween0and1List*
@@ -1366,6 +1406,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 [[DoubleList-section]]
 ==== *Class DoubleList*
 Subclass of <<-section,>>
+
+include::../requirements/Core/REQ_Core_DoubleList.adoc[]
 
 |====
 |*Class DoubleList*
@@ -1408,6 +1450,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 [[ImplicitGeometry-section]]
 ==== *Class ImplicitGeometry*
 Subclass of <<-section,>>
+
+include::../requirements/Core/REQ_Core_ImplicitGeometry.adoc[]
 
 |====
 |*Class ImplicitGeometry*
@@ -1484,6 +1528,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class IntegerBetween0and3*
 Subclass of <<-section,>>
 
+include::../requirements/Core/REQ_Core_IntegerBetween0and3.adoc[]
+
 |====
 |*Class IntegerBetween0and3*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1505,6 +1551,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<IntegerBetween0and3-section,IntegerBetw
 [[IntervalValue-section]]
 ==== *Class IntervalValue*
 Subclass of <<-section,>>
+
+include::../requirements/Core/REQ_Core_IntervalValue.adoc[]
 
 |====
 |*Class IntervalValue*
@@ -1528,6 +1576,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<IntervalValue-section,IntervalValue>> +
 ==== *Class MimeValue*
 Subclass of <<-section,>>
 
+include::../requirements/Core/REQ_Core_MimeValue.adoc[]
+
 |====
 |*Class MimeValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1542,6 +1592,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[OccupantTypeValue-section]]
 ==== *Class OccupantTypeValue*
 Subclass of <<-section,>>
+
+include::../requirements/Core/REQ_Core_OccupantTypeValue.adoc[]
 
 |====
 |*Class OccupantTypeValue*
@@ -1565,6 +1617,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<OccupantTypeValue-section,OccupantTypeV
 ==== *Class OtherRelationTypeValue*
 Subclass of <<RelationTypeValue-section,RelationTypeValue>>
 
+include::../requirements/Core/REQ_Core_OtherRelationTypeValue.adoc[]
+
 |====
 |*Class OtherRelationTypeValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1586,6 +1640,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<RelationTypeValue-section,RelationTypeV
 [[QualifiedAreaValue-section]]
 ==== *Class QualifiedAreaValue*
 Subclass of <<-section,>>
+
+include::../requirements/Core/REQ_Core_QualifiedAreaValue.adoc[]
 
 |====
 |*Class QualifiedAreaValue*
@@ -1609,6 +1665,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<QualifiedAreaValue-section,QualifiedAre
 ==== *Class QualifiedVolumeValue*
 Subclass of <<-section,>>
 
+include::../requirements/Core/REQ_Core_QualifiedVolumeValue.adoc[]
+
 |====
 |*Class QualifiedVolumeValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1630,6 +1688,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<QualifiedVolumeValue-section,QualifiedV
 [[RelationTypeValue-section]]
 ==== *Class RelationTypeValue*
 Subclass of <<-section,>>
+
+include::../requirements/Core/REQ_Core_RelationTypeValue.adoc[]
 
 |====
 |*Class RelationTypeValue*
@@ -1667,6 +1727,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<RelationTypeValue-section,RelationTypeV
 ==== *Class TemporalRelationTypeValue*
 Subclass of <<RelationTypeValue-section,RelationTypeValue>>
 
+include::../requirements/Core/REQ_Core_TemporalRelationTypeValue.adoc[]
+
 |====
 |*Class TemporalRelationTypeValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1688,6 +1750,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<RelationTypeValue-section,RelationTypeV
 [[TopologicRelationTypeValue-section]]
 ==== *Class TopologicRelationTypeValue*
 Subclass of <<RelationTypeValue-section,RelationTypeValue>>
+
+include::../requirements/Core/REQ_Core_TopologicRelationTypeValue.adoc[]
 
 |====
 |*Class TopologicRelationTypeValue*
@@ -1718,6 +1782,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<TopologicRelationTypeValue-section,Topo
 ==== *Class TransformationMatrix2x2*
 Subclass of <<DoubleList-section,DoubleList>>
 
+include::../requirements/Core/REQ_Core_TransformationMatrix2x2.adoc[]
+
 |====
 |*Class TransformationMatrix2x2*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1746,6 +1812,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<TransformationMatrix2x2-section,Transfo
 [[TransformationMatrix3x4-section]]
 ==== *Class TransformationMatrix3x4*
 Subclass of <<DoubleList-section,DoubleList>>
+
+include::../requirements/Core/REQ_Core_TransformationMatrix3x4.adoc[]
 
 |====
 |*Class TransformationMatrix3x4*
@@ -1776,6 +1844,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<TransformationMatrix3x4-section,Transfo
 ==== *Class TransformationMatrix4x4*
 Subclass of <<DoubleList-section,DoubleList>>
 
+include::../requirements/Core/REQ_Core_TransformationMatrix4x4.adoc[]
+
 |====
 |*Class TransformationMatrix4x4*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1804,6 +1874,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<TransformationMatrix4x4-section,Transfo
 [[AbstractGenericAttribute-section]]
 ==== *Class AbstractGenericAttribute*
 Subclass of <<-section,>>
+
+include::../requirements/Core/REQ_Core_AbstractGenericAttribute.adoc[]
 
 |====
 |*Class AbstractGenericAttribute*
@@ -1890,6 +1962,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,Abstra
 ==== *Class ExternalReference*
 Subclass of <<-section,>>
 
+include::../requirements/Core/REQ_Core_ExternalReference.adoc[]
+
 |====
 |*Class ExternalReference*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1930,6 +2004,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class Occupancy*
 Subclass of <<-section,>>
 
+include::../requirements/Core/REQ_Core_Occupancy.adoc[]
+
 |====
 |*Class Occupancy*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1963,6 +2039,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class QualifiedArea*
 Subclass of <<-section,>>
 
+include::../requirements/Core/REQ_Core_QualifiedArea.adoc[]
+
 |====
 |*Class QualifiedArea*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -1990,6 +2068,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class QualifiedVolume*
 Subclass of <<-section,>>
 
+include::../requirements/Core/REQ_Core_QualifiedVolume.adoc[]
+
 |====
 |*Class QualifiedVolume*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -2016,6 +2096,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 [[RelativeToTerrain-section]]
 ==== *Class RelativeToTerrain*
 Subclass of <<-section,>>
+
+include::../requirements/Core/REQ_Core_RelativeToTerrain.adoc[]
 
 |====
 |*Class RelativeToTerrain*
@@ -2061,6 +2143,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 [[RelativeToWater-section]]
 ==== *Class RelativeToWater*
 Subclass of <<-section,>>
+
+include::../requirements/Core/REQ_Core_RelativeToWater.adoc[]
 
 |====
 |*Class RelativeToWater*
@@ -2113,6 +2197,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 ==== *Class SpaceType*
 Subclass of <<-section,>>
 
+include::../requirements/Core/REQ_Core_SpaceType.adoc[]
+
 |====
 |*Class SpaceType*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -2145,6 +2231,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 [[XALAddressDetails-section]]
 ==== *Class XALAddressDetails*
 Subclass of <<-section,>>
+
+include::../requirements/Core/REQ_Core_XALAddressDetails.adoc[]
 
 |====
 |*Class XALAddressDetails*

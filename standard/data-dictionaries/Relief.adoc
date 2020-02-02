@@ -9,6 +9,8 @@ Parent Package:{nbsp}CityGML
 ==== *Class AbstractReliefComponent*
 Subclass of <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>>
 
+include::../requirements/Relief/REQ_Relief_AbstractReliefComponent.adoc[]
+
 |====
 |*Class AbstractReliefComponent*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -86,6 +88,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class BreaklineRelief*
 Subclass of <<AbstractReliefComponent-section,AbstractReliefComponent>>
 
+include::../requirements/Relief/REQ_Relief_BreaklineRelief.adoc[]
+
 |====
 |*Class BreaklineRelief*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -121,6 +125,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>> +
 [[MassPointRelief-section]]
 ==== *Class MassPointRelief*
 Subclass of <<AbstractReliefComponent-section,AbstractReliefComponent>>
+
+include::../requirements/Relief/REQ_Relief_MassPointRelief.adoc[]
 
 |====
 |*Class MassPointRelief*
@@ -158,6 +164,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractReliefComponent-section,Abstrac
 ==== *Class RasterRelief*
 Subclass of <<AbstractReliefComponent-section,AbstractReliefComponent>>
 
+include::../requirements/Relief/REQ_Relief_RasterRelief.adoc[]
+
 |====
 |*Class RasterRelief*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -186,6 +194,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<CV_DiscreteGridPointCoverage-section,CV
 [[ReliefFeature-section]]
 ==== *Class ReliefFeature*
 Subclass of <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>>
+
+include::../requirements/Relief/REQ_Relief_ReliefFeature.adoc[]
 
 |====
 |*Class ReliefFeature*
@@ -221,6 +231,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 [[TINRelief-section]]
 ==== *Class TINRelief*
 Subclass of <<AbstractReliefComponent-section,AbstractReliefComponent>>
+
+include::../requirements/Relief/REQ_Relief_TINRelief.adoc[]
 
 |====
 |*Class TINRelief*

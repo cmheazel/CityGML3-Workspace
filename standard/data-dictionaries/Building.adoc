@@ -9,6 +9,8 @@ Parent Package:{nbsp}CityGML
 ==== *Class AbstractBuilding*
 Subclass of <<AbstractConstruction-section,AbstractConstruction>>
 
+include::../requirements/Building/REQ_Building_AbstractBuilding.adoc[]
+
 |====
 |*Class AbstractBuilding*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -135,6 +137,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class AbstractBuildingSubdivision*
 Subclass of <<AbstractLogicalSpace-section,AbstractLogicalSpace>>
 
+include::../requirements/Building/REQ_Building_AbstractBuildingSubdivision.adoc[]
+
 |====
 |*Class AbstractBuildingSubdivision*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -236,6 +240,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class Building*
 Subclass of <<AbstractBuilding-section,AbstractBuilding>>
 
+include::../requirements/Building/REQ_Building_Building.adoc[]
+
 |====
 |*Class Building*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -265,6 +271,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingPart-section,BuildingPart>> +
 ==== *Class BuildingClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Building/REQ_Building_BuildingClassValue.adoc[]
+
 |====
 |*Class BuildingClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -279,6 +287,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[BuildingConstructiveElement-section]]
 ==== *Class BuildingConstructiveElement*
 Subclass of <<AbstractConstructiveElement-section,AbstractConstructiveElement>>
+
+include::../requirements/Building/REQ_Building_BuildingConstructiveElement.adoc[]
 
 |====
 |*Class BuildingConstructiveElement*
@@ -334,6 +344,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class BuildingConstructiveElementClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Building/REQ_Building_BuildingConstructiveElementClassValue.adoc[]
+
 |====
 |*Class BuildingConstructiveElementClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -348,6 +360,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[BuildingConstructiveElementFunctionValue-section]]
 ==== *Class BuildingConstructiveElementFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Building/REQ_Building_BuildingConstructiveElementFunctionValue.adoc[]
 
 |====
 |*Class BuildingConstructiveElementFunctionValue*
@@ -364,6 +378,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class BuildingConstructiveElementUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Building/REQ_Building_BuildingConstructiveElementUsageValue.adoc[]
+
 |====
 |*Class BuildingConstructiveElementUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -379,6 +395,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class BuildingFunctionValue*
 Subclass of <<-section,>>
 
+include::../requirements/Building/REQ_Building_BuildingFunctionValue.adoc[]
+
 |====
 |*Class BuildingFunctionValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -393,6 +411,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[BuildingFurniture-section]]
 ==== *Class BuildingFurniture*
 Subclass of <<AbstractFurniture-section,AbstractFurniture>>
+
+include::../requirements/Building/REQ_Building_BuildingFurniture.adoc[]
 
 |====
 |*Class BuildingFurniture*
@@ -455,6 +475,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class BuildingFurnitureClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Building/REQ_Building_BuildingFurnitureClassValue.adoc[]
+
 |====
 |*Class BuildingFurnitureClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -469,6 +491,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[BuildingFurnitureFunctionValue-section]]
 ==== *Class BuildingFurnitureFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Building/REQ_Building_BuildingFurnitureFunctionValue.adoc[]
 
 |====
 |*Class BuildingFurnitureFunctionValue*
@@ -485,6 +509,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class BuildingFurnitureUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Building/REQ_Building_BuildingFurnitureUsageValue.adoc[]
+
 |====
 |*Class BuildingFurnitureUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -499,6 +525,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[BuildingInstallation-section]]
 ==== *Class BuildingInstallation*
 Subclass of <<AbstractInstallation-section,AbstractInstallation>>
+
+include::../requirements/Building/REQ_Building_BuildingInstallation.adoc[]
 
 |====
 |*Class BuildingInstallation*
@@ -561,6 +589,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class BuildingInstallationClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Building/REQ_Building_BuildingInstallationClassValue.adoc[]
+
 |====
 |*Class BuildingInstallationClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -575,6 +605,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[BuildingInstallationFunctionValue-section]]
 ==== *Class BuildingInstallationFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Building/REQ_Building_BuildingInstallationFunctionValue.adoc[]
 
 |====
 |*Class BuildingInstallationFunctionValue*
@@ -591,6 +623,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class BuildingInstallationUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Building/REQ_Building_BuildingInstallationUsageValue.adoc[]
+
 |====
 |*Class BuildingInstallationUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -605,6 +639,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[BuildingPart-section]]
 ==== *Class BuildingPart*
 Subclass of <<AbstractBuilding-section,AbstractBuilding>>
+
+include::../requirements/Building/REQ_Building_BuildingPart.adoc[]
 
 |====
 |*Class BuildingPart*
@@ -634,6 +670,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingPart-section,BuildingPart>> +
 [[BuildingRoom-section]]
 ==== *Class BuildingRoom*
 Subclass of <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>>
+
+include::../requirements/Building/REQ_Building_BuildingRoom.adoc[]
 
 |====
 |*Class BuildingRoom*
@@ -716,6 +754,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class BuildingRoomClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/Building/REQ_Building_BuildingRoomClassValue.adoc[]
+
 |====
 |*Class BuildingRoomClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -730,6 +770,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[BuildingRoomFunctionValue-section]]
 ==== *Class BuildingRoomFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Building/REQ_Building_BuildingRoomFunctionValue.adoc[]
 
 |====
 |*Class BuildingRoomFunctionValue*
@@ -746,6 +788,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class BuildingRoomUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Building/REQ_Building_BuildingRoomUsageValue.adoc[]
+
 |====
 |*Class BuildingRoomUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -760,6 +804,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[BuildingSubdivisionClassValue-section]]
 ==== *Class BuildingSubdivisionClassValue*
 Subclass of <<-section,>>
+
+include::../requirements/Building/REQ_Building_BuildingSubdivisionClassValue.adoc[]
 
 |====
 |*Class BuildingSubdivisionClassValue*
@@ -776,6 +822,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class BuildingSubdivisionFunctionValue*
 Subclass of <<-section,>>
 
+include::../requirements/Building/REQ_Building_BuildingSubdivisionFunctionValue.adoc[]
+
 |====
 |*Class BuildingSubdivisionFunctionValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -791,6 +839,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class BuildingSubdivisionUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Building/REQ_Building_BuildingSubdivisionUsageValue.adoc[]
+
 |====
 |*Class BuildingSubdivisionUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -805,6 +855,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[BuildingUnit-section]]
 ==== *Class BuildingUnit*
 Subclass of <<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>>
+
+include::../requirements/Building/REQ_Building_BuildingUnit.adoc[]
 
 |====
 |*Class BuildingUnit*
@@ -842,6 +894,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<BuildingUnit-section,BuildingUnit>> +
 ==== *Class BuildingUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/Building/REQ_Building_BuildingUsageValue.adoc[]
+
 |====
 |*Class BuildingUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -856,6 +910,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[RoofTypeValue-section]]
 ==== *Class RoofTypeValue*
 Subclass of <<-section,>>
+
+include::../requirements/Building/REQ_Building_RoofTypeValue.adoc[]
 
 |====
 |*Class RoofTypeValue*
@@ -872,6 +928,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class RoomElevationReferenceValue*
 Subclass of <<-section,>>
 
+include::../requirements/Building/REQ_Building_RoomElevationReferenceValue.adoc[]
+
 |====
 |*Class RoomElevationReferenceValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -886,6 +944,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[Storey-section]]
 ==== *Class Storey*
 Subclass of <<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>>
+
+include::../requirements/Building/REQ_Building_Storey.adoc[]
 
 |====
 |*Class Storey*
@@ -923,6 +983,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,Abstrac
 ==== *Class RoomHeight*
 Subclass of <<-section,>>
 
+include::../requirements/Building/REQ_Building_RoomHeight.adoc[]
+
 |====
 |*Class RoomHeight*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -958,5 +1020,6 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 |
 |==== 
   
+
 
 

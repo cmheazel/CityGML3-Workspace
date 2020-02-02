@@ -9,6 +9,8 @@ Parent Package:{nbsp}CityGML
 ==== *Class AbstractSurfaceData*
 Subclass of <<-section,>>
 
+include::../requirements/Appearance/REQ_Appearance_AbstractSurfaceData.adoc[]
+
 |====
 |*Class AbstractSurfaceData*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -50,6 +52,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 [[AbstractTexture-section]]
 ==== *Class AbstractTexture*
 Subclass of <<AbstractSurfaceData-section,AbstractSurfaceData>>
+
+include::../requirements/Appearance/REQ_Appearance_AbstractTexture.adoc[]
 
 |====
 |*Class AbstractTexture*
@@ -117,6 +121,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class Appearance*
 Subclass of <<AbstractAppearance-section,AbstractAppearance>>
 
+include::../requirements/Appearance/REQ_Appearance_Appearance.adoc[]
+
 |====
 |*Class Appearance*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -152,6 +158,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class Color*
 Subclass of <<DoubleBetween0and1List-section,DoubleBetween0and1List>>
 
+include::../requirements/Appearance/REQ_Appearance_Color.adoc[]
+
 |====
 |*Class Color*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -181,6 +189,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<Color-section,Color>> +
 ==== *Class ColorPlusOpacity*
 Subclass of <<DoubleBetween0and1List-section,DoubleBetween0and1List>>
 
+include::../requirements/Appearance/REQ_Appearance_ColorPlusOpacity.adoc[]
+
 |====
 |*Class ColorPlusOpacity*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -209,6 +219,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<ColorPlusOpacity-section,ColorPlusOpaci
 [[GeoreferencedTexture-section]]
 ==== *Class GeoreferencedTexture*
 Subclass of <<AbstractTexture-section,AbstractTexture>>
+
+include::../requirements/Appearance/REQ_Appearance_GeoreferencedTexture.adoc[]
 
 |====
 |*Class GeoreferencedTexture*
@@ -257,6 +269,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class ParameterizedTexture*
 Subclass of <<AbstractTexture-section,AbstractTexture>>
 
+include::../requirements/Appearance/REQ_Appearance_ParameterizedTexture.adoc[]
+
 |====
 |*Class ParameterizedTexture*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -286,6 +300,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractTextureParameterization-section
 ==== *Class TextureAssociation*
 Subclass of <<-section,>>
 
+include::../requirements/Appearance/REQ_Appearance_TextureAssociation.adoc[]
+
 |====
 |*Class TextureAssociation*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -306,6 +322,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 [[X3DMaterial-section]]
 ==== *Class X3DMaterial*
 Subclass of <<AbstractSurfaceData-section,AbstractSurfaceData>>
+
+include::../requirements/Appearance/REQ_Appearance_X3DMaterial.adoc[]
 
 |====
 |*Class X3DMaterial*
@@ -377,6 +395,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class AbstractTextureParameterization*
 Subclass of <<-section,>>
 
+include::../requirements/Appearance/REQ_Appearance_AbstractTextureParameterization.adoc[]
+
 |====
 |*Class AbstractTextureParameterization*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -413,6 +433,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractTextureParameterization-section
 ==== *Class TexCoordGen*
 Subclass of <<AbstractTextureParameterization-section,AbstractTextureParameterization>>
 
+include::../requirements/Appearance/REQ_Appearance_TexCoordGen.adoc[]
+
 |====
 |*Class TexCoordGen*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -448,6 +470,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class TexCoordList*
 Subclass of <<AbstractTextureParameterization-section,AbstractTextureParameterization>>
 
+include::../requirements/Appearance/REQ_Appearance_TexCoordList.adoc[]
+
 |====
 |*Class TexCoordList*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -482,6 +506,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class TextureType*
 Subclass of <<-section,>>
 
+include::../requirements/Appearance/REQ_Appearance_TextureType.adoc[]
+
 |====
 |*Class TextureType*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -514,6 +540,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 [[WrapMode-section]]
 ==== *Class WrapMode*
 Subclass of <<-section,>>
+
+include::../requirements/Appearance/REQ_Appearance_WrapMode.adoc[]
 
 |====
 |*Class WrapMode*
@@ -556,6 +584,5 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 |
 |==== 
   
-
 
 

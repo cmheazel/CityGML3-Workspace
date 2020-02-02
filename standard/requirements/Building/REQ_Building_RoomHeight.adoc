@@ -1,0 +1,9 @@
+[[req_Building_RoomHeight]]
+[width="90%",cols="2,6"]
+|===
+^|*Requirement  {counter:req-id}* |*/req/Building/RoomHeight* 
+^|A |Any use of the RoomHeight type in the Implementation Specification SHALL have the same definition as the RoomHeight UML class as documented in the RoomHeight section of the <<RoomHeight-section,Building Data Dictionary>>.
+^|B |The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the RoomHeight UML class as documented in the RoomHeight section of the <<RoomHeight-section,Building Data Dictionary>>.
+^|C |The implementation Specification SHALL represent the attributes of the RoomHeight UML class; including the name, definition, type, and cardinality of those documented in the RoomHeight section of the <<RoomHeight-section,Building Data Dictionary>>.
+^|D |The implementation Specification SHALL represent the attributes of all parent classes of the the RoomHeight UML class; including the name, definition, type, and cardinality of those documented in the RoomHeight section of the <<RoomHeight-section,Building Data Dictionary>>.
+|===

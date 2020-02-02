@@ -9,6 +9,8 @@ Parent Package:{nbsp}CityGML
 ==== *Class AbstractWaterBoundarySurface*
 Subclass of <<AbstractThematicSurface-section,AbstractThematicSurface>>
 
+include::../requirements/WaterBody/REQ_WaterBody_AbstractWaterBoundarySurface.adoc[]
+
 |====
 |*Class AbstractWaterBoundarySurface*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -51,6 +53,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractWaterBoundarySurface-section,Ab
 [[WaterBody-section]]
 ==== *Class WaterBody*
 Subclass of <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>>
+
+include::../requirements/WaterBody/REQ_WaterBody_WaterBody.adoc[]
 
 |====
 |*Class WaterBody*
@@ -99,6 +103,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class WaterBodyClassValue*
 Subclass of <<-section,>>
 
+include::../requirements/WaterBody/REQ_WaterBody_WaterBodyClassValue.adoc[]
+
 |====
 |*Class WaterBodyClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -113,6 +119,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[WaterBodyFunctionValue-section]]
 ==== *Class WaterBodyFunctionValue*
 Subclass of <<-section,>>
+
+include::../requirements/WaterBody/REQ_WaterBody_WaterBodyFunctionValue.adoc[]
 
 |====
 |*Class WaterBodyFunctionValue*
@@ -129,6 +137,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 ==== *Class WaterBodyUsageValue*
 Subclass of <<-section,>>
 
+include::../requirements/WaterBody/REQ_WaterBody_WaterBodyUsageValue.adoc[]
+
 |====
 |*Class WaterBodyUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -143,6 +153,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[WaterGroundSurface-section]]
 ==== *Class WaterGroundSurface*
 Subclass of <<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>>
+
+include::../requirements/WaterBody/REQ_WaterBody_WaterGroundSurface.adoc[]
 
 |====
 |*Class WaterGroundSurface*
@@ -166,6 +178,8 @@ Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractWaterBoundarySurface-section,Ab
 ==== *Class WaterLevelValue*
 Subclass of <<-section,>>
 
+include::../requirements/WaterBody/REQ_WaterBody_WaterLevelValue.adoc[]
+
 |====
 |*Class WaterLevelValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -180,6 +194,8 @@ StereoType:{nbsp}{nbsp} «CodeList»
 [[WaterSurface-section]]
 ==== *Class WaterSurface*
 Subclass of <<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>>
+
+include::../requirements/WaterBody/REQ_WaterBody_WaterSurface.adoc[]
 
 |====
 |*Class WaterSurface*

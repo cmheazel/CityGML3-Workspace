@@ -9,6 +9,8 @@ Parent Package:{nbsp}CityGML
 ==== *Class Version*
 Subclass of <<AbstractVersion-section,AbstractVersion>>
 
+include::../requirements/Versioning/REQ_Versioning_Version.adoc[]
+
 |====
 |*Class Version*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -57,6 +59,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 [[VersionTransition-section]]
 ==== *Class VersionTransition*
 Subclass of <<AbstractVersionTransition-section,AbstractVersionTransition>>
+
+include::../requirements/Versioning/REQ_Versioning_VersionTransition.adoc[]
 
 |====
 |*Class VersionTransition*
@@ -119,6 +123,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class Transaction*
 Subclass of <<-section,>>
 
+include::../requirements/Versioning/REQ_Versioning_Transaction.adoc[]
+
 |====
 |*Class Transaction*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -161,6 +167,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Prope
 ==== *Class TransactionValue*
 Subclass of <<-section,>>
 
+include::../requirements/Versioning/REQ_Versioning_TransactionValue.adoc[]
+
 |====
 |*Class TransactionValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
@@ -193,6 +201,8 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 [[TransitionValue-section]]
 ==== *Class TransitionValue*
 Subclass of <<-section,>>
+
+include::../requirements/Versioning/REQ_Versioning_TransitionValue.adoc[]
 
 |====
 |*Class TransitionValue*
@@ -235,6 +245,5 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 |
 |==== 
   
-
 
 
