@@ -3,23 +3,14 @@
 
 include::requirements/requirements_class_generics.adoc[]
 
-TBD
+NOTE: Content to be provided by TBD
 
-The UML diagram of the Generics Model is depicted in <<generics-uml,Generics UML Diagram>>. The Data Dictionary for the Generics Package is provided in section <<Generics-dd,Generics Data Dictionary>>.
+The UML diagram of the Generics Model is depicted in <<generics-uml,Generics UML Diagram>>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_generics_section[here].
 
 [[generics-uml]]
 .UML diagram of the Generics Model.
 
 image::../figures/Generics.png[]
-
-The <<generics-uml>> is color coded as follows:
-
-[cols="2,6"]
-|====
-|Yellow |indicates
-|Blue |indicates
-|Pink |indicates
-|====
 
 include::data-dictionaries/Generics.adoc[]
 
@@ -27,5 +18,4 @@ include::data-dictionaries/Generics.adoc[]
 
 The following sections provide additional information which may not be readily available through the UML Model.
 
-A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_generics_section[here].
 

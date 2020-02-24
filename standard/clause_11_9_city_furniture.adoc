@@ -1,24 +1,16 @@
 [[rc_City-Furniture_section]]
 === City Furniture Model
-TBD
+
+NOTE: Content to be provided by TBD
 
 include::requirements/requirements_class_cityfurniture.adoc[]
 
-The UML diagram of the City Furniture model is depicted in the <<cityfurniture-uml,City Furniture UML Diagram>>. The Data Dictionary for the City Furniture Package is provided in section <<CityFuniture-dd,City Furniture Data Dictionary>>.
+The UML diagram of the City Furniture model is depicted in the <<cityfurniture-uml,City Furniture UML Diagram>>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_city-furniture_section[here].
 
 [[cityfurniture-uml]]
 .UML diagram of CityGML’s city furniture model.
 
 image::../figures/CityFurniture.png[]
-
-The <<cityfurniture-uml>> is color coded as follows:
-
-[cols="2,6"]
-|====
-|Yellow |indicates
-|Blue |indicates
-|Pink |indicates
-|====
 
 include::data-dictionaries/CityFurniture.adoc[]
 
@@ -26,5 +18,4 @@ include::data-dictionaries/CityFurniture.adoc[]
 
 The following sections provide additional information which may not be readily available through the UML Model.
 
-A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_city-furniture_section[here].
 

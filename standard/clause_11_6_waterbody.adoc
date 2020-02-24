@@ -3,23 +3,14 @@
 
 include::requirements/requirements_class_waterbody.adoc[]
 
-TBD
+NOTE: Content to be provided by TBD
 
-The UML diagram of the Water Body Model is depicted in <<waterbody-uml,Water Body UML Diagram>>. The Data Dictionary for the Water Body Package is provided in section <<WaterBody-dd,Water Body Data Dictionary>>.
+The UML diagram of the Water Body Model is depicted in <<waterbody-uml,Water Body UML Diagram>>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_waterbody_section[here].
 
 [[waterbody-uml]]
 .UML diagram of the Water Body Model.
 
 image::../figures/WaterBody.png[]
-
-The <<waterbody-uml>> is color coded as follows:
-
-[cols="2,6"]
-|====
-|Yellow |indicates
-|Blue |indicates
-|Pink |indicates
-|====
 
 include::data-dictionaries/WaterBody.adoc[]
 
@@ -27,5 +18,4 @@ include::data-dictionaries/WaterBody.adoc[]
 
 The following sections provide additional information which may not be readily available through the UML Model.
 
-A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_waterbody_section[here].
 

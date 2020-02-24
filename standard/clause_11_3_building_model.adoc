@@ -1,34 +1,22 @@
 [[rc_building-model_section]]
 === Building Model
 
-
 include::requirements/requirements_class_building.adoc[]
 
 The building model is one of the most detailed thematic concepts of CityGML. It allows for the representation of thematic and spatial aspects of buildings and building parts in five levels of detail, LOD0 to LOD4. The building model of CityGML is defined by the thematic extension module Building (cf. chapter 7). Fig. 26 provides examples of 3D city and building models in LOD1 – 4.
 
-The UML diagram of the building model is depicted in <<building-uml,Building UML Diagram>>. The Data Dictionary for the Building Model Package is provided in section <<Bridge-dd,Building Model Data Dictionary>>.
+The UML diagram of the building model is depicted in <<building-uml,Building UML Diagram>>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_building-model_section[here].
 
 [[building-uml]]
 .UML diagram of CityGML’s building model.
 
 image::../figures/building.png[]
 
-The <<building-uml>> is color coded as follows:
-
-[cols="2,6"]
-|====
-|Yellow |indicates
-|Blue |indicates
-|Pink |indicates
-|====
-
 include::data-dictionaries/Building.adoc[]
 
 ==== Additional Information
 
 The following sections provide additional information which may not be readily available through the UML Model.
-
-A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_building-model_section[here].
 
 NOTE: The following content is from the previous draft. Is this sort of content useful?
 
