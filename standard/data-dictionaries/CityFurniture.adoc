@@ -1,0 +1,90 @@
+[[CityFurniture-package]]
+==== *CityFurniture Package*
+
+|====
+|*Package CityFurniture*
+|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} +
+Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
+Parent Package: {nbsp}{nbsp}CityGML
+|====
+
+[[CityFurniture-section]]
+==== *Class CityFurniture*
+
+include::../requirements/CityFurniture/REQ_CityFurniture_CityFurniture.adoc[]
+
+|====
+|*Class CityFurniture*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
+StereoType:{nbsp}{nbsp} «TopLevelFeatureType»
+|*Roles* 
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CityFurnitureClassValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Classification of CityFurniture as given by the relevant national regulations, information communities, or specific applications. [SIG3D]  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CityFurnitureFunctionValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specified function of CityFurniture as given by the relevant national regulations, information communities, or specific applications. [SIG3D]  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CityFurnitureUsageValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Actual usage of CityFurniture as given by the relevant national regulations, information communities, or specific applications. [SIG3D]  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[CityFurnitureClassValue-section]]
+==== *Class CityFurnitureClassValue*
+
+include::../requirements/CityFurniture/REQ_CityFurniture_CityFurnitureClassValue.adoc[]
+
+|====
+|*Class CityFurnitureClassValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[CityFurnitureFunctionValue-section]]
+==== *Class CityFurnitureFunctionValue*
+
+include::../requirements/CityFurniture/REQ_CityFurniture_CityFurnitureFunctionValue.adoc[]
+
+|====
+|*Class CityFurnitureFunctionValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[CityFurnitureUsageValue-section]]
+==== *Class CityFurnitureUsageValue*
+
+include::../requirements/CityFurniture/REQ_CityFurniture_CityFurnitureUsageValue.adoc[]
+
+|====
+|*Class CityFurnitureUsageValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+  
+
+

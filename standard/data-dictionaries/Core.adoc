@@ -1,0 +1,1083 @@
+[[Core-package]]
+==== *Core Package*
+
+|====
+|*Package Core*
+|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} +
+Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
+Parent Package: {nbsp}{nbsp}CityGML
+|====
+
+[[AbstractAppearance-section]]
+==== *Class AbstractAppearance*
+
+include::../requirements/Core/REQ_Core_AbstractAppearance.adoc[]
+
+|====
+|*Class AbstractAppearance*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[AbstractCityObject-section]]
+==== *Class AbstractCityObject*
+
+include::../requirements/Core/REQ_Core_AbstractCityObject.adoc[]
+
+|====
+|*Class AbstractCityObject*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} appearance +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp} <<AbstractAppearance-section,AbstractAppearance>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} externalReference +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp} <<ExternalReference-section,ExternalReference>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} dynamizer +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp} <<AbstractDynamizer-section,AbstractDynamizer>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} generalizesTo +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} genericAttribute +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} relatedTo +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}relativeToTerrain +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RelativeToTerrain +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Vertical position of the AbstractCityObject relative to the surrounding terrain.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}relativeToWater +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RelativeToWater +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Vertical position of the AbstractCityObject relative to a surrounding water surface.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[AbstractDynamizer-section]]
+==== *Class AbstractDynamizer*
+
+include::../requirements/Core/REQ_Core_AbstractDynamizer.adoc[]
+
+|====
+|*Class AbstractDynamizer*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[AbstractFeatureWithLifespan-section]]
+==== *Class AbstractFeatureWithLifespan*
+
+include::../requirements/Core/REQ_Core_AbstractFeatureWithLifespan.adoc[]
+
+|====
+|*Class AbstractFeatureWithLifespan*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AnyFeature-section,AnyFeature>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}creationDate +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DateTime +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}terminationDate +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DateTime +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}validFrom +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DateTime +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}validTo +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DateTime +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[AbstractLogicalSpace-section]]
+==== *Class AbstractLogicalSpace*
+
+include::../requirements/Core/REQ_Core_AbstractLogicalSpace.adoc[]
+
+|====
+|*Class AbstractLogicalSpace*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractSpace-section,AbstractSpace>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[AbstractOccupiedSpace-section]]
+==== *Class AbstractOccupiedSpace*
+
+include::../requirements/Core/REQ_Core_AbstractOccupiedSpace.adoc[]
+
+|====
+|*Class AbstractOccupiedSpace*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractPhysicalSpace-section,AbstractPhysicalSpace>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod2ImplicitRepresentation +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<ImplicitGeometry-section,ImplicitGeometry>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to LOD2 implicit geometry of AbstractOccupiedSpace. +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod1ImplicitRepresentation +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<ImplicitGeometry-section,ImplicitGeometry>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to LOD1 implicit geometry of AbstractOccupiedSpace. +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod3ImplicitRepresentation +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<ImplicitGeometry-section,ImplicitGeometry>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to LOD3 implicit geometry of AbstractOccupiedSpace. +
+|*Attributes*
+|
+|==== 
+
+[[AbstractPhysicalSpace-section]]
+==== *Class AbstractPhysicalSpace*
+
+include::../requirements/Core/REQ_Core_AbstractPhysicalSpace.adoc[]
+
+|====
+|*Class AbstractPhysicalSpace*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractSpace-section,AbstractSpace>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} pointCloud +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<AbstractPointCloud-section,AbstractPointCloud>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod3TerrainIntersectionCurve +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG 3D: Relation to intersection curve(s) between an LOD3 AbstractPhysicalSpace and a terrain (LOD1 or LOD2 or LOD3).  +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod2TerrainIntersectionCurve +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG 3D: Relation to intersection curve(s) between an LOD2 AbstractPhysicalSpace and a terrain (LOD1 or LOD2 or LOD3).  +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod1TerrainIntersectionCurve +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG 3D: Relation to intersection curve(s) between an LOD1 AbstractPhysicalSpace and a terrain (LOD1 or LOD2 or LOD3).  +
+|*Attributes*
+|
+|==== 
+
+[[AbstractPointCloud-section]]
+==== *Class AbstractPointCloud*
+
+include::../requirements/Core/REQ_Core_AbstractPointCloud.adoc[]
+
+|====
+|*Class AbstractPointCloud*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[AbstractSpace-section]]
+==== *Class AbstractSpace*
+
+include::../requirements/Core/REQ_Core_AbstractSpace.adoc[]
+
+|====
+|*Class AbstractSpace*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod3MultiCurve +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD3 curve geometry of AbstractSpace. +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod2MultiSurface +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD2 surface geometry of AbstractSpace. +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod3Solid +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_Solid-section,GM_Solid>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD3 solid geometry of AbstractSpace. +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod2Solid +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_Solid-section,GM_Solid>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD2 solid geometry of AbstractSpace. +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod1Solid +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_Solid-section,GM_Solid>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD1 solid geometry of AbstractSpace. +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod0Point +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_Point-section,GM_Point>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD0 point geometry of AbstractSpace. +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp} <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod0MultiSurface +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD0 surface geometry of AbstractSpace. +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod2MultiCurve +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD2 curve geometry of AbstractSpace. +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod3MultiSurface +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD3 surface geometry of AbstractSpace. +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod0MultiCurve +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD0 curve geometry of AbstractSpace. +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}area +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} QualifiedArea +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}spaceType +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SpaceType +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Degree of openness of an abstract space.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}volume +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} QualifiedVolume +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[AbstractSpaceBoundary-section]]
+==== *Class AbstractSpaceBoundary*
+
+include::../requirements/Core/REQ_Core_AbstractSpaceBoundary.adoc[]
+
+|====
+|*Class AbstractSpaceBoundary*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[AbstractThematicSurface-section]]
+==== *Class AbstractThematicSurface*
+
+include::../requirements/Core/REQ_Core_AbstractThematicSurface.adoc[]
+
+|====
+|*Class AbstractThematicSurface*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod1MultiSurface +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD1 surface geometry of AbstractThematicSurface. +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod0MultiSurface +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD0 surface geometry of AbstractThematicSurface. +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod2MultiSurface +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD2 surface geometry of AbstractThematicSurface. +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod3MultiSurface +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD3 surface geometry of AbstractThematicSurface. +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod0MultiCurve +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD0 curve geometry of AbstractThematicSurface. +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} pointCloud +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<AbstractPointCloud-section,AbstractPointCloud>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}area +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} QualifiedArea +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[AbstractUnoccupiedSpace-section]]
+==== *Class AbstractUnoccupiedSpace*
+
+include::../requirements/Core/REQ_Core_AbstractUnoccupiedSpace.adoc[]
+
+|====
+|*Class AbstractUnoccupiedSpace*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractPhysicalSpace-section,AbstractPhysicalSpace>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[AbstractVersion-section]]
+==== *Class AbstractVersion*
+
+include::../requirements/Core/REQ_Core_AbstractVersion.adoc[]
+
+|====
+|*Class AbstractVersion*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[AbstractVersionTransition-section]]
+==== *Class AbstractVersionTransition*
+
+include::../requirements/Core/REQ_Core_AbstractVersionTransition.adoc[]
+
+|====
+|*Class AbstractVersionTransition*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[Address-section]]
+==== *Class Address*
+
+include::../requirements/Core/REQ_Core_Address.adoc[]
+
+|====
+|*Class Address*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} xalAddress +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<XALAddressDetails-section,XALAddressDetails>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Relation to an OASIS address object. +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} multiPoint +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiPoint-section,GM_MultiPoint>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Spatial reference of the address, e. g. positions of building entrances. +
+|*Attributes*
+|
+|==== 
+
+[[CityModel-section]]
+==== *Class CityModel*
+
+include::../requirements/Core/REQ_Core_CityModel.adoc[]
+
+|====
+|*Class CityModel*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} cityObjectMember +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Relation of CityModel to AbstractTopLevelCityObject. +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} versionMember +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..* +
+Target Class: {nbsp}{nbsp}{nbsp} <<AbstractVersion-section,AbstractVersion>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} versionTransitionMember +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..* +
+Target Class: {nbsp}{nbsp}{nbsp} <<AbstractVersionTransition-section,AbstractVersionTransition>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} appearanceMember +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp} <<AbstractAppearance-section,AbstractAppearance>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} featureMember +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp} <<AnyFeature-section,AnyFeature>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}engineeringCRS +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} EngineeringCRS +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[CityObjectRelation-section]]
+==== *Class CityObjectRelation*
+
+include::../requirements/Core/REQ_Core_CityObjectRelation.adoc[]
+
+|====
+|*Class CityObjectRelation*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} 
+|*Roles* 
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} genericAttribute +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}relationType +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RelationTypeValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[ClosureSurface-section]]
+==== *Class ClosureSurface*
+
+include::../requirements/Core/REQ_Core_ClosureSurface.adoc[]
+
+|====
+|*Class ClosureSurface*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[DoubleBetween0and1-section]]
+==== *Class DoubleBetween0and1*
+
+include::../requirements/Core/REQ_Core_DoubleBetween0and1.adoc[]
+
+|====
+|*Class DoubleBetween0and1*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «BasicType»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[DoubleBetween0and1List-section]]
+==== *Class DoubleBetween0and1List*
+
+include::../requirements/Core/REQ_Core_DoubleBetween0and1List.adoc[]
+
+|====
+|*Class DoubleBetween0and1List*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «BasicType»
+|*Roles* 
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}list +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DoubleBetween0and1 +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|
+|==== 
+
+[[DoubleList-section]]
+==== *Class DoubleList*
+
+include::../requirements/Core/REQ_Core_DoubleList.adoc[]
+
+|====
+|*Class DoubleList*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «BasicType»
+|*Roles* 
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}list +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Real +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|
+|==== 
+
+[[ImplicitGeometry-section]]
+==== *Class ImplicitGeometry*
+
+include::../requirements/Core/REQ_Core_ImplicitGeometry.adoc[]
+
+|====
+|*Class ImplicitGeometry*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «ObjectType»
+|*Roles* 
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} appearance +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp} <<AbstractAppearance-section,AbstractAppearance>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} relativeGMLGeometry +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_Object-section,GM_Object>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Geometry of the prototype, specified in a local coordinate system. +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} referencePoint +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_Point-section,GM_Point>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Base point of the object in the world coordinate system. +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}libraryObject +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} URI +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: External link to a prototype geometry.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}mimeType +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} MimeValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Mime type of the referenced external geometric object (attribute libraryObject).  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}transformationMatrix +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TransformationMatrix4x4 +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Mathematical transformation (translation, rotation and scaling) between the prototype geometry and the actual spatial position of the object.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[IntegerBetween0and3-section]]
+==== *Class IntegerBetween0and3*
+
+include::../requirements/Core/REQ_Core_IntegerBetween0and3.adoc[]
+
+|====
+|*Class IntegerBetween0and3*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «BasicType»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[IntervalValue-section]]
+==== *Class IntervalValue*
+
+include::../requirements/Core/REQ_Core_IntervalValue.adoc[]
+
+|====
+|*Class IntervalValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[MimeValue-section]]
+==== *Class MimeValue*
+
+include::../requirements/Core/REQ_Core_MimeValue.adoc[]
+
+|====
+|*Class MimeValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[OccupantTypeValue-section]]
+==== *Class OccupantTypeValue*
+
+include::../requirements/Core/REQ_Core_OccupantTypeValue.adoc[]
+
+|====
+|*Class OccupantTypeValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[OtherRelationTypeValue-section]]
+==== *Class OtherRelationTypeValue*
+
+include::../requirements/Core/REQ_Core_OtherRelationTypeValue.adoc[]
+
+|====
+|*Class OtherRelationTypeValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<RelationTypeValue-section,RelationTypeValue>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[QualifiedAreaValue-section]]
+==== *Class QualifiedAreaValue*
+
+include::../requirements/Core/REQ_Core_QualifiedAreaValue.adoc[]
+
+|====
+|*Class QualifiedAreaValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[QualifiedVolumeValue-section]]
+==== *Class QualifiedVolumeValue*
+
+include::../requirements/Core/REQ_Core_QualifiedVolumeValue.adoc[]
+
+|====
+|*Class QualifiedVolumeValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[RelationTypeValue-section]]
+==== *Class RelationTypeValue*
+
+include::../requirements/Core/REQ_Core_RelationTypeValue.adoc[]
+
+|====
+|*Class RelationTypeValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[TemporalRelationTypeValue-section]]
+==== *Class TemporalRelationTypeValue*
+
+include::../requirements/Core/REQ_Core_TemporalRelationTypeValue.adoc[]
+
+|====
+|*Class TemporalRelationTypeValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<RelationTypeValue-section,RelationTypeValue>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[TopologicRelationTypeValue-section]]
+==== *Class TopologicRelationTypeValue*
+
+include::../requirements/Core/REQ_Core_TopologicRelationTypeValue.adoc[]
+
+|====
+|*Class TopologicRelationTypeValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<RelationTypeValue-section,RelationTypeValue>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[TransformationMatrix2x2-section]]
+==== *Class TransformationMatrix2x2*
+
+include::../requirements/Core/REQ_Core_TransformationMatrix2x2.adoc[]
+
+|====
+|*Class TransformationMatrix2x2*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<DoubleList-section,DoubleList>> +
+StereoType:{nbsp}{nbsp} «BasicType»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[TransformationMatrix3x4-section]]
+==== *Class TransformationMatrix3x4*
+
+include::../requirements/Core/REQ_Core_TransformationMatrix3x4.adoc[]
+
+|====
+|*Class TransformationMatrix3x4*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<DoubleList-section,DoubleList>> +
+StereoType:{nbsp}{nbsp} «BasicType»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[TransformationMatrix4x4-section]]
+==== *Class TransformationMatrix4x4*
+
+include::../requirements/Core/REQ_Core_TransformationMatrix4x4.adoc[]
+
+|====
+|*Class TransformationMatrix4x4*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<DoubleList-section,DoubleList>> +
+StereoType:{nbsp}{nbsp} «BasicType»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[AbstractGenericAttribute-section]]
+==== *Class AbstractGenericAttribute*
+
+include::../requirements/Core/REQ_Core_AbstractGenericAttribute.adoc[]
+
+|====
+|*Class AbstractGenericAttribute*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «DataType»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[ExternalReference-section]]
+==== *Class ExternalReference*
+
+include::../requirements/Core/REQ_Core_ExternalReference.adoc[]
+
+|====
+|*Class ExternalReference*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «DataType»
+|*Roles* 
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}informationSystem +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} URI +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: URL or URN of the information system or data set.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}relationType +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} URI +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}targetResource +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} URI +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Referenced object in the external information system or data set.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[Occupancy-section]]
+==== *Class Occupancy*
+
+include::../requirements/Core/REQ_Core_Occupancy.adoc[]
+
+|====
+|*Class Occupancy*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «DataType»
+|*Roles* 
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}interval +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} IntervalValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}numberOfOccupants +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Integer +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}occupantType +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} OccupantTypeValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[QualifiedArea-section]]
+==== *Class QualifiedArea*
+
+include::../requirements/Core/REQ_Core_QualifiedArea.adoc[]
+
+|====
+|*Class QualifiedArea*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «DataType»
+|*Roles* 
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}area +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Area +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}typeOfArea +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} QualifiedAreaValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[QualifiedVolume-section]]
+==== *Class QualifiedVolume*
+
+include::../requirements/Core/REQ_Core_QualifiedVolume.adoc[]
+
+|====
+|*Class QualifiedVolume*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «DataType»
+|*Roles* 
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}typeOfVolume +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} QualifiedVolumeValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}volume +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Volume +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[RelativeToTerrain-section]]
+==== *Class RelativeToTerrain*
+
+include::../requirements/Core/REQ_Core_RelativeToTerrain.adoc[]
+
+|====
+|*Class RelativeToTerrain*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} 
+|*Roles* 
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}entirelyAboveTerrain +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Object is located entirely above terrain.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}substantiallyAboveTerrain +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Most, but not all parts of the object are located above terrain.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}substantiallyAboveAndBelowTerrain +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Parts of the object are located above terrain, and other parts below terrain.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}substantiallyBelowTerrain +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Most, but not all parts of the object are located below terrain.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}entirelyBelowTerrain +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: All parts of the object are located below terrain.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|
+|==== 
+
+[[RelativeToWater-section]]
+==== *Class RelativeToWater*
+
+include::../requirements/Core/REQ_Core_RelativeToWater.adoc[]
+
+|====
+|*Class RelativeToWater*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} 
+|*Roles* 
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}entirelyAboveWaterSurface +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Object is located entirely above water surface.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}substantiallyAboveWaterSurface +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Most, but not all parts of the object are located above water surface.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}substantiallyAboveAndBelowWaterSurface +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Parts of the object are located above water surface, and other parts below water surface.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}substantiallyBelowWaterSurface +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Most, but not all parts of the object are located below water surface.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}entirelyBelowWaterSurface +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: All parts of the object are located below water surface.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}temporarilyAboveAndBelowWaterSurface +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: The height of the water surface is varying and the object temporily is located above or below water level.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|
+|==== 
+
+[[SpaceType-section]]
+==== *Class SpaceType*
+
+include::../requirements/Core/REQ_Core_SpaceType.adoc[]
+
+|====
+|*Class SpaceType*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} 
+|*Roles* 
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}closed +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundaries at all sides  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}open +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary at the bottom only  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}semiOpen +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} at least one side has a boundary  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+
+|
+|==== 
+
+[[XALAddressDetails-section]]
+==== *Class XALAddressDetails*
+
+include::../requirements/Core/REQ_Core_XALAddressDetails.adoc[]
+
+|====
+|*Class XALAddressDetails*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «DataType»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+  
+
+
+

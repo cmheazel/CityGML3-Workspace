@@ -1,0 +1,9 @@
+[[req_Versioning_Version]]
+[width="90%",cols="2,6"]
+|===
+^|*Requirement  {counter:req-id}* |*/req/Versioning/Version* 
+^|A |The Implementation Specification SHALL contain an element with the same definition as the Version UML class as documented in the Version section of the <<Version-section,Versioning Data Dictionary>>.
+^|B |The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the Version UML class as documented in the Version section of the <<Version-section,Versioning Data Dictionary>>.
+^|C |The implementation Specification SHALL represent the attributes of the Version UML class; including the name, definition, type, and cardinality of those documented in the Version section of the <<Version-section,Versioning Data Dictionary>>.
+^|D |The implementation Specification SHALL represent the attributes of all parent classes of the the Version UML class; including the name, definition, type, and cardinality of those documented in the Version section of the <<Version-section,Versioning Data Dictionary>>.
+|===

@@ -1,0 +1,464 @@
+[[Tunnel-package]]
+==== *Tunnel Package*
+
+|====
+|*Package Tunnel*
+|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} +
+Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
+Parent Package: {nbsp}{nbsp}CityGML
+|====
+
+[[AbstractTunnel-section]]
+==== *Class AbstractTunnel*
+
+include::../requirements/Tunnel/REQ_Tunnel_AbstractTunnel.adoc[]
+
+|====
+|*Class AbstractTunnel*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractConstruction-section,AbstractConstruction>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} tunnelFurniture +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp} <<TunnelFurniture-section,TunnelFurniture>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} tunnelInstallation +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp} <<TunnelInstallation-section,TunnelInstallation>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Relation between Tunnel or TunnelPart and TunnelInstallation. +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} tunnelConstructiveElement +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp} <<TunnelConstructiveElement-section,TunnelConstructiveElement>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} hollowSpace +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp} <<HollowSpace-section,HollowSpace>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Relation between Tunnel or TunnelPart and HollowSpace. +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TunnelClassValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Classification of the actual usage of Tunnel or TunnelPart as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TunnelFunctionValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Specified function of Tunnel or TunnelPart as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TunnelUsageValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Actual usage of Tunnel or TunnelPart as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[HollowSpace-section]]
+==== *Class HollowSpace*
+
+include::../requirements/Tunnel/REQ_Tunnel_HollowSpace.adoc[]
+
+|====
+|*Class HollowSpace*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} tunnelFurniture +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp} <<TunnelFurniture-section,TunnelFurniture>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Relation between HollowSpace and TunnelFurniture. +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} tunnelInstallation +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp} <<TunnelInstallation-section,TunnelInstallation>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Relation between HollowSpace and TunnelInstallation. +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} HollowSpaceClassValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Classification of HollowSpace as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} HollowSpaceFunctionValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Specified function of HollowSpace as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} HollowSpaceUsageValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Actual usage of HollowSpace as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[HollowSpaceClassValue-section]]
+==== *Class HollowSpaceClassValue*
+
+include::../requirements/Tunnel/REQ_Tunnel_HollowSpaceClassValue.adoc[]
+
+|====
+|*Class HollowSpaceClassValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[HollowSpaceFunctionValue-section]]
+==== *Class HollowSpaceFunctionValue*
+
+include::../requirements/Tunnel/REQ_Tunnel_HollowSpaceFunctionValue.adoc[]
+
+|====
+|*Class HollowSpaceFunctionValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[HollowSpaceUsageValue-section]]
+==== *Class HollowSpaceUsageValue*
+
+include::../requirements/Tunnel/REQ_Tunnel_HollowSpaceUsageValue.adoc[]
+
+|====
+|*Class HollowSpaceUsageValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[Tunnel-section]]
+==== *Class Tunnel*
+
+include::../requirements/Tunnel/REQ_Tunnel_Tunnel.adoc[]
+
+|====
+|*Class Tunnel*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractTunnel-section,AbstractTunnel>> +
+StereoType:{nbsp}{nbsp} «TopLevelFeatureType»
+|*Roles* 
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} tunnelPart +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp} <<TunnelPart-section,TunnelPart>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation between Tunnel and TunnelPart. +
+|*Attributes*
+|
+|==== 
+
+[[TunnelClassValue-section]]
+==== *Class TunnelClassValue*
+
+include::../requirements/Tunnel/REQ_Tunnel_TunnelClassValue.adoc[]
+
+|====
+|*Class TunnelClassValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[TunnelConstructiveElement-section]]
+==== *Class TunnelConstructiveElement*
+
+include::../requirements/Tunnel/REQ_Tunnel_TunnelConstructiveElement.adoc[]
+
+|====
+|*Class TunnelConstructiveElement*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractConstructiveElement-section,AbstractConstructiveElement>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TunnelConstructiveElementClassValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TunnelConstructiveElementFunctionValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TunnelConstructiveElementUsageValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[TunnelConstructiveElementClassValue-section]]
+==== *Class TunnelConstructiveElementClassValue*
+
+include::../requirements/Tunnel/REQ_Tunnel_TunnelConstructiveElementClassValue.adoc[]
+
+|====
+|*Class TunnelConstructiveElementClassValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[TunnelConstructiveElementFunctionValue-section]]
+==== *Class TunnelConstructiveElementFunctionValue*
+
+include::../requirements/Tunnel/REQ_Tunnel_TunnelConstructiveElementFunctionValue.adoc[]
+
+|====
+|*Class TunnelConstructiveElementFunctionValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[TunnelConstructiveElementUsageValue-section]]
+==== *Class TunnelConstructiveElementUsageValue*
+
+include::../requirements/Tunnel/REQ_Tunnel_TunnelConstructiveElementUsageValue.adoc[]
+
+|====
+|*Class TunnelConstructiveElementUsageValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[TunnelFunctionValue-section]]
+==== *Class TunnelFunctionValue*
+
+include::../requirements/Tunnel/REQ_Tunnel_TunnelFunctionValue.adoc[]
+
+|====
+|*Class TunnelFunctionValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[TunnelFurniture-section]]
+==== *Class TunnelFurniture*
+
+include::../requirements/Tunnel/REQ_Tunnel_TunnelFurniture.adoc[]
+
+|====
+|*Class TunnelFurniture*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractFurniture-section,AbstractFurniture>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TunnelFurnitureClassValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Classification of TunnelFurniture as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TunnelFurnitureFunctionValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Specified function of TunnelFurniture as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TunnelFurnitureUsageValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Actual usage of TunnelFurniture as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[TunnelFurnitureClassValue-section]]
+==== *Class TunnelFurnitureClassValue*
+
+include::../requirements/Tunnel/REQ_Tunnel_TunnelFurnitureClassValue.adoc[]
+
+|====
+|*Class TunnelFurnitureClassValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[TunnelFurnitureFunctionValue-section]]
+==== *Class TunnelFurnitureFunctionValue*
+
+include::../requirements/Tunnel/REQ_Tunnel_TunnelFurnitureFunctionValue.adoc[]
+
+|====
+|*Class TunnelFurnitureFunctionValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[TunnelFurnitureUsageValue-section]]
+==== *Class TunnelFurnitureUsageValue*
+
+include::../requirements/Tunnel/REQ_Tunnel_TunnelFurnitureUsageValue.adoc[]
+
+|====
+|*Class TunnelFurnitureUsageValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[TunnelInstallation-section]]
+==== *Class TunnelInstallation*
+
+include::../requirements/Tunnel/REQ_Tunnel_TunnelInstallation.adoc[]
+
+|====
+|*Class TunnelInstallation*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractInstallation-section,AbstractInstallation>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TunnelInstallationClassValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Classification of TunnelInstallation as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TunnelInstallationFunctionValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Specified function of TunnelInstallation as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TunnelInstallationUsageValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Actual usage of TunnelInstallation as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[TunnelInstallationClassValue-section]]
+==== *Class TunnelInstallationClassValue*
+
+include::../requirements/Tunnel/REQ_Tunnel_TunnelInstallationClassValue.adoc[]
+
+|====
+|*Class TunnelInstallationClassValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[TunnelInstallationFunctionValue-section]]
+==== *Class TunnelInstallationFunctionValue*
+
+include::../requirements/Tunnel/REQ_Tunnel_TunnelInstallationFunctionValue.adoc[]
+
+|====
+|*Class TunnelInstallationFunctionValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[TunnelInstallationUsageValue-section]]
+==== *Class TunnelInstallationUsageValue*
+
+include::../requirements/Tunnel/REQ_Tunnel_TunnelInstallationUsageValue.adoc[]
+
+|====
+|*Class TunnelInstallationUsageValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[TunnelPart-section]]
+==== *Class TunnelPart*
+
+include::../requirements/Tunnel/REQ_Tunnel_TunnelPart.adoc[]
+
+|====
+|*Class TunnelPart*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractTunnel-section,AbstractTunnel>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+
+[[TunnelUsageValue-section]]
+==== *Class TunnelUsageValue*
+
+include::../requirements/Tunnel/REQ_Tunnel_TunnelUsageValue.adoc[]
+
+|====
+|*Class TunnelUsageValue*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp} «CodeList»
+|*Roles* 
+|*Attributes*
+|
+|==== 
+  
+
+

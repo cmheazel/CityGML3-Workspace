@@ -1,0 +1,9 @@
+[[req_Construction_GroundSurface]]
+[width="90%",cols="2,6"]
+|===
+^|*Requirement  {counter:req-id}* |*/req/Construction/GroundSurface* 
+^|A |The Implementation Specification SHALL contain an element with the same definition as the GroundSurface UML class as documented in the GroundSurface section of the <<GroundSurface-section,Construction Data Dictionary>>.
+^|B |The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the GroundSurface UML class as documented in the GroundSurface section of the <<GroundSurface-section,Construction Data Dictionary>>.
+^|C |The implementation Specification SHALL represent the attributes of the GroundSurface UML class; including the name, definition, type, and cardinality of those documented in the GroundSurface section of the <<GroundSurface-section,Construction Data Dictionary>>.
+^|D |The implementation Specification SHALL represent the attributes of all parent classes of the the GroundSurface UML class; including the name, definition, type, and cardinality of those documented in the GroundSurface section of the <<GroundSurface-section,Construction Data Dictionary>>.
+|===

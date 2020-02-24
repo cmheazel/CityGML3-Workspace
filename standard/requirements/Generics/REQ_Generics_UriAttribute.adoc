@@ -1,0 +1,9 @@
+[[req_Generics_UriAttribute]]
+[width="90%",cols="2,6"]
+|===
+^|*Requirement  {counter:req-id}* |*/req/Generics/UriAttribute* 
+^|A |Any use of the UriAttribute type in the Implementation Specification SHALL have the same definition as the UriAttribute UML class as documented in the UriAttribute section of the <<UriAttribute-section,Generics Data Dictionary>>.
+^|B |The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the UriAttribute UML class as documented in the UriAttribute section of the <<UriAttribute-section,Generics Data Dictionary>>.
+^|C |The implementation Specification SHALL represent the attributes of the UriAttribute UML class; including the name, definition, type, and cardinality of those documented in the UriAttribute section of the <<UriAttribute-section,Generics Data Dictionary>>.
+^|D |The implementation Specification SHALL represent the attributes of all parent classes of the the UriAttribute UML class; including the name, definition, type, and cardinality of those documented in the UriAttribute section of the <<UriAttribute-section,Generics Data Dictionary>>.
+|===

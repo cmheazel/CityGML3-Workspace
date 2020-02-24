@@ -1,0 +1,9 @@
+[[req_Dynamizer_SensorConnection]]
+[width="90%",cols="2,6"]
+|===
+^|*Requirement  {counter:req-id}* |*/req/Dynamizer/SensorConnection* 
+^|A |Any use of the SensorConnection type in the Implementation Specification SHALL have the same definition as the SensorConnection UML class as documented in the SensorConnection section of the <<SensorConnection-section,Dynamizer Data Dictionary>>.
+^|B |The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the SensorConnection UML class as documented in the SensorConnection section of the <<SensorConnection-section,Dynamizer Data Dictionary>>.
+^|C |The implementation Specification SHALL represent the attributes of the SensorConnection UML class; including the name, definition, type, and cardinality of those documented in the SensorConnection section of the <<SensorConnection-section,Dynamizer Data Dictionary>>.
+^|D |The implementation Specification SHALL represent the attributes of all parent classes of the the SensorConnection UML class; including the name, definition, type, and cardinality of those documented in the SensorConnection section of the <<SensorConnection-section,Dynamizer Data Dictionary>>.
+|===

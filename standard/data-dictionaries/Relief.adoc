@@ -1,0 +1,146 @@
+[[Relief-package]]
+==== *Relief Package*
+
+|====
+|*Package Relief*
+|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} +
+Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
+Parent Package: {nbsp}{nbsp}CityGML
+|====
+
+[[AbstractReliefComponent-section]]
+==== *Class AbstractReliefComponent*
+
+include::../requirements/Relief/REQ_Relief_AbstractReliefComponent.adoc[]
+
+|====
+|*Class AbstractReliefComponent*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} extent +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_Surface-section,GM_Surface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Polygon (optionally with holes) denoting the extent where the relief component is valid. +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}lod +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} IntegerBetween0and3 +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Number denoting the LOD of the relief component. The LOD concept for the relief is defined in chapter ...  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[BreaklineRelief-section]]
+==== *Class BreaklineRelief*
+
+include::../requirements/Relief/REQ_Relief_BreaklineRelief.adoc[]
+
+|====
+|*Class BreaklineRelief*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} ridgeOrValleyLines +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Relation to 3D lines (gml:MultiCurve) denoting ridge or valley lines. +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} breaklines +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Relation to 3D lines (gml:MultiCurve) denoting break lines. +
+|*Attributes*
+|
+|==== 
+
+[[MassPointRelief-section]]
+==== *Class MassPointRelief*
+
+include::../requirements/Relief/REQ_Relief_MassPointRelief.adoc[]
+
+|====
+|*Class MassPointRelief*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} reliefPoints +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiPoint-section,GM_MultiPoint>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} pointCloud +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<AbstractPointCloud-section,AbstractPointCloud>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Attributes*
+|
+|==== 
+
+[[RasterRelief-section]]
+==== *Class RasterRelief*
+
+include::../requirements/Relief/REQ_Relief_RasterRelief.adoc[]
+
+|====
+|*Class RasterRelief*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} grid +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<CV_DiscreteGridPointCoverage-section,CV_DiscreteGridPointCoverage>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Attributes*
+|
+|==== 
+
+[[ReliefFeature-section]]
+==== *Class ReliefFeature*
+
+include::../requirements/Relief/REQ_Relief_ReliefFeature.adoc[]
+
+|====
+|*Class ReliefFeature*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> +
+StereoType:{nbsp}{nbsp} «TopLevelFeatureType»
+|*Roles* 
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} reliefComponent +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  1..* +
+Target Class: {nbsp}{nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Relation of a ReliefFeature to its components. +
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}lod +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} IntegerBetween0and3 +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Number denoting the LOD of the relief feature. The LOD concept for the relief is defined in chapter ...  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|
+|==== 
+
+[[TINRelief-section]]
+==== *Class TINRelief*
+
+include::../requirements/Relief/REQ_Relief_TINRelief.adoc[]
+
+|====
+|*Class TINRelief*
+|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+Subclass Of: {nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
+StereoType:{nbsp}{nbsp} «FeatureType»
+|*Roles* 
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} tin +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  1 +
+Target Class: {nbsp}{nbsp}{nbsp} <<GM_TriangulatedSurface-section,GM_TriangulatedSurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Attributes*
+|
+|==== 
+  
+
+

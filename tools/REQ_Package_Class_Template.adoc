@@ -1,0 +1,9 @@
+[[req_PACKAGE_CLASS]]
+[width="90%",cols="2,6"]
+|===
+^|*Requirement  {counter:req-id}* |*/req/PACKAGE/CLASS* 
+^|A |The Implementation Specification SHALL contain an element with the same definition as the CLASS UML class as documented in the CLASS section of the REFF-section,PACKAGE Data Dictionary>>.
+^|B |The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the CLASS UML class as documented in the CLASS section of the REFF-section,PACKAGE Data Dictionary>>.
+^|C |The implementation Specification SHALL represent the attributes of the CLASS UML class; including the name, definition, type, and cardinality of those documented in the CLASS section of the REFF-section,PACKAGE Data Dictionary>>.
+^|D |The implementation Specification SHALL represent the attributes of all parent classes of the the CLASS UML class; including the name, definition, type, and cardinality of those documented in the CLASS section of the REFF-section,PACKAGE Data Dictionary>>.
+|===

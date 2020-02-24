@@ -16,7 +16,7 @@ The coarsest level LOD0 is essentially a two and a half dimensional Digital Terr
 
 [[figure-3]]
 .The five levels of detail (LOD) defined by CityGML (source: IGG Uni Bonn)
-image::figures/Figure_3.png[]
+image::../figures/Figure_3.png[]
 
 LODs are also characterised by differing accuracies and minimal dimensions of objects (cf. Tab. 3). The accura-cy requirements given in this standard are debatable and are to be considered as discussion proposals. Accuracy is described as standard deviation  of the absolute 3D point coordinates. Relative 3D point accuracy will be added in a future version of CityGML and it is typically much higher than the absolute accuracy. In LOD1, the positional and height accuracy of points should be 5m or less, while all objects with a footprint of at least 6m by 6m should be considered. The positional and height accuracy of LOD2 is proposed to be 2m or better. In this LOD, all objects with a footprint of at least 4m × 4m should be considered. Both types of accuracies in LOD3 should be 0.5m, and the minimal footprint is suggested to be 2m × 2m. Finally, the positional and height accura-cy of LOD4 should be 0.2m or less. By means of these figures, the classification in five LOD may be used to assess the quality of 3D city model datasets. The LOD categorisation makes datasets comparable and provides support for their integration.
 
@@ -60,9 +60,9 @@ The concept of ClosureSurface is also employed to model the entrances of subsurf
 NOTE: Combine Figures 4
 
 [[figure-4]]
-image::figures/inwork/Figure_4_a.png[]
+image::../figures/inwork/Figure_4_a.png[]
 .Closure surfaces to seal open structures. Passages are subsurface objects (left). The entrance is sealed by a virtual   ClosureSurface, which is both part of the DTM and the subsurface object (right) (graphic: IGG Uni Bonn).
-image::figures/inwork/Figure_4_b.jpg[]
+image::../figures/inwork/Figure_4_b.jpg[]
 
 === Terrain Intersection Curve (TIC)
 
@@ -71,9 +71,9 @@ A crucial issue in city modelling is the integration of 3D objects and the terra
 NOTE: Combine figures 5
 
 [[figure-5]]
-image::figures/inwork/Figure_5_a.png[]
+image::../figures/inwork/Figure_5_a.png[]
 .TerrainIntersectionCurve for a building (left, black) and a tunnel object (right, white). The tunnel’s hollow space is sealed by a triangulated ClosureSurface (graphic: IGG Uni Bonn).
-image::figures/inwork/Figure_5_b.jpg[]
+image::../figures/inwork/Figure_5_b.jpg[]
 
 === Code lists for enumerative attributes
 
@@ -91,7 +91,7 @@ Code lists can have references to existing models. For example, room codes defin
 
 [[figure-6]]
 .External references (graphic: IGG Uni Bonn).
-image::figures/Figure_6.jpg[]
+image::../figures/Figure_6.jpg[]
 
 === City object groups
 
@@ -110,9 +110,9 @@ CityGML supports feature appearances for an arbitrary number of themes per city 
 In CityGML, objects of equal shape like trees and other vegetation objects, traffic lights and traffic signs can be represented as prototypes which are instantiated multiple times at different locations (Fig. 7). The geometry of prototypes is defined in local coordinate systems. Every instance is represented by a reference to the prototype, a base point in the world coordinate reference system and a transformation matrix that facilitates scaling, rotation, and translation of the prototype. The principle is adopted from the concept of scene graphs used in computer graphics standards like VRML and X3D. As the GML3 geometry model does not provide support for scene graph concepts, it is implemented as an extension to the GML3 geometry model (for further description cf. chapter 8.2).
 
 [[figure-7]]
-image::figures/inwork/Figure_7_T.png[]
+image::../figures/inwork/Figure_7_T.png[]
 .Examples of prototypic shapes (source: Rheinmetall Defence Electronics).
-image::figures/inwork/Figure_7_B.png[]
+image::../figures/inwork/Figure_7_B.png[]
 
 === Generic city objects and attributes
 

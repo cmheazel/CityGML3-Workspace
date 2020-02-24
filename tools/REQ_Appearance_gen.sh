@@ -1,0 +1,74 @@
+#
+# A tool to generate AsciiDoc formatted Requirements and Abstract Test files for 
+# the CityGML 3.0 Conceptual Model. A copy of this script should be created for 
+# each package. The only difference is in the values of the variables.
+#
+# This tool uses a set of template files, one for each class type. Sed commands 
+# replace tokens in the template with values from the script variables. The script 
+# variables are also used to build the file names for the output.
+#
+# Created by Chuck Heazel
+# January, 2020
+# 
+
+# First define the variables
+# The package name
+PKG=Appearance
+
+# A list of the Abstract Classes
+ACLIST="AbstractSurfaceData AbstractTexture AbstractTextureParameterization"
+
+# The instantiatable classes
+CLIST="Appearance GeoreferencedTexture ParameterizedTexture TextureAssociation X3DMaterial"
+
+# CodeLists
+CLLIST=""
+
+# And Data Types
+DTLIST="Color ColorPlusOpacity TexCoordGen TexCoordList TextureType WrapMode" 
+
+# Then for each list of classes, the substitution commands are run gainst the 
+# appropriate requirement template.
+
+for I in $ACLIST
+do
+cat REQ_Package_Abstract_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$PKG/ | sed s/"REFF"/"<<"$I/ >../standard/requirements/$PKG/REQ_`echo $PKG`_$I.adoc
+done
+
+for I in $CLIST
+do
+cat REQ_Package_Class_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$PKG/ | sed s/"REFF"/"<<"$I/ >../standard/requirements/$PKG/REQ_`echo $PKG`_$I.adoc
+done
+
+for I in $CLLIST
+do
+cat REQ_Package_CodeList_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$PKG/ | sed s/"REFF"/"<<"$I/ >../standard/requirements/$PKG/REQ_`echo $PKG`_$I.adoc
+done
+
+for I in $DTLIST
+do
+cat REQ_Package_BasicType_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$PKG/ | sed s/"REFF"/"<<"$I/ >../standard/requirements/$PKG/REQ_`echo $PKG`_$I.adoc
+done
+
+# Now do the same thing for the Abstract Test templates
+
+for I in $ACLIST
+do
+cat AT_Package_Abstract_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$PKG/g | sed s/"REFF"/"<<"$I/ >../standard/abstract_tests/$PKG/REQ_`echo $PKG`_$I.adoc
+done
+
+for I in $CLIST
+do
+cat AT_Package_Class_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$PKG/g | sed s/"REFF"/"<<"$I/ >../standard/abstract_tests/$PKG/REQ_`echo $PKG`_$I.adoc
+done
+
+for I in $CLLIST
+do
+cat AT_Package_CodeList_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$PKG/g | sed s/"REFF"/"<<"$I/ >../standard/abstract_tests/$PKG/REQ_`echo $PKG`_$I.adoc
+done
+
+for I in $DTLIST
+do
+cat AT_Package_BasicType_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$PKG/g | sed s/"REFF"/"<<"$I/ >../standard/abstract_tests/$PKG/REQ_`echo $PKG`_$I.adoc
+done
+

@@ -1,0 +1,9 @@
+[[req_Dynamizer_TimeValuePair]]
+[width="90%",cols="2,6"]
+|===
+^|*Requirement  {counter:req-id}* |*/req/Dynamizer/TimeValuePair* 
+^|A |Any use of the TimeValuePair type in the Implementation Specification SHALL have the same definition as the TimeValuePair UML class as documented in the TimeValuePair section of the <<TimeValuePair-section,Dynamizer Data Dictionary>>.
+^|B |The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the TimeValuePair UML class as documented in the TimeValuePair section of the <<TimeValuePair-section,Dynamizer Data Dictionary>>.
+^|C |The implementation Specification SHALL represent the attributes of the TimeValuePair UML class; including the name, definition, type, and cardinality of those documented in the TimeValuePair section of the <<TimeValuePair-section,Dynamizer Data Dictionary>>.
+^|D |The implementation Specification SHALL represent the attributes of all parent classes of the the TimeValuePair UML class; including the name, definition, type, and cardinality of those documented in the TimeValuePair section of the <<TimeValuePair-section,Dynamizer Data Dictionary>>.
+|===

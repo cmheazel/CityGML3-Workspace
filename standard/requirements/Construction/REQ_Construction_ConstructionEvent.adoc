@@ -1,0 +1,9 @@
+[[req_Construction_ConstructionEvent]]
+[width="90%",cols="2,6"]
+|===
+^|*Requirement  {counter:req-id}* |*/req/Construction/ConstructionEvent* 
+^|A |Any use of the ConstructionEvent type in the Implementation Specification SHALL have the same definition as the ConstructionEvent UML class as documented in the ConstructionEvent section of the <<ConstructionEvent-section,Construction Data Dictionary>>.
+^|B |The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the ConstructionEvent UML class as documented in the ConstructionEvent section of the <<ConstructionEvent-section,Construction Data Dictionary>>.
+^|C |The implementation Specification SHALL represent the attributes of the ConstructionEvent UML class; including the name, definition, type, and cardinality of those documented in the ConstructionEvent section of the <<ConstructionEvent-section,Construction Data Dictionary>>.
+^|D |The implementation Specification SHALL represent the attributes of all parent classes of the the ConstructionEvent UML class; including the name, definition, type, and cardinality of those documented in the ConstructionEvent section of the <<ConstructionEvent-section,Construction Data Dictionary>>.
+|===

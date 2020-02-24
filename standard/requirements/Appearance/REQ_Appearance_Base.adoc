@@ -1,9 +1,0 @@
-[[reg_appearance_base]]
-[width="90%",cols="2,6"]
-|===
-^|*Requirement  {counter:req-id}* |*/req/appearance/base* 
-^|A |A surface geometry object may be the target of at most two textures and two materials (one for front and back respectively) per theme.
-^|B |The referencePoint property (type: gml:PointPropertyType) of the element GeoreferencedTexture may only contain or reference a point geometry object with 2D coordinate values.
-^|C |Texture coordinates given by the textureCoordinates property of the element TexCoordList define an explicit mapping of a surface’s boundary points to points in texture space. Each boundary point of the surface must receive a corresponding coordinate pair in texture space. The coordinate pair in texture space shall be given as two doubles per boundary point. The order of the coordinate pairs must follow the order of the boundary points in the CityGML document (regardless of a possibly flipped surface orientation). Each gml:LinearRing composing the boundary of the target surface geometry object re-quires its own set of texture coordinates.
-^|D |A GeoreferencedTexture element must provide either internal or external georeference, otherwise it is invalid. Internal georeference shall be declared by the referencePoint property (type: gml:PointPropertyType) and the orientation property (type: core:TransformationMatrix2x2Type) of the element GeoreferencedTexture. External georeference may be provided by the texture image file itself (e.g. GeoTIFF) or by an accompanying world file.
-|===

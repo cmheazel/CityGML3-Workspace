@@ -1,0 +1,8 @@
+[[req_Dynamizer_AbstractTimeSeries]]
+[width="90%",cols="2,6"]
+|===
+^|*Requirement  {counter:req-id}* |*/req/Dynamizer/AbstractTimeSeries*
+^|A |The Implementation Specification SHALL contain an element which incorporates the concept defined in the AbstractTimeSeries UML class as documented in the AbstractTimeSeries section of the <<AbstractTimeSeries-section,Dynamizer Data Dictionary>>.
+^|B |The Implementation Specification SHALL provide an element which represents associations with the same source, target, direction, and cardinalities as those of the AbstractTimeSeries UML class as documented in the AbstractTimeSeries section of the <<AbstractTimeSeries-section,Dynamizer Data Dictionary>>.
+^|C |The implementation Specification SHALL provide an element which represents the attributes of the AbstractTimeSeries UML class; including the name, definition, type, and cardinality of those documented in the AbstractTimeSeries section of the <<AbstractTimeSeries-section,Dynamizer Data Dictionary>>.
+|===

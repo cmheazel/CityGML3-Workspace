@@ -1,0 +1,9 @@
+[[req_Generics_StringAttribute]]
+[width="90%",cols="2,6"]
+|===
+^|*Requirement  {counter:req-id}* |*/req/Generics/StringAttribute* 
+^|A |Any use of the StringAttribute type in the Implementation Specification SHALL have the same definition as the StringAttribute UML class as documented in the StringAttribute section of the <<StringAttribute-section,Generics Data Dictionary>>.
+^|B |The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the StringAttribute UML class as documented in the StringAttribute section of the <<StringAttribute-section,Generics Data Dictionary>>.
+^|C |The implementation Specification SHALL represent the attributes of the StringAttribute UML class; including the name, definition, type, and cardinality of those documented in the StringAttribute section of the <<StringAttribute-section,Generics Data Dictionary>>.
+^|D |The implementation Specification SHALL represent the attributes of all parent classes of the the StringAttribute UML class; including the name, definition, type, and cardinality of those documented in the StringAttribute section of the <<StringAttribute-section,Generics Data Dictionary>>.
+|===
