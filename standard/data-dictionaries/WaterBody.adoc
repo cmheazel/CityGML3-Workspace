@@ -1,222 +1,157 @@
-[[WaterBody-data-dictionary]]
-=== *WaterBody Model Data Dictionary*
+[[WaterBody-package]]
+==== *WaterBody Package*
 
-Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} +
-Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
-Parent Package:{nbsp}CityGML
+|====
+|*Package WaterBody*
+|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} +
+Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
+Parent Package: {nbsp}{nbsp}CityGML
+|====
 
 [[AbstractWaterBoundarySurface-section]]
 ==== *Class AbstractWaterBoundarySurface*
-Subclass of <<AbstractThematicSurface-section,AbstractThematicSurface>>
 
 include::../requirements/WaterBody/REQ_WaterBody_AbstractWaterBoundarySurface.adoc[]
 
 |====
 |*Class AbstractWaterBoundarySurface*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
-Subtype Of: {nbsp}{nbsp}<<AbstractThematicSurface-section,AbstractThematicSurface>> +
+Subclass Of: {nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
 StereoType:{nbsp}{nbsp} «FeatureType»
-|
-|*Associations*
-|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
-Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
-Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
-Source Class: {nbsp}{nbsp}{nbsp} <<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>> +
-Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
-|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
-Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
-Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
-Source Class: {nbsp}{nbsp}{nbsp} <<WaterSurface-section,WaterSurface>> +
-Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>> +
-|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
-Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
-Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
-Source Class: {nbsp}{nbsp}{nbsp} <<WaterBody-section,WaterBody>> +
-Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>> +
-|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
-Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
-Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
-Source Class: {nbsp}{nbsp}{nbsp} <<WaterGroundSurface-section,WaterGroundSurface>> +
-Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>> +
+|*Roles* 
 |*Attributes*
 |
 |==== 
 
 [[WaterBody-section]]
 ==== *Class WaterBody*
-Subclass of <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>>
 
 include::../requirements/WaterBody/REQ_WaterBody_WaterBody.adoc[]
 
 |====
 |*Class WaterBody*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
-Subtype Of: {nbsp}{nbsp}<<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
+Subclass Of: {nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
 StereoType:{nbsp}{nbsp} «TopLevelFeatureType»
-|
-|*Associations*
-|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
-Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
-Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
-Source Class: {nbsp}{nbsp}{nbsp} <<WaterBody-section,WaterBody>> +
-Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
-|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Association +
-Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
-Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
-Source Class: {nbsp}{nbsp}{nbsp} <<WaterBody-section,WaterBody>> +
-Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>> +
+|*Roles* 
+|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp} <<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 |*Attributes*
 |Attribute Name: {nbsp}{nbsp}{nbsp}class +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WaterBodyClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Classification of WaterBody as given by the relevant national regulations, information communities, or specific applications.   +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WaterBodyClassValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Classification of WaterBody as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
 |Attribute Name: {nbsp}{nbsp}{nbsp}function +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WaterBodyFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Specified function of WaterBody as given by the relevant national regulations, information communities, or specific applications.   +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WaterBodyFunctionValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Specified function of WaterBody as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
 |Attribute Name: {nbsp}{nbsp}{nbsp}usage +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WaterBodyUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Actual usage of WaterBody as given by the relevant national regulations, information communities, or specific applications.   +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WaterBodyUsageValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Actual usage of WaterBody as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
 |
 |==== 
 
 [[WaterBodyClassValue-section]]
 ==== *Class WaterBodyClassValue*
-Subclass of <<-section,>>
 
 include::../requirements/WaterBody/REQ_WaterBody_WaterBodyClassValue.adoc[]
 
 |====
 |*Class WaterBodyClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
-Subtype Of: {nbsp}{nbsp}<<-section,>> +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
 StereoType:{nbsp}{nbsp} «CodeList»
-|
-|*Associations*
+|*Roles* 
 |*Attributes*
 |
 |==== 
 
 [[WaterBodyFunctionValue-section]]
 ==== *Class WaterBodyFunctionValue*
-Subclass of <<-section,>>
 
 include::../requirements/WaterBody/REQ_WaterBody_WaterBodyFunctionValue.adoc[]
 
 |====
 |*Class WaterBodyFunctionValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
-Subtype Of: {nbsp}{nbsp}<<-section,>> +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
 StereoType:{nbsp}{nbsp} «CodeList»
-|
-|*Associations*
+|*Roles* 
 |*Attributes*
 |
 |==== 
 
 [[WaterBodyUsageValue-section]]
 ==== *Class WaterBodyUsageValue*
-Subclass of <<-section,>>
 
 include::../requirements/WaterBody/REQ_WaterBody_WaterBodyUsageValue.adoc[]
 
 |====
 |*Class WaterBodyUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
-Subtype Of: {nbsp}{nbsp}<<-section,>> +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
 StereoType:{nbsp}{nbsp} «CodeList»
-|
-|*Associations*
+|*Roles* 
 |*Attributes*
 |
 |==== 
 
 [[WaterGroundSurface-section]]
 ==== *Class WaterGroundSurface*
-Subclass of <<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>>
 
 include::../requirements/WaterBody/REQ_WaterBody_WaterGroundSurface.adoc[]
 
 |====
 |*Class WaterGroundSurface*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
-Subtype Of: {nbsp}{nbsp}<<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>> +
+Subclass Of: {nbsp}{nbsp} <<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>> +
 StereoType:{nbsp}{nbsp} «FeatureType»
-|
-|*Associations*
-|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
-Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
-Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
-Source Class: {nbsp}{nbsp}{nbsp} <<WaterGroundSurface-section,WaterGroundSurface>> +
-Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>> +
+|*Roles* 
 |*Attributes*
 |
 |==== 
 
 [[WaterLevelValue-section]]
 ==== *Class WaterLevelValue*
-Subclass of <<-section,>>
 
 include::../requirements/WaterBody/REQ_WaterBody_WaterLevelValue.adoc[]
 
 |====
 |*Class WaterLevelValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
-Subtype Of: {nbsp}{nbsp}<<-section,>> +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
 StereoType:{nbsp}{nbsp} «CodeList»
-|
-|*Associations*
+|*Roles* 
 |*Attributes*
 |
 |==== 
 
 [[WaterSurface-section]]
 ==== *Class WaterSurface*
-Subclass of <<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>>
 
 include::../requirements/WaterBody/REQ_WaterBody_WaterSurface.adoc[]
 
 |====
 |*Class WaterSurface*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
-Subtype Of: {nbsp}{nbsp}<<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>> +
+Subclass Of: {nbsp}{nbsp} <<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>> +
 StereoType:{nbsp}{nbsp} «FeatureType»
-|
-|*Associations*
-|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
-Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
-Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
-Source Class: {nbsp}{nbsp}{nbsp} <<WaterSurface-section,WaterSurface>> +
-Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>> +
+|*Roles* 
 |*Attributes*
 |Attribute Name: {nbsp}{nbsp}{nbsp}waterLevel +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WaterLevelValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Codelist of the WaterSurface property waterLevel.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WaterLevelValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Codelist of the WaterSurface property waterLevel.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
 |
 |==== 

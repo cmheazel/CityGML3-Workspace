@@ -1,305 +1,252 @@
-[[Vegetation-data-dictionary]]
-=== *Vegetation Model Data Dictionary*
+[[Vegetation-package]]
+==== *Vegetation Package*
 
-Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} +
-Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
-Parent Package:{nbsp}CityGML
+|====
+|*Package Vegetation*
+|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} +
+Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
+Parent Package: {nbsp}{nbsp}CityGML
+|====
 
 [[AbstractVegetationObject-section]]
 ==== *Class AbstractVegetationObject*
-Subclass of <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>>
 
 include::../requirements/Vegetation/REQ_Vegetation_AbstractVegetationObject.adoc[]
 
 |====
 |*Class AbstractVegetationObject*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
-Subtype Of: {nbsp}{nbsp}<<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
+Subclass Of: {nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
 StereoType:{nbsp}{nbsp} «FeatureType»
-|
-|*Associations*
-|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
-Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
-Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
-Source Class: {nbsp}{nbsp}{nbsp} <<AbstractVegetationObject-section,AbstractVegetationObject>> +
-Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
-|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
-Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
-Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
-Source Class: {nbsp}{nbsp}{nbsp} <<PlantCover-section,PlantCover>> +
-Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractVegetationObject-section,AbstractVegetationObject>> +
-|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
-Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
-Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
-Source Class: {nbsp}{nbsp}{nbsp} <<SolitaryVegetationObject-section,SolitaryVegetationObject>> +
-Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractVegetationObject-section,AbstractVegetationObject>> +
+|*Roles* 
 |*Attributes*
 |
 |==== 
 
 [[PlantCover-section]]
 ==== *Class PlantCover*
-Subclass of <<AbstractVegetationObject-section,AbstractVegetationObject>>
 
 include::../requirements/Vegetation/REQ_Vegetation_PlantCover.adoc[]
 
 |====
 |*Class PlantCover*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
-Subtype Of: {nbsp}{nbsp}<<AbstractVegetationObject-section,AbstractVegetationObject>> +
+Subclass Of: {nbsp}{nbsp} <<AbstractVegetationObject-section,AbstractVegetationObject>> +
 StereoType:{nbsp}{nbsp} «TopLevelFeatureType»
-|
-|*Associations*
-|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
-Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
-Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
-Source Class: {nbsp}{nbsp}{nbsp} <<PlantCover-section,PlantCover>> +
-Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractVegetationObject-section,AbstractVegetationObject>> +
+|*Roles* 
 |*Attributes*
 |Attribute Name: {nbsp}{nbsp}{nbsp}averageHeight +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Average value of the heights of the grown-up plants  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Average value of the heights of the grown-up plants  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
 |Attribute Name: {nbsp}{nbsp}{nbsp}class +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} PlantCoverClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Classification of PlantCover as given by the relevant national regulations, information communities, or specific applications.   +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} PlantCoverClassValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Classification of PlantCover as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
 |Attribute Name: {nbsp}{nbsp}{nbsp}function +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} PlantCoverFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Function of PlantCover as given by the relevant national regulations, information communities, or specific applications.   +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} PlantCoverFunctionValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Function of PlantCover as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
 |Attribute Name: {nbsp}{nbsp}{nbsp}maxHeight +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
 |Attribute Name: {nbsp}{nbsp}{nbsp}minHeight +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
 |Attribute Name: {nbsp}{nbsp}{nbsp}usage +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} PlantCoverUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Usage of PlantCover as given by the relevant national regulations, information communities, or specific applications.   +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} PlantCoverUsageValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Usage of PlantCover as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
 |
 |==== 
 
 [[PlantCoverClassValue-section]]
 ==== *Class PlantCoverClassValue*
-Subclass of <<-section,>>
 
 include::../requirements/Vegetation/REQ_Vegetation_PlantCoverClassValue.adoc[]
 
 |====
 |*Class PlantCoverClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
-Subtype Of: {nbsp}{nbsp}<<-section,>> +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
 StereoType:{nbsp}{nbsp} «CodeList»
-|
-|*Associations*
+|*Roles* 
 |*Attributes*
 |
 |==== 
 
 [[PlantCoverFunctionValue-section]]
 ==== *Class PlantCoverFunctionValue*
-Subclass of <<-section,>>
 
 include::../requirements/Vegetation/REQ_Vegetation_PlantCoverFunctionValue.adoc[]
 
 |====
 |*Class PlantCoverFunctionValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
-Subtype Of: {nbsp}{nbsp}<<-section,>> +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
 StereoType:{nbsp}{nbsp} «CodeList»
-|
-|*Associations*
+|*Roles* 
 |*Attributes*
 |
 |==== 
 
 [[PlantCoverUsageValue-section]]
 ==== *Class PlantCoverUsageValue*
-Subclass of <<-section,>>
 
 include::../requirements/Vegetation/REQ_Vegetation_PlantCoverUsageValue.adoc[]
 
 |====
 |*Class PlantCoverUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
-Subtype Of: {nbsp}{nbsp}<<-section,>> +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
 StereoType:{nbsp}{nbsp} «CodeList»
-|
-|*Associations*
+|*Roles* 
 |*Attributes*
 |
 |==== 
 
 [[SolitaryVegetationObject-section]]
 ==== *Class SolitaryVegetationObject*
-Subclass of <<AbstractVegetationObject-section,AbstractVegetationObject>>
 
 include::../requirements/Vegetation/REQ_Vegetation_SolitaryVegetationObject.adoc[]
 
 |====
 |*Class SolitaryVegetationObject*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
-Subtype Of: {nbsp}{nbsp}<<AbstractVegetationObject-section,AbstractVegetationObject>> +
+Subclass Of: {nbsp}{nbsp} <<AbstractVegetationObject-section,AbstractVegetationObject>> +
 StereoType:{nbsp}{nbsp} «TopLevelFeatureType»
-|
-|*Associations*
-|Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Generalization +
-Direction: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Source -> Destination +
-Source Role: {nbsp}{nbsp}{nbsp}{nbsp}  +
-Source Class: {nbsp}{nbsp}{nbsp} <<SolitaryVegetationObject-section,SolitaryVegetationObject>> +
-Target Role: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp} <<AbstractVegetationObject-section,AbstractVegetationObject>> +
+|*Roles* 
 |*Attributes*
 |Attribute Name: {nbsp}{nbsp}{nbsp}class +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SolitaryVegetationObjectClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Classification of SolitaryVegetationObject as given by the relevant national regulations, information communities, or specific applications.   +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SolitaryVegetationObjectClassValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Classification of SolitaryVegetationObject as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
 |Attribute Name: {nbsp}{nbsp}{nbsp}crownDiameter +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Maximal diameter of the crown.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Maximal diameter of the crown.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
 |Attribute Name: {nbsp}{nbsp}{nbsp}function +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SolitaryVegetationObjectFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Function of SolitaryVegetationObject as given by the relevant national regulations, information communities, or specific applications.   +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SolitaryVegetationObjectFunctionValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Function of SolitaryVegetationObject as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
 |Attribute Name: {nbsp}{nbsp}{nbsp}height +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Distance between the highest point of the vegetation object and the lowest point of the terrain at the bottom of the object.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Distance between the highest point of the vegetation object and the lowest point of the terrain at the bottom of the object.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
 |Attribute Name: {nbsp}{nbsp}{nbsp}maxRootBallDepth +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
 |Attribute Name: {nbsp}{nbsp}{nbsp}rootBallDiameter +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
 |Attribute Name: {nbsp}{nbsp}{nbsp}species +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SpeciesValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Botanical classification of the SolitaryVegetationObject  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SpeciesValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Botanical classification of the SolitaryVegetationObject  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
 |Attribute Name: {nbsp}{nbsp}{nbsp}trunkDiameter +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Value of the trunk's diameter  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Value of the trunk's diameter  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
 |Attribute Name: {nbsp}{nbsp}{nbsp}usage +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SolitaryVegetationObjectUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Usage of SolitaryVegetationObject as given by the relevant national regulations, information communities, or specific applications.   +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SolitaryVegetationObjectUsageValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Usage of SolitaryVegetationObject as given by the relevant national regulations, information communities, or specific applications.   +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
 |
 |==== 
 
 [[SolitaryVegetationObjectClassValue-section]]
 ==== *Class SolitaryVegetationObjectClassValue*
-Subclass of <<-section,>>
 
 include::../requirements/Vegetation/REQ_Vegetation_SolitaryVegetationObjectClassValue.adoc[]
 
 |====
 |*Class SolitaryVegetationObjectClassValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
-Subtype Of: {nbsp}{nbsp}<<-section,>> +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
 StereoType:{nbsp}{nbsp} «CodeList»
-|
-|*Associations*
+|*Roles* 
 |*Attributes*
 |
 |==== 
 
 [[SolitaryVegetationObjectFunctionValue-section]]
 ==== *Class SolitaryVegetationObjectFunctionValue*
-Subclass of <<-section,>>
 
 include::../requirements/Vegetation/REQ_Vegetation_SolitaryVegetationObjectFunctionValue.adoc[]
 
 |====
 |*Class SolitaryVegetationObjectFunctionValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
-Subtype Of: {nbsp}{nbsp}<<-section,>> +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
 StereoType:{nbsp}{nbsp} «CodeList»
-|
-|*Associations*
+|*Roles* 
 |*Attributes*
 |
 |==== 
 
 [[SolitaryVegetationObjectUsageValue-section]]
 ==== *Class SolitaryVegetationObjectUsageValue*
-Subclass of <<-section,>>
 
 include::../requirements/Vegetation/REQ_Vegetation_SolitaryVegetationObjectUsageValue.adoc[]
 
 |====
 |*Class SolitaryVegetationObjectUsageValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
-Subtype Of: {nbsp}{nbsp}<<-section,>> +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
 StereoType:{nbsp}{nbsp} «CodeList»
-|
-|*Associations*
+|*Roles* 
 |*Attributes*
 |
 |==== 
 
 [[SpeciesValue-section]]
 ==== *Class SpeciesValue*
-Subclass of <<-section,>>
 
 include::../requirements/Vegetation/REQ_Vegetation_SpeciesValue.adoc[]
 
 |====
 |*Class SpeciesValue*
 |Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
-Subtype Of: {nbsp}{nbsp}<<-section,>> +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
 StereoType:{nbsp}{nbsp} «CodeList»
-|
-|*Associations*
+|*Roles* 
 |*Attributes*
 |
 |==== 
   
-
 
 
