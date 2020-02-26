@@ -1,23 +1,19 @@
+[[conformance-section]]
+
 == Conformance
-This Best Practice defines XXXX.
 
-Requirements for N target types are considered:
-* AAAA
-* BBBB
+This standard defines a Conceptual Model which is independent of any encoding or formatting techniques. The Standardization Targets for this standard are Implementation Specifications. These Implementation Specifications specify how the Conceptual Model shall be implemented for specific technologies. Conformant Implementation Specifications provide evidence that they are an accurate representation of the Conceptual Model. This evidence shall include implementations of the abstract tests specified in Annex A (normative) of this document. 
 
-Conformance with this Best Practice shall be checked using all the relevant tests specified in Annex A (normative) of this document.
+Since this standard is agnostic to the implementating technologies, the specific techniques to be used for conformance testing cannot be specified. It is the responsiblity of the Implementation Specifications to provide evidence of conformance which is appropriate for the implementing technologies. This evidence should be provided as an annex to the Implementation Specification document. 
 
-In order to conform to this OGC® Best Practice, a software implementation shall choose to implement:
-* Any one of the conformance levels specified in Annex A (normative).
-* Any one of the Distributed Computing Platform profiles specified in Annexes TBD through TBD (normative).
+This standard identifies seventeen (17) conformance classes. One conformance class is defined for each Package in the UML model. Each conformance class is defined by one requirements class. The tests in Annex A are organized by Requirements Class. So an implementation of the _Core_ conformance class must pass all tests specified in Annex A for the _Core_ requirements class.
 
-All requirements-classes and conformance-classes described in this document are owned by the document(s) identified.
+Of these seventeen conformance classes, Implementation Specifications are only required to implement the _Core_ conformance class. All other conformance classes are optional. In the case where an implemented conformance class has a dependency on another conformance class, that conformance class shall also be implemented. 
 
-NOTE: the following is the 2.0 content
+The CityGML Conceptual Model is defined by the CityGML UML model. This specification is a representation of that UML model in document form. In the case of a discrepency between the UML model and this document, the UML model is authoritative. 
 
-Conformance targets addressed by this International standard are CityGML instance documents only. Future revisions of this International Standard may also address consumers or producers as conformance targets.
-Clauses 8 to 10 of this International standard specify separate CityGML XML Schema definitions and normative aspects, i.e. CityGML modules, which shall be used in CityGML instance documents in accordance with clause 7. Implementations are not required to support the full range of capabilities provided by the universe of all CityGML modules. Valid partial implementations are supported following the rules and guidelines for CityGML profiles in chapter 7.2.
-CityGML instance documents claiming conformance to this International Standard shall:
-a) conform to the rules and requirements specified in clauses 7 to 10;
-b) pass all relevant test cases of the abstract test suite in annex B.1;
-c) satisfy all relevant conformance classes of the abstract test suite related to CityGML modules in annex B.2.�
+
+
+
+
+

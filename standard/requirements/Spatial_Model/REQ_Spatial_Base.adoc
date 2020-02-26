@@ -1,7 +1,0 @@
-[[req_spatial_base]]
-[width="90%",cols="2,6"]
-|===
-^|*Requirement  {counter:req-id}* |*/req/spatial/base* 
-^|A |In order to geometrically represent a feature using the concept of implicit geometries, the corresponding thematic class of the feature shall define a spatial property of the type ImplicitRepresentationProperty-Type. Thus, for all CityGML extension modules only the type ImplicitRepresentationPropertyType shall be used for spatial properties providing implicit geometries.
-^|B |If the shape of an implicit geometry is referenced by an URI using the libraryObject property (type: xs:anyURI) of the element ImplicitGeometry, also the MIME type of the denoted object must be speci-fied.
-|===
