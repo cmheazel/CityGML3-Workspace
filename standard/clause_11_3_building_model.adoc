@@ -3,9 +3,16 @@
 
 include::requirements/requirements_class_building.adoc[]
 
-The building model is one of the most detailed thematic concepts of CityGML. It allows for the representation of thematic and spatial aspects of buildings and building parts in five levels of detail, LOD0 to LOD4. The building model of CityGML is defined by the thematic extension module Building (cf. chapter 7). Fig. 26 provides examples of 3D city and building models in LOD1 – 4.
+The building model is one of the most detailed thematic concepts of CityGML. It allows for the representation of thematic and spatial aspects of buildings and building parts. The UML diagram of the building model is depicted in <<building-uml,Building UML Diagram>>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_building-model_section[here].
 
-The UML diagram of the building model is depicted in <<building-uml,Building UML Diagram>>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_building-model_section[here].
+The pivotal class of the model is _AbstractBuilding_, which is a subclass of the thematic class _AbstractConstruction_ and transitively of the class _AbstractOccupiedSpace_. _AbstractBuilding_ is specialised either to a _Building_ or to a _BuildingPart_. Both classes inherit the attributes of _AbstractBuilding_. This set of parameters is suited for roughly reconstructing the three-dimensional shape of a building and can be provided by cadastral systems.
+The interior of a building is represented in the building model by the class _BuildingRoom_. This allows a virtual accessibility of buildings, e.g. for visitor information in a museum (“Location Based Services“), the examination of accommodation standards or the presentation of daylight illumination of a building.
+The _BuildingInstallation_ class is used for building elements strongly affecting the outer or inner appearance of a building and which cannot be moved, like balconies, chimneys, dormers or stairs.
+Furniture, like tables and chairs, which represent movable objects inside a building, are modelled with the class _BuildingFurniture_.
+The class _AbstractBuildingSubdivision_, and in particular the two specialisations _BuildingUnit_ and _Storey_ allow for representing building units (like apartments) and storeys.
+The feature type _BuildingConstructiveElement_  allows for mapping constructive elements from BIM data sets given in the IFC standard (e.g. the IFC classes IfcWall, IfcRoof, IfcBeam, IfcSlab, etc.) onto CityGML.
+
+
 
 [[building-uml]]
 .UML diagram of CityGML’s building model.
@@ -84,7 +91,7 @@ The abstract class _AbstractBuilding contains properties for building attributes
 | | | | |•
 |===
 
-===== BuildingInstallationType, BuildingInstallation 
+===== BuildingInstallationType, BuildingInstallation
 
 Note: insert BuildingInstallation UML
 
@@ -188,7 +195,7 @@ NOTE: insert IntBuildingInstallationType, IntBuildingInstallation UML
 
 ==== Modelling building storeys using CityObjectGroups
 
-CityGML does currently not provide a specific concept for the representation of storeys as it is available in the AEC/FM standard IFC (IAI 2006). However, a storey can be represented as an explicit aggregation of all build-ing features on a certain height level using CityGML’s notion of CityObjectGroups (cf. chapter 10.11). 
+CityGML does currently not provide a specific concept for the representation of storeys as it is available in the AEC/FM standard IFC (IAI 2006). However, a storey can be represented as an explicit aggregation of all build-ing features on a certain height level using CityGML’s notion of CityObjectGroups (cf. chapter 10.11).
 
 In order to model building storeys with CityGML’s generic grouping concept, a nested hierarchy of CityObject-Group objects has to be used. In a first step, all semantic objects belonging to a specific storey are grouped. The attributes of the corresponding CityObjectGroup object are set as follows:
 
@@ -197,4 +204,3 @@ In order to model building storeys with CityGML’s generic grouping concept, a 
 * The storey name or number can be stored in the gml:name property. The storey number attribute shall be assigned the value “storeyNo_X” with decimal number X in order to denote that this group repre-sents a storey wrt. a specific number.
 
 In a second step, the CityObjectGroup objects representing different storeys are grouped themselves. By using the generic aggregation concept of CityObjectGroup, the “storeys group” is associated with the corresponding Building or BuildingPart object. The class attribute of the storeys group shall be assigned the value “building storeys”.
-
