@@ -31,43 +31,43 @@ DTLIST="Transaction"
 
 for I in $ACLIST
 do
-cat REQ_Package_Abstract_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$PKG/ | sed s/"REFF"/"<<"$I/ >../standard/requirements/$PKG/REQ_`echo $PKG`_$I.adoc
+cat ./Templates/REQ_Package_Abstract_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$PKG/ | sed s/"REFF"/"<<"$I/ >../standard/requirements/$PKG/REQ_`echo $PKG`_$I.adoc
 done
 
 for I in $CCLIST
 do
-cat REQ_Package_Class_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$PKG/ | sed s/"REFF"/"<<"$I/ >../standard/requirements/$PKG/REQ_`echo $PKG`_$I.adoc
+cat ./Templates/REQ_Package_Class_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$PKG/ | sed s/"REFF"/"<<"$I/ >../standard/requirements/$PKG/REQ_`echo $PKG`_$I.adoc
 done
 
 for I in $CLLIST
 do
-cat REQ_Package_CodeList_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$PKG/ | sed s/"REFF"/"<<"$I/ >../standard/requirements/$PKG/REQ_`echo $PKG`_$I.adoc
+cat ./Templates/REQ_Package_CodeList_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$PKG/ | sed s/"REFF"/"<<"$I/ >../standard/requirements/$PKG/REQ_`echo $PKG`_$I.adoc
 done
 
 for I in $DTLIST
 do
-cat REQ_Package_BasicType_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$PKG/ | sed s/"REFF"/"<<"$I/ >../standard/requirements/$PKG/REQ_`echo $PKG`_$I.adoc
+cat ./Templates/REQ_Package_BasicType_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$PKG/ | sed s/"REFF"/"<<"$I/ >../standard/requirements/$PKG/REQ_`echo $PKG`_$I.adoc
 done
 
 # Now do the same thing for the Abstract Test templates
 
 for I in $ACLIST
 do
-cat AT_Package_Abstract_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$PKG/g | sed s/"REFF"/"<<"$I/ >../standard/abstract_tests/$PKG/ATS_`echo $PKG`_$I.adoc
+cat ./Templates/AT_Package_Abstract_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$PKG/g | sed s/"REFF"/"<<"$I/ >../standard/abstract_tests/$PKG/ATS_`echo $PKG`_$I.adoc
 done
 
 for I in $CCLIST
 do
-cat AT_Package_Class_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$PKG/g | sed s/"REFF"/"<<"$I/ >../standard/abstract_tests/$PKG/ATS_`echo $PKG`_$I.adoc
+cat ./Templates/AT_Package_Class_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$PKG/g | sed s/"REFF"/"<<"$I/ >../standard/abstract_tests/$PKG/ATS_`echo $PKG`_$I.adoc
 done
 
 for I in $CLLIST
 do
-cat AT_Package_CodeList_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$PKG/g | sed s/"REFF"/"<<"$I/ >../standard/abstract_tests/$PKG/ATS_`echo $PKG`_$I.adoc
+cat ./Templates/AT_Package_CodeList_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$PKG/g | sed s/"REFF"/"<<"$I/ >../standard/abstract_tests/$PKG/ATS_`echo $PKG`_$I.adoc
 done
 
 for I in $DTLIST
 do
-cat AT_Package_BasicType_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$PKG/g | sed s/"REFF"/"<<"$I/ >../standard/abstract_tests/$PKG/ATS_`echo $PKG`_$I.adoc
+cat ./Templates/AT_Package_BasicType_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$PKG/g | sed s/"REFF"/"<<"$I/ >../standard/abstract_tests/$PKG/ATS_`echo $PKG`_$I.adoc
 done
 
