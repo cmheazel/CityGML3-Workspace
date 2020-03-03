@@ -3,7 +3,7 @@
 
 |====
 |*Package Construction*
-|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} +
+|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}The Construction module supports representation of key elements of different types of constructions. These key elements include construction surfaces (e.g floor and ceiling), windows and doors, constructive elements (e.g. beams and slabs), installations, and furniture. +
 Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
 Parent Package: {nbsp}{nbsp}CityGML
 |====
@@ -14,55 +14,55 @@ Parent Package: {nbsp}{nbsp}CityGML
 include::../requirements/Construction/REQ_Construction_AbstractConstruction.adoc[]
 
 |====
-|*Class AbstractConstruction*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractConstruction* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractConstruction is the abstract superclass for objects that are manufactured by humans from construction materials, are connected to earth and are intended to be permanent. A connection with the ground also exists when the construction rests by its own weight on the ground or is moveable limited on stationary rails or if the construction is intended to be used mainly stationary. +
 Subclass Of: {nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} boundary +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}conditionOfConstruction +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}conditionOfConstruction +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} ConditionOfConstructionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} [INSPIRE] Status of the construction.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the life-cycle status of the construction. [cf. INSPIRE]  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}constructionEvent +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}constructionEvent +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} ConstructionEvent +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Date of renovation of a construction.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Describes specific events in the life-time of the construction.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}dateOfConstruction +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}dateOfConstruction +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Date +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Date of completion of a construction.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the date at which the construction was completed.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}dateOfDemolition +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}dateOfDemolition +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Date +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Date of demolition of a construction.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the date at which the construction was demolished.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}elevation +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}elevation +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Elevation +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} [INSPIRE] Vertically-constrained dimensional property consisting of an absolute measure referenced to a well-defined surface which is commonly taken as origin (geoïd, water level, etc.).  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies qualified elevations of the construction in relation to a well-defined surface which is commonly taken as origin (e.g. geoid or water level). [cf. INSPIRE]  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}height +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}height +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Height +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} [INSPIRE] Height above ground.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies qualified heights of the construction above ground or below ground. [cf. INSPIRE]  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}occupancy +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}occupancy +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Occupancy +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Provides qualified information on the residency of persons, animals, or other moveable objects in the construction.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -75,15 +75,15 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Construction/REQ_Construction_AbstractConstructionSurface.adoc[]
 
 |====
-|*Class AbstractConstructionSurface*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractConstructionSurface* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractConstructionSurface is the abstract superclass for different kinds of surfaces that bound a construction. +
 Subclass Of: {nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} fillingSurface +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..* +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractFillingSurface-section,AbstractFillingSurface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} fillingSurface +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFillingSurface-section,AbstractFillingSurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the surfaces that seal the openings of the construction surface. +
 |*Attributes*
 |
 |==== 
@@ -94,23 +94,23 @@ Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 include::../requirements/Construction/REQ_Construction_AbstractConstructiveElement.adoc[]
 
 |====
-|*Class AbstractConstructiveElement*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractConstructiveElement* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractConstructiveElement is the abstract superclass for the representation of volumetric elements of a construction. Examples are walls, beams, slabs. +
 Subclass Of: {nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} filling +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..* +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractFillingElement-section,AbstractFillingElement>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} filling +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFillingElement-section,AbstractFillingElement>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the elements that fill the opening of the constructive element. +
+|Relation Name: {nbsp}{nbsp} boundary +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}isStructuralElement +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}isStructuralElement +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Boolean +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates whether the constructive element is essential from a structural point of view. A structural element cannot be omitted without collapsing of the construction. Examples are pylons and anchorages of bridges.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -123,11 +123,11 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Construction/REQ_Construction_AbstractFillingElement.adoc[]
 
 |====
-|*Class AbstractFillingElement*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractFillingElement* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractFillingElement is the abstract superclass for different kinds of elements that fill the openings of constructive elements. +
 Subclass Of: {nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -138,11 +138,11 @@ StereoType:{nbsp}{nbsp} «FeatureType»
 include::../requirements/Construction/REQ_Construction_AbstractFillingSurface.adoc[]
 
 |====
-|*Class AbstractFillingSurface*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractFillingSurface* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractFillingSurface is the abstract superclass for different kinds of surfaces that seal openings filled by filling elements. +
 Subclass Of: {nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -153,11 +153,11 @@ StereoType:{nbsp}{nbsp} «FeatureType»
 include::../requirements/Construction/REQ_Construction_AbstractFurniture.adoc[]
 
 |====
-|*Class AbstractFurniture*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractFurniture* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractFurniture is the abstract superclass for the representation of furniture objects of a construction. +
 Subclass Of: {nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -168,19 +168,19 @@ StereoType:{nbsp}{nbsp} «FeatureType»
 include::../requirements/Construction/REQ_Construction_AbstractInstallation.adoc[]
 
 |====
-|*Class AbstractInstallation*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractInstallation* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractInstallation is the abstract superclass for the representation of installation objects of a construction. +
 Subclass Of: {nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} boundary +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}relationToConstruction +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}relationToConstruction +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RelationToConstruction +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates whether the installation is located inside and/or outside of the construction.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -193,11 +193,11 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Construction/REQ_Construction_CeilingSurface.adoc[]
 
 |====
-|*Class CeilingSurface*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class CeilingSurface* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A CeilingSurface is a surface that represents the interior ceiling of a construction. An example is the ceiling of a room. +
 Subclass Of: {nbsp}{nbsp} <<AbstractConstructionSurface-section,AbstractConstructionSurface>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -208,35 +208,35 @@ StereoType:{nbsp}{nbsp} «FeatureType»
 include::../requirements/Construction/REQ_Construction_Door.adoc[]
 
 |====
-|*Class Door*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class Door* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A Door is a construction for closing an opening intended primarily for access or egress or both. [cf. ISO 6707-1] +
 Subclass Of: {nbsp}{nbsp} <<AbstractFillingElement-section,AbstractFillingElement>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<DoorSurface-section,DoorSurface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} address +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<Address-section,Address>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Relation between Door and Address. +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} boundary +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<DoorSurface-section,DoorSurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+|Relation Name: {nbsp}{nbsp} address +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<Address-section,Address>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the addresses that are assigned to the Door. +
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}class +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WindowClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DoorClassValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the Door.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}function +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WindowFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DoorFunctionValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the Door.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WindowUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DoorUsageValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the Door.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -249,11 +249,11 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Construction/REQ_Construction_DoorClassValue.adoc[]
 
 |====
-|*Class DoorClassValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class DoorClassValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DoorClassValue is a code list used to further classify a Door. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -264,11 +264,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Construction/REQ_Construction_DoorFunctionValue.adoc[]
 
 |====
-|*Class DoorFunctionValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class DoorFunctionValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DoorFunctionValue is a code list that enumerates the different purposes of a Door. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -279,15 +279,15 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Construction/REQ_Construction_DoorSurface.adoc[]
 
 |====
-|*Class DoorSurface*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class DoorSurface* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A DoorSurface is either a boundary surface of a Door feature or a surface that seals an opening filled by a door. +
 Subclass Of: {nbsp}{nbsp} <<AbstractFillingSurface-section,AbstractFillingSurface>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} address +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<Address-section,Address>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} address +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<Address-section,Address>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the addresses that are assigned to the DoorSurface. +
 |*Attributes*
 |
 |==== 
@@ -298,11 +298,11 @@ Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 include::../requirements/Construction/REQ_Construction_DoorUsageValue.adoc[]
 
 |====
-|*Class DoorUsageValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class DoorUsageValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DoorUsageValue is a code list that enumerates the different uses of a Door. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -313,11 +313,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Construction/REQ_Construction_ElevationReferenceValue.adoc[]
 
 |====
-|*Class ElevationReferenceValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class ElevationReferenceValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} ElevationReferenceValue is a code list that enumerates the different elevation reference levels used to measure construction heights. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -328,11 +328,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Construction/REQ_Construction_EventValue.adoc[]
 
 |====
-|*Class EventValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class EventValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} EventValue is a code list that enumerates the different events of a construction. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -343,11 +343,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Construction/REQ_Construction_FloorSurface.adoc[]
 
 |====
-|*Class FloorSurface*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class FloorSurface* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A FloorSurface is surface that represents the interior floor of a construction. An example is the floor of a room. +
 Subclass Of: {nbsp}{nbsp} <<AbstractConstructionSurface-section,AbstractConstructionSurface>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -358,11 +358,11 @@ StereoType:{nbsp}{nbsp} «FeatureType»
 include::../requirements/Construction/REQ_Construction_GroundSurface.adoc[]
 
 |====
-|*Class GroundSurface*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class GroundSurface* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A GroundSurface is a surface that represents the ground plate of a construction. The polygon defining the ground plate is congruent with the footprint of the construction. +
 Subclass Of: {nbsp}{nbsp} <<AbstractConstructionSurface-section,AbstractConstructionSurface>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -373,11 +373,11 @@ StereoType:{nbsp}{nbsp} «FeatureType»
 include::../requirements/Construction/REQ_Construction_InteriorWallSurface.adoc[]
 
 |====
-|*Class InteriorWallSurface*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class InteriorWallSurface* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} An InteriorWallSurface is a surface that is visible from inside a construction. An example is the wall of a room. +
 Subclass Of: {nbsp}{nbsp} <<AbstractConstructionSurface-section,AbstractConstructionSurface>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -388,27 +388,27 @@ StereoType:{nbsp}{nbsp} «FeatureType»
 include::../requirements/Construction/REQ_Construction_OtherConstruction.adoc[]
 
 |====
-|*Class OtherConstruction*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class OtherConstruction* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} An OtherConstruction is a construction that is not covered by any of the other subclasses of AbstractConstruction. +
 Subclass Of: {nbsp}{nbsp} <<AbstractConstruction-section,AbstractConstruction>> +
-StereoType:{nbsp}{nbsp} «TopLevelFeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «TopLevelFeatureType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} OtherConstructionClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the OtherConstruction.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} OtherConstructionFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the OtherConstruction.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} OtherConstructionUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the OtherConstruction.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -421,11 +421,11 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Construction/REQ_Construction_OtherConstructionClassValue.adoc[]
 
 |====
-|*Class OtherConstructionClassValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class OtherConstructionClassValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} OtherConstructionClassValue is a code list used to further classify an OtherConstruction. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -436,11 +436,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Construction/REQ_Construction_OtherConstructionFunctionValue.adoc[]
 
 |====
-|*Class OtherConstructionFunctionValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class OtherConstructionFunctionValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} OtherConstructionFunctionValue is a code list that enumerates the different purposes of an OtherConstruction. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -451,11 +451,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Construction/REQ_Construction_OtherConstructionUsageValue.adoc[]
 
 |====
-|*Class OtherConstructionUsageValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class OtherConstructionUsageValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} OtherConstructionUsageValue is a code list that enumerates the different uses of an OtherConstruction. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -466,11 +466,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Construction/REQ_Construction_OuterCeilingSurface.adoc[]
 
 |====
-|*Class OuterCeilingSurface*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class OuterCeilingSurface* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} An OuterCeilingSurface is a surface that belongs to the outer building shell with the orientation pointing downwards. An example is the ceiling of a loggia. +
 Subclass Of: {nbsp}{nbsp} <<AbstractConstructionSurface-section,AbstractConstructionSurface>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -481,11 +481,11 @@ StereoType:{nbsp}{nbsp} «FeatureType»
 include::../requirements/Construction/REQ_Construction_OuterFloorSurface.adoc[]
 
 |====
-|*Class OuterFloorSurface*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class OuterFloorSurface* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} An OuterFloorSurface is a surface that belongs to the outer construction shell with the orientation pointing upwards. An example is the floor of a loggia. +
 Subclass Of: {nbsp}{nbsp} <<AbstractConstructionSurface-section,AbstractConstructionSurface>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -496,11 +496,11 @@ StereoType:{nbsp}{nbsp} «FeatureType»
 include::../requirements/Construction/REQ_Construction_RoofSurface.adoc[]
 
 |====
-|*Class RoofSurface*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class RoofSurface* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A RoofSurface is a surface that delimits major roof parts of a construction. +
 Subclass Of: {nbsp}{nbsp} <<AbstractConstructionSurface-section,AbstractConstructionSurface>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -511,11 +511,11 @@ StereoType:{nbsp}{nbsp} «FeatureType»
 include::../requirements/Construction/REQ_Construction_WallSurface.adoc[]
 
 |====
-|*Class WallSurface*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class WallSurface* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A WallSurface is a surface that is part of the building facade visible from the outside. +
 Subclass Of: {nbsp}{nbsp} <<AbstractConstructionSurface-section,AbstractConstructionSurface>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -526,31 +526,31 @@ StereoType:{nbsp}{nbsp} «FeatureType»
 include::../requirements/Construction/REQ_Construction_Window.adoc[]
 
 |====
-|*Class Window*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class Window* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A Window is a construction for closing an opening in a wall or roof, primarily intended to admit light and/or provide ventilation. [cf. ISO 6707-1] +
 Subclass Of: {nbsp}{nbsp} <<AbstractFillingElement-section,AbstractFillingElement>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<WindowSurface-section,WindowSurface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} boundary +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<WindowSurface-section,WindowSurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WindowClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the Window.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WindowFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the Window.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WindowUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the Window.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -563,11 +563,11 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Construction/REQ_Construction_WindowClassValue.adoc[]
 
 |====
-|*Class WindowClassValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class WindowClassValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WindowClassValue is a code list used to further classify a Window. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -578,11 +578,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Construction/REQ_Construction_WindowFunctionValue.adoc[]
 
 |====
-|*Class WindowFunctionValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class WindowFunctionValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WindowFunctionValue is a code list that enumerates the different purposes of a Window. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -593,11 +593,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Construction/REQ_Construction_WindowSurface.adoc[]
 
 |====
-|*Class WindowSurface*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class WindowSurface* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A WindowSurface is either a boundary surface of a Window feature or a surface that seals an opening filled by a window. +
 Subclass Of: {nbsp}{nbsp} <<AbstractFillingSurface-section,AbstractFillingSurface>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -608,11 +608,11 @@ StereoType:{nbsp}{nbsp} «FeatureType»
 include::../requirements/Construction/REQ_Construction_WindowUsageValue.adoc[]
 
 |====
-|*Class WindowUsageValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class WindowUsageValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WindowUsageValue is a code list that enumerates the different uses of a Window. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -623,45 +623,45 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Construction/REQ_Construction_ConditionOfConstructionValue.adoc[]
 
 |====
-|*Class ConditionOfConstructionValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class ConditionOfConstructionValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} ConditionOfConstructionValue enumerates different conditions of a construction. [cf. INSPIRE] +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} 
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} 
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}declined +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}declined +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} [INSPIRE] The construction cannot be used under normal conditions, though its main elements (walls, roof) are still present.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the construction cannot be used under normal conditions, though its main elements (walls, roof) are still present. [cf. INSPIRE]  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}demolished +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}demolished +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} [INSPIRE] The construction has been demolished. There are no more visible remains.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the construction has been demolished. There are no more visible remains. [cf. INSPIRE]  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}functional +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}functional +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} [INSPIRE] The construction is functional.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the construction is functional. [cf. INSPIRE]  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}projected +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}projected +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} [INSPIRE] The construction is being designed. Construction has not yet started.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the construction is being designed. Construction works have not yet started. [cf. INSPIRE]  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}ruin +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}ruin +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} [INSPIRE] The construction has been partly demolished and some main elements (roof, walls) have been destroyed. There are some visible remains of the construction.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the construction has been partly demolished and some main elements (roof, walls) have been destroyed. There are some visible remains of the construction. [cf. INSPIRE]  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}underConstruction +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}underConstruction +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} [INSPIRE] The construction is under construction and not yet functional. This applies only to the initial construction of the construction and not to maintenance work.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the construction is under construction and not yet functional. This applies only to the initial construction works of the construction and not to maintenance work. [cf. INSPIRE]  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
@@ -674,27 +674,27 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Construction/REQ_Construction_ConstructionEvent.adoc[]
 
 |====
-|*Class ConstructionEvent*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class ConstructionEvent* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A ConstructionEvent is a data type used to describe a specific event that is associated with a construction. Examples are the issuing of a building permit or the renovation of a building. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «DataType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «DataType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}dateOfEvent +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}dateOfEvent +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Date +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the date at which the event took or will take place.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}description +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}description +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CharacterString +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Provides additional information on the event.   +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}event +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}event +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} EventValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific event type.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -707,21 +707,21 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Construction/REQ_Construction_Elevation.adoc[]
 
 |====
-|*Class Elevation*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class Elevation* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Elevation is a data type that includes the elevation value itself and information on how this elevation was measured. [cf. INSPIRE] +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «DataType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «DataType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}elevationReference +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}elevationReference +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} ElevationReferenceValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} [INSPIRE] Element where the elevation was measured.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the level from which the elevation was measured. [cf. INSPIRE]  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}elevationValue +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}elevationValue +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DirectPosition +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} [INSPIRE] Value of the elevation.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the value of the elevation. [cf. INSPIRE]  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -734,33 +734,33 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Construction/REQ_Construction_Height.adoc[]
 
 |====
-|*Class Height*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class Height* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Height represents a vertical distance (measured or estimated) between a low reference and a high reference. [cf. INSPIRE] +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «DataType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «DataType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}highReference +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}highReference +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} ElevationReferenceValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} [INSPIRE] Element used as the high reference.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the high point used to calculate the value of the height. [cf. INSPIRE]  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}lowReference +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}lowReference +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} ElevationReferenceValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} [INSPIRE] Element as the low reference.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the low point used to calculate the value of the height. [cf. INSPIRE]  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}status +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}status +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} HeightStatusValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} [INSPIRE] The way the height has been captured.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the way the height has been captured. [cf. INSPIRE]  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}value +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}value +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} [INSPIRE] Value of the height above ground.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the value of the height above or below ground. [cf. INSPIRE]  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -773,21 +773,21 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Construction/REQ_Construction_HeightStatusValue.adoc[]
 
 |====
-|*Class HeightStatusValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class HeightStatusValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} HeightStatusValue enumerates the different methods used to capture a height. [cf. INSPIRE] +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} 
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} 
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}estimated +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}estimated +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} [INSPIRE] The height has been estimated and not measured.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the height has been estimated and not measured. [cf. INSPIRE]  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}measured +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}measured +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} [INSPIRE] The height has been (directly or indirectly) measured.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the height has been (directly or indirectly) measured. [cf. INSPIRE]  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
@@ -800,27 +800,27 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Construction/REQ_Construction_RelationToConstruction.adoc[]
 
 |====
-|*Class RelationToConstruction*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class RelationToConstruction* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RelationToConstruction is an enumeration used to describe whether an installation is positioned inside and/or outside of a construction. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} 
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} 
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}inside +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}inside +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the installation is positioned inside of the construction.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}outside +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}outside +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the installation is positioned outside of the construction.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}bothInsideAndOutside +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}bothInsideAndOutside +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the installation is positioned inside as well as outside of the construction.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 

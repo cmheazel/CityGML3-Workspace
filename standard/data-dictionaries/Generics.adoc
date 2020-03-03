@@ -3,7 +3,7 @@
 
 |====
 |*Package Generics*
-|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} +
+|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}The Generics module supports application-specific extensions to the CityGML data model. These extensions may be used to model and exchange additional attributes and features not covered by the predefined thematic classes of CityGML. Generic extensions shall only be used if appropriate thematic classes or attributes are not provided by any other CityGML module. +
 Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
 Parent Package: {nbsp}{nbsp}CityGML
 |====
@@ -14,27 +14,27 @@ Parent Package: {nbsp}{nbsp}CityGML
 include::../requirements/Generics/REQ_Generics_GenericLogicalSpace.adoc[]
 
 |====
-|*Class GenericLogicalSpace*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class GenericLogicalSpace* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A GenericLogicalSpace is a space that is not represented by any explicitly modelled AbstractLogicalSpace subclass within CityGML. +
 Subclass Of: {nbsp}{nbsp} <<AbstractLogicalSpace-section,AbstractLogicalSpace>> +
-StereoType:{nbsp}{nbsp} «TopLevelFeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «TopLevelFeatureType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericLogicalSpaceClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the GenericLogicalSpace.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericLogicalSpaceFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the GenericLogicalSpace.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericLogicalSpaceUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the GenericLogicalSpace.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -47,11 +47,11 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Generics/REQ_Generics_GenericLogicalSpaceClassValue.adoc[]
 
 |====
-|*Class GenericLogicalSpaceClassValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class GenericLogicalSpaceClassValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericLogicalSpaceClassValue is a code list used to further classify a GenericLogicalSpace. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -62,11 +62,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Generics/REQ_Generics_GenericLogicalSpaceFunctionValue.adoc[]
 
 |====
-|*Class GenericLogicalSpaceFunctionValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class GenericLogicalSpaceFunctionValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericLogicalSpaceFunctionValue is a code list that enumerates the different purposes of a GenericLogicalSpace. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -77,11 +77,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Generics/REQ_Generics_GenericLogicalSpaceUsageValue.adoc[]
 
 |====
-|*Class GenericLogicalSpaceUsageValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class GenericLogicalSpaceUsageValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericLogicalSpaceUsageValue is a code list that enumerates the different uses of a GenericLogicalSpace. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -92,27 +92,27 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Generics/REQ_Generics_GenericOccupiedSpace.adoc[]
 
 |====
-|*Class GenericOccupiedSpace*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class GenericOccupiedSpace* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A GenericOccupiedSpace is a space that is not represented by any explicitly modelled AbstractOccupiedSpace subclass within CityGML. +
 Subclass Of: {nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
-StereoType:{nbsp}{nbsp} «TopLevelFeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «TopLevelFeatureType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericOccupiedSpaceClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the GenericOccupiedSpace.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericOccupiedSpaceFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the GenericOccupiedSpace.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericOccupiedSpaceUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the GenericOccupiedSpace.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -125,11 +125,11 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Generics/REQ_Generics_GenericOccupiedSpaceClassValue.adoc[]
 
 |====
-|*Class GenericOccupiedSpaceClassValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class GenericOccupiedSpaceClassValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericOccupiedSpaceClassValue is a code list used to further classify a GenericOccupiedSpace. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -140,11 +140,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Generics/REQ_Generics_GenericOccupiedSpaceFunctionValue.adoc[]
 
 |====
-|*Class GenericOccupiedSpaceFunctionValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class GenericOccupiedSpaceFunctionValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericOccupiedSpaceFunctionValue is a code list that enumerates the different purposes of a GenericOccupiedSpace. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -155,11 +155,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Generics/REQ_Generics_GenericOccupiedSpaceUsageValue.adoc[]
 
 |====
-|*Class GenericOccupiedSpaceUsageValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class GenericOccupiedSpaceUsageValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericOccupiedSpaceUsageValue is a code list that enumerates the different uses of a GenericOccupiedSpace. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -170,27 +170,27 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Generics/REQ_Generics_GenericThematicSurface.adoc[]
 
 |====
-|*Class GenericThematicSurface*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class GenericThematicSurface* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A GenericThematicSurface is a surface that is not represented by any explicitly modelled AbstractThematicSurface subclass within CityGML. +
 Subclass Of: {nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
-StereoType:{nbsp}{nbsp} «TopLevelFeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «TopLevelFeatureType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericThematicSurfaceClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the GenericThematicSurface.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericThematicSurfaceFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the GenericThematicSurface.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericThematicSurfaceUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the GenericThematicSurface.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -203,11 +203,11 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Generics/REQ_Generics_GenericThematicSurfaceClassValue.adoc[]
 
 |====
-|*Class GenericThematicSurfaceClassValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class GenericThematicSurfaceClassValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericThematicSurfaceClassValue is a code list used to further classify a GenericThematicSurface. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -218,11 +218,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Generics/REQ_Generics_GenericThematicSurfaceFunctionValue.adoc[]
 
 |====
-|*Class GenericThematicSurfaceFunctionValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class GenericThematicSurfaceFunctionValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericThematicSurfaceFunctionValue is a code list that enumerates the different purposes of a GenericThematicSurface. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -233,11 +233,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Generics/REQ_Generics_GenericThematicSurfaceUsageValue.adoc[]
 
 |====
-|*Class GenericThematicSurfaceUsageValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class GenericThematicSurfaceUsageValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericThematicSurfaceUsageValue is a code list that enumerates the different uses of a GenericThematicSurface. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -248,27 +248,27 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Generics/REQ_Generics_GenericUnoccupiedSpace.adoc[]
 
 |====
-|*Class GenericUnoccupiedSpace*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class GenericUnoccupiedSpace* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A GenericUnoccupiedSpace is a space that is not represented by any explicitly modelled AbstractUnoccupiedSpace subclass within CityGML. +
 Subclass Of: {nbsp}{nbsp} <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
-StereoType:{nbsp}{nbsp} «TopLevelFeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «TopLevelFeatureType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericUnoccupiedSpaceClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the GenericUnoccupiedSpace.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericUnoccupiedSpaceFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the GenericUnoccupiedSpace.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericUnoccupiedSpaceUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the GenericUnoccupiedSpace.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -281,11 +281,11 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Generics/REQ_Generics_GenericUnoccupiedSpaceClassValue.adoc[]
 
 |====
-|*Class GenericUnoccupiedSpaceClassValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class GenericUnoccupiedSpaceClassValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericUnoccupiedSpaceClassValue is a code list used to further classify a GenericUnoccupiedSpace. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -296,11 +296,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Generics/REQ_Generics_GenericUnoccupiedSpaceFunctionValue.adoc[]
 
 |====
-|*Class GenericUnoccupiedSpaceFunctionValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class GenericUnoccupiedSpaceFunctionValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericUnoccupiedSpaceFunctionValue is a code list that enumerates the different purposes of a GenericUnoccupiedSpace. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -311,11 +311,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Generics/REQ_Generics_GenericUnoccupiedSpaceUsageValue.adoc[]
 
 |====
-|*Class GenericUnoccupiedSpaceUsageValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class GenericUnoccupiedSpaceUsageValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GenericUnoccupiedSpaceUsageValue is a code list that enumerates the different uses of a GenericUnoccupiedSpace. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -326,21 +326,21 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Generics/REQ_Generics_DateAttribute.adoc[]
 
 |====
-|*Class DateAttribute*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class DateAttribute* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DateAttribute is a data type used to define generic attributes of type "Date". +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «DataType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «DataType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}name +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}name +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CharacterString +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the name of the DateAttribute.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}value +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}value +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Date +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Value of the Generic Attribute.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the "Date" value.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -353,21 +353,21 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Generics/REQ_Generics_DoubleAttribute.adoc[]
 
 |====
-|*Class DoubleAttribute*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class DoubleAttribute* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DoubleAttribute is a data type used to define generic attributes of type "Double". +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «DataType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «DataType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}name +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}name +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CharacterString +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the name of the DoubleAttribute.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}value +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}value +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Real +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Value of the Generic Attribute.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the "Double" value.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -380,25 +380,25 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Generics/REQ_Generics_GenericAttributeSet.adoc[]
 
 |====
-|*Class GenericAttributeSet*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class GenericAttributeSet* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A GenericAttributeSet is a named collection of generic attributes. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «DataType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} genericAttribute +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  1..* +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «DataType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} genericAttribute +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  1..* +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the generic attributes that are part of the GenericAttributeSet. +
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}codeSpace +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}codeSpace +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} URI +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Codespace idcentifier of the Generic AttributeSet.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Associates the GenericAttributeSet with an authority that maintains the collection of generic attributes.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}name +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}name +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CharacterString +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the name of the GenericAttributeSet.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -411,21 +411,21 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Generics/REQ_Generics_IntAttribute.adoc[]
 
 |====
-|*Class IntAttribute*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class IntAttribute* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} IntAttribute is a data type used to define generic attributes of type "Integer". +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «DataType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «DataType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}name +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}name +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CharacterString +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the name of the IntAttribute.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}value +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}value +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Integer +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Value of the Generic Attribute.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the "Integer" value.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -438,21 +438,21 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Generics/REQ_Generics_MeasureAttribute.adoc[]
 
 |====
-|*Class MeasureAttribute*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class MeasureAttribute* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} MeasureAttribute is a data type used to define generic attributes of type "Measure". +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «DataType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «DataType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}name +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}name +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CharacterString +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the name of the MeasureAttribute.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}value +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}value +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Measure +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Value of the Generic Attribute.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the value of the MeasureAttribute. The value is of type "Measure", which can additionally provide the units of measure. [cf. ISO 19103]  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -465,21 +465,21 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Generics/REQ_Generics_StringAttribute.adoc[]
 
 |====
-|*Class StringAttribute*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class StringAttribute* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} StringAttribute is a data type used to define generic attributes of type "String". +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «DataType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «DataType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}name +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}name +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CharacterString +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the name of the StringAttribute.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}value +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}value +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CharacterString +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Value of the Generic Attribute.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the "String" value.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -492,21 +492,21 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Generics/REQ_Generics_UriAttribute.adoc[]
 
 |====
-|*Class UriAttribute*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class UriAttribute* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} UriAttribute is a data type used to define generic attributes of type "URI". +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «DataType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «DataType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}name +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}name +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CharacterString +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the name of the UriAttribute.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}value +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}value +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} URI +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Value of the Generic Attribute.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the "URI" value.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 

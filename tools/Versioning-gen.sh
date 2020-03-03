@@ -22,7 +22,7 @@ ACLIST=" "
 CCLIST="Version VersionTransition"
 
 # CodeLists
-CLLIST="TransactionValue TransitionValue"
+CLLIST="TransactionValue TransitionValue TransactionTypeValue TransitionTypeValue"
 
 # And Data Types
 DTLIST="Transaction" 

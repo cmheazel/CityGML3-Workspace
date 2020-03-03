@@ -22,7 +22,7 @@ ACLIST="AbstractAtomicTimeSeries AbstractTimeSeries "
 CCLIST="CompositeTimeseries Dynamizer GenericTimeseries StandardFileTimeseries TabulatedFileTimeseries"
 
 # CodeLists
-CLLIST="AuthenticationValue SensorConnectionValue StandardFileValue TabulatedFileValue TimeseriesValue"
+CLLIST="AuthenticationValue SensorConnectionValue StandardFileValue TabulatedFileValue TimeseriesValue AuthenticationTypeValue SensorConnectionTypeValue StandardFileTypeValue TabulatedFileTypeValue TimeseriesTypeValue"
 
 # And Data Types
 DTLIST="SensorConnection TimeseriesComponent TimeValuePair" 

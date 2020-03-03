@@ -1,0 +1,9 @@
+[[ats_Dynamizer_SensorConnectionTypeValue]]
+[width="90%",cols="2,6a"]
+|===
+^|*Abstract Test {counter:ats-id}* |*/ats/Dynamizer/SensorConnectionTypeValue* 
+^|Test Purpose |To validate that the Implementation Specification correctly implements the UML Codelists defined in the Conceptual Model
+^|Requirement |<<req_Dynamizer_SensorConnectionTypeValue,/req/Dynamizer/rc-SensorConnectionTypeValue>>
+^|Test Method |Manual Inspection
+^|A |Validate that all instances of the SensorConnectionTypeValue codelist in the Implementation Specification can only take the values specified for that codelist in the Conceptual Model 
+|===

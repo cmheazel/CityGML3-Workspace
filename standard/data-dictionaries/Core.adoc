@@ -3,7 +3,7 @@
 
 |====
 |*Package Core*
-|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} +
+|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}The Core module defines the basic components of the CityGML data model. The Core module defines abstract base classes that define the core properties of more specialized thematic classes defined in other modules. The Core module also defines concrete classes that are common to other modules, for example basic data types.  +
 Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
 Parent Package: {nbsp}{nbsp}CityGML
 |====
@@ -14,11 +14,11 @@ Parent Package: {nbsp}{nbsp}CityGML
 include::../requirements/Core/REQ_Core_AbstractAppearance.adoc[]
 
 |====
-|*Class AbstractAppearance*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractAppearance* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractAppearance is the abstract superclass to represent any kind of appearance objects. +
 Subclass Of: {nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -29,45 +29,45 @@ StereoType:{nbsp}{nbsp} «FeatureType»
 include::../requirements/Core/REQ_Core_AbstractCityObject.adoc[]
 
 |====
-|*Class AbstractCityObject*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractCityObject* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractCityObject is the abstract superclass of all thematic classes within the CityGML data model. +
 Subclass Of: {nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} appearance +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractAppearance-section,AbstractAppearance>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} externalReference +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<ExternalReference-section,ExternalReference>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} dynamizer +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractDynamizer-section,AbstractDynamizer>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} generalizesTo +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} genericAttribute +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} relatedTo +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} externalReference +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<ExternalReference-section,ExternalReference>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} References external objects in other information systems that have a relation to the city object. +
+|Relation Name: {nbsp}{nbsp} dynamizer +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractDynamizer-section,AbstractDynamizer>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates Dynamizer objects to the city object. These allow timeseries data to override static attribute values of the city object. +
+|Relation Name: {nbsp}{nbsp} relatedTo +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates the city object to other city objects. It also describes how the city objects are related to each other. +
+|Relation Name: {nbsp}{nbsp} appearance +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractAppearance-section,AbstractAppearance>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates appearances to the city object. +
+|Relation Name: {nbsp}{nbsp} genericAttribute +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates generic attributes to the city object. +
+|Relation Name: {nbsp}{nbsp} generalizesTo +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates the city object to generalized representations of the same real-world object in different Levels of Detail. The direction of this relation is from the city object to the corresponding generalised city objects. +
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}relativeToTerrain +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}relativeToTerrain +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RelativeToTerrain +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Vertical position of the AbstractCityObject relative to the surrounding terrain.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Describes the vertical position of the city object relative to the surrounding terrain.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}relativeToWater +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}relativeToWater +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RelativeToWater +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Vertical position of the AbstractCityObject relative to a surrounding water surface.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Describes the vertical position of the city object relative to the surrounding water surface.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -80,11 +80,11 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Core/REQ_Core_AbstractDynamizer.adoc[]
 
 |====
-|*Class AbstractDynamizer*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractDynamizer* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractDynamizer is the abstract superclass to represent Dynamizer objects. +
 Subclass Of: {nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -95,33 +95,33 @@ StereoType:{nbsp}{nbsp} «FeatureType»
 include::../requirements/Core/REQ_Core_AbstractFeatureWithLifespan.adoc[]
 
 |====
-|*Class AbstractFeatureWithLifespan*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractFeatureWithLifespan* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractFeatureWithLifespan is the base class for all CityGML features. It allows the optional specification of the real-world and database times for the existence of each feature. +
 Subclass Of: {nbsp}{nbsp} <<AnyFeature-section,AnyFeature>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}creationDate +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}creationDate +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DateTime +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the date at which a CityGML feature was added to the CityModel.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}terminationDate +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}terminationDate +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DateTime +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the date at which a CityGML feature was removed from the CityModel.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}validFrom +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}validFrom +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DateTime +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the date at wich a CityGML feature started to exist in the real world.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}validTo +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}validTo +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DateTime +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the date at wich a CityGML feature ended to exist in the real world.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -134,11 +134,11 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Core/REQ_Core_AbstractLogicalSpace.adoc[]
 
 |====
-|*Class AbstractLogicalSpace*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractLogicalSpace* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractLogicalSpace is the abstract superclass for all types of logical spaces. Logical space refers to spaces that are not bounded by physical surfaces but are defined according to thematic considerations. +
 Subclass Of: {nbsp}{nbsp} <<AbstractSpace-section,AbstractSpace>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -149,23 +149,23 @@ StereoType:{nbsp}{nbsp} «FeatureType»
 include::../requirements/Core/REQ_Core_AbstractOccupiedSpace.adoc[]
 
 |====
-|*Class AbstractOccupiedSpace*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractOccupiedSpace* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractOccupiedSpace is the abstract superclass for all types of physically occupied spaces. Occupied space refers to spaces that are partially or entirely filled with matter. +
 Subclass Of: {nbsp}{nbsp} <<AbstractPhysicalSpace-section,AbstractPhysicalSpace>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod2ImplicitRepresentation +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<ImplicitGeometry-section,ImplicitGeometry>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to LOD2 implicit geometry of AbstractOccupiedSpace. +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod1ImplicitRepresentation +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<ImplicitGeometry-section,ImplicitGeometry>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to LOD1 implicit geometry of AbstractOccupiedSpace. +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod3ImplicitRepresentation +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<ImplicitGeometry-section,ImplicitGeometry>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to LOD3 implicit geometry of AbstractOccupiedSpace. +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} lod1ImplicitRepresentation +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<ImplicitGeometry-section,ImplicitGeometry>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates an implicit geometry that represents the occupied space in Level of Detail 1. +
+|Relation Name: {nbsp}{nbsp} lod2ImplicitRepresentation +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<ImplicitGeometry-section,ImplicitGeometry>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates an implicit geometry that represents the occupied space in Level of Detail 2. +
+|Relation Name: {nbsp}{nbsp} lod3ImplicitRepresentation +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<ImplicitGeometry-section,ImplicitGeometry>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates an implicit geometry that represents the occupied space in Level of Detail 3. +
 |*Attributes*
 |
 |==== 
@@ -176,27 +176,27 @@ Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to LOD3 implicit geome
 include::../requirements/Core/REQ_Core_AbstractPhysicalSpace.adoc[]
 
 |====
-|*Class AbstractPhysicalSpace*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractPhysicalSpace* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractPhysicalSpace is the abstract superclass for all types of physical spaces. Physical space refers to spaces that are fully or partially bounded by physical objects. +
 Subclass Of: {nbsp}{nbsp} <<AbstractSpace-section,AbstractSpace>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} pointCloud +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractPointCloud-section,AbstractPointCloud>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod3TerrainIntersectionCurve +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG 3D: Relation to intersection curve(s) between an LOD3 AbstractPhysicalSpace and a terrain (LOD1 or LOD2 or LOD3).  +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod2TerrainIntersectionCurve +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG 3D: Relation to intersection curve(s) between an LOD2 AbstractPhysicalSpace and a terrain (LOD1 or LOD2 or LOD3).  +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod1TerrainIntersectionCurve +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG 3D: Relation to intersection curve(s) between an LOD1 AbstractPhysicalSpace and a terrain (LOD1 or LOD2 or LOD3).  +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} lod3TerrainIntersectionCurve +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates a 3D MultiCurve geometry that represents the terrain intersection curve of the physical space in Level of Detail 3. +
+|Relation Name: {nbsp}{nbsp} lod2TerrainIntersectionCurve +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates a 3D MultiCurve geometry that represents the terrain intersection curve of the physical space in Level of Detail 2. +
+|Relation Name: {nbsp}{nbsp} lod1TerrainIntersectionCurve +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates a 3D MultiCurve geometry that represents the terrain intersection curve of the physical space in Level of Detail 1. +
+|Relation Name: {nbsp}{nbsp} pointCloud +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractPointCloud-section,AbstractPointCloud>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates a 3D PointCloud that represents the physical space. +
 |*Attributes*
 |
 |==== 
@@ -207,11 +207,11 @@ Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG 3D: Relation to intersectio
 include::../requirements/Core/REQ_Core_AbstractPointCloud.adoc[]
 
 |====
-|*Class AbstractPointCloud*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractPointCloud* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractPointCloud is the abstract superclass to represent PointCloud objects. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -222,71 +222,71 @@ StereoType:{nbsp}{nbsp} «FeatureType»
 include::../requirements/Core/REQ_Core_AbstractSpace.adoc[]
 
 |====
-|*Class AbstractSpace*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractSpace* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractSpace is the abstract superclass for all types of spaces. A space is an entity of volumetric extent in the real world. +
 Subclass Of: {nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod3MultiCurve +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD3 curve geometry of AbstractSpace. +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod2MultiSurface +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD2 surface geometry of AbstractSpace. +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod3Solid +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_Solid-section,GM_Solid>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD3 solid geometry of AbstractSpace. +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod2Solid +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_Solid-section,GM_Solid>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD2 solid geometry of AbstractSpace. +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod1Solid +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_Solid-section,GM_Solid>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD1 solid geometry of AbstractSpace. +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod0Point +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_Point-section,GM_Point>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD0 point geometry of AbstractSpace. +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod0MultiSurface +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD0 surface geometry of AbstractSpace. +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod2MultiCurve +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD2 curve geometry of AbstractSpace. +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod3MultiSurface +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD3 surface geometry of AbstractSpace. +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod0MultiCurve +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD0 curve geometry of AbstractSpace. +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} boundary +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates surfaces that bound the space. +
+|Relation Name: {nbsp}{nbsp} lod2MultiCurve +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates a 3D MultiCurve geometry that represents the space in Level of Detail 2. +
+|Relation Name: {nbsp}{nbsp} lod2MultiSurface +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates a 3D MultiSurface geometry that represents the space in Level of Detail 2. +
+|Relation Name: {nbsp}{nbsp} lod1Solid +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_Solid-section,GM_Solid>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates a 3D Solid geometry that represents the space in Level of Detail 1. +
+|Relation Name: {nbsp}{nbsp} lod3MultiSurface +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates a 3D MultiSurface geometry that represents the space in Level of Detail 3. +
+|Relation Name: {nbsp}{nbsp} lod2Solid +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_Solid-section,GM_Solid>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates a 3D Solid geometry that represents the space in Level of Detail 2. +
+|Relation Name: {nbsp}{nbsp} lod0Point +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_Point-section,GM_Point>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates a 3D Point geometry that represents the space in Level of Detail 0. +
+|Relation Name: {nbsp}{nbsp} lod0MultiCurve +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates a 3D MultiCurve geometry that represents the space in Level of Detail 0. +
+|Relation Name: {nbsp}{nbsp} lod3MultiCurve +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates a 3D MultiCurve geometry that represents the space in Level of Detail 3. +
+|Relation Name: {nbsp}{nbsp} lod3Solid +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_Solid-section,GM_Solid>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates a 3D Solid geometry that represents the space in Level of Detail 3. +
+|Relation Name: {nbsp}{nbsp} lod0MultiSurface +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates a 3D MultiSurface geometry that represents the space in Level of Detail 0. +
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}area +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}area +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} QualifiedArea +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies qualified areas related to the space.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}spaceType +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}spaceType +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SpaceType +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Degree of openness of an abstract space.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the degree of openness of a space.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}volume +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}volume +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} QualifiedVolume +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies qualified volumes related to the space.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -299,11 +299,11 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Core/REQ_Core_AbstractSpaceBoundary.adoc[]
 
 |====
-|*Class AbstractSpaceBoundary*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractSpaceBoundary* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractSpaceBoundary is the abstract superclass for all types of space boundaries. A space boundary is an entity with areal extent in the real world. Space boundaries are objects that bound a Space. They also realize the contact between adjacent spaces. +
 Subclass Of: {nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -314,39 +314,39 @@ StereoType:{nbsp}{nbsp} «FeatureType»
 include::../requirements/Core/REQ_Core_AbstractThematicSurface.adoc[]
 
 |====
-|*Class AbstractThematicSurface*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractThematicSurface* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractThematicSurface is the abstract superclass for all types of thematic surfaces. +
 Subclass Of: {nbsp}{nbsp} <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod1MultiSurface +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD1 surface geometry of AbstractThematicSurface. +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod0MultiSurface +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD0 surface geometry of AbstractThematicSurface. +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod2MultiSurface +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD2 surface geometry of AbstractThematicSurface. +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod3MultiSurface +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD3 surface geometry of AbstractThematicSurface. +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} lod0MultiCurve +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation to a  LOD0 curve geometry of AbstractThematicSurface. +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} pointCloud +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractPointCloud-section,AbstractPointCloud>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} lod3MultiSurface +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates a 3D MultiSurface geometry that represents the thematic surface in Level of Detail 3. +
+|Relation Name: {nbsp}{nbsp} pointCloud +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractPointCloud-section,AbstractPointCloud>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates a 3D PointCloud that represents the thematic surface. +
+|Relation Name: {nbsp}{nbsp} lod0MultiCurve +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates a 3D MultiCurve geometry that represents the thematic surface in Level of Detail 0. +
+|Relation Name: {nbsp}{nbsp} lod1MultiSurface +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates a 3D MultiSurface geometry that represents the thematic surface in Level of Detail 1. +
+|Relation Name: {nbsp}{nbsp} lod2MultiSurface +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates a 3D MultiSurface geometry that represents the thematic surface in Level of Detail 2. +
+|Relation Name: {nbsp}{nbsp} lod0MultiSurface +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiSurface-section,GM_MultiSurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates a 3D MultiSurface geometry that represents the thematic surface in Level of Detail 0. +
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}area +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}area +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} QualifiedArea +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies qualified areas related to the thematic surface.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -359,11 +359,11 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Core/REQ_Core_AbstractUnoccupiedSpace.adoc[]
 
 |====
-|*Class AbstractUnoccupiedSpace*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractUnoccupiedSpace* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractUnoccupiedSpace is the abstract superclass for all types of physically unoccupied spaces. Unoccupied space refers to spaces that are entirely or mostly free of matter. +
 Subclass Of: {nbsp}{nbsp} <<AbstractPhysicalSpace-section,AbstractPhysicalSpace>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -374,11 +374,11 @@ StereoType:{nbsp}{nbsp} «FeatureType»
 include::../requirements/Core/REQ_Core_AbstractVersion.adoc[]
 
 |====
-|*Class AbstractVersion*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractVersion* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractVersion is the abstract superclass to represent Version objects. +
 Subclass Of: {nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -389,11 +389,11 @@ StereoType:{nbsp}{nbsp} «FeatureType»
 include::../requirements/Core/REQ_Core_AbstractVersionTransition.adoc[]
 
 |====
-|*Class AbstractVersionTransition*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractVersionTransition* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractVersionTransition is the abstract superclass to represent VersionTransition objects. +
 Subclass Of: {nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -404,19 +404,19 @@ StereoType:{nbsp}{nbsp} «FeatureType»
 include::../requirements/Core/REQ_Core_Address.adoc[]
 
 |====
-|*Class Address*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class Address* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Address represents an address of a city object. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} xalAddress +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<XALAddressDetails-section,XALAddressDetails>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Relation to an OASIS address object. +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} multiPoint +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiPoint-section,GM_MultiPoint>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Spatial reference of the address, e. g. positions of building entrances. +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} xalAddress +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<XALAddressDetails-section,XALAddressDetails>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to an OASIS address object. +
+|Relation Name: {nbsp}{nbsp} multiPoint +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiPoint-section,GM_MultiPoint>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the MultiPoint geometry of the Address. The geometry relates the address spatially to a city object. +
 |*Attributes*
 |
 |==== 
@@ -427,35 +427,19 @@ Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Spatial reference of the
 include::../requirements/Core/REQ_Core_CityModel.adoc[]
 
 |====
-|*Class CityModel*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class CityModel* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CityModel is the container for all objects belonging to a city model. +
 Subclass Of: {nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} cityObjectMember +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractCityObject-section,AbstractCityObject>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Relation of CityModel to AbstractTopLevelCityObject. +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} versionMember +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..* +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractVersion-section,AbstractVersion>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} versionTransitionMember +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..* +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractVersionTransition-section,AbstractVersionTransition>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} appearanceMember +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractAppearance-section,AbstractAppearance>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} featureMember +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<AnyFeature-section,AnyFeature>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} cityModelMember +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<CityModelMember-section,CityModelMember>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} References all objects that are part of the CityModel. +
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}engineeringCRS +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}engineeringCRS +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} EngineeringCRS +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the local coordinate reference system of the CityModel.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -468,19 +452,19 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Core/REQ_Core_CityObjectRelation.adoc[]
 
 |====
-|*Class CityObjectRelation*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class CityObjectRelation* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CityObjectRelation represents a specific relation from the city object in which it is included to another city object. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} 
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} genericAttribute +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} 
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} genericAttribute +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractGenericAttribute-section,AbstractGenericAttribute>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates generic attributes to the CityObjectRelation. +
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}relationType +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}relationType +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RelationTypeValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the CityObjectRelation.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -493,11 +477,11 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Core/REQ_Core_ClosureSurface.adoc[]
 
 |====
-|*Class ClosureSurface*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class ClosureSurface* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} ClosureSurface is a special type of thematic surface used to close holes in volumetric objects. Closure surfaces are virtual (non-physical) surfaces. +
 Subclass Of: {nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -508,11 +492,11 @@ StereoType:{nbsp}{nbsp} «FeatureType»
 include::../requirements/Core/REQ_Core_DoubleBetween0and1.adoc[]
 
 |====
-|*Class DoubleBetween0and1*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class DoubleBetween0and1* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DoubleBetween0and1 is a basic type for values, which are greater or equal than 0 and less or equal than 1. The type is used for color encoding, for example. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «BasicType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «BasicType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -523,15 +507,15 @@ StereoType:{nbsp}{nbsp} «BasicType»
 include::../requirements/Core/REQ_Core_DoubleBetween0and1List.adoc[]
 
 |====
-|*Class DoubleBetween0and1List*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class DoubleBetween0and1List* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DoubleBetween0and1List is a basic type that represents a list of double values greater or equal than 0 and less or equal than 1. The type is used for color encoding, for example. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «BasicType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «BasicType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}list +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}list +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DoubleBetween0and1 +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the list of double values.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
@@ -544,15 +528,15 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Core/REQ_Core_DoubleList.adoc[]
 
 |====
-|*Class DoubleList*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class DoubleList* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DoubleList is an ordered sequence of double values. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «BasicType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «BasicType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}list +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}list +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Real +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the list of double values.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
@@ -565,39 +549,39 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Core/REQ_Core_ImplicitGeometry.adoc[]
 
 |====
-|*Class ImplicitGeometry*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class ImplicitGeometry* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} ImplicitGeometry is a geometry representation where the shape is stored only once as a prototypical geometry, for example a tree or other vegetation object, a traffic light or a traffic sign. This prototypic geometry object can be re-used or referenced many times, wherever the corresponding feature occurs in the 3D city model. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «ObjectType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} appearance +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractAppearance-section,AbstractAppearance>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} relativeGMLGeometry +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_Object-section,GM_Object>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Geometry of the prototype, specified in a local coordinate system. +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} referencePoint +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_Point-section,GM_Point>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Base point of the object in the world coordinate system. +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «ObjectType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} referencePoint +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_Point-section,GM_Point>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to a 3D Point geometry that represents the base point of the object in the world coordinate system. +
+|Relation Name: {nbsp}{nbsp} appearance +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractAppearance-section,AbstractAppearance>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates appearances to the ImplicitGeometry. +
+|Relation Name: {nbsp}{nbsp} relativeGMLGeometry +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_Object-section,GM_Object>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to a prototypical geometry in a local coordinate system stored inline with the city model. +
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}libraryObject +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}libraryObject +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} URI +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: External link to a prototype geometry.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the URI that points to the prototypical geometry stored in an external file.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}mimeType +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} MimeValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Mime type of the referenced external geometric object (attribute libraryObject).  +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}mimeType +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} MimeTypeValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the MIME type of the external file that stores the prototypical geometry.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}transformationMatrix +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}transformationMatrix +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TransformationMatrix4x4 +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Mathematical transformation (translation, rotation and scaling) between the prototype geometry and the actual spatial position of the object.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the mathematical transformation (translation, rotation, and scaling) between the prototypical geometry and the actual spatial position of the object.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -610,11 +594,11 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Core/REQ_Core_IntegerBetween0and3.adoc[]
 
 |====
-|*Class IntegerBetween0and3*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class IntegerBetween0and3* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} IntegerBetween0and3 is a basic type for integer values, which are greater or equal than 0 and less or equal than 3. The type is used for encoding the LOD number. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «BasicType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «BasicType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -625,26 +609,26 @@ StereoType:{nbsp}{nbsp} «BasicType»
 include::../requirements/Core/REQ_Core_IntervalValue.adoc[]
 
 |====
-|*Class IntervalValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class IntervalValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} IntervalValue is a code list used to specify a time period. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
 
-[[MimeValue-section]]
-==== *Class MimeValue*
+[[MimeTypeValue-section]]
+==== *Class MimeTypeValue*
 
-include::../requirements/Core/REQ_Core_MimeValue.adoc[]
+include::../requirements/Core/REQ_Core_MimeTypeValue.adoc[]
 
 |====
-|*Class MimeValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class MimeTypeValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} MimeTypeValue is a code list used to specify the MIME type of a referenced resource. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -655,11 +639,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Core/REQ_Core_OccupantTypeValue.adoc[]
 
 |====
-|*Class OccupantTypeValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class OccupantTypeValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} OccupantTypeValue is a code list used to classify occupants. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -670,41 +654,41 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Core/REQ_Core_OtherRelationTypeValue.adoc[]
 
 |====
-|*Class OtherRelationTypeValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class OtherRelationTypeValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} OtherRelationTypeValue is a code list used to classify other types of city object relations. +
 Subclass Of: {nbsp}{nbsp} <<RelationTypeValue-section,RelationTypeValue>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
 
-[[QualifiedAreaValue-section]]
-==== *Class QualifiedAreaValue*
+[[QualifiedAreaTypeValue-section]]
+==== *Class QualifiedAreaTypeValue*
 
-include::../requirements/Core/REQ_Core_QualifiedAreaValue.adoc[]
+include::../requirements/Core/REQ_Core_QualifiedAreaTypeValue.adoc[]
 
 |====
-|*Class QualifiedAreaValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class QualifiedAreaTypeValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} QualifiedAreaTypeValue is a code list used to specify area types. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
 
-[[QualifiedVolumeValue-section]]
-==== *Class QualifiedVolumeValue*
+[[QualifiedVolumeTypeValue-section]]
+==== *Class QualifiedVolumeTypeValue*
 
-include::../requirements/Core/REQ_Core_QualifiedVolumeValue.adoc[]
+include::../requirements/Core/REQ_Core_QualifiedVolumeTypeValue.adoc[]
 
 |====
-|*Class QualifiedVolumeValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class QualifiedVolumeTypeValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} QualifiedVolumeTypeValue is a code list used to specify volume types. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -715,11 +699,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Core/REQ_Core_RelationTypeValue.adoc[]
 
 |====
-|*Class RelationTypeValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class RelationTypeValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RelationTypeValue is a code list used to classify city object relations. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -730,11 +714,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Core/REQ_Core_TemporalRelationTypeValue.adoc[]
 
 |====
-|*Class TemporalRelationTypeValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class TemporalRelationTypeValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TemporalRelationTypeValue is a code list used to classify temporal city object relations. +
 Subclass Of: {nbsp}{nbsp} <<RelationTypeValue-section,RelationTypeValue>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -745,11 +729,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Core/REQ_Core_TopologicRelationTypeValue.adoc[]
 
 |====
-|*Class TopologicRelationTypeValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class TopologicRelationTypeValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TopologicRelationTypeValue is a code list used to classify topological city object relations. +
 Subclass Of: {nbsp}{nbsp} <<RelationTypeValue-section,RelationTypeValue>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -760,11 +744,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Core/REQ_Core_TransformationMatrix2x2.adoc[]
 
 |====
-|*Class TransformationMatrix2x2*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class TransformationMatrix2x2* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TransformationMatrix2x2 is a 2 by 2 matrix represented as a list of four double values in row major order. +
 Subclass Of: {nbsp}{nbsp} <<DoubleList-section,DoubleList>> +
-StereoType:{nbsp}{nbsp} «BasicType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «BasicType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -775,11 +759,11 @@ StereoType:{nbsp}{nbsp} «BasicType»
 include::../requirements/Core/REQ_Core_TransformationMatrix3x4.adoc[]
 
 |====
-|*Class TransformationMatrix3x4*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class TransformationMatrix3x4* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TransformationMatrix3x4 is a 3 by 4 matrix represented as a list of twelve double values in row major order. +
 Subclass Of: {nbsp}{nbsp} <<DoubleList-section,DoubleList>> +
-StereoType:{nbsp}{nbsp} «BasicType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «BasicType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -790,11 +774,11 @@ StereoType:{nbsp}{nbsp} «BasicType»
 include::../requirements/Core/REQ_Core_TransformationMatrix4x4.adoc[]
 
 |====
-|*Class TransformationMatrix4x4*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class TransformationMatrix4x4* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TransformationMatrix4x4 is a 4 by 4 matrix represented as a list of sixteen double values in row major order. +
 Subclass Of: {nbsp}{nbsp} <<DoubleList-section,DoubleList>> +
-StereoType:{nbsp}{nbsp} «BasicType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «BasicType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -805,12 +789,57 @@ StereoType:{nbsp}{nbsp} «BasicType»
 include::../requirements/Core/REQ_Core_AbstractGenericAttribute.adoc[]
 
 |====
-|*Class AbstractGenericAttribute*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractGenericAttribute* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractGenericAttribute is the abstract superclass for all types of generic attributes. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «DataType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «DataType»
+|*Relations* 
 |*Attributes*
+|
+|==== 
+
+[[CityModelMember-section]]
+==== *Class CityModelMember*
+
+include::../requirements/Core/REQ_Core_CityModelMember.adoc[]
+
+|====
+|*Class CityModelMember* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CityModelMember is a union type that enumerates the different types of objects that can occur as members of a city model. +
+Subclass Of: {nbsp}{nbsp} <<-section,>> +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «Union»
+|*Relations* 
+|*Attributes*
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}appearanceMember +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractAppearance +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the appearances of the CityModel.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}cityObjectMember +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractCityObject +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the city objects that are part of the CityModel.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}featureMember +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AnyFeature +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the feature objects that are part of the CityModel. It allows to include objects that are not derived from a class defined in the CityGML data model, but from the ISO 19109 class AnyFeature.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}versionMember +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractVersion +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the different versions of the CityModel.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}versionTransitionMember +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractVersionTransition +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the transitions between the different versions of the CityModel.  +
+Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+
 |
 |==== 
 
@@ -820,27 +849,27 @@ StereoType:{nbsp}{nbsp} «DataType»
 include::../requirements/Core/REQ_Core_ExternalReference.adoc[]
 
 |====
-|*Class ExternalReference*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class ExternalReference* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} ExternalReference is a reference to a corresponding object in another information system, for example in the German cadastre (ALKIS), the German topographic information system (ATKIS), or the OS UK MasterMap®. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «DataType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «DataType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}informationSystem +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}informationSystem +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} URI +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: URL or URN of the information system or data set.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the URI that points to the external information system.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}relationType +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}relationType +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} URI +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies an URI that additionally qualifies the ExternalReference. The URI can point to a definition from an external ontology (e.g. the sameAs relation from OWL) and allows for mapping the ExternalReference to RDF triples.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}targetResource +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}targetResource +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} URI +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Referenced object in the external information system or data set.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the URI that points to the object in the external information system.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -853,27 +882,27 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Core/REQ_Core_Occupancy.adoc[]
 
 |====
-|*Class Occupancy*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class Occupancy* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Occupancy is an application-dependent indication of what is contained by a feature. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «DataType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «DataType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}interval +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}interval +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} IntervalValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the time period the occupants are contained by a feature.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}numberOfOccupants +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}numberOfOccupants +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Integer +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the number of occupants contained by a feature.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}occupantType +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}occupantType +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} OccupantTypeValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the occupants that are contained by a feature.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -886,21 +915,21 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Core/REQ_Core_QualifiedArea.adoc[]
 
 |====
-|*Class QualifiedArea*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class QualifiedArea* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} QualifiedArea is an application-dependent measure of the area of a space or of a thematic surface. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «DataType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «DataType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}area +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}area +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Area +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the value of the QualifiedArea.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}typeOfArea +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} QualifiedAreaValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}typeOfArea +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} QualifiedAreaTypeValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the QualifiedArea.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -913,21 +942,21 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Core/REQ_Core_QualifiedVolume.adoc[]
 
 |====
-|*Class QualifiedVolume*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class QualifiedVolume* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} QualifiedVolume is an application-dependent measure of the volume of a space. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «DataType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «DataType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}typeOfVolume +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} QualifiedVolumeValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}typeOfVolume +
+Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} QualifiedVolumeTypeValue +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the QualifiedVolume.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}volume +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}volume +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Volume +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the value of the QualifiedVolume.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -940,39 +969,39 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Core/REQ_Core_RelativeToTerrain.adoc[]
 
 |====
-|*Class RelativeToTerrain*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class RelativeToTerrain* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RelativeToTerrain enumerates the spatial relations of a city object relative to terrain in a qualitative way. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} 
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} 
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}entirelyAboveTerrain +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}entirelyAboveTerrain +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Object is located entirely above terrain.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the city object is located entirely above the terrain.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}substantiallyAboveTerrain +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}substantiallyAboveTerrain +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Most, but not all parts of the object are located above terrain.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the city object is for the most part located above the terrain.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}substantiallyAboveAndBelowTerrain +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}substantiallyAboveAndBelowTerrain +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Parts of the object are located above terrain, and other parts below terrain.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the city object is located half above the terrain and half below the terrain.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}substantiallyBelowTerrain +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}substantiallyBelowTerrain +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Most, but not all parts of the object are located below terrain.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the city object is for the most part located below the terrain.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}entirelyBelowTerrain +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}entirelyBelowTerrain +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: All parts of the object are located below terrain.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the city object is located entirely below the terrain.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
@@ -985,45 +1014,45 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Core/REQ_Core_RelativeToWater.adoc[]
 
 |====
-|*Class RelativeToWater*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class RelativeToWater* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RelativeToWater enumerates the spatial relations of a city object relative to the water surface in a qualitative way. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} 
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} 
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}entirelyAboveWaterSurface +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}entirelyAboveWaterSurface +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Object is located entirely above water surface.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the city object is located entirely above the water surface.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}substantiallyAboveWaterSurface +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}substantiallyAboveWaterSurface +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Most, but not all parts of the object are located above water surface.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the city object is for the most part located above the water surface.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}substantiallyAboveAndBelowWaterSurface +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}substantiallyAboveAndBelowWaterSurface +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Parts of the object are located above water surface, and other parts below water surface.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the city object is located half above the water surface and half below the water surface.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}substantiallyBelowWaterSurface +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}substantiallyBelowWaterSurface +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Most, but not all parts of the object are located below water surface.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the city object is for the most part located below the water surface.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}entirelyBelowWaterSurface +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}entirelyBelowWaterSurface +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: All parts of the object are located below water surface.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the city object is located entirely below the water surface.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}temporarilyAboveAndBelowWaterSurface +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}temporarilyAboveAndBelowWaterSurface +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: The height of the water surface is varying and the object temporily is located above or below water level.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that city object is temporarily located above or below the water level, because the height of the water surface is varying.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
@@ -1036,27 +1065,27 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Core/REQ_Core_SpaceType.adoc[]
 
 |====
-|*Class SpaceType*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class SpaceType* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SpaceType is an enumeration that characterises a space according to its closure properties. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} 
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} 
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}closed +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}closed +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundaries at all sides  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the space has boundaries at the bottom, at the top, and on all sides.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}open +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}open +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary at the bottom only  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the space has at maximum a boundary at the bottom.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}semiOpen +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}semiOpen +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} at least one side has a boundary  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the space has a boundary at the bottom and on at least one side.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
@@ -1069,11 +1098,11 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Core/REQ_Core_XALAddressDetails.adoc[]
 
 |====
-|*Class XALAddressDetails*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class XALAddressDetails* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} XALAddressDetails represents address details according to the OASIS xAL standard. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «DataType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «DataType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
