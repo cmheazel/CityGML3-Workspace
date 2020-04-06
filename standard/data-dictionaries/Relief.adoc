@@ -3,7 +3,7 @@
 
 |====
 |*Package Relief*
-|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} +
+|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}The Relief module supports representation of the terrain. CityGML supports terrain representations at different levels of detail, reflecting different accuracies or resolutions. Terrain may be specified as a regular raster or grid, as a TIN, by break lines, and/or by mass points. +
 Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
 Parent Package: {nbsp}{nbsp}CityGML
 |====
@@ -14,19 +14,19 @@ Parent Package: {nbsp}{nbsp}CityGML
 include::../requirements/Relief/REQ_Relief_AbstractReliefComponent.adoc[]
 
 |====
-|*Class AbstractReliefComponent*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractReliefComponent* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} An AbstractReliefComponent represents an element of the terrain surface - either a TIN, a Grid, mass points or break lines. +
 Subclass Of: {nbsp}{nbsp} <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} extent +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_Surface-section,GM_Surface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Polygon (optionally with holes) denoting the extent where the relief component is valid. +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} extent +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_Surface-section,GM_Surface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the geometrical extent of the terrain component. The geometrical extent is provided as a 2D Surface geometry. +
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}lod +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}lod +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} IntegerBetween0and3 +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Number denoting the LOD of the relief component. The LOD concept for the relief is defined in chapter ...  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the Level of Detail of the terrain component.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -39,19 +39,19 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Relief/REQ_Relief_BreaklineRelief.adoc[]
 
 |====
-|*Class BreaklineRelief*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class BreaklineRelief* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A BreaklineRelief represents a terrain component with 3D lines. These lines denote break lines or ridge/valley lines. +
 Subclass Of: {nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} ridgeOrValleyLines +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Relation to 3D lines (gml:MultiCurve) denoting ridge or valley lines. +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} breaklines +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Relation to 3D lines (gml:MultiCurve) denoting break lines. +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} ridgeOrValleyLines +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the 3D MultiCurve geometry of the MassPointRelief. This association role is used to represent ridge or valley lines. +
+|Relation Name: {nbsp}{nbsp} breaklines +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the 3D MultiCurve geometry of the MassPointRelief. This association role is used to represent break lines. +
 |*Attributes*
 |
 |==== 
@@ -62,19 +62,19 @@ Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Relation to 3D lines (gm
 include::../requirements/Relief/REQ_Relief_MassPointRelief.adoc[]
 
 |====
-|*Class MassPointRelief*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class MassPointRelief* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A MassPointRelief represents a terrain component as a collection of 3D points. +
 Subclass Of: {nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} reliefPoints +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_MultiPoint-section,GM_MultiPoint>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} pointCloud +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractPointCloud-section,AbstractPointCloud>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} reliefPoints +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiPoint-section,GM_MultiPoint>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the 3D MultiPoint geometry of the MassPointRelief. +
+|Relation Name: {nbsp}{nbsp} pointCloud +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractPointCloud-section,AbstractPointCloud>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the 3D PointCloud of the MassPointRelief. +
 |*Attributes*
 |
 |==== 
@@ -85,15 +85,15 @@ Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 include::../requirements/Relief/REQ_Relief_RasterRelief.adoc[]
 
 |====
-|*Class RasterRelief*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class RasterRelief* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A RasterRelief represents a terrain component as a regular raster or grid. +
 Subclass Of: {nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} grid +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<CV_DiscreteGridPointCoverage-section,CV_DiscreteGridPointCoverage>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} grid +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<CV_DiscreteGridPointCoverage-section,CV_DiscreteGridPointCoverage>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the DiscreteGridPointCoverage of the RasterRelief. +
 |*Attributes*
 |
 |==== 
@@ -104,19 +104,19 @@ Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 include::../requirements/Relief/REQ_Relief_ReliefFeature.adoc[]
 
 |====
-|*Class ReliefFeature*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class ReliefFeature* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A ReliefFeature is a collection of terrain components representing the Earth's surface, a.k.a. the Digital Terrain Model. +
 Subclass Of: {nbsp}{nbsp} <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> +
-StereoType:{nbsp}{nbsp} «TopLevelFeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} reliefComponent +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  1..* +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Relation of a ReliefFeature to its components. +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «TopLevelFeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} reliefComponent +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  1..* +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the terrain components that are part of the ReliefFeature. +
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}lod +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}lod +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} IntegerBetween0and3 +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Number denoting the LOD of the relief feature. The LOD concept for the relief is defined in chapter ...  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the Level of Detail of the ReliefFeature.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -129,18 +129,19 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Relief/REQ_Relief_TINRelief.adoc[]
 
 |====
-|*Class TINRelief*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class TINRelief* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A TINRelief represents a terrain component as a triangulated irregular network. +
 Subclass Of: {nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} tin +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_TriangulatedSurface-section,GM_TriangulatedSurface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} tin +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_TriangulatedSurface-section,GM_TriangulatedSurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the triangulated surface of the TINRelief. +
 |*Attributes*
 |
 |==== 
   
+
 
 

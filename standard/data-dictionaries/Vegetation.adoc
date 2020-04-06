@@ -3,7 +3,7 @@
 
 |====
 |*Package Vegetation*
-|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} +
+|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}The Vegetation module supports representation of vegetation objects with vegetation-specific thematic classes. CityGML’s vegetation model distinguishes between solitary vegetation objects like trees, and vegetation areas which represent biotopes like forests or other plant communities. +
 Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
 Parent Package: {nbsp}{nbsp}CityGML
 |====
@@ -14,11 +14,11 @@ Parent Package: {nbsp}{nbsp}CityGML
 include::../requirements/Vegetation/REQ_Vegetation_AbstractVegetationObject.adoc[]
 
 |====
-|*Class AbstractVegetationObject*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractVegetationObject* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractVegetationObject is the abstract superclass for all kinds of vegetation objects. +
 Subclass Of: {nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -29,45 +29,45 @@ StereoType:{nbsp}{nbsp} «FeatureType»
 include::../requirements/Vegetation/REQ_Vegetation_PlantCover.adoc[]
 
 |====
-|*Class PlantCover*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class PlantCover* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A PlantCover represents a space covered by vegetation. +
 Subclass Of: {nbsp}{nbsp} <<AbstractVegetationObject-section,AbstractVegetationObject>> +
-StereoType:{nbsp}{nbsp} «TopLevelFeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «TopLevelFeatureType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}averageHeight +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}averageHeight +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Average value of the heights of the grown-up plants  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the average height of the PlantCover.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} PlantCoverClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Classification of PlantCover as given by the relevant national regulations, information communities, or specific applications.   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the PlantCover.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} PlantCoverFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Function of PlantCover as given by the relevant national regulations, information communities, or specific applications.   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the PlantCover.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}maxHeight +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}maxHeight +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the maximum height of the PlantCover.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}minHeight +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}minHeight +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the minimum height of the PlantCover.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} PlantCoverUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Usage of PlantCover as given by the relevant national regulations, information communities, or specific applications.   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the PlantCover.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -80,11 +80,11 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Vegetation/REQ_Vegetation_PlantCoverClassValue.adoc[]
 
 |====
-|*Class PlantCoverClassValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class PlantCoverClassValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} PlantCoverClassValue is a code list used to further classify a PlantCover. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -95,11 +95,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Vegetation/REQ_Vegetation_PlantCoverFunctionValue.adoc[]
 
 |====
-|*Class PlantCoverFunctionValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class PlantCoverFunctionValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} PlantCoverFunctionValue is a code list that enumerates the different purposes of a PlantCover. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -110,11 +110,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Vegetation/REQ_Vegetation_PlantCoverUsageValue.adoc[]
 
 |====
-|*Class PlantCoverUsageValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class PlantCoverUsageValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} PlantCoverUsageValue is a code list that enumerates the different uses of a PlantCover. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -125,63 +125,63 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Vegetation/REQ_Vegetation_SolitaryVegetationObject.adoc[]
 
 |====
-|*Class SolitaryVegetationObject*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class SolitaryVegetationObject* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A SolitaryVegetationObject represents individual vegetation objects, e.g. trees or bushes. +
 Subclass Of: {nbsp}{nbsp} <<AbstractVegetationObject-section,AbstractVegetationObject>> +
-StereoType:{nbsp}{nbsp} «TopLevelFeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «TopLevelFeatureType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SolitaryVegetationObjectClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Classification of SolitaryVegetationObject as given by the relevant national regulations, information communities, or specific applications.   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the SolitaryVegetationObject.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}crownDiameter +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}crownDiameter +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Maximal diameter of the crown.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the diameter of the SolitaryCityObject's crown.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SolitaryVegetationObjectFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Function of SolitaryVegetationObject as given by the relevant national regulations, information communities, or specific applications.   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the SolitaryVegetationObject.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}height +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}height +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Distance between the highest point of the vegetation object and the lowest point of the terrain at the bottom of the object.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Distance between the highest point of the vegetation object and the lowest point of the terrain at the bottom of the object.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}maxRootBallDepth +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}maxRootBallDepth +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the vertical distance between the lowest point of the SolitaryVegetationObject's root ball and the terrain surface.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}rootBallDiameter +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}rootBallDiameter +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the diameter of the SolitaryCityObject's root ball.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}species +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}species +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SpeciesValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Botanical classification of the SolitaryVegetationObject  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the botanical name of the SolitaryVegetationObject.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}trunkDiameter +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}trunkDiameter +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Value of the trunk's diameter  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the diameter of the SolitaryCityObject's trunk.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SolitaryVegetationObjectUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Usage of SolitaryVegetationObject as given by the relevant national regulations, information communities, or specific applications.   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the SolitaryVegetationObject.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -194,11 +194,11 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Vegetation/REQ_Vegetation_SolitaryVegetationObjectClassValue.adoc[]
 
 |====
-|*Class SolitaryVegetationObjectClassValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class SolitaryVegetationObjectClassValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SolitaryVegetationObjectClassValue is a code list used to further classify a SolitaryVegetationObject. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -209,11 +209,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Vegetation/REQ_Vegetation_SolitaryVegetationObjectFunctionValue.adoc[]
 
 |====
-|*Class SolitaryVegetationObjectFunctionValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class SolitaryVegetationObjectFunctionValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SolitaryVegetationObjectFunctionValue is a code list that enumerates the different purposes of a SolitaryVegetationObject. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -224,11 +224,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Vegetation/REQ_Vegetation_SolitaryVegetationObjectUsageValue.adoc[]
 
 |====
-|*Class SolitaryVegetationObjectUsageValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class SolitaryVegetationObjectUsageValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SolitaryVegetationObjectUsageValue is a code list that enumerates the different uses of a SolitaryVegetationObject. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -239,14 +239,15 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Vegetation/REQ_Vegetation_SpeciesValue.adoc[]
 
 |====
-|*Class SpeciesValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class SpeciesValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A SpeciesValue is a code list that enumerates the species of a SolitaryVegetationObject. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
   
+
 
 

@@ -1,11 +1,16 @@
 [[rc_building-model_section]]
-=== Building Model
+=== Building
 
 include::requirements/requirements_class_building.adoc[]
 
-The building model is one of the most detailed thematic concepts of CityGML. It allows for the representation of thematic and spatial aspects of buildings and building parts in five levels of detail, LOD0 to LOD4. The building model of CityGML is defined by the thematic extension module Building (cf. chapter 7). Fig. 26 provides examples of 3D city and building models in LOD1 – 4.
+The Building module allows for the representation of thematic and spatial aspects of buildings. Buildings are free-standing, self-supporting constructions that are roofed and usually walled, and that can be entered by humans and are normally designed to stand permanently in one place. Buildings are intended for human occupancy (e.g. a place of work or recreation), habitation and/or shelter of humans, animals or things.
+Buildings are represented in the UML model by the top-level feature type _Building_, which is the main class of the Building module. Buildings can physically or functionally be subdivided into building parts and logically into storeys and building units (e.g. apartments). In addition, buildings can be decomposed into structural elements, such as walls, slabs, staircases, and beams.
 
-The UML diagram of the building model is depicted in <<building-uml,Building UML Diagram>>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_building-model_section[here].
+The interior of buildings is represented by rooms. This allows a virtual accessibility of buildings, e.g. for visitor information in a museum (“Location Based Services“), the examination of accommodation standards or the presentation of daylight illumination of a building.
+Buildings can contain installations and furniture. Installations are permanent parts of a building that strongly affect the outer or inner appearance of the building and that cannot be moved. Examples are balconies, chimneys, dormers or stairs. Furniture, in contrast, represent moveable objects inside a building, like tables and chairs.
+Buildings can be bounded by different types of surfaces. In this way, the outer façade of buildings can be differentiated semantically into walls, roof, ground plate, outer floor, and outer ceiling, whereas the visible surface of rooms can be structured into interior walls, floor, and ceiling. Furthermore, the openings of buildings, i.e. windows and doors, can be represented including their corresponding surfaces.
+
+The UML diagram of the building module is depicted in <<building-uml,Building UML Diagram>>. The Building module inherits concepts from the Construction module <<rc_construction_section, (cf. Section Construction)>>. The Construction module defines objects that are common to all types of construction, such as the different surfaces types and the openings. A detailed discussion of the Requirements Class Building can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_building-model_section[here].
 
 [[building-uml]]
 .UML diagram of CityGML’s building model.
@@ -17,184 +22,3 @@ include::data-dictionaries/Building.adoc[]
 ==== Additional Information
 
 The following sections provide additional information which may not be readily available through the UML Model.
-
-NOTE: The following content is from the previous draft. Is this sort of content useful?
-
-===== BuildingType, Building
-
-The Building class is one of the two subclasses of _AbstractBuilding. If a building only consists of one (homo-geneous) part, this class shall be used. A building composed of structural segments differing in, for example the number of storeys or the roof type has to be separated into one Building having one or more additional Build-ingPart (see Fig. 28). The geometry and non-spatial properties of the central part of the building should be represented in the aggregating Building feature.
-
-===== BuildingType, Building Part
-
-The class BuildingPart is derived from _AbstractBuilding. It is used to model a structural part of a building (see Fig. 28). A BuildingPart object should be uniquely related to exactly one building or building part object.
-
-===== AbstractBuildingType, _AbstractBuilding
-
-The abstract class _AbstractBuilding contains properties for building attributes, purely geometric representations, and geometric/semantic representations of the building or building part in different levels of detail. The attributes describe:
-
-. classification of the building or building part (class), the different intended usages (function), and the different actual usages (usage). The permitted values for these attributes can be specified in code lists.
-. The year of construction (yearOfConstruction) and the year of demolition (yearOfDemolition) of the build-ing or building part. These attributes can be used to describe the chronology of the building development within a city model. The points of time refer to real world time.
-. The roof type of the building or building part (roofType). The permitted values for this attribute can be specified in a code list.
-. The measured relative height (measuredHeight) of the building or building part.
-. The number of storeys above (storeyAboveGround) and below (storeyBelowGround) ground level.
-. The list of storey heights above (storeyHeightsAboveGround) and below (storeyHeightsBelowGround) ground level. The first value in a list denotes the height of the nearest storey wrt. to the ground level and last value the height of the farthest.
-
-[#abstractbuilding_semantics,reftext='{table-caption} {counter:table-num}']
-.Semantic themes of the class _AbstractBuilding
-[width="90%",cols="^4,^4,^2,^2,^2,^2,^2",options="header"]
-|===
-|**Geometric / semantic theme**
-|**Property  type**|**LOD0**
-|**LOD1**
-|**LOD2**
-|**LOD3**
-|**LOD4**
-|Building footprint and roof edge
-|gml:MultiSurfaceType
-|• | | | |
-|Volume part of the building shell
-|gml:SolidType
-| |• |• |• |•
-|Surface part of the building shell
-|gml:MultiSurfaceType
-| |• |• |• |•
-|Terrain intersection curve
-|gml:MultiCurveType
-| |• |• |• |•
-|Curve part of the building shell
-|gml:MultiCurveType
-| | |• |• |•
-|Building parts
-|BuildingPartType
-| |• |• |• |•
-|Boundary surfaces (chapter 10.3.3)
-|AbstractBoundarySurfaceType
-| | |• |• |•
-|Outer building installations (chapter 10.3.2)
-|BuildingInstallationType
-| | |• |• |•
-|Openings (chapter 10.3.4)
-|AbstractOpeningType
-| | | |• |•
-|Rooms (chapter 10.3.5)
-|RoomType
-| | | | |•
-|Interior building installations (chapter 10.3.5)
-|IntBuildingInstallationType
-| | | | |•
-|===
-
-===== BuildingInstallationType, BuildingInstallation 
-
-Note: insert BuildingInstallation UML
-
-==== Boundary surfaces
-
-===== AbstractBoundarySurfaceType, _BoundarySurface
-
-NOTE: Insert AbstractBoundarySurfaceType, _BoundarySurface UML
-
-===== GroundSurfaceType, GroundSurface
-
-NOTE: insert GroundSurfaceType, GroundSurface uml
-
-The ground plate of a building or building part is modelled by the class GroundSurface. The polygon defining the ground plate is congruent with the building’s footprint. However, the surface normal of the ground plate is pointing downwards.
-
-===== OuterCeilingSurfaceType, OuterCeilingSurface
-
-NOTE: insert OuterCeilingSurfaceType, OuterCeilingSurface UML
-
-A mostly horizontal surface belonging to the outer building shell and having the orientation pointing downwards can be modeled as an OuterCeilingSurface. Examples are the visible part of the ceiling of a loggia or the ceiling of a passage.
-
-===== WallSurfaceType, WallSurface
-
-NOTE: insert WallSurfaceType, WallSurface UML
-
-All parts of the building facade belonging to the outer building shell can be modelled by the class WallSurface.
-
-===== OuterFloorSurfaceType, OuterFloorSurface
-
-NOTE: insert OuterFloorSurfaceType, OuterFloorSurface UML
-
-A mostly horizontal surface belonging to the outer building shell and with the orientation pointing upwards can be modeled as an OuterFloorSurface. An example is the floor of a loggia.
-
-===== RoofSurfaceType, RoofSurface
-
-NOTE: insert RoofSurfaceType, RoofSurface UML
-
-The major roof parts of a building or building part are expressed by the class RoofSurface. Secondary parts of a roof with a specific semantic meaning like dormers or chimneys should be modelled as BuildingInstallation.
-
-===== ClosureSurfaceType, ClosureSurface
-
-NOTE: insert ClosureSurfaceType, ClosureSurface UML
-
-An opening in a building not filled by a door or window can be sealed by a virtual surface called ClosureSurface (cf. chapter 6.4). Hence, buildings with open sides like a barn or a hangar, can be virtually closed in order to be able to compute their volume. ClosureSurfaces are also used in the interior building model. If two rooms with a different function (e.g. kitchen and living room) are directly connected without a separating door, a ClosureSur-face should be used to separate or connect the volumes of both rooms.
-
-===== FloorSurfaceType, FloorSurface
-
-NOTE: insert FloorSurfaceType, FloorSurface UML
-
-The class FloorSurface must only be used in the LOD4 interior building model for modelling the floor of a room.
-
-===== InteriorWallSurfaceType, InteriorWallSurface
-
-NOTE: insert InteriorWallSurfaceType, InteriorWallSurface UML
-
-The class InteriorWallSurface must only be used in the LOD4 interior building model for modelling the visible surfaces of the room walls.
-
-===== CeilingSurfaceType, CeilingSurface
-
-NOTE: Insert CeilingSurfaceType, CeilingSurface UML
-
-The class CeilingSurface must only be used in the LOD4 interior building model for modelling the ceiling of a room.
-
-==== Openings
-
-===== AbstractOpeningType, _Opening
-
-NOTE: insert AbstractOpeningType, _Opening UML
-
-The class _Opening is the abstract base class for semantically describing openings like doors or windows in outer or inner boundary surfaces like walls and roofs. Openings only exist in models of LOD3 or LOD4. Each _Opening is associated with a gml:MultiSurface geometry. Alternatively, the geometry may be given as Implic-itGeometry object. Following the concept of ImplicitGeometry the geometry of a prototype opening is stored only once in a local coordinate system and referenced by other opening features (see chapter 8.2).
-
-===== WindowType, Window
-
-NOTE: insert WindowType, Window UML
-
-The class Window is used for modelling windows in the exterior shell of a building, or hatches between adjacent rooms. The formal difference between the classes Window and Door is that – in normal cases – Windows are not specifically intended for the transit of people or vehicles.
-
-===== DoorType, Door
-
-NOTE: insert DoorType, Door UML
-
-The class Door is used for modelling doors in the exterior shell of a building, or between adjacent rooms. Doors can be used by people to enter or leave a building or room. In contrast to a ClosureSurface a door may be closed, blocking the transit of people. A Door may be assigned zero or more addresses. The corresponding Address-PropertyType is defined within the CityGML core module (cf. chapter 10.1.4) .
-
-==== Building Interior
-
-===== RoomType, Room
-
-NOTE: insert RoomType, Room UML
-
-A Room is a semantic object for modelling the free space inside a building and should be uniquely related to exactly one building or building part object. It should be closed (if necessary by using ClosureSurfaces) and the geometry normally will be described by a solid (lod4Solid). However, if the topological correctness of the boundary cannot be guaranteed, the geometry can alternatively be given as a MultiSurface (lod4MultiSurface). The surface normals of the outer shell of a GML solid must point outwards. This is important to consider when Room surfaces should be assigned Appearances. In this case, textures and colors must be placed on the backside of the corresponding surfaces in order to be visible from the inside of the room.
-
-===== BuildingFurnitureType, BuildingFurniture
-
-NOTE: insert BuildingFurnitureType, BuildingFurniture UML
-
-Rooms may have BuildingFurnitures and IntBuildingInstallations. A BuildingFurniture is a movable part of a room, such as a chair or furniture. A BuildingFurniture object should be uniquely related to exactly one room object. Its geometry may be represented by an explicit geometry or an ImplicitGeometry object. Following the concept of ImplicitGeometry the geometry of a prototype building furniture is stored only once in a local coordi-nate system and referenced by other building furniture features (see chapter 8.2).
-
-===== IntBuildingInstallationType, IntBuildingInstallation
-
-NOTE: insert IntBuildingInstallationType, IntBuildingInstallation UML
-
-==== Modelling building storeys using CityObjectGroups
-
-CityGML does currently not provide a specific concept for the representation of storeys as it is available in the AEC/FM standard IFC (IAI 2006). However, a storey can be represented as an explicit aggregation of all build-ing features on a certain height level using CityGML’s notion of CityObjectGroups (cf. chapter 10.11). 
-
-In order to model building storeys with CityGML’s generic grouping concept, a nested hierarchy of CityObject-Group objects has to be used. In a first step, all semantic objects belonging to a specific storey are grouped. The attributes of the corresponding CityObjectGroup object are set as follows:
-
-* The class attribute shall be assigned the value “building separation”.
-* The function attribute shall be assigned the value “lodXStorey” with X between 1 and 4 in order to de-note that this group represents a storey wrt. a specific LOD.
-* The storey name or number can be stored in the gml:name property. The storey number attribute shall be assigned the value “storeyNo_X” with decimal number X in order to denote that this group repre-sents a storey wrt. a specific number.
-
-In a second step, the CityObjectGroup objects representing different storeys are grouped themselves. By using the generic aggregation concept of CityObjectGroup, the “storeys group” is associated with the corresponding Building or BuildingPart object. The class attribute of the storeys group shall be assigned the value “building storeys”.
-

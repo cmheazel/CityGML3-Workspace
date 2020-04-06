@@ -3,7 +3,7 @@
 
 |====
 |*Package Building*
-|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} +
+|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}The Building module supports representation of thematic and spatial aspects of buildings, building parts, building installations, building subdivisions, and interior building structures. +
 Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
 Parent Package: {nbsp}{nbsp}CityGML
 |====
@@ -14,81 +14,81 @@ Parent Package: {nbsp}{nbsp}CityGML
 include::../requirements/Building/REQ_Building_AbstractBuilding.adoc[]
 
 |====
-|*Class AbstractBuilding*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractBuilding* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractBuilding is an abstract superclass representing the common attributes and associations of the classes Building and BuildingPart. +
 Subclass Of: {nbsp}{nbsp} <<AbstractConstruction-section,AbstractConstruction>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingConstructiveElement +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<BuildingConstructiveElement-section,BuildingConstructiveElement>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} address +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<Address-section,Address>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Relation between Building or BuildingPart and Address +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingSubdivision +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingFurniture +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<BuildingFurniture-section,BuildingFurniture>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingRoom +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<BuildingRoom-section,BuildingRoom>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Relation between Building or BuildingPart and Room. +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingInstallation +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<BuildingInstallation-section,BuildingInstallation>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Relation between Building or BuildingPart and BuildingInstallation. +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} buildingConstructiveElement +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<BuildingConstructiveElement-section,BuildingConstructiveElement>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates the constructive elements to the Building or BuildingPart. +
+|Relation Name: {nbsp}{nbsp} address +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<Address-section,Address>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates the addresses to the Building or BuildingPart. +
+|Relation Name: {nbsp}{nbsp} buildingSubdivision +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates the logical subdivisions to the Building or BuildingPart. +
+|Relation Name: {nbsp}{nbsp} buildingFurniture +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<BuildingFurniture-section,BuildingFurniture>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates the furniture objects to the Building or BuildingPart. +
+|Relation Name: {nbsp}{nbsp} buildingRoom +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<BuildingRoom-section,BuildingRoom>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates the rooms to the Building or BuildingPart. +
+|Relation Name: {nbsp}{nbsp} buildingInstallation +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<BuildingInstallation-section,BuildingInstallation>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates the installation objects to the Building or BuildingPart. +
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Classification of Building or BuildingPart as given by the relevant national regulations, information communities, or specific applications.   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the Building or BuildingPart.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Specified function of Building or BuildingPart as given by the relevant national regulations, information communities, or specific applications.   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the Building or BuildingPart.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}roofType +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}roofType +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RoofTypeValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} bSI: Basic configuration of the roof in terms of the different roof shapes.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the shape of the roof of the Building or BuildingPart.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}storeyHeightsAboveGround +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}storeyHeightsAboveGround +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} MeasureOrNilReasonList +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: List of heights for each storey above ground.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Lists the heights of each storey above ground. The first value in the list denotes the height of the storey closest to the ground level, the last value denotes the height furthest away.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}storeyHeightsBelowGround +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}storeyHeightsBelowGround +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} MeasureOrNilReasonList +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: List of heights for each storey below ground.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Lists the height of each storey below ground. The first value in the list denotes the height of the storey closest to the ground level, the last value denotes the height furthest away.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}storeysAboveGround +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}storeysAboveGround +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Integer +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Number of storeys mainly above ground.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the number of storeys positioned above ground level.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}storeysBelowGround +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}storeysBelowGround +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Integer +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Number of storeys mainly below ground.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the number of storeys positioned below ground level.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Actual usage of Building or BuildingPart as given by the relevant national regulations, information communities, or specific applications.   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the Building or BuildingPart.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -101,55 +101,55 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Building/REQ_Building_AbstractBuildingSubdivision.adoc[]
 
 |====
-|*Class AbstractBuildingSubdivision*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractBuildingSubdivision* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractBuildingSubdivision is the abstract superclass for different kinds of logical building subdivisions. +
 Subclass Of: {nbsp}{nbsp} <<AbstractLogicalSpace-section,AbstractLogicalSpace>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingInstallation +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<BuildingInstallation-section,BuildingInstallation>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingFurniture +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<BuildingFurniture-section,BuildingFurniture>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingRoom +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<BuildingRoom-section,BuildingRoom>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingConstructiveElement +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<BuildingConstructiveElement-section,BuildingConstructiveElement>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} buildingInstallation +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<BuildingInstallation-section,BuildingInstallation>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the installation objects. +
+|Relation Name: {nbsp}{nbsp} buildingFurniture +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<BuildingFurniture-section,BuildingFurniture>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the furniture objects. +
+|Relation Name: {nbsp}{nbsp} buildingRoom +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<BuildingRoom-section,BuildingRoom>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the rooms. +
+|Relation Name: {nbsp}{nbsp} buildingConstructiveElement +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<BuildingConstructiveElement-section,BuildingConstructiveElement>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the constructive elements. +
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingSubdivisionClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the building subdivision.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}elevation +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}elevation +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Elevation +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} [INSPIRE] Vertically-constrained dimensional property consisting of an absolute measure referenced to a well-defined surface which is commonly taken as origin (geoïd, water level, etc.).  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies qualified elevations of the building subdivision in relation to a well-defined surface which is commonly taken as origin (e.g. geoid or water level). [cf. INSPIRE]  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingSubdivisionFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the building subdivision.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}sortKey +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}sortKey +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Real +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Defines an order among the building unit objects, e.g. for sorting storeys.   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Defines an order among the objects that belong to the building subdivision. An example is the sorting of storeys.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingSubdivisionUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the building subdivision.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -162,15 +162,15 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Building/REQ_Building_Building.adoc[]
 
 |====
-|*Class Building*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class Building* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A Building is a free-standing, self-supporting construction that is roofed, usually walled, and can be entered by humans and is normally designed to stand permanently in one place. It is intended for human occupancy (e.g. a place of work or recreation), habitation and/or shelter of humans, animals or things. +
 Subclass Of: {nbsp}{nbsp} <<AbstractBuilding-section,AbstractBuilding>> +
-StereoType:{nbsp}{nbsp} «TopLevelFeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingPart +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<BuildingPart-section,BuildingPart>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation between Building and BuildingPart. +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «TopLevelFeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} buildingPart +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<BuildingPart-section,BuildingPart>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the building parts. +
 |*Attributes*
 |
 |==== 
@@ -181,11 +181,11 @@ Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relation between Building and B
 include::../requirements/Building/REQ_Building_BuildingClassValue.adoc[]
 
 |====
-|*Class BuildingClassValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class BuildingClassValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingClassValue is a code list used to further classify a Building. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -196,27 +196,27 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Building/REQ_Building_BuildingConstructiveElement.adoc[]
 
 |====
-|*Class BuildingConstructiveElement*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class BuildingConstructiveElement* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A BuildingConstructiveElement is an element of a Building which is essential from a structural point of view. Examples are walls, slabs, staircases, beams. +
 Subclass Of: {nbsp}{nbsp} <<AbstractConstructiveElement-section,AbstractConstructiveElement>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingConstructiveElementClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the BuildingConstructiveElement.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingConstructiveElementFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the BuildingConstructiveElement.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingConstructiveElementUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the BuildingConstructiveElement.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -229,11 +229,11 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Building/REQ_Building_BuildingConstructiveElementClassValue.adoc[]
 
 |====
-|*Class BuildingConstructiveElementClassValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class BuildingConstructiveElementClassValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingConstructiveElementClassValue is a code list used to further classify a BuildingConstructiveElement. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -244,11 +244,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Building/REQ_Building_BuildingConstructiveElementFunctionValue.adoc[]
 
 |====
-|*Class BuildingConstructiveElementFunctionValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class BuildingConstructiveElementFunctionValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingConstructiveElementFunctionValue is a code list that enumerates the different purposes of a BuildingConstructiveElement. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -259,11 +259,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Building/REQ_Building_BuildingConstructiveElementUsageValue.adoc[]
 
 |====
-|*Class BuildingConstructiveElementUsageValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class BuildingConstructiveElementUsageValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingConstructiveElementUsageValue is a code list that enumerates the different uses of a BuildingConstructiveElement. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -274,11 +274,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Building/REQ_Building_BuildingFunctionValue.adoc[]
 
 |====
-|*Class BuildingFunctionValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class BuildingFunctionValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingFunctionValue is a code list that enumerates the different purposes of a Building. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -289,27 +289,27 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Building/REQ_Building_BuildingFurniture.adoc[]
 
 |====
-|*Class BuildingFurniture*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class BuildingFurniture* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A BuildingFurniture is an equipment for occupant use, usually not fixed to the building. [cf. ISO 6707-1] +
 Subclass Of: {nbsp}{nbsp} <<AbstractFurniture-section,AbstractFurniture>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingFurnitureClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Classification of BuildingFurniture as given by the relevant national regulations, information communities, or specific applications.   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the BuildingFurniture.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingFurnitureFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Specified function of BuildingFurniture as given by the relevant national regulations, information communities, or specific applications.   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the BuildingFurniture.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingFurnitureUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Actual usage of BuildingFurniture as given by the relevant national regulations, information communities, or specific applications.   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the BuildingFurniture.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -322,11 +322,11 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Building/REQ_Building_BuildingFurnitureClassValue.adoc[]
 
 |====
-|*Class BuildingFurnitureClassValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class BuildingFurnitureClassValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingFurnitureClassValue is a code list used to further classify a BuildingFurniture. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -337,11 +337,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Building/REQ_Building_BuildingFurnitureFunctionValue.adoc[]
 
 |====
-|*Class BuildingFurnitureFunctionValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class BuildingFurnitureFunctionValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingFurnitureFunctionValue is a code list that enumerates the different purposes of a BuildingFurniture. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -352,11 +352,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Building/REQ_Building_BuildingFurnitureUsageValue.adoc[]
 
 |====
-|*Class BuildingFurnitureUsageValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class BuildingFurnitureUsageValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingFurnitureUsageValue is a code list that enumerates the different uses of a BuildingFurniture. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -367,27 +367,27 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Building/REQ_Building_BuildingInstallation.adoc[]
 
 |====
-|*Class BuildingInstallation*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class BuildingInstallation* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A BuildingInstallation is a permanent part of a Building (inside and/or outside) which has not the significance of a BuildingPart. Examples are stairs, antennas, balconies or small roofs. +
 Subclass Of: {nbsp}{nbsp} <<AbstractInstallation-section,AbstractInstallation>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingInstallationClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Classification of BuildingInstallation as given by the relevant national regulations, information communities, or specific applications.   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the BuildingInstallation.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingInstallationFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Specified function of BuildingInstallation as given by the relevant national regulations, information communities, or specific applications.   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the BuildingInstallation.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingInstallationUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Actual usage of BuildingInstallation as given by the relevant national regulations, information communities, or specific applications.   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the BuildingInstallation.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -400,11 +400,11 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Building/REQ_Building_BuildingInstallationClassValue.adoc[]
 
 |====
-|*Class BuildingInstallationClassValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class BuildingInstallationClassValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingInstallationClassValue is a code list used to further classify a BuildingInstallation. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -415,11 +415,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Building/REQ_Building_BuildingInstallationFunctionValue.adoc[]
 
 |====
-|*Class BuildingInstallationFunctionValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class BuildingInstallationFunctionValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingInstallationFunctionValue is a code list that enumerates the different purposes of a BuildingInstallation. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -430,11 +430,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Building/REQ_Building_BuildingInstallationUsageValue.adoc[]
 
 |====
-|*Class BuildingInstallationUsageValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class BuildingInstallationUsageValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingInstallationUsageValue is a code list that enumerates the different uses of a BuildingInstallation. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -445,11 +445,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Building/REQ_Building_BuildingPart.adoc[]
 
 |====
-|*Class BuildingPart*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class BuildingPart* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A BuildingPart is a physical or functional subdivision of a Building. It would be considered a Building, if it were not part of a collection of other BuildingParts. +
 Subclass Of: {nbsp}{nbsp} <<AbstractBuilding-section,AbstractBuilding>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -460,45 +460,45 @@ StereoType:{nbsp}{nbsp} «FeatureType»
 include::../requirements/Building/REQ_Building_BuildingRoom.adoc[]
 
 |====
-|*Class BuildingRoom*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class BuildingRoom* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A BuildingRoom is a space within a Building or BuildingPart intended for human occupancy (e.g. a place of work or recreation) and/or containment of animals or things. A BuildingRoom is bounded physically and/or virtually (e.g. by ClosureSurfaces or GenericSurfaces). +
 Subclass Of: {nbsp}{nbsp} <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingFurniture +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<BuildingFurniture-section,BuildingFurniture>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Relation between Room and BuildingFurniture +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingInstallation +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<BuildingInstallation-section,BuildingInstallation>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Relation between Room and IntBuildingInstallation +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} buildingFurniture +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<BuildingFurniture-section,BuildingFurniture>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates the furniture objects to the Building or BuildingPart. +
+|Relation Name: {nbsp}{nbsp} boundary +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+|Relation Name: {nbsp}{nbsp} buildingInstallation +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<BuildingInstallation-section,BuildingInstallation>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the installation objects. +
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}class +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingRoomClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Classification of Room as given by the relevant national regulations, information communities, or specific applications.   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the BuildingRoom.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}function +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingRoomFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Function of Room as given by the relevant national regulations, information communities, or specific applications.   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the BuildingRoom.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}roomHeight +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}roomHeight +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RoomHeight +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Height of the room.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies qualified heights of the BuildingRoom.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}usage +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingRoomUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Usage of Room as given by the relevant national regulations, information communities, or specific applications.   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the BuildingRoom.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -511,11 +511,11 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Building/REQ_Building_BuildingRoomClassValue.adoc[]
 
 |====
-|*Class BuildingRoomClassValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class BuildingRoomClassValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingRoomClassValue is a code list used to further classify a BuildingRoom. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -526,11 +526,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Building/REQ_Building_BuildingRoomFunctionValue.adoc[]
 
 |====
-|*Class BuildingRoomFunctionValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class BuildingRoomFunctionValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingRoomFunctionValue is a code list that enumerates the different purposes of a BuildingRoom. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -541,11 +541,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Building/REQ_Building_BuildingRoomUsageValue.adoc[]
 
 |====
-|*Class BuildingRoomUsageValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class BuildingRoomUsageValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingRoomUsageValue is a code list that enumerates the different uses of a BuildingRoom. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -556,11 +556,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Building/REQ_Building_BuildingSubdivisionClassValue.adoc[]
 
 |====
-|*Class BuildingSubdivisionClassValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class BuildingSubdivisionClassValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingSubdivisionClassValue is a code list used to further classify a BuildingSubdivision. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -571,11 +571,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Building/REQ_Building_BuildingSubdivisionFunctionValue.adoc[]
 
 |====
-|*Class BuildingSubdivisionFunctionValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class BuildingSubdivisionFunctionValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingSubdivisionFunctionValue is a code list that enumerates the different purposes of a BuildingSubdivision. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -586,11 +586,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Building/REQ_Building_BuildingSubdivisionUsageValue.adoc[]
 
 |====
-|*Class BuildingSubdivisionUsageValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class BuildingSubdivisionUsageValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingSubdivisionUsageValue is a code list that enumerates the different uses of a BuildingSubdivision. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -601,15 +601,15 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Building/REQ_Building_BuildingUnit.adoc[]
 
 |====
-|*Class BuildingUnit*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class BuildingUnit* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A BuildingUnit is a logical subdivision of a Building. BuildingUnits are formed according to some homogeneous property like function, ownership, management, or accessability. They may be separately sold, rented out, inherited, managed, etc. +
 Subclass Of: {nbsp}{nbsp} <<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} address +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<Address-section,Address>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Relation between BuildingUnit and Address. +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} address +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<Address-section,Address>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Relation between BuildingUnit and Address. +
 |*Attributes*
 |
 |==== 
@@ -620,11 +620,11 @@ Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Relation between Buildin
 include::../requirements/Building/REQ_Building_BuildingUsageValue.adoc[]
 
 |====
-|*Class BuildingUsageValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class BuildingUsageValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} BuildingUsageValue is a code list that enumerates the different uses of a Building. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -635,11 +635,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Building/REQ_Building_RoofTypeValue.adoc[]
 
 |====
-|*Class RoofTypeValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class RoofTypeValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RoofTypeValue is a code list that enumerates different roof types. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -650,11 +650,11 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Building/REQ_Building_RoomElevationReferenceValue.adoc[]
 
 |====
-|*Class RoomElevationReferenceValue*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class RoomElevationReferenceValue* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RoomElevationReferenceValue is a code list that enumerates the different elevation reference levels used to measure room heights. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «CodeList»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -665,19 +665,19 @@ StereoType:{nbsp}{nbsp} «CodeList»
 include::../requirements/Building/REQ_Building_Storey.adoc[]
 
 |====
-|*Class Storey*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class Storey* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A Storey is a horizontal section of a Building. +
 Subclass Of: {nbsp}{nbsp} <<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingUnit +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<BuildingUnit-section,BuildingUnit>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} boundary +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} buildingUnit +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<BuildingUnit-section,BuildingUnit>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the building units that belong to the Storey. +
+|Relation Name: {nbsp}{nbsp} boundary +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 |*Attributes*
 |
 |==== 
@@ -688,33 +688,33 @@ Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 include::../requirements/Building/REQ_Building_RoomHeight.adoc[]
 
 |====
-|*Class RoomHeight*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class RoomHeight* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} The RoomHeight represents a vertical distance (measured or estimated) between a low reference and a high reference. [cf. INSPIRE] +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «DataType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «DataType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}highReference +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}highReference +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RoomElevationReferenceValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} [INSPIRE] Element used as the high reference.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the high point used to calculate the value of the room height.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}lowReference +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}lowReference +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RoomElevationReferenceValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} [INSPIRE] Element as the low reference.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the low point used to calculate the value of the room height.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}status +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}status +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} HeightStatusValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} [INSPIRE] The way the height has been captured.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the way the room height has been captured.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}value +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}value +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Value of the room height.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the value of the room height.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 

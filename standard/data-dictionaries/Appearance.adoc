@@ -3,7 +3,7 @@
 
 |====
 |*Package Appearance*
-|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} +
+|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}The Appearance module supports the modelling of the observable surface properties of CityGML features in the form of textures and material. +
 Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
 Parent Package: {nbsp}{nbsp}CityGML
 |====
@@ -14,15 +14,15 @@ Parent Package: {nbsp}{nbsp}CityGML
 include::../requirements/Appearance/REQ_Appearance_AbstractSurfaceData.adoc[]
 
 |====
-|*Class AbstractSurfaceData*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractSurfaceData* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractSurfaceData is the abstract superclass for different kinds of textures and material. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}isFront +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}isFront +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Boolean +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Indicates whether the X3DMaterial, GeoreferencedTexture or, ParametrizedTexture is assigned to the front side or back side of the surface  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates whether the texture or material is assigned to the front side or the back side of the surface geometry object.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -35,39 +35,39 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Appearance/REQ_Appearance_AbstractTexture.adoc[]
 
 |====
-|*Class AbstractTexture*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractTexture* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractTexture is the abstract superclass to represent the common attributes of the classes ParameterizedTexture and GeoreferencedTexture. +
 Subclass Of: {nbsp}{nbsp} <<AbstractSurfaceData-section,AbstractSurfaceData>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}borderColor +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}borderColor +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} ColorPlusOpacity +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Color definition for texture borders.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the color of that part of the surface that is not covered by the texture.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}imageURI +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}imageURI +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} URI +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: URI identifying the image data resource for the texture  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the URI that points to the external image data file.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}mimeType +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}mimeType +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Code +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Mime type describing the data format of the image resource  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the MIME type of the external point cloud file.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}textureType +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}textureType +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TextureType +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} "SIG3D: Distinction between prototypical (value ""typical""), object specific (value ""specific"") textures, and textures with unknown classification (value ""unknown"")."  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the texture.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}wrapMode +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}wrapMode +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WrapMode +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Collada: Definition of behavior when accessing the texture outside the underlying image raster  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the behaviour of the texture when the texture is smaller than the surface to which it is applied.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -80,19 +80,19 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Appearance/REQ_Appearance_Appearance.adoc[]
 
 |====
-|*Class Appearance*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class Appearance* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} An Appearance is a collection of surface data, i.e. observable properties for surface geometry objects in the form of textures and material. +
 Subclass Of: {nbsp}{nbsp} <<AbstractAppearance-section,AbstractAppearance>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} surfaceData +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractSurfaceData-section,AbstractSurfaceData>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: List of surface data properties for the current appearance theme +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} surfaceData +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractSurfaceData-section,AbstractSurfaceData>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the surface data that are part of the Appearance. +
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}theme +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}theme +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CharacterString +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Theme name for all surfaceDataMembers. A theme is a catagory defining the semantics of the referenced surfaceDataMembers (e.g. infrared radiation,   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the topic of the Appearance. Each Appearance contains surface data for one theme only. Examples of themes are infrared radiation, noise pollution, or earthquake-induced structural stress.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -105,11 +105,11 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Appearance/REQ_Appearance_Color.adoc[]
 
 |====
-|*Class Color*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class Color* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Color is a list of three double values between 0 and 1 defining an RGB color value. +
 Subclass Of: {nbsp}{nbsp} <<DoubleBetween0and1List-section,DoubleBetween0and1List>> +
-StereoType:{nbsp}{nbsp} «BasicType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «BasicType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -120,11 +120,11 @@ StereoType:{nbsp}{nbsp} «BasicType»
 include::../requirements/Appearance/REQ_Appearance_ColorPlusOpacity.adoc[]
 
 |====
-|*Class ColorPlusOpacity*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class ColorPlusOpacity* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Color is a list of four double values between 0 and 1 defining an RGBA color value. Opacity value of 0 means transparent. +
 Subclass Of: {nbsp}{nbsp} <<DoubleBetween0and1List-section,DoubleBetween0and1List>> +
-StereoType:{nbsp}{nbsp} «BasicType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «BasicType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -135,31 +135,31 @@ StereoType:{nbsp}{nbsp} «BasicType»
 include::../requirements/Appearance/REQ_Appearance_GeoreferencedTexture.adoc[]
 
 |====
-|*Class GeoreferencedTexture*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class GeoreferencedTexture* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A GeoreferencedTexture is a texture that uses a planimetric projection. It contains an implicit parameterization that is either stored within the image file, an acompanying world file or specified using the orientation and referencePoint elements. +
 Subclass Of: {nbsp}{nbsp} <<AbstractTexture-section,AbstractTexture>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} referencePoint +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<GM_Point-section,GM_Point>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Defines the location of the center of the upper left image pixel in world space. +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} referencePoint +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_Point-section,GM_Point>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the 2D Point Geometry that represents the center of the upper left image pixel in world space. +
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}orientation +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}orientation +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TransformationMatrix2x2 +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Defines the rotation and scaling of the image in form of a 2x2 matrix (a list of 4 doubles in row-major order).  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the rotation and scaling of the image in form of a 2x2 matrix.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}preferWorldFile +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}preferWorldFile +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Boolean +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Flag for defining the precedence of an accompanying worldfile before the georeference included in the image source. If this value is false, the world file   +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates whether the georeference from the image file or the accompanying world file should be prefered.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}target +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}target +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} URI +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Geometry object which is associated with the texture.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the URI that points to the surface geometry objects to which the texture is applied.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -172,15 +172,15 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Appearance/REQ_Appearance_ParameterizedTexture.adoc[]
 
 |====
-|*Class ParameterizedTexture*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class ParameterizedTexture* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A ParameterizedTexture is a texture that uses texture coordinates or a transformation matrix for parameterization. +
 Subclass Of: {nbsp}{nbsp} <<AbstractTexture-section,AbstractTexture>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} textureParameterization +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp} <<AbstractTextureParameterization-section,AbstractTextureParameterization>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} textureParameterization +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractTextureParameterization-section,AbstractTextureParameterization>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the texture coordinates or transformation matrices used for parameterization. +
 |*Attributes*
 |
 |==== 
@@ -191,15 +191,15 @@ Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 include::../requirements/Appearance/REQ_Appearance_TextureAssociation.adoc[]
 
 |====
-|*Class TextureAssociation*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class TextureAssociation* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TextureAssociation denotes the relation of a texture to a surface geometry object. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «ObjectType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «ObjectType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}uri +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}target +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} URI +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: Link to the geometry object to be textured.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the URI that points to the surface geometry object to which the texture is applied.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -212,57 +212,57 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Appearance/REQ_Appearance_X3DMaterial.adoc[]
 
 |====
-|*Class X3DMaterial*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class X3DMaterial* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} X3DMaterial defines properties for surface geometry objects based on the material definitions from the standards X3D and COLLADA. +
 Subclass Of: {nbsp}{nbsp} <<AbstractSurfaceData-section,AbstractSurfaceData>> +
-StereoType:{nbsp}{nbsp} «FeatureType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}ambientIntensity +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}ambientIntensity +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DoubleBetween0and1 +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} X3D: Minimum percentage of diffuseColor that is visible regardless of light sources  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the minimum percentage of diffuseColor that is visible regardless of light sources.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}diffuseColor +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}diffuseColor +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Color +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} X3D: Color of the diffusely reflected light  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the color of the light diffusely reflected by the surface geometry object.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}emissiveColor +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}emissiveColor +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Color +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} X3D: Color of the light emitted by the surface  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the color of the light emitted by the surface geometry object.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}isSmooth +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}isSmooth +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Boolean +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} X3D: Hint for normal interpolation. If true vertex normals used for shading. Otherwise normals are constant for the patch.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies which interpolation method is used for the shading of the surface geometry object. If the attribute is set to true, vertex normals should be used for shading (Gouraud shading). Otherwise, normals should be constant for a surface patch (flat shading).  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}shininess +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}shininess +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DoubleBetween0and1 +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} X3D: Controls the sharpness of specular highlights. 0 produces a soft glow. 1 produces sharp highlights.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the sharpness of the specular highlight.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}specularColor +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}specularColor +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Color +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} X3D: Color of the directly reflected light  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the color of the light directly reflected by the surface geometry object.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}target +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}target +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} URI +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} X3D: URI identifying the target surface geometry to apply the material properties  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the URI that points to the surface geometry objects to which the material is applied.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}transparency +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}transparency +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DoubleBetween0and1 +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} X3D: Degree of transparency of the surface. 0 means fully opaque. 1 means fully transparent.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the degree of transparency of the surface geometry object.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -275,11 +275,11 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Appearance/REQ_Appearance_AbstractTextureParameterization.adoc[]
 
 |====
-|*Class AbstractTextureParameterization*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class AbstractTextureParameterization* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractTextureParameterization is the abstract superclass for different kinds of texture parameterizations. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «DataType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «DataType»
+|*Relations* 
 |*Attributes*
 |
 |==== 
@@ -290,19 +290,19 @@ StereoType:{nbsp}{nbsp} «DataType»
 include::../requirements/Appearance/REQ_Appearance_TexCoordGen.adoc[]
 
 |====
-|*Class TexCoordGen*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class TexCoordGen* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TexCoordGen defines texture parameterization using a transformation matrix. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «DataType»
-|*Roles* 
-|Role Name: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} crs +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp} <<SC_CRS-section,SC_CRS>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «DataType»
+|*Relations* 
+|Relation Name: {nbsp}{nbsp} crs +
+Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
+Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<SC_CRS-section,SC_CRS>>  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the coordinate reference system of the transformation matrix. +
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}worldToTexture +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}worldToTexture +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TransformationMatrix3x4 +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: 3x4 Matrix that defines the transformation between world coordinates and texture coordinates.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the 3x4 transformation matrix that defines the transformation between world coordinates and texture coordinates.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -315,21 +315,21 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Appearance/REQ_Appearance_TexCoordList.adoc[]
 
 |====
-|*Class TexCoordList*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class TexCoordList* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TexCoordList defines texture parameterization using texture coordinates. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} «DataType»
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «DataType»
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}ring +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}ring +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} URI +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: gml:ids of the LinearRings that are parameterized using the given texture coordinates  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the URIs that point to the LinearRings that are parameterized using the given texture coordinates.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [1..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}textureCoordinates +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}textureCoordinates +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DoubleList +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: List of texture coordinates with two doubles per ring vertex  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the coordinates of texture used for parameterization. The texture coordinates are provided separately for each LinearRing of the surface geometry object.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [1..*] +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
 
@@ -342,27 +342,27 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Appearance/REQ_Appearance_TextureType.adoc[]
 
 |====
-|*Class TextureType*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class TextureType* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TextureType enumerates the different texture types. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} 
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} 
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}specific +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}specific +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: The texture is specific for a certain object  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the texture is specific to a single surface.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}typical +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}typical +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: The texture is typical for a kind of object  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the texture is characteristic of a surface and can be used repeatedly.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}unknown +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}unknown +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SIG3D: The texture type is unknown.  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the texture type is not known.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
@@ -375,39 +375,39 @@ Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{n
 include::../requirements/Appearance/REQ_Appearance_WrapMode.adoc[]
 
 |====
-|*Class WrapMode*
-|Definition:{nbsp}{nbsp}{nbsp}{nbsp}  +
+|*Class WrapMode* +
+Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WrapMode enumerates the different fill modes for textures. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp} 
-|*Roles* 
+StereoType:{nbsp}{nbsp}{nbsp}{nbsp} 
+|*Relations* 
 |*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}none +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}none +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} COLLADA: The resulting color is fully transparent  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the texture is applied to the surface "as is". The part of the surface that is not covered by the texture is shown fully transparent. [cf. COLLADA]  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}wrap +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}wrap +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} COLLADA: The texture is repeated  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the texture is repeated until the surface is fully covered. [cf. COLLADA]  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}mirror +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}mirror +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} COLLADA: The texture is repeated and mirrored  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the texture is repeated and mirrored. [cf. COLLADA]  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}clamp +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}clamp +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} COLLADA: The texture is clamped to its edges  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the texture is stretched to the edges of the surface. [cf. COLLADA]  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}border +
+|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}border +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} COLLADA: The resulting color is specified by the borderColor element (RGBA)  +
+Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the texture is applied to the surface "as is". The part of the surface that is not covered by the texture is filled with the RGBA color that is specified in the attribute borderColor. [cf. COLLADA]  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
 Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
 
