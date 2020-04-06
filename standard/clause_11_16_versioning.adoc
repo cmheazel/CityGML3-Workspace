@@ -3,9 +3,12 @@
 
 include::requirements/requirements_class_versioning.adoc[]
 
-NOTE: Content to be provided by TBD
+The Versioning module provides the concepts that allow for representing multiple versions of a city model. A specific version represents a defined state of a city model consisting of the dedicated versions of all city object instances that belong to the respective city model version. Each version can be complemented by version transitions that describe the change of the state of a city model from one version to another and that give the reason for the change and the modifications applied. In addition, the Versioning module introduces bitemporal timestamps for all objects. This allows for providing all objects with information on the time period a specific version of an object is an integral part of the 3D city model and on the lifespan a specific version of an object exists in the real world.
 
-The UML diagram of the Versioning Model is depicted in <<versioning-uml,Versioning UML Diagram>>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_versioning_section[here].
+By using the Versioning module, slow changes over a long time period with respect to cities and city models can be represented. This includes the creation and termination of objects (e.g. construction or demolition of sites, planting of trees, construction of new roads), structural changes of objects (e.g. raising of buildings), and changes in the status of an object (e.g. change of building owner, change of the traffic direction of a road to a one-way street).
+In this way, the history or evolution of cities and city models can be modelled, parallel or alternative versions of cities and city models can be managed, and changes of geometries and thematic properties of individual city objects over time can be tracked.
+
+The UML diagram of the Versioning module is depicted in <<versioning-uml,Versioning UML Diagram>>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_versioning_section[here].
 
 [[versioning-uml]]
 .UML diagram of the Versioning Model.
@@ -17,5 +20,3 @@ include::data-dictionaries/Versioning.adoc[]
 ==== Additional Information
 
 The following sections provide additional information which may not be readily available through the UML Model.
-
-

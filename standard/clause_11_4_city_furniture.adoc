@@ -1,11 +1,12 @@
 [[rc_City-Furniture_section]]
-=== City Furniture Model
-
-City furniture is a semantic category which consists of relatively small objects that usually have a stereotypical form. City furniture functions to decorate, explain, or control outdoor environments. Examples include road signs, traffic signals, bicycle racks, fountains, and benches.
+=== City Furniture
 
 include::requirements/requirements_class_cityfurniture.adoc[]
 
-The UML diagram of the City Furniture model is depicted in the <<cityfurniture-uml,City Furniture UML Diagram>>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_city-furniture_section[here].
+The CityFurniture module provides the representation of objects or pieces of equipment that are installed in the outdoor environment for various purposes, such as decoration, explanation or control. City furniture objects are relatively small, immovable objects and usually are of stereotypical form. Examples include road signs, traffic signals, bicycle racks, street lamps, fountains, flower buckets, advertising columns, and benches.
+City furniture is represented in the UML model by the top-level feature type _CityFurniture_, which is also the only class of the CityFurniture module.
+
+The UML diagram of the CityFurniture module is depicted in the <<cityfurniture-uml,City Furniture UML Diagram>>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_city-furniture_section[here].
 
 [[cityfurniture-uml]]
 .UML diagram of CityGML’s city furniture model.
@@ -17,5 +18,3 @@ include::data-dictionaries/CityFurniture.adoc[]
 ==== Additional Information
 
 The following sections provide additional information which may not be readily available through the UML Model.
-
-
