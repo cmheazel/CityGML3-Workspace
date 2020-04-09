@@ -1,0 +1,107 @@
+[[CityFurniture-package_new]]
+==== *Package*
+
+[cols="1a"]
+|===
+|{set:cellbgcolor:#FFFFFF} *Package CityFurniture*
+|[cols="1,4",frame=none,grid=none]
+!===
+! {nbsp}{nbsp}{nbsp}{nbsp}Definition: ! The CityFurniture module supports representation of city furniture objects. City furniture objects are immovable objects like lanterns, traffic signs, advertising columns, benches, or bus stops that can be found in traffic areas, residential areas, on squares, or in built-up areas.
+! {nbsp}{nbsp}{nbsp}{nbsp}Parent package: ! CityGML
+! {nbsp}{nbsp}{nbsp}{nbsp}Stereotype: ! «ApplicationSchema»
+!===
+|===
+
+[[CityFurniture-section_new]]
+==== *Classes*
+
+===== *Class CityFurniture*
+
+[cols="1a"]
+|===
+| *CityFurniture*
+|[cols="1,4",frame=none,grid=none]
+!===
+! {nbsp}{nbsp}{nbsp}{nbsp}Definition: ! CityFurniture is an object or piece of equipment installed in the outdoor environment for various purposes. Examples include street signs, traffic signals, street lamps, benches, fountains.
+! {nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>>
+! {nbsp}{nbsp}{nbsp}{nbsp}Stereotype: ! «TopLevelFeatureType»
+!===
+|*Relations*
+|*Attributes* (Unless otherwise specified, all attributes have the stereotype «Property».)
+|[cols="1,4",frame=none,grid=none]
+!===
+2+! [blue]*+++<color rgb="#0000ff">Attribute: class</color>+++*
+! {nbsp}{nbsp}{nbsp}{nbsp}Name: ! class
+! {nbsp}{nbsp}{nbsp}{nbsp}Value type: ! <<CityFurnitureClassValue-section,CityFurnitureClassValue>>
+! {nbsp}{nbsp}{nbsp}{nbsp}Definition: ! Indicates the specific type of the CityFurniture.
+! {nbsp}{nbsp}{nbsp}{nbsp}Multiplicity: ! [0..1]
+!===
+|[cols="1,4",frame=none,grid=none]
+!===
+2+! [blue]*+++<color rgb="#0000ff">Attribute: function</color>+++*
+! {nbsp}{nbsp}{nbsp}{nbsp}Name: ! function
+! {nbsp}{nbsp}{nbsp}{nbsp}Value type: ! <<CityFurnitureFunctionValue-section,CityFurnitureFunctionValue>>
+! {nbsp}{nbsp}{nbsp}{nbsp}Definition: ! Specifies the intended purposes of the CityFurniture.
+! {nbsp}{nbsp}{nbsp}{nbsp}Multiplicity: ! [0..*]
+!===
+|[cols="1,4",frame=none,grid=none]
+!===
+2+! [blue]*+++<color rgb="#0000ff">Attribute: usage</color>+++*
+! {nbsp}{nbsp}{nbsp}{nbsp}Name: ! function
+! {nbsp}{nbsp}{nbsp}{nbsp}Value type: ! <<CityFurnitureUsageValue-section,CityFurnitureUsageValue>>
+! {nbsp}{nbsp}{nbsp}{nbsp}Definition: ! Specifies the actual uses of the CityFurniture.
+! {nbsp}{nbsp}{nbsp}{nbsp}Multiplicity: ! [0..*]
+!===
+|===
+
+==== *Code lists*
+
+[[CityFurnitureClassValue-section_new]]
+===== *Code list CityFurnitureClassValue*
+
+[cols="1a"]
+|===
+|*Code list CityFurnitureClassValue*
+|[cols="1,4",frame=none,grid=none]
+!===
+! {nbsp}{nbsp}{nbsp}{nbsp}Definition: ! CityFurnitureClassValue is a code list used to further classify a CityFurniture.
+! {nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! -
+! {nbsp}{nbsp}{nbsp}{nbsp}Stereotype: ! «CodeList»
+!===
+|*Relations*
+|*Attributes*
+|===
+
+
+[[CityFurnitureFunctionValue-section_new]]
+===== *Code list CityFurnitureFunctionValue*
+
+[cols="1a"]
+|===
+|*Code list CityFurnitureFunctionValue*
+|[cols="1,4",frame=none,grid=none]
+!===
+! {nbsp}{nbsp}{nbsp}{nbsp}Definition: ! CityFurnitureFunctionValue is a code list that enumerates the different purposes of a CityFurniture.
+! {nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! -
+! {nbsp}{nbsp}{nbsp}{nbsp}Stereotype: ! «CodeList»
+!===
+|*Relations*
+|*Attributes*
+|===
+
+
+[[CityFurnitureUsageValue-section_new]]
+===== *Code list CityFurnitureUsageValue*
+
+[cols="1a"]
+|===
+|*Code list CityFurnitureUsageValue*
+|[cols="1,4",frame=none,grid=none]
+!===
+! {nbsp}{nbsp}{nbsp}{nbsp}Definition: ! CityFurnitureUsageValue is a code list that enumerates the different uses of a CityFurniture.
+! {nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! -
+! {nbsp}{nbsp}{nbsp}{nbsp}Stereotype: ! «CodeList»
+!===
+|*Relations*
+|*Attributes*
+|===

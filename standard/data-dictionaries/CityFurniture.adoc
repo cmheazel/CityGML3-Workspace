@@ -18,28 +18,28 @@ include::../requirements/CityFurniture/REQ_CityFurniture_CityFurniture.adoc[]
 Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CityFurniture is an object or piece of equipment installed in the outdoor environment for various purposes. Examples include street signs, traffic signals, street lamps, benches, fountains. +
 Subclass Of: {nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
 StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «TopLevelFeatureType»
-|*Relations* 
+|*Relations*
 |*Attributes*
 |Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CityFurnitureClassValue +
 Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the CityFurniture.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» +
 
 |Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CityFurnitureFunctionValue +
 Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the CityFurniture.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» +
 
 |Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
 Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CityFurnitureUsageValue +
 Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the CityFurniture.  +
 Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» +
 
 |
-|==== 
+|====
 
 [[CityFurnitureClassValue-section]]
 ==== *Class CityFurnitureClassValue*
@@ -51,10 +51,10 @@ include::../requirements/CityFurniture/REQ_CityFurniture_CityFurnitureClassValue
 Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CityFurnitureClassValue is a code list used to further classify a CityFurniture. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
 StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
+|*Relations*
 |*Attributes*
 |
-|==== 
+|====
 
 [[CityFurnitureFunctionValue-section]]
 ==== *Class CityFurnitureFunctionValue*
@@ -66,10 +66,10 @@ include::../requirements/CityFurniture/REQ_CityFurniture_CityFurnitureFunctionVa
 Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CityFurnitureFunctionValue is a code list that enumerates the different purposes of a CityFurniture. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
 StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
+|*Relations*
 |*Attributes*
 |
-|==== 
+|====
 
 [[CityFurnitureUsageValue-section]]
 ==== *Class CityFurnitureUsageValue*
@@ -81,11 +81,7 @@ include::../requirements/CityFurniture/REQ_CityFurniture_CityFurnitureUsageValue
 Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CityFurnitureUsageValue is a code list that enumerates the different uses of a CityFurniture. +
 Subclass Of: {nbsp}{nbsp} <<-section,>> +
 StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
+|*Relations*
 |*Attributes*
 |
 |==== 
-  
-
-
-
