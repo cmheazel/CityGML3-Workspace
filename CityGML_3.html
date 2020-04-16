@@ -571,7 +571,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#_motivation">1.1. Motivation</a></li>
 <li><a href="#_historical_background">1.2. Historical background</a></li>
-<li><a href="#_additions_in_citygml_2_0">1.3. Additions in CityGML 2.0</a></li>
+<li><a href="#_additions_and_changes_in_citygml_3_0">1.3. Additions and changes in CityGML 3.0</a></li>
 </ul>
 </li>
 <li><a href="#_scope">2. Scope</a></li>
@@ -579,8 +579,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_references">4. References</a></li>
 <li><a href="#_terms_and_definitions">5. Terms and Definitions</a>
 <ul class="sectlevel2">
-<li><a href="#_term_name">5.1. <strong>term name</strong></a></li>
-<li><a href="#_abbreviated_terms">5.2. Abbreviated Terms</a></li>
+<li><a href="#_abbreviated_terms">5.1. Abbreviated Terms</a></li>
 </ul>
 </li>
 <li><a href="#_conventions">6. Conventions</a>
@@ -623,10 +622,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_citygml_conceptual_model">11. CityGML Conceptual Model</a>
 <ul class="sectlevel2">
 <li><a href="#rc_core_section">11.1. Core</a></li>
-<li><a href="#rc_appearance_section">11.2. Appearance Model</a></li>
-<li><a href="#rc_bridge-model_section">11.3. Bridge Model</a></li>
+<li><a href="#rc_appearance_section">11.2. Appearance</a></li>
+<li><a href="#rc_bridge-model_section">11.3. Bridge</a></li>
 <li><a href="#rc_building-model_section">11.4. Building</a></li>
-<li><a href="#rc_City-Furniture_section">11.5. City Furniture Model</a></li>
+<li><a href="#rc_City-Furniture_section">11.5. City Furniture</a></li>
 <li><a href="#rc_city-object-group_section">11.6. City Object Group</a></li>
 <li><a href="#rc_construction_section">11.7. Construction</a></li>
 <li><a href="#rc_dynamizer_section">11.8. Dynamizer</a></li>
@@ -663,6 +662,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="#_revision_history">Annex B: Revision History</a></li>
+<li><a href="#_change_log_for_citygml_3_0">13. Change Log for CityGML 3.0</a></li>
 <li><a href="#_changelog_for_citygml_3_0">Annex C: Changelog for CityGML 3.0</a></li>
 <li><a href="#Bibliography">Annex D: Bibliography</a></li>
 </ul>
@@ -684,7 +684,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The following are keywords to be used by search engines and document catalogues.</p>
 </div>
 <div class="paragraph">
-<p>ogcdoc, OGC document,  &lt;tags separated by commas&gt;</p>
+<p>ogcdoc, OGC document, CityGML, 3D city models &lt;tags separated by commas&gt;</p>
 </div>
 <div class="paragraph">
 <p><strong class="big">iii.   Preface</strong></p>
@@ -696,39 +696,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
 </div>
 <div class="paragraph">
-<p>There are significant changes between CityGML version 2.0.0 and CityGML version 1.0.0 (OGC document no. 08-007r1):</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>New thematic modules for the representation of tunnels and bridges;</p>
-</li>
-<li>
-<p>Additional boundary surfaces for the semantic classification of the outer shell of buildings and building parts (OuterCeilingSurface and OuterFloorSurface);</p>
-</li>
-<li>
-<p>LOD0 representation (footprint and roof egde representations) for buildings and building parts;</p>
-</li>
-<li>
-<p>Additional attributes denoting a city object’s location with respect to the surrounding terrain and water surface (relativeToTerrain and relativeToWater);</p>
-</li>
-<li>
-<p>Additional generic attributes for measured values and attribute sets; and</p>
-</li>
-<li>
-<p>Redesign of the CityGML code list mechanism (enumerative attributes are now of type gml:CodeType which facilitates to provide additional code lists enumerating their possible attribute values).</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Migration of existing CityGML 1.0 instances to valid 2.0 instances only requires changing the CityGML namespace and schema location values in the document to the actual 2.0 values.</p>
+<p>More content to be provided.</p>
 </div>
 <div class="paragraph">
 <p><strong class="big">iv.    Submitting organizations</strong></p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/CityGML_Logo.png" alt="CityGML Logo">
+<img src="images/CityGML_Logo.png" alt="CityGML Logo" width="30%">
 </div>
 </div>
 <div class="paragraph">
@@ -747,74 +722,23 @@ PNG interlace method not supported for PDF generation.  Find a more compatible O
 </table>
 </div>
 <div class="paragraph">
-<p>OGC work on CityGML is discussed and coordinated by the OGC 3D Information Management (3DIM) Working Group.CityGMLwas initally implemented and evaluated as part of the OGC Web Services Testbed, Phase 4 (OWS-4) in the CAD/GIS/BIM thread.</p>
-</div>
-<div class="paragraph">
-<p>Version 2.0 of this standards document was prepared by the OGC CityGML Standards Working Group (SWG). Future discussion and development will be led by the 3DIM Working Group.</p>
-</div>
-<div class="paragraph">
-<p>For further information see <a href="http://www.opengeospatial.org/projects/groups/3dimwg" class="bare">http://www.opengeospatial.org/projects/groups/3dimwg</a></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/SIG3D_Logo.png" alt="SIG3D Logo">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/GDI_Logo.png" alt="GDI Logo">
-</div>
-</div>
-<div class="paragraph">
-<p>CityGML also continues to be developed by the members of the Special Interest Group 3D (SIG 3D) of the GDI-DE Geodateninfrastruktur Deutschland (Spatial Data Infrastructure Germany) in joint cooperation with the 3DIM Working Group and the CityGML SWG within OGC.</p>
-</div>
-<div class="paragraph">
-<p>For further information see <a href="http://www.sig3d.org/" class="bare">http://www.sig3d.org/</a></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/EuroSDR_Logo.png" alt="EuroSDR Logo">
-</div>
-</div>
-<div class="paragraph">
-<p>The preparation of the English document version and the European discussion has been supported by the European Spatial Data Research Organization (EuroSDR; formerly known as OEEPE) in an EuroSDR Commission III project. For further information see <a href="http://www.eurosdr.net" class="bare">http://www.eurosdr.net</a></p>
-</div>
-<div class="paragraph">
-<p>This Document was submitted to the Open Geospatial Consortium (OGC) by the members of the CityGML 3.0 Standards Working Group of the OGC. Amongst others, this comprises the following organizations:</p>
+<p>This Document was submitted to the Open Geospatial Consortium (OGC) by the members of the CityGML Standards Working Group of the OGC. Amongst others, this comprises the following organizations:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Autodesk, Inc. (primary submitter)</p>
+<p>To be provided</p>
 </li>
 <li>
-<p>Bentley Systems, Inc. (primary submitter)</p>
-</li>
-<li>
-<p>Technical University Berlin (submitter of technology)</p>
-</li>
-<li>
-<p>Ordnance Survey, UK</p>
-</li>
-<li>
-<p>University of Bonn, Germany</p>
-</li>
-<li>
-<p>Hasso-Plattner-Institute for IT Systems Engineering, University of Potsdam</p>
-</li>
-<li>
-<p>Institute for Applied Computer Science, Karlsruhe Institute of Technology</p>
+<p>&#8230;&#8203;</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>CityGML was originally developed by the Special Interest Group 3D (SIG 3D), 2002 – 2012 - www.citygml.org.</p>
 </div>
 <div class="paragraph">
 <p><strong class="big">v.     Submitters</strong></p>
 </div>
 <div class="paragraph">
-<p>All questions regarding this submission should be directed to the editor or the submitters:</p>
+<p>All questions regarding this submission should be directed to the editors or the submitters:</p>
 </div>
 <table id="submission_contact_points" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 1. Submission Contact Points</caption>
@@ -832,39 +756,7 @@ PNG interlace method not supported for PDF generation.  Find a more compatible O
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Prof. Dr. Thomas H. Kolbe, Claus Nagel, Alexandra Lorenz</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Institute for Geodesy and Geoinformation Science, Technical University Berlin</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="mailto:thomas.kolbe@tu-berlin.de">thomas.kolbe@tu-berlin.de</a> <a href="mailto:claus.nagel@tu-berlin.de">claus.nagel@tu-berlin.de</a> <a href="mailto:alexandra.lorenz@tu-berlin.de">alexandra.lorenz@tu-berlin.de</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dr. Gerhard Gröger, Prof. Dr. Lutz Plümer, Angela Czerwinski</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Institute for Geodesy and Geoinformation, University of Bonn</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="mailto:Groeger@ikg.uni-bonn.de">Groeger@ikg.uni-bonn.de</a> <a href="mailto:Pluemer@ikg.uni-bonn.de">Pluemer@ikg.uni-bonn.de</a> <a href="mailto:Czerwinski@ikg.uni-bonn.de">Czerwinski@ikg.uni-bonn.de</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Haik Lorenz</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Autodesk, Inc.</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="mailto:haik.lorenz@autodesk.com">haik.lorenz@autodesk.com</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Alain Lapierre, Stefan Apfel, Paul Scarponcini</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Bentley Systems, Inc.</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="mailto:alain.lapierre@bentley.com">alain.lapierre@bentley.com</a> <a href="mailto:stefan.apfel@bentley.com">stefan.apfel@bentley.com</a> <a href="mailto:paul.scarponcini@bentley.com">paul.scarponcini@bentley.com</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Carsten Rönsdorf</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Ordnance Survey, Great Britain</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="mailto:carsten.roensdorf@ordnancesurvey.co.uk">carsten.roensdorf@ordnancesurvey.co.uk</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Prof. Dr. Jürgen Döllner</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Hasso-Plattner-Institute for IT Systems Engineering, University of Potsdam</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="mailto:juergen.doellner@hpi.uni-potsdam.de">juergen.doellner@hpi.uni-potsdam.de</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dr. Joachim Benner, Karl-Heinz Häfele</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Institute for Applied Computer Science, Karlsruhe Institute of Technology</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="mailto:joachim.benner@kit.edu">joachim.benner@kit.edu</a> <a href="mailto:karl-heinz.haefele@kit.edu">karl-heinz.haefele@kit.edu</a></p></td>
+<td class="tableblock halign-center valign-top" colspan="3" style="background-color: #FFFFFF;"><p class="tableblock">To be provided</p></td>
 </tr>
 </tbody>
 </table>
@@ -885,99 +777,30 @@ PNG interlace method not supported for PDF generation.  Find a more compatible O
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Ulrich Gruber, Sandra Schlüter</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">District Administration Recklinghausen, Cadastre Department, Germany</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Frank Bildstein</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Rheinmetall Defence Electronics, Germany</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Rüdiger Drees</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">T-Systems Enterprise Services GmbH, Bonn, Germany</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Andreas Kohlhaas</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">GIStec GmbH (formerly), Germany</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Frank Thiemann</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Institute for Cartography and Geoinformatics, University of Hannover</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Martin Degen</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Cadastre Department, City of Dortmund</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Heinrich Geerling</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Architekturbüro Geerling, Germany</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dr. Frank Knospe</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Cadastre and Mapping Department, City of Essen,</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Hardo Müller</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Snowflake Software Ltd., Great Britain</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Martin Rechner</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">rechner logistic, Germany</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Jörg Haist, Daniel Holweg</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Fraunhofer Institute for Computer Graphics (IGD), Darmstadt, Germany</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Prof. Dr. Peter A. Henning</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Faculty for Computer Science, University of Applied Sciences, Karlsruhe, Germany</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Rolf Wegener, Stephan Heitmann</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">State Cadastre and Mapping Agency of North-Rhine Westphalia, Germany</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Prof. Dr. Marc-O. Löwner</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Institute for Geodesy and Photogrammetry, Technical University of Braunschweig</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dr. Egbert Casper</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Zerna Ingenieure, Germany</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Christian Dahmen</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">con terra GmbH, Germany</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Nobuhiro Ishimaru, Kishiko Maruyama, Eiichiro Umino, Takahiro Hirose</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Hitachi, Ltd., Japan</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Linda van den Brink</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Geonovum, The Netherlands</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Ron Lake, David Burggraf</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Galdos Systems Inc., Canada</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Marie-Lise Vautier, Emmanuel Devys</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Institut géographique national, France</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Mark Pendlington</p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Ordnance Survey, Great Britain</p></td>
+<td class="tableblock halign-center valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">To be provided</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
+<p>The table only lists persons that were involved in the development of CityGML 3.0. CityGML 3.0 is based on extensive previous work that was done for CityGML 2.0. For persons involved in the previous work, please refer to the CityGML 2.0 specification.</p>
+</div>
+<div class="paragraph">
 <p><strong class="big">vii.    Acknowledgements</strong></p>
 </div>
 <div class="paragraph">
-<p>The SIG 3D wishes to thank the members of the CityGML Standards Working Group and the 3D Information Management (3DIM) Working Group of the OGC as well as all contributors of change requests and comments. In particular: Tim Case, Scott Simmons, Paul Cote, Clemens Portele, Jeffrey Bell, Chris Body, Greg Buehler, François Golay, John Herring, Jury Konga, Kai-Uwe Krause, Gavin Park, Richard Pearsall, George Percivall, Mauro Salvemini, Alessandro Triglia, David Wesloh, Tim Wilson, Greg Yetman, Jim Farley, Cliff Behrens, Lukas Herman, Danny Kita, and Simon Cox.</p>
+<p>The editors wish to thank the Special Interest Group 3D (SIG 3D) of the initiative Geodata Infrastructure Germany (GDI-DE) which originally started the development of CityGML, the CityGML Standards Working Group and the 3D Information Management (3DIM) Working Group of the OGC as well as all contributors of change requests and comments.</p>
 </div>
-<div class="paragraph">
-<p>Further credits for careful reviewing and commenting of this document go to: Ludvig Emgard, Bettina Petzold, Dave Capstick, Mark Pendlington, Alain Lapierre, and Frank Steggink.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Explanatory text edit 01  for 01.04.2020 release starts here
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -1005,103 +828,37 @@ PNG interlace method not supported for PDF generation.  Find a more compatible O
 <div class="sect2">
 <h3 id="_historical_background"><a class="anchor" href="#_historical_background"></a>1.2. Historical background</h3>
 <div class="paragraph">
-<p>CityGML has been developed since 2002 by the members of the Special Interest Group 3D (SIG 3D). Since 2010, this group is part of the initiative Spatial Data Infrastructure Germany (GDI-DE). Before 2010, the SIG 3D was affiliated to the initiative Geodata Infrastructure North Rhine-Westphalia (GDI NRW). The SIG 3D is an open group consisting of more than 70 companies, municipalities, and research institutions from Germany, Great Britain, Switzerland, and Austria working on the development and commercial exploitation of interoperable 3D city models and geovisualisation. Another result of the work from the SIG 3D is the proposition of the Web 3D Service (W3DS), a 3D portrayal service that is also being discussed in the Open Geospatial Consortium (OGC Doc. No. 05-019 and OGC Doc. No. 09-104r1).</p>
-</div>
-<div class="paragraph">
-<p>A first successful implementation and evaluation of a subset of CityGML has been performed in the project “Pilot 3D” of the GDI NRW in 2005. Participants came from all over Germany and demonstrated city planning scenarios and tourist applications. By the beginning of 2006, a CityGML project within EuroSDR (European Spatial Data Research) started focusing on the European harmonisation of 3D city modelling. From June to December 2006, CityGML was employed and evaluated in the CAD/GIS/BIM thread of the OpenGIS Web Services Testbed #4 (OWS-4). Since 2008, CityGML (version 1.0.0) is an adopted OGC standard.</p>
-</div>
-<div class="paragraph">
-<p>From that point in time, CityGML has disseminated worldwide. Many cities in Germany and in other countries in Europe provide their 3D city model in CityGML (Berlin, Cologne, Dresden and Munich, to mention only a few). In France, the project Bâti3D (IGN France) defines a profile of CityGML LOD2 and provides data from Paris and the city centres of Aix-en-Provence, Lille, Nantes and Marseille. CityGML also plays an important role in the pilot 3D project to obtain a 3D geoinformation standard and a 3D infrastructure for The Netherlands. Many cities in Europe like Monaco, Geneva, Zurich, Leewarden use CityGML LOD 2 or 3 to represent and exchange data, as well as cities in Denmark (LOD 2 and 3, partly LOD4). CityGML has strongly influenced the building model (version 2.0) of the INSPIRE initiative of the EU commission, which aims at the creation of an European spatial data infrastructure providing public sector data in an interoperable way. In Asia, the 3D city models of Istanbul (LOD 1 and 2), Doha, Katar (LOD3), and Yokohama (LOD2) are represented and exchanged in CityGML. Moreover, CityGML plays a crucial role for the 3D Spatial data infrastructure in Malaysia.</p>
-</div>
-<div class="paragraph">
-<p>Today many commercial and academic tools support CityGML by providing import interfaces, export interfaces or both. An example is the 3D City Database which is a free and open source 3D geo database to store, represent, and manage virtual 3D city models on top of Oracle 10g R2 and 11g R1/R2 provided by the Technische Univer-sität Berlin. It fully supports CityGML and is shipped with a tool for the import and export of CityGML models. Furthermore, an open source Java class library and API for the processing of CityGML models (citygml4j) is provided by the Technische Universität Berlin. The conversion tool FME (Feature Manipulation Engine) from Safe Software Inc., which is part of the interoperability extension of ESRI’s ArcGIS, has read and write interfac-es for CityGML. The same applies to CAD tools as BentleyMap from Bentley Systems as well as to GIS tools like SupportGIS from CPA Geo-Information. Many 3D viewers (which all are freely available) provide read interfaces for CityGML: the Aristoteles Viewer from the University of Bonn, LandXplorer CityGML Viewer from Autodesk Inc. (the studio version for authoring and management is not free) and the FZKViewer for IFC and CityGML from KIT Karlsruhe and BS Contact from Bitmanagement Software GmbH which offers a CityGML plugin for the geospatial extension BS Contact Geo. This enumeration of software tools is not exhaus-tive and steadily growing. Please refer to the official website of CityGML at <a href="http://www.citygml.org" class="bare">http://www.citygml.org</a> as well as the CityGML Wiki at <a href="http://www.citygmlwiki.org" class="bare">http://www.citygmlwiki.org</a> for more information.</p>
+<p>To be provided</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_additions_in_citygml_2_0"><a class="anchor" href="#_additions_in_citygml_2_0"></a>1.3. Additions in CityGML 2.0</h3>
+<h3 id="_additions_and_changes_in_citygml_3_0"><a class="anchor" href="#_additions_and_changes_in_citygml_3_0"></a>1.3. Additions and changes in CityGML 3.0</h3>
 <div class="paragraph">
-<p>CityGML 2.0 is a major revision of the previous version 1.0 of this International Standard (OGC Doc. No. 08-007r1), and introduces substantial additions and new features to the thematic model of CityGML. The revision was originally planned to be a minor update to version 1.1. The main endeavor of the revision process was to ensure backwards compatibility both on the level of the conceptual model and on the level of CityGML instance documents. However, some changes could not be implemented consistent with directives for minor revisions and backwards compatibility as enforced by OGC policy (cf. OGC Doc. No. 135r11). The major version number change to 2.0 is therefore a consequence of conforming to the OGC versioning policy without having to abandon any changes or additions which reflect requests from the CityGML community.</p>
+<p>To be provided</p>
 </div>
-<div class="paragraph">
-<p>CityGML 2.0 is backwards compatible with version 1.0 in the following sense: each valid 1.0 instance is a valid 2.0 instance provided that the CityGML namespaces and schema locations in the document are changed to their actual 2.0 values. This step is required because the CityGML version number is encoded in these values, but no further actions have to be taken. Hence, there is a simple migration path from existing CityGML 1.0 instances to valid 2.0 instances.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Explanatory text edit 01  for 01.04.2020 release ends here
+</td>
+</tr>
+</table>
 </div>
-<div class="paragraph">
-<p>The following clauses provide an overview of what is new in CityGML 2.0.</p>
-</div>
-<div class="paragraph">
-<p><strong>New thematic modules for the representation of bridges and tunnels</strong></p>
-</div>
-<div class="paragraph">
-<p>Bridges and tunnels are important objects in city and landscape models. They are an essential part of the trans-portation infrastructure and are often easily recognizable landmarks of a city. CityGML 1.0 has been lacking thematic modules dedicated to bridges and tunnels, and thus such objects had to be modelled and exchanged using a GenericCityObject as proxy (cf. chapter 10.12). CityGML 2.0 now introduces two new thematic modules for the explicit representation of bridges and tunnels which complement the thematic model of CityGML: the Bridge module (cf. chapter 10.4) and the Tunnel module (cf. chapter 10.5).</p>
-</div>
-<div class="paragraph">
-<p>Bridges and tunnels can be represented in LOD 1 – 4 and the underlying data models have a coherent structure with the Building model. For example, bridges and tunnels can be decomposed into parts, thematic boundary surfaces with openings are available to semantically classify parts of the shell, and installations as well as interi-or built structures can be represented. This coherent model structure facilitates the similar understanding of semantic entities and helps to reduce software implementation efforts. Both the Bridge and the Tunnel model introduce further concepts and model elements which are specific to bridges and tunnels respectively.</p>
-</div>
-<div class="paragraph">
-<p><strong>Additions to existing thematic modules</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><em>CityGML Core module (cf. chapter 10.1)</em> Two new optional attributes have been added to the abstract base class <em>core:_CityObject</em> within the <em>CityGML Core</em> module: <em>relativeToTerrain</em> and <em>relativeToWater</em>. These attributes denote the feature’s location with respect to the terrain and water surface in a qualitative way, and thus facilitate simple and efficient queries (e.g., for the number of subsurface buildings) without the need for an additional digital terrain model or a model of the water body.</p>
-</li>
-<li>
-<p><em>Building module (cf. chapter 10.3)</em></p>
-<div class="ulist">
-<ul>
-<li>
-<p><em>LOD0 representation :</em> Buildings can now be represented in LOD0 by footprint and/or roof edge polygons. This al-lows the easy integration of existing 2D data and of roof reconstructions from aerial and satel-lite imagery into a 3D city model. The representations are restricted to horizontal, 3-dimensional surfaces.</p>
-</li>
-<li>
-<p><em>Additional thematic boundary surfaces :</em> In order to semantically classify parts of the outer building shell which are neither horizontal wall surfaces nor parts of the roof, two additional boundary surfaces are introduced: <em>OuterFloorSurface</em> and <em>OuterCeilingSurface</em>.</p>
-</li>
-<li>
-<p><em>Additional relations to thematic boundary surfaces :</em> In addition to _ <em>AbstractBuilding</em> and <em>Room</em>, the surface geometries of <em>BuildingInstallation</em> and <em>IntBuildingInstallation</em> features can now be semantically classified using thematic boundary surfaces. For example, this facilitates the semantic differentiation between roof and wall sur-faces of dormers which are modeled as <em>BuildingInstallation</em>.</p>
-</li>
-<li>
-<p><em>Additional use of implicit geometries :</em> Implicit geometries (cf. chapter 8.3) are now available for the representation of _ <em>Opening</em>, <em>BuildingInstallation</em>, and <em>IntBuildingInstallation</em> in addition to <em>BuildingFurniture</em>. A prototyp-ical geometry for these city objects can thus be stored once and instantiated at different loca-tions in the 3D city model.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><em>Generics module (cf. chapter 10.12)</em> Two generic attributes have been added to the <em>Generics</em> module: <em>MeasureAttribute</em> and <em>GenericAttributeSet</em>. A <em>MeasureAttribute</em> facilitates the representation of measured values together with a reference to the employed unit. A <em>GenericAttributeSet</em> is a named collection of arbitrary generic attributes. It provides an optional <em>codeSpace</em> attribute to denote the authority organization who defined the attribute set.</p>
-</li>
-<li>
-<p><em>LandUse module (cf. chapter 10.10)</em> The scope of the feature type <em>LandUse</em> has been broadened to comprise both areas of the earth’s surface dedicated to a specific land use and areas of the earth’s surface having a specific land cover with or without vegetation.</p>
-</li>
-<li>
-<p><em>Attributes</em> class, function, <em>and</em> usage <em>(all modules)</em> In order to harmonize the use of the attributes <em>class</em>, <em>function</em>, and <em>usage</em>, this attribute triplet has been complemented for all feature classes that at least provided one of the attributes in CityGML 1.0.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Additions to the CityGML code list mechanism</strong></p>
-</div>
-<div class="paragraph">
-<p>In CityGML, code lists providing the allowed values for enumerative attributes such as <em>class</em>, <em>function</em>, and <em>usage</em> can be specified outside the CityGML schema by any organization or information community according to their specific information needs. This mechanism is, however, not fully reflected in the CityGML 1.0 encoding schema, because in a CityGML 1.0 instance document a corresponding attribute cannot point to the dictionary with the used code list values. This has been corrected for CityGML 2.0: All attributes taking values from code lists are now of type <em>gml:CodeType</em> following the GML 3.1.1 mechanism for the encoding of code list values (cf.chapter 10.14 for more information). The <em>gml:CodeType</em> adds an optional <em>codeSpace</em> value to enumerative attributes which allows for providing a persistent URI pointing to the corresponding dictionary.</p>
-</div>
-<div class="paragraph">
-<p><strong>Changelog for CityGML 2.0</strong></p>
-</div>
-<div class="paragraph">
-<p>Changes on the level of XML schema components are provided in Annex F.</p>
-</div>
-<div class="paragraph">
-<p><strong>Further edits to the specification document</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><em>Accuracy requirements for Levels of Detail (LOD) (cf. chapter 6.2)</em> The accuracy requirements for the different CityGML LODs proposed in chapter 6.2 are non-normative. The wording of chapter 6.2 in CityGML 1.0 is however inconsistent with regard to this fact and thus has been clarified for CityGML 2.0.</p>
-</li>
-<li>
-<p><em>Rework of the CityGML example datasets (cf. Annex G)</em> The CityGML examples provided in Annex G have been reworked and extended. They now show a consistent building model in all five LODs and demonstrate, for example, the semantic and geometric refinement of the building throughout the different LODs as well as the usage of XLinks to share geom-etry elements between features. The datasets are shipped with the CityGML XML Schema package, and are available at <a href="http://schemas.opengis.net/citygml/examples/2.0/">http://schemas.opengis.net/citygml/examples/2.0/</a>.</p>
-</li>
-<li>
-<p><em>New example for the usage of Application Domain Extensions (cf. Annex I)</em> A second example for the usage of Application Domain Extensions in the field of Ubiquitous Network Robots Services has been added in Annex I.</p>
-</li>
-</ul>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Explanatory text edit 02 for 01.04.2020 release starts here
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -1183,10 +940,7 @@ PNG interlace method not supported for PDF generation.  Find a more compatible O
 <p>LOD2 – city districts, projects</p>
 </li>
 <li>
-<p>LOD3 – architectural models (outside), landmarks</p>
-</li>
-<li>
-<p>LOD4 – architectural models (interior)</p>
+<p>LOD3 – architectural models landmarks</p>
 </li>
 </ul>
 </div>
@@ -1201,6 +955,18 @@ PNG interlace method not supported for PDF generation.  Find a more compatible O
 <p>Application Domain Extensions (ADE): Specific “hooks” in the CityGML schema allow to define ap-plication specific extensions, for example for noise pollution simulation, or to augment CityGML by properties of the new National Building Information Model Standard (NBIMS) in the U.S.</p>
 </li>
 </ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Explanatory text edit 02 for 01.04.2020 release ends here
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -1222,6 +988,18 @@ PNG interlace method not supported for PDF generation.  Find a more compatible O
 <div class="paragraph">
 <p>The CityGML Conceptual Model is defined by the CityGML UML model. This specification is a representation of that UML model in document form. In the case of a discrepency between the UML model and this document, the UML model is authoritative.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Explanatory text edit 03 for 01.04.2020 release starts here
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -1230,64 +1008,83 @@ PNG interlace method not supported for PDF generation.  Find a more compatible O
 <div class="paragraph">
 <p>The following normative documents contain provisions that, through reference in this text, constitute provisions of OGC 20-010. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. However, parties to agreements based on this part of OGC 12-019 are encouraged to investigate the possibility of applying the most recent editions of the normative documents indicated below. For undated references, the latest edition of the normative document referred to applies.</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>ISO: ISO 8601:2004, Data elements and interchange formats – Information interchange – Representation of dates and times</p>
+</li>
+<li>
+<p>ISO: ISO 19103:2015, Geographic Information – Conceptual Schema Language</p>
+</li>
+<li>
+<p>ISO: ISO 19105:2000, Geographic information – Conformance and testing</p>
+</li>
+<li>
+<p>ISO: ISO 19107:2003, Geographic Information – Spatial Schema</p>
+</li>
+<li>
+<p>ISO: ISO 19109:2015, Geographic Information – Rules for Application Schemas</p>
+</li>
+<li>
+<p>ISO: ISO 19111:2019, Geographic information – Referencing by coordinates</p>
+</li>
+<li>
+<p>ISO: ISO 19115-1:2014, Geographic information — Metadata — Part 1: Fundamentals</p>
+</li>
+<li>
+<p>ISO: ISO 19123:2005, Geographic information — Schema for coverage geometry and functions</p>
+</li>
+<li>
+<p>ISO: ISO 19156:2011, Geographic information – Observations and measurements</p>
+</li>
+<li>
+<p>ISO: ISO/IEC 19505-2:2012, Information technology — Object Management Group Unified Modeling Language (OMG UML) — Part 2: Superstructure</p>
+</li>
+<li>
+<p>ISO/IEC 19507:2012, Information technology — Object Management Group Object Constraint Language (OCL)</p>
+</li>
+<li>
+<p>ISO: ISO/IEC 19775-1:2013 Information technology — Computer graphics, image processing and environmental data representation — Extensible 3D (X3D) — Part 1: Architecture and base components</p>
+</li>
+<li>
+<p>OGC: The OpenGIS® Abstract Specification Topic 5: Features, OGC document 08-126</p>
+</li>
+<li>
+<p>OGC: The OpenGIS™ Abstract Specification Topic 8: Relationships Between Features, OGC document 99-108r2</p>
+</li>
+<li>
+<p>OGC: The OpenGIS™ Abstract Specification Topic 10: Feature Collections, OGC document 99-110</p>
+</li>
+<li>
+<p>IETF: RFC 2045 &amp; 2046, Multipurpose Internet Mail Extensions (MIME). (November 1996)</p>
+</li>
+<li>
+<p>IETF: RFC 3986, Uniform Resource Identifier (URI): Generic Syntax. (January 2005)</p>
+</li>
+<li>
+<p>OASIS: extensible Address Language (xAL v2.0)</p>
+</li>
+<li>
+<p>Khronos Group Inc.: COLLADA – Digital Asset Schema Release 1.5.0</p>
+</li>
+</ul>
+</div>
 <div class="paragraph">
-<p>The following documents are indispensable for the application of the CityGML standard. The geometry model of GML 3.1.1 is used except for some added concepts like implicit geometries (cf. chapter 8.2). The appearance model (cf. chapter 9) draws concepts from both <em>X3D</em> and <em>COLLADA</em>. Addresses are represented using the OASIS extensible Address Language <em>xAL</em>.</p>
+<p><strong class="yellow-background"><color rgb="#ff0000">The following references were listed in the CityGML 2.0 specification. For CityGML 3.0, these references should either be moved to the GML Encoding specification and be updated there or be removed completely:</color></strong></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>ISO / TC154: ISO 8601:2004, Data elements and interchange formats – Information interchange – Representation of dates and times</p>
-</li>
-<li>
-<p>ISO / TC211: ISO/TS 19103:2005, Geographic Information – Conceptual Schema Language</p>
-</li>
-<li>
-<p>ISO / TC211: ISO 19105:2000, Geographic information – Conformance and testing</p>
-</li>
-<li>
-<p>ISO / TC211: ISO 19107:2003, Geographic Information – Spatial Schema</p>
-</li>
-<li>
-<p>ISO / TC211: ISO 19109:2005, Geographic Information – Rules for Application Schemas</p>
-</li>
-<li>
-<p>ISO / TC211: ISO 19111:2003, Geographic information – Spatial referencing by coordinates</p>
-</li>
-<li>
-<p>ISO / TC211: ISO 19115:2003, Geographic Information – Metadata</p>
-</li>
-<li>
-<p>ISO / TC211: ISO 19123:2005, Geographic Information – Coverages</p>
-</li>
-<li>
-<p>ISO / TC211: ISO/TS 19139:2007, Geographic Information – Metadata – XML schema implementation</p>
-</li>
-<li>
-<p>ISO / TC211: ISO/IEC 19775:2004, X3D Abstract Specification</p>
-</li>
-<li>
 <p>OGC: OpenGIS® Abstract Specification Topic 0, Overview, OGC document 04-084</p>
 </li>
 <li>
-<p>OGC: OpenGIS® Abstract Specification Topic 5, The OpenGIS Feature, OGC document 99-105r2</p>
-</li>
-<li>
-<p>OGC: OpenGIS® Abstract Specification Topic 8, Relations between Features, OGC document 99-108r2</p>
-</li>
-<li>
-<p>OGC: OpenGIS® Abstract Specification Topic 10, Feature Collections, OGC document 99-110</p>
+<p>ISO / TC211: ISO/TS 19139:2007, Geographic Information – Metadata – XML schema implementation</p>
 </li>
 <li>
 <p>OGC: OpenGIS® Geography Markup Language Implementation Specification, Version 3.1.1, OGC document 03-105r1</p>
 </li>
 <li>
 <p>OGC: OpenGIS® GML 3.1.1 Simple Dictionary Profile, Version 1.0.0, OGC document 05-099r2</p>
-</li>
-<li>
-<p>IETF: IETF RFC 2045 &amp; 2046, Multipurpose Internet Mail Extensions (MIME). (November 1996)</p>
-</li>
-<li>
-<p>IETF: IETF RFC 2396, Uniform Resource Identifiers (URI): Generic Syntax. (August 1998)</p>
 </li>
 <li>
 <p>W3C: W3C XLink, XML Linking Language (XLink) Version 1.0. W3C Recommendation (27 June 2001)</p>
@@ -1311,15 +1108,33 @@ PNG interlace method not supported for PDF generation.  Find a more compatible O
 <p>W3C: W3C XML, Extensible Markup Language (XML) 1.0 (Second Edition), W3C Recommendation (6 October 2000)</p>
 </li>
 <li>
-<p>OASIS (Organization for the Advancement of Structured Information Standards): extensible Address Language (xAL v2.0).</p>
-</li>
-<li>
-<p>Khronos Group Inc.: COLLADA – Digital Asset Schema Release 1.4.1</p>
-</li>
-<li>
 <p>Jelliffe, R: The Schematron Assertion Language 1.5. (2002-10-01)</p>
 </li>
 </ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Explanatory text edit 03  for 01.04.2020 release ends here
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Explanatory text edit 04 for 01.04.2020 release starts here
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -1332,16 +1147,138 @@ PNG interlace method not supported for PDF generation.  Find a more compatible O
 <div class="paragraph">
 <p>For the purposes of this document, the following additional terms and definitions apply.</p>
 </div>
-<div class="sect2">
-<h3 id="_term_name"><a class="anchor" href="#_term_name"></a>5.1. <strong>term name</strong></h3>
 <div class="paragraph">
-<p>text of the definition</p>
+<p><strong class="yellow-background"><color rgb="#ff0000">I looked at several standards and copied some relevant definitions. The list needs to be reviewed once all sections have been updated. It needs to be checked, if all important terms are included, if all defined terms actually appear in the text, and if all defined terms are necessary. Also, the formatting should be improved.</color></strong></p>
 </div>
+<div class="paragraph">
+<p><strong>2D data</strong><br>
+geometry of features is represented in a two-dimensional space<br>
+NOTE In other words, the geometry of 2D data is given using (X,Y) coordinates.<br>
+[INSPIRE D2.8.III.2, definition 1]</p>
+</div>
+<div class="paragraph">
+<p><strong>2.5D data</strong><br>
+geometry of features is represented in a three-dimensional space with the constraint that, for each (X,Y) position, there is only one Z<br>
+[INSPIRE D2.8.III.2, definition 2]</p>
+</div>
+<div class="paragraph">
+<p><strong>3D data</strong><br>
+Geometry of features is represented in a three-dimensional space.<br>
+NOTE In other words, the geometry of 2D data is given using (X,Y,Z) coordinates without any constraints.<br>
+[INSPIRE D2.8.III.2, definition 3]</p>
+</div>
+<div class="paragraph">
+<p><strong>conceptual model</strong><br>
+model that defines concepts of a universe of discourse<br>
+[ISO 19101-1:2014, 4.1.5]</p>
+</div>
+<div class="paragraph">
+<p><strong>conceptual schema</strong><br>
+formal description of a conceptual model<br>
+[ISO 19101-1:2014, 4.1.6]</p>
+</div>
+<div class="paragraph">
+<p><strong>conformance test class</strong><br>
+set of conformance test modules that must be applied to receive a single certificate of
+conformance<br>
+[OGC 08-131r3, definition 4.4]</p>
+</div>
+<div class="paragraph">
+<p><strong>feature</strong><br>
+abstraction of real world phenomena<br>
+[ISO 19101-1:2014, definition 4.1.11]</p>
+</div>
+<div class="paragraph">
+<p><strong>feature attribute</strong><br>
+characteristic of a feature<br>
+[ISO 19101-1:2014, definition 4.1.12]</p>
+</div>
+<div class="paragraph">
+<p><strong>feature type</strong><br>
+class of features having common characteristics<br>
+[ISO 19156:2011, definition 4.7]</p>
+</div>
+<div class="paragraph">
+<p><strong>level of detail</strong><br>
+quantity of information that portrays the real world<br>
+NOTE The concept comprises data capturing rules of spatial object types, the accuracy and the types of geometries, and other aspects of a data specification. In particular, it is related to the notions of scale and resolution.<br>
+[INSPIRE Glossary]</p>
+</div>
+<div class="paragraph">
+<p><strong>life-cycle information</strong><br>
+set of properties of a spatial object that describe the temporal characteristics of a version of a spatial object or the changes between versions<br>
+[INSPIRE Glossary]</p>
+</div>
+<div class="paragraph">
+<p><strong>measurement</strong><br>
+set of operations having the object of determining the value of a quantity<br>
+[ISO 19101-2:2018, definition 3.21] / [VIM:1993, 2.1]</p>
+</div>
+<div class="paragraph">
+<p><strong>model</strong><br>
+abstraction of some aspects of reality<br>
+[ISO 19109:2015, definition 4.15]</p>
+</div>
+<div class="paragraph">
+<p><strong>observation</strong><br>
+act of measuring or otherwise determining the value of a property<br>
+[ISO 19156:2011, definition 4.11]</p>
+</div>
+<div class="paragraph">
+<p><strong>observation procedure</strong><br>
+method, algorithm or instrument, or system of these, which may be used in making an
+observation<br>
+[ISO 19156:2011, 4.12]</p>
+</div>
+<div class="paragraph">
+<p><strong>observation result</strong><br>
+estimate of the value of a property determined through a known observation procedure<br>
+[ISO 19156:2011, 4.14]</p>
+</div>
+<div class="paragraph">
+<p><strong>property</strong><br>
+facet or attribute of an object referenced by a name.<br>
+[ISO 19143:2010, definition 4.21]</p>
+</div>
+<div class="paragraph">
+<p><strong>requirements class</strong><br>
+aggregate of all requirement modules that must all be satisfied to satisfy a conformance
+test class<br>
+[OGC 08-131r3, definition 4.19]</p>
+</div>
+<div class="paragraph">
+<p><strong>schema</strong><br>
+formal description of a model<br>
+[ISO 19101-1:2014, definition 4.1.34]</p>
+</div>
+<div class="paragraph">
+<p><strong>sensor</strong><br>
+type of observation procedure that provides the estimated value of an observed
+property at its output<br>
+[OGC 08-094r1, definition 4.5]</p>
+</div>
+<div class="paragraph">
+<p><strong>timeseries</strong><br>
+sequence of data values which are ordered in time<br>
+[OGC 15-043r3]</p>
+</div>
+<div class="paragraph">
+<p><strong>universe of discourse</strong><br>
+view of the real or hypothetical world that includes everything of interest<br>
+[ISO 19101-1:2014, definition 4.1.38]</p>
+</div>
+<div class="paragraph">
+<p><strong>version</strong><br>
+Particular variation of a spatial object<br>
+[INSPIRE Glossary]</p>
 </div>
 <div class="sect2">
-<h3 id="_abbreviated_terms"><a class="anchor" href="#_abbreviated_terms"></a>5.2. Abbreviated Terms</h3>
+<h3 id="_abbreviated_terms"><a class="anchor" href="#_abbreviated_terms"></a>5.1. Abbreviated Terms</h3>
 <div class="paragraph">
 <p>The following abbreviated terms are used in this document:</p>
+</div>
+<div class="paragraph">
+<p><strong class="yellow-background"><color rgb="#ff0000">The list of acronyms needs to be reviewed once all sections have been updated.</color></strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1469,6 +1406,30 @@ PNG interlace method not supported for PDF generation.  Find a more compatible O
 <p>xAL &#160;&#160;&#160;&#160;&#160; OASIS extensible Address Language</p>
 </li>
 </ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Explanatory text edit 04 for 01.04.2020 release ends here
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Explanatory text edit 05 for 01.04.2020 release starts here
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -1698,6 +1659,30 @@ PNG interlace method not supported for PDF generation.  Find a more compatible O
 </tr>
 </tbody>
 </table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Explanatory text edit 05 for 01.04.2020 release ends here
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Explanatory text edit 06 for 01.04.2020 release starts here
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -1724,6 +1709,30 @@ PNG interlace method not supported for PDF generation.  Find a more compatible O
 </div>
 <div class="paragraph">
 <p>Furthermore, objects can have external references to corresponding objects in external datasets (chapter 6.7). The possible attribute values of enumerative object attributes can be enumerated in code lists defined in external, redefinable dictionaries (chapter 6.6).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Explanatory text edit 06 for 01.04.2020 release ends here
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Explanatory text edit 07 for 01.04.2020 release starts here
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -2044,6 +2053,30 @@ Combine figures 5
 </div>
 <div class="paragraph">
 <p>Further examples for ADEs are the CAFM ADE (Bleifuß et al., 2009) for facility management, the UtilityNetworkADE (Becker et al., 2011) for the integrated 3D modeling of multi-utility networks and their interdependencies, the HydroADE (Schulte and Coors, 2008) for hydrographical applications and the GeoBIM (IFC) ADE (van Berlo et al., 2011) which combines BIM information from IFC (from bSI) with CityGML and is implemented in the open source modelserver BIMserver.org.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Explanatory text edit 07 for 01.04.2020 release ends here
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Explanatory text edit 08 for 01.04.2020 release starts here
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -2581,6 +2614,30 @@ replace XML with UML if feasible
 </tr>
 </table>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Explanatory text edit 08 for 01.04.2020 release ends here
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Explanatory text edit 09 for 01.04.2020 release starts here
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -2781,6 +2838,18 @@ add SRS requirements here
 </div>
 <div class="title">Figure 13. UML diagram of ImplicitGeometries. Prefixes are used to indicate XML namespaces associated with model elements. Element names without a prefix are defined within the CityGML Core module.</div>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Explanatory text edit 09 for 01.04.2020 release ends here
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -2815,10 +2884,26 @@ add SRS requirements here
 </tbody>
 </table>
 <div class="paragraph">
-<p>The CityGML Core module defines the basic concepts and components of the overall CityGML data model.  It forms the universal lower bound of the CityGML data model and, thus, is a dependency of all extension modules. Consequently, the core module has to be implemented by any conformant system. Primarily, the core module provides the abstract base classes from which thematic classes within extension modules are (transitively) derived. Besides abstract type definitions, the core also contains non-abstract content, for example basic data types and thematic classes that may be used by more than one extension module. The UML diagram in Fig. 21 illustrates CityGML’s core module, for the XML Schema definition see below and annex A.1.</p>
+<p>The Core module defines the basic concepts and components of city models. City models are virtual representations of real-world cities and landscapes. A city model aggregates different types of objects, which can be city objects, appearances, different versions of the city model, transitions between different versions of the city model, and feature objects.
+All objects defined in CityGML are features with lifespan. This allows the optional specification of the real-world and database times for the existence of each feature, as is required by the Versioning module (cf. Section <a href="#rc_versioning_section">Versioning</a>).
+Features that define thematic concepts related to cities and landscapes, such as building, bridge, water body, or land use, are referred to as city objects.</p>
 </div>
 <div class="paragraph">
-<p>The UML diagram of the CityGML Core is depicted in <a href="#core-uml">Core UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_core_section">here</a>.</p>
+<p>All city objects are differentiated into spaces and space boundaries. Spaces are entities of volumetric extent in the real world. Buildings, water bodies, trees, rooms, and traffic spaces, for instance, have a volumetric extent. Spaces can be classified into physical spaces and logical spaces. Physical spaces, in turn, can be further classified into occupied spaces and unoccupied spaces.
+Space boundaries, in contrast, are entities with areal extent in the real world. Space boundaries can be differentiated into different types of thematic surfaces, such as wall surfaces and roof surfaces.
+For a more detailed introduction to the Space concept see section <strong class="yellow-background"><color rgb="#ff0000">xxx</color></strong>.</p>
+</div>
+<div class="paragraph">
+<p>Spaces and space boundaries can have various geometry representations depending on the Level of Detail (LOD). Spaces can be spatially represented as single points in LOD0, multi-surfaces in LOD0/2/3, solids in LOD1/2/3, and multi-curves in LOD2/3. Space boundaries can be represented as multi-surfaces in LOD0/2/3 and as multi-curves in LOD2/3. All Levels of Detail allow for the representation of the interior of city objects. For a more detailed introduction to the Level of Detail concept see section <strong class="yellow-background"><color rgb="#ff0000">xxx</color></strong>.
+In addition, the geometry can also be represented implicitly, i.e. the shape is stored only once as a prototypical geometry, which then is re-used or referenced, wherever the corresponding feature occurs in the 3D city model.
+The thematic classes, such as building, tunnel, road, land use, water body, or city furniture are defined as subclasses of the space and space boundary classes within the thematic modules. Since all city objects in the thematic modules represent subclasses of the space and space boundary classes, they automatically inherit the geometries defined in the Core module.</p>
+</div>
+<div class="paragraph">
+<p>City objects can have various relations. City objects can relate to generalized representations of the same real-world object in different Levels of Detail, they can also relate to other city objects, and they can reference corresponding external objects in other information systems, such as in the German cadastre (ALKIS), the German topographic information system (ATKIS), or the OS UK MasterMap®.
+In addition, address information can be specified for city objects using the xAL address standard issued by the OASIS consortium (OASIS 2003).</p>
+</div>
+<div class="paragraph">
+<p>The UML diagram of the Core module is depicted in <a href="#core-uml">Core UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_core_section">here</a>.</p>
 </div>
 <div id="core-uml" class="imageblock">
 <div class="content">
@@ -5569,7 +5654,7 @@ StereoType:&#160;&#160;&#160;&#160; «DataType»</p></td>
 </div>
 </div>
 <div class="sect2">
-<h3 id="rc_appearance_section"><a class="anchor" href="#rc_appearance_section"></a>11.2. Appearance Model</h3>
+<h3 id="rc_appearance_section"><a class="anchor" href="#rc_appearance_section"></a>11.2. Appearance</h3>
 <table id="rc_appearance" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 20%;">
@@ -5593,10 +5678,17 @@ StereoType:&#160;&#160;&#160;&#160; «DataType»</p></td>
 </tbody>
 </table>
 <div class="paragraph">
-<p>In addition to spatial properties, CityGML features have appearances – observable properties of the feature’s surface. Appearances are not limited to visual data but represent arbitrary categories called themes such as infrared radiation, noise pollution, or earthquake-induced structural stress. Each LOD can have an individual appearance for a specific theme. An appearance is composed of data for each surface geometry object, i.e. surface data. A single surface geometry object may have surface data for multiple themes. Similarly, surface data can be shared by multiple surface geometry objects (e.g. road paving). Finally, surface data values can either be constant across a surface or depend on the exact location within the surface.</p>
+<p>The Appearance module provides the representation of surface data, i.e. observable properties for surface geometry objects in the form of textures and material.
+Appearances are not limited to visual data but represent arbitrary categories called themes such as infrared radiation, noise pollution, or earthquake-induced structural stress. A single surface geometry object may have surface data for multiple themes. Similarly, surface data can be shared by multiple surface geometry objects (e.g. road paving).</p>
 </div>
 <div class="paragraph">
-<p>CityGML’s appearance model is defined within the extension module Appearance (cf. chapter 7). The UML diagram of the appearance model is illustrated in <a href="#appearance-uml">Appearance UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_appearance_section">here</a>.</p>
+<p>Surface data that is constant across a surface is modelled as material based on the material definitions from the standards X3D and COLLADA.
+Surface data that depends on the exact location within the surface is modelled as texture.
+This can either be a parameterized texture, i.e. a texture that uses texture coordinates or a transformation matrix for parameterization, or a georeferenced texture, i.e. a texture that uses a planimetric projection.
+Each surface geometry object can have both, a material and a texture per theme and side. This allows for providing a constant approximation and a complex measurement of a surface’s property simultaneously.</p>
+</div>
+<div class="paragraph">
+<p>The UML diagram of the Appearance module is illustrated in <a href="#appearance-uml">Appearance UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_appearance_section">here</a>.</p>
 </div>
 <div id="appearance-uml" class="imageblock">
 <div class="content">
@@ -6594,7 +6686,7 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#
 </div>
 </div>
 <div class="sect2">
-<h3 id="rc_bridge-model_section"><a class="anchor" href="#rc_bridge-model_section"></a>11.3. Bridge Model</h3>
+<h3 id="rc_bridge-model_section"><a class="anchor" href="#rc_bridge-model_section"></a>11.3. Bridge</h3>
 <table id="rc_bridge" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 20%;">
@@ -6618,10 +6710,16 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#
 </tbody>
 </table>
 <div class="paragraph">
-<p>Bridge models the parts of a structure spanning an intervening natural or built element. The Bridge model includes the spanning elements, room-like elements that are an integral part of the bridge, additional constructed installations, and smaller stereotypical elements such as signs, signals, art works, and benches.</p>
+<p>The Bridge module provides the representation of thematic and spatial aspects of bridges. Bridges are movable or unmovable structures that span intervening natural or built elements. In this way, bridges allow the passage of pedestrians, animals, vehicles, and service(s) above obstacles or between two points at a height above ground.
+Bridges are represented in the UML model by the top-level feature type <em>Bridge</em>, which is the main class of the Bridge module. Bridges can physically or functionally be subdivided into bridge parts. In addition, bridges can be decomposed into structural elements, such as pylons, anchorages, cables, slabs, and beams.</p>
 </div>
 <div class="paragraph">
-<p>The UML diagram of the Bridge Model is depicted in <a href="#bridge-uml">Bridge UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_bridge-model_section">here</a>.</p>
+<p>The free space inside bridges is represented by rooms, which allows a virtual accessibility of bridges.
+Bridges can contain installations and furniture. Installations are permanent parts of a bridge that strongly affect the outer or inner appearance of the bridge and that cannot be moved. Examples are stairways, signals, railings, and lamps. Furniture, in contrast, represent moveable objects of a bridge, like signs, art works, and benches.
+Bridges can be bounded by different types of surfaces. In this way, the outer structure of bridges can be differentiated semantically into wall surfaces, roof surfaces, ground surfaces, outer floor surfaces, and outer ceiling surfaces, whereas the visible surface of rooms can be structured into interior wall surfaces, floor surfaces, and ceiling surfaces. Furthermore, the openings of bridges, i.e. windows and doors, can be represented including their corresponding surfaces.</p>
+</div>
+<div class="paragraph">
+<p>The UML diagram of the Bridge module is depicted in <a href="#bridge-uml">Bridge UML Diagram</a>. The Bridge module inherits concepts from the Construction module <a href="#rc_construction_section">(cf. Section Construction)</a>. The Construction module defines objects that are common to all types of construction, such as the different surface types and the openings. A detailed discussion of Requirements Class Bridge can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_bridge-model_section">here</a>.</p>
 </div>
 <div id="bridge-uml" class="imageblock">
 <div class="content">
@@ -7827,16 +7925,16 @@ StereoType:&#160;&#160;&#160;&#160; «CodeList»</p></td>
 </tbody>
 </table>
 <div class="paragraph">
-<p>The Building module allows for the representation of thematic and spatial aspects of buildings. Buildings are free-standing, self-supporting constructions that are roofed and usually walled, and that can be entered by humans and are normally designed to stand permanently in one place. Buildings are intended for human occupancy (e.g. a place of work or recreation), habitation and/or shelter of humans, animals or things.
+<p>The Building module provides the representation of thematic and spatial aspects of buildings. Buildings are free-standing, self-supporting constructions that are roofed and usually walled, and that can be entered by humans and are normally designed to stand permanently in one place. Buildings are intended for human occupancy (e.g. a place of work or recreation), habitation and/or shelter of humans, animals or things.
 Buildings are represented in the UML model by the top-level feature type <em>Building</em>, which is the main class of the Building module. Buildings can physically or functionally be subdivided into building parts and logically into storeys and building units (e.g. apartments). In addition, buildings can be decomposed into structural elements, such as walls, slabs, staircases, and beams.</p>
 </div>
 <div class="paragraph">
 <p>The interior of buildings is represented by rooms. This allows a virtual accessibility of buildings, e.g. for visitor information in a museum (“Location Based Services“), the examination of accommodation standards or the presentation of daylight illumination of a building.
 Buildings can contain installations and furniture. Installations are permanent parts of a building that strongly affect the outer or inner appearance of the building and that cannot be moved. Examples are balconies, chimneys, dormers or stairs. Furniture, in contrast, represent moveable objects inside a building, like tables and chairs.
-Buildings can be bounded by different types of surfaces. In this way, the outer façade of buildings can be differentiated semantically into walls, roof, ground plate, outer floor, and outer ceiling, whereas the visible surface of rooms can be structured into interior walls, floor, and ceiling. Furthermore, the openings of buildings, i.e. windows and doors, can be represented including their corresponding surfaces.</p>
+Buildings can be bounded by different types of surfaces. In this way, the outer façade of buildings can be differentiated semantically into wall surfaces, roof surfaces, ground surfaces, outer floor surfaces, and outer ceiling surfaces, whereas the visible surface of rooms can be structured into interior wall surfaces, floor surfaces, and ceiling surfaces. Furthermore, the openings of buildings, i.e. windows and doors, can be represented including their corresponding surfaces.</p>
 </div>
 <div class="paragraph">
-<p>The UML diagram of the building module is depicted in <a href="#building-uml">Building UML Diagram</a>. The Building module inherits concepts from the Construction module <a href="#rc_construction_section">(cf. Section Construction)</a>. The Construction module defines objects that are common to all types of construction, such as the different surfaces types and the openings. A detailed discussion of the Requirements Class Building can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_building-model_section">here</a>.</p>
+<p>The UML diagram of the building module is depicted in <a href="#building-uml">Building UML Diagram</a>. The Building module inherits concepts from the Construction module <a href="#rc_construction_section">(cf. Section Construction)</a>. The Construction module defines objects that are common to all types of construction, such as the different surface types and the openings. A detailed discussion of the Requirements Class Building can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_building-model_section">here</a>.</p>
 </div>
 <div id="building-uml" class="imageblock">
 <div class="content">
@@ -9577,10 +9675,7 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#
 </div>
 </div>
 <div class="sect2">
-<h3 id="rc_City-Furniture_section"><a class="anchor" href="#rc_City-Furniture_section"></a>11.5. City Furniture Model</h3>
-<div class="paragraph">
-<p>City furniture is a semantic category which consists of relatively small objects that usually have a stereotypical form. City furniture functions to decorate, explain, or control outdoor environments. Examples include road signs, traffic signals, bicycle racks, fountains, and benches.</p>
-</div>
+<h3 id="rc_City-Furniture_section"><a class="anchor" href="#rc_City-Furniture_section"></a>11.5. City Furniture</h3>
 <table id="rc_cityfurniture" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 20%;">
@@ -9604,7 +9699,11 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#
 </tbody>
 </table>
 <div class="paragraph">
-<p>The UML diagram of the City Furniture model is depicted in the <a href="#cityfurniture-uml">City Furniture UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_city-furniture_section">here</a>.</p>
+<p>The CityFurniture module provides the representation of objects or pieces of equipment that are installed in the outdoor environment for various purposes, such as decoration, explanation or control. City furniture objects are relatively small, immovable objects and usually are of stereotypical form. Examples include road signs, traffic signals, bicycle racks, street lamps, fountains, flower buckets, advertising columns, and benches.
+City furniture is represented in the UML model by the top-level feature type <em>CityFurniture</em>, which is also the only class of the CityFurniture module.</p>
+</div>
+<div class="paragraph">
+<p>The UML diagram of the CityFurniture module is depicted in the <a href="#cityfurniture-uml">City Furniture UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_city-furniture_section">here</a>.</p>
 </div>
 <div id="cityfurniture-uml" class="imageblock">
 <div class="content">
@@ -9858,20 +9957,15 @@ StereoType:&#160;&#160;&#160;&#160; «CodeList»</p></td>
 </tr>
 </tbody>
 </table>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-Content to be provided by TBD
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>The CityObjectGroup module provides the application-specific aggregation of city objects according to some user-defined criteria. Examples for groups are the buildings in a specific region, the result of a query, or objects put together for visualization purposes. Each member of a group may be qualified by a role name, reflecting the role each city object plays in the context of the group.
+City object groups are represented in the UML model by the top-level feature type <em>CityObjectGroup</em>, which is the main class of the CityObjectGroup module.</p>
 </div>
 <div class="paragraph">
-<p>The UML diagram of the City Object Group Model is depicted in <a href="#cityobject-uml">City Object Group UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_city-object-group_section">here</a>.</p>
+<p>City object groups can be linked to other city objects, the so-called parent objects, which allows for modelling a generic hierarchical grouping concept. In addition, as city object groups represent city objects themselves, a group may become a member of another group realizing recursive aggregation in this way.</p>
+</div>
+<div class="paragraph">
+<p>The UML diagram of the CityObjectGroup module is depicted in <a href="#cityobject-uml">City Object Group UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_city-object-group_section">here</a>.</p>
 </div>
 <div id="cityobject-uml" class="imageblock">
 <div class="content">
@@ -10197,20 +10291,18 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#
 </tr>
 </tbody>
 </table>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-Content to be provided by TBD
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>The Construction module defines concepts that are common to all kinds of constructions. Constructions are objects that are manufactured by humans from construction materials, are connected to earth and are intended to be permanent. The Construction module focuses on as-built representations of constructions and integrates all concepts that are similar over different types of constructions, in particular buildings, bridges, and tunnels. In addition, for representing man-made structures that are neither buildings, nor bridges, nor tunnels so-called other constructions (e.g. large chimneys or city walls) can be defined.</p>
 </div>
 <div class="paragraph">
-<p>The UML diagram of the Construction Model is depicted in <a href="#construction-uml">Construction UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_construction_section">here</a>.</p>
+<p>Furniture, installations, and constructive elements are further concepts that are defined in the Construction module. Installations are permanent parts of a construction that strongly affect the outer or inner appearance of the construction and that cannot be moved (e.g. balconies, chimneys, or stairs), whereas furniture represent moveable objects of a construction (e.g. tables and chairs). Constructive elements allow for decomposing a construction into volumetric components, such as walls, beams, and slabs.
+Constructions and constructive elements can be bounded by different types of surfaces. In this way, the outer structure of constructions and constructive elements can be differentiated semantically into wall surfaces, roof surfaces, ground surfaces, outer floor surfaces, and outer ceiling surfaces, whereas the visible surface of interior spaces can be structured into interior wall surfaces, floor surfaces, and ceiling surfaces.
+Furthermore, the openings of constructions, i.e. windows and doors, can be represented as so-called filling elements including their corresponding filling surfaces.</p>
+</div>
+<div class="paragraph">
+<p>The UML diagram of the Construction module is depicted in <a href="#construction-uml">Construction UML Diagram</a>.
+The Contruction module defines concepts that are inherited and, where necessary, are specialized by the modules Building, Bridge, and Tunnel  (cf. sections <a href="#rc_building-model_section">Building</a>, <a href="#rc_bridge-model_section">Bridge</a>, and <a href="#rc_tunnel_section">Tunnel</a>).
+A detailed discussion of the Requirements Class Construction can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_construction_section">here</a>.</p>
 </div>
 <div id="construction-uml" class="imageblock">
 <div class="content">
@@ -12352,20 +12444,19 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#
 </tr>
 </tbody>
 </table>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-Content to be provided by TBD
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>The Dynamizer module provides the concepts that allow for representing time-varying data for city object properties as well as for integrating sensors with 3D city models.
+Dynamizers are objects that inject timeseries data for an individual attribute of the city object in which it is included. The timeseries data overrides the static value of the referenced city object attribute in order to represent dynamic, i.e. time-dependent, variations of its value.</p>
 </div>
 <div class="paragraph">
-<p>The UML diagram of the Dynamizer Model is depicted in <a href="#dynamizer-uml">Dynamizer UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_dynamizer_section">here</a>.</p>
+<p>The dynamic values may be given by retrieving observation results directly from external sensor/IoT services using a sensor connection (e.g. OGC SensorThings API, Sensor Observation Service, or other sensor data platforms including MQTT). Alternatively, the dynamic values may be provided as atomic timeseries that represent time-varying data of a specific data type for a single contiguous time interval. The data can be provided in external tabulated files, such as CSV or Excel sheets, in external files that format timeseries data according to the OGC TimeseriesML or OGC Observations &amp; Measurements standards, or inline as embedded time-value-pairs. Furthermore, timeseries data can also be aggregated to form composite timeseries with non-overlapping time intervals.</p>
+</div>
+<div class="paragraph">
+<p>By using the Dynamizer module, fast changes over a short or longer time period with respect to cities and city models can be represented.
+This includes variations of spatial properties, i.e. change of a feature’s geometry, both in respect to shape and to location (e.g. moving objects), variations of thematic attributes, i.e. changes of physical quantities like energy demands, temperatures, solar irradiation, traffic density, pollution concentration, or overpressure on building walls, and variations with respect to sensor or real-time data resulting from simulations or measurements.</p>
+</div>
+<div class="paragraph">
+<p>The UML diagram of the Dynamizer module is depicted in <a href="#dynamizer-uml">Dynamizer UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_dynamizer_section">here</a>.</p>
 </div>
 <div id="dynamizer-uml" class="imageblock">
 <div class="content">
@@ -13584,20 +13675,18 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#
 </tr>
 </tbody>
 </table>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-Content to be provided by TBD
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>The Generics module provides the representation of generic city objects, i.e. city objects that are not covered by any explicitly modelled thematic class within CityGML, and of generic attributes, i.e. attributes that are not explicitly represented in CityGML. In order to avoid problems concerning semantic interoperability, generic city objects and generic attributes shall only be used if appropriate thematic classes and attributes are not provided by any other CityGML module.</p>
 </div>
 <div class="paragraph">
-<p>The UML diagram of the Generics Model is depicted in <a href="#generics-uml">Generics UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_generics_section">here</a>.</p>
+<p>In accordance with the CityGML Space concept defined in the Core module <a href="#rc_core_section">(cf. Section Core)</a> generic city objects can be represented as generic logical spaces, generic occupied spaces, generic unoccupied spaces, and generic thematic surfaces. In this way, spaces and surfaces can be defined that are not represented by any explicitly modelled class within CityGML that is a subclass of the classes AbstractLogicalSpace, AbstractOccupiedSpace, AbstractUnoccupiedSpace or AbstractThematicSurface, respectively.
+Generic city objects are represented in the UML model by the top-level feature types <em>GenericLogicalSpace</em>, <em>GenericOccupiedSpace</em>, <em>GenericUnoccupiedSpace</em> and <em>GenericThematicSurface</em>.</p>
+</div>
+<div class="paragraph">
+<p>Generic attributes are defined as name-value pairs and are always associated with a city object. Generic attributes can be of type String, Integer, Double, Date, URI, and Measure. In addition, generic attributes can be grouped under a common name as generic attribute sets.</p>
+</div>
+<div class="paragraph">
+<p>The UML diagram of the Generics module is depicted in <a href="#generics-uml">Generics UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_generics_section">here</a>.</p>
 </div>
 <div id="generics-uml" class="imageblock">
 <div class="content">
@@ -14917,20 +15006,12 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#
 </tr>
 </tbody>
 </table>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-Content to be provided by TBD
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>The LandUse module defines objects that can be used to describe areas of the earth’s surface dedicated to a specific land use or having a specific land cover with or without vegetation, such as sand, rock, mud flats, forest, grasslands, or wetlands (i.e. the physical appearance). Land use and land cover are different concepts; the first describes human activities on the earth’s surface, the second describes its physical and biological cover. However, the two concepts are interlinked and often mixed in practice. Land use objects in CityGML support both concepts: They can be employed to represent parcels, spatial planning objects, recreational objects and objects describing the physical characteristics of an area in 3D.
+Land use objects are represented in the UML model by the top-level feature type <em>LandUse</em>, which is also the only class of the LandUse module.</p>
 </div>
 <div class="paragraph">
-<p>The UML diagram of the Land Use Model is depicted in <a href="#landuse-uml">Land Use UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_landuse_section">here</a>.</p>
+<p>The UML diagram of the LandUse module is depicted in <a href="#landuse-uml">Land Use UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_landuse_section">here</a>.</p>
 </div>
 <div id="landuse-uml" class="imageblock">
 <div class="content">
@@ -15184,20 +15265,12 @@ StereoType:&#160;&#160;&#160;&#160; «CodeList»</p></td>
 </tr>
 </tbody>
 </table>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-Content to be provided by TBD
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>The PointCloud module offers the possibility to provide the geometry of physical spaces and of thematic surfaces by 3D point clouds. In this way, the building hull, a room within a building or a single wall surface can be spatially represented by a point cloud only. The same applies to all other thematic feature types including transportation objects, vegetation, city furniture, etc. Point clouds can either be provided inline within a CityGML file or as reference to external point cloud files of common file types such as LAS or LAZ.
+Point clouds are represented in the UML model by the feature type <em>PointCloud</em>, which is also the only class of the PointCloud module.</p>
 </div>
 <div class="paragraph">
-<p>The UML diagram of the Point Cloud Model is depicted in <a href="#pointcloud-uml">Point Cloud UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_pointcloud_section">here</a>.</p>
+<p>The UML diagram of the PointCloud module is depicted in <a href="#pointcloud-uml">Point Cloud UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_pointcloud_section">here</a>.</p>
 </div>
 <div id="pointcloud-uml" class="imageblock">
 <div class="content">
@@ -15335,10 +15408,11 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#
 </tbody>
 </table>
 <div class="paragraph">
-<p>An essential part of a city model is the terrain. The Digital Terrain Model (DTM) of CityGML is provided by the thematic extension module Relief (cf. chapter 7). In CityGML, the terrain is represented by the class ReliefFea-ture in LOD 0-4 (Fig. 24 depicts the UML diagram, for the XML schema definition see annex A.9). A Re-liefFeature consists of one or more entities of the class ReliefComponent. Its validity may be restricted to a certain area defined by an optional validity extent polygon. As ReliefFeature and ReliefComponent are deriva-tives of _CityObject, the corresponding attributes and relations are inherited. The class ReliefFeature is associat-ed with different concepts of terrain representations which can coexist. The terrain may be specified as a regular raster or grid (RasterRelief), as a TIN (Triangulated Irregular Network, TINReflief), by break lines (BreaklineRe-lief), or by mass points (MasspointRelief). The four types are implemented by the corresponding GML3 classes: grids by gml:RectifiedGridCoverage, break lines by gml:MultiCurve, mass points by gml:MultiPoint and TINs either by gml:TriangulatedSurface or by gml:Tin. In case of gml:TriangulatedSurfaces, the triangles are given explicitly while in case of gml:Tin only 3D points are represented, where the triangulation can be reconstructed by standard methods (Delaunay triangulation, cf. Okabe et al. 1992). Break lines are represented by 3D curves. Mass points are simply a set of 3D points.</p>
+<p>The Relief module provides the representation of terrain which is an essential part of city models. In CityGML, the terrain is modelled by relief features. They are represented in the UML model by the top-level feature type <em>ReliefFeature</em>, which is the main class of the Relief module.
+The relief features, in turn, are collections of relief components that describe the Earth&#8217;s surface, a.k.a. the Digital Terrain Model. The relief components can have different terrain representations which can coexist. Each relief component may be specified as a regular raster or grid, as a TIN (Triangulated Irregular Network), by break lines, or by mass points. In addition, the validity of the relief components may be restricted to certain areas.</p>
 </div>
 <div class="paragraph">
-<p>The UML diagram of the Relief Package is depicted in <a href="#relief-uml">Relief UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_relief_section">here</a>.</p>
+<p>The UML diagram of the Relief module is depicted in <a href="#relief-uml">Relief UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_relief_section">here</a>.</p>
 </div>
 <div id="relief-uml" class="imageblock">
 <div class="content">
@@ -15771,20 +15845,15 @@ Definition: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Relates
 </tr>
 </tbody>
 </table>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-Content to be provided by TBD
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>The Transportation module defines central elements of the traffic infrastructure. This includes the transportation objects road, track, and square for the movement of vehicles, bicycles, and pedestrians, the transportation object railway for the movement of wheeled vehicles on rails, as well as the transportation object waterway for the movement of vessels upon or within water bodies.
+The transportation objects are represented in the UML model by the top-level feature types <em>Road</em>, <em>Track</em>, <em>Square</em>, <em>Railway</em>, and <em>Waterway</em>, which are the main classes of the Transportation module. Transportation objects can be subdivided into sections, which can be regular road, track or railway legs, into intersection areas, and into roundabouts.</p>
 </div>
 <div class="paragraph">
-<p>The UML diagram of the Transportation Model is depicted in <a href="#transportation-uml">Transportation UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_transportation_section">here</a>.</p>
+<p>For each transportation object, traffic spaces and auxiliary traffic spaces can be provided, which are bounded at the bottom by traffic areas and auxiliary traffic areas, respectively. Traffic areas are elements that are important in terms of traffic usage, such as driving lanes, sidewalks, and cycle lanes, whereas auxiliary traffic areas describe further elements, such as kerbstones, middle lanes, and green areas. The corresponding spaces define the free space above the areas. In addition, each traffic space can have an optional clearance space. The transportation objects can be represented in different levels of granularity, either as a single area, split up into individual lanes or even decomposed into individual (carriage)ways. Furthermore, holes in the surfaces of roads, tracks or squares, such as road damages, manholes or drains, can be represented including their corresponding boundary surfaces. In addition, markings for the structuring or restriction of traffic can be added to the transportation areas. Examples are road markings and markings related to railway or waterway traffic.</p>
+</div>
+<div class="paragraph">
+<p>The UML diagram of the Transportation module is depicted in <a href="#transportation-uml">Transportation UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_transportation_section">here</a>.</p>
 </div>
 <div id="transportation-uml" class="imageblock">
 <div class="content">
@@ -18666,20 +18735,17 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#
 </tr>
 </tbody>
 </table>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-Content to be provided by TBD
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>The Tunnel module provides the representation of thematic and spatial aspects of tunnels. Tunnels are horizontal or sloping enclosed passage ways of a certain length, mainly underground or underwater. Tunnels are intended for passing obstacles such as mountains, waterways or other traffic routes by humans, animals or goods.
+Tunnels are represented in the UML model by the top-level feature type <em>Tunnel</em>, which is the main class of the Tunnel module. Tunnels can physically or functionally be subdivided into tunnel parts. In addition, tunnels can be decomposed into structural elements, such as walls, slabs, staircases, and beams.</p>
 </div>
 <div class="paragraph">
-<p>The UML diagram of the Tunnel Model is depicted in <a href="#tunnel-uml">Tunnel UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_tunnel_section">here</a>.</p>
+<p>The interior of tunnels is represented by hollow spaces. This allows a virtual accessibility of tunnels, e.g. for driving through a tunnel, for simulating disaster management or for presenting the light illumination within a tunnel.
+Tunnels can contain installations and furniture. Installations are permanent parts of a tunnel that strongly affect the outer or inner appearance of the tunnel and that cannot be moved. Examples are stairs, railings, radiators or pipes. Furniture, in contrast, represent moveable objects inside a tunnel, like movable equipment in control areas.
+Tunnels can be bounded by different types of surfaces. In this way, the outer structure of tunnels can be differentiated semantically into wall surfaces, roof surfaces, ground surfaces, outer floor surfaces, and outer ceiling surfaces, whereas the visible surface of hollow spaces can be structured into interior wall surfaces, floor surfaces, and ceiling surfaces. Furthermore, the openings of tunnels, i.e. windows and doors, can be represented including their corresponding surfaces.</p>
+</div>
+<div class="paragraph">
+<p>The UML diagram of the Tunnel module is depicted in <a href="#tunnel-uml">Tunnel UML Diagram</a>. The Tunnel module inherits concepts from the Construction module <a href="#rc_construction_section">(cf. Section Construction)</a>. The Construction module defines objects that are common to all types of construction, such as the different surface types and the openings. A detailed discussion of the Requirements Class Tunnel can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_tunnel_section">here</a>.</p>
 </div>
 <div id="tunnel-uml" class="imageblock">
 <div class="content">
@@ -19872,10 +19938,11 @@ StereoType:&#160;&#160;&#160;&#160; «CodeList»</p></td>
 </tbody>
 </table>
 <div class="paragraph">
-<p>Vegetation consists of trees, bushes, and ground-covering plants. Vegetation is represented in two ways: as models of individual solitary plants and as models of areas covered by plants of a given species. Attributes allow the specialization of vegetation models to have individual sizes, intended and actual uses, and other properties.</p>
+<p>The Vegetation module defines the concepts to represent vegetation within city models. Vegetation can be represented either as solitary vegetation objects, such as trees, bushes and ferns, or as vegetation areas that are covered by plants of a given species or a typical mixture of plant species, such as forests, steppes and wet meadows.
+Vegetation is represented in the UML model by the top-level feature types <em>SolitaryVegetationObject</em> and <em>PlantCover</em>, which are also the only classes of the Vegetation module.</p>
 </div>
 <div class="paragraph">
-<p>The UML diagram of the Vegetation Model is depicted in <a href="#vegetation-uml">Vegetation UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_vegetation_section">here</a>.</p>
+<p>The UML diagram of the Vegetation module is depicted in <a href="#vegetation-uml">Vegetation UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_vegetation_section">here</a>.</p>
 </div>
 <div id="vegetation-uml" class="imageblock">
 <div class="content">
@@ -20479,20 +20546,15 @@ StereoType:&#160;&#160;&#160;&#160; «CodeList»</p></td>
 </tr>
 </tbody>
 </table>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-Content to be provided by TBD
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>The Versioning module provides the concepts that allow for representing multiple versions of a city model. A specific version represents a defined state of a city model consisting of the dedicated versions of all city object instances that belong to the respective city model version. Each version can be complemented by version transitions that describe the change of the state of a city model from one version to another and that give the reason for the change and the modifications applied. In addition, the Versioning module introduces bitemporal timestamps for all objects. This allows for providing all objects with information on the time period a specific version of an object is an integral part of the 3D city model and on the lifespan a specific version of an object exists in the real world.</p>
 </div>
 <div class="paragraph">
-<p>The UML diagram of the Versioning Model is depicted in <a href="#versioning-uml">Versioning UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_versioning_section">here</a>.</p>
+<p>By using the Versioning module, slow changes over a long time period with respect to cities and city models can be represented. This includes the creation and termination of objects (e.g. construction or demolition of sites, planting of trees, construction of new roads), structural changes of objects (e.g. raising of buildings), and changes in the status of an object (e.g. change of building owner, change of the traffic direction of a road to a one-way street).
+In this way, the history or evolution of cities and city models can be modelled, parallel or alternative versions of cities and city models can be managed, and changes of geometries and thematic properties of individual city objects over time can be tracked.</p>
+</div>
+<div class="paragraph">
+<p>The UML diagram of the Versioning module is depicted in <a href="#versioning-uml">Versioning UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_versioning_section">here</a>.</p>
 </div>
 <div id="versioning-uml" class="imageblock">
 <div class="content">
@@ -20917,20 +20979,16 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#
 </tr>
 </tbody>
 </table>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-Content to be provided by TBD
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>The WaterBody module provides the representation of significant and permanent or semi-permanent accumulations of surface water, usually covering a part of the Earth. Examples of such water bodies that can be modelled with CityGML are rivers, canals, lakes, and basins.
+Water bodies are represented in the UML model by the top-level feature type <em>WaterBody</em>, which is the main class of the WaterBody module.</p>
 </div>
 <div class="paragraph">
-<p>The UML diagram of the Water Body Model is depicted in <a href="#waterbody-uml">Water Body UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_waterbody_section">here</a>.</p>
+<p>Water bodies can be bounded by water surfaces, which represent the upper exterior interface between the water body and the atmosphere, and by water ground surfaces, which represent the exterior boundary surfaces of the submerged bottom of a water body (e.g. DTM or floor of a 3D basin object).
+Water surfaces are dynamic surfaces, thus, the visible water surface can regularly as well as irregularly change in height and covered area due to natural forces such as tides and floods.</p>
+</div>
+<div class="paragraph">
+<p>The UML diagram of the WaterBody module is depicted in <a href="#waterbody-uml">Water Body UML Diagram</a>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document <a href="https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_waterbody_section">here</a>.</p>
 </div>
 <div id="waterbody-uml" class="imageblock">
 <div class="content">
@@ -34230,6 +34288,44 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#
 </div>
 </div>
 <div class="sect1">
+<h2 id="_change_log_for_citygml_3_0"><a class="anchor" href="#_change_log_for_citygml_3_0"></a>13. Change Log for CityGML 3.0</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>CityGML 3.0 is the baseline version. Changes appearing in versions following 3.0 will be listed in this section.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 30.7692%;">
+<col style="width: 15.3846%;">
+<col style="width: 7.6923%;">
+<col style="width: 7.6923%;">
+<col style="width: 7.6923%;">
+<col style="width: 30.7693%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top" style="background-color: #FFFFFF;">Feature Class / Data Type</th>
+<th class="tableblock halign-center valign-top" style="background-color: #FFFFFF;">Property</th>
+<th class="tableblock halign-center valign-top" style="background-color: #FFFFFF;">New</th>
+<th class="tableblock halign-center valign-top" style="background-color: #FFFFFF;">Changed</th>
+<th class="tableblock halign-center valign-top" style="background-color: #FFFFFF;">Deleted</th>
+<th class="tableblock halign-center valign-top" style="background-color: #FFFFFF;">Description of Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_changelog_for_citygml_3_0"><a class="anchor" href="#_changelog_for_citygml_3_0"></a>Annex C: Changelog for CityGML 3.0</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -34316,7 +34412,7 @@ Stereotype: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-03-02 19:57:00 UTC
+Last updated 2020-04-16 19:25:12 +0200
 </div>
 </div>
 </body>
