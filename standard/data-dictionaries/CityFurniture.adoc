@@ -1,90 +1,166 @@
 [[CityFurniture-package]]
-==== *CityFurniture Package*
+==== *Package*
 
-|====
-|*Package CityFurniture*
-|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}The CityFurniture module supports representation of city furniture objects. City furniture objects are immovable objects like lanterns, traffic signs, advertising columns, benches, or bus stops that can be found in traffic areas, residential areas, on squares, or in built-up areas. +
-Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
-Parent Package: {nbsp}{nbsp}CityGML
-|====
+[cols="1a"]
+|===
+|{set:cellbgcolor:#FFFFFF} *Package CityFurniture*
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Description: ! The CityFurniture module supports representation of city furniture objects. City furniture objects are immovable objects like lanterns, traffic signs, advertising columns, benches, or bus stops that can be found in traffic areas, residential areas, on squares, or in built-up areas. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Parent Package: ! CityGML
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: ! «ApplicationSchema»
+!===
+|===
+
+|===
+|Editing instructions:
+| 1) For all classes
+| {nbsp}{nbsp}{nbsp}a) If a stereotype value is "<<←section,>>", change it to "none"
+| {nbsp}{nbsp}{nbsp}b) If a subclass value is not provided, set it to "none"
+| {nbsp}{nbsp}{nbsp}c) If a multiplicity value is not provided, set it to "1" 
+| {nbsp}{nbsp}{nbsp}d) If the Role Name of a relation is not provided, delete the Role Name row
+| {nbsp}{nbsp}{nbsp}e) If the stereotype of an attribute is not provided, set it to <<Property>>
+| 2) For all classes with the "CodeList" stereotype 
+| {nbsp}{nbsp}{nbsp}a) Copy the name and description into the table in the Code List section
+| {nbsp}{nbsp}{nbsp}b) Delete the class
+| 3) If there are no code lists, then delete the Code List section
+| 4) Delete these instructions when done
+|===
+
+==== *Classes*
 
 [[CityFurniture-section]]
-==== *Class CityFurniture*
+===== *Class CityFurniture*
 
-include::../requirements/CityFurniture/REQ_CityFurniture_CityFurniture.adoc[]
+[cols="1a"]
+|===
+|*CityFurniture* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! CityFurniture is an object or piece of equipment installed in the outdoor environment for various purposes. Examples include street signs, traffic signals, street lamps, benches, fountains. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
+!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! sdf (OCL): inv: function='sdf'    
+!===
+|===
 
-|====
-|*Class CityFurniture* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CityFurniture is an object or piece of equipment installed in the outdoor environment for various purposes. Examples include street signs, traffic signals, street lamps, benches, fountains. +
-Subclass Of: {nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «TopLevelFeatureType»
-|*Relations* 
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CityFurnitureClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the CityFurniture.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CityFurnitureFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the CityFurniture.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CityFurnitureUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the CityFurniture.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
-|
-|==== 
-
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+ 
+|{set:cellbgcolor:#FFFFFF} class  |<<CityFurnitureClassValue-section,CityFurnitureClassValue>>  [0..1] |Indicates the specific type of the CityFurniture.
+ 
+|{set:cellbgcolor:#FFFFFF} function  |<<CityFurnitureFunctionValue-section,CityFurnitureFunctionValue>>  [0..*] |Specifies the intended purposes of the CityFurniture.
+ 
+|{set:cellbgcolor:#FFFFFF} usage  |<<CityFurnitureUsageValue-section,CityFurnitureUsageValue>>  [0..*] |Specifies the actual uses of the CityFurniture.
+|===
 [[CityFurnitureClassValue-section]]
-==== *Class CityFurnitureClassValue*
+===== *Class CityFurnitureClassValue*
 
-include::../requirements/CityFurniture/REQ_CityFurniture_CityFurnitureClassValue.adoc[]
+[cols="1a"]
+|===
+|*CityFurnitureClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! CityFurnitureClassValue is a code list used to further classify a CityFurniture. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|===
 
-|====
-|*Class CityFurnitureClassValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CityFurnitureClassValue is a code list used to further classify a CityFurniture. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[CityFurnitureFunctionValue-section]]
-==== *Class CityFurnitureFunctionValue*
+===== *Class CityFurnitureFunctionValue*
 
-include::../requirements/CityFurniture/REQ_CityFurniture_CityFurnitureFunctionValue.adoc[]
+[cols="1a"]
+|===
+|*CityFurnitureFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! CityFurnitureFunctionValue is a code list that enumerates the different purposes of a CityFurniture. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|===
 
-|====
-|*Class CityFurnitureFunctionValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CityFurnitureFunctionValue is a code list that enumerates the different purposes of a CityFurniture. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[CityFurnitureUsageValue-section]]
-==== *Class CityFurnitureUsageValue*
+===== *Class CityFurnitureUsageValue*
 
-include::../requirements/CityFurniture/REQ_CityFurniture_CityFurnitureUsageValue.adoc[]
+[cols="1a"]
+|===
+|*CityFurnitureUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! CityFurnitureUsageValue is a code list that enumerates the different uses of a CityFurniture. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|===
 
-|====
-|*Class CityFurnitureUsageValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CityFurnitureUsageValue is a code list that enumerates the different uses of a CityFurniture. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
+
+==== *Code Lists*
+
+[cols="1,4"]  
+|===
+^|*Code List* ^|*Definition*
+| |
+| |
+|===
   
 
 

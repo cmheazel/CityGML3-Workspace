@@ -19,21 +19,19 @@ The CityGML standard is presented in this document in diagrams using the Unified
 image::../figures/Figure_1.png[]
 
 
-According to GML3 all associations between model elements in CityGML are uni-directional. Thus, associations in CityGML are navigable in only one direction. The direction of navigation is depicted by an arrowhead. In general, the context an element takes within the association is indicated by its role. The role is displayed near the target of the association. If the graphical representation is ambiguous though, the position of the role has to be drawn to the element the association points to.
+All associations between model elements in CityGML are uni-directional. Thus, associations in CityGML are navigable in only one direction. The direction of navigation is depicted by an arrowhead. In general, the context an element takes within the association is indicated by its role. The role is displayed near the target of the association. If the graphical representation is ambiguous though, the position of the role has to be drawn to the element the association points to.
 
 The following stereotypes are used:
 
-* \<<Geometry>> represents the geometry of an object. The geometry is an identifiable and distinguishable object that is derived from the abstract GML type __AbstractGeometryType__.
-* \<<Feature>> represents a thematic feature according to the definition in ISO 19109. A feature is an identifiable and distinguishable object that is derived from the abstract GML type __AbstractFeatureType__.
-* \<<Object>> represents an identifiable and distinguishable object that is derived from the abstract GML type __AbstractGMLType__.
-* \<<Enumeration>> enumerates the valid attribute values in a fixed list of named literal values. Enumerations are specified inline the CityGML schema.
-* \<<CodeList>> enumerates the valid attribute values. In contrast to Enumeration, the list of values is open and, thus, not given inline the CityGML schema. The allowed values can be provided within an external code list. It is recommended that code lists are implemented as simple dictionaries following the GML 3.1.1 Simple Dictionary Profile (cf. chapter 6.6 and chapter 10.14).
-* \<<Union>> is a list of attributes. The semantics are that only one of the attributes can be present at any time.
-* \<<PrimitiveType>> is used for representations supported by a primitive type in the implementation.
-* \<<DataType>> is used as a descriptor of a set of values that lack identity. Data types include primitive prede-fined types and user-definable types. A DataType is thus a class with few or no operations whose primary purpose is to hold the abstract state of another class for transmittal, storage, encoding or persistent storage.
-* \<<Leaf>> is used within UML package diagrams to indicate model elements that can have no further subtypes.
-* \<<XSDSchema>> is used within UML package diagrams to denote the root element of an XSD Schema contain-ing all the definitions for a particular namespace. All the package contents or component classes are placed within the one schema.
-* \<<ApplicationSchema>> is used within UML package diagrams to denote an XML Schema definition funda-mentally dependent on the concepts of another independent Standard within the XML Schema metalan-guage. For example, ApplicationSchema indicates extensions of GML consistent with the GML “rules for application schemas”.
+* \<<FeatureType>> 
+* \<<TopLevelFeatureType>>
+* \<<type>>
+* \<<ObjectType>>
+* \<<DataType>>is used as a descriptor of a set of values that lack identity. Data types include primitive prede-fined types and user-definable types. A DataType is thus a class with few or no operations whose primary purpose is to hold the abstract state of another class for transmittal, storage, encoding or persistent storage.
+* \<<enumeration>>enumerates the valid attribute values in a fixed list of named literal values. Enumerations are specified in the CityGML schema.
+* \<<BasicType>>
+* \<<CodeList>>enumerates the valid attribute values. In contrast to Enumeration, the list of values is open and, thus, not given inline the CityGML UML Model. The allowed values can be provided within an external code list.
+* \<<Union>>is a list of attributes. The semantics are that only one of the attributes can be present at any time.
 
 In order to enhance the readability of the CityGML UML diagrams, classes are depicted in different colors if they belong to different UML packages (see Fig. 8 for an overview of UML packages). The following coloring scheme is applied: 
 
@@ -122,3 +120,36 @@ Further XML Schema definitions relevant to this standard are shown in Tab. 2 alo
 
 
 NOTE: Explanatory text edit 05 for 01.04.2020 release ends here
+
+=== *Requirements*
+
+When referred to in a Requirement or Requirements Class, the boxes contained in UML figures may all be called “Classes” even if they are data types, enumerations, code lists, unions etc.  Because this is a Conceptual Model, they all should be interpreted to be concepts (see <<conceptual-modeling-description,Conceptual Modeling>>)
+
+When a Requirement states that “The Requirement Class Classes shown in blue in Figure [nn] shall be provided for by the encoding in a manner consistent with the encoding.”, unless specified otherwise, this means that the encoding must support:
+
+* all classes shown as blue boxes (this Requirements Class) in the figure
+* all attributes, attribute cardinalities, and attribute data types of these classes (usually shown in subsequent figures)
+* all associations, navigation, roles, and role cardinalities connecting to the blue classes
+* all classes shown as beige boxes (another Requirements Class) in the figure connected to the blue box classes by association or used as attribute data types
+* all classes shown as pink boxes (another Standard) in the figure connected to the blue box classes by association or used as attribute data types
+
+[[conceptual-modeling-description]]
+=== Conceptual Modeling (Informative)
+
+ISO 19101 [9] defines universe of discourse to be a view of the real or hypothetical world that includes everything of interest.  That standard then defines conceptual model to be a model that defines concepts of a universe of discourse.
+
+The scope of this CityGML Conceptual Model Standard establishes the limits of the universe of discourse for this Standard. The next task is to discover and standardize the concepts within this scope. CityGML will potentially support numerous diverse application software packages covering multiple disciplines and facility life cycle phases. Each conceivably can have its own universe of discourse and their own set of concepts.
+
+The goal of this CityGML Conceptual Model Standard is to establish and document a common set of concepts that spans the applications supported.  This does not attempt to redefine application concepts, but merely present a common set of concepts from and to which their concepts can be understood and mapped.
+
+GML and JSON encodings are planned and other encodings are anticipated. Each encoding addresses a specific information community and set of application software packages. However, with the increasing desire to share information between communities and applications having a common conceptual model across all of these encodings is highly advantageous.
+
+An added benefit of the development of a conceptual model results from the rigor involved in achieving consensus. After numerous iterations, the end result is consistent, cohesive, and complete.  Updating a conceptual model is far easier than rewriting software code. Further, the iterations help to flesh out details as well as to unearth differences in individual conceptualizations.
+
+Perhaps the greatest benefit of the standards activity is the ability to communicate the resultant model. This is in part due to using a standardized conceptual modelling language like UML and the agreed OGC and TC211 conventions for using UML. The eventual outcome of being able to provide formal documentation for what is meant by each concept is invaluable in understanding the subsequent encodings and applications.
+
+This will be the first OGC conceptual model standard, without accompanying encodings. Yet the model is presented in a manner consistent with the formalisms adopted for writing OGC standards. This standard follows the OGC Specification Model standard for modular specifications [10] and is consistent with the OGC Naming Authority conventions and recommendations.  The target of this Standard are the encoding standards which will follow and not the application software that will implement these encodings.  Requirements for the encodings are explicit and grouped into Requirements Classes.  Accompanying Conformance Classes are included to determine if an encoding conforms to the conceptual model.
+
+UML has been used as the conceptual modeling language in this Standard.  Class Diagrams have been created and inserted as Figures. The boxes in these diagrams (officially “Classifiers” in UML) typically represent classes, data types, enumerations, code lists, unions, etc. and this terminology is used throughout the Standard. However, since this is a Conceptual Model, these should all be interpreted to be “concepts”.  For each Requirements Class, an introductory diagram is included which contains all of the concepts relevant to that Requirements Class.  However, the boxes are simplified by suppressing attributes. These attributes are provided in a series of context diagrams which follow, each focusing on a particular set of concepts in the Requirements Class.
+
+Though redundant with the UML diagrams, all of the class attributes are repeated in the document text, including attribute definitions not visible in the diagrams. If these differ, the UML takes precedence. Because association roles behave similar to attributes, they appear at the end of the textual attribute listing as if they were attributes. The cardinality of the association is depicted as the attribute cardinality and the associated class as the data type.

@@ -3,30 +3,530 @@
 
 include::requirements/requirements_class_core.adoc[]
 
-The Core module defines the basic concepts and components of city models. City models are virtual representations of real-world cities and landscapes. A city model aggregates different types of objects, which can be city objects, appearances, different versions of the city model, transitions between different versions of the city model, and feature objects.
-All objects defined in CityGML are features with lifespan. This allows the optional specification of the real-world and database times for the existence of each feature, as is required by the Versioning module (cf. Section <<rc_versioning_section,  Versioning>>).
-Features that define thematic concepts related to cities and landscapes, such as building, bridge, water body, or land use, are referred to as city objects.
+The Core module defines the basic concepts and components of city models. This rather large body of work has been divided into five sections. These sections build on each other from the fundamental principles specified by the ISO up through the full CityGML model. These sections are summarized in the <<citygml-core-table>> table.   
+
+[[citygml-core-table]]
+.CityGML Core Sections
+[cols="2,6]
+|===
+|<<ISO-dependencies-section,The Use of ISO Standards>> |Describes the use of ISO 191** standards to provide a foundation to the CityGML model. 
+|<<space-concepts-section,Space Concepts>>|Defines the concepts of space as used in the CityGML model
+|<<geometry-lod-section,Geometry and LOD>>|Defines the geometry and Level Of Detail concepts
+|<<CityGML-section,CityGML>>|The core elemtents of the model. where it all comes together
+|<<b-e-c-section,Basic Types, Enumerations and Codelist>>|Defines the little things which make this model work.
+|===
+
+[[ISO-dependencies-section]]
+==== ISO Dependencies
+
+CityGML builds on the ISO 191** family of standards. The applicable standards are identified in the <<ISO-in-CityGML-diagram>> diagram. Data dictionaries are included for all of the ISO-defined classes explicitly referenced in the CityGML UML model. These data dictionaries are provided for the convinence of the user. The ISO standards are the normative source.  
+
+[[ISO-in-CityGML-diagram]]
+
+.Use of ISO Standards in CityGML
+image::figures/Core/ISO_and_OGC_standards_in_CityGML.png[]
+
+The ISO classes explicitly used in the CityGML UML model are introduced in the <<iso-class-table>> table. More detail about these classes can be found in the <<data-dictionaries-section,Data Dictionaries>> section. 
+
+[[iso-class-table]]
+.ISO Classes used in CityGML
+[cols="2,6",options="headers"]
+|===
+^|*Class Name* ^|*Description*
+|<<AnyFeature-section,AnyFeature>> |A generalization of all feature types 
+|<<CV_DiscreteGridPointCoverage-section,CV_DiscreteGridPointCoverage>> |
+|<<GM_Object-section,GM_Object>> |
+|<<GM_MultiCurve-section,GM_MultiCurve>> |
+|<<GM_MultiSurface-section,GM_MultiSurface>> |
+|<<GM_Point-section,GM_Point>> |
+|<<GM_Solid-section,GM_Solid>> |
+|<<GM_Surface-section,GM_Surface>> |
+|<<GM_Tin-section,GM_Tin>> |
+|<<GM_TriangulatedSurface-section,GM_TriangulatedSurface>> |
+|<<SC_CRS-section,SC_CRS>> |
+|===
+
+[[space-concepts-section,Space Concepts]]
+==== Spatial Concepts
 
 All city objects are differentiated into spaces and space boundaries. Spaces are entities of volumetric extent in the real world. Buildings, water bodies, trees, rooms, and traffic spaces, for instance, have a volumetric extent. Spaces can be classified into physical spaces and logical spaces. Physical spaces, in turn, can be further classified into occupied spaces and unoccupied spaces.
-Space boundaries, in contrast, are entities with areal extent in the real world. Space boundaries can be differentiated into different types of thematic surfaces, such as wall surfaces and roof surfaces.
-For a more detailed introduction to the Space concept see section [yellow-background]*+++<color rgb="#ff0000">xxx</color>+++*.
 
-Spaces and space boundaries can have various geometry representations depending on the Level of Detail (LOD). Spaces can be spatially represented as single points in LOD0, multi-surfaces in LOD0/2/3, solids in LOD1/2/3, and multi-curves in LOD2/3. Space boundaries can be represented as multi-surfaces in LOD0/2/3 and as multi-curves in LOD2/3. All Levels of Detail allow for the representation of the interior of city objects. For a more detailed introduction to the Level of Detail concept see section [yellow-background]*+++<color rgb="#ff0000">xxx</color>+++*.
+Space boundaries, in contrast, are entities with a real extent in the real world. Space boundaries can be differentiated into different types of thematic surfaces, such as wall surfaces and roof surfaces.
+
+.UML Space Concepts
+image::figures/Core/Core-Space_concepts.png[]
+
+The Space Concept classes defined in the CityGML UML model are introduced in the <<space-concepts-class-table>> table. More detail about these classes can be found in the <<data-dictionaries-section,Data Dictionaries>> section. 
+
+[[space-concepts-class-table]]
+.Space Concept Classes used in CityGML
+[cols="2,6",options="headers"]
+|===
+^|*Class Name* ^|*Description*
+|<<AbstractCityObject-section,AbstractCityObject>> |
+|<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> | 
+|<<AbstractLogicalSpace-section,AbstractLogicalSpace>> |
+|<<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> |
+|<<AbstractPhysicalSpace-section,AbstractPhysicalSpace>> |
+|<<AbstractSpace-section,AbstractSpace>> |
+|<<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> |
+|<<AbstractThematicSurface-section,AbstractThematicSurface>> |
+|<<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> |
+|<<CityModel-section,CityModel>> |
+|<<ClosureSurface-section,ClosureSurface>> |
+|===
+
+[[geometry-lod-section]]
+==== Geometry and LOD
+
+Spaces and space boundaries can have various geometry representations depending on the Level of Detail (LOD). Spaces can be spatially represented as single points in LOD0, multi-surfaces in LOD0/2/3, solids in LOD1/2/3, and multi-curves in LOD2/3. Space boundaries can be represented as multi-surfaces in LOD0/2/3 and as multi-curves in LOD2/3. All Levels of Detail allow for the representation of the interior of city objects. 
+
 In addition, the geometry can also be represented implicitly, i.e. the shape is stored only once as a prototypical geometry, which then is re-used or referenced, wherever the corresponding feature occurs in the 3D city model.
+
 The thematic classes, such as building, tunnel, road, land use, water body, or city furniture are defined as subclasses of the space and space boundary classes within the thematic modules. Since all city objects in the thematic modules represent subclasses of the space and space boundary classes, they automatically inherit the geometries defined in the Core module.
 
-City objects can have various relations. City objects can relate to generalized representations of the same real-world object in different Levels of Detail, they can also relate to other city objects, and they can reference corresponding external objects in other information systems, such as in the German cadastre (ALKIS), the German topographic information system (ATKIS), or the OS UK MasterMap®.
-In addition, address information can be specified for city objects using the xAL address standard issued by the OASIS consortium (OASIS 2003).
+.UML Geometry and LoD Concepts
+image::figures/Core/Core-Geometry_and_LoD_concept.png[]
 
-The UML diagram of the Core module is depicted in <<core-uml,Core UML Diagram>>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_core_section[here].
+The Geometry and LOD Concept classes defined in the CityGML UML model are introduced in the <<geometry-lod-class-table>> table. More detail about these classes can be found in the <<data-dictionaries-section,Data Dictionaries>> section. 
+
+[[geometry-lod-class-table]]
+.Geometry and LOD Classes used in CityGML
+[cols="2,6",options="headers"]
+|===
+^|*Class Name* ^|*Description*
+|<<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> |
+|<<AbstractPhysicalSpace-section,AbstractPhysicalSpace>> | 
+|<<AbstractSpace-section,AbstractSpace>> |
+|<<AbstractThematicSurface-section,AbstractThematicSurface>> |
+|===
+
+[[CityGML-section]]
+==== CityGML
+
+City models are virtual representations of real-world cities and landscapes. A city model aggregates different types of objects, which can be city objects, appearances, different versions of the city model, transitions between different versions of the city model, and feature objects. All objects defined in CityGML are features with lifespan. This allows the optional specification of the real-world and database times for the existence of each feature, as is required by the Versioning module (cf. Section <<rc_versioning_section,  Versioning>>). Features that define thematic concepts related to cities and landscapes, such as building, bridge, water body, or land use, are referred to as city objects.
+
+The UML diagram of the Core module is depicted in the <<core-uml,Core UML Diagram>>. 
 
 [[core-uml]]
 .UML diagram of CityGML’s core module.
+image::figures/Core/Core-Overview.png[]
 
-image::../figures/Core-Overview.png[]
+The Geometry and LOD Concept classes defined in the CityGML UML model are introduced in the <<geometry-lod-class-table>> table. More detail about these classes can be found in the <<data-dictionaries-section,Data Dictionaries>> section. 
+
+[[geometry-lod-class-table]]
+.Geometry and LOD Classes used in CityGML
+[cols="2,6",options="headers"]
+|===
+^|*Class Name* ^|*Description*
+|<<AbstractAppearance-section,AbstractAppearance>> |
+|<<AbstractCityObject-section,AbstractCityObject>> |
+|<<AbstractFeature-section,AbstractFeature>> |
+|<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> | 
+|<<AbstractLogicalSpace-section,AbstractLogicalSpace>> |
+|<<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> |
+|<<AbstractPhysicalSpace-section,AbstractPhysicalSpace>> | 
+|<<AbstractPointCloud-section,AbstractPointCloud>> |
+|<<AbstractSpace-section,AbstractSpace>> |
+|<<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> |
+|<<AbstractThematicSurface-section,AbstractThematicSurface>> |
+|<<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> |
+|<<AbstractVersion-section,AbstractVersion>> |
+|<<AbstractVersionTransition-section,AbstractVersionTransition>> |
+|<<Address-section,Address>> |
+|<<CityModel-section,CityModel>> |
+|<<ClosureSurface-section,ClosureSurface>> |
+|===
+
+[[b-e-c-section]]
+==== Basic Types, Enumerations, and CodeLists
+
+.UML Basic Types, Enumerations, and Code Lists
+image::figures/Core/Core-Basic_Types_Enumerations_Codelists.png[]
+
+[[enumeration-class-table]]
+.Enumeration Classes used in CityGML
+[cols="2,6",options="headers"]
+|===
+^|*Class Name* ^|*Description*
+|[[RelativeToTerrain-section]]RelativeToTerrain |
+|[[RelativeToWater-section]]RelativeToWater |
+|[[SpaceType-section]]SpaceType |
+|===
+
+[[codelist-class-table]]
+.Code List Classes used in CityGML
+[cols="2,6",options="headers"]
+|===
+^|*Class Name* ^|*Description*
+|[[IntervalValue-section]]IntervalValue |
+|[[MimeTypeValue-section]]MimeTypeValue |
+|[[NillReasonEnumeration-section]]NillReasonEnumeration |
+|[[OccupantTypeValue-section]]OccupantTypeValue |
+|[[OtherRelationTypeValue-section]]OtherRelationTypeValue |
+|[[RelationTypeValue-section]]RelationTypeValue |
+|[[QualifiedAreaTypeValue-section]]QualifiedAreaTypeValue |
+|[[QualifiedVolumeTypeValue-section]]QualifiedVolumeTypeValue |
+|[[TemporalRelationTypeValue-section]]TemporalRelationTypeValue |
+|[[TopologicalRelationTypeValue-section]]TopologicalRelationTypeValue |
+|===
+
+[[datatype-class-table]]
+.Data Type Classes used in CityGML
+[cols="2,6",options="headers"]
+|===
+^|*Class Name* ^|*Description*
+|Occupancy |
+|===
+
+[[basictype-class-table]]
+.Basic Type Classes used in CityGML
+[cols="2,6",options="headers"]
+|===
+^|*Class Name* ^|*Description*
+|DoubleBetween0and1 |
+|DoubleBetween0and1LList |
+|DoubleList |
+|DoubleOrNillReasonList |
+|Id |
+|IntegerBetween0and3 |
+|MeasureOrNillReasonList |
+|TransformationMatrix2x2 |
+|TransformationMartix3x4 |
+|TrnasformationMatrix4x4 |
+|===
+
+[[union-class-table]]
+.Union Classes used in CityGML
+[cols="2,6",options="headers"]
+|===
+^|*Class Name* ^|*Description*
+|DoubleOrNillReason |
+|NillReason |
+|===
+
+[[data-dictionaries-section]]
+==== Data Dictionaries
+
+[[AnyFeature-section]]
+===== *Class AnyFeature* <<iso19109,(ISO 19109:2015)>>
+
+[cols="1a"]
+|===
+|*AnyFeature* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AnyFeature is an abstract class that is the generalization of all feature types. AnyFeature is an instance of the «metaclass» FeatureType [cf. ISO 19109]. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|===
+
+*Relations*
+
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|{set:cellbgcolor:#FFFFFF} 
+|<<FeatureType-section,FeatureType>> 
+|
+|===
+
+[[CV_DiscreteGridPointCoverage-section]]
+===== *Class CV_DiscreteGridPointCoverage* <<iso19123,(ISO 19123:2005)>>
+
+[cols="1a"]
+|===
+|*CV_DiscreteGridPointCoverage* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! CV_DiscreteCoverage 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «type»
+!===
+|===
+
+*Relations*
+
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|{set:cellbgcolor:#FFFFFF}PointFunction 
+|<<CV_GridValuesMatrix-section,CV_GridValuesMatrix>> 
+|
+|{set:cellbgcolor:#FFFFFF}CoverageFunction 
+|<<CV_GridPointValuePair-section,CV_GridPointValuePair>> 
+|
+|===
+
+[[GM_Object-section]]
+===== *Class GM_Object* <<iso19107,(ISO 19107:2003)>>
+
+[cols="1a"]
+|===
+|*GM_Object* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GM_Object (Figure 6) is the root class of the geometric object taxonomy and supports interfaces common to all geographically referenced geometric objects. GM_Object instances are sets of direct positions in a particular coordinate reference system. A GM_Object can be regarded as an infinite set of points that satisfies the set operation interfaces for a set of direct positions, TransfiniteSet<DirectPosition>. Since an infinite collection class cannot be implemented directly, a Boolean test for inclusion shall be provided by the GM_Object interface. This international standard concentrates on vector geometry classes, but future work may use GM_Object as a root class without modification.
+NOTE As a type, GM_Object does not have a well-defined default state or value representation as a data type. Instantiated subclasses of GM_Object will. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «type»
+!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! dimension() >  boundary().dimension (Invariant):     
+!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! boundary().notEmpty() implies boundary().dimension() = dimension() -1 (Invariant):     
+!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! boundary().isEmpty() = isCycle() (Invariant):     
+!===
+|===
+
+*Relations* 
+
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|{set:cellbgcolor:#FFFFFF} 
+|<<TransfiniteSet<DirectPosition>-section,TransfiniteSet<DirectPosition>>> 
+|
+|{set:cellbgcolor:#FFFFFF}Coordinate Reference System 
+|CRS 
+|The association "CRS" links this GM_Object to the coordinate reference system, as defined in ISO150456-9, used in its DirectPosition coordinates
+GM_Object::CRS : CRS
+NOTE This association shall only be navigable from GM_Object to CRS. This means that the coordinate reference system objects in a data set do not keep a list of GM_Objects that use them. A detailed description of reference systems may be found in ISO 15046 Part 11.
+|{set:cellbgcolor:#FFFFFF}Coordinate Reference System 
+|<<SC_CRS-section,SC_CRS>> 
+|The association "CRS" links this GM_Object to the coordinate reference system, as defined in ISO150456-9, used in its DirectPosition coordinates
+GM_Object::CRS : CRS
+NOTE This association shall only be navigable from GM_Object to CRS. This means that the coordinate reference system objects in a data set do not keep a list of GM_Objects that use them. A detailed description of reference systems may be found in ISO 15046 Part 11.
+|{set:cellbgcolor:#FFFFFF}SpatialComposition 
+|CV_DomainObject 
+|
+|{set:cellbgcolor:#FFFFFF} 
+|Geometry 
+|
+|===
+
+[[GM_MultiCurve-section]]
+===== *Class GM_MultiCurve* <<iso19107,(ISO 19107: 2003)>>
+
+[cols="1a"]
+|===
+|*GM_MultiCurve* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! GM_MultiPrimitive 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «type»
+!===
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+ 
+|{set:cellbgcolor:#FFFFFF} length  |Length  |
+|=== 
+
+[[GM_MultiSurface-section]]
+===== *Class GM_MultiSurface* <<iso19107,(ISO 19107:2003)>>
+
+[cols="1a"]
+|===
+|*GM_MultiSurface* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! GM_MultiPrimitive
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «type»
+!===
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+ 
+|{set:cellbgcolor:#FFFFFF} area  |<<Area-section,Area>>  |
+ 
+|{set:cellbgcolor:#FFFFFF} perimeter  |<<Length-section,Length>>  |
+|=== 
+
+[[GM_Point-section]]
+===== *Class GM_Point* <<iso19107,(ISO 19107:2003)>>
+
+[cols="1a"]
+|===
+|*GM_Point* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GM_Point (Figure 9) is the basic data type for a geometric object consisting of one and only one point.  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<GM_Primitive-section,GM_Primitive>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «type»
+!===
+|===
+
+*Relations*
+
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|{set:cellbgcolor:#FFFFFF} 
+|<<Point-section,Point>> 
+|
+|{set:cellbgcolor:#FFFFFF}Composition 
+|GM_CompositePoint 
+|
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+ 
+|{set:cellbgcolor:#FFFFFF} position  |DirectPosition  |The attribute "position" shall be the DirectPosition of this GM_Point.
+GM_Point::position [1] : DirectPosition
+NOTE In most cases, the state of a GM_Point is fully determined by its position attribute. The only exception to this is if the GM_Point has been subclassed to provide additional non-geometric information such as symbology.
+|=== 
+
+[[GM_Solid-section]]
+===== *Class GM_Solid* <<iso19107,(ISO 19107:2003)>>
+
+[cols="1a"]
+|===
+|*GM_Solid* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GM_Solid (Figure 13), a subclass of GM_Primitive, is the basis for 3-dimensional geometry. The extent of a solid is defined by the boundary surfaces. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! GM_Primitive 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «type»
+!===
+|===
+
+*Relations* 
+
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|{set:cellbgcolor:#FFFFFF}Composition 
+|GM_CompositeSolid 
+|
+|{set:cellbgcolor:#FFFFFF} 
+|<<Solid-section,Solid>> 
+|
+|===
+
+[[GM_Surface-section]]
+===== *Class GM_Surface* <<iso19107,(ISO 19107:2003)>>
+
+[cols="1a"]
+|===
+|*GM_Surface* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GM_Surface (Figure 12) a subclass of GM_Primitive and is the basis for 2-dimensional geometry. Unorientable surfaces such as the Möbius band are not allowed. The orientation of a surface chooses an "up" direction through the choice of the upward normal, which, if the surface is not a cycle, is the side of the surface from which the exterior boundary appears counterclockwise. Reversal of the surface orientation reverses the curve orientation of each boundary component, and interchanges the conceptual "up" and "down" direction of the surface. If the surface is the boundary of a solid, the "up" direction is usually outward. For closed surfaces, which have no boundary, the up direction is that of the surface patches, which must be consistent with one another. Its included GM_SurfacePatches describe the interior structure of a GM_Surface.
+NOTE Other than the restriction on orientability, no other "validity" condition is required for GM_Surface. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! GM_OrientableSurface 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «type»
+!===
+|===
+
+*Relations* 
+
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|{set:cellbgcolor:#FFFFFF} GM_GenericSurface 
+|
+|{set:cellbgcolor:#FFFFFF} 
+|<<Building-section,Building>> 
+|
+|===
+
+[[GM_Tin-section]]
+===== *Class GM_Tin* <<iso19107,(ISO 19107:2003)>>
+
+[cols="1a"]
+|===
+|*GM_Tin* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A GM_Tin (Figure 21) is a GM_TriangulatedSurface that uses the Delaunay algorithm or a similar algorithm complemented with consideration for breaklines, stoplines and maximum length of triangle sides (Figure 22). These networks satisfy the Delaunay criterion away from the modifications: For each triangle in the network, the circle passing through its vertexes does not contain, in its interior, the vertex of any other triangle. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<GM_TriangulatedSurface-section,GM_TriangulatedSurface>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «type»
+!===
+|===
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+ 
+|{set:cellbgcolor:#FFFFFF} breakLines  |GM_LineString |
+ 
+|{set:cellbgcolor:#FFFFFF} controlPoint  |GM_Position [3..*] |
+ 
+|{set:cellbgcolor:#FFFFFF} maxLength  |Distance  |
+ 
+|{set:cellbgcolor:#FFFFFF} stopLines  |GM_LineString  |
+|=== 
+
+[[GM_TriangulatedSurface-section]]
+===== *Class GM_TriangulatedSurface* <<iso19107,(ISO 19107:2003)>>
+
+[cols="1a"]
+|===
+|*GM_TriangulatedSurface* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A GM_TriangulatedSurface (Figure 21) is a GM_PolyhedralSurface that is composed only of triangles (GM_Triangle). There is no restriction on how the triangulation is derived.  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! GM_PolyhedralSurface 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «type»
+!===
+|===
+
+[[SC_CRS-section]]
+===== *Class SC_CRS* <<iso19111,(ISO 19111:Edition 2)>>
+
+[cols="1a"]
+|===
+|*SC_CRS* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! Coordinate reference system which is usually single but may be compound. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! IO_IdentifiedObjectBase, RS_ReferenceSystem
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «type»
+!===
+|===
+
+*Relations* 
+
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|{set:cellbgcolor:#FFFFFF}CoordinateReferenceSystem 
+|CV_ReferenceableGrid
+|
+|{set:cellbgcolor:#FFFFFF}Target 
+|CC_CoordinateOperation 
+|The "sourceCRS" and "targetCRS" associations are mandatory for coordinate transformations only. Coordinate conversions have a source CRS and a target CRS that are NOT specified through these associations, but through associations from GeneralDerivedCRS to SingleCRS.
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|{set:cellbgcolor:#FFFFFF} scope  |<<CharacterString-section,CharacterString>>  [1..*] |Description of usage, or limitations of usage, for which this CRS is valid. If unknown, enter "not known".
+|===
 
 include::data-dictionaries/Core.adoc[]
 
 ==== Additional Information
 
-The following sections provide additional information which may not be readily available through the UML Model.
+A detailed discussion of the CityGML Core can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_core_section[here].

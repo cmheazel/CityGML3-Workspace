@@ -1,831 +1,1220 @@
 [[Construction-package]]
-==== *Construction Package*
+==== *Package*
 
-|====
-|*Package Construction*
-|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}The Construction module supports representation of key elements of different types of constructions. These key elements include construction surfaces (e.g floor and ceiling), windows and doors, constructive elements (e.g. beams and slabs), installations, and furniture. +
-Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
-Parent Package: {nbsp}{nbsp}CityGML
-|====
+[cols="1a"]
+|===
+|{set:cellbgcolor:#FFFFFF} *Package Construction*
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Description: ! The Construction module supports representation of key elements of different types of constructions. These key elements include construction surfaces (e.g floor and ceiling), windows and doors, constructive elements (e.g. beams and slabs), installations, and furniture. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Parent Package: ! CityGML
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: ! «ApplicationSchema»
+!===
+|===
+
+|===
+|Editing instructions:
+| 1) For all classes
+| {nbsp}{nbsp}{nbsp}a) If a stereotype value is "<<←section,>>", change it to "none"
+| {nbsp}{nbsp}{nbsp}b) If a subclass value is not provided, set it to "none"
+| {nbsp}{nbsp}{nbsp}c) If a multiplicity value is not provided, set it to "1" 
+| {nbsp}{nbsp}{nbsp}d) If the Role Name of a relation is not provided, delete the Role Name row
+| {nbsp}{nbsp}{nbsp}e) If the stereotype of an attribute is not provided, set it to <<Property>>
+| 2) For all classes with the "CodeList" stereotype 
+| {nbsp}{nbsp}{nbsp}a) Copy the name and description into the table in the Code List section
+| {nbsp}{nbsp}{nbsp}b) Delete the class
+| 3) If there are no code lists, then delete the Code List section
+| 4) Delete these instructions when done
+|===
+
+==== *Classes*
 
 [[AbstractConstruction-section]]
-==== *Class AbstractConstruction*
+===== *Class AbstractConstruction*
 
-include::../requirements/Construction/REQ_Construction_AbstractConstruction.adoc[]
+[cols="1a"]
+|===
+|*AbstractConstruction* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AbstractConstruction is the abstract superclass for objects that are manufactured by humans from construction materials, are connected to earth and are intended to be permanent. A connection with the ground also exists when the construction rests by its own weight on the ground or is moveable limited on stationary rails or if the construction is intended to be used mainly stationary. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|===
 
-|====
-|*Class AbstractConstruction* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractConstruction is the abstract superclass for objects that are manufactured by humans from construction materials, are connected to earth and are intended to be permanent. A connection with the ground also exists when the construction rests by its own weight on the ground or is moveable limited on stationary rails or if the construction is intended to be used mainly stationary. +
-Subclass Of: {nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} boundary +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}conditionOfConstruction +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} ConditionOfConstructionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the life-cycle status of the construction. [cf. INSPIRE]  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}constructionEvent +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} ConstructionEvent +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Describes specific events in the life-time of the construction.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}dateOfConstruction +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Date +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the date at which the construction was completed.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}dateOfDemolition +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Date +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the date at which the construction was demolished.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}elevation +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Elevation +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies qualified elevations of the construction in relation to a well-defined surface which is commonly taken as origin (e.g. geoid or water level). [cf. INSPIRE]  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}height +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Height +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies qualified heights of the construction above ground or below ground. [cf. INSPIRE]  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}occupancy +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Occupancy +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Provides qualified information on the residency of persons, animals, or other moveable objects in the construction.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|{set:cellbgcolor:#FFFFFF} 
+|<<AbstractThematicSurface-section,AbstractThematicSurface>> 
 |
-|==== 
+|===
 
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+ 
+|{set:cellbgcolor:#FFFFFF} conditionOfConstruction  |<<ConditionOfConstructionValue-section,ConditionOfConstructionValue>>  [0..1] |Indicates the life-cycle status of the construction. [cf. INSPIRE]
+ 
+|{set:cellbgcolor:#FFFFFF} constructionEvent  |<<ConstructionEvent-section,ConstructionEvent>>  [0..*] |Describes specific events in the life-time of the construction.
+ 
+|{set:cellbgcolor:#FFFFFF} dateOfConstruction  |<<Date-section,Date>>  [0..1] |Indicates the date at which the construction was completed.
+ 
+|{set:cellbgcolor:#FFFFFF} dateOfDemolition  |<<Date-section,Date>>  [0..1] |Indicates the date at which the construction was demolished.
+ 
+|{set:cellbgcolor:#FFFFFF} elevation  |<<Elevation-section,Elevation>>  [0..*] |Specifies qualified elevations of the construction in relation to a well-defined surface which is commonly taken as origin (e.g. geoid or water level). [cf. INSPIRE]
+ 
+|{set:cellbgcolor:#FFFFFF} height  |<<Height-section,Height>>  [0..*] |Specifies qualified heights of the construction above ground or below ground. [cf. INSPIRE]
+ 
+|{set:cellbgcolor:#FFFFFF} occupancy  |<<Occupancy-section,Occupancy>>  [0..*] |Provides qualified information on the residency of persons, animals, or other moveable objects in the construction.
+|===
 [[AbstractConstructionSurface-section]]
-==== *Class AbstractConstructionSurface*
+===== *Class AbstractConstructionSurface*
 
-include::../requirements/Construction/REQ_Construction_AbstractConstructionSurface.adoc[]
+[cols="1a"]
+|===
+|*AbstractConstructionSurface* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AbstractConstructionSurface is the abstract superclass for different kinds of surfaces that bound a construction. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractThematicSurface-section,AbstractThematicSurface>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|===
 
-|====
-|*Class AbstractConstructionSurface* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractConstructionSurface is the abstract superclass for different kinds of surfaces that bound a construction. +
-Subclass Of: {nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} fillingSurface +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFillingSurface-section,AbstractFillingSurface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the surfaces that seal the openings of the construction surface. +
-|*Attributes*
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|{set:cellbgcolor:#FFFFFF} 
+|<<AbstractFillingSurface-section,AbstractFillingSurface>> 
 |
-|==== 
+|===
 
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[AbstractConstructiveElement-section]]
-==== *Class AbstractConstructiveElement*
+===== *Class AbstractConstructiveElement*
 
-include::../requirements/Construction/REQ_Construction_AbstractConstructiveElement.adoc[]
+[cols="1a"]
+|===
+|*AbstractConstructiveElement* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AbstractConstructiveElement is the abstract superclass for the representation of volumetric elements of a construction. Examples are walls, beams, slabs. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|===
 
-|====
-|*Class AbstractConstructiveElement* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractConstructiveElement is the abstract superclass for the representation of volumetric elements of a construction. Examples are walls, beams, slabs. +
-Subclass Of: {nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} filling +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFillingElement-section,AbstractFillingElement>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the elements that fill the opening of the constructive element. +
-|Relation Name: {nbsp}{nbsp} boundary +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}isStructuralElement +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Boolean +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates whether the constructive element is essential from a structural point of view. A structural element cannot be omitted without collapsing of the construction. Examples are pylons and anchorages of bridges.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|{set:cellbgcolor:#FFFFFF} 
+|<<AbstractFillingElement-section,AbstractFillingElement>> 
 |
-|==== 
+|{set:cellbgcolor:#FFFFFF} 
+|<<AbstractThematicSurface-section,AbstractThematicSurface>> 
+|
+|===
 
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+ 
+|{set:cellbgcolor:#FFFFFF} isStructuralElement  |<<Boolean-section,Boolean>>  [0..1] |Indicates whether the constructive element is essential from a structural point of view. A structural element cannot be omitted without collapsing of the construction. Examples are pylons and anchorages of bridges.
+|===
 [[AbstractFillingElement-section]]
-==== *Class AbstractFillingElement*
+===== *Class AbstractFillingElement*
 
-include::../requirements/Construction/REQ_Construction_AbstractFillingElement.adoc[]
+[cols="1a"]
+|===
+|*AbstractFillingElement* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AbstractFillingElement is the abstract superclass for different kinds of elements that fill the openings of constructive elements. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|===
 
-|====
-|*Class AbstractFillingElement* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractFillingElement is the abstract superclass for different kinds of elements that fill the openings of constructive elements. +
-Subclass Of: {nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[AbstractFillingSurface-section]]
-==== *Class AbstractFillingSurface*
+===== *Class AbstractFillingSurface*
 
-include::../requirements/Construction/REQ_Construction_AbstractFillingSurface.adoc[]
+[cols="1a"]
+|===
+|*AbstractFillingSurface* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AbstractFillingSurface is the abstract superclass for different kinds of surfaces that seal openings filled by filling elements. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractThematicSurface-section,AbstractThematicSurface>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|===
 
-|====
-|*Class AbstractFillingSurface* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractFillingSurface is the abstract superclass for different kinds of surfaces that seal openings filled by filling elements. +
-Subclass Of: {nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[AbstractFurniture-section]]
-==== *Class AbstractFurniture*
+===== *Class AbstractFurniture*
 
-include::../requirements/Construction/REQ_Construction_AbstractFurniture.adoc[]
+[cols="1a"]
+|===
+|*AbstractFurniture* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AbstractFurniture is the abstract superclass for the representation of furniture objects of a construction. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|===
 
-|====
-|*Class AbstractFurniture* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractFurniture is the abstract superclass for the representation of furniture objects of a construction. +
-Subclass Of: {nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[AbstractInstallation-section]]
-==== *Class AbstractInstallation*
+===== *Class AbstractInstallation*
 
-include::../requirements/Construction/REQ_Construction_AbstractInstallation.adoc[]
+[cols="1a"]
+|===
+|*AbstractInstallation* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AbstractInstallation is the abstract superclass for the representation of installation objects of a construction. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|===
 
-|====
-|*Class AbstractInstallation* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractInstallation is the abstract superclass for the representation of installation objects of a construction. +
-Subclass Of: {nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} boundary +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}relationToConstruction +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RelationToConstruction +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates whether the installation is located inside and/or outside of the construction.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|{set:cellbgcolor:#FFFFFF} 
+|<<AbstractThematicSurface-section,AbstractThematicSurface>> 
 |
-|==== 
+|===
 
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+ 
+|{set:cellbgcolor:#FFFFFF} relationToConstruction  |<<RelationToConstruction-section,RelationToConstruction>>  [0..1] |Indicates whether the installation is located inside and/or outside of the construction.
+|===
 [[CeilingSurface-section]]
-==== *Class CeilingSurface*
+===== *Class CeilingSurface*
 
-include::../requirements/Construction/REQ_Construction_CeilingSurface.adoc[]
+[cols="1a"]
+|===
+|*CeilingSurface* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A CeilingSurface is a surface that represents the interior ceiling of a construction. An example is the ceiling of a room. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstructionSurface-section,AbstractConstructionSurface>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|===
 
-|====
-|*Class CeilingSurface* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A CeilingSurface is a surface that represents the interior ceiling of a construction. An example is the ceiling of a room. +
-Subclass Of: {nbsp}{nbsp} <<AbstractConstructionSurface-section,AbstractConstructionSurface>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[Door-section]]
-==== *Class Door*
+===== *Class Door*
 
-include::../requirements/Construction/REQ_Construction_Door.adoc[]
+[cols="1a"]
+|===
+|*Door* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A Door is a construction for closing an opening intended primarily for access or egress or both. [cf. ISO 6707-1] 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractFillingElement-section,AbstractFillingElement>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|===
 
-|====
-|*Class Door* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A Door is a construction for closing an opening intended primarily for access or egress or both. [cf. ISO 6707-1] +
-Subclass Of: {nbsp}{nbsp} <<AbstractFillingElement-section,AbstractFillingElement>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} boundary +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<DoorSurface-section,DoorSurface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|Relation Name: {nbsp}{nbsp} address +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<Address-section,Address>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the addresses that are assigned to the Door. +
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DoorClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the Door.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DoorFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the Door.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DoorUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the Door.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|{set:cellbgcolor:#FFFFFF} 
+|<<DoorSurface-section,DoorSurface>> 
 |
-|==== 
+|{set:cellbgcolor:#FFFFFF} 
+|<<Address-section,Address>> 
+|
+|===
 
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+ 
+|{set:cellbgcolor:#FFFFFF} class  |<<DoorClassValue-section,DoorClassValue>>  [0..1] |Indicates the specific type of the Door.
+ 
+|{set:cellbgcolor:#FFFFFF} function  |<<DoorFunctionValue-section,DoorFunctionValue>>  [0..*] |Specifies the intended purposes of the Door.
+ 
+|{set:cellbgcolor:#FFFFFF} usage  |<<DoorUsageValue-section,DoorUsageValue>>  [0..*] |Specifies the actual uses of the Door.
+|===
 [[DoorClassValue-section]]
-==== *Class DoorClassValue*
+===== *Class DoorClassValue*
 
-include::../requirements/Construction/REQ_Construction_DoorClassValue.adoc[]
+[cols="1a"]
+|===
+|*DoorClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! DoorClassValue is a code list used to further classify a Door. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|===
 
-|====
-|*Class DoorClassValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DoorClassValue is a code list used to further classify a Door. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[DoorFunctionValue-section]]
-==== *Class DoorFunctionValue*
+===== *Class DoorFunctionValue*
 
-include::../requirements/Construction/REQ_Construction_DoorFunctionValue.adoc[]
+[cols="1a"]
+|===
+|*DoorFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! DoorFunctionValue is a code list that enumerates the different purposes of a Door. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|===
 
-|====
-|*Class DoorFunctionValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DoorFunctionValue is a code list that enumerates the different purposes of a Door. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[DoorSurface-section]]
-==== *Class DoorSurface*
+===== *Class DoorSurface*
 
-include::../requirements/Construction/REQ_Construction_DoorSurface.adoc[]
+[cols="1a"]
+|===
+|*DoorSurface* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A DoorSurface is either a boundary surface of a Door feature or a surface that seals an opening filled by a door. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractFillingSurface-section,AbstractFillingSurface>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|===
 
-|====
-|*Class DoorSurface* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A DoorSurface is either a boundary surface of a Door feature or a surface that seals an opening filled by a door. +
-Subclass Of: {nbsp}{nbsp} <<AbstractFillingSurface-section,AbstractFillingSurface>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} address +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<Address-section,Address>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the addresses that are assigned to the DoorSurface. +
-|*Attributes*
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|{set:cellbgcolor:#FFFFFF} 
+|<<Address-section,Address>> 
 |
-|==== 
+|===
 
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[DoorUsageValue-section]]
-==== *Class DoorUsageValue*
+===== *Class DoorUsageValue*
 
-include::../requirements/Construction/REQ_Construction_DoorUsageValue.adoc[]
+[cols="1a"]
+|===
+|*DoorUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! DoorUsageValue is a code list that enumerates the different uses of a Door. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|===
 
-|====
-|*Class DoorUsageValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DoorUsageValue is a code list that enumerates the different uses of a Door. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[ElevationReferenceValue-section]]
-==== *Class ElevationReferenceValue*
+===== *Class ElevationReferenceValue*
 
-include::../requirements/Construction/REQ_Construction_ElevationReferenceValue.adoc[]
+[cols="1a"]
+|===
+|*ElevationReferenceValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ElevationReferenceValue is a code list that enumerates the different elevation reference levels used to measure construction heights. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|===
 
-|====
-|*Class ElevationReferenceValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} ElevationReferenceValue is a code list that enumerates the different elevation reference levels used to measure construction heights. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[EventValue-section]]
-==== *Class EventValue*
+===== *Class EventValue*
 
-include::../requirements/Construction/REQ_Construction_EventValue.adoc[]
+[cols="1a"]
+|===
+|*EventValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! EventValue is a code list that enumerates the different events of a construction. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|===
 
-|====
-|*Class EventValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} EventValue is a code list that enumerates the different events of a construction. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[FloorSurface-section]]
-==== *Class FloorSurface*
+===== *Class FloorSurface*
 
-include::../requirements/Construction/REQ_Construction_FloorSurface.adoc[]
+[cols="1a"]
+|===
+|*FloorSurface* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A FloorSurface is surface that represents the interior floor of a construction. An example is the floor of a room. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstructionSurface-section,AbstractConstructionSurface>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|===
 
-|====
-|*Class FloorSurface* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A FloorSurface is surface that represents the interior floor of a construction. An example is the floor of a room. +
-Subclass Of: {nbsp}{nbsp} <<AbstractConstructionSurface-section,AbstractConstructionSurface>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[GroundSurface-section]]
-==== *Class GroundSurface*
+===== *Class GroundSurface*
 
-include::../requirements/Construction/REQ_Construction_GroundSurface.adoc[]
+[cols="1a"]
+|===
+|*GroundSurface* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A GroundSurface is a surface that represents the ground plate of a construction. The polygon defining the ground plate is congruent with the footprint of the construction. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstructionSurface-section,AbstractConstructionSurface>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|===
 
-|====
-|*Class GroundSurface* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A GroundSurface is a surface that represents the ground plate of a construction. The polygon defining the ground plate is congruent with the footprint of the construction. +
-Subclass Of: {nbsp}{nbsp} <<AbstractConstructionSurface-section,AbstractConstructionSurface>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[InteriorWallSurface-section]]
-==== *Class InteriorWallSurface*
+===== *Class InteriorWallSurface*
 
-include::../requirements/Construction/REQ_Construction_InteriorWallSurface.adoc[]
+[cols="1a"]
+|===
+|*InteriorWallSurface* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! An InteriorWallSurface is a surface that is visible from inside a construction. An example is the wall of a room. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstructionSurface-section,AbstractConstructionSurface>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|===
 
-|====
-|*Class InteriorWallSurface* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} An InteriorWallSurface is a surface that is visible from inside a construction. An example is the wall of a room. +
-Subclass Of: {nbsp}{nbsp} <<AbstractConstructionSurface-section,AbstractConstructionSurface>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[OtherConstruction-section]]
-==== *Class OtherConstruction*
+===== *Class OtherConstruction*
 
-include::../requirements/Construction/REQ_Construction_OtherConstruction.adoc[]
+[cols="1a"]
+|===
+|*OtherConstruction* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! An OtherConstruction is a construction that is not covered by any of the other subclasses of AbstractConstruction. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstruction-section,AbstractConstruction>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
+!===
+|===
 
-|====
-|*Class OtherConstruction* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} An OtherConstruction is a construction that is not covered by any of the other subclasses of AbstractConstruction. +
-Subclass Of: {nbsp}{nbsp} <<AbstractConstruction-section,AbstractConstruction>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «TopLevelFeatureType»
-|*Relations* 
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} OtherConstructionClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the OtherConstruction.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} OtherConstructionFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the OtherConstruction.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} OtherConstructionUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the OtherConstruction.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
-|
-|==== 
-
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+ 
+|{set:cellbgcolor:#FFFFFF} class  |<<OtherConstructionClassValue-section,OtherConstructionClassValue>>  [0..1] |Indicates the specific type of the OtherConstruction.
+ 
+|{set:cellbgcolor:#FFFFFF} function  |<<OtherConstructionFunctionValue-section,OtherConstructionFunctionValue>>  [0..*] |Specifies the intended purposes of the OtherConstruction.
+ 
+|{set:cellbgcolor:#FFFFFF} usage  |<<OtherConstructionUsageValue-section,OtherConstructionUsageValue>>  [0..*] |Specifies the actual uses of the OtherConstruction.
+|===
 [[OtherConstructionClassValue-section]]
-==== *Class OtherConstructionClassValue*
+===== *Class OtherConstructionClassValue*
 
-include::../requirements/Construction/REQ_Construction_OtherConstructionClassValue.adoc[]
+[cols="1a"]
+|===
+|*OtherConstructionClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! OtherConstructionClassValue is a code list used to further classify an OtherConstruction. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|===
 
-|====
-|*Class OtherConstructionClassValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} OtherConstructionClassValue is a code list used to further classify an OtherConstruction. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[OtherConstructionFunctionValue-section]]
-==== *Class OtherConstructionFunctionValue*
+===== *Class OtherConstructionFunctionValue*
 
-include::../requirements/Construction/REQ_Construction_OtherConstructionFunctionValue.adoc[]
+[cols="1a"]
+|===
+|*OtherConstructionFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! OtherConstructionFunctionValue is a code list that enumerates the different purposes of an OtherConstruction. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|===
 
-|====
-|*Class OtherConstructionFunctionValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} OtherConstructionFunctionValue is a code list that enumerates the different purposes of an OtherConstruction. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[OtherConstructionUsageValue-section]]
-==== *Class OtherConstructionUsageValue*
+===== *Class OtherConstructionUsageValue*
 
-include::../requirements/Construction/REQ_Construction_OtherConstructionUsageValue.adoc[]
+[cols="1a"]
+|===
+|*OtherConstructionUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! OtherConstructionUsageValue is a code list that enumerates the different uses of an OtherConstruction. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|===
 
-|====
-|*Class OtherConstructionUsageValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} OtherConstructionUsageValue is a code list that enumerates the different uses of an OtherConstruction. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[OuterCeilingSurface-section]]
-==== *Class OuterCeilingSurface*
+===== *Class OuterCeilingSurface*
 
-include::../requirements/Construction/REQ_Construction_OuterCeilingSurface.adoc[]
+[cols="1a"]
+|===
+|*OuterCeilingSurface* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! An OuterCeilingSurface is a surface that belongs to the outer building shell with the orientation pointing downwards. An example is the ceiling of a loggia. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstructionSurface-section,AbstractConstructionSurface>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|===
 
-|====
-|*Class OuterCeilingSurface* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} An OuterCeilingSurface is a surface that belongs to the outer building shell with the orientation pointing downwards. An example is the ceiling of a loggia. +
-Subclass Of: {nbsp}{nbsp} <<AbstractConstructionSurface-section,AbstractConstructionSurface>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[OuterFloorSurface-section]]
-==== *Class OuterFloorSurface*
+===== *Class OuterFloorSurface*
 
-include::../requirements/Construction/REQ_Construction_OuterFloorSurface.adoc[]
+[cols="1a"]
+|===
+|*OuterFloorSurface* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! An OuterFloorSurface is a surface that belongs to the outer construction shell with the orientation pointing upwards. An example is the floor of a loggia. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstructionSurface-section,AbstractConstructionSurface>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|===
 
-|====
-|*Class OuterFloorSurface* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} An OuterFloorSurface is a surface that belongs to the outer construction shell with the orientation pointing upwards. An example is the floor of a loggia. +
-Subclass Of: {nbsp}{nbsp} <<AbstractConstructionSurface-section,AbstractConstructionSurface>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[RoofSurface-section]]
-==== *Class RoofSurface*
+===== *Class RoofSurface*
 
-include::../requirements/Construction/REQ_Construction_RoofSurface.adoc[]
+[cols="1a"]
+|===
+|*RoofSurface* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A RoofSurface is a surface that delimits major roof parts of a construction. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstructionSurface-section,AbstractConstructionSurface>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|===
 
-|====
-|*Class RoofSurface* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A RoofSurface is a surface that delimits major roof parts of a construction. +
-Subclass Of: {nbsp}{nbsp} <<AbstractConstructionSurface-section,AbstractConstructionSurface>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[WallSurface-section]]
-==== *Class WallSurface*
+===== *Class WallSurface*
 
-include::../requirements/Construction/REQ_Construction_WallSurface.adoc[]
+[cols="1a"]
+|===
+|*WallSurface* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A WallSurface is a surface that is part of the building facade visible from the outside. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstructionSurface-section,AbstractConstructionSurface>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|===
 
-|====
-|*Class WallSurface* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A WallSurface is a surface that is part of the building facade visible from the outside. +
-Subclass Of: {nbsp}{nbsp} <<AbstractConstructionSurface-section,AbstractConstructionSurface>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[Window-section]]
-==== *Class Window*
+===== *Class Window*
 
-include::../requirements/Construction/REQ_Construction_Window.adoc[]
+[cols="1a"]
+|===
+|*Window* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A Window is a construction for closing an opening in a wall or roof, primarily intended to admit light and/or provide ventilation. [cf. ISO 6707-1] 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractFillingElement-section,AbstractFillingElement>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|===
 
-|====
-|*Class Window* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A Window is a construction for closing an opening in a wall or roof, primarily intended to admit light and/or provide ventilation. [cf. ISO 6707-1] +
-Subclass Of: {nbsp}{nbsp} <<AbstractFillingElement-section,AbstractFillingElement>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} boundary +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<WindowSurface-section,WindowSurface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WindowClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the Window.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WindowFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the Window.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WindowUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the Window.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|{set:cellbgcolor:#FFFFFF} 
+|<<WindowSurface-section,WindowSurface>> 
 |
-|==== 
+|===
 
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+ 
+|{set:cellbgcolor:#FFFFFF} class  |<<WindowClassValue-section,WindowClassValue>>  [0..1] |Indicates the specific type of the Window.
+ 
+|{set:cellbgcolor:#FFFFFF} function  |<<WindowFunctionValue-section,WindowFunctionValue>>  [0..*] |Specifies the intended purposes of the Window.
+ 
+|{set:cellbgcolor:#FFFFFF} usage  |<<WindowUsageValue-section,WindowUsageValue>>  [0..*] |Specifies the actual uses of the Window.
+|===
 [[WindowClassValue-section]]
-==== *Class WindowClassValue*
+===== *Class WindowClassValue*
 
-include::../requirements/Construction/REQ_Construction_WindowClassValue.adoc[]
+[cols="1a"]
+|===
+|*WindowClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WindowClassValue is a code list used to further classify a Window. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|===
 
-|====
-|*Class WindowClassValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WindowClassValue is a code list used to further classify a Window. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[WindowFunctionValue-section]]
-==== *Class WindowFunctionValue*
+===== *Class WindowFunctionValue*
 
-include::../requirements/Construction/REQ_Construction_WindowFunctionValue.adoc[]
+[cols="1a"]
+|===
+|*WindowFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WindowFunctionValue is a code list that enumerates the different purposes of a Window. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|===
 
-|====
-|*Class WindowFunctionValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WindowFunctionValue is a code list that enumerates the different purposes of a Window. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[WindowSurface-section]]
-==== *Class WindowSurface*
+===== *Class WindowSurface*
 
-include::../requirements/Construction/REQ_Construction_WindowSurface.adoc[]
+[cols="1a"]
+|===
+|*WindowSurface* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A WindowSurface is either a boundary surface of a Window feature or a surface that seals an opening filled by a window. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractFillingSurface-section,AbstractFillingSurface>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|===
 
-|====
-|*Class WindowSurface* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A WindowSurface is either a boundary surface of a Window feature or a surface that seals an opening filled by a window. +
-Subclass Of: {nbsp}{nbsp} <<AbstractFillingSurface-section,AbstractFillingSurface>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[WindowUsageValue-section]]
-==== *Class WindowUsageValue*
+===== *Class WindowUsageValue*
 
-include::../requirements/Construction/REQ_Construction_WindowUsageValue.adoc[]
+[cols="1a"]
+|===
+|*WindowUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WindowUsageValue is a code list that enumerates the different uses of a Window. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|===
 
-|====
-|*Class WindowUsageValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WindowUsageValue is a code list that enumerates the different uses of a Window. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
+
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
+
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+|===
 [[ConditionOfConstructionValue-section]]
-==== *Class ConditionOfConstructionValue*
+===== *Class ConditionOfConstructionValue*
 
-include::../requirements/Construction/REQ_Construction_ConditionOfConstructionValue.adoc[]
+[cols="1a"]
+|===
+|*ConditionOfConstructionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ConditionOfConstructionValue enumerates different conditions of a construction. [cf. INSPIRE] 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  
+!===
+|===
 
-|====
-|*Class ConditionOfConstructionValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} ConditionOfConstructionValue enumerates different conditions of a construction. [cf. INSPIRE] +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} 
-|*Relations* 
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}declined +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the construction cannot be used under normal conditions, though its main elements (walls, roof) are still present. [cf. INSPIRE]  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}demolished +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the construction has been demolished. There are no more visible remains. [cf. INSPIRE]  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}functional +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the construction is functional. [cf. INSPIRE]  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}projected +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the construction is being designed. Construction works have not yet started. [cf. INSPIRE]  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}ruin +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the construction has been partly demolished and some main elements (roof, walls) have been destroyed. There are some visible remains of the construction. [cf. INSPIRE]  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}underConstruction +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the construction is under construction and not yet functional. This applies only to the initial construction works of the construction and not to maintenance work. [cf. INSPIRE]  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
-
-|
-|==== 
-
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+ 
+|{set:cellbgcolor:#FFFFFF} declined  |<<-section,>>  |Indicates that the construction cannot be used under normal conditions, though its main elements (walls, roof) are still present. [cf. INSPIRE]
+ 
+|{set:cellbgcolor:#FFFFFF} demolished  |<<-section,>>  |Indicates that the construction has been demolished. There are no more visible remains. [cf. INSPIRE]
+ 
+|{set:cellbgcolor:#FFFFFF} functional  |<<-section,>>  |Indicates that the construction is functional. [cf. INSPIRE]
+ 
+|{set:cellbgcolor:#FFFFFF} projected  |<<-section,>>  |Indicates that the construction is being designed. Construction works have not yet started. [cf. INSPIRE]
+ 
+|{set:cellbgcolor:#FFFFFF} ruin  |<<-section,>>  |Indicates that the construction has been partly demolished and some main elements (roof, walls) have been destroyed. There are some visible remains of the construction. [cf. INSPIRE]
+ 
+|{set:cellbgcolor:#FFFFFF} underConstruction  |<<-section,>>  |Indicates that the construction is under construction and not yet functional. This applies only to the initial construction works of the construction and not to maintenance work. [cf. INSPIRE]
+|===
 [[ConstructionEvent-section]]
-==== *Class ConstructionEvent*
+===== *Class ConstructionEvent*
 
-include::../requirements/Construction/REQ_Construction_ConstructionEvent.adoc[]
+[cols="1a"]
+|===
+|*ConstructionEvent* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A ConstructionEvent is a data type used to describe a specific event that is associated with a construction. Examples are the issuing of a building permit or the renovation of a building. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|===
 
-|====
-|*Class ConstructionEvent* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A ConstructionEvent is a data type used to describe a specific event that is associated with a construction. Examples are the issuing of a building permit or the renovation of a building. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «DataType»
-|*Relations* 
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}dateOfEvent +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Date +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the date at which the event took or will take place.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}description +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CharacterString +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Provides additional information on the event.   +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}event +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} EventValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific event type.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
-|
-|==== 
-
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+ 
+|{set:cellbgcolor:#FFFFFF} dateOfEvent  |<<Date-section,Date>>  |Specifies the date at which the event took or will take place.
+ 
+|{set:cellbgcolor:#FFFFFF} description  |<<CharacterString-section,CharacterString>>  [0..1] |Provides additional information on the event. 
+ 
+|{set:cellbgcolor:#FFFFFF} event  |<<EventValue-section,EventValue>>  |Indicates the specific event type.
+|===
 [[Elevation-section]]
-==== *Class Elevation*
+===== *Class Elevation*
 
-include::../requirements/Construction/REQ_Construction_Elevation.adoc[]
+[cols="1a"]
+|===
+|*Elevation* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! Elevation is a data type that includes the elevation value itself and information on how this elevation was measured. [cf. INSPIRE] 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|===
 
-|====
-|*Class Elevation* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Elevation is a data type that includes the elevation value itself and information on how this elevation was measured. [cf. INSPIRE] +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «DataType»
-|*Relations* 
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}elevationReference +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} ElevationReferenceValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the level from which the elevation was measured. [cf. INSPIRE]  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}elevationValue +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} DirectPosition +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the value of the elevation. [cf. INSPIRE]  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
 
-|
-|==== 
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+ 
+|{set:cellbgcolor:#FFFFFF} elevationReference  |<<ElevationReferenceValue-section,ElevationReferenceValue>>  |Specifies the level from which the elevation was measured. [cf. INSPIRE]
+ 
+|{set:cellbgcolor:#FFFFFF} elevationValue  |<<DirectPosition-section,DirectPosition>>  |Specifies the value of the elevation. [cf. INSPIRE]
+|===
 [[Height-section]]
-==== *Class Height*
+===== *Class Height*
 
-include::../requirements/Construction/REQ_Construction_Height.adoc[]
+[cols="1a"]
+|===
+|*Height* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! Height represents a vertical distance (measured or estimated) between a low reference and a high reference. [cf. INSPIRE] 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|===
 
-|====
-|*Class Height* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Height represents a vertical distance (measured or estimated) between a low reference and a high reference. [cf. INSPIRE] +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «DataType»
-|*Relations* 
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}highReference +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} ElevationReferenceValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the high point used to calculate the value of the height. [cf. INSPIRE]  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}lowReference +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} ElevationReferenceValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the low point used to calculate the value of the height. [cf. INSPIRE]  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}status +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} HeightStatusValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the way the height has been captured. [cf. INSPIRE]  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}value +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Length +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the value of the height above or below ground. [cf. INSPIRE]  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|
-|==== 
-
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+ 
+|{set:cellbgcolor:#FFFFFF} highReference  |<<ElevationReferenceValue-section,ElevationReferenceValue>>  |Indicates the high point used to calculate the value of the height. [cf. INSPIRE]
+ 
+|{set:cellbgcolor:#FFFFFF} lowReference  |<<ElevationReferenceValue-section,ElevationReferenceValue>>  |Indicates the low point used to calculate the value of the height. [cf. INSPIRE]
+ 
+|{set:cellbgcolor:#FFFFFF} status  |<<HeightStatusValue-section,HeightStatusValue>>  |Indicates the way the height has been captured. [cf. INSPIRE]
+ 
+|{set:cellbgcolor:#FFFFFF} value  |<<Length-section,Length>>  |Specifies the value of the height above or below ground. [cf. INSPIRE]
+|===
 [[HeightStatusValue-section]]
-==== *Class HeightStatusValue*
+===== *Class HeightStatusValue*
 
-include::../requirements/Construction/REQ_Construction_HeightStatusValue.adoc[]
+[cols="1a"]
+|===
+|*HeightStatusValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! HeightStatusValue enumerates the different methods used to capture a height. [cf. INSPIRE] 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  
+!===
+|===
 
-|====
-|*Class HeightStatusValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} HeightStatusValue enumerates the different methods used to capture a height. [cf. INSPIRE] +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} 
-|*Relations* 
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}estimated +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the height has been estimated and not measured. [cf. INSPIRE]  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}measured +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the height has been (directly or indirectly) measured. [cf. INSPIRE]  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
 
-|
-|==== 
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+ 
+|{set:cellbgcolor:#FFFFFF} estimated  |<<-section,>>  |Indicates that the height has been estimated and not measured. [cf. INSPIRE]
+ 
+|{set:cellbgcolor:#FFFFFF} measured  |<<-section,>>  |Indicates that the height has been (directly or indirectly) measured. [cf. INSPIRE]
+|===
 [[RelationToConstruction-section]]
-==== *Class RelationToConstruction*
+===== *Class RelationToConstruction*
 
-include::../requirements/Construction/REQ_Construction_RelationToConstruction.adoc[]
+[cols="1a"]
+|===
+|*RelationToConstruction* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! RelationToConstruction is an enumeration used to describe whether an installation is positioned inside and/or outside of a construction. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  
+!===
+|===
 
-|====
-|*Class RelationToConstruction* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RelationToConstruction is an enumeration used to describe whether an installation is positioned inside and/or outside of a construction. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} 
-|*Relations* 
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}inside +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the installation is positioned inside of the construction.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+*Relations* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}outside +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the installation is positioned outside of the construction.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+[cols="15,25,60"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
+|===
 
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}bothInsideAndOutside +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the installation is positioned inside as well as outside of the construction.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
+*Attributes* +
+Unless otherwise specified, all attributes have the stereotype «Property».
 
-|
-|==== 
+[cols="15,30,55"]
+|===
+|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+ 
+|{set:cellbgcolor:#FFFFFF} inside  |<<-section,>>  |Indicates that the installation is positioned inside of the construction.
+ 
+|{set:cellbgcolor:#FFFFFF} outside  |<<-section,>>  |Indicates that the installation is positioned outside of the construction.
+ 
+|{set:cellbgcolor:#FFFFFF} bothInsideAndOutside  |<<-section,>>  |Indicates that the installation is positioned inside as well as outside of the construction.
+|===
+
+==== *Code Lists*
+
+[cols="1,4"]  
+|===
+^|*Code List* ^|*Definition*
+| |
+| |
+|===
   
+
 
 
