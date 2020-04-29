@@ -21,6 +21,8 @@ image::../figures/Figure_1.png[]
 
 All associations between model elements in CityGML are uni-directional. Thus, associations in CityGML are navigable in only one direction. The direction of navigation is depicted by an arrowhead. In general, the context an element takes within the association is indicated by its role. The role is displayed near the target of the association. If the graphical representation is ambiguous though, the position of the role has to be drawn to the element the association points to.
 
+NOTE: Need formal definitions for the sterotypes
+
 The following stereotypes are used:
 
 * \<<FeatureType>> 
@@ -33,11 +35,22 @@ The following stereotypes are used:
 * \<<CodeList>>enumerates the valid attribute values. In contrast to Enumeration, the list of values is open and, thus, not given inline the CityGML UML Model. The allowed values can be provided within an external code list.
 * \<<Union>>is a list of attributes. The semantics are that only one of the attributes can be present at any time.
 
-In order to enhance the readability of the CityGML UML diagrams, classes are depicted in different colors if they belong to different UML packages (see Fig. 8 for an overview of UML packages). The following coloring scheme is applied: 
+NOTE: Update to the current convention
 
-* Classes painted in yellow belong to the UML package which is subject of discussion in that clause of the specification in which the UML diagram is given. For example, in the context of chapter 10.1 which introduces the _CityGML Core_ module, the yellow color is used to denote classes which are de-fined in the _CityGML Core_ UML package. Likewise, the yellow classes shown in UML diagrams in chapter 10.3 are associated with the _Building_ module which is subject of discussion in that chapter. 
-* Classes painted in blue belong to a CityGML UML package different to that associated with the yellow color. In order to explicitly denote the UML package of such classes, their class names carry a namespace prefix which is uniquely associated with a CityGML module throughout this specification (cf. section 4.3 for a list of namespaces and prefixes). For example, in the context of the _Building_ module, classes from the _CityGML Core_ module are painted in blue and their class names are preceded by the prefix core. 
-* Classes painted in green are defined in GML3 and their class names are preceded by the prefix __gml__.
+In order to enhance the readability of the CityGML UML diagrams, classes are depicted in different colors if they belong to different UML packages. The following coloring scheme is applied: 
+
+Feature Types: Yellow
+TopLevelFeatureType: Orange
+Type :Green
+ObjectType: Orange
+DataType: Blue
+Enumration: Purple
+Basictype: Brown
+Codelist: Pink
+Union: Blue
+
+* Classes painted in yellow belong to the UML package which is subject of discussion in that clause of the specification in which the UML diagram is given. For example, in the context of chapter 10.1 which introduces the _CityGML Core_ module, the yellow color is used to denote classes which are defined in the _CityGML Core_ UML package. Likewise, the yellow classes shown in UML diagrams in chapter 10.3 are associated with the _Building_ module which is subject of discussion in that chapter. 
+* Classes painted in blue belong to a CityGML UML package different to that associated with the yellow color. In order to explicitly denote the UML package of such classes, their class names carry a naoughout this specification mespace prefix which is uniquely associated with a CityGML module throughout this specification . For example, in the context of the _Building_ module, classes from the _CityGML Core_ module are painted in blue and their class names are preceded by the prefix core. 
 
 The following example UML diagram demonstrates the UML notation and coloring scheme used throughout this specification. In this example, the yellow classes are associated with the _CityGML Building_ module, the blue classes are from the _CityGML Core_ module, and the green class depicts a geometry element defined by GML3.
 
@@ -45,98 +58,10 @@ The following example UML diagram demonstrates the UML notation and coloring sch
 .Example UML diagram demonstrating the UML notation and coloring scheme used throughout the CityGML specification.
 image::../figures/Figure_2.png[]
 
-=== XML namespaces and namespace prefixes
-
-The CityGML data model is thematically decomposed into a core module and thematic extension modules. All modules including the core are specified by their own XML schema file, each defining a globally unique XML namespace. The extension modules are based on the core module and, thus, contain (by reference) the CityGML core schema.
-
-Within this document the module namespaces are associated with recommended prefixes. These prefixes are consistently used within the normative parts of this specification, for all UML diagrams and example CityGML instance documents. The CityGML core and extension modules along with their XML namespace identifiers and recommended namespace prefixes are listed in Tab. 1.
-
-[#xml_namespaces,reftext='{table-caption} {counter:table-num}']
-.List of CityGML modules, their associated XML namespace identifiers, and example namespace prefixes.
-[width="90%",cols="3,4,^2",options="header"]
-|===
-^|CityGML module ^|Namespace identifier ^|Namespace prefix
-|CityGML Core 
-|http://www.opengis.net/citygml/2.0
-|core
-|Appearance
-|http://www.opengis.net/citygml/appearance/2.0
-|app
-|Bridge
-|http://www.opengis.net/citygml/bridge/2.0
-|brid
-|Building
-|http://www.opengis.net/citygml/building/2.0
-|bldg
-|CityFurniture
-|http://www.opengis.net/citygml/cityfurniture/2.0
-|frn
-|CityObjectGroup
-|http://www.opengis.net/citygml/cityobjectgroup/2.0
-|grp
-|Generics
-|http://www.opengis.net/citygml/generics/2.0
-|gen
-|LandUse
-|http://www.opengis.net/citygml/landuse/2.0
-|luse
-|Relief
-|http://www.opengis.net/citygml/relief/2.0
-|dem
-|Transportation
-|http://www.opengis.net/citygml/transportation/2.0
-|tran
-|Tunnel
-|http://www.opengis.net/citygml/tunnel/2.0
-|tun
-|Vegetation
-|http://www.opengis.net/citygml/vegetation/2.0
-|veg
-|WaterBody
-|http://www.opengis.net/citygml/waterbody/2.0
-|wtr
-|TexturedSurface [deprecated]
-|http://www.opengis.net/citygml/texturedsurface/2.0
-|tex
-|===
-
-Further XML Schema definitions relevant to this standard are shown in Tab. 2 along with the corresponding XML namespace identifiers and namespace prefixes consistently used within this document.
-
-[#xml_schema_definitions,reftext='{table-caption} {counter:table-num}']
-.List of XML Schema definitions, their associated XML namespace identifiers, and example namespace prefixes used within this document.
-[width="90%",cols="4,4,^2",options="header"]
-|===
-^|XML Schema Definition ^|Namespace identifier ^|Namespace prefix
-|Geography Markup Language version 3.1.1 (from OGC)
-|http://www.opengis.net/gml
-|gml
-|Extensible Address Language version 2.0 (from OASIS)
-|urn:oasis:names:tc:ciq:xsdschema:xAL:2.0
-|xAL
-|Schematron Assertion Lan-guage version 1.5 
-|http://www.ascc.net/xml/schematron
-|sch
-|===
-
-
-NOTE: Explanatory text edit 05 for 01.04.2020 release ends here
-
-=== *Requirements*
-
-When referred to in a Requirement or Requirements Class, the boxes contained in UML figures may all be called “Classes” even if they are data types, enumerations, code lists, unions etc.  Because this is a Conceptual Model, they all should be interpreted to be concepts (see <<conceptual-modeling-description,Conceptual Modeling>>)
-
-When a Requirement states that “The Requirement Class Classes shown in blue in Figure [nn] shall be provided for by the encoding in a manner consistent with the encoding.”, unless specified otherwise, this means that the encoding must support:
-
-* all classes shown as blue boxes (this Requirements Class) in the figure
-* all attributes, attribute cardinalities, and attribute data types of these classes (usually shown in subsequent figures)
-* all associations, navigation, roles, and role cardinalities connecting to the blue classes
-* all classes shown as beige boxes (another Requirements Class) in the figure connected to the blue box classes by association or used as attribute data types
-* all classes shown as pink boxes (another Standard) in the figure connected to the blue box classes by association or used as attribute data types
-
 [[conceptual-modeling-description]]
 === Conceptual Modeling (Informative)
 
-ISO 19101 [9] defines universe of discourse to be a view of the real or hypothetical world that includes everything of interest.  That standard then defines conceptual model to be a model that defines concepts of a universe of discourse.
+<<iso19101,ISO 19101>> defines universe of discourse to be a view of the real or hypothetical world that includes everything of interest.  That standard then defines conceptual model to be a model that defines concepts of a universe of discourse.
 
 The scope of this CityGML Conceptual Model Standard establishes the limits of the universe of discourse for this Standard. The next task is to discover and standardize the concepts within this scope. CityGML will potentially support numerous diverse application software packages covering multiple disciplines and facility life cycle phases. Each conceivably can have its own universe of discourse and their own set of concepts.
 

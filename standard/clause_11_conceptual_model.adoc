@@ -4,16 +4,11 @@
 === Structural Overview of Requirements Classes
 
 The Requirements Classes for this standard are structured as
-UML Packages in <<package-diagram>>. Each Requirements Class is specified in detail in their respective subsections. These subsections include a UML diagram, data dictionary, and the applicable requirements.
+UML Packages as illustrated in <<package-diagram>>. Each Requirements Class is specified in detail in their respective subsections. These subsections include a UML diagram, data dictionary, and the applicable requirements.
 
 [[package-diagram]]
 .CityGML UML Packages
 image::figures/CityGMLPackageDiagram.png[]
-
-[[general-section]]
-=== General Requirements
-
-The following requirements are not included in a single Requirements Class. Rather, they are common requirements which appply to two or more Requirements Classes. Maintaining them separately assures that they are applied uniformally across all Requirements Classes.   
 
 [[core_section]]
 include::clause_11_7_core.adoc[]
