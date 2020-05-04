@@ -1,5 +1,5 @@
-[[Versioning-package]]
-==== *Package*
+[[Versioning-package-dd]]
+=== *Versioning Data Dictionary*
 
 [cols="1a"]
 |===
@@ -14,17 +14,12 @@
 
 |===
 |Editing instructions:
-| 1) For all classes
-| {nbsp}{nbsp}{nbsp}a) If a stereotype value is "<<←section,>>", change it to "none"
-| {nbsp}{nbsp}{nbsp}b) If a subclass value is not provided, set it to "none"
-| {nbsp}{nbsp}{nbsp}c) If a multiplicity value is not provided, set it to "1" 
-| {nbsp}{nbsp}{nbsp}d) If the Role Name of a relation is not provided, delete the Role Name row
-| {nbsp}{nbsp}{nbsp}e) If the stereotype of an attribute is not provided, set it to <<Property>>
-| 2) For all classes with the "CodeList" stereotype 
-| {nbsp}{nbsp}{nbsp}a) Copy the name and description into the table in the Code List section
-| {nbsp}{nbsp}{nbsp}b) Delete the class
-| 3) If there are no code lists, then delete the Code List section
-| 4) Delete these instructions when done
+| 1) Delete all tables for CodeLists 
+| 2) If a subclass value is "<<←section,>>", change it to "none"
+| 3) If a multiplicity value is not provided, set it to "1" 
+| 4) If there are no entries in the role subtable, delete that subtable
+| 5) If there are no entries in the attrubute subtable, delete that subtable
+| 6) Delete these instructions when done
 |===
 
 ==== *Classes*
@@ -41,28 +36,23 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractVersion-section,AbstractVersion>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|{set:cellbgcolor:#FFFFFF} 
-|<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> 
-|
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} versionMember 
+!<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> 
+ [*]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} tag  |<<CharacterString-section,CharacterString>>  [0..*] |Allows for adding keywords to the city model version.
-|===
+!{set:cellbgcolor:#FFFFFF} tag  !<<CharacterString-section,CharacterString>>  [0..*] !Allows for adding keywords to the city model version.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[VersionTransition-section]]
 ===== *Class VersionTransition*
 
@@ -75,38 +65,35 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractVersionTransition-section,AbstractVersionTransition>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|{set:cellbgcolor:#FFFFFF} 
-|<<Transaction-section,Transaction>> 
-|
-|{set:cellbgcolor:#FFFFFF} 
-|<<Version-section,Version>> 
-|
-|{set:cellbgcolor:#FFFFFF} 
-|<<Version-section,Version>> 
-|
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} transaction 
+!<<Transaction-section,Transaction>> 
+ [*]
+!
+!{set:cellbgcolor:#FFFFFF} from 
+!<<Version-section,Version>> 
+ [0..1]
+!
+!{set:cellbgcolor:#FFFFFF} to 
+!<<Version-section,Version>> 
+ [0..1]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} clonePredecessor  |<<Boolean-section,Boolean>>  |Indicates whether the set of city object instances belonging to the successor version of the city model is either explicitly enumerated within the successor version object (attribute clonePredecessor=false), or has to be derived from the modifications of the city model provided as a list of transactions on the city object versions contained in the predecessor version (attribute clonePredecessor=true).
+!{set:cellbgcolor:#FFFFFF} clonePredecessor  !<<Boolean-section,Boolean>>  !Indicates whether the set of city object instances belonging to the successor version of the city model is either explicitly enumerated within the successor version object (attribute clonePredecessor=false), or has to be derived from the modifications of the city model provided as a list of transactions on the city object versions contained in the predecessor version (attribute clonePredecessor=true).
  
-|{set:cellbgcolor:#FFFFFF} reason  |<<CharacterString-section,CharacterString>>  [0..1] |Specifies why the VersionTransition has been carried out.
+!{set:cellbgcolor:#FFFFFF} reason  !<<CharacterString-section,CharacterString>>  [0..1] !Specifies why the VersionTransition has been carried out.
  
-|{set:cellbgcolor:#FFFFFF} type  |<<TransitionTypeValue-section,TransitionTypeValue>>  [0..1] |Indicates the specific type of the VersionTransition.
-|===
+!{set:cellbgcolor:#FFFFFF} type  !<<TransitionTypeValue-section,TransitionTypeValue>>  [0..1] !Indicates the specific type of the VersionTransition.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[Transaction-section]]
 ===== *Class Transaction*
 
@@ -119,31 +106,27 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|{set:cellbgcolor:#FFFFFF} 
-|<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> 
-|
-|{set:cellbgcolor:#FFFFFF} 
-|<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> 
-|
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} newFeature 
+!<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> 
+ [0..1]
+!
+!{set:cellbgcolor:#FFFFFF} oldFeature 
+!<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> 
+ [0..1]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} type  |<<TransactionTypeValue-section,TransactionTypeValue>>  |Indicates the specific type of the Transaction.
-|===
+!{set:cellbgcolor:#FFFFFF} type  !<<TransactionTypeValue-section,TransactionTypeValue>>  !Indicates the specific type of the Transaction.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[TransactionTypeValue-section]]
 ===== *Class TransactionTypeValue*
 
@@ -156,29 +139,23 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} insert  |<<-section,>>  |Indicates that the feature referenced from the Transaction via the "newFeature" association has been newly created; the association "oldFeature" is empty in this case.
+!{set:cellbgcolor:#FFFFFF} insert  !<<-section,>>  !Indicates that the feature referenced from the Transaction via the "newFeature" association has been newly created; the association "oldFeature" is empty in this case.
  
-|{set:cellbgcolor:#FFFFFF} delete  |<<-section,>>  |Indicates that the feature referenced from the Transaction via the "oldFeature" association ceases to exist; the association "newFeature" is empty in this case.
+!{set:cellbgcolor:#FFFFFF} delete  !<<-section,>>  !Indicates that the feature referenced from the Transaction via the "oldFeature" association ceases to exist; the association "newFeature" is empty in this case.
  
-|{set:cellbgcolor:#FFFFFF} replace  |<<-section,>>  |Indicates that the feature referenced from the Transaction via the "oldFeature" association has been replaced by the feature referenced via the "newFeature" association.
-|===
+!{set:cellbgcolor:#FFFFFF} replace  !<<-section,>>  !Indicates that the feature referenced from the Transaction via the "oldFeature" association has been replaced by the feature referenced via the "newFeature" association.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[TransitionTypeValue-section]]
 ===== *Class TransitionTypeValue*
 
@@ -191,43 +168,26 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} planned  |<<-section,>>  |Indicates that the successor version of the city model represents a planning state for a possible future of the city.
+!{set:cellbgcolor:#FFFFFF} planned  !<<-section,>>  !Indicates that the successor version of the city model represents a planning state for a possible future of the city.
  
-|{set:cellbgcolor:#FFFFFF} realized  |<<-section,>>  |Indicates that the predecessor version is the chosen one from a number of possible planning versions.
+!{set:cellbgcolor:#FFFFFF} realized  !<<-section,>>  !Indicates that the predecessor version is the chosen one from a number of possible planning versions.
  
-|{set:cellbgcolor:#FFFFFF} historicalSuccession  |<<-section,>>  |Indicates that the successor version reflects updates on the city model over time (historical timeline). It shall only be used for at most one version transition outgoing from a city model version.
+!{set:cellbgcolor:#FFFFFF} historicalSuccession  !<<-section,>>  !Indicates that the successor version reflects updates on the city model over time (historical timeline). It shall only be used for at most one version transition outgoing from a city model version.
  
-|{set:cellbgcolor:#FFFFFF} fork  |<<-section,>>  |Indicates other reasons to create alternative city model versions, for example, when different parties are updating parts of the city model or to reflect the results of different simulation runs.
+!{set:cellbgcolor:#FFFFFF} fork  !<<-section,>>  !Indicates other reasons to create alternative city model versions, for example, when different parties are updating parts of the city model or to reflect the results of different simulation runs.
  
-|{set:cellbgcolor:#FFFFFF} merge  |<<-section,>>  |Indicates other reasons to converge multiple versions back into a common city model version.
-|===
-
-==== *Code Lists*
-
-[cols="1,4"]  
-|===
-^|*Code List* ^|*Definition*
-| |
-| |
-|===
+!{set:cellbgcolor:#FFFFFF} merge  !<<-section,>>  !Indicates other reasons to converge multiple versions back into a common city model version.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
   
-
 
 

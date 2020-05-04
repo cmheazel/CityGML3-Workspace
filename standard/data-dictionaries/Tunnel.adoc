@@ -1,5 +1,5 @@
-[[Tunnel-package]]
-==== *Package*
+[[Tunnel-package-dd]]
+=== *Tunnel Data Dictionary*
 
 [cols="1a"]
 |===
@@ -14,17 +14,12 @@
 
 |===
 |Editing instructions:
-| 1) For all classes
-| {nbsp}{nbsp}{nbsp}a) If a stereotype value is "<<←section,>>", change it to "none"
-| {nbsp}{nbsp}{nbsp}b) If a subclass value is not provided, set it to "none"
-| {nbsp}{nbsp}{nbsp}c) If a multiplicity value is not provided, set it to "1" 
-| {nbsp}{nbsp}{nbsp}d) If the Role Name of a relation is not provided, delete the Role Name row
-| {nbsp}{nbsp}{nbsp}e) If the stereotype of an attribute is not provided, set it to <<Property>>
-| 2) For all classes with the "CodeList" stereotype 
-| {nbsp}{nbsp}{nbsp}a) Copy the name and description into the table in the Code List section
-| {nbsp}{nbsp}{nbsp}b) Delete the class
-| 3) If there are no code lists, then delete the Code List section
-| 4) Delete these instructions when done
+| 1) Delete all tables for CodeLists 
+| 2) If a subclass value is "<<←section,>>", change it to "none"
+| 3) If a multiplicity value is not provided, set it to "1" 
+| 4) If there are no entries in the role subtable, delete that subtable
+| 5) If there are no entries in the attrubute subtable, delete that subtable
+| 6) Delete these instructions when done
 |===
 
 ==== *Classes*
@@ -41,41 +36,39 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstruction-section,AbstractConstruction>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|{set:cellbgcolor:#FFFFFF} 
-|<<TunnelFurniture-section,TunnelFurniture>> 
-|
-|{set:cellbgcolor:#FFFFFF} 
-|<<TunnelInstallation-section,TunnelInstallation>> 
-|
-|{set:cellbgcolor:#FFFFFF} 
-|<<TunnelConstructiveElement-section,TunnelConstructiveElement>> 
-|
-|{set:cellbgcolor:#FFFFFF} 
-|<<HollowSpace-section,HollowSpace>> 
-|
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} tunnelFurniture 
+!<<TunnelFurniture-section,TunnelFurniture>> 
+ [*]
+!
+!{set:cellbgcolor:#FFFFFF} tunnelInstallation 
+!<<TunnelInstallation-section,TunnelInstallation>> 
+ [*]
+!
+!{set:cellbgcolor:#FFFFFF} tunnelConstructiveElement 
+!<<TunnelConstructiveElement-section,TunnelConstructiveElement>> 
+ [*]
+!
+!{set:cellbgcolor:#FFFFFF} hollowSpace 
+!<<HollowSpace-section,HollowSpace>> 
+ [*]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} class  |<<TunnelClassValue-section,TunnelClassValue>>  [0..1] |Indicates the specific type of the Tunnel or TunnelPart.
+!{set:cellbgcolor:#FFFFFF} class  !<<TunnelClassValue-section,TunnelClassValue>>  [0..1] !Indicates the specific type of the Tunnel or TunnelPart.
  
-|{set:cellbgcolor:#FFFFFF} function  |<<TunnelFunctionValue-section,TunnelFunctionValue>>  [0..*] |Specifies the intended purposes of the Tunnel or TunnelPart.
+!{set:cellbgcolor:#FFFFFF} function  !<<TunnelFunctionValue-section,TunnelFunctionValue>>  [0..*] !Specifies the intended purposes of the Tunnel or TunnelPart.
  
-|{set:cellbgcolor:#FFFFFF} usage  |<<TunnelUsageValue-section,TunnelUsageValue>>  [0..*] |Specifies the actual uses of the Tunnel or TunnelPart.
-|===
+!{set:cellbgcolor:#FFFFFF} usage  !<<TunnelUsageValue-section,TunnelUsageValue>>  [0..*] !Specifies the actual uses of the Tunnel or TunnelPart.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[HollowSpace-section]]
 ===== *Class HollowSpace*
 
@@ -88,38 +81,35 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|{set:cellbgcolor:#FFFFFF} 
-|<<AbstractThematicSurface-section,AbstractThematicSurface>> 
-|
-|{set:cellbgcolor:#FFFFFF} 
-|<<TunnelFurniture-section,TunnelFurniture>> 
-|
-|{set:cellbgcolor:#FFFFFF} 
-|<<TunnelInstallation-section,TunnelInstallation>> 
-|
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} boundary 
+!<<AbstractThematicSurface-section,AbstractThematicSurface>> 
+ [*]
+!
+!{set:cellbgcolor:#FFFFFF} tunnelFurniture 
+!<<TunnelFurniture-section,TunnelFurniture>> 
+ [*]
+!
+!{set:cellbgcolor:#FFFFFF} tunnelInstallation 
+!<<TunnelInstallation-section,TunnelInstallation>> 
+ [*]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} class  |<<HollowSpaceClassValue-section,HollowSpaceClassValue>>  [0..1] |Indicates the specific type of the HollowSpace.
+!{set:cellbgcolor:#FFFFFF} class  !<<HollowSpaceClassValue-section,HollowSpaceClassValue>>  [0..1] !Indicates the specific type of the HollowSpace.
  
-|{set:cellbgcolor:#FFFFFF} function  |<<HollowSpaceFunctionValue-section,HollowSpaceFunctionValue>>  [0..*] |Specifies the intended purposes of the HollowSpace.
+!{set:cellbgcolor:#FFFFFF} function  !<<HollowSpaceFunctionValue-section,HollowSpaceFunctionValue>>  [0..*] !Specifies the intended purposes of the HollowSpace.
  
-|{set:cellbgcolor:#FFFFFF} usage  |<<HollowSpaceUsageValue-section,HollowSpaceUsageValue>>  [0..*] |Specifies the actual uses of the HollowSpace.
-|===
+!{set:cellbgcolor:#FFFFFF} usage  !<<HollowSpaceUsageValue-section,HollowSpaceUsageValue>>  [0..*] !Specifies the actual uses of the HollowSpace.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[HollowSpaceClassValue-section]]
 ===== *Class HollowSpaceClassValue*
 
@@ -132,23 +122,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[HollowSpaceFunctionValue-section]]
 ===== *Class HollowSpaceFunctionValue*
 
@@ -161,23 +145,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[HollowSpaceUsageValue-section]]
 ===== *Class HollowSpaceUsageValue*
 
@@ -190,23 +168,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[Tunnel-section]]
 ===== *Class Tunnel*
 
@@ -219,26 +191,21 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractTunnel-section,AbstractTunnel>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} tunnelPart 
+!<<TunnelPart-section,TunnelPart>> 
+ [*]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|{set:cellbgcolor:#FFFFFF} 
-|<<TunnelPart-section,TunnelPart>> 
-|
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[TunnelClassValue-section]]
 ===== *Class TunnelClassValue*
 
@@ -251,23 +218,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[TunnelConstructiveElement-section]]
 ===== *Class TunnelConstructiveElement*
 
@@ -280,29 +241,23 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstructiveElement-section,AbstractConstructiveElement>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} class  |<<TunnelConstructiveElementClassValue-section,TunnelConstructiveElementClassValue>>  [0..1] |Indicates the specific type of the TunnelConstructiveElement.
+!{set:cellbgcolor:#FFFFFF} class  !<<TunnelConstructiveElementClassValue-section,TunnelConstructiveElementClassValue>>  [0..1] !Indicates the specific type of the TunnelConstructiveElement.
  
-|{set:cellbgcolor:#FFFFFF} function  |<<TunnelConstructiveElementFunctionValue-section,TunnelConstructiveElementFunctionValue>>  [0..*] |Specifies the intended purposes of the TunnelConstructiveElement.
+!{set:cellbgcolor:#FFFFFF} function  !<<TunnelConstructiveElementFunctionValue-section,TunnelConstructiveElementFunctionValue>>  [0..*] !Specifies the intended purposes of the TunnelConstructiveElement.
  
-|{set:cellbgcolor:#FFFFFF} usage  |<<TunnelConstructiveElementUsageValue-section,TunnelConstructiveElementUsageValue>>  [0..*] |Specifies the actual uses of the TunnelConstructiveElement.
-|===
+!{set:cellbgcolor:#FFFFFF} usage  !<<TunnelConstructiveElementUsageValue-section,TunnelConstructiveElementUsageValue>>  [0..*] !Specifies the actual uses of the TunnelConstructiveElement.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[TunnelConstructiveElementClassValue-section]]
 ===== *Class TunnelConstructiveElementClassValue*
 
@@ -315,23 +270,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[TunnelConstructiveElementFunctionValue-section]]
 ===== *Class TunnelConstructiveElementFunctionValue*
 
@@ -344,23 +293,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[TunnelConstructiveElementUsageValue-section]]
 ===== *Class TunnelConstructiveElementUsageValue*
 
@@ -373,23 +316,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[TunnelFunctionValue-section]]
 ===== *Class TunnelFunctionValue*
 
@@ -402,23 +339,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[TunnelFurniture-section]]
 ===== *Class TunnelFurniture*
 
@@ -431,29 +362,23 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractFurniture-section,AbstractFurniture>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} class  |<<TunnelFurnitureClassValue-section,TunnelFurnitureClassValue>>  [0..1] |Indicates the specific type of the TunnelFurniture.
+!{set:cellbgcolor:#FFFFFF} class  !<<TunnelFurnitureClassValue-section,TunnelFurnitureClassValue>>  [0..1] !Indicates the specific type of the TunnelFurniture.
  
-|{set:cellbgcolor:#FFFFFF} function  |<<TunnelFurnitureFunctionValue-section,TunnelFurnitureFunctionValue>>  [0..*] |Specifies the intended purposes of the TunnelFurniture.
+!{set:cellbgcolor:#FFFFFF} function  !<<TunnelFurnitureFunctionValue-section,TunnelFurnitureFunctionValue>>  [0..*] !Specifies the intended purposes of the TunnelFurniture.
  
-|{set:cellbgcolor:#FFFFFF} usage  |<<TunnelFurnitureUsageValue-section,TunnelFurnitureUsageValue>>  [0..*] |Specifies the actual uses of the TunnelFurniture.
-|===
+!{set:cellbgcolor:#FFFFFF} usage  !<<TunnelFurnitureUsageValue-section,TunnelFurnitureUsageValue>>  [0..*] !Specifies the actual uses of the TunnelFurniture.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[TunnelFurnitureClassValue-section]]
 ===== *Class TunnelFurnitureClassValue*
 
@@ -466,23 +391,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[TunnelFurnitureFunctionValue-section]]
 ===== *Class TunnelFurnitureFunctionValue*
 
@@ -495,23 +414,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[TunnelFurnitureUsageValue-section]]
 ===== *Class TunnelFurnitureUsageValue*
 
@@ -524,23 +437,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[TunnelInstallation-section]]
 ===== *Class TunnelInstallation*
 
@@ -553,29 +460,23 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractInstallation-section,AbstractInstallation>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} class  |<<TunnelInstallationClassValue-section,TunnelInstallationClassValue>>  [0..1] |Indicates the specific type of the TunnelInstallation.
+!{set:cellbgcolor:#FFFFFF} class  !<<TunnelInstallationClassValue-section,TunnelInstallationClassValue>>  [0..1] !Indicates the specific type of the TunnelInstallation.
  
-|{set:cellbgcolor:#FFFFFF} function  |<<TunnelInstallationFunctionValue-section,TunnelInstallationFunctionValue>>  [0..*] |Specifies the intended purposes of the TunnelInstallation.
+!{set:cellbgcolor:#FFFFFF} function  !<<TunnelInstallationFunctionValue-section,TunnelInstallationFunctionValue>>  [0..*] !Specifies the intended purposes of the TunnelInstallation.
  
-|{set:cellbgcolor:#FFFFFF} usage  |<<TunnelInstallationUsageValue-section,TunnelInstallationUsageValue>>  [0..*] |Specifies the actual uses of the TunnelInstallation.
-|===
+!{set:cellbgcolor:#FFFFFF} usage  !<<TunnelInstallationUsageValue-section,TunnelInstallationUsageValue>>  [0..*] !Specifies the actual uses of the TunnelInstallation.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[TunnelInstallationClassValue-section]]
 ===== *Class TunnelInstallationClassValue*
 
@@ -588,23 +489,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[TunnelInstallationFunctionValue-section]]
 ===== *Class TunnelInstallationFunctionValue*
 
@@ -617,23 +512,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[TunnelInstallationUsageValue-section]]
 ===== *Class TunnelInstallationUsageValue*
 
@@ -646,23 +535,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[TunnelPart-section]]
 ===== *Class TunnelPart*
 
@@ -675,23 +558,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractTunnel-section,AbstractTunnel>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[TunnelUsageValue-section]]
 ===== *Class TunnelUsageValue*
 
@@ -704,33 +581,16 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
-
-==== *Code Lists*
-
-[cols="1,4"]  
-|===
-^|*Code List* ^|*Definition*
-| |
-| |
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
   
-
 
 

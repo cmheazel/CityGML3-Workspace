@@ -1,0 +1,54 @@
+[[Vegetation-class-table]]
+.Classes used in Vegetation
+[cols="2,6",options="headers"]
+|===
+^|*Class* ^|*Description*
+|<<AbstractVegetationObject-section,AbstractVegetationObject>> «FeatureType»  |AbstractVegetationObject is the abstract superclass for all kinds of vegetation objects.
+|<<PlantCover-section,PlantCover>> «TopLevelFeatureType»  |A PlantCover represents a space covered by vegetation.
+|<<PlantCoverClassValue-section,PlantCoverClassValue>> «CodeList»  |PlantCoverClassValue is a code list used to further classify a PlantCover.
+|<<PlantCoverFunctionValue-section,PlantCoverFunctionValue>> «CodeList»  |PlantCoverFunctionValue is a code list that enumerates the different purposes of a PlantCover.
+|<<PlantCoverUsageValue-section,PlantCoverUsageValue>> «CodeList»  |PlantCoverUsageValue is a code list that enumerates the different uses of a PlantCover.
+|<<SolitaryVegetationObject-section,SolitaryVegetationObject>> «TopLevelFeatureType»  |A SolitaryVegetationObject represents individual vegetation objects, e.g. trees or bushes.
+|<<SolitaryVegetationObjectClassValue-section,SolitaryVegetationObjectClassValue>> «CodeList»  |SolitaryVegetationObjectClassValue is a code list used to further classify a SolitaryVegetationObject.
+|<<SolitaryVegetationObjectFunctionValue-section,SolitaryVegetationObjectFunctionValue>> «CodeList»  |SolitaryVegetationObjectFunctionValue is a code list that enumerates the different purposes of a SolitaryVegetationObject.
+|<<SolitaryVegetationObjectUsageValue-section,SolitaryVegetationObjectUsageValue>> «CodeList»  |SolitaryVegetationObjectUsageValue is a code list that enumerates the different uses of a SolitaryVegetationObject.
+|<<SpeciesValue-section,SpeciesValue>> «CodeList»  |A SpeciesValue is a code list that enumerates the species of a SolitaryVegetationObject.
+|===
+
+[[Vegetation-datatypes-table]]
+.Data Types used in Vegetation
+[cols="2,6",options="headers"]
+|===
+^|*Class Name* ^|*Description*
+|===
+
+[[Vegetation-primitives-table]]
+.Primitive Data Types used in Vegetation
+[cols="2,6",options="headers"]
+|===
+^|*Class Name* ^|*Description*
+|===
+
+[[Vegetation-unions-table]]
+.Union types used in Vegetation
+[cols="2,6",options="headers"]
+|===
+^|*Class Name* ^|*Description*
+|===
+
+[[Vegetation-enumeration-table]]
+.Enumerated Classes used in Vegetation
+[cols="2,6",options="headers"]
+|===
+^|*Class Name* ^|*Description*
+|===
+
+[[Vegetation-codelist-table]]
+.CodeList Classes used in Vegetation
+[cols="2,6",options="headers"]
+|===
+^|*Class Name* ^|*Description*
+|===  
+
+
+

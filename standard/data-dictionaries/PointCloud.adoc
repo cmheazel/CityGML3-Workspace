@@ -1,5 +1,5 @@
-[[PointCloud-package]]
-==== *Package*
+[[PointCloud-package-dd]]
+=== *Point Cloud Data Dictionary*
 
 [cols="1a"]
 |===
@@ -14,17 +14,12 @@
 
 |===
 |Editing instructions:
-| 1) For all classes
-| {nbsp}{nbsp}{nbsp}a) If a stereotype value is "<<←section,>>", change it to "none"
-| {nbsp}{nbsp}{nbsp}b) If a subclass value is not provided, set it to "none"
-| {nbsp}{nbsp}{nbsp}c) If a multiplicity value is not provided, set it to "1" 
-| {nbsp}{nbsp}{nbsp}d) If the Role Name of a relation is not provided, delete the Role Name row
-| {nbsp}{nbsp}{nbsp}e) If the stereotype of an attribute is not provided, set it to <<Property>>
-| 2) For all classes with the "CodeList" stereotype 
-| {nbsp}{nbsp}{nbsp}a) Copy the name and description into the table in the Code List section
-| {nbsp}{nbsp}{nbsp}b) Delete the class
-| 3) If there are no code lists, then delete the Code List section
-| 4) Delete these instructions when done
+| 1) Delete all tables for CodeLists 
+| 2) If a subclass value is "<<←section,>>", change it to "none"
+| 3) If a multiplicity value is not provided, set it to "1" 
+| 4) If there are no entries in the role subtable, delete that subtable
+| 5) If there are no entries in the attrubute subtable, delete that subtable
+| 6) Delete these instructions when done
 |===
 
 ==== *Classes*
@@ -41,41 +36,26 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractPointCloud-section,AbstractPointCloud>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|{set:cellbgcolor:#FFFFFF} 
-|<<GM_MultiPoint-section,GM_MultiPoint>> 
-|
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} points 
+!<<GM_MultiPoint-section,GM_MultiPoint>> 
+ [0..1]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} mimeType  |<<MimeTypeValue-section,MimeTypeValue>>  [0..1] |Specifies the MIME type of the external point cloud file.
+!{set:cellbgcolor:#FFFFFF} mimeType  !<<MimeTypeValue-section,MimeTypeValue>>  [0..1] !Specifies the MIME type of the external point cloud file.
  
-|{set:cellbgcolor:#FFFFFF} pointFile  |<<URI-section,URI>>  [0..1] |Specifies the URI that points to the external point cloud file.
+!{set:cellbgcolor:#FFFFFF} pointFile  !<<URI-section,URI>>  [0..1] !Specifies the URI that points to the external point cloud file.
  
-|{set:cellbgcolor:#FFFFFF} pointFileSrsName  |<<CharacterString-section,CharacterString>>  [0..1] |Indicates the coordinate reference system used by the external point cloud file.
-|===
-
-==== *Code Lists*
-
-[cols="1,4"]  
-|===
-^|*Code List* ^|*Definition*
-| |
-| |
-|===
+!{set:cellbgcolor:#FFFFFF} pointFileSrsName  !<<CharacterString-section,CharacterString>>  [0..1] !Indicates the coordinate reference system used by the external point cloud file.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
   
 
 

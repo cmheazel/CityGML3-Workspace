@@ -1,5 +1,5 @@
-[[Bridge-package]]
-==== *Package*
+[[Bridge-package-dd]]
+=== *Bridge Data Dictionary*
 
 [cols="1a"]
 |===
@@ -14,17 +14,12 @@
 
 |===
 |Editing instructions:
-| 1) For all classes
-| {nbsp}{nbsp}{nbsp}a) If a stereotype value is "<<←section,>>", change it to "none"
-| {nbsp}{nbsp}{nbsp}b) If a subclass value is not provided, set it to "none"
-| {nbsp}{nbsp}{nbsp}c) If a multiplicity value is not provided, set it to "1" 
-| {nbsp}{nbsp}{nbsp}d) If the Role Name of a relation is not provided, delete the Role Name row
-| {nbsp}{nbsp}{nbsp}e) If the stereotype of an attribute is not provided, set it to <<Property>>
-| 2) For all classes with the "CodeList" stereotype 
-| {nbsp}{nbsp}{nbsp}a) Copy the name and description into the table in the Code List section
-| {nbsp}{nbsp}{nbsp}b) Delete the class
-| 3) If there are no code lists, then delete the Code List section
-| 4) Delete these instructions when done
+| 1) Delete all tables for CodeLists 
+| 2) If a subclass value is "<<←section,>>", change it to "none"
+| 3) If a multiplicity value is not provided, set it to "1" 
+| 4) If there are no entries in the role subtable, delete that subtable
+| 5) If there are no entries in the attrubute subtable, delete that subtable
+| 6) Delete these instructions when done
 |===
 
 ==== *Classes*
@@ -41,46 +36,45 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstruction-section,AbstractConstruction>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|{set:cellbgcolor:#FFFFFF} 
-|<<BridgeRoom-section,BridgeRoom>> 
-|
-|{set:cellbgcolor:#FFFFFF} 
-|<<Address-section,Address>> 
-|
-|{set:cellbgcolor:#FFFFFF} 
-|<<BridgeConstructiveElement-section,BridgeConstructiveElement>> 
-|
-|{set:cellbgcolor:#FFFFFF} 
-|<<BridgeInstallation-section,BridgeInstallation>> 
-|
-|{set:cellbgcolor:#FFFFFF} 
-|<<BridgeFurniture-section,BridgeFurniture>> 
-|
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} bridgeRoom 
+!<<BridgeRoom-section,BridgeRoom>> 
+ [*]
+!
+!{set:cellbgcolor:#FFFFFF} address 
+!<<Address-section,Address>> 
+ [*]
+!
+!{set:cellbgcolor:#FFFFFF} bridgeConstructiveElement 
+!<<BridgeConstructiveElement-section,BridgeConstructiveElement>> 
+ [*]
+!
+!{set:cellbgcolor:#FFFFFF} bridgeInstallation 
+!<<BridgeInstallation-section,BridgeInstallation>> 
+ [*]
+!
+!{set:cellbgcolor:#FFFFFF} bridgeFurniture 
+!<<BridgeFurniture-section,BridgeFurniture>> 
+ [*]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} class  |<<BridgeClassValue-section,BridgeClassValue>>  [0..1] |Indicates the specific type of the Bridge or BridgePart.
+!{set:cellbgcolor:#FFFFFF} class  !<<BridgeClassValue-section,BridgeClassValue>>  [0..1] !Indicates the specific type of the Bridge or BridgePart.
  
-|{set:cellbgcolor:#FFFFFF} function  |<<BridgeFunctionValue-section,BridgeFunctionValue>>  [0..*] |Specifies the intended purposes of the Bridge or BridgePart.
+!{set:cellbgcolor:#FFFFFF} function  !<<BridgeFunctionValue-section,BridgeFunctionValue>>  [0..*] !Specifies the intended purposes of the Bridge or BridgePart.
  
-|{set:cellbgcolor:#FFFFFF} isMovable  |<<Boolean-section,Boolean>>  [0..1] |Indicates whether the Bridge or BridgePart can be moved to allow for watercraft to pass.
+!{set:cellbgcolor:#FFFFFF} isMovable  !<<Boolean-section,Boolean>>  [0..1] !Indicates whether the Bridge or BridgePart can be moved to allow for watercraft to pass.
  
-|{set:cellbgcolor:#FFFFFF} usage  |<<BridgeUsageValue-section,BridgeUsageValue>>  [0..*] |Specifies the actual uses of the Bridge or BridgePart.
-|===
+!{set:cellbgcolor:#FFFFFF} usage  !<<BridgeUsageValue-section,BridgeUsageValue>>  [0..*] !Specifies the actual uses of the Bridge or BridgePart.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[Bridge-section]]
 ===== *Class Bridge*
 
@@ -93,26 +87,21 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractBridge-section,AbstractBridge>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} bridgePart 
+!<<BridgePart-section,BridgePart>> 
+ [*]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|{set:cellbgcolor:#FFFFFF} 
-|<<BridgePart-section,BridgePart>> 
-|
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[BridgeClassValue-section]]
 ===== *Class BridgeClassValue*
 
@@ -125,23 +114,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[BridgeConstructiveElement-section]]
 ===== *Class BridgeConstructiveElement*
 
@@ -154,29 +137,23 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstructiveElement-section,AbstractConstructiveElement>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} class  |<<BridgeConstructiveElementClassValue-section,BridgeConstructiveElementClassValue>>  [0..1] |Indicates the specific type of the BridgeConstructiveElement.
+!{set:cellbgcolor:#FFFFFF} class  !<<BridgeConstructiveElementClassValue-section,BridgeConstructiveElementClassValue>>  [0..1] !Indicates the specific type of the BridgeConstructiveElement.
  
-|{set:cellbgcolor:#FFFFFF} function  |<<BridgeConstructiveElementFunctionValue-section,BridgeConstructiveElementFunctionValue>>  [0..*] |Specifies the intended purposes of the BridgeConstructiveElement.
+!{set:cellbgcolor:#FFFFFF} function  !<<BridgeConstructiveElementFunctionValue-section,BridgeConstructiveElementFunctionValue>>  [0..*] !Specifies the intended purposes of the BridgeConstructiveElement.
  
-|{set:cellbgcolor:#FFFFFF} usage  |<<BridgeConstructiveElementUsageValue-section,BridgeConstructiveElementUsageValue>>  [0..*] |Specifies the actual uses of the BridgeConstructiveElement.
-|===
+!{set:cellbgcolor:#FFFFFF} usage  !<<BridgeConstructiveElementUsageValue-section,BridgeConstructiveElementUsageValue>>  [0..*] !Specifies the actual uses of the BridgeConstructiveElement.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[BridgeConstructiveElementClassValue-section]]
 ===== *Class BridgeConstructiveElementClassValue*
 
@@ -189,23 +166,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[BridgeConstructiveElementFunctionValue-section]]
 ===== *Class BridgeConstructiveElementFunctionValue*
 
@@ -218,23 +189,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[BridgeConstructiveElementUsageValue-section]]
 ===== *Class BridgeConstructiveElementUsageValue*
 
@@ -247,23 +212,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[BridgeFunctionValue-section]]
 ===== *Class BridgeFunctionValue*
 
@@ -276,23 +235,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[BridgeFurniture-section]]
 ===== *Class BridgeFurniture*
 
@@ -305,29 +258,23 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractFurniture-section,AbstractFurniture>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} class  |<<BridgeFurnitureClassValue-section,BridgeFurnitureClassValue>>  [0..1] |Indicates the specific type of the BridgeFurniture.
+!{set:cellbgcolor:#FFFFFF} class  !<<BridgeFurnitureClassValue-section,BridgeFurnitureClassValue>>  [0..1] !Indicates the specific type of the BridgeFurniture.
  
-|{set:cellbgcolor:#FFFFFF} function  |<<BridgeFurnitureFunctionValue-section,BridgeFurnitureFunctionValue>>  [0..*] |Specifies the intended purposes of the BridgeFurniture.
+!{set:cellbgcolor:#FFFFFF} function  !<<BridgeFurnitureFunctionValue-section,BridgeFurnitureFunctionValue>>  [0..*] !Specifies the intended purposes of the BridgeFurniture.
  
-|{set:cellbgcolor:#FFFFFF} usage  |<<BridgeFurnitureUsageValue-section,BridgeFurnitureUsageValue>>  [0..*] |Specifies the actual uses of the BridgeFurniture.
-|===
+!{set:cellbgcolor:#FFFFFF} usage  !<<BridgeFurnitureUsageValue-section,BridgeFurnitureUsageValue>>  [0..*] !Specifies the actual uses of the BridgeFurniture.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[BridgeFurnitureClassValue-section]]
 ===== *Class BridgeFurnitureClassValue*
 
@@ -340,23 +287,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[BridgeFurnitureFunctionValue-section]]
 ===== *Class BridgeFurnitureFunctionValue*
 
@@ -369,23 +310,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[BridgeFurnitureUsageValue-section]]
 ===== *Class BridgeFurnitureUsageValue*
 
@@ -398,23 +333,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[BridgeInstallation-section]]
 ===== *Class BridgeInstallation*
 
@@ -427,29 +356,23 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractInstallation-section,AbstractInstallation>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} class  |<<BridgeInstallationClassValue-section,BridgeInstallationClassValue>>  [0..1] |Indicates the specific type of the BridgeInstallation.
+!{set:cellbgcolor:#FFFFFF} class  !<<BridgeInstallationClassValue-section,BridgeInstallationClassValue>>  [0..1] !Indicates the specific type of the BridgeInstallation.
  
-|{set:cellbgcolor:#FFFFFF} function  |<<BridgeInstallationFunctionValue-section,BridgeInstallationFunctionValue>>  [0..*] |Specifies the intended purposes of the BridgeInstallation.
+!{set:cellbgcolor:#FFFFFF} function  !<<BridgeInstallationFunctionValue-section,BridgeInstallationFunctionValue>>  [0..*] !Specifies the intended purposes of the BridgeInstallation.
  
-|{set:cellbgcolor:#FFFFFF} usage  |<<BridgeInstallationUsageValue-section,BridgeInstallationUsageValue>>  [0..*] |Specifies the actual uses of the BridgeInstallation.
-|===
+!{set:cellbgcolor:#FFFFFF} usage  !<<BridgeInstallationUsageValue-section,BridgeInstallationUsageValue>>  [0..*] !Specifies the actual uses of the BridgeInstallation.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[BridgeInstallationClassValue-section]]
 ===== *Class BridgeInstallationClassValue*
 
@@ -462,23 +385,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[BridgeInstallationFunctionValue-section]]
 ===== *Class BridgeInstallationFunctionValue*
 
@@ -491,23 +408,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[BridgeInstallationUsageValue-section]]
 ===== *Class BridgeInstallationUsageValue*
 
@@ -520,23 +431,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[BridgePart-section]]
 ===== *Class BridgePart*
 
@@ -549,23 +454,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractBridge-section,AbstractBridge>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[BridgeRoom-section]]
 ===== *Class BridgeRoom*
 
@@ -578,38 +477,35 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|{set:cellbgcolor:#FFFFFF} 
-|<<BridgeInstallation-section,BridgeInstallation>> 
-|
-|{set:cellbgcolor:#FFFFFF} 
-|<<AbstractThematicSurface-section,AbstractThematicSurface>> 
-|
-|{set:cellbgcolor:#FFFFFF} 
-|<<BridgeFurniture-section,BridgeFurniture>> 
-|
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} bridgeInstallation 
+!<<BridgeInstallation-section,BridgeInstallation>> 
+ [*]
+!
+!{set:cellbgcolor:#FFFFFF} boundary 
+!<<AbstractThematicSurface-section,AbstractThematicSurface>> 
+ [*]
+!
+!{set:cellbgcolor:#FFFFFF} bridgeFurniture 
+!<<BridgeFurniture-section,BridgeFurniture>> 
+ [*]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} class  |<<BridgeRoomClassValue-section,BridgeRoomClassValue>>  [0..1] |Indicates the specific type of the BridgeRoom.
+!{set:cellbgcolor:#FFFFFF} class  !<<BridgeRoomClassValue-section,BridgeRoomClassValue>>  [0..1] !Indicates the specific type of the BridgeRoom.
  
-|{set:cellbgcolor:#FFFFFF} function  |<<BridgeRoomFunctionValue-section,BridgeRoomFunctionValue>>  [0..*] |Specifies the intended purposes of the BridgeRoom.
+!{set:cellbgcolor:#FFFFFF} function  !<<BridgeRoomFunctionValue-section,BridgeRoomFunctionValue>>  [0..*] !Specifies the intended purposes of the BridgeRoom.
  
-|{set:cellbgcolor:#FFFFFF} usage  |<<BridgeRoomUsageValue-section,BridgeRoomUsageValue>>  [0..*] |Specifies the actual uses of the BridgeRoom.
-|===
+!{set:cellbgcolor:#FFFFFF} usage  !<<BridgeRoomUsageValue-section,BridgeRoomUsageValue>>  [0..*] !Specifies the actual uses of the BridgeRoom.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[BridgeRoomClassValue-section]]
 ===== *Class BridgeRoomClassValue*
 
@@ -622,23 +518,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[BridgeRoomFunctionValue-section]]
 ===== *Class BridgeRoomFunctionValue*
 
@@ -651,23 +541,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[BridgeRoomUsageValue-section]]
 ===== *Class BridgeRoomUsageValue*
 
@@ -680,23 +564,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[BridgeUsageValue-section]]
 ===== *Class BridgeUsageValue*
 
@@ -709,33 +587,16 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
-
-==== *Code Lists*
-
-[cols="1,4"]  
-|===
-^|*Code List* ^|*Definition*
-| |
-| |
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
   
-
 
 

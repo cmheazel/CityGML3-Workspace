@@ -1,5 +1,5 @@
-[[Relief-package]]
-==== *Package*
+[[Relief-package-dd]]
+=== *Relief Data Dictionary*
 
 [cols="1a"]
 |===
@@ -14,17 +14,12 @@
 
 |===
 |Editing instructions:
-| 1) For all classes
-| {nbsp}{nbsp}{nbsp}a) If a stereotype value is "<<←section,>>", change it to "none"
-| {nbsp}{nbsp}{nbsp}b) If a subclass value is not provided, set it to "none"
-| {nbsp}{nbsp}{nbsp}c) If a multiplicity value is not provided, set it to "1" 
-| {nbsp}{nbsp}{nbsp}d) If the Role Name of a relation is not provided, delete the Role Name row
-| {nbsp}{nbsp}{nbsp}e) If the stereotype of an attribute is not provided, set it to <<Property>>
-| 2) For all classes with the "CodeList" stereotype 
-| {nbsp}{nbsp}{nbsp}a) Copy the name and description into the table in the Code List section
-| {nbsp}{nbsp}{nbsp}b) Delete the class
-| 3) If there are no code lists, then delete the Code List section
-| 4) Delete these instructions when done
+| 1) Delete all tables for CodeLists 
+| 2) If a subclass value is "<<←section,>>", change it to "none"
+| 3) If a multiplicity value is not provided, set it to "1" 
+| 4) If there are no entries in the role subtable, delete that subtable
+| 5) If there are no entries in the attrubute subtable, delete that subtable
+| 6) Delete these instructions when done
 |===
 
 ==== *Classes*
@@ -44,28 +39,23 @@
 self.extent.patch->size()=1 and 
 self.extent.patch->forAll(oclIsKindOf(GM_Polygon))    
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|{set:cellbgcolor:#FFFFFF} 
-|<<GM_Surface-section,GM_Surface>> 
-|
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} extent 
+!<<GM_Surface-section,GM_Surface>> 
+ [0..1]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} lod  |<<IntegerBetween0and3-section,IntegerBetween0and3>>  |Indicates the Level of Detail of the terrain component.
-|===
+!{set:cellbgcolor:#FFFFFF} lod  !<<IntegerBetween0and3-section,IntegerBetween0and3>>  !Indicates the Level of Detail of the terrain component.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[BreaklineRelief-section]]
 ===== *Class BreaklineRelief*
 
@@ -78,29 +68,25 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractReliefComponent-section,AbstractReliefComponent>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} ridgeOrValleyLines 
+!<<GM_MultiCurve-section,GM_MultiCurve>> 
+ [0..1]
+!
+!{set:cellbgcolor:#FFFFFF} breaklines 
+!<<GM_MultiCurve-section,GM_MultiCurve>> 
+ [0..1]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|{set:cellbgcolor:#FFFFFF} 
-|<<GM_MultiCurve-section,GM_MultiCurve>> 
-|
-|{set:cellbgcolor:#FFFFFF} 
-|<<GM_MultiCurve-section,GM_MultiCurve>> 
-|
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[MassPointRelief-section]]
 ===== *Class MassPointRelief*
 
@@ -113,29 +99,25 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractReliefComponent-section,AbstractReliefComponent>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} reliefPoints 
+!<<GM_MultiPoint-section,GM_MultiPoint>> 
+ [0..1]
+!
+!{set:cellbgcolor:#FFFFFF} pointCloud 
+!<<AbstractPointCloud-section,AbstractPointCloud>> 
+ [0..1]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|{set:cellbgcolor:#FFFFFF} 
-|<<GM_MultiPoint-section,GM_MultiPoint>> 
-|
-|{set:cellbgcolor:#FFFFFF} 
-|<<AbstractPointCloud-section,AbstractPointCloud>> 
-|
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[RasterRelief-section]]
 ===== *Class RasterRelief*
 
@@ -148,26 +130,21 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractReliefComponent-section,AbstractReliefComponent>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} grid 
+!<<CV_DiscreteGridPointCoverage-section,CV_DiscreteGridPointCoverage>> 
+ [1]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|{set:cellbgcolor:#FFFFFF} 
-|<<CV_DiscreteGridPointCoverage-section,CV_DiscreteGridPointCoverage>> 
-|
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[ReliefFeature-section]]
 ===== *Class ReliefFeature*
 
@@ -180,28 +157,23 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|{set:cellbgcolor:#FFFFFF} 
-|<<AbstractReliefComponent-section,AbstractReliefComponent>> 
-|
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} reliefComponent 
+!<<AbstractReliefComponent-section,AbstractReliefComponent>> 
+ [1..*]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} lod  |<<IntegerBetween0and3-section,IntegerBetween0and3>>  |Indicates the Level of Detail of the ReliefFeature.
-|===
+!{set:cellbgcolor:#FFFFFF} lod  !<<IntegerBetween0and3-section,IntegerBetween0and3>>  !Indicates the Level of Detail of the ReliefFeature.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[TINRelief-section]]
 ===== *Class TINRelief*
 
@@ -214,36 +186,20 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractReliefComponent-section,AbstractReliefComponent>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|{set:cellbgcolor:#FFFFFF} 
-|<<GM_TriangulatedSurface-section,GM_TriangulatedSurface>> 
-|
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
-
-==== *Code Lists*
-
-[cols="1,4"]  
-|===
-^|*Code List* ^|*Definition*
-| |
-| |
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} tin 
+!<<GM_TriangulatedSurface-section,GM_TriangulatedSurface>> 
+ [1]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
   
-
 
 

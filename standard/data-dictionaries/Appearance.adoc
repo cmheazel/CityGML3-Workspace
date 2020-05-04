@@ -1,5 +1,5 @@
-[[Appearance-package]]
-==== *Package*
+[[Appearance-package-dd]]
+=== *Appearance Data Dictionary*
 
 [cols="1a"]
 |===
@@ -14,17 +14,12 @@
 
 |===
 |Editing instructions:
-| 1) For all classes
-| {nbsp}{nbsp}{nbsp}a) If a stereotype value is "<<←section,>>", change it to "none"
-| {nbsp}{nbsp}{nbsp}b) If a subclass value is not provided, set it to "none"
-| {nbsp}{nbsp}{nbsp}c) If a multiplicity value is not provided, set it to "1" 
-| {nbsp}{nbsp}{nbsp}d) If the Role Name of a relation is not provided, delete the Role Name row
-| {nbsp}{nbsp}{nbsp}e) If the stereotype of an attribute is not provided, set it to <<Property>>
-| 2) For all classes with the "CodeList" stereotype 
-| {nbsp}{nbsp}{nbsp}a) Copy the name and description into the table in the Code List section
-| {nbsp}{nbsp}{nbsp}b) Delete the class
-| 3) If there are no code lists, then delete the Code List section
-| 4) Delete these instructions when done
+| 1) Delete all tables for CodeLists 
+| 2) If a subclass value is "<<←section,>>", change it to "none"
+| 3) If a multiplicity value is not provided, set it to "1" 
+| 4) If there are no entries in the role subtable, delete that subtable
+| 5) If there are no entries in the attrubute subtable, delete that subtable
+| 6) Delete these instructions when done
 |===
 
 ==== *Classes*
@@ -41,25 +36,19 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractFeature-section,AbstractFeature>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} isFront  |<<Boolean-section,Boolean>>  [0..1] |Indicates whether the texture or material is assigned to the front side or the back side of the surface geometry object.
-|===
+!{set:cellbgcolor:#FFFFFF} isFront  !<<Boolean-section,Boolean>>  [0..1] !Indicates whether the texture or material is assigned to the front side or the back side of the surface geometry object.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[AbstractTexture-section]]
 ===== *Class AbstractTexture*
 
@@ -72,33 +61,27 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractSurfaceData-section,AbstractSurfaceData>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} borderColor  !<<ColorPlusOpacity-section,ColorPlusOpacity>>  [0..1] !Specifies the color of that part of the surface that is not covered by the texture.
+ 
+!{set:cellbgcolor:#FFFFFF} imageURI  !<<URI-section,URI>>  !Specifies the URI that points to the external image data file.
+ 
+!{set:cellbgcolor:#FFFFFF} mimeType  !<<MimeTypeValue-section,MimeTypeValue>>  [0..1] !Specifies the MIME type of the external point cloud file.
+ 
+!{set:cellbgcolor:#FFFFFF} textureType  !<<TextureType-section,TextureType>>  [0..1] !Indicates the specific type of the texture.
+ 
+!{set:cellbgcolor:#FFFFFF} wrapMode  !<<WrapMode-section,WrapMode>>  [0..1] !Specifies the behaviour of the texture when the texture is smaller than the surface to which it is applied.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
- 
-|{set:cellbgcolor:#FFFFFF} borderColor  |<<ColorPlusOpacity-section,ColorPlusOpacity>>  [0..1] |Specifies the color of that part of the surface that is not covered by the texture.
- 
-|{set:cellbgcolor:#FFFFFF} imageURI  |<<URI-section,URI>>  |Specifies the URI that points to the external image data file.
- 
-|{set:cellbgcolor:#FFFFFF} mimeType  |<<MimeTypeValue-section,MimeTypeValue>>  [0..1] |Specifies the MIME type of the external point cloud file.
- 
-|{set:cellbgcolor:#FFFFFF} textureType  |<<TextureType-section,TextureType>>  [0..1] |Indicates the specific type of the texture.
- 
-|{set:cellbgcolor:#FFFFFF} wrapMode  |<<WrapMode-section,WrapMode>>  [0..1] |Specifies the behaviour of the texture when the texture is smaller than the surface to which it is applied.
-|===
 [[Appearance-section]]
 ===== *Class Appearance*
 
@@ -111,28 +94,23 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractAppearance-section,AbstractAppearance>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|{set:cellbgcolor:#FFFFFF} 
-|<<AbstractSurfaceData-section,AbstractSurfaceData>> 
-|
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} surfaceData 
+!<<AbstractSurfaceData-section,AbstractSurfaceData>> 
+ [*]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} theme  |<<CharacterString-section,CharacterString>>  [0..1] |Specifies the topic of the Appearance. Each Appearance contains surface data for one theme only. Examples of themes are infrared radiation, noise pollution, or earthquake-induced structural stress.
-|===
+!{set:cellbgcolor:#FFFFFF} theme  !<<CharacterString-section,CharacterString>>  [0..1] !Specifies the topic of the Appearance. Each Appearance contains surface data for one theme only. Examples of themes are infrared radiation, noise pollution, or earthquake-induced structural stress.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[Color-section]]
 ===== *Class Color*
 
@@ -146,23 +124,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «BasicType»
 !{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! lengthOfList (OCL): inv: self.list->size() = 3    
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[ColorPlusOpacity-section]]
 ===== *Class ColorPlusOpacity*
 
@@ -176,23 +148,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «BasicType»
 !{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! lengthOfList (OCL): inv: self.list->size() = 3 or self.list->size() = 4    
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[GeoreferencedTexture-section]]
 ===== *Class GeoreferencedTexture*
 
@@ -205,32 +171,27 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractTexture-section,AbstractTexture>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|{set:cellbgcolor:#FFFFFF} 
-|<<GM_Point-section,GM_Point>> 
-|
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} referencePoint 
+!<<GM_Point-section,GM_Point>> 
+ [0..1]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} orientation  |<<TransformationMatrix2x2-section,TransformationMatrix2x2>>  [0..1] |Specifies the rotation and scaling of the image in form of a 2x2 matrix.
+!{set:cellbgcolor:#FFFFFF} orientation  !<<TransformationMatrix2x2-section,TransformationMatrix2x2>>  [0..1] !Specifies the rotation and scaling of the image in form of a 2x2 matrix.
  
-|{set:cellbgcolor:#FFFFFF} preferWorldFile  |<<Boolean-section,Boolean>>  [0..1] |Indicates whether the georeference from the image file or the accompanying world file should be prefered.
+!{set:cellbgcolor:#FFFFFF} preferWorldFile  !<<Boolean-section,Boolean>>  [0..1] !Indicates whether the georeference from the image file or the accompanying world file should be prefered.
  
-|{set:cellbgcolor:#FFFFFF} target  |<<URI-section,URI>>  [0..*] |Specifies the URI that points to the surface geometry objects to which the texture is applied.
-|===
+!{set:cellbgcolor:#FFFFFF} target  !<<URI-section,URI>>  [0..*] !Specifies the URI that points to the surface geometry objects to which the texture is applied.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[ParameterizedTexture-section]]
 ===== *Class ParameterizedTexture*
 
@@ -243,26 +204,21 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractTexture-section,AbstractTexture>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} textureParameterization 
+!<<AbstractTextureParameterization-section,AbstractTextureParameterization>> 
+ [*]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|{set:cellbgcolor:#FFFFFF} 
-|<<AbstractTextureParameterization-section,AbstractTextureParameterization>> 
-|
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[TextureAssociation-section]]
 ===== *Class TextureAssociation*
 
@@ -275,25 +231,19 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «ObjectType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} target  |<<URI-section,URI>>  |Specifies the URI that points to the surface geometry object to which the texture is applied.
-|===
+!{set:cellbgcolor:#FFFFFF} target  !<<URI-section,URI>>  !Specifies the URI that points to the surface geometry object to which the texture is applied.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[X3DMaterial-section]]
 ===== *Class X3DMaterial*
 
@@ -306,39 +256,33 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractSurfaceData-section,AbstractSurfaceData>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} ambientIntensity  !<<DoubleBetween0and1-section,DoubleBetween0and1>>  [0..1] !Specifies the minimum percentage of diffuseColor that is visible regardless of light sources.
+ 
+!{set:cellbgcolor:#FFFFFF} diffuseColor  !<<Color-section,Color>>  [0..1] !Specifies the color of the light diffusely reflected by the surface geometry object.
+ 
+!{set:cellbgcolor:#FFFFFF} emissiveColor  !<<Color-section,Color>>  [0..1] !Specifies the color of the light emitted by the surface geometry object.
+ 
+!{set:cellbgcolor:#FFFFFF} isSmooth  !<<Boolean-section,Boolean>>  [0..1] !Specifies which interpolation method is used for the shading of the surface geometry object. If the attribute is set to true, vertex normals should be used for shading (Gouraud shading). Otherwise, normals should be constant for a surface patch (flat shading).
+ 
+!{set:cellbgcolor:#FFFFFF} shininess  !<<DoubleBetween0and1-section,DoubleBetween0and1>>  [0..1] !Specifies the sharpness of the specular highlight.
+ 
+!{set:cellbgcolor:#FFFFFF} specularColor  !<<Color-section,Color>>  [0..1] !Specifies the color of the light directly reflected by the surface geometry object.
+ 
+!{set:cellbgcolor:#FFFFFF} target  !<<URI-section,URI>>  [0..*] !Specifies the URI that points to the surface geometry objects to which the material is applied.
+ 
+!{set:cellbgcolor:#FFFFFF} transparency  !<<DoubleBetween0and1-section,DoubleBetween0and1>>  [0..1] !Specifies the degree of transparency of the surface geometry object.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
- 
-|{set:cellbgcolor:#FFFFFF} ambientIntensity  |<<DoubleBetween0and1-section,DoubleBetween0and1>>  [0..1] |Specifies the minimum percentage of diffuseColor that is visible regardless of light sources.
- 
-|{set:cellbgcolor:#FFFFFF} diffuseColor  |<<Color-section,Color>>  [0..1] |Specifies the color of the light diffusely reflected by the surface geometry object.
- 
-|{set:cellbgcolor:#FFFFFF} emissiveColor  |<<Color-section,Color>>  [0..1] |Specifies the color of the light emitted by the surface geometry object.
- 
-|{set:cellbgcolor:#FFFFFF} isSmooth  |<<Boolean-section,Boolean>>  [0..1] |Specifies which interpolation method is used for the shading of the surface geometry object. If the attribute is set to true, vertex normals should be used for shading (Gouraud shading). Otherwise, normals should be constant for a surface patch (flat shading).
- 
-|{set:cellbgcolor:#FFFFFF} shininess  |<<DoubleBetween0and1-section,DoubleBetween0and1>>  [0..1] |Specifies the sharpness of the specular highlight.
- 
-|{set:cellbgcolor:#FFFFFF} specularColor  |<<Color-section,Color>>  [0..1] |Specifies the color of the light directly reflected by the surface geometry object.
- 
-|{set:cellbgcolor:#FFFFFF} target  |<<URI-section,URI>>  [0..*] |Specifies the URI that points to the surface geometry objects to which the material is applied.
- 
-|{set:cellbgcolor:#FFFFFF} transparency  |<<DoubleBetween0and1-section,DoubleBetween0and1>>  [0..1] |Specifies the degree of transparency of the surface geometry object.
-|===
 [[AbstractTextureParameterization-section]]
 ===== *Class AbstractTextureParameterization*
 
@@ -351,23 +295,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[TexCoordGen-section]]
 ===== *Class TexCoordGen*
 
@@ -380,28 +318,23 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|{set:cellbgcolor:#FFFFFF} 
-|<<SC_CRS-section,SC_CRS>> 
-|
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} crs 
+!<<SC_CRS-section,SC_CRS>> 
+ [0..1]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} worldToTexture  |<<TransformationMatrix3x4-section,TransformationMatrix3x4>>  |Specifies the 3x4 transformation matrix that defines the transformation between world coordinates and texture coordinates.
-|===
+!{set:cellbgcolor:#FFFFFF} worldToTexture  !<<TransformationMatrix3x4-section,TransformationMatrix3x4>>  !Specifies the 3x4 transformation matrix that defines the transformation between world coordinates and texture coordinates.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[TexCoordList-section]]
 ===== *Class TexCoordList*
 
@@ -414,27 +347,21 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} ring  |<<URI-section,URI>>  [1..*] |Specifies the URIs that point to the LinearRings that are parameterized using the given texture coordinates.
+!{set:cellbgcolor:#FFFFFF} ring  !<<URI-section,URI>>  [1..*] !Specifies the URIs that point to the LinearRings that are parameterized using the given texture coordinates.
  
-|{set:cellbgcolor:#FFFFFF} textureCoordinates  |<<DoubleList-section,DoubleList>>  [1..*] |Specifies the coordinates of texture used for parameterization. The texture coordinates are provided separately for each LinearRing of the surface geometry object.
-|===
+!{set:cellbgcolor:#FFFFFF} textureCoordinates  !<<DoubleList-section,DoubleList>>  [1..*] !Specifies the coordinates of texture used for parameterization. The texture coordinates are provided separately for each LinearRing of the surface geometry object.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[TextureType-section]]
 ===== *Class TextureType*
 
@@ -447,29 +374,23 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} specific  |<<-section,>>  |Indicates that the texture is specific to a single surface.
+!{set:cellbgcolor:#FFFFFF} specific  !<<-section,>>  !Indicates that the texture is specific to a single surface.
  
-|{set:cellbgcolor:#FFFFFF} typical  |<<-section,>>  |Indicates that the texture is characteristic of a surface and can be used repeatedly.
+!{set:cellbgcolor:#FFFFFF} typical  !<<-section,>>  !Indicates that the texture is characteristic of a surface and can be used repeatedly.
  
-|{set:cellbgcolor:#FFFFFF} unknown  |<<-section,>>  |Indicates that the texture type is not known.
-|===
+!{set:cellbgcolor:#FFFFFF} unknown  !<<-section,>>  !Indicates that the texture type is not known.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[WrapMode-section]]
 ===== *Class WrapMode*
 
@@ -482,42 +403,26 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} none  |<<-section,>>  |Indicates that the texture is applied to the surface "as is". The part of the surface that is not covered by the texture is shown fully transparent. [cf. COLLADA]
+!{set:cellbgcolor:#FFFFFF} none  !<<-section,>>  !Indicates that the texture is applied to the surface "as is". The part of the surface that is not covered by the texture is shown fully transparent. [cf. COLLADA]
  
-|{set:cellbgcolor:#FFFFFF} wrap  |<<-section,>>  |Indicates that the texture is repeated until the surface is fully covered. [cf. COLLADA]
+!{set:cellbgcolor:#FFFFFF} wrap  !<<-section,>>  !Indicates that the texture is repeated until the surface is fully covered. [cf. COLLADA]
  
-|{set:cellbgcolor:#FFFFFF} mirror  |<<-section,>>  |Indicates that the texture is repeated and mirrored. [cf. COLLADA]
+!{set:cellbgcolor:#FFFFFF} mirror  !<<-section,>>  !Indicates that the texture is repeated and mirrored. [cf. COLLADA]
  
-|{set:cellbgcolor:#FFFFFF} clamp  |<<-section,>>  |Indicates that the texture is stretched to the edges of the surface. [cf. COLLADA]
+!{set:cellbgcolor:#FFFFFF} clamp  !<<-section,>>  !Indicates that the texture is stretched to the edges of the surface. [cf. COLLADA]
  
-|{set:cellbgcolor:#FFFFFF} border  |<<-section,>>  |Indicates that the texture is applied to the surface "as is". The part of the surface that is not covered by the texture is filled with the RGBA color that is specified in the attribute borderColor. [cf. COLLADA]
-|===
-
-==== *Code Lists*
-
-[cols="1,4"]  
-|===
-^|*Code List* ^|*Definition*
-| |
-| |
-|===
+!{set:cellbgcolor:#FFFFFF} border  !<<-section,>>  !Indicates that the texture is applied to the surface "as is". The part of the surface that is not covered by the texture is filled with the RGBA color that is specified in the attribute borderColor. [cf. COLLADA]
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
   
 
 

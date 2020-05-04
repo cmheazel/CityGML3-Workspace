@@ -1,5 +1,7 @@
-[[Core-package]]
-==== *Package*
+[[Core-package-dd]]
+=== *Core Data Dictionary*
+
+NOTE: changed level of header, header name, and anchor name
 
 [cols="1a"]
 |===
@@ -14,17 +16,12 @@
 
 |===
 |Editing instructions:
-| 1) For all classes
-| {nbsp}{nbsp}{nbsp}a) If a stereotype value is "<<←section,>>", change it to "none"
-| {nbsp}{nbsp}{nbsp}b) If a subclass value is not provided, set it to "none"
-| {nbsp}{nbsp}{nbsp}c) If a multiplicity value is not provided, set it to "1" 
-| {nbsp}{nbsp}{nbsp}d) If the Role Name of a relation is not provided, delete the Role Name row
-| {nbsp}{nbsp}{nbsp}e) If the stereotype of an attribute is not provided, set it to <<Property>>
-| 2) For all classes with the "CodeList" stereotype 
-| {nbsp}{nbsp}{nbsp}a) Copy the name and description into the table in the Code List section
-| {nbsp}{nbsp}{nbsp}b) Delete the class
-| 3) If there are no code lists, then delete the Code List section
-| 4) Delete these instructions when done
+| 1) Delete all tables for CodeLists 
+| 2) If a subclass value is "<<←section,>>", change it to "none"
+| 3) If a multiplicity value is not provided, set it to "1" 
+| 4) If there are no entries in the role subtable, delete that subtable
+| 5) If there are no entries in the attrubute subtable, delete that subtable
+| 6) Delete these instructions when done
 |===
 
 ==== *Classes*
@@ -41,6 +38,15 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
 |=== 
 
 [[AbstractCityObject-section]]
@@ -55,32 +61,32 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,25,60",frame=none,grid=none,options="header"]
+[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Relation name* !*Target class* !*Role name and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} appearance 
 !<<AbstractAppearance-section,AbstractAppearance>> 
-!appearance [*]
+ [*]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} dynamizer 
 !<<AbstractDynamizer-section,AbstractDynamizer>> 
-!dynamizer [*]
+ [*]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} generalizesTo 
 !<<AbstractCityObject-section,AbstractCityObject>> 
-!generalizesTo [*]
+ [*]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} relatedTo 
 !<<AbstractCityObject-section,AbstractCityObject>> 
-!relatedTo [*]
+ [*]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} genericAttribute 
 !<<AbstractGenericAttribute-section,AbstractGenericAttribute>> 
-!genericAttribute [*]
+ [*]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} externalReference 
 !<<ExternalReference-section,ExternalReference>> 
-!externalReference [*]
+ [*]
 !
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
@@ -106,6 +112,15 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
 |=== 
 
 [[AbstractFeature-section]]
@@ -119,6 +134,10 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AbstractFeature is the abstract superclass of all feature types within the CityGML data model. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AnyFeature-section,AnyFeature>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -147,6 +166,10 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractFeature-section,AbstractFeature>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
@@ -174,6 +197,15 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractSpace-section,AbstractSpace>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
 |=== 
 
 [[AbstractOccupiedSpace-section]]
@@ -188,21 +220,26 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractPhysicalSpace-section,AbstractPhysicalSpace>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,25,60",frame=none,grid=none,options="header"]
+[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Relation name* !*Target class* !*Role name and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} lod1ImplicitRepresentation 
 !<<ImplicitGeometry-section,ImplicitGeometry>> 
-!lod1ImplicitRepresentation [0..1]
+ [0..1]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} lod2ImplicitRepresentation 
 !<<ImplicitGeometry-section,ImplicitGeometry>> 
-!lod2ImplicitRepresentation [0..1]
+ [0..1]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} lod3ImplicitRepresentation 
 !<<ImplicitGeometry-section,ImplicitGeometry>> 
-!lod3ImplicitRepresentation [0..1]
+ [0..1]
 !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -218,25 +255,30 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractSpace-section,AbstractSpace>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,25,60",frame=none,grid=none,options="header"]
+[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Relation name* !*Target class* !*Role name and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} lod3TerrainIntersectionCurve 
 !<<GM_MultiCurve-section,GM_MultiCurve>> 
-!lod3TerrainIntersectionCurve [0..1]
+ [0..1]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} pointCloud 
 !<<AbstractPointCloud-section,AbstractPointCloud>> 
-!pointCloud [0..1]
+ [0..1]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} lod1TerrainIntersectionCurve 
 !<<GM_MultiCurve-section,GM_MultiCurve>> 
-!lod1TerrainIntersectionCurve [0..1]
+ [0..1]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} lod2TerrainIntersectionCurve 
 !<<GM_MultiCurve-section,GM_MultiCurve>> 
-!lod2TerrainIntersectionCurve [0..1]
+ [0..1]
 !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -252,6 +294,15 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractFeature-section,AbstractFeature>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
 |=== 
 
 [[AbstractSpace-section]]
@@ -266,52 +317,52 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractCityObject-section,AbstractCityObject>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,25,60",frame=none,grid=none,options="header"]
+[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Relation name* !*Target class* !*Role name and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} lod2Solid 
 !<<GM_Solid-section,GM_Solid>> 
-!lod2Solid [0..1]
+ [0..1]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} boundary 
 !<<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> 
-!boundary [*]
+ [*]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} lod3MultiCurve 
 !<<GM_MultiCurve-section,GM_MultiCurve>> 
-!lod3MultiCurve [0..1]
+ [0..1]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} lod1Solid 
 !<<GM_Solid-section,GM_Solid>> 
-!lod1Solid [0..1]
+ [0..1]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} lod0MultiSurface 
 !<<GM_MultiSurface-section,GM_MultiSurface>> 
-!lod0MultiSurface [0..1]
+ [0..1]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} lod0MultiCurve 
 !<<GM_MultiCurve-section,GM_MultiCurve>> 
-!lod0MultiCurve [0..1]
+ [0..1]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} lod0Point 
 !<<GM_Point-section,GM_Point>> 
-!lod0Point [0..1]
+ [0..1]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} lod3Solid 
 !<<GM_Solid-section,GM_Solid>> 
-!lod3Solid [0..1]
+ [0..1]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} lod3MultiSurface 
 !<<GM_MultiSurface-section,GM_MultiSurface>> 
-!lod3MultiSurface [0..1]
+ [0..1]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} lod2MultiSurface 
 !<<GM_MultiSurface-section,GM_MultiSurface>> 
-!lod2MultiSurface [0..1]
+ [0..1]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} lod2MultiCurve 
 !<<GM_MultiCurve-section,GM_MultiCurve>> 
-!lod2MultiCurve [0..1]
+ [0..1]
 !
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
@@ -339,6 +390,15 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractCityObject-section,AbstractCityObject>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
 |=== 
 
 [[AbstractThematicSurface-section]]
@@ -353,32 +413,32 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,25,60",frame=none,grid=none,options="header"]
+[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Relation name* !*Target class* !*Role name and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} lod0MultiCurve 
 !<<GM_MultiCurve-section,GM_MultiCurve>> 
-!lod0MultiCurve [0..1]
+ [0..1]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} lod0MultiSurface 
 !<<GM_MultiSurface-section,GM_MultiSurface>> 
-!lod0MultiSurface [0..1]
+ [0..1]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} lod3MultiSurface 
 !<<GM_MultiSurface-section,GM_MultiSurface>> 
-!lod3MultiSurface [0..1]
+ [0..1]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} lod1MultiSurface 
 !<<GM_MultiSurface-section,GM_MultiSurface>> 
-!lod1MultiSurface [0..1]
+ [0..1]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} pointCloud 
 !<<AbstractPointCloud-section,AbstractPointCloud>> 
-!pointCloud [0..1]
+ [0..1]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} lod2MultiSurface 
 !<<GM_MultiSurface-section,GM_MultiSurface>> 
-!lod2MultiSurface [0..1]
+ [0..1]
 !
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
@@ -402,6 +462,15 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractPhysicalSpace-section,AbstractPhysicalSpace>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
 |=== 
 
 [[AbstractVersion-section]]
@@ -415,6 +484,15 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AbstractVersion is the abstract superclass to represent Version objects. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -430,6 +508,15 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
 |=== 
 
 [[Address-section]]
@@ -444,17 +531,22 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractFeature-section,AbstractFeature>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,25,60",frame=none,grid=none,options="header"]
+[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Relation name* !*Target class* !*Role name and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} multiPoint 
 !<<GM_MultiPoint-section,GM_MultiPoint>> 
-!multiPoint [0..1]
+ [0..1]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} xalAddress 
 !<<XALAddressDetails-section,XALAddressDetails>> 
-!xalAddress [1]
+ [1]
 !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -470,12 +562,12 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,25,60",frame=none,grid=none,options="header"]
+[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Relation name* !*Target class* !*Role name and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} cityModelMember 
 !<<CityModelMember-section,CityModelMember>> 
-!cityModelMember [*]
+ [*]
 !
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
@@ -496,15 +588,15 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! CityObjectRelation represents a specific relation from the city object in which it is included to another city object. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «ObjectType»
 !===
-[cols="15,20,25,60",frame=none,grid=none,options="header"]
+[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Relation name* !*Target class* !*Role name and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} genericAttribute 
 !<<AbstractGenericAttribute-section,AbstractGenericAttribute>> 
-!genericAttribute [*]
+ [*]
 !
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
@@ -528,6 +620,15 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractThematicSurface-section,AbstractThematicSurface>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
 |=== 
 
 [[DoubleBetween0and1-section]]
@@ -539,10 +640,19 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! DoubleBetween0and1 is a basic type for values, which are greater or equal than 0 and less or equal than 1. The type is used for color encoding, for example. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «BasicType»
 !{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! valueBetween0and1 (OCL): inv:
 DoubleBetween0and1.allInstances()->forAll( p \| p >=0 and p <= 1 )    
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -555,8 +665,12 @@ DoubleBetween0and1.allInstances()->forAll( p \| p >=0 and p <= 1 )
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! DoubleBetween0and1List is a basic type that represents a list of double values greater or equal than 0 and less or equal than 1. The type is used for color encoding, for example. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «BasicType»
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -576,8 +690,12 @@ DoubleBetween0and1.allInstances()->forAll( p \| p >=0 and p <= 1 )
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! DoubleList is an ordered sequence of double values. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «BasicType»
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -597,8 +715,12 @@ DoubleBetween0and1.allInstances()->forAll( p \| p >=0 and p <= 1 )
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! DoubleOrNilReasonList is a basic type that represents a list of double values and/or nil reasons. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «BasicType»
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -618,8 +740,17 @@ DoubleBetween0and1.allInstances()->forAll( p \| p >=0 and p <= 1 )
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ID is a basic type that represents a unique identifier. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «BasicType»
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -632,23 +763,23 @@ DoubleBetween0and1.allInstances()->forAll( p \| p >=0 and p <= 1 )
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ImplicitGeometry is a geometry representation where the shape is stored only once as a prototypical geometry, for example a tree or other vegetation object, a traffic light or a traffic sign. This prototypic geometry object can be re-used or referenced many times, wherever the corresponding feature occurs in the 3D city model. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «ObjectType»
 !===
-[cols="15,20,25,60",frame=none,grid=none,options="header"]
+[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Relation name* !*Target class* !*Role name and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} appearance 
 !<<AbstractAppearance-section,AbstractAppearance>> 
-!appearance [*]
+ [*]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} relativeGeometry 
 !<<GM_Object-section,GM_Object>> 
-!relativeGeometry [0..1]
+ [0..1]
 !
-!{set:cellbgcolor:#FFFFFF}  
+!{set:cellbgcolor:#FFFFFF} referencePoint 
 !<<GM_Point-section,GM_Point>> 
-!referencePoint [1]
+ [1]
 !
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
@@ -675,10 +806,19 @@ DoubleBetween0and1.allInstances()->forAll( p \| p >=0 and p <= 1 )
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! IntegerBetween0and3 is a basic type for integer values, which are greater or equal than 0 and less or equal than 3. The type is used for encoding the LOD number. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «BasicType»
 !{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! valueBetween0and4 (OCL): inv: 
 IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)    
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -691,8 +831,17 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! IntervalValue is a code list used to specify a time period. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -707,6 +856,10 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! MeasureOrNilReasonList is a basic type that represents a list of double values and/or nil reasons together with a unit of measurement. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<DoubleOrNilReasonList-section,DoubleOrNilReasonList>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «BasicType»
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -726,8 +879,17 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! MimeTypeValue is a code list used to specify the MIME type of a referenced resource. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -740,8 +902,17 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! NilReasonEnumeration is a code list that enumerates the different nil reasons. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -754,8 +925,17 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! OccupantTypeValue is a code list used to classify occupants. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -771,6 +951,15 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<RelationTypeValue-section,RelationTypeValue>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
 |=== 
 
 [[QualifiedAreaTypeValue-section]]
@@ -782,8 +971,17 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! QualifiedAreaTypeValue is a code list used to specify area types. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -796,8 +994,17 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! QualifiedVolumeTypeValue is a code list used to specify volume types. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -810,8 +1017,17 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! RelationTypeValue is a code list used to classify city object relations. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -827,6 +1043,15 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<RelationTypeValue-section,RelationTypeValue>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
 |=== 
 
 [[TopologicRelationTypeValue-section]]
@@ -840,6 +1065,15 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TopologicRelationTypeValue is a code list used to classify topological city object relations. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<RelationTypeValue-section,RelationTypeValue>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -856,6 +1090,15 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «BasicType»
 !{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! lengthOfList (OCL): inv: self.list->size() = 4    
 !===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
 |=== 
 
 [[TransformationMatrix3x4-section]]
@@ -870,6 +1113,15 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<DoubleList-section,DoubleList>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «BasicType»
 !{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! lengthOfList (OCL): inv: self.list->size() = 12    
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -886,6 +1138,15 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «BasicType»
 !{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! lengthOfList (OCL): inv: self.list->size() = 16    
 !===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
 |=== 
 
 [[AbstractGenericAttribute-section]]
@@ -897,8 +1158,17 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AbstractGenericAttribute is the abstract superclass for all types of generic attributes. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -911,8 +1181,12 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! CityModelMember is a union type that enumerates the different types of objects that can occur as members of a city model. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «Union»
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -940,8 +1214,12 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! DoubleOrNilReason is a union type that allows for choosing between a double value and a nil reason. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «Union»
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -963,8 +1241,12 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ExternalReference is a reference to a corresponding object in another information system, for example in the German cadastre (ALKIS), the German topographic information system (ATKIS), or the OS UK MasterMap®. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -988,8 +1270,12 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! NilReason is a union type that allows for choosing between two different types of nil reason. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «Union»
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -1011,8 +1297,12 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! Occupancy is an application-dependent indication of what is contained by a feature. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -1036,8 +1326,12 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! QualifiedArea is an application-dependent measure of the area of a space or of a thematic surface. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -1059,8 +1353,12 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! QualifiedVolume is an application-dependent measure of the volume of a space. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -1082,8 +1380,12 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! RelativeToTerrain enumerates the spatial relations of a city object relative to terrain in a qualitative way. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -1111,8 +1413,12 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! RelativeToWater enumerates the spatial relations of a city object relative to the water surface in a qualitative way. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -1142,8 +1448,12 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! SpaceType is an enumeration that characterises a space according to its closure properties. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -1167,8 +1477,17 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! XALAddressDetails represents address details according to the OASIS xAL standard. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
   

@@ -1,5 +1,5 @@
-[[Dynamizer-package]]
-==== *Package*
+[[Dynamizer-package-dd]]
+=== *Dynamizer Data Dictionary*
 
 [cols="1a"]
 |===
@@ -14,17 +14,12 @@
 
 |===
 |Editing instructions:
-| 1) For all classes
-| {nbsp}{nbsp}{nbsp}a) If a stereotype value is "<<←section,>>", change it to "none"
-| {nbsp}{nbsp}{nbsp}b) If a subclass value is not provided, set it to "none"
-| {nbsp}{nbsp}{nbsp}c) If a multiplicity value is not provided, set it to "1" 
-| {nbsp}{nbsp}{nbsp}d) If the Role Name of a relation is not provided, delete the Role Name row
-| {nbsp}{nbsp}{nbsp}e) If the stereotype of an attribute is not provided, set it to <<Property>>
-| 2) For all classes with the "CodeList" stereotype 
-| {nbsp}{nbsp}{nbsp}a) Copy the name and description into the table in the Code List section
-| {nbsp}{nbsp}{nbsp}b) Delete the class
-| 3) If there are no code lists, then delete the Code List section
-| 4) Delete these instructions when done
+| 1) Delete all tables for CodeLists 
+| 2) If a subclass value is "<<←section,>>", change it to "none"
+| 3) If a multiplicity value is not provided, set it to "1" 
+| 4) If there are no entries in the role subtable, delete that subtable
+| 5) If there are no entries in the attrubute subtable, delete that subtable
+| 6) Delete these instructions when done
 |===
 
 ==== *Classes*
@@ -41,27 +36,21 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractTimeseries-section,AbstractTimeseries>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} observationProperty  |<<CharacterString-section,CharacterString>>  |Specifies the phenomenon for which the atomic timeseries provides observation values.
+!{set:cellbgcolor:#FFFFFF} observationProperty  !<<CharacterString-section,CharacterString>>  !Specifies the phenomenon for which the atomic timeseries provides observation values.
  
-|{set:cellbgcolor:#FFFFFF} uom  |<<CharacterString-section,CharacterString>>  [0..1] |Specifies the unit of measurement of the observation values.
-|===
+!{set:cellbgcolor:#FFFFFF} uom  !<<CharacterString-section,CharacterString>>  [0..1] !Specifies the unit of measurement of the observation values.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[AbstractTimeseries-section]]
 ===== *Class AbstractTimeseries*
 
@@ -74,27 +63,21 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractFeature-section,AbstractFeature>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} firstTimestamp  |<<TM_Position-section,TM_Position>>  [0..1] |Specifies the beginning of the timeseries.
+!{set:cellbgcolor:#FFFFFF} firstTimestamp  !<<TM_Position-section,TM_Position>>  [0..1] !Specifies the beginning of the timeseries.
  
-|{set:cellbgcolor:#FFFFFF} lastTimestamp  |<<TM_Position-section,TM_Position>>  [0..1] |Specifies the end of the timeseries.
-|===
+!{set:cellbgcolor:#FFFFFF} lastTimestamp  !<<TM_Position-section,TM_Position>>  [0..1] !Specifies the end of the timeseries.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[AuthenticationTypeValue-section]]
 ===== *Class AuthenticationTypeValue*
 
@@ -107,23 +90,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[CompositeTimeseries-section]]
 ===== *Class CompositeTimeseries*
 
@@ -136,26 +113,21 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractTimeseries-section,AbstractTimeseries>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} component 
+!<<TimeseriesComponent-section,TimeseriesComponent>> 
+ [1..*]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|{set:cellbgcolor:#FFFFFF} 
-|<<TimeseriesComponent-section,TimeseriesComponent>> 
-|
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[Dynamizer-section]]
 ===== *Class Dynamizer*
 
@@ -168,35 +140,31 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractDynamizer-section,AbstractDynamizer>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|{set:cellbgcolor:#FFFFFF} 
-|<<AbstractTimeseries-section,AbstractTimeseries>> 
-|
-|{set:cellbgcolor:#FFFFFF} 
-|<<SensorConnection-section,SensorConnection>> 
-|
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} dynamicData 
+!<<AbstractTimeseries-section,AbstractTimeseries>> 
+ [0..1]
+!
+!{set:cellbgcolor:#FFFFFF} sensorConnection 
+!<<SensorConnection-section,SensorConnection>> 
+ [0..1]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} attributeRef  |<<CharacterString-section,CharacterString>>  |Specifies the attribute of a CityGML feature whose value is overridden or replaced by the (dynamic) values specified by the Dynamizer.
+!{set:cellbgcolor:#FFFFFF} attributeRef  !<<CharacterString-section,CharacterString>>  !Specifies the attribute of a CityGML feature whose value is overridden or replaced by the (dynamic) values specified by the Dynamizer.
  
-|{set:cellbgcolor:#FFFFFF} endTime  |<<TM_Position-section,TM_Position>>  [0..1] |Specifies the end of the time span for which the Dynamizer provides dynamic values.
+!{set:cellbgcolor:#FFFFFF} endTime  !<<TM_Position-section,TM_Position>>  [0..1] !Specifies the end of the time span for which the Dynamizer provides dynamic values.
  
-|{set:cellbgcolor:#FFFFFF} startTime  |<<TM_Position-section,TM_Position>>  [0..1] |Specifies the beginning of the time span for which the Dynamizer provides dynamic values.
-|===
+!{set:cellbgcolor:#FFFFFF} startTime  !<<TM_Position-section,TM_Position>>  [0..1] !Specifies the beginning of the time span for which the Dynamizer provides dynamic values.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[GenericTimeseries-section]]
 ===== *Class GenericTimeseries*
 
@@ -209,28 +177,23 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractAtomicTimeseries-section,AbstractAtomicTimeseries>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|{set:cellbgcolor:#FFFFFF} 
-|<<TimeValuePair-section,TimeValuePair>> 
-|
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} timeValuePair 
+!<<TimeValuePair-section,TimeValuePair>> 
+ [1..*]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} valueType  |<<TimeseriesTypeValue-section,TimeseriesTypeValue>>  |Indicates the specific type of all time-value-pairs that are part of the GenericTimeseries.
-|===
+!{set:cellbgcolor:#FFFFFF} valueType  !<<TimeseriesTypeValue-section,TimeseriesTypeValue>>  !Indicates the specific type of all time-value-pairs that are part of the GenericTimeseries.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[SensorConnectionTypeValue-section]]
 ===== *Class SensorConnectionTypeValue*
 
@@ -243,23 +206,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[StandardFileTimeseries-section]]
 ===== *Class StandardFileTimeseries*
 
@@ -272,29 +229,23 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractAtomicTimeseries-section,AbstractAtomicTimeseries>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} fileLocation  |<<URI-section,URI>>  |Specifies the URI that points to the external timeseries file.
+!{set:cellbgcolor:#FFFFFF} fileLocation  !<<URI-section,URI>>  !Specifies the URI that points to the external timeseries file.
  
-|{set:cellbgcolor:#FFFFFF} fileType  |<<StandardFileTypeValue-section,StandardFileTypeValue>>  |Specifies the format used to represent the timeseries data.
+!{set:cellbgcolor:#FFFFFF} fileType  !<<StandardFileTypeValue-section,StandardFileTypeValue>>  !Specifies the format used to represent the timeseries data.
  
-|{set:cellbgcolor:#FFFFFF} mimeType  |<<MimeTypeValue-section,MimeTypeValue>>  [0..1] |Specifies the MIME type of the external timeseries file.
-|===
+!{set:cellbgcolor:#FFFFFF} mimeType  !<<MimeTypeValue-section,MimeTypeValue>>  [0..1] !Specifies the MIME type of the external timeseries file.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[StandardFileTypeValue-section]]
 ===== *Class StandardFileTypeValue*
 
@@ -307,23 +258,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[TabulatedFileTimeseries-section]]
 ===== *Class TabulatedFileTimeseries*
 
@@ -336,51 +281,45 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractAtomicTimeseries-section,AbstractAtomicTimeseries>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} decimalSymbol  !<<Character-section,Character>>  [0..1] !Indicates which symbol is used to separate the integer part from the fractional part of a decimal number.
+ 
+!{set:cellbgcolor:#FFFFFF} fieldSeparator  !<<CharacterString-section,CharacterString>>  !Indicates which symbol is used to separate the individual values in the tabulated file.
+ 
+!{set:cellbgcolor:#FFFFFF} fileLocation  !<<URI-section,URI>>  !Specifies the URI that points to the external timeseries file.
+ 
+!{set:cellbgcolor:#FFFFFF} fileType  !<<TabulatedFileTypeValue-section,TabulatedFileTypeValue>>  !Specifies the format used to represent the timeseries data.
+ 
+!{set:cellbgcolor:#FFFFFF} idColumnName  !<<CharacterString-section,CharacterString>>  [0..1] !Specifies the name of the column that stores the identifier of the time-value-pair.
+ 
+!{set:cellbgcolor:#FFFFFF} idColumnNo  !<<Integer-section,Integer>>  [0..1] !Specifies the number of the column that stores the identifier of the time-value-pair.
+ 
+!{set:cellbgcolor:#FFFFFF} idValue  !<<CharacterString-section,CharacterString>>  [0..1] !Specifies the value of the identifier for which the time-value-pairs are to be selected.
+ 
+!{set:cellbgcolor:#FFFFFF} mimeType  !<<MimeTypeValue-section,MimeTypeValue>>  [0..1] !Specifies the MIME type of the external timeseries file.
+ 
+!{set:cellbgcolor:#FFFFFF} numberOfHeaderLines  !<<Integer-section,Integer>>  [0..1] !Indicates the number of lines at the beginning of the tabulated file that represent headers.
+ 
+!{set:cellbgcolor:#FFFFFF} timeColumnName  !<<CharacterString-section,CharacterString>>  [0..1] !Specifies the name of the column that stores the timestamp of the time-value-pair.
+ 
+!{set:cellbgcolor:#FFFFFF} timeColumnNo  !<<Integer-section,Integer>>  [0..1] !Specifies the number of the column that stores the timestamp of the time-value-pair.
+ 
+!{set:cellbgcolor:#FFFFFF} valueColumnName  !<<CharacterString-section,CharacterString>>  [0..1] !Specifies the name of the column that stores the value of the time-value-pair.
+ 
+!{set:cellbgcolor:#FFFFFF} valueColumnNo  !<<Integer-section,Integer>>  [0..1] !Specifies the number of the column that stores the value of the time-value-pair.
+ 
+!{set:cellbgcolor:#FFFFFF} valueType  !<<TimeseriesTypeValue-section,TimeseriesTypeValue>>  !Indicates the specific type of the timeseries data.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
- 
-|{set:cellbgcolor:#FFFFFF} decimalSymbol  |<<Character-section,Character>>  [0..1] |Indicates which symbol is used to separate the integer part from the fractional part of a decimal number.
- 
-|{set:cellbgcolor:#FFFFFF} fieldSeparator  |<<CharacterString-section,CharacterString>>  |Indicates which symbol is used to separate the individual values in the tabulated file.
- 
-|{set:cellbgcolor:#FFFFFF} fileLocation  |<<URI-section,URI>>  |Specifies the URI that points to the external timeseries file.
- 
-|{set:cellbgcolor:#FFFFFF} fileType  |<<TabulatedFileTypeValue-section,TabulatedFileTypeValue>>  |Specifies the format used to represent the timeseries data.
- 
-|{set:cellbgcolor:#FFFFFF} idColumnName  |<<CharacterString-section,CharacterString>>  [0..1] |Specifies the name of the column that stores the identifier of the time-value-pair.
- 
-|{set:cellbgcolor:#FFFFFF} idColumnNo  |<<Integer-section,Integer>>  [0..1] |Specifies the number of the column that stores the identifier of the time-value-pair.
- 
-|{set:cellbgcolor:#FFFFFF} idValue  |<<CharacterString-section,CharacterString>>  [0..1] |Specifies the value of the identifier for which the time-value-pairs are to be selected.
- 
-|{set:cellbgcolor:#FFFFFF} mimeType  |<<MimeTypeValue-section,MimeTypeValue>>  [0..1] |Specifies the MIME type of the external timeseries file.
- 
-|{set:cellbgcolor:#FFFFFF} numberOfHeaderLines  |<<Integer-section,Integer>>  [0..1] |Indicates the number of lines at the beginning of the tabulated file that represent headers.
- 
-|{set:cellbgcolor:#FFFFFF} timeColumnName  |<<CharacterString-section,CharacterString>>  [0..1] |Specifies the name of the column that stores the timestamp of the time-value-pair.
- 
-|{set:cellbgcolor:#FFFFFF} timeColumnNo  |<<Integer-section,Integer>>  [0..1] |Specifies the number of the column that stores the timestamp of the time-value-pair.
- 
-|{set:cellbgcolor:#FFFFFF} valueColumnName  |<<CharacterString-section,CharacterString>>  [0..1] |Specifies the name of the column that stores the value of the time-value-pair.
- 
-|{set:cellbgcolor:#FFFFFF} valueColumnNo  |<<Integer-section,Integer>>  [0..1] |Specifies the number of the column that stores the value of the time-value-pair.
- 
-|{set:cellbgcolor:#FFFFFF} valueType  |<<TimeseriesTypeValue-section,TimeseriesTypeValue>>  |Indicates the specific type of the timeseries data.
-|===
 [[TabulatedFileTypeValue-section]]
 ===== *Class TabulatedFileTypeValue*
 
@@ -393,23 +332,17 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
-|===
 [[SensorConnection-section]]
 ===== *Class SensorConnection*
 
@@ -422,52 +355,47 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} sensorLocation 
+!<<AbstractCityObject-section,AbstractCityObject>> 
+ [0..1]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} authType  !<<AuthenticationTypeValue-section,AuthenticationTypeValue>>  [0..1] !Specifies the type of authentication required to be able to access the Sensor API.
+ 
+!{set:cellbgcolor:#FFFFFF} baseURL  !<<URI-section,URI>>  [0..1] !Specifies the base URL of the Sensor API request.
+ 
+!{set:cellbgcolor:#FFFFFF} connectionType  !<<SensorConnectionTypeValue-section,SensorConnectionTypeValue>>  !Indicates the type of Sensor API to which the SensorConnection refers.
+ 
+!{set:cellbgcolor:#FFFFFF} datastreamID  !<<CharacterString-section,CharacterString>>  [0..1] !Specifies the datastream that is retrieved by the SensorConnection.
+ 
+!{set:cellbgcolor:#FFFFFF} linkToObservation  !<<CharacterString-section,CharacterString>>  [0..1] !Specifies the complete URL to the observation request.
+ 
+!{set:cellbgcolor:#FFFFFF} linkToSensorDescription  !<<CharacterString-section,CharacterString>>  [0..1] !Specifies the complete URL to the sensor description request.
+ 
+!{set:cellbgcolor:#FFFFFF} mqttServer  !<<CharacterString-section,CharacterString>>  [0..1] !Specifies the name of the MQTT Server. This attribute is relevant when the MQTT Protocol is used to connect to a Sensor API.
+ 
+!{set:cellbgcolor:#FFFFFF} mqttTopic  !<<CharacterString-section,CharacterString>>  [0..1] !Names the specific datastream that is retrieved by the SensorConnection.
+ 
+!{set:cellbgcolor:#FFFFFF} observationID  !<<CharacterString-section,CharacterString>>  [0..1] !Specifies the unique identifier of the observation that is retrieved by the SensorConnection.
+ 
+!{set:cellbgcolor:#FFFFFF} observationProperty  !<<CharacterString-section,CharacterString>>  !Specifies the phenomenon for which the SensorConnection provides observations.
+ 
+!{set:cellbgcolor:#FFFFFF} sensorID  !<<CharacterString-section,CharacterString>>  [0..1] !Specifies the unique identifier of the sensor from which the SensorConnection retrieves observations.
+ 
+!{set:cellbgcolor:#FFFFFF} sensorName  !<<CharacterString-section,CharacterString>>  [0..1] !Specifies the name of the sensor from which the SensorConnection retrieves observations.
+ 
+!{set:cellbgcolor:#FFFFFF} uom  !<<CharacterString-section,CharacterString>>  [0..1] !Specifies the unit of measurement of the observations.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|{set:cellbgcolor:#FFFFFF} 
-|<<AbstractCityObject-section,AbstractCityObject>> 
-|
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
- 
-|{set:cellbgcolor:#FFFFFF} authType  |<<AuthenticationTypeValue-section,AuthenticationTypeValue>>  [0..1] |Specifies the type of authentication required to be able to access the Sensor API.
- 
-|{set:cellbgcolor:#FFFFFF} baseURL  |<<URI-section,URI>>  [0..1] |Specifies the base URL of the Sensor API request.
- 
-|{set:cellbgcolor:#FFFFFF} connectionType  |<<SensorConnectionTypeValue-section,SensorConnectionTypeValue>>  |Indicates the type of Sensor API to which the SensorConnection refers.
- 
-|{set:cellbgcolor:#FFFFFF} datastreamID  |<<CharacterString-section,CharacterString>>  [0..1] |Specifies the datastream that is retrieved by the SensorConnection.
- 
-|{set:cellbgcolor:#FFFFFF} linkToObservation  |<<CharacterString-section,CharacterString>>  [0..1] |Specifies the complete URL to the observation request.
- 
-|{set:cellbgcolor:#FFFFFF} linkToSensorDescription  |<<CharacterString-section,CharacterString>>  [0..1] |Specifies the complete URL to the sensor description request.
- 
-|{set:cellbgcolor:#FFFFFF} mqttServer  |<<CharacterString-section,CharacterString>>  [0..1] |Specifies the name of the MQTT Server. This attribute is relevant when the MQTT Protocol is used to connect to a Sensor API.
- 
-|{set:cellbgcolor:#FFFFFF} mqttTopic  |<<CharacterString-section,CharacterString>>  [0..1] |Names the specific datastream that is retrieved by the SensorConnection.
- 
-|{set:cellbgcolor:#FFFFFF} observationID  |<<CharacterString-section,CharacterString>>  [0..1] |Specifies the unique identifier of the observation that is retrieved by the SensorConnection.
- 
-|{set:cellbgcolor:#FFFFFF} observationProperty  |<<CharacterString-section,CharacterString>>  |Specifies the phenomenon for which the SensorConnection provides observations.
- 
-|{set:cellbgcolor:#FFFFFF} sensorID  |<<CharacterString-section,CharacterString>>  [0..1] |Specifies the unique identifier of the sensor from which the SensorConnection retrieves observations.
- 
-|{set:cellbgcolor:#FFFFFF} sensorName  |<<CharacterString-section,CharacterString>>  [0..1] |Specifies the name of the sensor from which the SensorConnection retrieves observations.
- 
-|{set:cellbgcolor:#FFFFFF} uom  |<<CharacterString-section,CharacterString>>  [0..1] |Specifies the unit of measurement of the observations.
-|===
 [[TimeseriesComponent-section]]
 ===== *Class TimeseriesComponent*
 
@@ -480,30 +408,25 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|{set:cellbgcolor:#FFFFFF} 
-|<<AbstractTimeseries-section,AbstractTimeseries>> 
-|
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} timeseries 
+!<<AbstractTimeseries-section,AbstractTimeseries>> 
+ [1]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} additionalGap  |<<TM_Duration-section,TM_Duration>>  [0..1] |Specifies how much extra time is added after all repetitions as an additional gap.
+!{set:cellbgcolor:#FFFFFF} additionalGap  !<<TM_Duration-section,TM_Duration>>  [0..1] !Specifies how much extra time is added after all repetitions as an additional gap.
  
-|{set:cellbgcolor:#FFFFFF} repetitions  |<<Integer-section,Integer>>  |Specifies how often the timeseries that is referenced by the TimeseriesComponent should be iterated.
-|===
+!{set:cellbgcolor:#FFFFFF} repetitions  !<<Integer-section,Integer>>  !Specifies how often the timeseries that is referenced by the TimeseriesComponent should be iterated.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
+
 [[TimeseriesTypeValue-section]]
 ===== *Class TimeseriesTypeValue*
 
@@ -516,39 +439,33 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  
 !===
-|===
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} integer  !<<-section,>>  !Indicates that the values of the GenericTimeseries are of type "Integer".
+ 
+!{set:cellbgcolor:#FFFFFF} double  !<<-section,>>  !Indicates that the values of the GenericTimeseries are of type "Double".
+ 
+!{set:cellbgcolor:#FFFFFF} string  !<<-section,>>  !Indicates that the values of the GenericTimeseries are of type "String".
+ 
+!{set:cellbgcolor:#FFFFFF} geometry  !<<-section,>>  !Indicates that the values of the GenericTimeseries are geometries.
+ 
+!{set:cellbgcolor:#FFFFFF} uri  !<<-section,>>  !Indicates that the values of the GenericTimeseries are of type "URI".
+ 
+!{set:cellbgcolor:#FFFFFF} bool  !<<-section,>>  !Indicates that the values of the GenericTimeseries are of type "Boolean".
+ 
+!{set:cellbgcolor:#FFFFFF} implicitGeometry  !<<-section,>>  !Indicates that the values of the GenericTimeseries are of type "ImplicitGeometry".
+ 
+!{set:cellbgcolor:#FFFFFF} appearance  !<<-section,>>  !Indicates that the values of the GenericTimeseries are of type "Appearance".
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
- 
-|{set:cellbgcolor:#FFFFFF} integer  |<<-section,>>  |Indicates that the values of the GenericTimeseries are of type "Integer".
- 
-|{set:cellbgcolor:#FFFFFF} double  |<<-section,>>  |Indicates that the values of the GenericTimeseries are of type "Double".
- 
-|{set:cellbgcolor:#FFFFFF} string  |<<-section,>>  |Indicates that the values of the GenericTimeseries are of type "String".
- 
-|{set:cellbgcolor:#FFFFFF} geometry  |<<-section,>>  |Indicates that the values of the GenericTimeseries are geometries.
- 
-|{set:cellbgcolor:#FFFFFF} uri  |<<-section,>>  |Indicates that the values of the GenericTimeseries are of type "URI".
- 
-|{set:cellbgcolor:#FFFFFF} bool  |<<-section,>>  |Indicates that the values of the GenericTimeseries are of type "Boolean".
- 
-|{set:cellbgcolor:#FFFFFF} implicitGeometry  |<<-section,>>  |Indicates that the values of the GenericTimeseries are of type "ImplicitGeometry".
- 
-|{set:cellbgcolor:#FFFFFF} appearance  |<<-section,>>  |Indicates that the values of the GenericTimeseries are of type "Appearance".
-|===
 [[TimeValuePair-section]]
 ===== *Class TimeValuePair*
 
@@ -561,50 +478,34 @@ Unless otherwise specified, all attributes have the stereotype «Property».
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
 !===
-|===
-
-*Relations* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,25,60"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Role name* |*Target class and multiplicity* |*Definition*
-|===
-
-*Attributes* +
-Unless otherwise specified, all attributes have the stereotype «Property».
-
-[cols="15,30,55"]
-|===
-|{set:cellbgcolor:#DDDDDD} *Attribute* |*Value type and multiplicity* |*Definition*
+[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-|{set:cellbgcolor:#FFFFFF} appearanceValue  |<<AbstractAppearance-section,AbstractAppearance>>  [0..1] |Specifies the "Appearance" value of the TimeValuePair.
+!{set:cellbgcolor:#FFFFFF} appearanceValue  !<<AbstractAppearance-section,AbstractAppearance>>  [0..1] !Specifies the "Appearance" value of the TimeValuePair.
  
-|{set:cellbgcolor:#FFFFFF} boolValue  |<<Boolean-section,Boolean>>  [0..1] |Specifies the "Boolean" value of the TimeValuePair.
+!{set:cellbgcolor:#FFFFFF} boolValue  !<<Boolean-section,Boolean>>  [0..1] !Specifies the "Boolean" value of the TimeValuePair.
  
-|{set:cellbgcolor:#FFFFFF} doubleValue  |<<Real-section,Real>>  [0..1] |Specifies the "Double" value of the TimeValuePair.
+!{set:cellbgcolor:#FFFFFF} doubleValue  !<<Real-section,Real>>  [0..1] !Specifies the "Double" value of the TimeValuePair.
  
-|{set:cellbgcolor:#FFFFFF} geometryValue  |<<GM_Object-section,GM_Object>>  [0..1] |Specifies the geometry value of the TimeValuePair.
+!{set:cellbgcolor:#FFFFFF} geometryValue  !<<GM_Object-section,GM_Object>>  [0..1] !Specifies the geometry value of the TimeValuePair.
  
-|{set:cellbgcolor:#FFFFFF} implicitGeometryValue  |<<ImplicitGeometry-section,ImplicitGeometry>>  [0..1] |Specifies the "ImplicitGeometry" value of the TimeValuePair.
+!{set:cellbgcolor:#FFFFFF} implicitGeometryValue  !<<ImplicitGeometry-section,ImplicitGeometry>>  [0..1] !Specifies the "ImplicitGeometry" value of the TimeValuePair.
  
-|{set:cellbgcolor:#FFFFFF} intValue  |<<Integer-section,Integer>>  [0..1] |Specifies the "Integer" value of the TimeValuePair.
+!{set:cellbgcolor:#FFFFFF} intValue  !<<Integer-section,Integer>>  [0..1] !Specifies the "Integer" value of the TimeValuePair.
  
-|{set:cellbgcolor:#FFFFFF} stringValue  |<<CharacterString-section,CharacterString>>  [0..1] |Specifies the "String" value of the TimeValuePair.
+!{set:cellbgcolor:#FFFFFF} stringValue  !<<CharacterString-section,CharacterString>>  [0..1] !Specifies the "String" value of the TimeValuePair.
  
-|{set:cellbgcolor:#FFFFFF} timestamp  |<<TM_Position-section,TM_Position>>  |Specifies the timepoint at which the value of the TimeValuePair is valid.
+!{set:cellbgcolor:#FFFFFF} timestamp  !<<TM_Position-section,TM_Position>>  !Specifies the timepoint at which the value of the TimeValuePair is valid.
  
-|{set:cellbgcolor:#FFFFFF} uriValue  |<<URI-section,URI>>  [0..1] |Specifies the "URI" value of the TimeValuePair.
-|===
-
-==== *Code Lists*
-
-[cols="1,4"]  
-|===
-^|*Code List* ^|*Definition*
-| |
-| |
-|===
+!{set:cellbgcolor:#FFFFFF} uriValue  !<<URI-section,URI>>  [0..1] !Specifies the "URI" value of the TimeValuePair.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
   
 
 
