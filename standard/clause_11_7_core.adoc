@@ -15,7 +15,7 @@ The Core module defines the basic concepts and components of city models. This r
 |<<space-concepts-section,Space Concepts>>|Defines the concepts of space as used in the CityGML model
 |<<geometry-lod-section,Geometry and LOD>>|Defines the geometry and Level Of Detail concepts
 |<<CityGML-section,CityGML>>|The core elemtents of the model. where it all comes together
-|<<b-e-c-section,Basic Types, Enumerations and Codelist>> |Defines the little things which make this model work.
+|<<b-e-c-section,Types, Enumerations and Codelist>> |Defines the little things which make this model work.
 |===
 
 ==== Requirements
@@ -61,25 +61,9 @@ Space boundaries, in contrast, are entities with a real extent in the real world
 .UML Space Concepts
 image::figures/Core/Core-Space_concepts.png[]
 
-The Space Concept classes defined in the CityGML UML model are introduced in the <<space-concepts-class-table>> table. More detail about these classes can be found in the <<data-dictionaries-section,Data Dictionaries>> section. 
+The Space Concept classes defined in the CityGML UML model are introduced in the <<Core-spatial-class-table>> table. More detail about these classes can be found in the <<data-dictionaries-section,Data Dictionaries>> section. 
 
-[[space-concepts-class-table]]
-.Space Concept Classes used in CityGML
-[cols="2,6",options="headers"]
-|===
-^|*Class Name* ^|*Description*
-|<<AbstractCityObject-section,AbstractCityObject>> |AbstractCityObject is the abstract superclass of all thematic classes within the CityGML data model.
-|<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> |AbstractFeatureWithLifespan is the base class for all CityGML features. It allows the optional specification of the real-world and database times for the existence of each feature.
-|<<AbstractLogicalSpace-section,AbstractLogicalSpace>> |AbstractLogicalSpace is the abstract superclass for all types of logical spaces. Logical space refers to spaces that are not bounded by physical surfaces but are defined according to thematic considerations.
-|<<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> |AbstractOccupiedSpace is the abstract superclass for all types of physically occupied spaces. Occupied space refers to spaces that are partially or entirely filled with matter.
-|<<AbstractPhysicalSpace-section,AbstractPhysicalSpace>> |AbstractPhysicalSpace is the abstract superclass for all types of physical spaces. Physical space refers to spaces that are fully or partially bounded by physical objects.
-|<<AbstractSpace-section,AbstractSpace>> |AbstractSpace is the abstract superclass for all types of spaces. A space is an entity of volumetric extent in the real world.
-|<<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> |AbstractSpaceBoundary is the abstract superclass for all types of space boundaries. A space boundary is an entity with areal extent in the real world. Space boundaries are objects that bound a Space. They also realize the contact between adjacent spaces.
-|<<AbstractThematicSurface-section,AbstractThematicSurface>> |AbstractThematicSurface is the abstract superclass for all types of thematic surfaces.
-|<<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> |AbstractUnoccupiedSpace is the abstract superclass for all types of physically unoccupied spaces. Unoccupied space refers to spaces that are entirely or mostly free of matter.
-|<<CityModel-section,CityModel>> |CityModel is the container for all objects belonging to a city model.
-|<<ClosureSurface-section,ClosureSurface>> |ClosureSurface is a special type of thematic surface used to close holes in volumetric objects. Closure surfaces are virtual (non-physical) surfaces.
-|===
+include::summaries/Core-Spatial.adoc[]
 
 [[geometry-lod-section]]
 ==== Geometry and LOD
@@ -93,22 +77,11 @@ The thematic classes, such as building, tunnel, road, land use, water body, or c
 .UML Geometry and LoD Concepts
 image::figures/Core/Core-Geometry_and_LoD_concept.png[]
 
-The Geometry and LOD Concept classes defined in the CityGML UML model are introduced in the <<geometry-lod-class-table>> table. More detail about these classes can be found in the <<data-dictionaries-section,Data Dictionaries>> section.
+The Geometry and LOD Concept classes defined in the CityGML UML model are introduced in the <<Core-geometry-class-table>> table. More detail about these classes can be found in the <<data-dictionaries-section,Data Dictionaries>> section.
 
 Of particular note is the Implicit Geometry concept. Many of the objects encountered in a city landscape have the same geometry. How many types of street lamps can there be? An Implicit Geometry captures that geometry once, and re-uses that one geometry for all similar street lamp objects. 
 
-[[geometry-lod-class-table]]
-.Geometry and LOD Classes used in CityGML
-[cols="2,6",options="headers"]
-|===
-^|*Class Name* ^|*Description*
-|<<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> |AbstractOccupiedSpace is the abstract superclass for all types of physically occupied spaces. Occupied space refers to spaces that are partially or entirely filled with matter.
-|<<AbstractPhysicalSpace-section,AbstractPhysicalSpace>> |AbstractPhysicalSpace is the abstract superclass for all types of physical spaces. Physical space refers to spaces that are fully or partially bounded by physical objects.
-|<<AbstractPointCloud-section,AbstractPointCloud>> |AbstractPointCloud is the abstract superclass to represent PointCloud objects.
-|<<AbstractSpace-section,AbstractSpace>> |AbstractSpace is the abstract superclass for all types of spaces. A space is an entity of volumetric extent in the real world.
-|<<AbstractThematicSurface-section,AbstractThematicSurface>> |AbstractThematicSurface is the abstract superclass for all types of thematic surfaces.
-|<<ImplicitGeometry-section,ImplicitGeometry>> |ImplicitGeometry is a geometry representation where the shape is stored only once as a prototypical geometry, for example a tree or other vegetation object, a traffic light or a traffic sign. This prototypic geometry object can be re-used or referenced many times, wherever the corresponding feature occurs in the 3D city model.
-|===
+include::summaries/Core-Geometry.adoc[]
 
 [[CityGML-section]]
 ==== CityGML
@@ -121,109 +94,15 @@ The UML diagram of the Core module is depicted in the <<core-uml,Core UML Diagra
 .UML diagram of CityGML’s core module.
 image::figures/Core/Core-Overview.png[]
 
-The Geometry and LOD Concept classes defined in the CityGML UML model are introduced in the <<core-classes-table>> table. More detail about these classes can be found in the <<data-dictionaries-section,Data Dictionaries>> section. 
+The Geometry and LOD Concept classes define the majority of the CityGML Core. However, there are some additional classes required to fill out this section. These classes are introduced in the <<core-class-table>> table. More detail about these classes can be found in the <<data-dictionaries-section,Data Dictionaries>> section. 
 
-include::summaries/Core.adoc[]
+include::summaries/Core-CityModel.adoc[]
 
-[[core-classes-table]]
-.Core Classes used in CityGML
-[cols="2,6",options="headers"]
-|===
-^|*Class Name* ^|*Description*
-|<<AbstractAppearance-section,AbstractAppearance>> |AbstractAppearance is the abstract superclass to represent any kind of appearance objects.
-|<<AbstractCityObject-section,AbstractCityObject>> |AbstractCityObject is the abstract superclass of all thematic classes within the CityGML data model.
-|<<AbstractDynamizer-section,AbstractDynamizer>> |AbstractDynamizer is the abstract superclass to represent Dynamizer objects.
-|<<AbstractFeature-section,AbstractFeature>> |AbstractFeature is the abstract superclass of all feature types within the CityGML data model.
-|<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> |AbstractFeatureWithLifespan is the base class for all CityGML features. It allows the optional specification of the real-world and database times for the existence of each feature.
-|<<AbstractLogicalSpace-section,AbstractLogicalSpace>> |AbstractLogicalSpace is the abstract superclass for all types of logical spaces. Logical space refers to spaces that are not bounded by physical surfaces but are defined according to thematic considerations.
-|<<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> |AbstractOccupiedSpace is the abstract superclass for all types of physically occupied spaces. Occupied space refers to spaces that are partially or entirely filled with matter.
-|<<AbstractPhysicalSpace-section,AbstractPhysicalSpace>> |AbstractPhysicalSpace is the abstract superclass for all types of physical spaces. Physical space refers to spaces that are fully or partially bounded by physical objects.
-|<<AbstractPointCloud-section,AbstractPointCloud>> |AbstractPointCloud is the abstract superclass to represent PointCloud objects.
-|<<AbstractSpace-section,AbstractSpace>> |AbstractSpace is the abstract superclass for all types of spaces. A space is an entity of volumetric extent in the real world.
-|<<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> |AbstractSpaceBoundary is the abstract superclass for all types of space boundaries. A space boundary is an entity with areal extent in the real world. Space boundaries are objects that bound a Space. They also realize the contact between adjacent spaces.
-|<<AbstractThematicSurface-section,AbstractThematicSurface>> |AbstractThematicSurface is the abstract superclass for all types of thematic surfaces.
-|<<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> |AbstractUnoccupiedSpace is the abstract superclass for all types of physically unoccupied spaces. Unoccupied space refers to spaces that are entirely or mostly free of matter.
-|<<AbstractVersion-section,AbstractVersion>> |AbstractVersion is the abstract superclass to represent Version objects.
-|<<AbstractVersionTransition-section,AbstractVersionTransition>> |AbstractVersionTransition is the abstract superclass to represent VersionTransition objects.
-|<<Address-section,Address>> |Address represents an address of a city object.
-|<<CityModel-section,CityModel>> |CityModel is the container for all objects belonging to a city model.
-|<<CityObjectRelation-section,CityObjectRelation>> |CityObjectRelation represents a specific relation from the city object in which it is included to another city object.
-|<<ClosureSurface-section,ClosureSurface>> |ClosureSurface is a special type of thematic surface used to close holes in volumetric objects. Closure surfaces are virtual (non-physical) surfaces.
-|<<ImplicitGeometry-section,ImplicitGeometry>> |ImplicitGeometry is a geometry representation where the shape is stored only once as a prototypical geometry, for example a tree or other vegetation object, a traffic light or a traffic sign. This prototypic geometry object can be re-used or referenced many times, wherever the corresponding feature occurs in the 3D city model.
-|===
+==== Data types, Enumerations and CodeLists
 
-[[b-e-c-section]]
-==== Basic Types, Enumerations, and CodeLists
+While FeatureTypes capture the real-world concepts on the CityGML Conceptual Model, they would be incomplete without the additional concepts from which they are made. These supporting constructs are defined in the following tables. 
 
-.UML Basic Types, Enumerations, and Code Lists
-image::figures/Core/Core-Basic_Types_Enumerations_Codelists.png[]
-
-[[enumeration-class-table]]
-.Enumeration Classes used in CityGML
-[cols="2,6",options="headers"]
-|===
-^|*Class Name* ^|*Description*
-|<<RelativeToTerrain-section,RelativeToTerrain>> |RelativeToTerrain enumerates the spatial relations of a city object relative to terrain in a qualitative way.
-|<<RelativeToWater-section,RelativeToWater>> |RelativeToWater enumerates the spatial relations of a city object relative to the water surface in a qualitative way.
-|<<SpaceType-section,SpaceType>> |SpaceType is an enumeration that characterises a space according to its closure properties.
-|===
-
-[[codelist-class-table]]
-.Code List Classes used in CityGML
-[cols="2,6",options="headers"]
-|===
-^|*Class Name* ^|*Description*
-|<<IntervalValue-section,IntervalValue>> |IntervalValue is a code list used to specify a time period.
-|<<MimeTypeValue-section,MimeTypeValue>> |MimeTypeValue is a code list used to specify the MIME type of a referenced resource.
-|<<NilReasonEnumeration-section,NilReasonEnumeration>> |NilReasonEnumeration is a code list that enumerates the different nil reasons.
-|<<OccupantTypeValue-section,OccupantTypeValue>> |OccupantTypeValue is a code list used to classify occupants.
-|<<OtherRelationTypeValue-section,OtherRelationTypeValue>> |OtherRelationTypeValue is a code list used to classify other types of city object relations.
-|<<QualifiedAreaTypeValue-section,QualifiedAreaTypeValue>> |QualifiedAreaTypeValue is a code list used to specify area types.
-|<<QualifiedVolumeTypeValue-section,QualifiedVolumeTypeValue>> |QualifiedVolumeTypeValue is a code list used to specify volume types.
-|<<RelationTypeValue-section,RelationTypeValue>> |RelationTypeValue is a code list used to classify city object relations.
-|<<TemporalRelationTypeValue-section,TemporalRelationTypeValue>> |TemporalRelationTypeValue is a code list used to classify temporal city object relations.
-|<<TopologicRelationTypeValue-section,TopologicRelationTypeValue>> |TopologicRelationTypeValue is a code list used to classify topological city object relations.
-|===
-
-[[datatype-class-table]]
-.Data Type Classes used in CityGML
-[cols="2,6",options="headers"]
-|===
-^|*Class Name* ^|*Description*
-|<<AbstractGenericAttribute-section,AbstractGenericAttribute>> |AbstractGenericAttribute is the abstract superclass for all types of generic attributes.
-|<<ExternalReference-section,ExternalReference>> |ExternalReference is a reference to a corresponding object in another information system, for example in the German cadastre (ALKIS), the German topographic information system (ATKIS), or the OS UK MasterMap®.
-|<<Occupancy-section,Occupancy>> |Occupancy is an application-dependent indication of what is contained by a feature.
-|<<QualifiedArea-section,QualifiedArea>> |QualifiedArea is an application-dependent measure of the area of a space or of a thematic surface.
-|<<QualifiedVolume-section,QualifiedVolume>> |QualifiedVolume is an application-dependent measure of the volume of a space.
-|<<XALAddressDetails-section,XALAddressDetails>> |XALAddressDetails represents address details according to the OASIS xAL standard.
-|===
-
-[[union-class-table]]
-.Union Classes used in CityGML
-[cols="2,6",options="headers"]
-|===
-^|*Class Name* ^|*Description*
-|<<CityModelMember-section,CityModelMember>> |CityModelMember is a union type that enumerates the different types of objects that can occur as members of a city model.
-|<<DoubleOrNilReason-section,DoubleOrNilReason>> |DoubleOrNilReason is a union type that allows for choosing between a double value and a nil reason.
-|<<NilReason-section,NilReason>> |NilReason is a union type that allows for choosing between two different types of nil reason.
-|===
-
-[[basictype-class-table]]
-.Basic Type Classes used in CityGML
-[cols="2,6",options="headers"]
-|===
-^|*Class Name* ^|*Description*
-|<<DoubleBetween0and1-section,DoubleBetween0and1>> |DoubleBetween0and1 is a basic type for values, which are greater or equal than 0 and less or equal than 1. The type is used for color encoding, for example.
-|<<DoubleBetween0and1List-section,DoubleBetween0and1List>> |DoubleBetween0and1List is a basic type that represents a list of double values greater or equal than 0 and less or equal than 1. The type is used for color encoding, for example.
-|<<DoubleList-section,DoubleList>> |DoubleList is an ordered sequence of double values.
-|<<DoubleOrNilReasonList-section,DoubleOrNilReasonList>> |DoubleOrNilReasonList is a basic type that represents a list of double values and/or nil reasons.
-|<<ID-section,ID>> |ID is a basic type that represents a unique identifier.
-|<<IntegerBetween0and3-section,IntegerBetween0and3>> |IntegerBetween0and3 is a basic type for integer values, which are greater or equal than 0 and less or equal than 3. The type is used for encoding the LOD number.
-|<<MeasureOrNilReasonList-section,MeasureOrNilReasonList>> |MeasureOrNilReasonList is a basic type that represents a list of double values and/or nil reasons together with a unit of measurement.
-|<<TransformationMatrix2x2-section,TransformationMatrix2x2>> |TransformationMatrix2x2 is a 2 by 2 matrix represented as a list of four double values in row major order.
-|<<TransformationMatrix3x4-section,TransformationMatrix3x4>> |TransformationMatrix3x4 is a 3 by 4 matrix represented as a list of twelve double values in row major order.
-|<<TransformationMatrix4x4-section,TransformationMatrix4x4>> |TransformationMatrix4x4 is a 4 by 4 matrix represented as a list of sixteen double values in row major order.
-|===
+include::summaries/Core-others.adoc[]
 
 ==== Additional Information
 

@@ -1,7 +1,5 @@
 [[Core-package-dd]]
-=== *Core Data Dictionary*
-
-NOTE: changed level of header, header name, and anchor name
+==== *Package*
 
 [cols="1a"]
 |===
@@ -643,7 +641,7 @@ NOTE: changed level of header, header name, and anchor name
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «BasicType»
 !{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! valueBetween0and1 (OCL): inv:
-DoubleBetween0and1.allInstances()->forAll( p \| p >=0 and p <= 1 )    
+DoubleBetween0and1.allInstances()->forAll( p | p >=0 and p <= 1 )    
 !===
 [cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -809,7 +807,7 @@ DoubleBetween0and1.allInstances()->forAll( p \| p >=0 and p <= 1 )
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «BasicType»
 !{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! valueBetween0and4 (OCL): inv: 
-IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)    
+IntegerBetween0and4.allInstances()->forAll( p | p >= 0 and p <= 4)    
 !===
 [cols="15,20,60",frame=none,grid=none,options="header"]
 !===

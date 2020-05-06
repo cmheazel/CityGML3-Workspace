@@ -1,0 +1,21 @@
+[[Core-class-table]]
+.Classes used in Core
+[cols="2,6",options="headers"]
+|===
+^|*Class* ^|*Description*
+|<<AbstractAppearance-section,AbstractAppearance>> +
+ «FeatureType»  |AbstractAppearance is the abstract superclass to represent any kind of appearance objects.
+|<<AbstractDynamizer-section,AbstractDynamizer>> +
+ «FeatureType»  |AbstractDynamizer is the abstract superclass to represent Dynamizer objects.
+|<<AbstractFeature-section,AbstractFeature>> +
+ «FeatureType»  |AbstractFeature is the abstract superclass of all feature types within the CityGML data model.
+|<<AbstractVersion-section,AbstractVersion>> +
+ «FeatureType»  |AbstractVersion is the abstract superclass to represent Version objects.
+|<<AbstractVersionTransition-section,AbstractVersionTransition>> +
+ «FeatureType»  |AbstractVersionTransition is the abstract superclass to represent VersionTransition objects.
+|<<Address-section,Address>> +
+ «FeatureType»  |Address represents an address of a city object.
+|<<CityObjectRelation-section,CityObjectRelation>> +
+ «ObjectType»  |CityObjectRelation represents a specific relation from the city object in which it is included to another city object.
+|===
+
