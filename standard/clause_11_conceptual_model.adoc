@@ -1,6 +1,19 @@
-== CityGML Conceptual Model
+[[conceptual-model-section]]
+== CityGML UML Model
 
-This section provides a detailed discussion of the CityGML Conceptual Model.
+The CityGML UML model is the normative definition of the CityGML Conceptual Model. The tables and figures in this section were software generated from the UML model. As such, this section provides a normative representation of the CityGML Conceptual Model.
+
+An alternate representation can be found in the <<data-dictionary-section,CityGML Data Dictionary>>.
+
+[[rc_overview-section]]
+=== Structural Overview of Requirements Classes
+
+The Requirements Classes for this standard are structured as
+UML Packages as illustrated in <<package-diagram>>. Each Requirements Class is specified in detail in their respective subsections. These subsections include a UML diagram, data dictionary, and the applicable requirements.
+
+[[package-diagram]]
+.CityGML UML Packages
+image::figures/CityGMLPackageDiagram.png[]
 
 [[core_section]]
 include::clause_11_7_core.adoc[]

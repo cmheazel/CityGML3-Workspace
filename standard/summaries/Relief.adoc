@@ -1,0 +1,18 @@
+[[Relief-class-table]]
+.Classes used in Relief
+[cols="2,6",options="headers"]
+|===
+^|*Class* ^|*Description*
+|<<ReliefFeature-section,ReliefFeature>> +
+ «TopLevelFeatureType»  |A ReliefFeature is a collection of terrain components representing the Earth's surface, a.k.a. the Digital Terrain Model.
+|<<AbstractReliefComponent-section,AbstractReliefComponent>> +
+ «FeatureType»  |An AbstractReliefComponent represents an element of the terrain surface - either a TIN, a Grid, mass points or break lines.
+|<<BreaklineRelief-section,BreaklineRelief>> +
+ «FeatureType»  |A BreaklineRelief represents a terrain component with 3D lines. These lines denote break lines or ridge/valley lines.
+|<<MassPointRelief-section,MassPointRelief>> +
+ «FeatureType»  |A MassPointRelief represents a terrain component as a collection of 3D points.
+|<<RasterRelief-section,RasterRelief>> +
+ «FeatureType»  |A RasterRelief represents a terrain component as a regular raster or grid.
+|<<TINRelief-section,TINRelief>> +
+ «FeatureType»  |A TINRelief represents a terrain component as a triangulated irregular network.
+|===

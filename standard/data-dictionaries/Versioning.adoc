@@ -1,190 +1,175 @@
-[[Versioning-package]]
-==== *Versioning Package*
+[[Versioning-package-dd]]
+==== *Package*
 
-|====
-|*Package Versioning*
-|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}The Versioning module supports representation of multiple versions of CityGML features within a single CityGML model. In addition, also the version transitions and transactions that lead to the different versions can be represented. +
-Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
-Parent Package: {nbsp}{nbsp}CityGML
-|====
+[cols="1a"]
+|===
+|{set:cellbgcolor:#FFFFFF} *Package Versioning*
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Description: ! The Versioning module supports representation of multiple versions of CityGML features within a single CityGML model. In addition, also the version transitions and transactions that lead to the different versions can be represented. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Parent Package: ! CityGML
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: ! «ApplicationSchema»
+!===
+|===
+
+==== *Classes*
 
 [[Version-section]]
-==== *Class Version*
+===== *Class Version*
 
-include::../requirements/Versioning/REQ_Versioning_Version.adoc[]
-
-|====
-|*Class Version* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Version represents a defined state of a city model consisting of the dedicated versions of all city object instances that belong to the respective city model version. Versions can have names, a description and can be labeled with an arbitrary number of user defined tags. +
-Subclass Of: {nbsp}{nbsp} <<AbstractVersion-section,AbstractVersion>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} versionMember +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to all city objects that are part of the city model version. +
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}tag +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CharacterString +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Allows for adding keywords to the city model version.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*Version* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! Version represents a defined state of a city model consisting of the dedicated versions of all city object instances that belong to the respective city model version. Versions can have names, a description and can be labeled with an arbitrary number of user defined tags. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractVersion-section,AbstractVersion>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} versionMember 
+!<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> 
+ [*]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} tag  !<<CharacterString-section,CharacterString>>  [0..*] !Allows for adding keywords to the city model version.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
 [[VersionTransition-section]]
-==== *Class VersionTransition*
+===== *Class VersionTransition*
 
-include::../requirements/Versioning/REQ_Versioning_VersionTransition.adoc[]
-
-|====
-|*Class VersionTransition* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} VersionTransition describes the change of the state of a city model from one version to another. Version transitions can have names, a description and can be further qualified by a type and a reason. +
-Subclass Of: {nbsp}{nbsp} <<AbstractVersionTransition-section,AbstractVersionTransition>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} transaction +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<Transaction-section,Transaction>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to all transactions that have been applied as part of the VersionTransition. +
-|Relation Name: {nbsp}{nbsp} from +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<Version-section,Version>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the predecessor version of the VersionTransition. +
-|Relation Name: {nbsp}{nbsp} to +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<Version-section,Version>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the sucessor version of the VersionTransition. +
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}clonePredecessor +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Boolean +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates whether the set of city object instances belonging to the successor version of the city model is either explicitly enumerated within the successor version object (attribute clonePredecessor=false), or has to be derived from the modifications of the city model provided as a list of transactions on the city object versions contained in the predecessor version (attribute clonePredecessor=true).  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}reason +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CharacterString +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies why the VersionTransition has been carried out.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}type +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TransitionTypeValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the VersionTransition.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*VersionTransition* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! VersionTransition describes the change of the state of a city model from one version to another. Version transitions can have names, a description and can be further qualified by a type and a reason. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractVersionTransition-section,AbstractVersionTransition>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} transaction 
+!<<Transaction-section,Transaction>> 
+ [*]
+!
+!{set:cellbgcolor:#FFFFFF} from 
+!<<Version-section,Version>> 
+ [0..1]
+!
+!{set:cellbgcolor:#FFFFFF} to 
+!<<Version-section,Version>> 
+ [0..1]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} clonePredecessor  !<<Boolean-section,Boolean>>  !Indicates whether the set of city object instances belonging to the successor version of the city model is either explicitly enumerated within the successor version object (attribute clonePredecessor=false), or has to be derived from the modifications of the city model provided as a list of transactions on the city object versions contained in the predecessor version (attribute clonePredecessor=true).
+ 
+!{set:cellbgcolor:#FFFFFF} reason  !<<CharacterString-section,CharacterString>>  [0..1] !Specifies why the VersionTransition has been carried out.
+ 
+!{set:cellbgcolor:#FFFFFF} type  !<<TransitionTypeValue-section,TransitionTypeValue>>  [0..1] !Indicates the specific type of the VersionTransition.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
 [[Transaction-section]]
-==== *Class Transaction*
+===== *Class Transaction*
 
-include::../requirements/Versioning/REQ_Versioning_Transaction.adoc[]
-
-|====
-|*Class Transaction* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Transaction represents a modification of the city model by the creation, termination, or replacement of a specific city object. While the creation of a city object also marks its first object version, the termination marks the end of existence of a real world object and, hence, also terminates the final version of a city object. The replacement of a city object means that a specific version of it is replaced by a new version. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «DataType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} newFeature +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the version of the city object subsequent to the Transaction. +
-|Relation Name: {nbsp}{nbsp} oldFeature +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the version of the city object prior to the Transaction. +
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}type +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TransactionTypeValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the Transaction.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*Transaction* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! Transaction represents a modification of the city model by the creation, termination, or replacement of a specific city object. While the creation of a city object also marks its first object version, the termination marks the end of existence of a real world object and, hence, also terminates the final version of a city object. The replacement of a city object means that a specific version of it is replaced by a new version. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} newFeature 
+!<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> 
+ [0..1]
+!
+!{set:cellbgcolor:#FFFFFF} oldFeature 
+!<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> 
+ [0..1]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} type  !<<TransactionTypeValue-section,TransactionTypeValue>>  !Indicates the specific type of the Transaction.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
 [[TransactionTypeValue-section]]
-==== *Class TransactionTypeValue*
+===== *Class TransactionTypeValue*
 
-include::../requirements/Versioning/REQ_Versioning_TransactionTypeValue.adoc[]
-
-|====
-|*Class TransactionTypeValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TransactionTypeValue enumerates the three possible types of transactions: insert, delete, or replace. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} 
-|*Relations* 
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}insert +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the feature referenced from the Transaction via the "newFeature" association has been newly created; the association "oldFeature" is empty in this case.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}delete +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the feature referenced from the Transaction via the "oldFeature" association ceases to exist; the association "newFeature" is empty in this case.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}replace +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the feature referenced from the Transaction via the "oldFeature" association has been replaced by the feature referenced via the "newFeature" association.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*TransactionTypeValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TransactionTypeValue enumerates the three possible types of transactions: insert, delete, or replace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} insert  !  !Indicates that the feature referenced from the Transaction via the "newFeature" association has been newly created; the association "oldFeature" is empty in this case.
+ 
+!{set:cellbgcolor:#FFFFFF} delete  !  !Indicates that the feature referenced from the Transaction via the "oldFeature" association ceases to exist; the association "newFeature" is empty in this case.
+ 
+!{set:cellbgcolor:#FFFFFF} replace  !  !Indicates that the feature referenced from the Transaction via the "oldFeature" association has been replaced by the feature referenced via the "newFeature" association.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
 [[TransitionTypeValue-section]]
-==== *Class TransitionTypeValue*
+===== *Class TransitionTypeValue*
 
-include::../requirements/Versioning/REQ_Versioning_TransitionTypeValue.adoc[]
-
-|====
-|*Class TransitionTypeValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TransitionTypeValue enumerates the different kinds of version transitions. “planned” and “fork” should be used in cases when from one city model version multiple successor versions are being created. “realized” and “merge” should be used when different city model versions are converging into a common successor version. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} 
-|*Relations* 
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}planned +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the successor version of the city model represents a planning state for a possible future of the city.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}realized +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the predecessor version is the chosen one from a number of possible planning versions.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}historicalSuccession +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the successor version reflects updates on the city model over time (historical timeline). It shall only be used for at most one version transition outgoing from a city model version.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}fork +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates other reasons to create alternative city model versions, for example, when different parties are updating parts of the city model or to reflect the results of different simulation runs.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}merge +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates other reasons to converge multiple versions back into a common city model version.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*TransitionTypeValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TransitionTypeValue enumerates the different kinds of version transitions. “planned” and “fork” should be used in cases when from one city model version multiple successor versions are being created. “realized” and “merge” should be used when different city model versions are converging into a common successor version. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} planned  !  !Indicates that the successor version of the city model represents a planning state for a possible future of the city.
+ 
+!{set:cellbgcolor:#FFFFFF} realized  !  !Indicates that the predecessor version is the chosen one from a number of possible planning versions.
+ 
+!{set:cellbgcolor:#FFFFFF} historicalSuccession  !  !Indicates that the successor version reflects updates on the city model over time (historical timeline). It shall only be used for at most one version transition outgoing from a city model version.
+ 
+!{set:cellbgcolor:#FFFFFF} fork  !  !Indicates other reasons to create alternative city model versions, for example, when different parties are updating parts of the city model or to reflect the results of different simulation runs.
+ 
+!{set:cellbgcolor:#FFFFFF} merge  !  !Indicates other reasons to converge multiple versions back into a common city model version.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
   
-
 
 

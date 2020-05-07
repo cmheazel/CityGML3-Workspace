@@ -1,146 +1,175 @@
-[[Relief-package]]
-==== *Relief Package*
+[[Relief-package-dd]]
+==== *Package*
 
-|====
-|*Package Relief*
-|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}The Relief module supports representation of the terrain. CityGML supports terrain representations at different levels of detail, reflecting different accuracies or resolutions. Terrain may be specified as a regular raster or grid, as a TIN, by break lines, and/or by mass points. +
-Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
-Parent Package: {nbsp}{nbsp}CityGML
-|====
+[cols="1a"]
+|===
+|{set:cellbgcolor:#FFFFFF} *Package Relief*
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Description: ! The Relief module supports representation of the terrain. CityGML supports terrain representations at different levels of detail, reflecting different accuracies or resolutions. Terrain may be specified as a regular raster or grid, as a TIN, by break lines, and/or by mass points. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Parent Package: ! CityGML
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: ! «ApplicationSchema»
+!===
+|===
+
+==== *Classes*
 
 [[AbstractReliefComponent-section]]
-==== *Class AbstractReliefComponent*
+===== *Class AbstractReliefComponent*
 
-include::../requirements/Relief/REQ_Relief_AbstractReliefComponent.adoc[]
-
-|====
-|*Class AbstractReliefComponent* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} An AbstractReliefComponent represents an element of the terrain surface - either a TIN, a Grid, mass points or break lines. +
-Subclass Of: {nbsp}{nbsp} <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} extent +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_Surface-section,GM_Surface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the geometrical extent of the terrain component. The geometrical extent is provided as a 2D Surface geometry. +
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}lod +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} IntegerBetween0and3 +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the Level of Detail of the terrain component.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*AbstractReliefComponent* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! An AbstractReliefComponent represents an element of the terrain surface - either a TIN, a Grid, mass points or break lines. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! polygonGeometry (OCL): inv:
+self.extent.patch->size()=1 and 
+self.extent.patch->forAll(oclIsKindOf(GM_Polygon))    
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} extent 
+!<<GM_Surface-section,GM_Surface>> 
+ [0..1]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} lod  !<<IntegerBetween0and3-section,IntegerBetween0and3>>  !Indicates the Level of Detail of the terrain component.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
 [[BreaklineRelief-section]]
-==== *Class BreaklineRelief*
+===== *Class BreaklineRelief*
 
-include::../requirements/Relief/REQ_Relief_BreaklineRelief.adoc[]
-
-|====
-|*Class BreaklineRelief* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A BreaklineRelief represents a terrain component with 3D lines. These lines denote break lines or ridge/valley lines. +
-Subclass Of: {nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} ridgeOrValleyLines +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the 3D MultiCurve geometry of the MassPointRelief. This association role is used to represent ridge or valley lines. +
-|Relation Name: {nbsp}{nbsp} breaklines +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiCurve-section,GM_MultiCurve>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the 3D MultiCurve geometry of the MassPointRelief. This association role is used to represent break lines. +
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*BreaklineRelief* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A BreaklineRelief represents a terrain component with 3D lines. These lines denote break lines or ridge/valley lines. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractReliefComponent-section,AbstractReliefComponent>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} ridgeOrValleyLines 
+!<<GM_MultiCurve-section,GM_MultiCurve>> 
+ [0..1]
+!
+!{set:cellbgcolor:#FFFFFF} breaklines 
+!<<GM_MultiCurve-section,GM_MultiCurve>> 
+ [0..1]
+!
+!===
+|=== 
 
 [[MassPointRelief-section]]
-==== *Class MassPointRelief*
+===== *Class MassPointRelief*
 
-include::../requirements/Relief/REQ_Relief_MassPointRelief.adoc[]
-
-|====
-|*Class MassPointRelief* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A MassPointRelief represents a terrain component as a collection of 3D points. +
-Subclass Of: {nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} reliefPoints +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiPoint-section,GM_MultiPoint>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the 3D MultiPoint geometry of the MassPointRelief. +
-|Relation Name: {nbsp}{nbsp} pointCloud +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractPointCloud-section,AbstractPointCloud>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the 3D PointCloud of the MassPointRelief. +
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*MassPointRelief* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A MassPointRelief represents a terrain component as a collection of 3D points. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractReliefComponent-section,AbstractReliefComponent>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} reliefPoints 
+!<<GM_MultiPoint-section,GM_MultiPoint>> 
+ [0..1]
+!
+!{set:cellbgcolor:#FFFFFF} pointCloud 
+!<<AbstractPointCloud-section,AbstractPointCloud>> 
+ [0..1]
+!
+!===
+|=== 
 
 [[RasterRelief-section]]
-==== *Class RasterRelief*
+===== *Class RasterRelief*
 
-include::../requirements/Relief/REQ_Relief_RasterRelief.adoc[]
-
-|====
-|*Class RasterRelief* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A RasterRelief represents a terrain component as a regular raster or grid. +
-Subclass Of: {nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} grid +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  1 +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<CV_DiscreteGridPointCoverage-section,CV_DiscreteGridPointCoverage>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the DiscreteGridPointCoverage of the RasterRelief. +
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*RasterRelief* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A RasterRelief represents a terrain component as a regular raster or grid. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractReliefComponent-section,AbstractReliefComponent>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} grid 
+!<<CV_DiscreteGridPointCoverage-section,CV_DiscreteGridPointCoverage>> 
+ [1]
+!
+!===
+|=== 
 
 [[ReliefFeature-section]]
-==== *Class ReliefFeature*
+===== *Class ReliefFeature*
 
-include::../requirements/Relief/REQ_Relief_ReliefFeature.adoc[]
-
-|====
-|*Class ReliefFeature* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A ReliefFeature is a collection of terrain components representing the Earth's surface, a.k.a. the Digital Terrain Model. +
-Subclass Of: {nbsp}{nbsp} <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «TopLevelFeatureType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} reliefComponent +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  1..* +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the terrain components that are part of the ReliefFeature. +
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}lod +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} IntegerBetween0and3 +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the Level of Detail of the ReliefFeature.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*ReliefFeature* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A ReliefFeature is a collection of terrain components representing the Earth's surface, a.k.a. the Digital Terrain Model. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} reliefComponent 
+!<<AbstractReliefComponent-section,AbstractReliefComponent>> 
+ [1..*]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} lod  !<<IntegerBetween0and3-section,IntegerBetween0and3>>  !Indicates the Level of Detail of the ReliefFeature.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
 [[TINRelief-section]]
-==== *Class TINRelief*
+===== *Class TINRelief*
 
-include::../requirements/Relief/REQ_Relief_TINRelief.adoc[]
-
-|====
-|*Class TINRelief* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A TINRelief represents a terrain component as a triangulated irregular network. +
-Subclass Of: {nbsp}{nbsp} <<AbstractReliefComponent-section,AbstractReliefComponent>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} tin +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  1 +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_TriangulatedSurface-section,GM_TriangulatedSurface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the triangulated surface of the TINRelief. +
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*TINRelief* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A TINRelief represents a terrain component as a triangulated irregular network. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractReliefComponent-section,AbstractReliefComponent>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} tin 
+!<<GM_TriangulatedSurface-section,GM_TriangulatedSurface>> 
+ [1]
+!
+!===
+|=== 
   
 
 

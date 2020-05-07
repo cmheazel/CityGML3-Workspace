@@ -1,49 +1,52 @@
-[[PointCloud-package]]
-==== *PointCloud Package*
+[[PointCloud-package-dd]]
+==== *Package*
 
-|====
-|*Package PointCloud*
-|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}The PointCloud module supports representation of CityGML features by a collection of points. +
-Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
-Parent Package: {nbsp}{nbsp}CityGML
-|====
+[cols="1a"]
+|===
+|{set:cellbgcolor:#FFFFFF} *Package PointCloud*
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Description: ! The PointCloud module supports representation of CityGML features by a collection of points. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Parent Package: ! CityGML
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: ! «ApplicationSchema»
+!===
+|===
+
+==== *Classes*
 
 [[PointCloud-section]]
-==== *Class PointCloud*
+===== *Class PointCloud*
 
-include::../requirements/PointCloud/REQ_PointCloud_PointCloud.adoc[]
-
-|====
-|*Class PointCloud* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A PointCloud is an unordered collection of points that is a sampling of the geometry of a space or space boundary. +
-Subclass Of: {nbsp}{nbsp} <<AbstractPointCloud-section,AbstractPointCloud>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} points +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  0..1 +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<GM_MultiPoint-section,GM_MultiPoint>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the 3D MultiPoint geometry of the PointCloud stored inline with the city model. +
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}mimeType +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} MimeTypeValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the MIME type of the external point cloud file.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}pointFile +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} URI +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the URI that points to the external point cloud file.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}pointFileSrsName +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} CharacterString +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the coordinate reference system used by the external point cloud file.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*PointCloud* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A PointCloud is an unordered collection of points that is a sampling of the geometry of a space or space boundary. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractPointCloud-section,AbstractPointCloud>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} points 
+!<<GM_MultiPoint-section,GM_MultiPoint>> 
+ [0..1]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} mimeType  !<<MimeTypeValue-section,MimeTypeValue>>  [0..1] !Specifies the MIME type of the external point cloud file.
+ 
+!{set:cellbgcolor:#FFFFFF} pointFile  !<<URI-section,URI>>  [0..1] !Specifies the URI that points to the external point cloud file.
+ 
+!{set:cellbgcolor:#FFFFFF} pointFileSrsName  !<<CharacterString-section,CharacterString>>  [0..1] !Indicates the coordinate reference system used by the external point cloud file.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
   
+
 
 

@@ -1,1164 +1,1054 @@
-[[Transportation-package]]
-==== *Transportation Package*
+[[Transportation-package-dd]]
+==== *Package*
 
-|====
-|*Package Transportation*
-|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}The Transportation module supports representation of the transportation infrastructure. Transportation features include roads, tracks, waterways, railways, and squares. Transportation features may be represented as a network and/or as a collection of spaces or surface elements embedded in a three-dimensional space. +
-Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
-Parent Package: {nbsp}{nbsp}CityGML
-|====
+[cols="1a"]
+|===
+|{set:cellbgcolor:#FFFFFF} *Package Transportation*
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Description: ! The Transportation module supports representation of the transportation infrastructure. Transportation features include roads, tracks, waterways, railways, and squares. Transportation features may be represented as a network and/or as a collection of spaces or surface elements embedded in a three-dimensional space. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Parent Package: ! CityGML
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: ! «ApplicationSchema»
+!===
+|===
+
+==== *Classes*
 
 [[AbstractTransportationSpace-section]]
-==== *Class AbstractTransportationSpace*
+===== *Class AbstractTransportationSpace*
 
-include::../requirements/Transportation/REQ_Transportation_AbstractTransportationSpace.adoc[]
-
-|====
-|*Class AbstractTransportationSpace* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractTransportationSpace is the abstract superclass of transportation objects such as Roads, Tracks, Railways, Waterways or Squares. +
-Subclass Of: {nbsp}{nbsp} <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} trafficSpace +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<TrafficSpace-section,TrafficSpace>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the traffic spaces that are part of the transportation space. +
-|Relation Name: {nbsp}{nbsp} hole +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<Hole-section,Hole>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the holes that are part of the transportation space. +
-|Relation Name: {nbsp}{nbsp} auxiliaryTrafficSpace +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AuxiliaryTrafficSpace-section,AuxiliaryTrafficSpace>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the auxiliary traffic spaces that are part of the transportation space. +
-|Relation Name: {nbsp}{nbsp} marking +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<Marking-section,Marking>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the markings that are part of the transportation space. +
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}occupancy +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Occupancy +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Provides information on the residency of persons, vehicles, or other moving features in the transportation space.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}trafficDirection +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TrafficDirectionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the direction of traffic flow relative to the corresponding linear geometry representation.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*AbstractTransportationSpace* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AbstractTransportationSpace is the abstract superclass of transportation objects such as Roads, Tracks, Railways, Waterways or Squares. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} trafficSpace 
+!<<TrafficSpace-section,TrafficSpace>> 
+ [*]
+!
+!{set:cellbgcolor:#FFFFFF} hole 
+!<<Hole-section,Hole>> 
+ [*]
+!
+!{set:cellbgcolor:#FFFFFF} auxiliaryTrafficSpace 
+!<<AuxiliaryTrafficSpace-section,AuxiliaryTrafficSpace>> 
+ [*]
+!
+!{set:cellbgcolor:#FFFFFF} marking 
+!<<Marking-section,Marking>> 
+ [*]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} occupancy  !<<Occupancy-section,Occupancy>>  [0..*] !Provides information on the residency of persons, vehicles, or other moving features in the transportation space.
+ 
+!{set:cellbgcolor:#FFFFFF} trafficDirection  !<<TrafficDirectionValue-section,TrafficDirectionValue>>  [0..1] !Indicates the direction of traffic flow relative to the corresponding linear geometry representation.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
 [[AuxiliaryTrafficArea-section]]
-==== *Class AuxiliaryTrafficArea*
+===== *Class AuxiliaryTrafficArea*
 
-include::../requirements/Transportation/REQ_Transportation_AuxiliaryTrafficArea.adoc[]
-
-|====
-|*Class AuxiliaryTrafficArea* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} An AuxiliaryTrafficArea is the ground surface of an AuxiliaryTrafficSpace. +
-Subclass Of: {nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AuxiliaryTrafficAreaClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the AuxiliaryTrafficArea.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AuxiliaryTrafficAreaFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the AuxiliaryTrafficArea.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}surfaceMaterial +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SurfaceMaterialValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the type of pavement of the AuxiliaryTrafficArea.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AuxiliaryTrafficAreaUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the AuxiliaryTrafficArea.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*AuxiliaryTrafficArea* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! An AuxiliaryTrafficArea is the ground surface of an AuxiliaryTrafficSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractThematicSurface-section,AbstractThematicSurface>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} class  !<<AuxiliaryTrafficAreaClassValue-section,AuxiliaryTrafficAreaClassValue>>  [0..1] !Indicates the specific type of the AuxiliaryTrafficArea.
+ 
+!{set:cellbgcolor:#FFFFFF} function  !<<AuxiliaryTrafficAreaFunctionValue-section,AuxiliaryTrafficAreaFunctionValue>>  [0..*] !Specifies the intended purposes of the AuxiliaryTrafficArea.
+ 
+!{set:cellbgcolor:#FFFFFF} surfaceMaterial  !<<SurfaceMaterialValue-section,SurfaceMaterialValue>>  [0..1] !Specifies the type of pavement of the AuxiliaryTrafficArea.
+ 
+!{set:cellbgcolor:#FFFFFF} usage  !<<AuxiliaryTrafficAreaUsageValue-section,AuxiliaryTrafficAreaUsageValue>>  [0..*] !Specifies the actual uses of the AuxiliaryTrafficArea.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
 [[AuxiliaryTrafficAreaClassValue-section]]
-==== *Class AuxiliaryTrafficAreaClassValue*
+===== *Class AuxiliaryTrafficAreaClassValue*
 
-include::../requirements/Transportation/REQ_Transportation_AuxiliaryTrafficAreaClassValue.adoc[]
-
-|====
-|*Class AuxiliaryTrafficAreaClassValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AuxiliaryTrafficAreaClassValue is a code list used to further classify an AuxiliaryTrafficArea. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*AuxiliaryTrafficAreaClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AuxiliaryTrafficAreaClassValue is a code list used to further classify an AuxiliaryTrafficArea. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[AuxiliaryTrafficAreaFunctionValue-section]]
-==== *Class AuxiliaryTrafficAreaFunctionValue*
+===== *Class AuxiliaryTrafficAreaFunctionValue*
 
-include::../requirements/Transportation/REQ_Transportation_AuxiliaryTrafficAreaFunctionValue.adoc[]
-
-|====
-|*Class AuxiliaryTrafficAreaFunctionValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AuxiliaryTrafficAreaFunctionValue is a code list that enumerates the different purposes of an AuxiliaryTrafficArea. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*AuxiliaryTrafficAreaFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AuxiliaryTrafficAreaFunctionValue is a code list that enumerates the different purposes of an AuxiliaryTrafficArea. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[AuxiliaryTrafficAreaUsageValue-section]]
-==== *Class AuxiliaryTrafficAreaUsageValue*
+===== *Class AuxiliaryTrafficAreaUsageValue*
 
-include::../requirements/Transportation/REQ_Transportation_AuxiliaryTrafficAreaUsageValue.adoc[]
-
-|====
-|*Class AuxiliaryTrafficAreaUsageValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AuxiliaryTrafficAreaUsageValue is a code list that enumerates the different uses of an AuxiliaryTrafficArea. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*AuxiliaryTrafficAreaUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AuxiliaryTrafficAreaUsageValue is a code list that enumerates the different uses of an AuxiliaryTrafficArea. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[AuxiliaryTrafficSpace-section]]
-==== *Class AuxiliaryTrafficSpace*
+===== *Class AuxiliaryTrafficSpace*
 
-include::../requirements/Transportation/REQ_Transportation_AuxiliaryTrafficSpace.adoc[]
-
-|====
-|*Class AuxiliaryTrafficSpace* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} An AuxiliaryTrafficSpace is a space within the transportation space not intended for traffic purposes. +
-Subclass Of: {nbsp}{nbsp} <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} boundary +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AuxiliaryTrafficArea-section,AuxiliaryTrafficArea>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AuxiliaryTrafficSpaceClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the AuxiliaryTrafficSpace.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AuxiliaryTrafficSpaceFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the AuxiliaryTrafficSpace.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}granularity +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GranularityValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Defines whether auxiliary traffic spaces are represented by individual ways or by individual lanes, depending on the desired level of detail.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AuxiliaryTrafficSpaceUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the AuxiliaryTrafficSpace.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*AuxiliaryTrafficSpace* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! An AuxiliaryTrafficSpace is a space within the transportation space not intended for traffic purposes. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} boundary 
+!<<AuxiliaryTrafficArea-section,AuxiliaryTrafficArea>> 
+ [*]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} class  !<<AuxiliaryTrafficSpaceClassValue-section,AuxiliaryTrafficSpaceClassValue>>  [0..1] !Indicates the specific type of the AuxiliaryTrafficSpace.
+ 
+!{set:cellbgcolor:#FFFFFF} function  !<<AuxiliaryTrafficSpaceFunctionValue-section,AuxiliaryTrafficSpaceFunctionValue>>  [0..*] !Specifies the intended purposes of the AuxiliaryTrafficSpace.
+ 
+!{set:cellbgcolor:#FFFFFF} granularity  !<<GranularityValue-section,GranularityValue>>  !Defines whether auxiliary traffic spaces are represented by individual ways or by individual lanes, depending on the desired level of detail.
+ 
+!{set:cellbgcolor:#FFFFFF} usage  !<<AuxiliaryTrafficSpaceUsageValue-section,AuxiliaryTrafficSpaceUsageValue>>  [0..*] !Specifies the actual uses of the AuxiliaryTrafficSpace.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
 [[AuxiliaryTrafficSpaceClassValue-section]]
-==== *Class AuxiliaryTrafficSpaceClassValue*
+===== *Class AuxiliaryTrafficSpaceClassValue*
 
-include::../requirements/Transportation/REQ_Transportation_AuxiliaryTrafficSpaceClassValue.adoc[]
-
-|====
-|*Class AuxiliaryTrafficSpaceClassValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AuxiliaryTrafficSpaceClassValue is a code list used to further classify an AuxiliaryTrafficSpace. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*AuxiliaryTrafficSpaceClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AuxiliaryTrafficSpaceClassValue is a code list used to further classify an AuxiliaryTrafficSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[AuxiliaryTrafficSpaceFunctionValue-section]]
-==== *Class AuxiliaryTrafficSpaceFunctionValue*
+===== *Class AuxiliaryTrafficSpaceFunctionValue*
 
-include::../requirements/Transportation/REQ_Transportation_AuxiliaryTrafficSpaceFunctionValue.adoc[]
-
-|====
-|*Class AuxiliaryTrafficSpaceFunctionValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AuxiliaryTrafficSpaceFunctionValue is a code list that enumerates the different purposes of an AuxiliaryTrafficSpace. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*AuxiliaryTrafficSpaceFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AuxiliaryTrafficSpaceFunctionValue is a code list that enumerates the different purposes of an AuxiliaryTrafficSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[AuxiliaryTrafficSpaceUsageValue-section]]
-==== *Class AuxiliaryTrafficSpaceUsageValue*
+===== *Class AuxiliaryTrafficSpaceUsageValue*
 
-include::../requirements/Transportation/REQ_Transportation_AuxiliaryTrafficSpaceUsageValue.adoc[]
-
-|====
-|*Class AuxiliaryTrafficSpaceUsageValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AuxiliaryTrafficSpaceUsageValue is a code list that enumerates the different uses of an AuxiliaryTrafficSpace. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*AuxiliaryTrafficSpaceUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AuxiliaryTrafficSpaceUsageValue is a code list that enumerates the different uses of an AuxiliaryTrafficSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[ClearanceSpace-section]]
-==== *Class ClearanceSpace*
+===== *Class ClearanceSpace*
 
-include::../requirements/Transportation/REQ_Transportation_ClearanceSpace.adoc[]
-
-|====
-|*Class ClearanceSpace* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A ClearanceSpace represents the actual free space above a TrafficArea within which a mobile object can move without contacting an obstruction. +
-Subclass Of: {nbsp}{nbsp} <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} ClearanceSpaceClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the ClearanceSpace.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*ClearanceSpace* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A ClearanceSpace represents the actual free space above a TrafficArea within which a mobile object can move without contacting an obstruction. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} class  !<<ClearanceSpaceClassValue-section,ClearanceSpaceClassValue>>  [0..*] !Indicates the specific type of the ClearanceSpace.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
 [[ClearanceSpaceClassValue-section]]
-==== *Class ClearanceSpaceClassValue*
+===== *Class ClearanceSpaceClassValue*
 
-include::../requirements/Transportation/REQ_Transportation_ClearanceSpaceClassValue.adoc[]
-
-|====
-|*Class ClearanceSpaceClassValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} ClearanceSpaceClassValue is a code list used to further classify a ClearanceSpace. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*ClearanceSpaceClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ClearanceSpaceClassValue is a code list used to further classify a ClearanceSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[Hole-section]]
-==== *Class Hole*
+===== *Class Hole*
 
-include::../requirements/Transportation/REQ_Transportation_Hole.adoc[]
-
-|====
-|*Class Hole* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A Hole is an opening in the surface of a Road, Track or Square such as road damages, manholes or drains. Holes can span multiple transportation objects. +
-Subclass Of: {nbsp}{nbsp} <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} boundary +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} HoleClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the Hole.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*Hole* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A Hole is an opening in the surface of a Road, Track or Square such as road damages, manholes or drains. Holes can span multiple transportation objects. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} boundary 
+!<<AbstractThematicSurface-section,AbstractThematicSurface>> 
+ [*]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} class  !<<HoleClassValue-section,HoleClassValue>>  [0..1] !Indicates the specific type of the Hole.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
 [[HoleClassValue-section]]
-==== *Class HoleClassValue*
+===== *Class HoleClassValue*
 
-include::../requirements/Transportation/REQ_Transportation_HoleClassValue.adoc[]
-
-|====
-|*Class HoleClassValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} HoleClassValue is a code list used to further classify a Hole. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*HoleClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! HoleClassValue is a code list used to further classify a Hole. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[HoleSurface-section]]
-==== *Class HoleSurface*
+===== *Class HoleSurface*
 
-include::../requirements/Transportation/REQ_Transportation_HoleSurface.adoc[]
-
-|====
-|*Class HoleSurface* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A HoleSurface is a representation of the ground surface of a hole. +
-Subclass Of: {nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*HoleSurface* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A HoleSurface is a representation of the ground surface of a hole. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractThematicSurface-section,AbstractThematicSurface>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|=== 
 
 [[Intersection-section]]
-==== *Class Intersection*
+===== *Class Intersection*
 
-include::../requirements/Transportation/REQ_Transportation_Intersection.adoc[]
-
-|====
-|*Class Intersection* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} An Intersection is a transportation space that is a shared segment of multiple Road, Track, Railway, or Waterway objects (e.g. a crossing of two roads or a level crossing of a road and a railway). +
-Subclass Of: {nbsp}{nbsp} <<AbstractTransportationSpace-section,AbstractTransportationSpace>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} IntersectionClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the Intersection.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*Intersection* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! An Intersection is a transportation space that is a shared segment of multiple Road, Track, Railway, or Waterway objects (e.g. a crossing of two roads or a level crossing of a road and a railway). 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractTransportationSpace-section,AbstractTransportationSpace>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} class  !<<IntersectionClassValue-section,IntersectionClassValue>>  [0..1] !Indicates the specific type of the Intersection.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
 [[IntersectionClassValue-section]]
-==== *Class IntersectionClassValue*
+===== *Class IntersectionClassValue*
 
-include::../requirements/Transportation/REQ_Transportation_IntersectionClassValue.adoc[]
-
-|====
-|*Class IntersectionClassValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} IntersectionClassValue is a code list used to further classify an Intersection. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*IntersectionClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! IntersectionClassValue is a code list used to further classify an Intersection. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[Marking-section]]
-==== *Class Marking*
+===== *Class Marking*
 
-include::../requirements/Transportation/REQ_Transportation_Marking.adoc[]
-
-|====
-|*Class Marking* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A Marking is a visible pattern on a transportation area relevant to the structuring or restriction of traffic. Examples are road markings and markings related to railway or waterway traffic. +
-Subclass Of: {nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} MarkingClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the Marking.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*Marking* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A Marking is a visible pattern on a transportation area relevant to the structuring or restriction of traffic. Examples are road markings and markings related to railway or waterway traffic. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractThematicSurface-section,AbstractThematicSurface>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} class  !<<MarkingClassValue-section,MarkingClassValue>>  [0..1] !Indicates the specific type of the Marking.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
 [[MarkingClassValue-section]]
-==== *Class MarkingClassValue*
+===== *Class MarkingClassValue*
 
-include::../requirements/Transportation/REQ_Transportation_MarkingClassValue.adoc[]
-
-|====
-|*Class MarkingClassValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} MarkingClassValue is a code list used to further classify a Marking. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*MarkingClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! MarkingClassValue is a code list used to further classify a Marking. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[Railway-section]]
-==== *Class Railway*
+===== *Class Railway*
 
-include::../requirements/Transportation/REQ_Transportation_Railway.adoc[]
-
-|====
-|*Class Railway* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A Railway is a transportation space used by wheeled vehicles on rails. +
-Subclass Of: {nbsp}{nbsp} <<AbstractTransportationSpace-section,AbstractTransportationSpace>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «TopLevelFeatureType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} section +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<Section-section,Section>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the sections that are part of the Railway. +
-|Relation Name: {nbsp}{nbsp} intersection +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<Intersection-section,Intersection>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the intersections that are part of the Railway. +
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RailwayClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the Railway.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RailwayFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the Railway.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RailwayUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the Railway.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*Railway* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A Railway is a transportation space used by wheeled vehicles on rails. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractTransportationSpace-section,AbstractTransportationSpace>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} section 
+!<<Section-section,Section>> 
+ [*]
+!
+!{set:cellbgcolor:#FFFFFF} intersection 
+!<<Intersection-section,Intersection>> 
+ [*]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} class  !<<RailwayClassValue-section,RailwayClassValue>>  [0..1] !Indicates the specific type of the Railway.
+ 
+!{set:cellbgcolor:#FFFFFF} function  !<<RailwayFunctionValue-section,RailwayFunctionValue>>  [0..*] !Specifies the intended purposes of the Railway.
+ 
+!{set:cellbgcolor:#FFFFFF} usage  !<<RailwayUsageValue-section,RailwayUsageValue>>  [0..*] !Specifies the actual uses of the Railway.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
 [[RailwayClassValue-section]]
-==== *Class RailwayClassValue*
+===== *Class RailwayClassValue*
 
-include::../requirements/Transportation/REQ_Transportation_RailwayClassValue.adoc[]
-
-|====
-|*Class RailwayClassValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RailwayClassValue is a code list used to further classify a Railway. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*RailwayClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! RailwayClassValue is a code list used to further classify a Railway. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[RailwayFunctionValue-section]]
-==== *Class RailwayFunctionValue*
+===== *Class RailwayFunctionValue*
 
-include::../requirements/Transportation/REQ_Transportation_RailwayFunctionValue.adoc[]
-
-|====
-|*Class RailwayFunctionValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RailwayFunctionValue is a code list that enumerates the different purposes of a Railway. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*RailwayFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! RailwayFunctionValue is a code list that enumerates the different purposes of a Railway. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[RailwayUsageValue-section]]
-==== *Class RailwayUsageValue*
+===== *Class RailwayUsageValue*
 
-include::../requirements/Transportation/REQ_Transportation_RailwayUsageValue.adoc[]
-
-|====
-|*Class RailwayUsageValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RailwayUsageValue is a code list that enumerates the different uses of a Railway. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*RailwayUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! RailwayUsageValue is a code list that enumerates the different uses of a Railway. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[Road-section]]
-==== *Class Road*
+===== *Class Road*
 
-include::../requirements/Transportation/REQ_Transportation_Road.adoc[]
-
-|====
-|*Class Road* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A Road is a transportation space used by vehicles, bicycles and/or pedestrians. +
-Subclass Of: {nbsp}{nbsp} <<AbstractTransportationSpace-section,AbstractTransportationSpace>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «TopLevelFeatureType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} intersection +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<Intersection-section,Intersection>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the intersections that are part of the Road. +
-|Relation Name: {nbsp}{nbsp} section +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<Section-section,Section>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the sections that are part of the Road. +
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RoadClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the Road.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RoadFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the Road.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RoadUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the Road.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*Road* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A Road is a transportation space used by vehicles, bicycles and/or pedestrians. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractTransportationSpace-section,AbstractTransportationSpace>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} intersection 
+!<<Intersection-section,Intersection>> 
+ [*]
+!
+!{set:cellbgcolor:#FFFFFF} section 
+!<<Section-section,Section>> 
+ [*]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} class  !<<RoadClassValue-section,RoadClassValue>>  [0..1] !Indicates the specific type of the Road.
+ 
+!{set:cellbgcolor:#FFFFFF} function  !<<RoadFunctionValue-section,RoadFunctionValue>>  [0..*] !Specifies the intended purposes of the Road.
+ 
+!{set:cellbgcolor:#FFFFFF} usage  !<<RoadUsageValue-section,RoadUsageValue>>  [0..*] !Specifies the actual uses of the Road.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
 [[RoadClassValue-section]]
-==== *Class RoadClassValue*
+===== *Class RoadClassValue*
 
-include::../requirements/Transportation/REQ_Transportation_RoadClassValue.adoc[]
-
-|====
-|*Class RoadClassValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RoadClassValue is a code list used to further classify a Road. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*RoadClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! RoadClassValue is a code list used to further classify a Road. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[RoadFunctionValue-section]]
-==== *Class RoadFunctionValue*
+===== *Class RoadFunctionValue*
 
-include::../requirements/Transportation/REQ_Transportation_RoadFunctionValue.adoc[]
-
-|====
-|*Class RoadFunctionValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RoadFunctionValue is a code list that enumerates the different purposes of a Road. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*RoadFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! RoadFunctionValue is a code list that enumerates the different purposes of a Road. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[RoadUsageValue-section]]
-==== *Class RoadUsageValue*
+===== *Class RoadUsageValue*
 
-include::../requirements/Transportation/REQ_Transportation_RoadUsageValue.adoc[]
-
-|====
-|*Class RoadUsageValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} RoadUsageValue is a code list that enumerates the different uses of a Road. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*RoadUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! RoadUsageValue is a code list that enumerates the different uses of a Road. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[Section-section]]
-==== *Class Section*
+===== *Class Section*
 
-include::../requirements/Transportation/REQ_Transportation_Section.adoc[]
-
-|====
-|*Class Section* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A Section is a transportation space that is a segment of a Road, Railway, Track, or Waterway. +
-Subclass Of: {nbsp}{nbsp} <<AbstractTransportationSpace-section,AbstractTransportationSpace>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SectionClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the Section.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*Section* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A Section is a transportation space that is a segment of a Road, Railway, Track, or Waterway. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractTransportationSpace-section,AbstractTransportationSpace>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} class  !<<SectionClassValue-section,SectionClassValue>>  [0..1] !Indicates the specific type of the Section.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
 [[SectionClassValue-section]]
-==== *Class SectionClassValue*
+===== *Class SectionClassValue*
 
-include::../requirements/Transportation/REQ_Transportation_SectionClassValue.adoc[]
-
-|====
-|*Class SectionClassValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SectionClassValue is a code list used to further classify a Section. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*SectionClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! SectionClassValue is a code list used to further classify a Section. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[Square-section]]
-==== *Class Square*
+===== *Class Square*
 
-include::../requirements/Transportation/REQ_Transportation_Square.adoc[]
-
-|====
-|*Class Square* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A Square is a transportation space for unrestricted movement for vehicles, bicycles and/or pedestrians. This includes plazas as well as large sealed surfaces such as parking lots. +
-Subclass Of: {nbsp}{nbsp} <<AbstractTransportationSpace-section,AbstractTransportationSpace>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «TopLevelFeatureType»
-|*Relations* 
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SquareClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the Square.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SquareFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the Square.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SquareUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the Square.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*Square* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A Square is a transportation space for unrestricted movement for vehicles, bicycles and/or pedestrians. This includes plazas as well as large sealed surfaces such as parking lots. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractTransportationSpace-section,AbstractTransportationSpace>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} class  !<<SquareClassValue-section,SquareClassValue>>  [0..1] !Indicates the specific type of the Square.
+ 
+!{set:cellbgcolor:#FFFFFF} function  !<<SquareFunctionValue-section,SquareFunctionValue>>  [0..*] !Specifies the intended purposes of the Square.
+ 
+!{set:cellbgcolor:#FFFFFF} usage  !<<SquareUsageValue-section,SquareUsageValue>>  [0..*] !Specifies the actual uses of the Square.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
 [[SquareClassValue-section]]
-==== *Class SquareClassValue*
+===== *Class SquareClassValue*
 
-include::../requirements/Transportation/REQ_Transportation_SquareClassValue.adoc[]
-
-|====
-|*Class SquareClassValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SquareClassValue is a code list used to further classify a Square. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*SquareClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! SquareClassValue is a code list used to further classify a Square. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[SquareFunctionValue-section]]
-==== *Class SquareFunctionValue*
+===== *Class SquareFunctionValue*
 
-include::../requirements/Transportation/REQ_Transportation_SquareFunctionValue.adoc[]
-
-|====
-|*Class SquareFunctionValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SquareFunctionValue is a code list that enumerates the different purposes of a Square. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*SquareFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! SquareFunctionValue is a code list that enumerates the different purposes of a Square. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[SquareUsageValue-section]]
-==== *Class SquareUsageValue*
+===== *Class SquareUsageValue*
 
-include::../requirements/Transportation/REQ_Transportation_SquareUsageValue.adoc[]
-
-|====
-|*Class SquareUsageValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SquareUsageValue is a code list that enumerates the different uses of a Square. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*SquareUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! SquareUsageValue is a code list that enumerates the different uses of a Square. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[SurfaceMaterialValue-section]]
-==== *Class SurfaceMaterialValue*
+===== *Class SurfaceMaterialValue*
 
-include::../requirements/Transportation/REQ_Transportation_SurfaceMaterialValue.adoc[]
-
-|====
-|*Class SurfaceMaterialValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SurfaceMaterialValue is a code list that enumerates the different surface materials. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*SurfaceMaterialValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! SurfaceMaterialValue is a code list that enumerates the different surface materials. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[Track-section]]
-==== *Class Track*
+===== *Class Track*
 
-include::../requirements/Transportation/REQ_Transportation_Track.adoc[]
-
-|====
-|*Class Track* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A Track is a small path mainly used by pedestrians. Tracks can be segmented into Sections and Intersections. +
-Subclass Of: {nbsp}{nbsp} <<AbstractTransportationSpace-section,AbstractTransportationSpace>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «TopLevelFeatureType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} section +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<Section-section,Section>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the sections that are part of the Track. +
-|Relation Name: {nbsp}{nbsp} intersection +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<Intersection-section,Intersection>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the intersections that are part of the Track. +
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TrackClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the Track.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TrackFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the Track.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TrackUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the Track.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*Track* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A Track is a small path mainly used by pedestrians. Tracks can be segmented into Sections and Intersections. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractTransportationSpace-section,AbstractTransportationSpace>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} section 
+!<<Section-section,Section>> 
+ [*]
+!
+!{set:cellbgcolor:#FFFFFF} intersection 
+!<<Intersection-section,Intersection>> 
+ [*]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} class  !<<TrackClassValue-section,TrackClassValue>>  [0..1] !Indicates the specific type of the Track.
+ 
+!{set:cellbgcolor:#FFFFFF} function  !<<TrackFunctionValue-section,TrackFunctionValue>>  [0..*] !Specifies the intended purposes of the Track.
+ 
+!{set:cellbgcolor:#FFFFFF} usage  !<<TrackUsageValue-section,TrackUsageValue>>  [0..*] !Specifies the actual uses of the Track.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
 [[TrackClassValue-section]]
-==== *Class TrackClassValue*
+===== *Class TrackClassValue*
 
-include::../requirements/Transportation/REQ_Transportation_TrackClassValue.adoc[]
-
-|====
-|*Class TrackClassValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TrackClassValue is a code list used to further classify a Track. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*TrackClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrackClassValue is a code list used to further classify a Track. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[TrackFunctionValue-section]]
-==== *Class TrackFunctionValue*
+===== *Class TrackFunctionValue*
 
-include::../requirements/Transportation/REQ_Transportation_TrackFunctionValue.adoc[]
-
-|====
-|*Class TrackFunctionValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TrackFunctionValue is a code list that enumerates the different purposes of a Track. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*TrackFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrackFunctionValue is a code list that enumerates the different purposes of a Track. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[TrackUsageValue-section]]
-==== *Class TrackUsageValue*
+===== *Class TrackUsageValue*
 
-include::../requirements/Transportation/REQ_Transportation_TrackUsageValue.adoc[]
-
-|====
-|*Class TrackUsageValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TrackUsageValue is a code list that enumerates the different uses of a Track. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*TrackUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrackUsageValue is a code list that enumerates the different uses of a Track. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[TrafficArea-section]]
-==== *Class TrafficArea*
+===== *Class TrafficArea*
 
-include::../requirements/Transportation/REQ_Transportation_TrafficArea.adoc[]
-
-|====
-|*Class TrafficArea* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A TrafficArea is the ground surface of a TrafficSpace. Traffic areas are the surfaces upon which traffic actually takes place. +
-Subclass Of: {nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TrafficAreaClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the TrafficArea.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TrafficAreaFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the TrafficArea.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}surfaceMaterial +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} SurfaceMaterialValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the type of pavement of the TrafficArea.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TrafficAreaUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the TrafficArea.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*TrafficArea* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A TrafficArea is the ground surface of a TrafficSpace. Traffic areas are the surfaces upon which traffic actually takes place. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractThematicSurface-section,AbstractThematicSurface>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} class  !<<TrafficAreaClassValue-section,TrafficAreaClassValue>>  [0..1] !Indicates the specific type of the TrafficArea.
+ 
+!{set:cellbgcolor:#FFFFFF} function  !<<TrafficAreaFunctionValue-section,TrafficAreaFunctionValue>>  [0..*] !Specifies the intended purposes of the TrafficArea.
+ 
+!{set:cellbgcolor:#FFFFFF} surfaceMaterial  !<<SurfaceMaterialValue-section,SurfaceMaterialValue>>  [0..1] !Specifies the type of pavement of the TrafficArea.
+ 
+!{set:cellbgcolor:#FFFFFF} usage  !<<TrafficAreaUsageValue-section,TrafficAreaUsageValue>>  [0..*] !Specifies the actual uses of the TrafficArea.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
 [[TrafficAreaClassValue-section]]
-==== *Class TrafficAreaClassValue*
+===== *Class TrafficAreaClassValue*
 
-include::../requirements/Transportation/REQ_Transportation_TrafficAreaClassValue.adoc[]
-
-|====
-|*Class TrafficAreaClassValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TrafficAreaClassValue is a code list used to further classify a TrafficArea. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*TrafficAreaClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrafficAreaClassValue is a code list used to further classify a TrafficArea. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[TrafficAreaFunctionValue-section]]
-==== *Class TrafficAreaFunctionValue*
+===== *Class TrafficAreaFunctionValue*
 
-include::../requirements/Transportation/REQ_Transportation_TrafficAreaFunctionValue.adoc[]
-
-|====
-|*Class TrafficAreaFunctionValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TrafficAreaFunctionValue is a code list that enumerates the different purposes of a TrafficArea. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*TrafficAreaFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrafficAreaFunctionValue is a code list that enumerates the different purposes of a TrafficArea. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[TrafficAreaUsageValue-section]]
-==== *Class TrafficAreaUsageValue*
+===== *Class TrafficAreaUsageValue*
 
-include::../requirements/Transportation/REQ_Transportation_TrafficAreaUsageValue.adoc[]
-
-|====
-|*Class TrafficAreaUsageValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TrafficAreaUsageValue is a code list that enumerates the different uses of a TrafficArea. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*TrafficAreaUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrafficAreaUsageValue is a code list that enumerates the different uses of a TrafficArea. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[TrafficSpace-section]]
-==== *Class TrafficSpace*
+===== *Class TrafficSpace*
 
-include::../requirements/Transportation/REQ_Transportation_TrafficSpace.adoc[]
-
-|====
-|*Class TrafficSpace* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A TrafficSpace is a space in which traffic takes place. Traffic includes the movement of entities such as trains, vehicles, pedestrians, ships, or other transportation types.  +
-Subclass Of: {nbsp}{nbsp} <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} clearanceSpace +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<ClearanceSpace-section,ClearanceSpace>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the clearance spaces that are part of the TrafficSpace. +
-|Relation Name: {nbsp}{nbsp} successor +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<TrafficSpace-section,TrafficSpace>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the successor(s) of the TrafficSpace.  +
-|Relation Name: {nbsp}{nbsp} boundary +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<TrafficArea-section,TrafficArea>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|Relation Name: {nbsp}{nbsp} predecessor +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<TrafficSpace-section,TrafficSpace>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the predecessor(s) of the TrafficSpace.  +
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TrafficSpaceClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the TrafficSpace.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TrafficSpaceFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the TrafficSpace.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}granularity +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GranularityValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Defines whether traffic spaces are represented by individual ways or by individual lanes, depending on the desired level of detail.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}occupancy +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Occupancy +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Provides information on the residency of persons, vehicles, or other moving features in the TrafficSpace.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}trafficDirection +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TrafficDirectionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the direction of traffic flow relative to the corresponding linear geometry representation.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TrafficSpaceUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the TrafficSpace.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*TrafficSpace* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A TrafficSpace is a space in which traffic takes place. Traffic includes the movement of entities such as trains, vehicles, pedestrians, ships, or other transportation types.  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} clearanceSpace 
+!<<ClearanceSpace-section,ClearanceSpace>> 
+ [*]
+!
+!{set:cellbgcolor:#FFFFFF} successor 
+!<<TrafficSpace-section,TrafficSpace>> 
+ [*]
+!
+!{set:cellbgcolor:#FFFFFF} boundary 
+!<<TrafficArea-section,TrafficArea>> 
+ [*]
+!
+!{set:cellbgcolor:#FFFFFF} predecessor 
+!<<TrafficSpace-section,TrafficSpace>> 
+ [*]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} class  !<<TrafficSpaceClassValue-section,TrafficSpaceClassValue>>  [0..1] !Indicates the specific type of the TrafficSpace.
+ 
+!{set:cellbgcolor:#FFFFFF} function  !<<TrafficSpaceFunctionValue-section,TrafficSpaceFunctionValue>>  [0..*] !Specifies the intended purposes of the TrafficSpace.
+ 
+!{set:cellbgcolor:#FFFFFF} granularity  !<<GranularityValue-section,GranularityValue>>  !Defines whether traffic spaces are represented by individual ways or by individual lanes, depending on the desired level of detail.
+ 
+!{set:cellbgcolor:#FFFFFF} occupancy  !<<Occupancy-section,Occupancy>>  [0..*] !Provides information on the residency of persons, vehicles, or other moving features in the TrafficSpace.
+ 
+!{set:cellbgcolor:#FFFFFF} trafficDirection  !<<TrafficDirectionValue-section,TrafficDirectionValue>>  [0..1] !Indicates the direction of traffic flow relative to the corresponding linear geometry representation.
+ 
+!{set:cellbgcolor:#FFFFFF} usage  !<<TrafficSpaceUsageValue-section,TrafficSpaceUsageValue>>  [0..*] !Specifies the actual uses of the TrafficSpace.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
 [[TrafficSpaceClassValue-section]]
-==== *Class TrafficSpaceClassValue*
+===== *Class TrafficSpaceClassValue*
 
-include::../requirements/Transportation/REQ_Transportation_TrafficSpaceClassValue.adoc[]
-
-|====
-|*Class TrafficSpaceClassValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TrafficSpaceClassValue is a code list used to further classify a TrafficSpace. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*TrafficSpaceClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrafficSpaceClassValue is a code list used to further classify a TrafficSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[TrafficSpaceFunctionValue-section]]
-==== *Class TrafficSpaceFunctionValue*
+===== *Class TrafficSpaceFunctionValue*
 
-include::../requirements/Transportation/REQ_Transportation_TrafficSpaceFunctionValue.adoc[]
-
-|====
-|*Class TrafficSpaceFunctionValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TrafficSpaceFunctionValue is a code list that enumerates the different purposes of a TrafficSpace. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*TrafficSpaceFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrafficSpaceFunctionValue is a code list that enumerates the different purposes of a TrafficSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[TrafficSpaceUsageValue-section]]
-==== *Class TrafficSpaceUsageValue*
+===== *Class TrafficSpaceUsageValue*
 
-include::../requirements/Transportation/REQ_Transportation_TrafficSpaceUsageValue.adoc[]
-
-|====
-|*Class TrafficSpaceUsageValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TrafficSpaceUsageValue is a code list that enumerates the different uses of a TrafficSpace. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*TrafficSpaceUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrafficSpaceUsageValue is a code list that enumerates the different uses of a TrafficSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[TransportationSpaceClassValue-section]]
-==== *Class TransportationSpaceClassValue*
+===== *Class TransportationSpaceClassValue*
 
-include::../requirements/Transportation/REQ_Transportation_TransportationSpaceClassValue.adoc[]
-
-|====
-|*Class TransportationSpaceClassValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TransportationSpaceClassValue is a code list used to further classify a TransportationSpace. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*TransportationSpaceClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TransportationSpaceClassValue is a code list used to further classify a TransportationSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[TransportationSpaceFunctionValue-section]]
-==== *Class TransportationSpaceFunctionValue*
+===== *Class TransportationSpaceFunctionValue*
 
-include::../requirements/Transportation/REQ_Transportation_TransportationSpaceFunctionValue.adoc[]
-
-|====
-|*Class TransportationSpaceFunctionValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TransportationSpaceFunctionValue is a code list that enumerates the different purposes of a TransportationSpace. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*TransportationSpaceFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TransportationSpaceFunctionValue is a code list that enumerates the different purposes of a TransportationSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[TransportationSpaceUsageValue-section]]
-==== *Class TransportationSpaceUsageValue*
+===== *Class TransportationSpaceUsageValue*
 
-include::../requirements/Transportation/REQ_Transportation_TransportationSpaceUsageValue.adoc[]
-
-|====
-|*Class TransportationSpaceUsageValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TransportationSpaceUsageValue is a code list that enumerates the different uses of a TransportationSpace. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*TransportationSpaceUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TransportationSpaceUsageValue is a code list that enumerates the different uses of a TransportationSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[Waterway-section]]
-==== *Class Waterway*
+===== *Class Waterway*
 
-include::../requirements/Transportation/REQ_Transportation_Waterway.adoc[]
-
-|====
-|*Class Waterway* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A Waterway is a transportation space used for the movement of vessels upon or within a water body. +
-Subclass Of: {nbsp}{nbsp} <<AbstractTransportationSpace-section,AbstractTransportationSpace>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «TopLevelFeatureType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} section +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<Section-section,Section>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the sections that are part of the Waterway. +
-|Relation Name: {nbsp}{nbsp} intersection +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<Intersection-section,Intersection>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Relates to the intersections that are part of the Waterway. +
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WaterwayClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the Waterway.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WaterwayFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the Waterway.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WaterwayUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the Waterway.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*Waterway* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A Waterway is a transportation space used for the movement of vessels upon or within a water body. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractTransportationSpace-section,AbstractTransportationSpace>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} section 
+!<<Section-section,Section>> 
+ [*]
+!
+!{set:cellbgcolor:#FFFFFF} intersection 
+!<<Intersection-section,Intersection>> 
+ [*]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} class  !<<WaterwayClassValue-section,WaterwayClassValue>>  [0..1] !Indicates the specific type of the Waterway.
+ 
+!{set:cellbgcolor:#FFFFFF} function  !<<WaterwayFunctionValue-section,WaterwayFunctionValue>>  [0..*] !Specifies the intended purposes of the Waterway.
+ 
+!{set:cellbgcolor:#FFFFFF} usage  !<<WaterwayUsageValue-section,WaterwayUsageValue>>  [0..*] !Specifies the actual uses of the Waterway.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
 [[WaterwayClassValue-section]]
-==== *Class WaterwayClassValue*
+===== *Class WaterwayClassValue*
 
-include::../requirements/Transportation/REQ_Transportation_WaterwayClassValue.adoc[]
-
-|====
-|*Class WaterwayClassValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WaterwayClassValue is a code list used to further classify a Waterway. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*WaterwayClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WaterwayClassValue is a code list used to further classify a Waterway. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[WaterwayFunctionValue-section]]
-==== *Class WaterwayFunctionValue*
+===== *Class WaterwayFunctionValue*
 
-include::../requirements/Transportation/REQ_Transportation_WaterwayFunctionValue.adoc[]
-
-|====
-|*Class WaterwayFunctionValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WaterwayFunctionValue is a code list that enumerates the different purposes of a Waterway. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*WaterwayFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WaterwayFunctionValue is a code list that enumerates the different purposes of a Waterway. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[WaterwayUsageValue-section]]
-==== *Class WaterwayUsageValue*
+===== *Class WaterwayUsageValue*
 
-include::../requirements/Transportation/REQ_Transportation_WaterwayUsageValue.adoc[]
-
-|====
-|*Class WaterwayUsageValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WaterwayUsageValue is a code list that enumerates the different uses of a Waterway. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*WaterwayUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WaterwayUsageValue is a code list that enumerates the different uses of a Waterway. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[GranularityValue-section]]
-==== *Class GranularityValue*
+===== *Class GranularityValue*
 
-include::../requirements/Transportation/REQ_Transportation_GranularityValue.adoc[]
-
-|====
-|*Class GranularityValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} GranularityValue enumerates the different levels of granularity in which transportation objects are represented. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} 
-|*Relations* 
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}lane +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the individual lanes of the transportation object are represented.   +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}way +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that the individual (carriage)ways of the transportation object are represented.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*GranularityValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GranularityValue enumerates the different levels of granularity in which transportation objects are represented. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} lane  !  !Indicates that the individual lanes of the transportation object are represented. 
+ 
+!{set:cellbgcolor:#FFFFFF} way  !  !Indicates that the individual (carriage)ways of the transportation object are represented.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
 [[TrafficDirectionValue-section]]
-==== *Class TrafficDirectionValue*
+===== *Class TrafficDirectionValue*
 
-include::../requirements/Transportation/REQ_Transportation_TrafficDirectionValue.adoc[]
-
-|====
-|*Class TrafficDirectionValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} TrafficDirectionValue enumerates the allowed directions of travel of a mobile object. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} 
-|*Relations* 
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}forwards +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that traffic flows in the direction of the corresponding linear geometry.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}backwards +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that traffic flows in the opposite direction of the corresponding linear geometry.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}both +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates that traffic flows in both directions.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*TrafficDirectionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrafficDirectionValue enumerates the allowed directions of travel of a mobile object. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} forwards  !  !Indicates that traffic flows in the direction of the corresponding linear geometry.
+ 
+!{set:cellbgcolor:#FFFFFF} backwards  !  !Indicates that traffic flows in the opposite direction of the corresponding linear geometry.
+ 
+!{set:cellbgcolor:#FFFFFF} both  !  !Indicates that traffic flows in both directions.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
   
+
 
 

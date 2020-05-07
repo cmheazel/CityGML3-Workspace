@@ -1,0 +1,18 @@
+[[req_class-classes]]
+[width="90%",cols="2,6"]
+|===
+^|*Requirement  {counter:req-id}* |*/req/general/classes* 
+^|A |The Requirement Class Classes shown in blue in Figure [nn] SHALL be provided for by the encoding specification in a manner consistent with the encoding technology.
+^|B |The encoding specification SHALL provide a mapping between the concepts defined in the Conceptual Model and the representation of those concepts in the encoding.
+^|C |The concepts included in these mappings SHALL include:
+
+a) All classes shown as blue boxes (this Requirements Class) in the figure
+
+b) All attributes, attribute cardinalities, and attribute data types of these classes (usually shown in subsequent figures)
+
+c) All associations, navigation, roles, and role cardinalities connecting to the blue classes
+
+d) All classes shown as beige boxes (another Requirements Class) in the figure connected to the blue box classes by association or used as attribute data types
+
+e) All classes shown as pink boxes (another Standard) in the figure connected to the blue box classes by association or used as attribute data types
+|===

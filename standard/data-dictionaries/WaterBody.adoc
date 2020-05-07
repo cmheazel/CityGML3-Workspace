@@ -1,160 +1,157 @@
-[[WaterBody-package]]
-==== *WaterBody Package*
+[[WaterBody-package-dd]]
+==== *Package*
 
-|====
-|*Package WaterBody*
-|Description:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}The WaterBody module supports representation of the thematic aspects and 3D geometry of rivers, canals, lakes, and basins. It does, however, not inherit any hydrological or other dynamic aspects of fluid flow. +
-Stereotype:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}«ApplicationSchema» +
-Parent Package: {nbsp}{nbsp}CityGML
-|====
+[cols="1a"]
+|===
+|{set:cellbgcolor:#FFFFFF} *Package WaterBody*
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Description: ! The WaterBody module supports representation of the thematic aspects and 3D geometry of rivers, canals, lakes, and basins. It does, however, not inherit any hydrological or other dynamic aspects of fluid flow. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Parent Package: ! CityGML
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: ! «ApplicationSchema»
+!===
+|===
+
+==== *Classes*
 
 [[AbstractWaterBoundarySurface-section]]
-==== *Class AbstractWaterBoundarySurface*
+===== *Class AbstractWaterBoundarySurface*
 
-include::../requirements/WaterBody/REQ_WaterBody_AbstractWaterBoundarySurface.adoc[]
-
-|====
-|*Class AbstractWaterBoundarySurface* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} AbstractWaterBoundarySurface is the abstract superclass for all kinds of thematic surfaces bounding a water body. +
-Subclass Of: {nbsp}{nbsp} <<AbstractThematicSurface-section,AbstractThematicSurface>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*AbstractWaterBoundarySurface* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AbstractWaterBoundarySurface is the abstract superclass for all kinds of thematic surfaces bounding a water body. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractThematicSurface-section,AbstractThematicSurface>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|=== 
 
 [[WaterBody-section]]
-==== *Class WaterBody*
+===== *Class WaterBody*
 
-include::../requirements/WaterBody/REQ_WaterBody_WaterBody.adoc[]
-
-|====
-|*Class WaterBody* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A WaterBody represents significant and permanent or semi-permanent accumulations of surface water, usually covering a part of the Earth. +
-Subclass Of: {nbsp}{nbsp} <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «TopLevelFeatureType»
-|*Relations* 
-|Relation Name: {nbsp}{nbsp} boundary +
-Cardinality:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  * +
-Target Class: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} <<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>>  +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  +
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}class +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WaterBodyClassValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Indicates the specific type of the WaterBody.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}function +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WaterBodyFunctionValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the intended purposes of the WaterBody.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}usage +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WaterBodyUsageValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the actual uses of the WaterBody.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..*] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*WaterBody* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A WaterBody represents significant and permanent or semi-permanent accumulations of surface water, usually covering a part of the Earth. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} boundary 
+!<<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>> 
+ [*]
+!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} class  !<<WaterBodyClassValue-section,WaterBodyClassValue>>  [0..1] !Indicates the specific type of the WaterBody.
+ 
+!{set:cellbgcolor:#FFFFFF} function  !<<WaterBodyFunctionValue-section,WaterBodyFunctionValue>>  [0..*] !Specifies the intended purposes of the WaterBody.
+ 
+!{set:cellbgcolor:#FFFFFF} usage  !<<WaterBodyUsageValue-section,WaterBodyUsageValue>>  [0..*] !Specifies the actual uses of the WaterBody.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
 
 [[WaterBodyClassValue-section]]
-==== *Class WaterBodyClassValue*
+===== *Class WaterBodyClassValue*
 
-include::../requirements/WaterBody/REQ_WaterBody_WaterBodyClassValue.adoc[]
-
-|====
-|*Class WaterBodyClassValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WaterBodyClassValue is a code list used to further classify a WaterBody. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*WaterBodyClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WaterBodyClassValue is a code list used to further classify a WaterBody. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[WaterBodyFunctionValue-section]]
-==== *Class WaterBodyFunctionValue*
+===== *Class WaterBodyFunctionValue*
 
-include::../requirements/WaterBody/REQ_WaterBody_WaterBodyFunctionValue.adoc[]
-
-|====
-|*Class WaterBodyFunctionValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WaterBodyFunctionValue is a code list that enumerates the different purposes of a WaterBody. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*WaterBodyFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WaterBodyFunctionValue is a code list that enumerates the different purposes of a WaterBody. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[WaterBodyUsageValue-section]]
-==== *Class WaterBodyUsageValue*
+===== *Class WaterBodyUsageValue*
 
-include::../requirements/WaterBody/REQ_WaterBody_WaterBodyUsageValue.adoc[]
-
-|====
-|*Class WaterBodyUsageValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WaterBodyUsageValue is a code list that enumerates the different uses of a WaterBody. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*WaterBodyUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WaterBodyUsageValue is a code list that enumerates the different uses of a WaterBody. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
 [[WaterGroundSurface-section]]
-==== *Class WaterGroundSurface*
+===== *Class WaterGroundSurface*
 
-include::../requirements/WaterBody/REQ_WaterBody_WaterGroundSurface.adoc[]
-
-|====
-|*Class WaterGroundSurface* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A WaterGroundSurface represents the exterior boundary surface of the submerged bottom of a water body. +
-Subclass Of: {nbsp}{nbsp} <<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*WaterGroundSurface* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A WaterGroundSurface represents the exterior boundary surface of the submerged bottom of a water body. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|=== 
 
 [[WaterLevelValue-section]]
-==== *Class WaterLevelValue*
+===== *Class WaterLevelValue*
 
-include::../requirements/WaterBody/REQ_WaterBody_WaterLevelValue.adoc[]
-
-|====
-|*Class WaterLevelValue* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WaterLevelValue is a code list that enumerates the different levels of a water surface. +
-Subclass Of: {nbsp}{nbsp} <<-section,>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «CodeList»
-|*Relations* 
-|*Attributes*
-|
-|==== 
+[cols="1a"]
+|===
+|*WaterLevelValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WaterLevelValue is a code list that enumerates the different levels of a water surface. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|===
 
 [[WaterSurface-section]]
-==== *Class WaterSurface*
+===== *Class WaterSurface*
 
-include::../requirements/WaterBody/REQ_WaterBody_WaterSurface.adoc[]
-
-|====
-|*Class WaterSurface* +
-Definition:{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} A WaterSurface represents the upper exterior interface between a water body and the atmosphere. +
-Subclass Of: {nbsp}{nbsp} <<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>> +
-StereoType:{nbsp}{nbsp}{nbsp}{nbsp} «FeatureType»
-|*Relations* 
-|*Attributes*
-|Attribute Name: {nbsp}{nbsp}{nbsp}{nbsp}waterLevel +
-Value Type: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} WaterLevelValue +
-Definition: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Specifies the level of the WaterSurface.  +
-Multiplicity: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}  [0..1] +
-Stereotype: {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} «Property» + 
-
-|
-|==== 
+[cols="1a"]
+|===
+|*WaterSurface* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A WaterSurface represents the upper exterior interface between a water body and the atmosphere. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} waterLevel  !<<WaterLevelValue-section,WaterLevelValue>>  [0..1] !Specifies the level of the WaterSurface.
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|=== 
   
+
 
 

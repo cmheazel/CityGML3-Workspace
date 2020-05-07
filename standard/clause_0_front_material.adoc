@@ -1,14 +1,14 @@
 [big]*i.     Abstract*
 
-CityGML is an open data model and XML-based format for the storage and exchange of virtual 3D city models. It is an application schema for the Geography Markup Language version 3.2.1 (GML3), the extendible international standard for spatial data exchange issued by the Open Geospatial Consortium (OGC) and the ISO TC211.
+CityGML is an open conceptual data model for the storage and exchange of virtual 3D city models. It is defined through a Unified Modeling Language (UML) object model. This UML model extends the ISO Technical Committee 211 (TC211) conceptual model standards for spatial and temporal data. Building on the ISO fundation assures that the man-made features described in the City Models share the same spatial-temporal universe as the surrounding countryside within which they reside.
 
-The aim of the development of CityGML is to reach a common definition of the basic entities, attributes, and relations of a 3D city model. This is especially important with respect to the cost-effective sustainable maintenance of 3D city models, allowing the reuse of the same data in different application fields. 
+The aim of the development of CityGML is to reach a common definition of the basic entities, attributes, and relations of a 3D city model. This is especially important with respect to the cost-effective sustainable maintenance of 3D city models, allowing the reuse of the same data in different application fields.
 
 [big]*ii.    Keywords*
 
 The following are keywords to be used by search engines and document catalogues.
 
-ogcdoc, OGC document,  <tags separated by commas>
+ogcdoc, OGC document, CityGML, 3D city models
 
 [big]*iii.   Preface*
 
@@ -16,86 +16,34 @@ Attention is drawn to the possibility that some of the elements of this document
 
 Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.
 
-There are significant changes between CityGML version 2.0.0 and CityGML version 1.0.0 (OGC document no. 08-007r1):
-
-* New thematic modules for the representation of tunnels and bridges;
-* Additional boundary surfaces for the semantic classification of the outer shell of buildings and building parts (OuterCeilingSurface and OuterFloorSurface);
-* LOD0 representation (footprint and roof egde representations) for buildings and building parts;
-* Additional attributes denoting a city object’s location with respect to the surrounding terrain and water surface (relativeToTerrain and relativeToWater);
-* Additional generic attributes for measured values and attribute sets; and
-* Redesign of the CityGML code list mechanism (enumerative attributes are now of type gml:CodeType which facilitates to provide additional code lists enumerating their possible attribute values).
-
-Migration of existing CityGML 1.0 instances to valid 2.0 instances only requires changing the CityGML namespace and schema location values in the document to the actual 2.0 values.
+More content to be provided.
 
 [big]*iv.    Submitting organizations*
 
-image::images/CityGML_Logo.png[]
+image::images/CityGML_Logo.png[width=30%]
 
 This is the official CityGML logo. For current news on CityGML and information about ongoing projects and fields of research in the area of CityGML see http://www.citygml.org and http://www.citygmlwiki.org
 
 NOTE: PNG interlace method not supported for PDF generation.  Find a more compatible OGC logo for "image::images/OGC_Logo.png[]"
 
-OGC work on CityGML is discussed and coordinated by the OGC 3D Information Management (3DIM) Working Group.CityGMLwas initally implemented and evaluated as part of the OGC Web Services Testbed, Phase 4 (OWS-4) in the CAD/GIS/BIM thread.
+This Document was submitted to the Open Geospatial Consortium (OGC) by the members of the CityGML Standards Working Group of the OGC. Amongst others, this comprises the following organizations:
 
-Version 2.0 of this standards document was prepared by the OGC CityGML Standards Working Group (SWG). Future discussion and development will be led by the 3DIM Working Group.
+* To be provided
+* ...
 
-For further information see http://www.opengeospatial.org/projects/groups/3dimwg
-
-image::images/SIG3D_Logo.png[]
-
-image::images/GDI_Logo.png[]
-
-CityGML also continues to be developed by the members of the Special Interest Group 3D (SIG 3D) of the GDI-DE Geodateninfrastruktur Deutschland (Spatial Data Infrastructure Germany) in joint cooperation with the 3DIM Working Group and the CityGML SWG within OGC.
-
-For further information see http://www.sig3d.org/
-
-image::images/EuroSDR_Logo.png[]
-
-The preparation of the English document version and the European discussion has been supported by the European Spatial Data Research Organization (EuroSDR; formerly known as OEEPE) in an EuroSDR Commission III project. For further information see http://www.eurosdr.net
-
-This Document was submitted to the Open Geospatial Consortium (OGC) by the members of the CityGML 3.0 Standards Working Group of the OGC. Amongst others, this comprises the following organizations:
-
-* Autodesk, Inc. (primary submitter)
-* Bentley Systems, Inc. (primary submitter)
-* Technical University Berlin (submitter of technology)
-* Ordnance Survey, UK
-* University of Bonn, Germany
-* Hasso-Plattner-Institute for IT Systems Engineering, University of Potsdam
-* Institute for Applied Computer Science, Karlsruhe Institute of Technology
-
-CityGML was originally developed by the Special Interest Group 3D (SIG 3D), 2002 – 2012 - www.citygml.org.
 
 [big]*v.     Submitters*
 
-All questions regarding this submission should be directed to the editor or the submitters:
+All questions regarding this submission should be directed to the editors or the submitters:
 
 [#submission_contact_points,reftext='{table-caption} {counter:table-num}']
 .Submission Contact Points
 [width="90%",cols="^4,^4,^4",options="header"]
 |===
 |Name |Institution |Email
-|Prof. Dr. Thomas H. Kolbe, Claus Nagel, Alexandra Lorenz
-|Institute for Geodesy and Geoinformation Science, Technical University Berlin
-|thomas.kolbe@tu-berlin.de claus.nagel@tu-berlin.de alexandra.lorenz@tu-berlin.de
-|Dr. Gerhard Gröger, Prof. Dr. Lutz Plümer, Angela Czerwinski
-|Institute for Geodesy and Geoinformation, University of Bonn
-|Groeger@ikg.uni-bonn.de Pluemer@ikg.uni-bonn.de Czerwinski@ikg.uni-bonn.de
-|Haik Lorenz
-|Autodesk, Inc.
-|haik.lorenz@autodesk.com
-|Alain Lapierre, Stefan Apfel, Paul Scarponcini
-|Bentley Systems, Inc.
-|alain.lapierre@bentley.com stefan.apfel@bentley.com paul.scarponcini@bentley.com
-|Carsten Rönsdorf
-|Ordnance Survey, Great Britain
-|carsten.roensdorf@ordnancesurvey.co.uk
-|Prof. Dr. Jürgen Döllner
-|Hasso-Plattner-Institute for IT Systems Engineering, University of Potsdam
-|juergen.doellner@hpi.uni-potsdam.de
-|Dr. Joachim Benner, Karl-Heinz Häfele
-|Institute for Applied Computer Science, Karlsruhe Institute of Technology
-|joachim.benner@kit.edu karl-heinz.haefele@kit.edu
+3+|To be provided
 |===
+
 
 [big]*vi.     Participants in development*
 
@@ -104,53 +52,11 @@ All questions regarding this submission should be directed to the editor or the 
 [width="90%",cols="^4,^4",options="header"]
 |===
 |Name |Institution
-|Ulrich Gruber, Sandra Schlüter
-|District Administration Recklinghausen, Cadastre Department, Germany
-|Frank Bildstein
-|Rheinmetall Defence Electronics, Germany
-|Rüdiger Drees
-|T-Systems Enterprise Services GmbH, Bonn, Germany
-|Andreas Kohlhaas
-|GIStec GmbH (formerly), Germany
-|Frank Thiemann
-|Institute for Cartography and Geoinformatics, University of Hannover
-|Martin Degen
-|Cadastre Department, City of Dortmund
-|Heinrich Geerling
-|Architekturbüro Geerling, Germany
-|Dr. Frank Knospe
-|Cadastre and Mapping Department, City of Essen,
-|Hardo Müller
-|Snowflake Software Ltd., Great Britain
-|Martin Rechner
-|rechner logistic, Germany
-|Jörg Haist, Daniel Holweg
-|Fraunhofer Institute for Computer Graphics (IGD), Darmstadt, Germany
-|Prof. Dr. Peter A. Henning
-|Faculty for Computer Science, University of Applied Sciences, Karlsruhe, Germany
-|Rolf Wegener, Stephan Heitmann
-|State Cadastre and Mapping Agency of North-Rhine Westphalia, Germany
-|Prof. Dr. Marc-O. Löwner
-|Institute for Geodesy and Photogrammetry, Technical University of Braunschweig
-|Dr. Egbert Casper
-|Zerna Ingenieure, Germany
-|Christian Dahmen
-|con terra GmbH, Germany
-|Nobuhiro Ishimaru, Kishiko Maruyama, Eiichiro Umino, Takahiro Hirose
-|Hitachi, Ltd., Japan
-|Linda van den Brink
-|Geonovum, The Netherlands
-|Ron Lake, David Burggraf
-|Galdos Systems Inc., Canada
-|Marie-Lise Vautier, Emmanuel Devys
-|Institut géographique national, France
-|Mark Pendlington
-|Ordnance Survey, Great Britain
+2+|To be provided
 |===
+
+The table only lists persons that were involved in the development of CityGML 3.0. CityGML 3.0 is based on extensive previous work that was done for CityGML 2.0. For persons involved in the previous work, please refer to the CityGML 2.0 specification.
 
 [big]*vii.    Acknowledgements*
 
-The SIG 3D wishes to thank the members of the CityGML Standards Working Group and the 3D Information Management (3DIM) Working Group of the OGC as well as all contributors of change requests and comments. In particular: Tim Case, Scott Simmons, Paul Cote, Clemens Portele, Jeffrey Bell, Chris Body, Greg Buehler, François Golay, John Herring, Jury Konga, Kai-Uwe Krause, Gavin Park, Richard Pearsall, George Percivall, Mauro Salvemini, Alessandro Triglia, David Wesloh, Tim Wilson, Greg Yetman, Jim Farley, Cliff Behrens, Lukas Herman, Danny Kita, and Simon Cox.
-
-Further credits for careful reviewing and commenting of this document go to: Ludvig Emgard, Bettina Petzold, Dave Capstick, Mark Pendlington, Alain Lapierre, and Frank Steggink.
-
+The editors wish to thank the Special Interest Group 3D (SIG 3D) of the initiative Geodata Infrastructure Germany (GDI-DE) which originally started the development of CityGML, the CityGML Standards Working Group and the 3D Information Management (3DIM) Working Group of the OGC as well as all contributors of change requests and comments.
