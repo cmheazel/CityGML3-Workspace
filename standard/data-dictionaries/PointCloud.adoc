@@ -12,16 +12,6 @@
 !===
 |===
 
-|===
-|Editing instructions:
-| 1) Delete all tables for CodeLists 
-| 2) If a subclass value is "<<←section,>>", change it to "none"
-| 3) If a multiplicity value is not provided, set it to "1" 
-| 4) If there are no entries in the role subtable, delete that subtable
-| 5) If there are no entries in the attrubute subtable, delete that subtable
-| 6) Delete these instructions when done
-|===
-
 ==== *Classes*
 
 [[PointCloud-section]]
@@ -36,7 +26,7 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractPointCloud-section,AbstractPointCloud>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
+|[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} points 

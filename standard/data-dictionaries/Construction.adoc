@@ -12,16 +12,6 @@
 !===
 |===
 
-|===
-|Editing instructions:
-| 1) Delete all tables for CodeLists 
-| 2) If a subclass value is "<<←section,>>", change it to "none"
-| 3) If a multiplicity value is not provided, set it to "1" 
-| 4) If there are no entries in the role subtable, delete that subtable
-| 5) If there are no entries in the attrubute subtable, delete that subtable
-| 6) Delete these instructions when done
-|===
-
 ==== *Classes*
 
 [[AbstractConstruction-section]]
@@ -36,7 +26,7 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
+|[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} boundary 
@@ -77,18 +67,13 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractThematicSurface-section,AbstractThematicSurface>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
+|[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} fillingSurface 
 !<<AbstractFillingSurface-section,AbstractFillingSurface>> 
  [*]
 !
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -104,7 +89,7 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
+|[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} filling 
@@ -137,15 +122,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
-!===
 |=== 
 
 [[AbstractFillingSurface-section]]
@@ -159,15 +135,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AbstractFillingSurface is the abstract superclass for different kinds of surfaces that seal openings filled by filling elements. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractThematicSurface-section,AbstractThematicSurface>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -183,15 +150,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
-!===
 |=== 
 
 [[AbstractInstallation-section]]
@@ -206,7 +164,7 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
+|[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} boundary 
@@ -235,15 +193,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstructionSurface-section,AbstractConstructionSurface>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
-!===
 |=== 
 
 [[Door-section]]
@@ -258,7 +207,7 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractFillingElement-section,AbstractFillingElement>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
+|[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} boundary 
@@ -292,17 +241,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! DoorClassValue is a code list used to further classify a Door. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -315,17 +255,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! DoorFunctionValue is a code list that enumerates the different purposes of a Door. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -341,18 +272,13 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractFillingSurface-section,AbstractFillingSurface>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
+|[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} address 
 !<<Address-section,Address>> 
  [*]
 !
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -365,17 +291,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! DoorUsageValue is a code list that enumerates the different uses of a Door. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -388,17 +305,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ElevationReferenceValue is a code list that enumerates the different elevation reference levels used to measure construction heights. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -411,17 +319,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! EventValue is a code list that enumerates the different events of a construction. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -437,15 +336,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstructionSurface-section,AbstractConstructionSurface>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
-!===
 |=== 
 
 [[GroundSurface-section]]
@@ -459,15 +349,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A GroundSurface is a surface that represents the ground plate of a construction. The polygon defining the ground plate is congruent with the footprint of the construction. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstructionSurface-section,AbstractConstructionSurface>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -483,15 +364,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstructionSurface-section,AbstractConstructionSurface>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
-!===
 |=== 
 
 [[OtherConstruction-section]]
@@ -505,10 +377,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! An OtherConstruction is a construction that is not covered by any of the other subclasses of AbstractConstruction. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstruction-section,AbstractConstruction>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -532,17 +400,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! OtherConstructionClassValue is a code list used to further classify an OtherConstruction. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -555,17 +414,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! OtherConstructionFunctionValue is a code list that enumerates the different purposes of an OtherConstruction. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -578,17 +428,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! OtherConstructionUsageValue is a code list that enumerates the different uses of an OtherConstruction. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -604,15 +445,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstructionSurface-section,AbstractConstructionSurface>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
-!===
 |=== 
 
 [[OuterFloorSurface-section]]
@@ -626,15 +458,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! An OuterFloorSurface is a surface that belongs to the outer construction shell with the orientation pointing upwards. An example is the floor of a loggia. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstructionSurface-section,AbstractConstructionSurface>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -650,15 +473,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstructionSurface-section,AbstractConstructionSurface>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
-!===
 |=== 
 
 [[WallSurface-section]]
@@ -672,15 +486,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A WallSurface is a surface that is part of the building facade visible from the outside. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstructionSurface-section,AbstractConstructionSurface>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -696,7 +501,7 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractFillingElement-section,AbstractFillingElement>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
+|[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} boundary 
@@ -726,17 +531,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WindowClassValue is a code list used to further classify a Window. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -749,17 +545,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WindowFunctionValue is a code list that enumerates the different purposes of a Window. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -775,15 +562,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractFillingSurface-section,AbstractFillingSurface>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
-!===
 |=== 
 
 [[WindowUsageValue-section]]
@@ -795,17 +573,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WindowUsageValue is a code list that enumerates the different uses of a Window. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -818,28 +587,24 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ConditionOfConstructionValue enumerates different conditions of a construction. [cf. INSPIRE] 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} declined  !<<-section,>>  !Indicates that the construction cannot be used under normal conditions, though its main elements (walls, roof) are still present. [cf. INSPIRE]
+!{set:cellbgcolor:#FFFFFF} declined  !  !Indicates that the construction cannot be used under normal conditions, though its main elements (walls, roof) are still present. [cf. INSPIRE]
  
-!{set:cellbgcolor:#FFFFFF} demolished  !<<-section,>>  !Indicates that the construction has been demolished. There are no more visible remains. [cf. INSPIRE]
+!{set:cellbgcolor:#FFFFFF} demolished  !  !Indicates that the construction has been demolished. There are no more visible remains. [cf. INSPIRE]
  
-!{set:cellbgcolor:#FFFFFF} functional  !<<-section,>>  !Indicates that the construction is functional. [cf. INSPIRE]
+!{set:cellbgcolor:#FFFFFF} functional  !  !Indicates that the construction is functional. [cf. INSPIRE]
  
-!{set:cellbgcolor:#FFFFFF} projected  !<<-section,>>  !Indicates that the construction is being designed. Construction works have not yet started. [cf. INSPIRE]
+!{set:cellbgcolor:#FFFFFF} projected  !  !Indicates that the construction is being designed. Construction works have not yet started. [cf. INSPIRE]
  
-!{set:cellbgcolor:#FFFFFF} ruin  !<<-section,>>  !Indicates that the construction has been partly demolished and some main elements (roof, walls) have been destroyed. There are some visible remains of the construction. [cf. INSPIRE]
+!{set:cellbgcolor:#FFFFFF} ruin  !  !Indicates that the construction has been partly demolished and some main elements (roof, walls) have been destroyed. There are some visible remains of the construction. [cf. INSPIRE]
  
-!{set:cellbgcolor:#FFFFFF} underConstruction  !<<-section,>>  !Indicates that the construction is under construction and not yet functional. This applies only to the initial construction works of the construction and not to maintenance work. [cf. INSPIRE]
+!{set:cellbgcolor:#FFFFFF} underConstruction  !  !Indicates that the construction is under construction and not yet functional. This applies only to the initial construction works of the construction and not to maintenance work. [cf. INSPIRE]
 3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
@@ -853,12 +618,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A ConstructionEvent is a data type used to describe a specific event that is associated with a construction. Examples are the issuing of a building permit or the renovation of a building. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -882,12 +643,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! Elevation is a data type that includes the elevation value itself and information on how this elevation was measured. [cf. INSPIRE] 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -909,12 +666,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! Height represents a vertical distance (measured or estimated) between a low reference and a high reference. [cf. INSPIRE] 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -940,20 +693,16 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! HeightStatusValue enumerates the different methods used to capture a height. [cf. INSPIRE] 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} estimated  !<<-section,>>  !Indicates that the height has been estimated and not measured. [cf. INSPIRE]
+!{set:cellbgcolor:#FFFFFF} estimated  !  !Indicates that the height has been estimated and not measured. [cf. INSPIRE]
  
-!{set:cellbgcolor:#FFFFFF} measured  !<<-section,>>  !Indicates that the height has been (directly or indirectly) measured. [cf. INSPIRE]
+!{set:cellbgcolor:#FFFFFF} measured  !  !Indicates that the height has been (directly or indirectly) measured. [cf. INSPIRE]
 3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
@@ -967,22 +716,18 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! RelationToConstruction is an enumeration used to describe whether an installation is positioned inside and/or outside of a construction. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} inside  !<<-section,>>  !Indicates that the installation is positioned inside of the construction.
+!{set:cellbgcolor:#FFFFFF} inside  !  !Indicates that the installation is positioned inside of the construction.
  
-!{set:cellbgcolor:#FFFFFF} outside  !<<-section,>>  !Indicates that the installation is positioned outside of the construction.
+!{set:cellbgcolor:#FFFFFF} outside  !  !Indicates that the installation is positioned outside of the construction.
  
-!{set:cellbgcolor:#FFFFFF} bothInsideAndOutside  !<<-section,>>  !Indicates that the installation is positioned inside as well as outside of the construction.
+!{set:cellbgcolor:#FFFFFF} bothInsideAndOutside  !  !Indicates that the installation is positioned inside as well as outside of the construction.
 3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 

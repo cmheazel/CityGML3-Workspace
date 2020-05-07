@@ -12,16 +12,6 @@
 !===
 |===
 
-|===
-|Editing instructions:
-| 1) Delete all tables for CodeLists 
-| 2) If a subclass value is "<<←section,>>", change it to "none"
-| 3) If a multiplicity value is not provided, set it to "1" 
-| 4) If there are no entries in the role subtable, delete that subtable
-| 5) If there are no entries in the attrubute subtable, delete that subtable
-| 6) Delete these instructions when done
-|===
-
 ==== *Classes*
 
 [[AbstractWaterBoundarySurface-section]]
@@ -35,15 +25,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AbstractWaterBoundarySurface is the abstract superclass for all kinds of thematic surfaces bounding a water body. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractThematicSurface-section,AbstractThematicSurface>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -59,7 +40,7 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
+|[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} boundary 
@@ -89,17 +70,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WaterBodyClassValue is a code list used to further classify a WaterBody. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -112,17 +84,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WaterBodyFunctionValue is a code list that enumerates the different purposes of a WaterBody. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -135,17 +98,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WaterBodyUsageValue is a code list that enumerates the different uses of a WaterBody. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -161,15 +115,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
-!===
 |=== 
 
 [[WaterLevelValue-section]]
@@ -181,19 +126,9 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WaterLevelValue is a code list that enumerates the different levels of a water surface. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
-!===
-|=== 
 
 [[WaterSurface-section]]
 ===== *Class WaterSurface*
@@ -206,10 +141,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A WaterSurface represents the upper exterior interface between a water body and the atmosphere. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===

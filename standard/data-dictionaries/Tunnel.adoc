@@ -12,16 +12,6 @@
 !===
 |===
 
-|===
-|Editing instructions:
-| 1) Delete all tables for CodeLists 
-| 2) If a subclass value is "<<←section,>>", change it to "none"
-| 3) If a multiplicity value is not provided, set it to "1" 
-| 4) If there are no entries in the role subtable, delete that subtable
-| 5) If there are no entries in the attrubute subtable, delete that subtable
-| 6) Delete these instructions when done
-|===
-
 ==== *Classes*
 
 [[AbstractTunnel-section]]
@@ -36,7 +26,7 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstruction-section,AbstractConstruction>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
+|[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} tunnelFurniture 
@@ -81,7 +71,7 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
+|[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} boundary 
@@ -119,17 +109,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! HollowSpaceClassValue is a code list used to further classify a HollowSpace. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -142,17 +123,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! HollowSpaceFunctionValue is a code list that enumerates the different purposes of a HollowSpace. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -165,17 +137,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! HollowSpaceUsageValue is a code list that enumerates the different uses of a HollowSpace. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -191,18 +154,13 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractTunnel-section,AbstractTunnel>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
+|[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} tunnelPart 
 !<<TunnelPart-section,TunnelPart>> 
  [*]
 !
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -215,17 +173,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TunnelClassValue is a code list used to further classify a Tunnel. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -240,10 +189,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  A TunnelConstructiveElement is an element of a Tunnel which is essential from a structural point of view. Examples are walls, slabs, beams. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstructiveElement-section,AbstractConstructiveElement>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -267,17 +212,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TunnelConstructiveElementClassValue is a code list used to further classify a TunnelConstructiveElement. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -290,17 +226,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TunnelConstructiveElementFunctionValue is a code list that enumerates the different purposes of a TunnelConstructiveElement. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -313,17 +240,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TunnelConstructiveElementUsageValue is a code list that enumerates the different uses of a TunnelConstructiveElement. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -336,17 +254,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TunnelFunctionValue is a code list that enumerates the different purposes of a Tunnel. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -361,10 +270,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A TunnelFurniture is an equipment for occupant use, usually not fixed to the tunnel. [cf. ISO 6707-1] 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractFurniture-section,AbstractFurniture>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -388,17 +293,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TunnelFurnitureClassValue is a code list used to further classify a TunnelFurniture. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -411,17 +307,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TunnelFurnitureFunctionValue is a code list that enumerates the different purposes of a TunnelFurniture. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -434,17 +321,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TunnelFurnitureUsageValue is a code list that enumerates the different uses of a TunnelFurniture. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -459,10 +337,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A TunnelInstallation is a permanent part of a Tunnel (inside and/or outside) which does not have the significance of a TunnelPart. In contrast to TunnelConstructiveElement, a TunnelInstallation is not essential from a structural point of view. Examples are stairs, antennas or railings. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractInstallation-section,AbstractInstallation>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -486,17 +360,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TunnelInstallationClassValue is a code list used to further classify a TunnelInstallation. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -509,17 +374,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TunnelInstallationFunctionValue is a code list that enumerates the different purposes of a TunnelInstallation. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -532,17 +388,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TunnelInstallationUsageValue is a code list that enumerates the different uses of a TunnelInstallation. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -558,15 +405,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractTunnel-section,AbstractTunnel>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
-!===
 |=== 
 
 [[TunnelUsageValue-section]]
@@ -578,17 +416,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TunnelUsageValue is a code list that enumerates the different uses of a Tunnel. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
   

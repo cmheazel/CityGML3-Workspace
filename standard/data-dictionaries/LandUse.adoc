@@ -12,16 +12,6 @@
 !===
 |===
 
-|===
-|Editing instructions:
-| 1) Delete all tables for CodeLists 
-| 2) If a subclass value is "<<←section,>>", change it to "none"
-| 3) If a multiplicity value is not provided, set it to "1" 
-| 4) If there are no entries in the role subtable, delete that subtable
-| 5) If there are no entries in the attrubute subtable, delete that subtable
-| 6) Delete these instructions when done
-|===
-
 ==== *Classes*
 
 [[LandUse-section]]
@@ -35,10 +25,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A LandUse object is an area of the earth's surface dedicated to a specific land use or having a specific land cover with or without vegetation, such as sand, rock, mud flats, forest, or grasslands. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractThematicSurface-section,AbstractThematicSurface>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -62,17 +48,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! LandUseClassValue is a code list used to further classify a LandUse. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -85,17 +62,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! LandUseFunctionValue is a code list that enumerates the different purposes of a LandUse. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -108,17 +76,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! LandUseUsageValue is a code list that enumerates the different uses of a LandUse. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
   

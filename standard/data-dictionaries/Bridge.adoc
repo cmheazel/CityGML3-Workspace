@@ -12,16 +12,6 @@
 !===
 |===
 
-|===
-|Editing instructions:
-| 1) Delete all tables for CodeLists 
-| 2) If a subclass value is "<<←section,>>", change it to "none"
-| 3) If a multiplicity value is not provided, set it to "1" 
-| 4) If there are no entries in the role subtable, delete that subtable
-| 5) If there are no entries in the attrubute subtable, delete that subtable
-| 6) Delete these instructions when done
-|===
-
 ==== *Classes*
 
 [[AbstractBridge-section]]
@@ -36,7 +26,7 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstruction-section,AbstractConstruction>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
+|[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} bridgeRoom 
@@ -87,18 +77,13 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractBridge-section,AbstractBridge>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
+|[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} bridgePart 
 !<<BridgePart-section,BridgePart>> 
  [*]
 !
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -111,17 +96,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! BridgeClassValue is a code list used to further classify a Bridge. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -136,10 +112,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A BridgeConstructiveElement is an element of a bridge which is essential from a structural point of view. Examples are pylons, anchorages, slabs, beams. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractConstructiveElement-section,AbstractConstructiveElement>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -163,17 +135,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! BridgeConstructiveElementClassValue is a code list used to further classify a BridgeConstructiveElement. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -186,17 +149,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! BridgeConstructiveElementFunctionValue is a code list that enumerates the different purposes of a BridgeConstructiveElement. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -209,17 +163,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! BridgeConstructiveElementUsageValue is a code list that enumerates the different uses of a BridgeConstructiveElement. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -232,17 +177,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! BridgeFunctionValue is a code list that enumerates the different purposes of a Bridge. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -257,10 +193,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A BridgeFurniture is an equipment for occupant use, usually not fixed to the bridge. [cf. ISO 6707-1] 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractFurniture-section,AbstractFurniture>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -284,17 +216,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! BridgeFurnitureClassValue is a code list used to further classify a BridgeFurniture. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -307,17 +230,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! BridgeFurnitureFunctionValue is a code list that enumerates the different purposes of a BridgeFurniture. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -330,17 +244,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! BridgeFurnitureUsageValue is a code list that enumerates the different uses of a BridgeFurniture. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -355,10 +260,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A BridgeInstallation is a permanent part of a Bridge (inside and/or outside) which does not have the significance of a BridgePart. In contrast to BridgeConstructiveElements, a BridgeInstallation is not essential from a structural point of view. Examples are stairs, antennas or railways. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractInstallation-section,AbstractInstallation>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -382,17 +283,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! BridgeInstallationClassValue is a code list used to further classify a BridgeInstallation. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -405,17 +297,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! BridgeInstallationFunctionValue is a code list that enumerates the different purposes of a BridgeInstallation. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -428,17 +311,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! BridgeInstallationUsageValue is a code list that enumerates the different uses of a BridgeInstallation. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -454,15 +328,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractBridge-section,AbstractBridge>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
-!===
 |=== 
 
 [[BridgeRoom-section]]
@@ -477,7 +342,7 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
+|[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} bridgeInstallation 
@@ -515,17 +380,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! BridgeRoomClassValue is a code list used to further classify a BridgeRoom. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -538,17 +394,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! BridgeRoomFunctionValue is a code list that enumerates the different purposes of a BridgeRoom. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -561,17 +408,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! BridgeRoomUsageValue is a code list that enumerates the different uses of a BridgeRoom. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -584,17 +422,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! BridgeUsageValue is a code list that enumerates the different uses of a Bridge. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
   

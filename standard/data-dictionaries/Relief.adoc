@@ -12,16 +12,6 @@
 !===
 |===
 
-|===
-|Editing instructions:
-| 1) Delete all tables for CodeLists 
-| 2) If a subclass value is "<<←section,>>", change it to "none"
-| 3) If a multiplicity value is not provided, set it to "1" 
-| 4) If there are no entries in the role subtable, delete that subtable
-| 5) If there are no entries in the attrubute subtable, delete that subtable
-| 6) Delete these instructions when done
-|===
-
 ==== *Classes*
 
 [[AbstractReliefComponent-section]]
@@ -39,7 +29,7 @@
 self.extent.patch->size()=1 and 
 self.extent.patch->forAll(oclIsKindOf(GM_Polygon))    
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
+|[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} extent 
@@ -68,7 +58,7 @@ self.extent.patch->forAll(oclIsKindOf(GM_Polygon))
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractReliefComponent-section,AbstractReliefComponent>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
+|[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} ridgeOrValleyLines 
@@ -79,11 +69,6 @@ self.extent.patch->forAll(oclIsKindOf(GM_Polygon))
 !<<GM_MultiCurve-section,GM_MultiCurve>> 
  [0..1]
 !
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -99,7 +84,7 @@ self.extent.patch->forAll(oclIsKindOf(GM_Polygon))
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractReliefComponent-section,AbstractReliefComponent>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
+|[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} reliefPoints 
@@ -110,11 +95,6 @@ self.extent.patch->forAll(oclIsKindOf(GM_Polygon))
 !<<AbstractPointCloud-section,AbstractPointCloud>> 
  [0..1]
 !
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -130,18 +110,13 @@ self.extent.patch->forAll(oclIsKindOf(GM_Polygon))
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractReliefComponent-section,AbstractReliefComponent>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
+|[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} grid 
 !<<CV_DiscreteGridPointCoverage-section,CV_DiscreteGridPointCoverage>> 
  [1]
 !
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
@@ -157,7 +132,7 @@ self.extent.patch->forAll(oclIsKindOf(GM_Polygon))
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
+|[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} reliefComponent 
@@ -186,18 +161,13 @@ self.extent.patch->forAll(oclIsKindOf(GM_Polygon))
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractReliefComponent-section,AbstractReliefComponent>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
-[cols="15,20,60",frame=none,grid=none,options="header"]
+|[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} tin 
 !<<GM_TriangulatedSurface-section,GM_TriangulatedSurface>> 
  [1]
 !
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
   
