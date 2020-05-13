@@ -1,9 +1,10 @@
-[[req_Waterbody_WaterBody]]
+[[req_Waterbody_classes]]
 [width="90%",cols="2,6"]
 |===
-^|*Requirement  {counter:req-id}* |*/req/Waterbody/WaterBody* 
-^|A |The Implementation Specification SHALL contain an element with the same definition as the WaterBody UML class as documented in the WaterBody section of the <<WaterBody-section,Waterbody Data Dictionary>>.
-^|B |The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the WaterBody UML class as documented in the WaterBody section of the <<WaterBody-section,Waterbody Data Dictionary>>.
-^|C |The implementation Specification SHALL represent the attributes of the WaterBody UML class; including the name, definition, type, and cardinality of those documented in the WaterBody section of the <<WaterBody-section,Waterbody Data Dictionary>>.
-^|D |The implementation Specification SHALL represent the attributes of all parent classes of the the WaterBody UML class; including the name, definition, type, and cardinality of those documented in the WaterBody section of the <<WaterBody-section,Waterbody Data Dictionary>>.
+^|*Requirement  {counter:req-id}* |*/req/Waterbody/classes* 
+2+|For each UML class defined or referenced in the Waterbody Package:
+^|A |The Implementation Specification SHALL contain an element which represents the same concept as that defined for the UML class.
+^|B |The Implementation Specification SHALL represent associations with the same source, target, direction, roles, and cardinalities as those of the UML class.
+^|C |The implementation Specification SHALL represent the attributes of the UML class including the name, definition, type, and cardinality.
+^|D |The implementation Specification SHALL represent the attributes of all parent classes of the the UML class including the name, definition, type, and cardinality.
 |===

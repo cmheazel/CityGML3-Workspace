@@ -1,9 +1,10 @@
-[[req_Appearance_Appearance]]
+[[req_Appearance_classes]]
 [width="90%",cols="2,6"]
 |===
-^|*Requirement  {counter:req-id}* |*/req/Appearance/Appearance* 
-^|A |The Implementation Specification SHALL contain an element with the same definition as the Appearance UML class as documented in the Appearance section of the <<Appearance-section,Appearance Data Dictionary>>.
-^|B |The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the Appearance UML class as documented in the Appearance section of the <<Appearance-section,Appearance Data Dictionary>>.
-^|C |The implementation Specification SHALL represent the attributes of the Appearance UML class; including the name, definition, type, and cardinality of those documented in the Appearance section of the <<Appearance-section,Appearance Data Dictionary>>.
-^|D |The implementation Specification SHALL represent the attributes of all parent classes of the the Appearance UML class; including the name, definition, type, and cardinality of those documented in the Appearance section of the <<Appearance-section,Appearance Data Dictionary>>.
+^|*Requirement  {counter:req-id}* |*/req/Appearance/classes* 
+2+|For each UML class defined or referenced in the Appearance Package:
+^|A |The Implementation Specification SHALL contain an element which represents the same concept as that defined for the UML class.
+^|B |The Implementation Specification SHALL represent associations with the same source, target, direction, roles, and cardinalities as those of the UML class.
+^|C |The implementation Specification SHALL represent the attributes of the UML class including the name, definition, type, and cardinality.
+^|D |The implementation Specification SHALL represent the attributes of all parent classes of the the UML class including the name, definition, type, and cardinality.
 |===

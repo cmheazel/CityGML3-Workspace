@@ -2,21 +2,9 @@
 [width="90%",cols="2,6"]
 |===
 ^|*Requirement  {counter:req-id}* |*/req/PACKAGE/classes* 
-^|A |The Requirement Classes CLASS shown in blue in Figure [nn] and documented in the REFF-section,PACKAGE Data Dictionary>> SHALL be provided for by the encoding specification in a manner consistent with the encoding technology.
-^|B |The encoding specification SHALL provide a mapping between the concepts defined in the Conceptual Model and the representation of those concepts in the encoding.
-^|C |The Implementation Specification SHALL contain an element with the same definition as the CLASS UML class as documented in the CLASS section of the REFF-section,PACKAGE Data Dictionary>>.
-^|D |The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the CLASS UML class as documented in the CLASS section of the REFF-section,PACKAGE Data Dictionary>>.
-^|E |The implementation Specification SHALL represent the attributes of the CLASS UML class; including the name, definition, type, and cardinality of those documented in the CLASS section of the REFF-section,PACKAGE Data Dictionary>>.
-^|F |The implementation Specification SHALL represent the attributes of all parent classes of the the CLASS UML class; including the name, definition, type, and cardinality of those documented in the CLASS section of the REFF-section,PACKAGE Data Dictionary>>.
-^|G |The concepts included in these mappings SHALL include:
-
-a) All classes shown as blue boxes (this Requirements Class) in the figure
-
-b) All attributes, attribute cardinalities, and attribute data types of these classes (usually shown in subsequent figures)
-
-c) All associations, navigation, roles, and role cardinalities connecting to the blue classes
-
-d) All classes shown as beige boxes (another Requirements Class) in the figure connected to the blue box classes by association or used as attribute data types
-
-e) All classes shown as pink boxes (another Standard) in the figure connected to the blue box classes by association or used as attribute data types
+2+|For each UML class defined or referenced in the PACKAGE Package:
+^|A |The Implementation Specification SHALL contain an element which represents the same concept as that defined for the UML class.
+^|B |The Implementation Specification SHALL represent associations with the same source, target, direction, roles, and cardinalities as those of the UML class.
+^|C |The implementation Specification SHALL represent the attributes of the UML class including the name, definition, type, and cardinality.
+^|D |The implementation Specification SHALL represent the attributes of all parent classes of the the UML class including the name, definition, type, and cardinality.
 |===

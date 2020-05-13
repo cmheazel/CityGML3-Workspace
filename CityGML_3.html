@@ -1555,7 +1555,7 @@ UML Packages as illustrated in <a href="#package-diagram">CityGML UML Packages</
 </table>
 <div class="sect3">
 <h4 id="_requirements"><a class="anchor" href="#_requirements"></a>8.2.1. Requirements</h4>
-<table id="req_Core_Classes" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_Core_classes" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1563,7 +1563,7 @@ UML Packages as illustrated in <a href="#package-diagram">CityGML UML Packages</
 <tbody>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  1</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Core/Classes</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Core/classes</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">For each UML class defined or referenced in the Core Package:</p></td>
@@ -2164,6 +2164,42 @@ Each surface geometry object can have both, a material and a texture per theme a
 </div>
 <div class="title">Figure 8. UML diagram of CityGML’s appearance model.</div>
 </div>
+<div class="sect3">
+<h4 id="_requirements_2"><a class="anchor" href="#_requirements_2"></a>8.3.1. Requirements</h4>
+<table id="req_Appearance_classes" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  2</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Appearance/classes</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">For each UML class defined or referenced in the Appearance Package:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL contain an element which represents the same concept as that defined for the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, roles, and cardinalities as those of the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_class_definitions"><a class="anchor" href="#_class_definitions"></a>8.3.2. Class Definitions</h4>
 <table id="Appearance-class-table" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 13. Classes used in Appearance</caption>
 <colgroup>
@@ -2273,8 +2309,9 @@ Each surface geometry object can have both, a material and a texture per theme a
 </tr>
 </tbody>
 </table>
+</div>
 <div class="sect3">
-<h4 id="_additional_information_2"><a class="anchor" href="#_additional_information_2"></a>8.3.1. Additional Information</h4>
+<h4 id="_additional_information_2"><a class="anchor" href="#_additional_information_2"></a>8.3.3. Additional Information</h4>
 <div class="paragraph">
 <p>The following sections provide additional information which may not be readily available through the UML Model.</p>
 </div>
@@ -2302,6 +2339,10 @@ Each surface geometry object can have both, a material and a texture per theme a
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#rc_core">/req/req-class-core</a></p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#rc_construction">/req/req-class-construction</a></p></td>
+</tr>
 </tbody>
 </table>
 <div class="paragraph">
@@ -2322,6 +2363,42 @@ Bridges can be bounded by different types of surfaces. In this way, the outer st
 </div>
 <div class="title">Figure 9. UML diagram of the Bridge Model.</div>
 </div>
+<div class="sect3">
+<h4 id="_requirements_3"><a class="anchor" href="#_requirements_3"></a>8.4.1. Requirements</h4>
+<table id="req_Bridge_classes" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  3</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Bridge/classes</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">For each UML class defined or referenced in the Bridge Package:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL contain an element which represents the same concept as that defined for the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, roles, and cardinalities as those of the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_class_definitions_2"><a class="anchor" href="#_class_definitions_2"></a>8.4.2. Class Definitions</h4>
 <table id="Bridge-class-table" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 16. Classes used in Bridge</caption>
 <colgroup>
@@ -2458,8 +2535,9 @@ Bridges can be bounded by different types of surfaces. In this way, the outer st
 </tr>
 </tbody>
 </table>
+</div>
 <div class="sect3">
-<h4 id="_additional_information_3"><a class="anchor" href="#_additional_information_3"></a>8.4.1. Additional Information</h4>
+<h4 id="_additional_information_3"><a class="anchor" href="#_additional_information_3"></a>8.4.3. Additional Information</h4>
 <div class="paragraph">
 <p>The following sections provide additional information which may not be readily available through the UML Model.</p>
 </div>
@@ -2487,6 +2565,10 @@ Bridges can be bounded by different types of surfaces. In this way, the outer st
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#rc_core">/req/req-class-core</a></p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#rc_construction">/req/req-class-construction</a></p></td>
+</tr>
 </tbody>
 </table>
 <div class="paragraph">
@@ -2507,6 +2589,42 @@ Buildings can be bounded by different types of surfaces. In this way, the outer 
 </div>
 <div class="title">Figure 10. UML diagram of CityGML’s building model.</div>
 </div>
+<div class="sect3">
+<h4 id="_requirements_4"><a class="anchor" href="#_requirements_4"></a>8.5.1. Requirements</h4>
+<table id="req_Building_classes" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  4</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Building/classes</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">For each UML class defined or referenced in the Building Package:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL contain an element which represents the same concept as that defined for the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, roles, and cardinalities as those of the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_class_definitions_3"><a class="anchor" href="#_class_definitions_3"></a>8.5.2. Class Definitions</h4>
 <table id="Building-class-table" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 18. Classes used in Building</caption>
 <colgroup>
@@ -2701,8 +2819,9 @@ Buildings can be bounded by different types of surfaces. In this way, the outer 
 </tr>
 </tbody>
 </table>
+</div>
 <div class="sect3">
-<h4 id="_additional_information_4"><a class="anchor" href="#_additional_information_4"></a>8.5.1. Additional Information</h4>
+<h4 id="_additional_information_4"><a class="anchor" href="#_additional_information_4"></a>8.5.3. Additional Information</h4>
 <div class="paragraph">
 <p>The following sections provide additional information which may not be readily available through the UML Model.</p>
 </div>
@@ -2747,6 +2866,42 @@ Buildings can be bounded by different types of surfaces. In this way, the outer 
 </div>
 <div class="title">Figure 11. UML diagram of CityGML’s City Furniture model.</div>
 </div>
+<div class="sect3">
+<h4 id="_requirements_5"><a class="anchor" href="#_requirements_5"></a>8.6.1. Requirements</h4>
+<table id="req_CityFurniture_classes" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  5</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/CityFurniture/classes</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">For each UML class defined or referenced in the CityFurniture Package:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL contain an element which represents the same concept as that defined for the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, roles, and cardinalities as those of the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_class_definitions_4"><a class="anchor" href="#_class_definitions_4"></a>8.6.2. Class Definitions</h4>
 <table id="CityFurniture-class-table" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 21. Classes used in CityFurniture</caption>
 <colgroup>
@@ -2780,8 +2935,9 @@ Buildings can be bounded by different types of surfaces. In this way, the outer 
 </tr>
 </tbody>
 </table>
+</div>
 <div class="sect3">
-<h4 id="_additional_information_5"><a class="anchor" href="#_additional_information_5"></a>8.6.1. Additional Information</h4>
+<h4 id="_additional_information_5"><a class="anchor" href="#_additional_information_5"></a>8.6.3. Additional Information</h4>
 <div class="paragraph">
 <p>The following sections provide additional information which may not be readily available through the UML Model.</p>
 </div>
@@ -2827,6 +2983,42 @@ City object groups are represented in the UML model by the top-level feature typ
 </div>
 <div class="title">Figure 12. UML diagram of the City Object Group Model.</div>
 </div>
+<div class="sect3">
+<h4 id="_requirements_6"><a class="anchor" href="#_requirements_6"></a>8.7.1. Requirements</h4>
+<table id="req_CityObjectGroup_classes" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  6</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/CityObjectGroup/classes</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">For each UML class defined or referenced in the CityObjectGroup Package:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL contain an element which represents the same concept as that defined for the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, roles, and cardinalities as those of the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_class_definitions_5"><a class="anchor" href="#_class_definitions_5"></a>8.7.2. Class Definitions</h4>
 <table id="CityObjectGroup-class-table" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 22. Classes used in CityObjectGroup</caption>
 <colgroup>
@@ -2865,8 +3057,9 @@ City object groups are represented in the UML model by the top-level feature typ
 </tr>
 </tbody>
 </table>
+</div>
 <div class="sect3">
-<h4 id="_additional_information_6"><a class="anchor" href="#_additional_information_6"></a>8.7.1. Additional Information</h4>
+<h4 id="_additional_information_6"><a class="anchor" href="#_additional_information_6"></a>8.7.3. Additional Information</h4>
 <div class="paragraph">
 <p>The following sections provide additional information which may not be readily available through the UML Model.</p>
 </div>
@@ -2894,6 +3087,10 @@ City object groups are represented in the UML model by the top-level feature typ
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#rc_core">/req/req-class-core</a></p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#rc_generics">/req/req-class-generics</a></p></td>
+</tr>
 </tbody>
 </table>
 <div class="paragraph">
@@ -2915,6 +3112,42 @@ A detailed discussion of the Requirements Class Construction can be found in the
 </div>
 <div class="title">Figure 13. UML diagram of the Construction Model.</div>
 </div>
+<div class="sect3">
+<h4 id="_requirements_7"><a class="anchor" href="#_requirements_7"></a>8.8.1. Requirements</h4>
+<table id="req_Construction_classes" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  7</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Construction/classes</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">For each UML class defined or referenced in the Construction Package:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL contain an element which represents the same concept as that defined for the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, roles, and cardinalities as those of the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_class_definitions_6"><a class="anchor" href="#_class_definitions_6"></a>8.8.2. Class Definitions</h4>
 <table id="Construction-class-table" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 23. Classes used in Construction</caption>
 <colgroup>
@@ -3151,8 +3384,9 @@ A detailed discussion of the Requirements Class Construction can be found in the
 </tr>
 </tbody>
 </table>
+</div>
 <div class="sect3">
-<h4 id="_additional_information_7"><a class="anchor" href="#_additional_information_7"></a>8.8.1. Additional Information</h4>
+<h4 id="_additional_information_7"><a class="anchor" href="#_additional_information_7"></a>8.8.3. Additional Information</h4>
 <div class="paragraph">
 <p>The following sections provide additional information which may not be readily available through the UML Model.</p>
 </div>
@@ -3202,6 +3436,42 @@ This includes variations of spatial properties, i.e. change of a feature’s geo
 </div>
 <div class="title">Figure 14. UML diagram of the Dynamizer Model.</div>
 </div>
+<div class="sect3">
+<h4 id="_requirements_8"><a class="anchor" href="#_requirements_8"></a>8.9.1. Requirements</h4>
+<table id="req_Dynamizer_classes" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  8</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Dynamizer/classes</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">For each UML class defined or referenced in the Dynamizer Package:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL contain an element which represents the same concept as that defined for the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, roles, and cardinalities as those of the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_class_definitions_7"><a class="anchor" href="#_class_definitions_7"></a>8.9.2. Class Definitions</h4>
 <table id="Dynamizer-class-table" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 27. Classes used in Dynamizer</caption>
 <colgroup>
@@ -3329,8 +3599,9 @@ This includes variations of spatial properties, i.e. change of a feature’s geo
 </tr>
 </tbody>
 </table>
+</div>
 <div class="sect3">
-<h4 id="_additional_information_8"><a class="anchor" href="#_additional_information_8"></a>8.9.1. Additional Information</h4>
+<h4 id="_additional_information_8"><a class="anchor" href="#_additional_information_8"></a>8.9.3. Additional Information</h4>
 <div class="paragraph">
 <p>The following sections provide additional information which may not be readily available through the UML Model.</p>
 </div>
@@ -3379,6 +3650,42 @@ Generic city objects are represented in the UML model by the top-level feature t
 </div>
 <div class="title">Figure 15. UML diagram of the Generics Model.</div>
 </div>
+<div class="sect3">
+<h4 id="_requirements_9"><a class="anchor" href="#_requirements_9"></a>8.10.1. Requirements</h4>
+<table id="req_Generics_classes" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  9</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Generics/classes</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">For each UML class defined or referenced in the Generics Package:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL contain an element which represents the same concept as that defined for the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, roles, and cardinalities as those of the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_class_definitions_8"><a class="anchor" href="#_class_definitions_8"></a>8.10.2. Class Definitions</h4>
 <table id="Generics-class-table" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 31. Classes used in Generics</caption>
 <colgroup>
@@ -3533,8 +3840,9 @@ Generic city objects are represented in the UML model by the top-level feature t
 </tr>
 </tbody>
 </table>
+</div>
 <div class="sect3">
-<h4 id="_additional_information_9"><a class="anchor" href="#_additional_information_9"></a>8.10.1. Additional Information</h4>
+<h4 id="_additional_information_9"><a class="anchor" href="#_additional_information_9"></a>8.10.3. Additional Information</h4>
 <div class="paragraph">
 <p>The following sections provide additional information which may not be readily available through the UML Model.</p>
 </div>
@@ -3577,6 +3885,42 @@ Land use objects are represented in the UML model by the top-level feature type 
 </div>
 <div class="title">Figure 16. UML diagram of the Land Use Model.</div>
 </div>
+<div class="sect3">
+<h4 id="_requirements_10"><a class="anchor" href="#_requirements_10"></a>8.11.1. Requirements</h4>
+<table id="req_LandUse_classes" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  10</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/LandUse/classes</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">For each UML class defined or referenced in the LandUse Package:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL contain an element which represents the same concept as that defined for the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, roles, and cardinalities as those of the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_class_definitions_9"><a class="anchor" href="#_class_definitions_9"></a>8.11.2. Class Definitions</h4>
 <table id="LandUse-class-table" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 34. Classes used in LandUse</caption>
 <colgroup>
@@ -3610,8 +3954,9 @@ Land use objects are represented in the UML model by the top-level feature type 
 </tr>
 </tbody>
 </table>
+</div>
 <div class="sect3">
-<h4 id="_additional_information_10"><a class="anchor" href="#_additional_information_10"></a>8.11.1. Additional Information</h4>
+<h4 id="_additional_information_10"><a class="anchor" href="#_additional_information_10"></a>8.11.3. Additional Information</h4>
 <div class="paragraph">
 <p>The following sections provide additional information which may not be readily available through the UML Model.</p>
 </div>
@@ -3654,6 +3999,42 @@ Point clouds are represented in the UML model by the feature type <em>PointCloud
 </div>
 <div class="title">Figure 17. UML diagram of the Point Cloud Model.</div>
 </div>
+<div class="sect3">
+<h4 id="_requirements_11"><a class="anchor" href="#_requirements_11"></a>8.12.1. Requirements</h4>
+<table id="req_PointCloud_classes" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  11</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/PointCloud/classes</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">For each UML class defined or referenced in the PointCloud Package:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL contain an element which represents the same concept as that defined for the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, roles, and cardinalities as those of the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_class_definitions_10"><a class="anchor" href="#_class_definitions_10"></a>8.12.2. Class Definitions</h4>
 <table id="PointCloud-class-table" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 35. Classes used in PointCloud</caption>
 <colgroup>
@@ -3672,8 +4053,9 @@ Point clouds are represented in the UML model by the feature type <em>PointCloud
 </tr>
 </tbody>
 </table>
+</div>
 <div class="sect3">
-<h4 id="_additional_information_11"><a class="anchor" href="#_additional_information_11"></a>8.12.1. Additional Information</h4>
+<h4 id="_additional_information_11"><a class="anchor" href="#_additional_information_11"></a>8.12.3. Additional Information</h4>
 <div class="paragraph">
 <p>The following sections provide additional information which may not be readily available through the UML Model.</p>
 </div>
@@ -3716,6 +4098,42 @@ The relief features, in turn, are collections of relief components that describe
 </div>
 <div class="title">Figure 18. UML diagram of Relief module.</div>
 </div>
+<div class="sect3">
+<h4 id="_requirements_12"><a class="anchor" href="#_requirements_12"></a>8.13.1. Requirements</h4>
+<table id="req_Relief_classes" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  12</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Relief/classes</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">For each UML class defined or referenced in the Relief Package:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL contain an element which represents the same concept as that defined for the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, roles, and cardinalities as those of the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_class_definitions_11"><a class="anchor" href="#_class_definitions_11"></a>8.13.2. Class Definitions</h4>
 <table id="Relief-class-table" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 36. Classes used in Relief</caption>
 <colgroup>
@@ -3759,8 +4177,9 @@ The relief features, in turn, are collections of relief components that describe
 </tr>
 </tbody>
 </table>
+</div>
 <div class="sect3">
-<h4 id="_additional_information_12"><a class="anchor" href="#_additional_information_12"></a>8.13.1. Additional Information</h4>
+<h4 id="_additional_information_12"><a class="anchor" href="#_additional_information_12"></a>8.13.3. Additional Information</h4>
 <div class="paragraph">
 <p>The following sections provide additional information which may not be readily available through the UML Model.</p>
 </div>
@@ -3806,6 +4225,42 @@ The transportation objects are represented in the UML model by the top-level fea
 </div>
 <div class="title">Figure 19. UML diagram of the Transportation Model.</div>
 </div>
+<div class="sect3">
+<h4 id="_requirements_13"><a class="anchor" href="#_requirements_13"></a>8.14.1. Requirements</h4>
+<table id="req_Transportation_classes" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  13</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Transportation/classes</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">For each UML class defined or referenced in the Transportation Package:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL contain an element which represents the same concept as that defined for the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, roles, and cardinalities as those of the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_class_definitions_12"><a class="anchor" href="#_class_definitions_12"></a>8.14.2. Class Definitions</h4>
 <table id="Transportation-class-table" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 37. Classes used in Transportation</caption>
 <colgroup>
@@ -4115,8 +4570,9 @@ The transportation objects are represented in the UML model by the top-level fea
 </tr>
 </tbody>
 </table>
+</div>
 <div class="sect3">
-<h4 id="_additional_information_13"><a class="anchor" href="#_additional_information_13"></a>8.14.1. Additional Information</h4>
+<h4 id="_additional_information_13"><a class="anchor" href="#_additional_information_13"></a>8.14.3. Additional Information</h4>
 <div class="paragraph">
 <p>The following sections provide additional information which may not be readily available through the UML Model</p>
 </div>
@@ -4144,6 +4600,10 @@ The transportation objects are represented in the UML model by the top-level fea
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#rc_core">/req/req-class-core</a></p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#rc_construction">/req/req-class-construction</a></p></td>
+</tr>
 </tbody>
 </table>
 <div class="paragraph">
@@ -4164,6 +4624,42 @@ Tunnels can be bounded by different types of surfaces. In this way, the outer st
 </div>
 <div class="title">Figure 20. UML diagram of the Tunnel Model.</div>
 </div>
+<div class="sect3">
+<h4 id="_requirements_14"><a class="anchor" href="#_requirements_14"></a>8.15.1. Requirements</h4>
+<table id="req_Tunnel_classes" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  14</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Tunnel/classes</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">For each UML class defined or referenced in the Tunnel Package:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL contain an element which represents the same concept as that defined for the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, roles, and cardinalities as those of the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_class_definitions_13"><a class="anchor" href="#_class_definitions_13"></a>8.15.2. Class Definitions</h4>
 <table id="Tunnel-class-table" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 40. Classes used in Tunnel</caption>
 <colgroup>
@@ -4300,8 +4796,9 @@ Tunnels can be bounded by different types of surfaces. In this way, the outer st
 </tr>
 </tbody>
 </table>
+</div>
 <div class="sect3">
-<h4 id="_additional_information_14"><a class="anchor" href="#_additional_information_14"></a>8.15.1. Additional Information</h4>
+<h4 id="_additional_information_14"><a class="anchor" href="#_additional_information_14"></a>8.15.3. Additional Information</h4>
 <div class="paragraph">
 <p>The following sections provide additional information which may not be readily available through the UML Model.</p>
 </div>
@@ -4344,6 +4841,42 @@ Vegetation is represented in the UML model by the top-level feature types <em>So
 </div>
 <div class="title">Figure 21. UML diagram of the Vegetation Model.</div>
 </div>
+<div class="sect3">
+<h4 id="_requirements_15"><a class="anchor" href="#_requirements_15"></a>8.16.1. Requirements</h4>
+<table id="req_Vegetation_classes" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  15</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Vegetation/classes</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">For each UML class defined or referenced in the Vegetation Package:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL contain an element which represents the same concept as that defined for the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, roles, and cardinalities as those of the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_class_definitions_14"><a class="anchor" href="#_class_definitions_14"></a>8.16.2. Class Definitions</h4>
 <table id="Vegetation-class-table" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 42. Classes used in Vegetation</caption>
 <colgroup>
@@ -4407,8 +4940,9 @@ Vegetation is represented in the UML model by the top-level feature types <em>So
 </tr>
 </tbody>
 </table>
+</div>
 <div class="sect3">
-<h4 id="_additional_information_15"><a class="anchor" href="#_additional_information_15"></a>8.16.1. Additional Information</h4>
+<h4 id="_additional_information_15"><a class="anchor" href="#_additional_information_15"></a>8.16.3. Additional Information</h4>
 <div class="paragraph">
 <p>The following sections provide additional information which may not be readily available through the UML Model.</p>
 </div>
@@ -4454,6 +4988,42 @@ In this way, the history or evolution of cities and city models can be modelled,
 </div>
 <div class="title">Figure 22. UML diagram of the Versioning Model.</div>
 </div>
+<div class="sect3">
+<h4 id="_requirements_16"><a class="anchor" href="#_requirements_16"></a>8.17.1. Requirements</h4>
+<table id="req_Versioning_classes" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  16</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Versioning/classes</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">For each UML class defined or referenced in the Versioning Package:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL contain an element which represents the same concept as that defined for the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, roles, and cardinalities as those of the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_class_definitions_15"><a class="anchor" href="#_class_definitions_15"></a>8.17.2. Class Definitions</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -4601,8 +5171,9 @@ In this way, the history or evolution of cities and city models can be modelled,
 </tr>
 </tbody>
 </table>
+</div>
 <div class="sect3">
-<h4 id="_additional_information_16"><a class="anchor" href="#_additional_information_16"></a>8.17.1. Additional Information</h4>
+<h4 id="_additional_information_16"><a class="anchor" href="#_additional_information_16"></a>8.17.3. Additional Information</h4>
 <div class="paragraph">
 <p>The following sections provide additional information which may not be readily available through the UML Model.</p>
 </div>
@@ -4649,6 +5220,42 @@ Water surfaces are dynamic surfaces, thus, the visible water surface can regular
 </div>
 <div class="title">Figure 23. UML diagram of the Water Body Model.</div>
 </div>
+<div class="sect3">
+<h4 id="_requirements_17"><a class="anchor" href="#_requirements_17"></a>8.18.1. Requirements</h4>
+<table id="req_Waterbody_classes" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  17</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Waterbody/classes</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">For each UML class defined or referenced in the Waterbody Package:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL contain an element which represents the same concept as that defined for the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Implementation Specification SHALL represent associations with the same source, target, direction, roles, and cardinalities as those of the UML class.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The implementation Specification SHALL represent the attributes of all parent classes of the the UML class including the name, definition, type, and cardinality.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_class_definitions_16"><a class="anchor" href="#_class_definitions_16"></a>8.18.2. Class Definitions</h4>
 <table id="WaterBody-class-table" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 49. Classes used in WaterBody</caption>
 <colgroup>
@@ -4702,8 +5309,9 @@ Water surfaces are dynamic surfaces, thus, the visible water surface can regular
 </tr>
 </tbody>
 </table>
+</div>
 <div class="sect3">
-<h4 id="_additional_information_17"><a class="anchor" href="#_additional_information_17"></a>8.18.1. Additional Information</h4>
+<h4 id="_additional_information_17"><a class="anchor" href="#_additional_information_17"></a>8.18.3. Additional Information</h4>
 <div class="paragraph">
 <p>The following sections provide additional information which may not be readily available through the UML Model.</p>
 </div>
