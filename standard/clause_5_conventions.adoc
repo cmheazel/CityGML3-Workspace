@@ -15,7 +15,6 @@ The CityGML standard is presented in this document in diagrams using the Unified
 .UML notation (see ISO TS 19103, Geographic information - Conceptual schema language).
 image::../figures/Figure_1.png[]
 
-
 All associations between model elements in CityGML are uni-directional. Thus, associations in CityGML are navigable in only one direction. The direction of navigation is depicted by an arrowhead. In general, the context an element takes within the association is indicated by its role. The role is displayed near the target of the association. If the graphical representation is ambiguous though, the position of the role has to be drawn to the element the association points to.
 
 The following stereotypes are used:
