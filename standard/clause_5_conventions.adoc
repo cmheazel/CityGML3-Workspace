@@ -18,19 +18,20 @@ image::../figures/Figure_1.png[]
 
 All associations between model elements in CityGML are uni-directional. Thus, associations in CityGML are navigable in only one direction. The direction of navigation is depicted by an arrowhead. In general, the context an element takes within the association is indicated by its role. The role is displayed near the target of the association. If the graphical representation is ambiguous though, the position of the role has to be drawn to the element the association points to.
 
-NOTE: Need formal definitions for the sterotypes
-
 The following stereotypes are used:
 
-* &#171;FeatureType&#187;
-* &#171;TopLevelFeatureType&#187;
-* &#171;type&#187;
-* &#171;ObjectType&#187;
-* &#171;DataType&#187; is used as a descriptor of a set of values that lack identity. Data types include primitive prede-fined types and user-definable types. A DataType is thus a class with few or no operations whose primary purpose is to hold the abstract state of another class for transmittal, storage, encoding or persistent storage.
+* &#171;ApplicationSchema&#187; denotes a conceptual schema for data required by one or more applications. In the CityGML conceptual model, every CityGML module is defined as separate application schema to allow for modularisation.
+* &#171;FeatureType&#187; represents features that are similar and exhibit common characteristics. Features are abstractions of real-world phenomena and have an identity.
+* &#171;TopLevelFeatureType&#187; denotes features that represent the main components of the conceptual model. Top-level features may be further semantically and spatially decomposed and substructured into parts.
+* &#171;type&#187; denotes classes that are not directly instantiable, but are used as an abstract collections of operation, attribute and relation signatures. The stereotype is used in the CityGML conceptual model only for classes that are imported from the ISO standards 19107, 19111, and 19123.
+* &#171;ObjectType&#187; represents objects that have an identity, but are not features.
+* &#171;DataType&#187; defines a set of properties that lack identity. A data type is a classifier with no operations, whose primary purpose is to hold information.
 * &#171;enumeration&#187; enumerates the valid attribute values in a fixed list of named literal values. Enumerations are specified in the CityGML schema.
-* &#171;BasicType&#187;
+* &#171;BasicType&#187; defines a basic data type.
 * &#171;CodeList&#187; enumerates the valid attribute values. In contrast to Enumeration, the list of values is open and, thus, not given inline the CityGML UML Model. The allowed values can be provided within an external code list.
 * &#171;Union&#187; is a list of attributes. The semantics are that only one of the attributes can be present at any time.
+* &#171;Property&#187; denotes attributes and association roles. This stereotype does not add further semantics to the conceptual model, but is required to be able to add tagged values to the attributes and association roles that are relevant for the encoding.
+* &#171;Version&#187; denotes that the value of an association role that ends at a feature type is a specific version of the feature, not the feature in general.
 
 In order to enhance the readability of the CityGML UML diagrams, classes are depicted in different colors. The following coloring scheme is applied:
 
