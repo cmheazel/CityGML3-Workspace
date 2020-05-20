@@ -1,22 +1,16 @@
 [[Vegetation-package-dd]]
-==== *Package*
+==== *Vegetation Package*
 
-[cols="1a"]
+[cols="1,4",frame=none,grid=none]
 |===
-|{set:cellbgcolor:#FFFFFF} *Package Vegetation*
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Description: ! The Vegetation module supports representation of vegetation objects with vegetation-specific thematic classes. CityGML’s vegetation model distinguishes between solitary vegetation objects like trees, and vegetation areas which represent biotopes like forests or other plant communities. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Parent Package: ! CityGML
-!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: ! «ApplicationSchema»
-!===
+|{nbsp}{nbsp}{nbsp}{nbsp}Description: | The Vegetation module supports representation of vegetation objects with vegetation-specific thematic classes. CityGML’s vegetation model distinguishes between solitary vegetation objects like trees, and vegetation areas which represent biotopes like forests or other plant communities. 
+|{nbsp}{nbsp}{nbsp}{nbsp}Parent Package: | CityGML
+|{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: | «ApplicationSchema»
 |===
 
-==== *Classes*
+===== *Classes*
 
 [[AbstractVegetationObject-section]]
-===== *Class AbstractVegetationObject*
-
 [cols="1a"]
 |===
 |*AbstractVegetationObject* 
@@ -26,11 +20,18 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
 |=== 
 
 [[PlantCover-section]]
-===== *Class PlantCover*
-
 [cols="1a"]
 |===
 |*PlantCover* 
@@ -39,6 +40,10 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A PlantCover represents a space covered by vegetation. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractVegetationObject-section,AbstractVegetationObject>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -59,51 +64,7 @@
 !===
 |=== 
 
-[[PlantCoverClassValue-section]]
-===== *Class PlantCoverClassValue*
-
-[cols="1a"]
-|===
-|*PlantCoverClassValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! PlantCoverClassValue is a code list used to further classify a PlantCover. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[PlantCoverFunctionValue-section]]
-===== *Class PlantCoverFunctionValue*
-
-[cols="1a"]
-|===
-|*PlantCoverFunctionValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! PlantCoverFunctionValue is a code list that enumerates the different purposes of a PlantCover. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[PlantCoverUsageValue-section]]
-===== *Class PlantCoverUsageValue*
-
-[cols="1a"]
-|===
-|*PlantCoverUsageValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! PlantCoverUsageValue is a code list that enumerates the different uses of a PlantCover. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
 [[SolitaryVegetationObject-section]]
-===== *Class SolitaryVegetationObject*
-
 [cols="1a"]
 |===
 |*SolitaryVegetationObject* 
@@ -112,6 +73,10 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A SolitaryVegetationObject represents individual vegetation objects, e.g. trees or bushes. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractVegetationObject-section,AbstractVegetationObject>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -136,64 +101,99 @@
 !{set:cellbgcolor:#FFFFFF} usage  !<<SolitaryVegetationObjectUsageValue-section,SolitaryVegetationObjectUsageValue>>  [0..*] !Specifies the actual uses of the SolitaryVegetationObject.
 3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|===  
+
+===== *Data Types*
+
+none
+
+===== *Basic Types*
+
+none
+
+===== *Unions*
+
+none
+
+===== *Code Lists*
+
+[[PlantCoverClassValue-section]]
+[cols="1a"]
+|===
+|*PlantCoverClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! PlantCoverClassValue is a code list used to further classify a PlantCover. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[PlantCoverFunctionValue-section]]
+[cols="1a"]
+|===
+|*PlantCoverFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! PlantCoverFunctionValue is a code list that enumerates the different purposes of a PlantCover. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[PlantCoverUsageValue-section]]
+[cols="1a"]
+|===
+|*PlantCoverUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! PlantCoverUsageValue is a code list that enumerates the different uses of a PlantCover. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
 |=== 
 
 [[SolitaryVegetationObjectClassValue-section]]
-===== *Class SolitaryVegetationObjectClassValue*
-
 [cols="1a"]
 |===
 |*SolitaryVegetationObjectClassValue* 
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! SolitaryVegetationObjectClassValue is a code list used to further classify a SolitaryVegetationObject. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
 |=== 
 
 [[SolitaryVegetationObjectFunctionValue-section]]
-===== *Class SolitaryVegetationObjectFunctionValue*
-
 [cols="1a"]
 |===
 |*SolitaryVegetationObjectFunctionValue* 
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! SolitaryVegetationObjectFunctionValue is a code list that enumerates the different purposes of a SolitaryVegetationObject. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
 |=== 
 
 [[SolitaryVegetationObjectUsageValue-section]]
-===== *Class SolitaryVegetationObjectUsageValue*
-
 [cols="1a"]
 |===
 |*SolitaryVegetationObjectUsageValue* 
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! SolitaryVegetationObjectUsageValue is a code list that enumerates the different uses of a SolitaryVegetationObject. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
 |=== 
 
 [[SpeciesValue-section]]
-===== *Class SpeciesValue*
-
 [cols="1a"]
 |===
 |*SpeciesValue* 
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A SpeciesValue is a code list that enumerates the species of a SolitaryVegetationObject. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|=== 
-  
+|===   
 
+===== *Enumerations*
 
-
+none

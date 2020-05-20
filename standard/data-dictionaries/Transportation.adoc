@@ -1,22 +1,16 @@
 [[Transportation-package-dd]]
-==== *Package*
+==== *Transportation Package*
 
-[cols="1a"]
+[cols="1,4",frame=none,grid=none]
 |===
-|{set:cellbgcolor:#FFFFFF} *Package Transportation*
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Description: ! The Transportation module supports representation of the transportation infrastructure. Transportation features include roads, tracks, waterways, railways, and squares. Transportation features may be represented as a network and/or as a collection of spaces or surface elements embedded in a three-dimensional space. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Parent Package: ! CityGML
-!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: ! «ApplicationSchema»
-!===
+|{nbsp}{nbsp}{nbsp}{nbsp}Description: | The Transportation module supports representation of the transportation infrastructure. Transportation features include roads, tracks, waterways, railways, and squares. Transportation features may be represented as a network and/or as a collection of spaces or surface elements embedded in a three-dimensional space. 
+|{nbsp}{nbsp}{nbsp}{nbsp}Parent Package: | CityGML
+|{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: | «ApplicationSchema»
 |===
 
-==== *Classes*
+===== *Classes*
 
 [[AbstractTransportationSpace-section]]
-===== *Class AbstractTransportationSpace*
-
 [cols="1a"]
 |===
 |*AbstractTransportationSpace* 
@@ -29,22 +23,22 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} trafficSpace 
-!<<TrafficSpace-section,TrafficSpace>> 
- [*]
-!
-!{set:cellbgcolor:#FFFFFF} hole 
-!<<Hole-section,Hole>> 
- [*]
-!
-!{set:cellbgcolor:#FFFFFF} auxiliaryTrafficSpace 
-!<<AuxiliaryTrafficSpace-section,AuxiliaryTrafficSpace>> 
- [*]
-!
 !{set:cellbgcolor:#FFFFFF} marking 
-!<<Marking-section,Marking>> 
- [*]
-!
+!<<Marking-section,Marking>>  
+[*]
+!Relates to the markings that are part of the transportation space.
+!{set:cellbgcolor:#FFFFFF} trafficSpace 
+!<<TrafficSpace-section,TrafficSpace>>  
+[*]
+!Relates to the traffic spaces that are part of the transportation space.
+!{set:cellbgcolor:#FFFFFF} auxiliaryTrafficSpace 
+!<<AuxiliaryTrafficSpace-section,AuxiliaryTrafficSpace>>  
+[*]
+!Relates to the auxiliary traffic spaces that are part of the transportation space.
+!{set:cellbgcolor:#FFFFFF} hole 
+!<<Hole-section,Hole>>  
+[*]
+!Relates to the holes that are part of the transportation space.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -58,8 +52,6 @@
 |=== 
 
 [[AuxiliaryTrafficArea-section]]
-===== *Class AuxiliaryTrafficArea*
-
 [cols="1a"]
 |===
 |*AuxiliaryTrafficArea* 
@@ -68,6 +60,10 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! An AuxiliaryTrafficArea is the ground surface of an AuxiliaryTrafficSpace. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractThematicSurface-section,AbstractThematicSurface>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -84,51 +80,7 @@
 !===
 |=== 
 
-[[AuxiliaryTrafficAreaClassValue-section]]
-===== *Class AuxiliaryTrafficAreaClassValue*
-
-[cols="1a"]
-|===
-|*AuxiliaryTrafficAreaClassValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AuxiliaryTrafficAreaClassValue is a code list used to further classify an AuxiliaryTrafficArea. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[AuxiliaryTrafficAreaFunctionValue-section]]
-===== *Class AuxiliaryTrafficAreaFunctionValue*
-
-[cols="1a"]
-|===
-|*AuxiliaryTrafficAreaFunctionValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AuxiliaryTrafficAreaFunctionValue is a code list that enumerates the different purposes of an AuxiliaryTrafficArea. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[AuxiliaryTrafficAreaUsageValue-section]]
-===== *Class AuxiliaryTrafficAreaUsageValue*
-
-[cols="1a"]
-|===
-|*AuxiliaryTrafficAreaUsageValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AuxiliaryTrafficAreaUsageValue is a code list that enumerates the different uses of an AuxiliaryTrafficArea. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
 [[AuxiliaryTrafficSpace-section]]
-===== *Class AuxiliaryTrafficSpace*
-
 [cols="1a"]
 |===
 |*AuxiliaryTrafficSpace* 
@@ -142,8 +94,8 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} boundary 
-!<<AuxiliaryTrafficArea-section,AuxiliaryTrafficArea>> 
- [*]
+!<<AuxiliaryTrafficArea-section,AuxiliaryTrafficArea>>  
+[*]
 !
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
@@ -161,51 +113,7 @@
 !===
 |=== 
 
-[[AuxiliaryTrafficSpaceClassValue-section]]
-===== *Class AuxiliaryTrafficSpaceClassValue*
-
-[cols="1a"]
-|===
-|*AuxiliaryTrafficSpaceClassValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AuxiliaryTrafficSpaceClassValue is a code list used to further classify an AuxiliaryTrafficSpace. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[AuxiliaryTrafficSpaceFunctionValue-section]]
-===== *Class AuxiliaryTrafficSpaceFunctionValue*
-
-[cols="1a"]
-|===
-|*AuxiliaryTrafficSpaceFunctionValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AuxiliaryTrafficSpaceFunctionValue is a code list that enumerates the different purposes of an AuxiliaryTrafficSpace. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[AuxiliaryTrafficSpaceUsageValue-section]]
-===== *Class AuxiliaryTrafficSpaceUsageValue*
-
-[cols="1a"]
-|===
-|*AuxiliaryTrafficSpaceUsageValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AuxiliaryTrafficSpaceUsageValue is a code list that enumerates the different uses of an AuxiliaryTrafficSpace. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
 [[ClearanceSpace-section]]
-===== *Class ClearanceSpace*
-
 [cols="1a"]
 |===
 |*ClearanceSpace* 
@@ -217,6 +125,10 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
 !{set:cellbgcolor:#FFFFFF} class  !<<ClearanceSpaceClassValue-section,ClearanceSpaceClassValue>>  [0..*] !Indicates the specific type of the ClearanceSpace.
@@ -224,23 +136,7 @@
 !===
 |=== 
 
-[[ClearanceSpaceClassValue-section]]
-===== *Class ClearanceSpaceClassValue*
-
-[cols="1a"]
-|===
-|*ClearanceSpaceClassValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ClearanceSpaceClassValue is a code list used to further classify a ClearanceSpace. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
 [[Hole-section]]
-===== *Class Hole*
-
 [cols="1a"]
 |===
 |*Hole* 
@@ -254,8 +150,8 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} boundary 
-!<<AbstractThematicSurface-section,AbstractThematicSurface>> 
- [*]
+!<<AbstractThematicSurface-section,AbstractThematicSurface>>  
+[*]
 !
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
@@ -267,23 +163,7 @@
 !===
 |=== 
 
-[[HoleClassValue-section]]
-===== *Class HoleClassValue*
-
-[cols="1a"]
-|===
-|*HoleClassValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! HoleClassValue is a code list used to further classify a Hole. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
 [[HoleSurface-section]]
-===== *Class HoleSurface*
-
 [cols="1a"]
 |===
 |*HoleSurface* 
@@ -293,11 +173,18 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractThematicSurface-section,AbstractThematicSurface>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
 |=== 
 
 [[Intersection-section]]
-===== *Class Intersection*
-
 [cols="1a"]
 |===
 |*Intersection* 
@@ -309,6 +196,10 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
 !{set:cellbgcolor:#FFFFFF} class  !<<IntersectionClassValue-section,IntersectionClassValue>>  [0..1] !Indicates the specific type of the Intersection.
@@ -316,23 +207,7 @@
 !===
 |=== 
 
-[[IntersectionClassValue-section]]
-===== *Class IntersectionClassValue*
-
-[cols="1a"]
-|===
-|*IntersectionClassValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! IntersectionClassValue is a code list used to further classify an Intersection. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
 [[Marking-section]]
-===== *Class Marking*
-
 [cols="1a"]
 |===
 |*Marking* 
@@ -344,6 +219,10 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
 !{set:cellbgcolor:#FFFFFF} class  !<<MarkingClassValue-section,MarkingClassValue>>  [0..1] !Indicates the specific type of the Marking.
@@ -351,23 +230,7 @@
 !===
 |=== 
 
-[[MarkingClassValue-section]]
-===== *Class MarkingClassValue*
-
-[cols="1a"]
-|===
-|*MarkingClassValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! MarkingClassValue is a code list used to further classify a Marking. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
 [[Railway-section]]
-===== *Class Railway*
-
 [cols="1a"]
 |===
 |*Railway* 
@@ -380,14 +243,14 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} section 
-!<<Section-section,Section>> 
- [*]
-!
 !{set:cellbgcolor:#FFFFFF} intersection 
-!<<Intersection-section,Intersection>> 
- [*]
-!
+!<<Intersection-section,Intersection>>  
+[*]
+!Relates to the intersections that are part of the Railway.
+!{set:cellbgcolor:#FFFFFF} section 
+!<<Section-section,Section>>  
+[*]
+!Relates to the sections that are part of the Railway.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -402,51 +265,7 @@
 !===
 |=== 
 
-[[RailwayClassValue-section]]
-===== *Class RailwayClassValue*
-
-[cols="1a"]
-|===
-|*RailwayClassValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! RailwayClassValue is a code list used to further classify a Railway. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[RailwayFunctionValue-section]]
-===== *Class RailwayFunctionValue*
-
-[cols="1a"]
-|===
-|*RailwayFunctionValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! RailwayFunctionValue is a code list that enumerates the different purposes of a Railway. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[RailwayUsageValue-section]]
-===== *Class RailwayUsageValue*
-
-[cols="1a"]
-|===
-|*RailwayUsageValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! RailwayUsageValue is a code list that enumerates the different uses of a Railway. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
 [[Road-section]]
-===== *Class Road*
-
 [cols="1a"]
 |===
 |*Road* 
@@ -460,13 +279,13 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} intersection 
-!<<Intersection-section,Intersection>> 
- [*]
-!
+!<<Intersection-section,Intersection>>  
+[*]
+!Relates to the intersections that are part of the Road.
 !{set:cellbgcolor:#FFFFFF} section 
-!<<Section-section,Section>> 
- [*]
-!
+!<<Section-section,Section>>  
+[*]
+!Relates to the sections that are part of the Road.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -481,51 +300,7 @@
 !===
 |=== 
 
-[[RoadClassValue-section]]
-===== *Class RoadClassValue*
-
-[cols="1a"]
-|===
-|*RoadClassValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! RoadClassValue is a code list used to further classify a Road. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[RoadFunctionValue-section]]
-===== *Class RoadFunctionValue*
-
-[cols="1a"]
-|===
-|*RoadFunctionValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! RoadFunctionValue is a code list that enumerates the different purposes of a Road. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[RoadUsageValue-section]]
-===== *Class RoadUsageValue*
-
-[cols="1a"]
-|===
-|*RoadUsageValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! RoadUsageValue is a code list that enumerates the different uses of a Road. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
 [[Section-section]]
-===== *Class Section*
-
 [cols="1a"]
 |===
 |*Section* 
@@ -537,6 +312,10 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
 !{set:cellbgcolor:#FFFFFF} class  !<<SectionClassValue-section,SectionClassValue>>  [0..1] !Indicates the specific type of the Section.
@@ -544,23 +323,7 @@
 !===
 |=== 
 
-[[SectionClassValue-section]]
-===== *Class SectionClassValue*
-
-[cols="1a"]
-|===
-|*SectionClassValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! SectionClassValue is a code list used to further classify a Section. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
 [[Square-section]]
-===== *Class Square*
-
 [cols="1a"]
 |===
 |*Square* 
@@ -569,6 +332,10 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A Square is a transportation space for unrestricted movement for vehicles, bicycles and/or pedestrians. This includes plazas as well as large sealed surfaces such as parking lots. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractTransportationSpace-section,AbstractTransportationSpace>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -583,65 +350,7 @@
 !===
 |=== 
 
-[[SquareClassValue-section]]
-===== *Class SquareClassValue*
-
-[cols="1a"]
-|===
-|*SquareClassValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! SquareClassValue is a code list used to further classify a Square. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[SquareFunctionValue-section]]
-===== *Class SquareFunctionValue*
-
-[cols="1a"]
-|===
-|*SquareFunctionValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! SquareFunctionValue is a code list that enumerates the different purposes of a Square. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[SquareUsageValue-section]]
-===== *Class SquareUsageValue*
-
-[cols="1a"]
-|===
-|*SquareUsageValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! SquareUsageValue is a code list that enumerates the different uses of a Square. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[SurfaceMaterialValue-section]]
-===== *Class SurfaceMaterialValue*
-
-[cols="1a"]
-|===
-|*SurfaceMaterialValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! SurfaceMaterialValue is a code list that enumerates the different surface materials. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
 [[Track-section]]
-===== *Class Track*
-
 [cols="1a"]
 |===
 |*Track* 
@@ -655,13 +364,13 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} section 
-!<<Section-section,Section>> 
- [*]
-!
+!<<Section-section,Section>>  
+[*]
+!Relates to the sections that are part of the Track.
 !{set:cellbgcolor:#FFFFFF} intersection 
-!<<Intersection-section,Intersection>> 
- [*]
-!
+!<<Intersection-section,Intersection>>  
+[*]
+!Relates to the intersections that are part of the Track.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -676,51 +385,7 @@
 !===
 |=== 
 
-[[TrackClassValue-section]]
-===== *Class TrackClassValue*
-
-[cols="1a"]
-|===
-|*TrackClassValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrackClassValue is a code list used to further classify a Track. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[TrackFunctionValue-section]]
-===== *Class TrackFunctionValue*
-
-[cols="1a"]
-|===
-|*TrackFunctionValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrackFunctionValue is a code list that enumerates the different purposes of a Track. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[TrackUsageValue-section]]
-===== *Class TrackUsageValue*
-
-[cols="1a"]
-|===
-|*TrackUsageValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrackUsageValue is a code list that enumerates the different uses of a Track. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
 [[TrafficArea-section]]
-===== *Class TrafficArea*
-
 [cols="1a"]
 |===
 |*TrafficArea* 
@@ -729,6 +394,10 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A TrafficArea is the ground surface of a TrafficSpace. Traffic areas are the surfaces upon which traffic actually takes place. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractThematicSurface-section,AbstractThematicSurface>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -745,51 +414,7 @@
 !===
 |=== 
 
-[[TrafficAreaClassValue-section]]
-===== *Class TrafficAreaClassValue*
-
-[cols="1a"]
-|===
-|*TrafficAreaClassValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrafficAreaClassValue is a code list used to further classify a TrafficArea. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[TrafficAreaFunctionValue-section]]
-===== *Class TrafficAreaFunctionValue*
-
-[cols="1a"]
-|===
-|*TrafficAreaFunctionValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrafficAreaFunctionValue is a code list that enumerates the different purposes of a TrafficArea. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[TrafficAreaUsageValue-section]]
-===== *Class TrafficAreaUsageValue*
-
-[cols="1a"]
-|===
-|*TrafficAreaUsageValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrafficAreaUsageValue is a code list that enumerates the different uses of a TrafficArea. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
 [[TrafficSpace-section]]
-===== *Class TrafficSpace*
-
 [cols="1a"]
 |===
 |*TrafficSpace* 
@@ -802,21 +427,21 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} clearanceSpace 
-!<<ClearanceSpace-section,ClearanceSpace>> 
- [*]
-!
 !{set:cellbgcolor:#FFFFFF} successor 
-!<<TrafficSpace-section,TrafficSpace>> 
- [*]
-!
-!{set:cellbgcolor:#FFFFFF} boundary 
-!<<TrafficArea-section,TrafficArea>> 
- [*]
-!
+!<<TrafficSpace-section,TrafficSpace>>  
+[*]
+!Indicates the successor(s) of the TrafficSpace. 
+!{set:cellbgcolor:#FFFFFF} clearanceSpace 
+!<<ClearanceSpace-section,ClearanceSpace>>  
+[*]
+!Relates to the clearance spaces that are part of the TrafficSpace.
 !{set:cellbgcolor:#FFFFFF} predecessor 
-!<<TrafficSpace-section,TrafficSpace>> 
- [*]
+!<<TrafficSpace-section,TrafficSpace>>  
+[*]
+!Indicates the predecessor(s) of the TrafficSpace. 
+!{set:cellbgcolor:#FFFFFF} boundary 
+!<<TrafficArea-section,TrafficArea>>  
+[*]
 !
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
@@ -838,93 +463,7 @@
 !===
 |=== 
 
-[[TrafficSpaceClassValue-section]]
-===== *Class TrafficSpaceClassValue*
-
-[cols="1a"]
-|===
-|*TrafficSpaceClassValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrafficSpaceClassValue is a code list used to further classify a TrafficSpace. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[TrafficSpaceFunctionValue-section]]
-===== *Class TrafficSpaceFunctionValue*
-
-[cols="1a"]
-|===
-|*TrafficSpaceFunctionValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrafficSpaceFunctionValue is a code list that enumerates the different purposes of a TrafficSpace. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[TrafficSpaceUsageValue-section]]
-===== *Class TrafficSpaceUsageValue*
-
-[cols="1a"]
-|===
-|*TrafficSpaceUsageValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrafficSpaceUsageValue is a code list that enumerates the different uses of a TrafficSpace. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[TransportationSpaceClassValue-section]]
-===== *Class TransportationSpaceClassValue*
-
-[cols="1a"]
-|===
-|*TransportationSpaceClassValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TransportationSpaceClassValue is a code list used to further classify a TransportationSpace. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[TransportationSpaceFunctionValue-section]]
-===== *Class TransportationSpaceFunctionValue*
-
-[cols="1a"]
-|===
-|*TransportationSpaceFunctionValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TransportationSpaceFunctionValue is a code list that enumerates the different purposes of a TransportationSpace. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[TransportationSpaceUsageValue-section]]
-===== *Class TransportationSpaceUsageValue*
-
-[cols="1a"]
-|===
-|*TransportationSpaceUsageValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TransportationSpaceUsageValue is a code list that enumerates the different uses of a TransportationSpace. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
 [[Waterway-section]]
-===== *Class Waterway*
-
 [cols="1a"]
 |===
 |*Waterway* 
@@ -937,14 +476,14 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} section 
-!<<Section-section,Section>> 
- [*]
-!
 !{set:cellbgcolor:#FFFFFF} intersection 
-!<<Intersection-section,Intersection>> 
- [*]
-!
+!<<Intersection-section,Intersection>>  
+[*]
+!Relates to the intersections that are part of the Waterway.
+!{set:cellbgcolor:#FFFFFF} section 
+!<<Section-section,Section>>  
+[*]
+!Relates to the sections that are part of the Waterway.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -957,98 +496,456 @@
 !{set:cellbgcolor:#FFFFFF} usage  !<<WaterwayUsageValue-section,WaterwayUsageValue>>  [0..*] !Specifies the actual uses of the Waterway.
 3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|===   
+
+===== *Data Types*
+
+none
+
+===== *Basic Types*
+
+none
+
+===== *Unions*
+
+none
+
+===== *Code Lists*
+
+[[AuxiliaryTrafficAreaClassValue-section]]
+[cols="1a"]
+|===
+|*AuxiliaryTrafficAreaClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AuxiliaryTrafficAreaClassValue is a code list used to further classify an AuxiliaryTrafficArea. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[AuxiliaryTrafficAreaFunctionValue-section]]
+[cols="1a"]
+|===
+|*AuxiliaryTrafficAreaFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AuxiliaryTrafficAreaFunctionValue is a code list that enumerates the different purposes of an AuxiliaryTrafficArea. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[AuxiliaryTrafficAreaUsageValue-section]]
+[cols="1a"]
+|===
+|*AuxiliaryTrafficAreaUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AuxiliaryTrafficAreaUsageValue is a code list that enumerates the different uses of an AuxiliaryTrafficArea. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[AuxiliaryTrafficSpaceClassValue-section]]
+[cols="1a"]
+|===
+|*AuxiliaryTrafficSpaceClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AuxiliaryTrafficSpaceClassValue is a code list used to further classify an AuxiliaryTrafficSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[AuxiliaryTrafficSpaceFunctionValue-section]]
+[cols="1a"]
+|===
+|*AuxiliaryTrafficSpaceFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AuxiliaryTrafficSpaceFunctionValue is a code list that enumerates the different purposes of an AuxiliaryTrafficSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[AuxiliaryTrafficSpaceUsageValue-section]]
+[cols="1a"]
+|===
+|*AuxiliaryTrafficSpaceUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AuxiliaryTrafficSpaceUsageValue is a code list that enumerates the different uses of an AuxiliaryTrafficSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[ClearanceSpaceClassValue-section]]
+[cols="1a"]
+|===
+|*ClearanceSpaceClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ClearanceSpaceClassValue is a code list used to further classify a ClearanceSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[HoleClassValue-section]]
+[cols="1a"]
+|===
+|*HoleClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! HoleClassValue is a code list used to further classify a Hole. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[IntersectionClassValue-section]]
+[cols="1a"]
+|===
+|*IntersectionClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! IntersectionClassValue is a code list used to further classify an Intersection. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[MarkingClassValue-section]]
+[cols="1a"]
+|===
+|*MarkingClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! MarkingClassValue is a code list used to further classify a Marking. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[RailwayClassValue-section]]
+[cols="1a"]
+|===
+|*RailwayClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! RailwayClassValue is a code list used to further classify a Railway. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[RailwayFunctionValue-section]]
+[cols="1a"]
+|===
+|*RailwayFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! RailwayFunctionValue is a code list that enumerates the different purposes of a Railway. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[RailwayUsageValue-section]]
+[cols="1a"]
+|===
+|*RailwayUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! RailwayUsageValue is a code list that enumerates the different uses of a Railway. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[RoadClassValue-section]]
+[cols="1a"]
+|===
+|*RoadClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! RoadClassValue is a code list used to further classify a Road. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[RoadFunctionValue-section]]
+[cols="1a"]
+|===
+|*RoadFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! RoadFunctionValue is a code list that enumerates the different purposes of a Road. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[RoadUsageValue-section]]
+[cols="1a"]
+|===
+|*RoadUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! RoadUsageValue is a code list that enumerates the different uses of a Road. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[SectionClassValue-section]]
+[cols="1a"]
+|===
+|*SectionClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! SectionClassValue is a code list used to further classify a Section. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[SquareClassValue-section]]
+[cols="1a"]
+|===
+|*SquareClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! SquareClassValue is a code list used to further classify a Square. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[SquareFunctionValue-section]]
+[cols="1a"]
+|===
+|*SquareFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! SquareFunctionValue is a code list that enumerates the different purposes of a Square. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[SquareUsageValue-section]]
+[cols="1a"]
+|===
+|*SquareUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! SquareUsageValue is a code list that enumerates the different uses of a Square. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[SurfaceMaterialValue-section]]
+[cols="1a"]
+|===
+|*SurfaceMaterialValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! SurfaceMaterialValue is a code list that enumerates the different surface materials. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[TrackClassValue-section]]
+[cols="1a"]
+|===
+|*TrackClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrackClassValue is a code list used to further classify a Track. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[TrackFunctionValue-section]]
+[cols="1a"]
+|===
+|*TrackFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrackFunctionValue is a code list that enumerates the different purposes of a Track. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[TrackUsageValue-section]]
+[cols="1a"]
+|===
+|*TrackUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrackUsageValue is a code list that enumerates the different uses of a Track. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[TrafficAreaClassValue-section]]
+[cols="1a"]
+|===
+|*TrafficAreaClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrafficAreaClassValue is a code list used to further classify a TrafficArea. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[TrafficAreaFunctionValue-section]]
+[cols="1a"]
+|===
+|*TrafficAreaFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrafficAreaFunctionValue is a code list that enumerates the different purposes of a TrafficArea. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[TrafficAreaUsageValue-section]]
+[cols="1a"]
+|===
+|*TrafficAreaUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrafficAreaUsageValue is a code list that enumerates the different uses of a TrafficArea. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[TrafficSpaceClassValue-section]]
+[cols="1a"]
+|===
+|*TrafficSpaceClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrafficSpaceClassValue is a code list used to further classify a TrafficSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[TrafficSpaceFunctionValue-section]]
+[cols="1a"]
+|===
+|*TrafficSpaceFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrafficSpaceFunctionValue is a code list that enumerates the different purposes of a TrafficSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[TrafficSpaceUsageValue-section]]
+[cols="1a"]
+|===
+|*TrafficSpaceUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrafficSpaceUsageValue is a code list that enumerates the different uses of a TrafficSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[TransportationSpaceClassValue-section]]
+[cols="1a"]
+|===
+|*TransportationSpaceClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TransportationSpaceClassValue is a code list used to further classify a TransportationSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[TransportationSpaceFunctionValue-section]]
+[cols="1a"]
+|===
+|*TransportationSpaceFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TransportationSpaceFunctionValue is a code list that enumerates the different purposes of a TransportationSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[TransportationSpaceUsageValue-section]]
+[cols="1a"]
+|===
+|*TransportationSpaceUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TransportationSpaceUsageValue is a code list that enumerates the different uses of a TransportationSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
 |=== 
 
 [[WaterwayClassValue-section]]
-===== *Class WaterwayClassValue*
-
 [cols="1a"]
 |===
 |*WaterwayClassValue* 
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WaterwayClassValue is a code list used to further classify a Waterway. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
 |=== 
 
 [[WaterwayFunctionValue-section]]
-===== *Class WaterwayFunctionValue*
-
 [cols="1a"]
 |===
 |*WaterwayFunctionValue* 
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WaterwayFunctionValue is a code list that enumerates the different purposes of a Waterway. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
 |=== 
 
 [[WaterwayUsageValue-section]]
-===== *Class WaterwayUsageValue*
-
 [cols="1a"]
 |===
 |*WaterwayUsageValue* 
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WaterwayUsageValue is a code list that enumerates the different uses of a Waterway. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|=== 
+|===   
+
+===== *Enumerations*
 
 [[GranularityValue-section]]
-===== *Class GranularityValue*
-
 [cols="1a"]
 |===
-|*GranularityValue* 
-|[cols="1,4",frame=none,grid=none]
+|*GranularityValue*
+[cols="1,4",frame=none,grid=none]
 !===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GranularityValue enumerates the different levels of granularity in which transportation objects are represented. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  
+!Definition: ! GranularityValue enumerates the different levels of granularity in which transportation objects are represented. 
+!StereoType: !  <<enumeration>>
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
+|[cols="1,4",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+^!{set:cellbgcolor:#DDDDDD} *Literal Values* !*Definitions*
  
-!{set:cellbgcolor:#FFFFFF} lane  !  !Indicates that the individual lanes of the transportation object are represented. 
+^!{set:cellbgcolor:#FFFFFF} lane  !Indicates that the individual lanes of the transportation object are represented. 
  
-!{set:cellbgcolor:#FFFFFF} way  !  !Indicates that the individual (carriage)ways of the transportation object are represented.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+^!{set:cellbgcolor:#FFFFFF} way  !Indicates that the individual (carriage)ways of the transportation object are represented.
 !===
 |=== 
 
 [[TrafficDirectionValue-section]]
-===== *Class TrafficDirectionValue*
-
 [cols="1a"]
 |===
-|*TrafficDirectionValue* 
-|[cols="1,4",frame=none,grid=none]
+|*TrafficDirectionValue*
+[cols="1,4",frame=none,grid=none]
 !===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TrafficDirectionValue enumerates the allowed directions of travel of a mobile object. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  
+!Definition: ! TrafficDirectionValue enumerates the allowed directions of travel of a mobile object. 
+!StereoType: !  <<enumeration>>
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
+|[cols="1,4",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+^!{set:cellbgcolor:#DDDDDD} *Literal Values* !*Definitions*
  
-!{set:cellbgcolor:#FFFFFF} forwards  !  !Indicates that traffic flows in the direction of the corresponding linear geometry.
+^!{set:cellbgcolor:#FFFFFF} forwards  !Indicates that traffic flows in the direction of the corresponding linear geometry.
  
-!{set:cellbgcolor:#FFFFFF} backwards  !  !Indicates that traffic flows in the opposite direction of the corresponding linear geometry.
+^!{set:cellbgcolor:#FFFFFF} backwards  !Indicates that traffic flows in the opposite direction of the corresponding linear geometry.
  
-!{set:cellbgcolor:#FFFFFF} both  !  !Indicates that traffic flows in both directions.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+^!{set:cellbgcolor:#FFFFFF} both  !Indicates that traffic flows in both directions.
 !===
-|=== 
-  
-
-
-
+|===   

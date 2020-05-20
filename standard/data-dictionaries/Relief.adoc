@@ -1,22 +1,16 @@
 [[Relief-package-dd]]
-==== *Package*
+==== *Relief Package*
 
-[cols="1a"]
+[cols="1,4",frame=none,grid=none]
 |===
-|{set:cellbgcolor:#FFFFFF} *Package Relief*
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Description: ! The Relief module supports representation of the terrain. CityGML supports terrain representations at different levels of detail, reflecting different accuracies or resolutions. Terrain may be specified as a regular raster or grid, as a TIN, by break lines, and/or by mass points. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Parent Package: ! CityGML
-!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: ! «ApplicationSchema»
-!===
+|{nbsp}{nbsp}{nbsp}{nbsp}Description: | The Relief module supports representation of the terrain. CityGML supports terrain representations at different levels of detail, reflecting different accuracies or resolutions. Terrain may be specified as a regular raster or grid, as a TIN, by break lines, and/or by mass points. 
+|{nbsp}{nbsp}{nbsp}{nbsp}Parent Package: | CityGML
+|{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: | «ApplicationSchema»
 |===
 
-==== *Classes*
+===== *Classes*
 
 [[AbstractReliefComponent-section]]
-===== *Class AbstractReliefComponent*
-
 [cols="1a"]
 |===
 |*AbstractReliefComponent* 
@@ -33,9 +27,9 @@ self.extent.patch->forAll(oclIsKindOf(GM_Polygon))
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} extent 
-!<<GM_Surface-section,GM_Surface>> 
- [0..1]
-!
+!<<GM_Surface-section,GM_Surface>>  
+[0..1]
+!Indicates the geometrical extent of the terrain component. The geometrical extent is provided as a 2D Surface geometry.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -47,8 +41,6 @@ self.extent.patch->forAll(oclIsKindOf(GM_Polygon))
 |=== 
 
 [[BreaklineRelief-section]]
-===== *Class BreaklineRelief*
-
 [cols="1a"]
 |===
 |*BreaklineRelief* 
@@ -61,20 +53,23 @@ self.extent.patch->forAll(oclIsKindOf(GM_Polygon))
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} ridgeOrValleyLines 
-!<<GM_MultiCurve-section,GM_MultiCurve>> 
- [0..1]
-!
 !{set:cellbgcolor:#FFFFFF} breaklines 
-!<<GM_MultiCurve-section,GM_MultiCurve>> 
- [0..1]
-!
+!<<GM_MultiCurve-section,GM_MultiCurve>>  
+[0..1]
+!Relates to the 3D MultiCurve geometry of the MassPointRelief. This association role is used to represent break lines.
+!{set:cellbgcolor:#FFFFFF} ridgeOrValleyLines 
+!<<GM_MultiCurve-section,GM_MultiCurve>>  
+[0..1]
+!Relates to the 3D MultiCurve geometry of the MassPointRelief. This association role is used to represent ridge or valley lines.
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
 [[MassPointRelief-section]]
-===== *Class MassPointRelief*
-
 [cols="1a"]
 |===
 |*MassPointRelief* 
@@ -87,20 +82,23 @@ self.extent.patch->forAll(oclIsKindOf(GM_Polygon))
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} reliefPoints 
-!<<GM_MultiPoint-section,GM_MultiPoint>> 
- [0..1]
-!
 !{set:cellbgcolor:#FFFFFF} pointCloud 
-!<<AbstractPointCloud-section,AbstractPointCloud>> 
- [0..1]
-!
+!<<AbstractPointCloud-section,AbstractPointCloud>>  
+[0..1]
+!Relates to the 3D PointCloud of the MassPointRelief.
+!{set:cellbgcolor:#FFFFFF} reliefPoints 
+!<<GM_MultiPoint-section,GM_MultiPoint>>  
+[0..1]
+!Relates to the 3D MultiPoint geometry of the MassPointRelief.
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
 [[RasterRelief-section]]
-===== *Class RasterRelief*
-
 [cols="1a"]
 |===
 |*RasterRelief* 
@@ -114,15 +112,18 @@ self.extent.patch->forAll(oclIsKindOf(GM_Polygon))
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} grid 
-!<<CV_DiscreteGridPointCoverage-section,CV_DiscreteGridPointCoverage>> 
- [1]
-!
+!<<CV_DiscreteGridPointCoverage-section,CV_DiscreteGridPointCoverage>>  
+[1]
+!Relates to the DiscreteGridPointCoverage of the RasterRelief.
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
 [[ReliefFeature-section]]
-===== *Class ReliefFeature*
-
 [cols="1a"]
 |===
 |*ReliefFeature* 
@@ -136,9 +137,9 @@ self.extent.patch->forAll(oclIsKindOf(GM_Polygon))
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} reliefComponent 
-!<<AbstractReliefComponent-section,AbstractReliefComponent>> 
- [1..*]
-!
+!<<AbstractReliefComponent-section,AbstractReliefComponent>>  
+[1..*]
+!Relates to the terrain components that are part of the ReliefFeature.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -150,8 +151,6 @@ self.extent.patch->forAll(oclIsKindOf(GM_Polygon))
 |=== 
 
 [[TINRelief-section]]
-===== *Class TINRelief*
-
 [cols="1a"]
 |===
 |*TINRelief* 
@@ -165,12 +164,33 @@ self.extent.patch->forAll(oclIsKindOf(GM_Polygon))
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} tin 
-!<<GM_TriangulatedSurface-section,GM_TriangulatedSurface>> 
- [1]
-!
+!<<GM_TriangulatedSurface-section,GM_TriangulatedSurface>>  
+[1]
+!Relates to the triangulated surface of the TINRelief.
 !===
-|=== 
-  
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
+|===   
 
+===== *Data Types*
 
+none
 
+===== *Basic Types*
+
+none
+
+===== *Unions*
+
+none
+
+===== *Code Lists*
+
+none
+
+===== *Enumerations*
+
+none

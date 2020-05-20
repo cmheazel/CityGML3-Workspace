@@ -1,22 +1,16 @@
 [[PointCloud-package-dd]]
-==== *Package*
+==== *PointCloud Package*
 
-[cols="1a"]
+[cols="1,4",frame=none,grid=none]
 |===
-|{set:cellbgcolor:#FFFFFF} *Package PointCloud*
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Description: ! The PointCloud module supports representation of CityGML features by a collection of points. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Parent Package: ! CityGML
-!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: ! «ApplicationSchema»
-!===
+|{nbsp}{nbsp}{nbsp}{nbsp}Description: | The PointCloud module supports representation of CityGML features by a collection of points. 
+|{nbsp}{nbsp}{nbsp}{nbsp}Parent Package: | CityGML
+|{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: | «ApplicationSchema»
 |===
 
-==== *Classes*
+===== *Classes*
 
 [[PointCloud-section]]
-===== *Class PointCloud*
-
 [cols="1a"]
 |===
 |*PointCloud* 
@@ -30,9 +24,9 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} points 
-!<<GM_MultiPoint-section,GM_MultiPoint>> 
- [0..1]
-!
+!<<GM_MultiPoint-section,GM_MultiPoint>>  
+[0..1]
+!Relates to the 3D MultiPoint geometry of the PointCloud stored inline with the city model.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -45,8 +39,24 @@
 !{set:cellbgcolor:#FFFFFF} pointFileSrsName  !<<CharacterString-section,CharacterString>>  [0..1] !Indicates the coordinate reference system used by the external point cloud file.
 3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
-|=== 
-  
+|===   
 
+===== *Data Types*
 
+none
 
+===== *Basic Types*
+
+none
+
+===== *Unions*
+
+none
+
+===== *Code Lists*
+
+none
+
+===== *Enumerations*
+
+none

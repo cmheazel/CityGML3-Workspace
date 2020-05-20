@@ -1,22 +1,16 @@
 [[Dynamizer-package-dd]]
-==== *Package*
+==== *Dynamizer Package*
 
-[cols="1a"]
+[cols="1,4",frame=none,grid=none]
 |===
-|{set:cellbgcolor:#FFFFFF} *Package Dynamizer*
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Description: ! The Dynamizer module supports the injection of timeseries data for individual attributes of CityGML features. Timeseries data can either be retrieved from external Sensor APIs (e.g. OGC SensorThings API, OGC Sensor Observation Services, MQTT, proprietary platforms), external standardized timeseries files (e.g. OGC TimeseriesML or OGC Observations & Measurements), external tabulated files (e.g CSV) or can be represented inline as basic time-value pairs. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Parent Package: ! CityGML
-!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: ! «ApplicationSchema»
-!===
+|{nbsp}{nbsp}{nbsp}{nbsp}Description: | The Dynamizer module supports the injection of timeseries data for individual attributes of CityGML features. Timeseries data can either be retrieved from external Sensor APIs (e.g. OGC SensorThings API, OGC Sensor Observation Services, MQTT, proprietary platforms), external standardized timeseries files (e.g. OGC TimeseriesML or OGC Observations & Measurements), external tabulated files (e.g CSV) or can be represented inline as basic time-value pairs. 
+|{nbsp}{nbsp}{nbsp}{nbsp}Parent Package: | CityGML
+|{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: | «ApplicationSchema»
 |===
 
-==== *Classes*
+===== *Classes*
 
 [[AbstractAtomicTimeseries-section]]
-===== *Class AbstractAtomicTimeseries*
-
 [cols="1a"]
 |===
 |*AbstractAtomicTimeseries* 
@@ -25,6 +19,10 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AbstractAtomicTimeseries represents the attributes and relationships that are common to all kinds of atomic timeseries (GenericTimeseries, TabulatedFileTimeseries, StandardFileTimeseries). An atomic timeseries represents time-varying data of a specific data type for a single contiguous time interval. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractTimeseries-section,AbstractTimeseries>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -38,8 +36,6 @@
 |=== 
 
 [[AbstractTimeseries-section]]
-===== *Class AbstractTimeseries*
-
 [cols="1a"]
 |===
 |*AbstractTimeseries* 
@@ -48,6 +44,10 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AbstractTimeseries is the abstract superclass representing any type of timeseries data. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractFeature-section,AbstractFeature>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -60,23 +60,7 @@
 !===
 |=== 
 
-[[AuthenticationTypeValue-section]]
-===== *Class AuthenticationTypeValue*
-
-[cols="1a"]
-|===
-|*AuthenticationTypeValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AuthenticationTypeValue is a code list used to specify the authentication method to be used to access the referenced sensor service. Each value shall provide enough information such that a software application could determine the required access credentials. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
 [[CompositeTimeseries-section]]
-===== *Class CompositeTimeseries*
-
 [cols="1a"]
 |===
 |*CompositeTimeseries* 
@@ -90,15 +74,18 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} component 
-!<<TimeseriesComponent-section,TimeseriesComponent>> 
- [1..*]
-!
+!<<TimeseriesComponent-section,TimeseriesComponent>>  
+[1..*]
+!Relates to the atomic and composite timeseries that are part of the CompositeTimeseries. The referenced timeseries are sequentially ordered.
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
 |=== 
 
 [[Dynamizer-section]]
-===== *Class Dynamizer*
-
 [cols="1a"]
 |===
 |*Dynamizer* 
@@ -112,13 +99,13 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} dynamicData 
-!<<AbstractTimeseries-section,AbstractTimeseries>> 
- [0..1]
-!
+!<<AbstractTimeseries-section,AbstractTimeseries>>  
+[0..1]
+!Relates to the timeseries data that is given either inline within a CityGML dataset or by a link to an external file containing timeseries data.
 !{set:cellbgcolor:#FFFFFF} sensorConnection 
-!<<SensorConnection-section,SensorConnection>> 
- [0..1]
-!
+!<<SensorConnection-section,SensorConnection>>  
+[0..1]
+!Relates to the sensor API that delivers timeseries data.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -134,8 +121,6 @@
 |=== 
 
 [[GenericTimeseries-section]]
-===== *Class GenericTimeseries*
-
 [cols="1a"]
 |===
 |*GenericTimeseries* 
@@ -149,9 +134,9 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} timeValuePair 
-!<<TimeValuePair-section,TimeValuePair>> 
- [1..*]
-!
+!<<TimeValuePair-section,TimeValuePair>>  
+[1..*]
+!Relates to the time-value-pairs that are part of the GenericTimeseries.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -162,23 +147,7 @@
 !===
 |=== 
 
-[[SensorConnectionTypeValue-section]]
-===== *Class SensorConnectionTypeValue*
-
-[cols="1a"]
-|===
-|*SensorConnectionTypeValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! SensorConnectionTypeValue is a code list used to specify the type of the referenced sensor service. Each value shall provide enough information such that a software application would be able to identify the API type and version. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
 [[StandardFileTimeseries-section]]
-===== *Class StandardFileTimeseries*
-
 [cols="1a"]
 |===
 |*StandardFileTimeseries* 
@@ -187,6 +156,10 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A StandardFileTimeseries represents time-varying data for a single contiguous time interval. The data is provided in an external file referenced in the StandardFileTimeseries. The data within the external file shall be encoded according to a dedicated format for the representation of timeseries data, for example, the OGC TimeseriesML or OGC Observations & Measurements standard. The data type of the data has to be specified within the external file. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractAtomicTimeseries-section,AbstractAtomicTimeseries>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -201,23 +174,7 @@
 !===
 |=== 
 
-[[StandardFileTypeValue-section]]
-===== *Class StandardFileTypeValue*
-
-[cols="1a"]
-|===
-|*StandardFileTypeValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! StandardFileTypeValue is a code list used to specify the type of the referenced external timeseries data file. Each value shall provide information about the standard and version. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
 [[TabulatedFileTimeseries-section]]
-===== *Class TabulatedFileTimeseries*
-
 [cols="1a"]
 |===
 |*TabulatedFileTimeseries* 
@@ -226,6 +183,10 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A TabulatedFileTimeseries represents time-varying data of a specific data type for a single contiguous time interval. The data is provided in an external file referenced in the TabulatedFileTimeseries. The file shall contain table structured data using an appropriate file format like comma separated values (CSV), Microsoft Excel (XLSX) or Google Spreadsheet. The timestamps and the values are given in specific columns of the table. Each row represents a single time-value-pair. A subset of rows can be selected using the idColumn and idValue attributes. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractAtomicTimeseries-section,AbstractAtomicTimeseries>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -260,32 +221,18 @@
 !{set:cellbgcolor:#FFFFFF} valueType  !<<TimeseriesTypeValue-section,TimeseriesTypeValue>>  !Indicates the specific type of the timeseries data.
 3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
-|=== 
+|===   
 
-[[TabulatedFileTypeValue-section]]
-===== *Class TabulatedFileTypeValue*
-
-[cols="1a"]
-|===
-|*TabulatedFileTypeValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TabulatedFileTypeValue is a code list used to specify the data format of the referenced external tabulated data file. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
+===== *Data Types*
 
 [[SensorConnection-section]]
-===== *Class SensorConnection*
-
 [cols="1a"]
 |===
-|*SensorConnection* 
-|[cols="1,4",frame=none,grid=none]
+|*SensorConnection*
+[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A SensorConnection provides all details that are required to retrieve a specific datastream from an external sensor web service. It comprises the service type (e.g. OGC SensorThings API, OGC Sensor Observation Services, MQTT, proprietary platforms), the URL of the sensor service, the identifier for the sensor or thing and its observed property as well as information about the required authentication method. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
@@ -294,7 +241,7 @@
 !{set:cellbgcolor:#FFFFFF} sensorLocation 
 !<<AbstractCityObject-section,AbstractCityObject>> 
  [0..1]
-!
+!Relates the sensor to the city object where it is located.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -330,15 +277,13 @@
 |=== 
 
 [[TimeseriesComponent-section]]
-===== *Class TimeseriesComponent*
-
 [cols="1a"]
 |===
-|*TimeseriesComponent* 
-|[cols="1,4",frame=none,grid=none]
+|*TimeseriesComponent*
+[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TimeseriesComponent represents an element of a CompositeTimeseries. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
@@ -347,7 +292,7 @@
 !{set:cellbgcolor:#FFFFFF} timeseries 
 !<<AbstractTimeseries-section,AbstractTimeseries>> 
  [1]
-!
+!Relates a timeseries to the TimeseriesComponent.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -360,52 +305,19 @@
 !===
 |=== 
 
-[[TimeseriesTypeValue-section]]
-===== *Class TimeseriesTypeValue*
-
+[[TimeValuePair-section]]
 [cols="1a"]
 |===
-|*TimeseriesTypeValue* 
-|[cols="1,4",frame=none,grid=none]
+|*TimeValuePair*
+[cols="1,4",frame=none,grid=none]
 !===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TimeseriesTypeValue enumerates the possible value types for GenericTimeseries and TimeValuePair. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A TimeValuePair represents a value that is valid for a given timepoint. For each TimeValuePair only one of the value properties can be used mutually exclusive. Which value property has to be provided depends on the selected value type in the GenericTimeSeries feature, in which the TimeValuePair is included. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
- 
-!{set:cellbgcolor:#FFFFFF} integer  !  !Indicates that the values of the GenericTimeseries are of type "Integer".
- 
-!{set:cellbgcolor:#FFFFFF} double  !  !Indicates that the values of the GenericTimeseries are of type "Double".
- 
-!{set:cellbgcolor:#FFFFFF} string  !  !Indicates that the values of the GenericTimeseries are of type "String".
- 
-!{set:cellbgcolor:#FFFFFF} geometry  !  !Indicates that the values of the GenericTimeseries are geometries.
- 
-!{set:cellbgcolor:#FFFFFF} uri  !  !Indicates that the values of the GenericTimeseries are of type "URI".
- 
-!{set:cellbgcolor:#FFFFFF} bool  !  !Indicates that the values of the GenericTimeseries are of type "Boolean".
- 
-!{set:cellbgcolor:#FFFFFF} implicitGeometry  !  !Indicates that the values of the GenericTimeseries are of type "ImplicitGeometry".
- 
-!{set:cellbgcolor:#FFFFFF} appearance  !  !Indicates that the values of the GenericTimeseries are of type "Appearance".
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
-!===
-|=== 
-
-[[TimeValuePair-section]]
-===== *Class TimeValuePair*
-
-[cols="1a"]
-|===
-|*TimeValuePair* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A TimeValuePair represents a value that is valid for a given timepoint. For each TimeValuePair only one of the value properties can be used mutually exclusive. Which value property has to be provided depends on the selected value type in the GenericTimeSeries feature, in which the TimeValuePair is included. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -430,8 +342,91 @@
 !{set:cellbgcolor:#FFFFFF} uriValue  !<<URI-section,URI>>  [0..1] !Specifies the "URI" value of the TimeValuePair.
 3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|===   
+
+===== *Basic Types*
+
+none
+
+===== *Unions*
+
+none
+
+===== *Code Lists*
+
+[[AuthenticationTypeValue-section]]
+[cols="1a"]
+|===
+|*AuthenticationTypeValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AuthenticationTypeValue is a code list used to specify the authentication method to be used to access the referenced sensor service. Each value shall provide enough information such that a software application could determine the required access credentials. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
 |=== 
-  
 
+[[SensorConnectionTypeValue-section]]
+[cols="1a"]
+|===
+|*SensorConnectionTypeValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! SensorConnectionTypeValue is a code list used to specify the type of the referenced sensor service. Each value shall provide enough information such that a software application would be able to identify the API type and version. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
+[[StandardFileTypeValue-section]]
+[cols="1a"]
+|===
+|*StandardFileTypeValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! StandardFileTypeValue is a code list used to specify the type of the referenced external timeseries data file. Each value shall provide information about the standard and version. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
+[[TabulatedFileTypeValue-section]]
+[cols="1a"]
+|===
+|*TabulatedFileTypeValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TabulatedFileTypeValue is a code list used to specify the data format of the referenced external tabulated data file. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|===   
+
+===== *Enumerations*
+
+[[TimeseriesTypeValue-section]]
+[cols="1a"]
+|===
+|*TimeseriesTypeValue*
+[cols="1,4",frame=none,grid=none]
+!===
+!Definition: ! TimeseriesTypeValue enumerates the possible value types for GenericTimeseries and TimeValuePair. 
+!StereoType: !  <<enumeration>>
+!===
+|[cols="1,4",frame=none,grid=none,options="header"]
+!===
+^!{set:cellbgcolor:#DDDDDD} *Literal Values* !*Definitions*
+ 
+^!{set:cellbgcolor:#FFFFFF} integer  !Indicates that the values of the GenericTimeseries are of type "Integer".
+ 
+^!{set:cellbgcolor:#FFFFFF} double  !Indicates that the values of the GenericTimeseries are of type "Double".
+ 
+^!{set:cellbgcolor:#FFFFFF} string  !Indicates that the values of the GenericTimeseries are of type "String".
+ 
+^!{set:cellbgcolor:#FFFFFF} geometry  !Indicates that the values of the GenericTimeseries are geometries.
+ 
+^!{set:cellbgcolor:#FFFFFF} uri  !Indicates that the values of the GenericTimeseries are of type "URI".
+ 
+^!{set:cellbgcolor:#FFFFFF} bool  !Indicates that the values of the GenericTimeseries are of type "Boolean".
+ 
+^!{set:cellbgcolor:#FFFFFF} implicitGeometry  !Indicates that the values of the GenericTimeseries are of type "ImplicitGeometry".
+ 
+^!{set:cellbgcolor:#FFFFFF} appearance  !Indicates that the values of the GenericTimeseries are of type "Appearance".
+!===
+|===   

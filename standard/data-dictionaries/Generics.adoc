@@ -1,22 +1,16 @@
 [[Generics-package-dd]]
-==== *Package*
+==== *Generics Package*
 
-[cols="1a"]
+[cols="1,4",frame=none,grid=none]
 |===
-|{set:cellbgcolor:#FFFFFF} *Package Generics*
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Description: ! The Generics module supports application-specific extensions to the CityGML data model. These extensions may be used to model and exchange additional attributes and features not covered by the predefined thematic classes of CityGML. Generic extensions shall only be used if appropriate thematic classes or attributes are not provided by any other CityGML module. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Parent Package: ! CityGML
-!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: ! «ApplicationSchema»
-!===
+|{nbsp}{nbsp}{nbsp}{nbsp}Description: | The Generics module supports application-specific extensions to the CityGML data model. These extensions may be used to model and exchange additional attributes and features not covered by the predefined thematic classes of CityGML. Generic extensions shall only be used if appropriate thematic classes or attributes are not provided by any other CityGML module. 
+|{nbsp}{nbsp}{nbsp}{nbsp}Parent Package: | CityGML
+|{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: | «ApplicationSchema»
 |===
 
-==== *Classes*
+===== *Classes*
 
 [[GenericLogicalSpace-section]]
-===== *Class GenericLogicalSpace*
-
 [cols="1a"]
 |===
 |*GenericLogicalSpace* 
@@ -25,6 +19,10 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A GenericLogicalSpace is a space that is not represented by any explicitly modelled AbstractLogicalSpace subclass within CityGML. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractLogicalSpace-section,AbstractLogicalSpace>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -39,51 +37,7 @@
 !===
 |=== 
 
-[[GenericLogicalSpaceClassValue-section]]
-===== *Class GenericLogicalSpaceClassValue*
-
-[cols="1a"]
-|===
-|*GenericLogicalSpaceClassValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GenericLogicalSpaceClassValue is a code list used to further classify a GenericLogicalSpace. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[GenericLogicalSpaceFunctionValue-section]]
-===== *Class GenericLogicalSpaceFunctionValue*
-
-[cols="1a"]
-|===
-|*GenericLogicalSpaceFunctionValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GenericLogicalSpaceFunctionValue is a code list that enumerates the different purposes of a GenericLogicalSpace. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[GenericLogicalSpaceUsageValue-section]]
-===== *Class GenericLogicalSpaceUsageValue*
-
-[cols="1a"]
-|===
-|*GenericLogicalSpaceUsageValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GenericLogicalSpaceUsageValue is a code list that enumerates the different uses of a GenericLogicalSpace. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
 [[GenericOccupiedSpace-section]]
-===== *Class GenericOccupiedSpace*
-
 [cols="1a"]
 |===
 |*GenericOccupiedSpace* 
@@ -92,6 +46,10 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A GenericOccupiedSpace is a space that is not represented by any explicitly modelled AbstractOccupiedSpace subclass within CityGML. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -106,51 +64,7 @@
 !===
 |=== 
 
-[[GenericOccupiedSpaceClassValue-section]]
-===== *Class GenericOccupiedSpaceClassValue*
-
-[cols="1a"]
-|===
-|*GenericOccupiedSpaceClassValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GenericOccupiedSpaceClassValue is a code list used to further classify a GenericOccupiedSpace. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[GenericOccupiedSpaceFunctionValue-section]]
-===== *Class GenericOccupiedSpaceFunctionValue*
-
-[cols="1a"]
-|===
-|*GenericOccupiedSpaceFunctionValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GenericOccupiedSpaceFunctionValue is a code list that enumerates the different purposes of a GenericOccupiedSpace. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[GenericOccupiedSpaceUsageValue-section]]
-===== *Class GenericOccupiedSpaceUsageValue*
-
-[cols="1a"]
-|===
-|*GenericOccupiedSpaceUsageValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GenericOccupiedSpaceUsageValue is a code list that enumerates the different uses of a GenericOccupiedSpace. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
 [[GenericThematicSurface-section]]
-===== *Class GenericThematicSurface*
-
 [cols="1a"]
 |===
 |*GenericThematicSurface* 
@@ -159,6 +73,10 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A GenericThematicSurface is a surface that is not represented by any explicitly modelled AbstractThematicSurface subclass within CityGML. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractThematicSurface-section,AbstractThematicSurface>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -173,51 +91,7 @@
 !===
 |=== 
 
-[[GenericThematicSurfaceClassValue-section]]
-===== *Class GenericThematicSurfaceClassValue*
-
-[cols="1a"]
-|===
-|*GenericThematicSurfaceClassValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GenericThematicSurfaceClassValue is a code list used to further classify a GenericThematicSurface. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[GenericThematicSurfaceFunctionValue-section]]
-===== *Class GenericThematicSurfaceFunctionValue*
-
-[cols="1a"]
-|===
-|*GenericThematicSurfaceFunctionValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GenericThematicSurfaceFunctionValue is a code list that enumerates the different purposes of a GenericThematicSurface. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[GenericThematicSurfaceUsageValue-section]]
-===== *Class GenericThematicSurfaceUsageValue*
-
-[cols="1a"]
-|===
-|*GenericThematicSurfaceUsageValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GenericThematicSurfaceUsageValue is a code list that enumerates the different uses of a GenericThematicSurface. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
 [[GenericUnoccupiedSpace-section]]
-===== *Class GenericUnoccupiedSpace*
-
 [cols="1a"]
 |===
 |*GenericUnoccupiedSpace* 
@@ -226,6 +100,10 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A GenericUnoccupiedSpace is a space that is not represented by any explicitly modelled AbstractUnoccupiedSpace subclass within CityGML. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -238,61 +116,23 @@
 !{set:cellbgcolor:#FFFFFF} usage  !<<GenericUnoccupiedSpaceUsageValue-section,GenericUnoccupiedSpaceUsageValue>>  [0..*] !Specifies the actual uses of the GenericUnoccupiedSpace.
 3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
-|=== 
+|===   
 
-[[GenericUnoccupiedSpaceClassValue-section]]
-===== *Class GenericUnoccupiedSpaceClassValue*
-
-[cols="1a"]
-|===
-|*GenericUnoccupiedSpaceClassValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GenericUnoccupiedSpaceClassValue is a code list used to further classify a GenericUnoccupiedSpace. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[GenericUnoccupiedSpaceFunctionValue-section]]
-===== *Class GenericUnoccupiedSpaceFunctionValue*
-
-[cols="1a"]
-|===
-|*GenericUnoccupiedSpaceFunctionValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GenericUnoccupiedSpaceFunctionValue is a code list that enumerates the different purposes of a GenericUnoccupiedSpace. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[GenericUnoccupiedSpaceUsageValue-section]]
-===== *Class GenericUnoccupiedSpaceUsageValue*
-
-[cols="1a"]
-|===
-|*GenericUnoccupiedSpaceUsageValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GenericUnoccupiedSpaceUsageValue is a code list that enumerates the different uses of a GenericUnoccupiedSpace. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
+===== *Data Types*
 
 [[DateAttribute-section]]
-===== *Class DateAttribute*
-
 [cols="1a"]
 |===
-|*DateAttribute* 
-|[cols="1,4",frame=none,grid=none]
+|*DateAttribute*
+[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! DateAttribute is a data type used to define generic attributes of type "Date". 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -306,16 +146,18 @@
 |=== 
 
 [[DoubleAttribute-section]]
-===== *Class DoubleAttribute*
-
 [cols="1a"]
 |===
-|*DoubleAttribute* 
-|[cols="1,4",frame=none,grid=none]
+|*DoubleAttribute*
+[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! DoubleAttribute is a data type used to define generic attributes of type "Double". 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -329,15 +171,13 @@
 |=== 
 
 [[GenericAttributeSet-section]]
-===== *Class GenericAttributeSet*
-
 [cols="1a"]
 |===
-|*GenericAttributeSet* 
-|[cols="1,4",frame=none,grid=none]
+|*GenericAttributeSet*
+[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A GenericAttributeSet is a named collection of generic attributes. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
@@ -346,7 +186,7 @@
 !{set:cellbgcolor:#FFFFFF} genericAttribute 
 !<<AbstractGenericAttribute-section,AbstractGenericAttribute>> 
  [1..*]
-!
+!Relates to the generic attributes that are part of the GenericAttributeSet.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -360,16 +200,18 @@
 |=== 
 
 [[IntAttribute-section]]
-===== *Class IntAttribute*
-
 [cols="1a"]
 |===
-|*IntAttribute* 
-|[cols="1,4",frame=none,grid=none]
+|*IntAttribute*
+[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! IntAttribute is a data type used to define generic attributes of type "Integer". 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -383,16 +225,18 @@
 |=== 
 
 [[MeasureAttribute-section]]
-===== *Class MeasureAttribute*
-
 [cols="1a"]
 |===
-|*MeasureAttribute* 
-|[cols="1,4",frame=none,grid=none]
+|*MeasureAttribute*
+[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! MeasureAttribute is a data type used to define generic attributes of type "Measure". 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -406,16 +250,18 @@
 |=== 
 
 [[StringAttribute-section]]
-===== *Class StringAttribute*
-
 [cols="1a"]
 |===
-|*StringAttribute* 
-|[cols="1,4",frame=none,grid=none]
+|*StringAttribute*
+[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! StringAttribute is a data type used to define generic attributes of type "String". 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -429,16 +275,18 @@
 |=== 
 
 [[UriAttribute-section]]
-===== *Class UriAttribute*
-
 [cols="1a"]
 |===
-|*UriAttribute* 
-|[cols="1,4",frame=none,grid=none]
+|*UriAttribute*
+[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! UriAttribute is a data type used to define generic attributes of type "URI". 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -449,8 +297,150 @@
 !{set:cellbgcolor:#FFFFFF} value  !<<URI-section,URI>>  !Specifies the "URI" value.
 3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|===   
+
+===== *Basic Types*
+
+none
+
+===== *Unions*
+
+none
+
+===== *Code Lists*
+
+[[GenericLogicalSpaceClassValue-section]]
+[cols="1a"]
+|===
+|*GenericLogicalSpaceClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GenericLogicalSpaceClassValue is a code list used to further classify a GenericLogicalSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
 |=== 
-  
 
+[[GenericLogicalSpaceFunctionValue-section]]
+[cols="1a"]
+|===
+|*GenericLogicalSpaceFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GenericLogicalSpaceFunctionValue is a code list that enumerates the different purposes of a GenericLogicalSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
+[[GenericLogicalSpaceUsageValue-section]]
+[cols="1a"]
+|===
+|*GenericLogicalSpaceUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GenericLogicalSpaceUsageValue is a code list that enumerates the different uses of a GenericLogicalSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
+[[GenericOccupiedSpaceClassValue-section]]
+[cols="1a"]
+|===
+|*GenericOccupiedSpaceClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GenericOccupiedSpaceClassValue is a code list used to further classify a GenericOccupiedSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[GenericOccupiedSpaceFunctionValue-section]]
+[cols="1a"]
+|===
+|*GenericOccupiedSpaceFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GenericOccupiedSpaceFunctionValue is a code list that enumerates the different purposes of a GenericOccupiedSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[GenericOccupiedSpaceUsageValue-section]]
+[cols="1a"]
+|===
+|*GenericOccupiedSpaceUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GenericOccupiedSpaceUsageValue is a code list that enumerates the different uses of a GenericOccupiedSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[GenericThematicSurfaceClassValue-section]]
+[cols="1a"]
+|===
+|*GenericThematicSurfaceClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GenericThematicSurfaceClassValue is a code list used to further classify a GenericThematicSurface. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[GenericThematicSurfaceFunctionValue-section]]
+[cols="1a"]
+|===
+|*GenericThematicSurfaceFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GenericThematicSurfaceFunctionValue is a code list that enumerates the different purposes of a GenericThematicSurface. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[GenericThematicSurfaceUsageValue-section]]
+[cols="1a"]
+|===
+|*GenericThematicSurfaceUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GenericThematicSurfaceUsageValue is a code list that enumerates the different uses of a GenericThematicSurface. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[GenericUnoccupiedSpaceClassValue-section]]
+[cols="1a"]
+|===
+|*GenericUnoccupiedSpaceClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GenericUnoccupiedSpaceClassValue is a code list used to further classify a GenericUnoccupiedSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[GenericUnoccupiedSpaceFunctionValue-section]]
+[cols="1a"]
+|===
+|*GenericUnoccupiedSpaceFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GenericUnoccupiedSpaceFunctionValue is a code list that enumerates the different purposes of a GenericUnoccupiedSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
+
+[[GenericUnoccupiedSpaceUsageValue-section]]
+[cols="1a"]
+|===
+|*GenericUnoccupiedSpaceUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GenericUnoccupiedSpaceUsageValue is a code list that enumerates the different uses of a GenericUnoccupiedSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|===   
+
+===== *Enumerations*
+
+none

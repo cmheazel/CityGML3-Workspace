@@ -1,22 +1,16 @@
 [[WaterBody-package-dd]]
-==== *Package*
+==== *WaterBody Package*
 
-[cols="1a"]
+[cols="1,4",frame=none,grid=none]
 |===
-|{set:cellbgcolor:#FFFFFF} *Package WaterBody*
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Description: ! The WaterBody module supports representation of the thematic aspects and 3D geometry of rivers, canals, lakes, and basins. It does, however, not inherit any hydrological or other dynamic aspects of fluid flow. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Parent Package: ! CityGML
-!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: ! «ApplicationSchema»
-!===
+|{nbsp}{nbsp}{nbsp}{nbsp}Description: | The WaterBody module supports representation of the thematic aspects and 3D geometry of rivers, canals, lakes, and basins. It does, however, not inherit any hydrological or other dynamic aspects of fluid flow. 
+|{nbsp}{nbsp}{nbsp}{nbsp}Parent Package: | CityGML
+|{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: | «ApplicationSchema»
 |===
 
-==== *Classes*
+===== *Classes*
 
 [[AbstractWaterBoundarySurface-section]]
-===== *Class AbstractWaterBoundarySurface*
-
 [cols="1a"]
 |===
 |*AbstractWaterBoundarySurface* 
@@ -26,11 +20,18 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractThematicSurface-section,AbstractThematicSurface>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
 |=== 
 
 [[WaterBody-section]]
-===== *Class WaterBody*
-
 [cols="1a"]
 |===
 |*WaterBody* 
@@ -44,8 +45,8 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF} boundary 
-!<<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>> 
- [*]
+!<<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>>  
+[*]
 !
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
@@ -61,51 +62,7 @@
 !===
 |=== 
 
-[[WaterBodyClassValue-section]]
-===== *Class WaterBodyClassValue*
-
-[cols="1a"]
-|===
-|*WaterBodyClassValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WaterBodyClassValue is a code list used to further classify a WaterBody. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[WaterBodyFunctionValue-section]]
-===== *Class WaterBodyFunctionValue*
-
-[cols="1a"]
-|===
-|*WaterBodyFunctionValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WaterBodyFunctionValue is a code list that enumerates the different purposes of a WaterBody. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
-[[WaterBodyUsageValue-section]]
-===== *Class WaterBodyUsageValue*
-
-[cols="1a"]
-|===
-|*WaterBodyUsageValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WaterBodyUsageValue is a code list that enumerates the different uses of a WaterBody. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|=== 
-
 [[WaterGroundSurface-section]]
-===== *Class WaterGroundSurface*
-
 [cols="1a"]
 |===
 |*WaterGroundSurface* 
@@ -115,25 +72,18 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!===
 |=== 
 
-[[WaterLevelValue-section]]
-===== *Class WaterLevelValue*
-
-[cols="1a"]
-|===
-|*WaterLevelValue* 
-|[cols="1,4",frame=none,grid=none]
-!===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WaterLevelValue is a code list that enumerates the different levels of a water surface. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
-!===
-|===
-
 [[WaterSurface-section]]
-===== *Class WaterSurface*
-
 [cols="1a"]
 |===
 |*WaterSurface* 
@@ -145,13 +95,75 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
 !{set:cellbgcolor:#FFFFFF} waterLevel  !<<WaterLevelValue-section,WaterLevelValue>>  [0..1] !Specifies the level of the WaterSurface.
 3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|===     
+
+===== *Data Types*
+
+none
+
+===== *Basic Types*
+
+none
+
+===== *Unions*
+
+none
+
+===== *Code Lists*
+
+[[WaterBodyClassValue-section]]
+[cols="1a"]
+|===
+|*WaterBodyClassValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WaterBodyClassValue is a code list used to further classify a WaterBody. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
 |=== 
-  
 
+[[WaterBodyFunctionValue-section]]
+[cols="1a"]
+|===
+|*WaterBodyFunctionValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WaterBodyFunctionValue is a code list that enumerates the different purposes of a WaterBody. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
+[[WaterBodyUsageValue-section]]
+[cols="1a"]
+|===
+|*WaterBodyUsageValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WaterBodyUsageValue is a code list that enumerates the different uses of a WaterBody. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|=== 
 
+[[WaterLevelValue-section]]
+[cols="1a"]
+|===
+|*WaterLevelValue* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! WaterLevelValue is a code list that enumerates the different levels of a water surface. 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!===
+|===     
+
+===== *Enumerations*
+
+none
