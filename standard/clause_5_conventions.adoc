@@ -15,41 +15,42 @@ The CityGML standard is presented in this document in diagrams using the Unified
 .UML notation (see ISO TS 19103, Geographic information - Conceptual schema language).
 image::../figures/Figure_1.png[]
 
-
 All associations between model elements in CityGML are uni-directional. Thus, associations in CityGML are navigable in only one direction. The direction of navigation is depicted by an arrowhead. In general, the context an element takes within the association is indicated by its role. The role is displayed near the target of the association. If the graphical representation is ambiguous though, the position of the role has to be drawn to the element the association points to.
-
-NOTE: Need formal definitions for the sterotypes
 
 The following stereotypes are used:
 
-* \<<FeatureType>> 
-* \<<TopLevelFeatureType>>
-* \<<type>>
-* \<<ObjectType>>
-* \<<DataType>>is used as a descriptor of a set of values that lack identity. Data types include primitive prede-fined types and user-definable types. A DataType is thus a class with few or no operations whose primary purpose is to hold the abstract state of another class for transmittal, storage, encoding or persistent storage.
-* \<<enumeration>>enumerates the valid attribute values in a fixed list of named literal values. Enumerations are specified in the CityGML schema.
-* \<<BasicType>>
-* \<<CodeList>>enumerates the valid attribute values. In contrast to Enumeration, the list of values is open and, thus, not given inline the CityGML UML Model. The allowed values can be provided within an external code list.
-* \<<Union>>is a list of attributes. The semantics are that only one of the attributes can be present at any time.
+* &#171;ApplicationSchema&#187; denotes a conceptual schema for data required by one or more applications. In the CityGML conceptual model, every CityGML module is defined as separate application schema to allow for modularisation.
+* &#171;FeatureType&#187; represents features that are similar and exhibit common characteristics. Features are abstractions of real-world phenomena and have an identity.
+* &#171;TopLevelFeatureType&#187; denotes features that represent the main components of the conceptual model. Top-level features may be further semantically and spatially decomposed and substructured into parts.
+* &#171;type&#187; denotes classes that are not directly instantiable, but are used as an abstract collections of operation, attribute and relation signatures. The stereotype is used in the CityGML conceptual model only for classes that are imported from the ISO standards 19107, 19111, and 19123.
+* &#171;ObjectType&#187; represents objects that have an identity, but are not features.
+* &#171;DataType&#187; defines a set of properties that lack identity. A data type is a classifier with no operations, whose primary purpose is to hold information.
+* &#171;enumeration&#187; enumerates the valid attribute values in a fixed list of named literal values. Enumerations are specified in the CityGML schema.
+* &#171;BasicType&#187; defines a basic data type.
+* &#171;CodeList&#187; enumerates the valid attribute values. In contrast to Enumeration, the list of values is open and, thus, not given inline the CityGML UML Model. The allowed values can be provided within an external code list.
+* &#171;Union&#187; is a list of attributes. The semantics are that only one of the attributes can be present at any time.
+* &#171;Property&#187; denotes attributes and association roles. This stereotype does not add further semantics to the conceptual model, but is required to be able to add tagged values to the attributes and association roles that are relevant for the encoding.
+* &#171;Version&#187; denotes that the value of an association role that ends at a feature type is a specific version of the feature, not the feature in general.
 
-NOTE: Update to the current convention
+In order to enhance the readability of the CityGML UML diagrams, classes are depicted in different colors. The following coloring scheme is applied:
 
-In order to enhance the readability of the CityGML UML diagrams, classes are depicted in different colors if they belong to different UML packages. The following coloring scheme is applied: 
+image:images/ColorScheme_yellow.png[role="left"]
+Classes painted in yellow belong to the Requirements Class which is subject of discussion in that clause of the specification in which the UML diagram is given. For example, in the context of chapter <<rc_core_section, Core>>, which introduces the _CityGML Core_ module, the yellow color is used to denote classes that are defined in the _CityGML Core_ Requirements Class. Likewise, the yellow classes shown in the UML diagram in chapter <<rc_building-model_section, Building>> are associated with the _Building_ Requirements Class that is subject of discussion in that chapter.
 
-Feature Types: Yellow
-TopLevelFeatureType: Orange
-Type :Green
-ObjectType: Orange
-DataType: Blue
-Enumration: Purple
-Basictype: Brown
-Codelist: Pink
-Union: Blue
+image:images/ColorScheme_blue.png[role="left"]
+Classes painted in blue belong to a Requirements Class different to that associated with the yellow color. In order to explicitly denote to which Requirements Class these classes belong, their class names carry the name of the Requirements Class as prefix. For example, in the context of the _Building_ Requirements Class, classes from the _CityGML Core_ and the _Construction_ Requirements Classes are painted in blue and their class names are preceded by the prefix _Core_ and _Construction_, respectively.
 
-* Classes painted in yellow belong to the UML package which is subject of discussion in that clause of the specification in which the UML diagram is given. For example, in the context of chapter 10.1 which introduces the _CityGML Core_ module, the yellow color is used to denote classes which are defined in the _CityGML Core_ UML package. Likewise, the yellow classes shown in UML diagrams in chapter 10.3 are associated with the _Building_ module which is subject of discussion in that chapter. 
-* Classes painted in blue belong to a CityGML UML package different to that associated with the yellow color. In order to explicitly denote the UML package of such classes, their class names carry a naoughout this specification mespace prefix which is uniquely associated with a CityGML module throughout this specification . For example, in the context of the _Building_ module, classes from the _CityGML Core_ module are painted in blue and their class names are preceded by the prefix core. 
+image:images/ColorScheme_green.png[role="left"]
+Classes painted in green are defined in the ISO standards 19107, 19111, or 19123. Their class names are preceded by the UML package name, in which the classes are defined.
 
-The following example UML diagram demonstrates the UML notation and coloring scheme used throughout this specification. In this example, the yellow classes are associated with the _CityGML Building_ module, the blue classes are from the _CityGML Core_ module, and the green class depicts a geometry element defined by GML3.
+image:images/ColorScheme_grey.png[role="left"]
+Classes painted in grey are defined in the ISO standard 19109. In the context of this standard this only applies to the class _AnyFeature_. _AnyFeature_ is an instance of the metaclass _FeatureType_ and acts as super class of all classes in the CityGML UML model with the stereotype &#171;FeatureType&#187;.
+
+image:images/ColorScheme_white.png[role="left"]
+The color white is used for notes and OCL constraints that are provided in the UML diagrams. +
+{nbsp} +
+{nbsp} +
+The following example UML diagram demonstrates the UML notation and coloring scheme used throughout this specification. In this example, the yellow classes are associated with the _CityGML Building_ module, the blue classes are from the _CityGML Core_ and _Construction_ modules, and the green class depicts a geometry element defined by ISO 19107.
 
 [[figure-2]]
 .Example UML diagram demonstrating the UML notation and coloring scheme used throughout the CityGML specification.
