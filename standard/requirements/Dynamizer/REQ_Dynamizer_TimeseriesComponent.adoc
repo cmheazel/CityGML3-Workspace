@@ -1,9 +1,0 @@
-[[req_Dynamizer_TimeseriesComponent]]
-[width="90%",cols="2,6"]
-|===
-^|*Requirement  {counter:req-id}* |*/req/Dynamizer/TimeseriesComponent* 
-^|A |Any use of the TimeseriesComponent type in the Implementation Specification SHALL have the same definition as the TimeseriesComponent UML class as documented in the TimeseriesComponent section of the <<TimeseriesComponent-section,Dynamizer Data Dictionary>>.
-^|B |The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the TimeseriesComponent UML class as documented in the TimeseriesComponent section of the <<TimeseriesComponent-section,Dynamizer Data Dictionary>>.
-^|C |The implementation Specification SHALL represent the attributes of the TimeseriesComponent UML class; including the name, definition, type, and cardinality of those documented in the TimeseriesComponent section of the <<TimeseriesComponent-section,Dynamizer Data Dictionary>>.
-^|D |The implementation Specification SHALL represent the attributes of all parent classes of the the TimeseriesComponent UML class; including the name, definition, type, and cardinality of those documented in the TimeseriesComponent section of the <<TimeseriesComponent-section,Dynamizer Data Dictionary>>.
-|===

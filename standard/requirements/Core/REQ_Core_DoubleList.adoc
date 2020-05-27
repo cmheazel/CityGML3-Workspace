@@ -1,9 +1,0 @@
-[[req_Core_DoubleList]]
-[width="90%",cols="2,6"]
-|===
-^|*Requirement  {counter:req-id}* |*/req/Core/DoubleList* 
-^|A |Any use of the DoubleList type in the Implementation Specification SHALL have the same definition as the DoubleList UML class as documented in the DoubleList section of the <<DoubleList-section,Core Data Dictionary>>.
-^|B |The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the DoubleList UML class as documented in the DoubleList section of the <<DoubleList-section,Core Data Dictionary>>.
-^|C |The implementation Specification SHALL represent the attributes of the DoubleList UML class; including the name, definition, type, and cardinality of those documented in the DoubleList section of the <<DoubleList-section,Core Data Dictionary>>.
-^|D |The implementation Specification SHALL represent the attributes of all parent classes of the the DoubleList UML class; including the name, definition, type, and cardinality of those documented in the DoubleList section of the <<DoubleList-section,Core Data Dictionary>>.
-|===

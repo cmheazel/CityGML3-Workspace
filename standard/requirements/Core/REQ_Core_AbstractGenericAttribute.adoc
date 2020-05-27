@@ -1,9 +1,0 @@
-[[req_Core_AbstractGenericAttribute]]
-[width="90%",cols="2,6"]
-|===
-^|*Requirement  {counter:req-id}* |*/req/Core/AbstractGenericAttribute* 
-^|A |Any use of the AbstractGenericAttribute type in the Implementation Specification SHALL have the same definition as the AbstractGenericAttribute UML class as documented in the AbstractGenericAttribute section of the <<AbstractGenericAttribute-section,Core Data Dictionary>>.
-^|B |The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the AbstractGenericAttribute UML class as documented in the AbstractGenericAttribute section of the <<AbstractGenericAttribute-section,Core Data Dictionary>>.
-^|C |The implementation Specification SHALL represent the attributes of the AbstractGenericAttribute UML class; including the name, definition, type, and cardinality of those documented in the AbstractGenericAttribute section of the <<AbstractGenericAttribute-section,Core Data Dictionary>>.
-^|D |The implementation Specification SHALL represent the attributes of all parent classes of the the AbstractGenericAttribute UML class; including the name, definition, type, and cardinality of those documented in the AbstractGenericAttribute section of the <<AbstractGenericAttribute-section,Core Data Dictionary>>.
-|===

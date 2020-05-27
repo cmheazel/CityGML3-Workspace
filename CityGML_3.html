@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<title>OGC City Geography Markup Language (CityGML) Conceptual Model Standard</title>
+<title>OGC City Geography Markup Language (CityGML) Part 1: Conceptual Model Standard</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -464,7 +464,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Publication Date:   &lt;2020-05-20&gt;</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">External identifier of this OGC&#174; document: <a href="http://www.opengis.net/doc/IS/CityGML/3.0" class="bare">http://www.opengis.net/doc/IS/CityGML/3.0</a></p></td>
+<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">External identifier of this OGC&#174; document: <a href="http://www.opengis.net/doc/IS/CityGML-1/3.0" class="bare">http://www.opengis.net/doc/IS/CityGML-1/3.0</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Internal reference number of this OGC&#174; document:    20-010</p></td>
@@ -486,7 +486,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">OGC City Geography Markup Language (CityGML) Conceptual Model Standard</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">OGC City Geography Markup Language (CityGML) Part 1: Conceptual Model Standard</strong></p></td>
 </tr>
 </tbody>
 </table>
@@ -584,7 +584,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#_identifiers">6.1. Identifiers</a></li>
 <li><a href="#_uml_notation">6.2. UML Notation</a></li>
-<li><a href="#conceptual-modeling-description">6.3. Conceptual Modeling (Informative)</a></li>
+<li><a href="#conceptual-modeling-description">6.3. Conceptual Modeling</a></li>
 </ul>
 </li>
 <li><a href="#_overview_of_citygml">7. Overview of CityGML</a></li>
@@ -613,13 +613,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#data-dictionary-section">9. CityGML Data Dictionary</a>
 <ul class="sectlevel2">
 <li><a href="#ISO-classes-dd">9.1. <strong>ISO Classes</strong></a></li>
-<li><a href="#CityGML-package-dd">9.2. <strong>CityGML Package</strong></a></li>
 </ul>
 </li>
-<li><a href="#_media_types_for_any_data_encodings">10. Media Types for any data encoding(s)</a></li>
 <li><a href="#_conformance_class_abstract_test_suite_normative">Annex A: Conformance Class Abstract Test Suite (Normative)</a></li>
 <li><a href="#_revision_history">Annex B: Revision History</a></li>
-<li><a href="#_change_log_for_citygml_3_0">11. Change Log for CityGML 3.0</a></li>
+<li><a href="#_change_log_for_citygml_3_0">10. Change Log for CityGML 3.0</a></li>
 <li><a href="#_changelog_for_citygml_3_0">Annex C: Changelog for CityGML 3.0</a></li>
 <li><a href="#Bibliography">Annex D: Bibliography</a></li>
 </ul>
@@ -787,40 +785,34 @@ Explanatory text edit 01  for 01.04.2020 release starts here
 <div class="sect1">
 <h2 id="_scope"><a class="anchor" href="#_scope"></a>2. Scope</h2>
 <div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-The following text is based on Version 2.0. It will be updated
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>This document is an OGC Conceptual Data Model Standard to specify the representation of virtual 3D city and landscape models. The CityGML v3.0 Conceptual Model is expected to be the basis for a number of future Encoding Standards in which subsets of the Conceptual Model can be implemented. These Encoding Standards will enable both storage and exchange of data. Support for GML encoding is expected as a minimum, though additonal encodings in formats such as JSON and database schemas will be highly desirable.</p>
 </div>
 <div class="paragraph">
-<p>This document is an OGC Encoding Standard for the representation, storage and exchange of virtual 3D city and landscape models. CityGML is implemented as an application schema of the Geography Markup Language version 3.1.1 (GML3).</p>
+<p>In contrast to the previous CityGML v2.0, the v3.0 Conceptual Model is NOT implemented as an application schema of the Geography Markup Language version 3.1.1 (GML3.1), though a preliminary encoding in GML version 3.2.1 is available as an informative resource separately from this specification to allow initial implementation and testing.</p>
 </div>
 <div class="paragraph">
-<p>CityGML models both complex and georeferenced 3D vector data along with the semantics associated with the data. In contrast to other 3D vector formats, CityGML is based on a rich, general purpose information model in addition to geometry and appearance information. For specific domain areas, CityGML also provides an exten-sion mechanism to enrich the data with identifiable features under preservation of semantic interoperability.</p>
+<p>CityGML models comprise of georeferenced 3D vector data along with the semantics associated with the data. In contrast to other 3D vector formats, CityGML is based on a rich, general purpose information model in addition to geometry and appearance information that allows for the integration of a variety of source data to come together in a City Model. To enable the use of CityGML in specific  domain areas CityGML has historically provided an extension mechanism to enrich the data with identifiable features and properties, preserving semantic interoperability. As it is recognised that an implementable expension mechanism might have dependencies on the encoding language, the CityGML v3.0 Conceptual Model specifies high level requirements rather than an full extension model.</p>
 </div>
 <div class="paragraph">
-<p>Targeted application areas explicitly include urban and landscape planning; architectural design; tourist and leisure activities; 3D cadastres; environmental simulations; mobile telecommunications; disaster management; homeland security; vehicle and pedestrian navigation; training simulators and mobile robotics.</p>
+<p>Targeted application areas explicitly include urban and landscape planning; architectural design; tourist and leisure activities; environmental, energy and mobility simulations; mobile telecommunications; disaster management; homeland security; vehicle and pedestrian navigation; training simulators and mobile robotics.</p>
 </div>
 <div class="paragraph">
-<p>CityGML is considered a source format for 3D portraying. The semantic information contained in the model can be used in the styling process which generates computer graphics represented e.g. as KML/COLLADA or X3D files. The appropriate OGC Portrayal Web Service for this process is the OGC Web 3D Service (W3DS). An image-based 3D portrayal service for virtual 3D landscape and city models is provided by the OGC Web View Service (WVS).</p>
+<p>The future CityGML v3.0 Encoding Standards will be implementable source formats for 3D portraying or transformation into dedicated potrayal formats such as the OGC i3S or the OGC 3D tiles community standards, KML/COLLADA or glTF. The OGC Portrayal 3D Portrayal Service may be used for content delivery.</p>
 </div>
 <div class="paragraph">
-<p>Features of CityGML:</p>
+<p>Features of the CityGML v3.0 Conceptual Model:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Geospatial information model (ontology) for urban landscapes based on the ISO 191xx family</p>
+<p>Geospatial Information Model (ontology) for urban landscapes based on the ISO 191xx family</p>
 </li>
 <li>
-<p>GML3 representation of 3D geometries, based on the ISO 19107 model</p>
+<p>Representation of 3D geometries, based on the ISO 19107 model, independent of data encodings</p>
+</li>
+<li>
+<p>Grouping into space hierarchies, including concepts like stories/floors within buildings</p>
 </li>
 <li>
 <p>Representation of object surface characteristics (e.g. textures, materials)</p>
@@ -830,10 +822,10 @@ The following text is based on Version 2.0. It will be updated
 <div class="ulist">
 <ul>
 <li>
-<p>Digital Terrain Models as a combination of (including nested) triangulated irregular networks (TINs), regular rasters, break and skeleton lines, mass points</p>
+<p>Digital Terrain Models as a combination of triangulated irregular networks (TINs), regular rasters, break and skeleton lines, mass points</p>
 </li>
 <li>
-<p>Sites (currently buildings, bridges, and tunnels)</p>
+<p>Sites (currently buildings, other constructions, bridges, and tunnels)</p>
 </li>
 <li>
 <p>Vegetation (areas, volumes, and solitary objects with vegetation classification)</p>
@@ -860,7 +852,7 @@ The following text is based on Version 2.0. It will be updated
 </div>
 </li>
 <li>
-<p>Multiscale model with 5 well-defined consecutive Levels of Detail (LOD):</p>
+<p>Multiscale model with 4 well-defined consecutive Levels of Detail (LOD), applicable to both interior and exterior:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -873,7 +865,7 @@ The following text is based on Version 2.0. It will be updated
 <p>LOD2 – city districts, projects</p>
 </li>
 <li>
-<p>LOD3 – architectural models landmarks</p>
+<p>LOD3 – architectural models, landmarks</p>
 </li>
 </ul>
 </div>
@@ -882,40 +874,26 @@ The following text is based on Version 2.0. It will be updated
 <p>Multiple representations in different LODs simultaneously; generalisation relations between objects in different LODs</p>
 </li>
 <li>
+<p>Ability to combine different interior and exterior LoDs. including representation of floor plans</p>
+</li>
+<li>
 <p>Optional topological connections between feature (sub)geometries</p>
 </li>
 <li>
-<p>Application Domain Extensions (ADE): Specific “hooks” in the CityGML schema allow to define ap-plication specific extensions, for example for noise pollution simulation, or to augment CityGML by properties of the new National Building Information Model Standard (NBIMS) in the U.S.</p>
+<p>Enables a variety of different encoding specifications including GML and JSON</p>
+</li>
+<li>
+<p>Ability to define application specific extensions by defining specific “hooks” in the CityGML schema to allow the addition of application specific extensions. This is done in the spirit of the Application Domain Extensions (ADE) mechanism in previous versions of CityGML, though as the detailed implementation will be dependent on the encoding language, the mechanism will have to be fully specified in the physical encoding standards</p>
 </li>
 </ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-End of text to be updated
-</td>
-</tr>
-</table>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="conformance-section"><a class="anchor" href="#conformance-section"></a>3. Conformance</h2>
 <div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">NOTE</dt>
-<dd>
-<p>Update to reflect change in approach to requirements</p>
-</dd>
-</dl>
-</div>
 <div class="paragraph">
-<p>This standard defines a Conceptual Model which is independent of any encoding or formatting techniques. The Standardization Targets for this standard are Implementation Specifications. These Implementation Specifications specify how the Conceptual Model shall be implemented for specific technologies. Conformant Implementation Specifications provide evidence that they are an accurate representation of the Conceptual Model. This evidence shall include implementations of the abstract tests specified in Annex A (normative) of this document.</p>
+<p>This standard defines a Conceptual Model which is independent of any encoding or formatting techniques. The Standardization Targets for this standard are Implementation Specifications. Each Implementation Specification defines how the Conceptual Model shall be implemented using a specific technology. Conformant Implementation Specifications provide evidence that they are an accurate representation of the Conceptual Model. This evidence shall include implementations of the abstract tests specified in Annex A (normative) of this document.</p>
 </div>
 <div class="paragraph">
 <p>Since this standard is agnostic to the implementating technologies, the specific techniques to be used for conformance testing cannot be specified. It is the responsiblity of the Implementation Specifications to provide evidence of conformance which is appropriate for the implementing technologies. This evidence should be provided as an annex to the Implementation Specification document.</p>
@@ -1278,7 +1256,7 @@ Particular variation of a spatial object<br>
 <p>The normative provisions in this document are denoted by the URI</p>
 </div>
 <div class="paragraph">
-<p><a href="http://www.opengis.net/spec/CityGML/3.0" class="bare">http://www.opengis.net/spec/CityGML/3.0</a></p>
+<p><a href="http://www.opengis.net/spec/CityGML-1/3.0" class="bare">http://www.opengis.net/spec/CityGML-1/3.0</a></p>
 </div>
 <div class="paragraph">
 <p>All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.</p>
@@ -1298,90 +1276,71 @@ Particular variation of a spatial object<br>
 <div class="paragraph">
 <p>All associations between model elements in CityGML are uni-directional. Thus, associations in CityGML are navigable in only one direction. The direction of navigation is depicted by an arrowhead. In general, the context an element takes within the association is indicated by its role. The role is displayed near the target of the association. If the graphical representation is ambiguous though, the position of the role has to be drawn to the element the association points to.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-Need formal definitions for the sterotypes
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
-<p>The following stereotypes are used:</p>
+<p>The following stereotypes are used in this model:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>&lt;&lt;FeatureType&gt;&gt;</p>
+<p>&#171;BasicType&#187; defines a basic data type.</p>
 </li>
 <li>
-<p>&lt;&lt;TopLevelFeatureType&gt;&gt;</p>
+<p>&#171;CodeList&#187; enumerates the valid attribute values. In contrast to Enumeration, the list of values is open and, thus, not given inline the CityGML UML Model. The allowed values can be provided within an external code list.</p>
 </li>
 <li>
-<p>&lt;&lt;type&gt;&gt;</p>
+<p>&#171;DataType&#187; defines a set of properties that lack identity. A data type is a classifier with no operations, whose primary purpose is to hold information.</p>
 </li>
 <li>
-<p>&lt;&lt;ObjectType&gt;&gt;</p>
+<p>&#171;Enumeration&#187; enumerates the valid attribute values in a fixed list of named literal values. Enumerations are specified in the CityGML schema.</p>
 </li>
 <li>
-<p>&lt;&lt;DataType&gt;&gt;is used as a descriptor of a set of values that lack identity. Data types include primitive prede-fined types and user-definable types. A DataType is thus a class with few or no operations whose primary purpose is to hold the abstract state of another class for transmittal, storage, encoding or persistent storage.</p>
+<p>&#171;FeatureType&#187; represents features that are similar and exhibit common characteristics. Features are abstractions of real-world phenomena and have an identity.</p>
 </li>
 <li>
-<p>&lt;&lt;enumeration&gt;&gt;enumerates the valid attribute values in a fixed list of named literal values. Enumerations are specified in the CityGML schema.</p>
+<p>&#171;ObjectType&#187; represents objects that have an identity, but are not features.</p>
 </li>
 <li>
-<p>&lt;&lt;BasicType&gt;&gt;</p>
+<p>&#171;Property&#187; denotes attributes and association roles. This stereotype does not add further semantics to the conceptual model, but is required to be able to add tagged values to the attributes and association roles that are relevant for the encoding.</p>
 </li>
 <li>
-<p>&lt;&lt;CodeList&gt;&gt;enumerates the valid attribute values. In contrast to Enumeration, the list of values is open and, thus, not given inline the CityGML UML Model. The allowed values can be provided within an external code list.</p>
+<p>&#171;TopLevelFeatureType&#187; denotes features that represent the main components of the conceptual model. Top-level features may be further semantically and spatially decomposed and substructured into parts.</p>
 </li>
 <li>
-<p>&lt;&lt;Union&gt;&gt;is a list of attributes. The semantics are that only one of the attributes can be present at any time.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-Update to the current convention
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>In order to enhance the readability of the CityGML UML diagrams, classes are depicted in different colors if they belong to different UML packages. The following coloring scheme is applied:</p>
-</div>
-<div class="paragraph">
-<p>Feature Types: Yellow
-TopLevelFeatureType: Orange
-Type :Green
-ObjectType: Orange
-DataType: Blue
-Enumration: Purple
-Basictype: Brown
-Codelist: Pink
-Union: Blue</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Classes painted in yellow belong to the UML package which is subject of discussion in that clause of the specification in which the UML diagram is given. For example, in the context of chapter 10.1 which introduces the <em>CityGML Core</em> module, the yellow color is used to denote classes which are defined in the <em>CityGML Core</em> UML package. Likewise, the yellow classes shown in UML diagrams in chapter 10.3 are associated with the <em>Building</em> module which is subject of discussion in that chapter.</p>
+<p>&#171;Type&#187; denotes classes that are not directly instantiable, but are used as an abstract collections of operation, attribute and relation signatures. The stereotype is used in the CityGML conceptual model only for classes that are imported from the ISO standards 19107, 19109, 19111, and 19123.</p>
 </li>
 <li>
-<p>Classes painted in blue belong to a CityGML UML package different to that associated with the yellow color. In order to explicitly denote the UML package of such classes, their class names carry a naoughout this specification mespace prefix which is uniquely associated with a CityGML module throughout this specification . For example, in the context of the <em>Building</em> module, classes from the <em>CityGML Core</em> module are painted in blue and their class names are preceded by the prefix core.</p>
+<p>&#171;Union&#187; is a list of attributes. The semantics are that only one of the attributes can be present at any time.</p>
+</li>
+<li>
+<p>&#171;Version&#187; denotes that the value of an association role that ends at a feature type is a specific version of the feature, not the feature in general.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>The following example UML diagram demonstrates the UML notation and coloring scheme used throughout this specification. In this example, the yellow classes are associated with the <em>CityGML Building</em> module, the blue classes are from the <em>CityGML Core</em> module, and the green class depicts a geometry element defined by GML3.</p>
+<p>In order to enhance the readability of the CityGML UML diagrams, classes are depicted in different colors. The following coloring scheme is applied:</p>
+</div>
+<div class="paragraph">
+<p><span class="image left"><img src="images/ColorScheme_yellow.png" alt="ColorScheme yellow"></span>
+Classes painted in yellow belong to the Requirements Class which is subject of discussion in that clause of the specification in which the UML diagram is given. For example, in the context of chapter <a href="#rc_core_section">Core</a>, which introduces the <em>CityGML Core</em> module, the yellow color is used to denote classes that are defined in the <em>CityGML Core</em> Requirements Class. Likewise, the yellow classes shown in the UML diagram in chapter <a href="#rc_building-model_section">Building</a> are associated with the <em>Building</em> Requirements Class that is subject of discussion in that chapter.</p>
+</div>
+<div class="paragraph">
+<p><span class="image left"><img src="images/ColorScheme_blue.png" alt="ColorScheme blue"></span>
+Classes painted in blue belong to a Requirements Class different to that associated with the yellow color. In order to explicitly denote to which Requirements Class these classes belong, their class names carry the name of the Requirements Class as prefix. For example, in the context of the <em>Building</em> Requirements Class, classes from the <em>CityGML Core</em> and the <em>Construction</em> Requirements Classes are painted in blue and their class names are preceded by the prefix <em>Core</em> and <em>Construction</em>, respectively.</p>
+</div>
+<div class="paragraph">
+<p><span class="image left"><img src="images/ColorScheme_green.png" alt="ColorScheme green"></span>
+Classes painted in green are defined in the ISO standards 19107, 19111, or 19123. Their class names are preceded by the UML package name, in which the classes are defined.</p>
+</div>
+<div class="paragraph">
+<p><span class="image left"><img src="images/ColorScheme_grey.png" alt="ColorScheme grey"></span>
+Classes painted in grey are defined in the ISO standard 19109. In the context of this standard this only applies to the class <em>AnyFeature</em>. <em>AnyFeature</em> is an instance of the metaclass <em>FeatureType</em> and acts as super class of all classes in the CityGML UML model with the stereotype &#171;FeatureType&#187;.</p>
+</div>
+<div class="paragraph">
+<p><span class="image left"><img src="images/ColorScheme_white.png" alt="ColorScheme white"></span>
+The color white is used for notes and OCL constraints that are provided in the UML diagrams.<br>
+&#160;<br>
+&#160;<br>
+The following example UML diagram demonstrates the UML notation and coloring scheme used throughout this specification. In this example, the yellow classes are associated with the <em>CityGML Building</em> module, the blue classes are from the <em>CityGML Core</em> and <em>Construction</em> modules, and the green class depicts a geometry element defined by ISO 19107.</p>
 </div>
 <div id="figure-2" class="imageblock">
 <div class="content">
@@ -1391,7 +1350,7 @@ Union: Blue</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="conceptual-modeling-description"><a class="anchor" href="#conceptual-modeling-description"></a>6.3. Conceptual Modeling (Informative)</h3>
+<h3 id="conceptual-modeling-description"><a class="anchor" href="#conceptual-modeling-description"></a>6.3. Conceptual Modeling</h3>
 <div class="paragraph">
 <p><a href="#iso19101">ISO 19101</a> defines universe of discourse to be a view of the real or hypothetical world that includes everything of interest.  That standard then defines conceptual model to be a model that defines concepts of a universe of discourse.</p>
 </div>
@@ -1411,13 +1370,13 @@ Union: Blue</p>
 <p>Perhaps the greatest benefit of the standards activity is the ability to communicate the resultant model. This is in part due to using a standardized conceptual modelling language like UML and the agreed OGC and TC211 conventions for using UML. The eventual outcome of being able to provide formal documentation for what is meant by each concept is invaluable in understanding the subsequent encodings and applications.</p>
 </div>
 <div class="paragraph">
-<p>This will be the first OGC conceptual model standard, without accompanying encodings. Yet the model is presented in a manner consistent with the formalisms adopted for writing OGC standards. This standard follows the OGC Specification Model standard for modular specifications [10] and is consistent with the OGC Naming Authority conventions and recommendations.  The target of this Standard are the encoding standards which will follow and not the application software that will implement these encodings.  Requirements for the encodings are explicit and grouped into Requirements Classes.  Accompanying Conformance Classes are included to determine if an encoding conforms to the conceptual model.</p>
+<p>This will be the first OGC conceptual model standard without accompanying encodings. Yet the model is presented in a manner consistent with the formalisms adopted for writing OGC standards. This standard follows the <a href="#ogc08-131">OGC Specification Model standard for modular specifications</a> and is consistent with the OGC Naming Authority conventions and recommendations.  The target of this Standard are the encoding standards which will follow and not the application software that will implement these encodings.  Requirements for the encodings are explicit and grouped into Requirements Classes.  Accompanying Conformance Classes are included to determine if an encoding conforms to the conceptual model.</p>
 </div>
 <div class="paragraph">
-<p>UML has been used as the conceptual modeling language in this Standard.  Class Diagrams have been created and inserted as Figures. The boxes in these diagrams (officially “Classifiers” in UML) typically represent classes, data types, enumerations, code lists, unions, etc. and this terminology is used throughout the Standard. However, since this is a Conceptual Model, these should all be interpreted to be “concepts”.  For each Requirements Class, an introductory diagram is included which contains all of the concepts relevant to that Requirements Class.  However, the boxes are simplified by suppressing attributes. These attributes are provided in a series of context diagrams which follow, each focusing on a particular set of concepts in the Requirements Class.</p>
+<p>UML has been used as the conceptual modeling language in this Standard.  Class Diagrams have been created and inserted as Figures. The boxes in these diagrams (officially “Classifiers” in UML) typically represent classes, data types, enumerations, code lists, unions, etc. and this terminology is used throughout the Standard. However, since this is a Conceptual Model, these should all be interpreted to be “concepts”.  For each Requirements Class, an introductory diagram is included which contains all of the concepts relevant to that Requirements Class.</p>
 </div>
 <div class="paragraph">
-<p>Though redundant with the UML diagrams, all of the class attributes are repeated in the document text, including attribute definitions not visible in the diagrams. If these differ, the UML takes precedence. Because association roles behave similar to attributes, they appear at the end of the textual attribute listing as if they were attributes. The cardinality of the association is depicted as the attribute cardinality and the associated class as the data type.</p>
+<p>Though redundant with the UML diagrams, all of the classes, class attributes, and associations are repeated in the <a href="#data-dictionary-section">Data Dictionary</a>. If these differ, the UML takes precedence.</p>
 </div>
 </div>
 </div>
@@ -6060,14 +6019,8 @@ NOTE Other than the restriction on orientability, no other "validity" condition 
 </table>
 </div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="CityGML-package-dd"><a class="anchor" href="#CityGML-package-dd"></a>9.2. <strong>CityGML Package</strong></h3>
-<div class="paragraph">
-<p>The following packages are defined in the CityGML 3 UML model.</p>
-</div>
 <div class="sect3">
-<h4 id="Core-package-dd"><a class="anchor" href="#Core-package-dd"></a>9.2.1. <strong>Core Package</strong></h4>
+<h4 id="Core-package-dd"><a class="anchor" href="#Core-package-dd"></a>9.1.2. <strong>Core Package</strong></h4>
 <table class="tableblock frame-none grid-none stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -6089,7 +6042,7 @@ NOTE Other than the restriction on orientability, no other "validity" condition 
 </tbody>
 </table>
 <div class="sect4">
-<h5 id="_classes"><a class="anchor" href="#_classes"></a>9.2.1.1. <strong>Classes</strong></h5>
+<h5 id="_classes"><a class="anchor" href="#_classes"></a>9.1.2.1. <strong>Classes</strong></h5>
 <table id="AbstractAppearance-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -7852,7 +7805,7 @@ NOTE Other than the restriction on orientability, no other "validity" condition 
 </table>
 </div>
 <div class="sect4">
-<h5 id="_data_types"><a class="anchor" href="#_data_types"></a>9.2.1.2. <strong>Data Types</strong></h5>
+<h5 id="_data_types"><a class="anchor" href="#_data_types"></a>9.1.2.2. <strong>Data Types</strong></h5>
 <table id="AbstractGenericAttribute-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -8319,7 +8272,7 @@ NOTE Other than the restriction on orientability, no other "validity" condition 
 </table>
 </div>
 <div class="sect4">
-<h5 id="_basic_types"><a class="anchor" href="#_basic_types"></a>9.2.1.3. <strong>Basic Types</strong></h5>
+<h5 id="_basic_types"><a class="anchor" href="#_basic_types"></a>9.1.2.3. <strong>Basic Types</strong></h5>
 <table id="DoubleBetween0and1-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -9074,7 +9027,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_unions"><a class="anchor" href="#_unions"></a>9.2.1.4. <strong>Unions</strong></h5>
+<h5 id="_unions"><a class="anchor" href="#_unions"></a>9.1.2.4. <strong>Unions</strong></h5>
 <table id="CityModelMember-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -9266,7 +9219,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_code_lists"><a class="anchor" href="#_code_lists"></a>9.2.1.5. <strong>Code Lists</strong></h5>
+<h5 id="_code_lists"><a class="anchor" href="#_code_lists"></a>9.1.2.5. <strong>Code Lists</strong></h5>
 <table id="IntervalValue-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -9569,7 +9522,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_enumerations"><a class="anchor" href="#_enumerations"></a>9.2.1.6. <strong>Enumerations</strong></h5>
+<h5 id="_enumerations"><a class="anchor" href="#_enumerations"></a>9.1.2.6. <strong>Enumerations</strong></h5>
 <table id="RelativeToTerrain-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -9761,7 +9714,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </div>
 </div>
 <div class="sect3">
-<h4 id="Appearance-package-dd"><a class="anchor" href="#Appearance-package-dd"></a>9.2.2. <strong>Appearance Package</strong></h4>
+<h4 id="Appearance-package-dd"><a class="anchor" href="#Appearance-package-dd"></a>9.1.3. <strong>Appearance Package</strong></h4>
 <table class="tableblock frame-none grid-none stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -9783,7 +9736,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </tbody>
 </table>
 <div class="sect4">
-<h5 id="_classes_2"><a class="anchor" href="#_classes_2"></a>9.2.2.1. <strong>Classes</strong></h5>
+<h5 id="_classes_2"><a class="anchor" href="#_classes_2"></a>9.1.3.1. <strong>Classes</strong></h5>
 <table id="AbstractSurfaceData-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -9848,15 +9801,17 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"> isFront</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"> isFront «Property»</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#Boolean-section">Boolean</a>  [0..1]</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicates whether the texture or material is assigned to the front side or the back side of the surface geometry object.</p></td>
 </tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="3" style="background-color: #FFFFFF;"><p class="tableblock"> Note: Unless otherwise specified, all attributes have the stereotype «Property»</p></td>
-</tr>
 </tbody>
 </table></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p> Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»</p>
+</div></div></td>
 </tr>
 </tbody>
 </table>
@@ -10402,7 +10357,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_data_types_2"><a class="anchor" href="#_data_types_2"></a>9.2.2.2. <strong>Data Types</strong></h5>
+<h5 id="_data_types_2"><a class="anchor" href="#_data_types_2"></a>9.1.3.2. <strong>Data Types</strong></h5>
 <table id="AbstractTextureParameterization-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -10635,7 +10590,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_basic_types_2"><a class="anchor" href="#_basic_types_2"></a>9.2.2.3. <strong>Basic Types</strong></h5>
+<h5 id="_basic_types_2"><a class="anchor" href="#_basic_types_2"></a>9.1.3.3. <strong>Basic Types</strong></h5>
 <table id="Color-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -10788,19 +10743,19 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_unions_2"><a class="anchor" href="#_unions_2"></a>9.2.2.4. <strong>Unions</strong></h5>
+<h5 id="_unions_2"><a class="anchor" href="#_unions_2"></a>9.1.3.4. <strong>Unions</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_code_lists_2"><a class="anchor" href="#_code_lists_2"></a>9.2.2.5. <strong>Code Lists</strong></h5>
+<h5 id="_code_lists_2"><a class="anchor" href="#_code_lists_2"></a>9.1.3.5. <strong>Code Lists</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_enumerations_2"><a class="anchor" href="#_enumerations_2"></a>9.2.2.6. <strong>Enumerations</strong></h5>
+<h5 id="_enumerations_2"><a class="anchor" href="#_enumerations_2"></a>9.1.3.6. <strong>Enumerations</strong></h5>
 <table id="TextureType-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -10924,7 +10879,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </div>
 </div>
 <div class="sect3">
-<h4 id="Bridge-package-dd"><a class="anchor" href="#Bridge-package-dd"></a>9.2.3. <strong>Bridge Package</strong></h4>
+<h4 id="Bridge-package-dd"><a class="anchor" href="#Bridge-package-dd"></a>9.1.4. <strong>Bridge Package</strong></h4>
 <table class="tableblock frame-none grid-none stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -10946,7 +10901,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </tbody>
 </table>
 <div class="sect4">
-<h5 id="_classes_3"><a class="anchor" href="#_classes_3"></a>9.2.3.1. <strong>Classes</strong></h5>
+<h5 id="_classes_3"><a class="anchor" href="#_classes_3"></a>9.1.4.1. <strong>Classes</strong></h5>
 <table id="AbstractBridge-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -11586,25 +11541,25 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_data_types_3"><a class="anchor" href="#_data_types_3"></a>9.2.3.2. <strong>Data Types</strong></h5>
+<h5 id="_data_types_3"><a class="anchor" href="#_data_types_3"></a>9.1.4.2. <strong>Data Types</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_basic_types_3"><a class="anchor" href="#_basic_types_3"></a>9.2.3.3. <strong>Basic Types</strong></h5>
+<h5 id="_basic_types_3"><a class="anchor" href="#_basic_types_3"></a>9.1.4.3. <strong>Basic Types</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_unions_3"><a class="anchor" href="#_unions_3"></a>9.2.3.4. <strong>Unions</strong></h5>
+<h5 id="_unions_3"><a class="anchor" href="#_unions_3"></a>9.1.4.4. <strong>Unions</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_code_lists_3"><a class="anchor" href="#_code_lists_3"></a>9.2.3.5. <strong>Code Lists</strong></h5>
+<h5 id="_code_lists_3"><a class="anchor" href="#_code_lists_3"></a>9.1.4.5. <strong>Code Lists</strong></h5>
 <table id="BridgeClassValue-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -12057,7 +12012,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_enumerations_3"><a class="anchor" href="#_enumerations_3"></a>9.2.3.6. <strong>Enumerations</strong></h5>
+<h5 id="_enumerations_3"><a class="anchor" href="#_enumerations_3"></a>9.1.4.6. <strong>Enumerations</strong></h5>
 <div class="literalblock">
 <div class="content">
 <pre>none</pre>
@@ -12066,7 +12021,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </div>
 </div>
 <div class="sect3">
-<h4 id="Building-package-dd"><a class="anchor" href="#Building-package-dd"></a>9.2.4. <strong>Building Package</strong></h4>
+<h4 id="Building-package-dd"><a class="anchor" href="#Building-package-dd"></a>9.1.5. <strong>Building Package</strong></h4>
 <table class="tableblock frame-none grid-none stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -12088,7 +12043,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </tbody>
 </table>
 <div class="sect4">
-<h5 id="_classes_4"><a class="anchor" href="#_classes_4"></a>9.2.4.1. <strong>Classes</strong></h5>
+<h5 id="_classes_4"><a class="anchor" href="#_classes_4"></a>9.1.5.1. <strong>Classes</strong></h5>
 <table id="AbstractBuilding-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -13045,7 +13000,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_data_types_4"><a class="anchor" href="#_data_types_4"></a>9.2.4.2. <strong>Data Types</strong></h5>
+<h5 id="_data_types_4"><a class="anchor" href="#_data_types_4"></a>9.1.5.2. <strong>Data Types</strong></h5>
 <table id="RoomHeight-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -13137,19 +13092,19 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_basic_types_4"><a class="anchor" href="#_basic_types_4"></a>9.2.4.3. <strong>Basic Types</strong></h5>
+<h5 id="_basic_types_4"><a class="anchor" href="#_basic_types_4"></a>9.1.5.3. <strong>Basic Types</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_unions_4"><a class="anchor" href="#_unions_4"></a>9.2.4.4. <strong>Unions</strong></h5>
+<h5 id="_unions_4"><a class="anchor" href="#_unions_4"></a>9.1.5.4. <strong>Unions</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_code_lists_4"><a class="anchor" href="#_code_lists_4"></a>9.2.4.5. <strong>Code Lists</strong></h5>
+<h5 id="_code_lists_4"><a class="anchor" href="#_code_lists_4"></a>9.1.5.5. <strong>Code Lists</strong></h5>
 <table id="BuildingClassValue-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -13752,14 +13707,14 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_enumerations_4"><a class="anchor" href="#_enumerations_4"></a>9.2.4.6. <strong>Enumerations</strong></h5>
+<h5 id="_enumerations_4"><a class="anchor" href="#_enumerations_4"></a>9.1.5.6. <strong>Enumerations</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="CityFurniture-package-dd"><a class="anchor" href="#CityFurniture-package-dd"></a>9.2.5. <strong>CityFurniture Package</strong></h4>
+<h4 id="CityFurniture-package-dd"><a class="anchor" href="#CityFurniture-package-dd"></a>9.1.6. <strong>CityFurniture Package</strong></h4>
 <table class="tableblock frame-none grid-none stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -13781,7 +13736,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </tbody>
 </table>
 <div class="sect4">
-<h5 id="_classes_5"><a class="anchor" href="#_classes_5"></a>9.2.5.1. <strong>Classes</strong></h5>
+<h5 id="_classes_5"><a class="anchor" href="#_classes_5"></a>9.1.6.1. <strong>Classes</strong></h5>
 <table id="CityFurniture-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -13874,25 +13829,25 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_data_types_5"><a class="anchor" href="#_data_types_5"></a>9.2.5.2. <strong>Data Types</strong></h5>
+<h5 id="_data_types_5"><a class="anchor" href="#_data_types_5"></a>9.1.6.2. <strong>Data Types</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_basic_types_5"><a class="anchor" href="#_basic_types_5"></a>9.2.5.3. <strong>Basic Types</strong></h5>
+<h5 id="_basic_types_5"><a class="anchor" href="#_basic_types_5"></a>9.1.6.3. <strong>Basic Types</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_unions_5"><a class="anchor" href="#_unions_5"></a>9.2.5.4. <strong>Unions</strong></h5>
+<h5 id="_unions_5"><a class="anchor" href="#_unions_5"></a>9.1.6.4. <strong>Unions</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_code_lists_5"><a class="anchor" href="#_code_lists_5"></a>9.2.5.5. <strong>Code Lists</strong></h5>
+<h5 id="_code_lists_5"><a class="anchor" href="#_code_lists_5"></a>9.1.6.5. <strong>Code Lists</strong></h5>
 <table id="CityFurnitureClassValue-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -13985,7 +13940,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_enumerations_5"><a class="anchor" href="#_enumerations_5"></a>9.2.5.6. <strong>Enumerations</strong></h5>
+<h5 id="_enumerations_5"><a class="anchor" href="#_enumerations_5"></a>9.1.6.6. <strong>Enumerations</strong></h5>
 <div class="literalblock">
 <div class="content">
 <pre>none</pre>
@@ -13994,7 +13949,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </div>
 </div>
 <div class="sect3">
-<h4 id="CityObjectGroup-package-dd"><a class="anchor" href="#CityObjectGroup-package-dd"></a>9.2.6. <strong>CityObjectGroup Package</strong></h4>
+<h4 id="CityObjectGroup-package-dd"><a class="anchor" href="#CityObjectGroup-package-dd"></a>9.1.7. <strong>CityObjectGroup Package</strong></h4>
 <table class="tableblock frame-none grid-none stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -14016,7 +13971,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </tbody>
 </table>
 <div class="sect4">
-<h5 id="_classes_6"><a class="anchor" href="#_classes_6"></a>9.2.6.1. <strong>Classes</strong></h5>
+<h5 id="_classes_6"><a class="anchor" href="#_classes_6"></a>9.1.7.1. <strong>Classes</strong></h5>
 <table id="CityObjectGroup-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -14195,25 +14150,25 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_data_types_6"><a class="anchor" href="#_data_types_6"></a>9.2.6.2. <strong>Data Types</strong></h5>
+<h5 id="_data_types_6"><a class="anchor" href="#_data_types_6"></a>9.1.7.2. <strong>Data Types</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_basic_types_6"><a class="anchor" href="#_basic_types_6"></a>9.2.6.3. <strong>Basic Types</strong></h5>
+<h5 id="_basic_types_6"><a class="anchor" href="#_basic_types_6"></a>9.1.7.3. <strong>Basic Types</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_unions_6"><a class="anchor" href="#_unions_6"></a>9.2.6.4. <strong>Unions</strong></h5>
+<h5 id="_unions_6"><a class="anchor" href="#_unions_6"></a>9.1.7.4. <strong>Unions</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_code_lists_6"><a class="anchor" href="#_code_lists_6"></a>9.2.6.5. <strong>Code Lists</strong></h5>
+<h5 id="_code_lists_6"><a class="anchor" href="#_code_lists_6"></a>9.1.7.5. <strong>Code Lists</strong></h5>
 <table id="CityObjectGroupClassValue-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -14306,14 +14261,14 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_enumerations_6"><a class="anchor" href="#_enumerations_6"></a>9.2.6.6. <strong>Enumerations</strong></h5>
+<h5 id="_enumerations_6"><a class="anchor" href="#_enumerations_6"></a>9.1.7.6. <strong>Enumerations</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Construction-package-dd"><a class="anchor" href="#Construction-package-dd"></a>9.2.7. <strong>Construction Package</strong></h4>
+<h4 id="Construction-package-dd"><a class="anchor" href="#Construction-package-dd"></a>9.1.8. <strong>Construction Package</strong></h4>
 <table class="tableblock frame-none grid-none stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -14335,7 +14290,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </tbody>
 </table>
 <div class="sect4">
-<h5 id="_classes_7"><a class="anchor" href="#_classes_7"></a>9.2.7.1. <strong>Classes</strong></h5>
+<h5 id="_classes_7"><a class="anchor" href="#_classes_7"></a>9.1.8.1. <strong>Classes</strong></h5>
 <table id="AbstractConstruction-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -15916,7 +15871,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_data_types_7"><a class="anchor" href="#_data_types_7"></a>9.2.7.2. <strong>Data Types</strong></h5>
+<h5 id="_data_types_7"><a class="anchor" href="#_data_types_7"></a>9.1.8.2. <strong>Data Types</strong></h5>
 <table id="ConstructionEvent-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -16171,19 +16126,19 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_basic_types_7"><a class="anchor" href="#_basic_types_7"></a>9.2.7.3. <strong>Basic Types</strong></h5>
+<h5 id="_basic_types_7"><a class="anchor" href="#_basic_types_7"></a>9.1.8.3. <strong>Basic Types</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_unions_7"><a class="anchor" href="#_unions_7"></a>9.2.7.4. <strong>Unions</strong></h5>
+<h5 id="_unions_7"><a class="anchor" href="#_unions_7"></a>9.1.8.4. <strong>Unions</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_code_lists_7"><a class="anchor" href="#_code_lists_7"></a>9.2.7.5. <strong>Code Lists</strong></h5>
+<h5 id="_code_lists_7"><a class="anchor" href="#_code_lists_7"></a>9.1.8.5. <strong>Code Lists</strong></h5>
 <table id="DoorClassValue-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -16516,7 +16471,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_enumerations_7"><a class="anchor" href="#_enumerations_7"></a>9.2.7.6. <strong>Enumerations</strong></h5>
+<h5 id="_enumerations_7"><a class="anchor" href="#_enumerations_7"></a>9.1.8.6. <strong>Enumerations</strong></h5>
 <table id="ConditionOfConstructionValue-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -16696,7 +16651,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </div>
 </div>
 <div class="sect3">
-<h4 id="Dynamizer-package-dd"><a class="anchor" href="#Dynamizer-package-dd"></a>9.2.8. <strong>Dynamizer Package</strong></h4>
+<h4 id="Dynamizer-package-dd"><a class="anchor" href="#Dynamizer-package-dd"></a>9.1.9. <strong>Dynamizer Package</strong></h4>
 <table class="tableblock frame-none grid-none stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -16718,7 +16673,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </tbody>
 </table>
 <div class="sect4">
-<h5 id="_classes_8"><a class="anchor" href="#_classes_8"></a>9.2.8.1. <strong>Classes</strong></h5>
+<h5 id="_classes_8"><a class="anchor" href="#_classes_8"></a>9.1.9.1. <strong>Classes</strong></h5>
 <table id="AbstractAtomicTimeseries-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -17373,7 +17328,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_data_types_8"><a class="anchor" href="#_data_types_8"></a>9.2.8.2. <strong>Data Types</strong></h5>
+<h5 id="_data_types_8"><a class="anchor" href="#_data_types_8"></a>9.1.9.2. <strong>Data Types</strong></h5>
 <table id="SensorConnection-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -17719,19 +17674,19 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_basic_types_8"><a class="anchor" href="#_basic_types_8"></a>9.2.8.3. <strong>Basic Types</strong></h5>
+<h5 id="_basic_types_8"><a class="anchor" href="#_basic_types_8"></a>9.1.9.3. <strong>Basic Types</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_unions_8"><a class="anchor" href="#_unions_8"></a>9.2.8.4. <strong>Unions</strong></h5>
+<h5 id="_unions_8"><a class="anchor" href="#_unions_8"></a>9.1.9.4. <strong>Unions</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_code_lists_8"><a class="anchor" href="#_code_lists_8"></a>9.2.8.5. <strong>Code Lists</strong></h5>
+<h5 id="_code_lists_8"><a class="anchor" href="#_code_lists_8"></a>9.1.9.5. <strong>Code Lists</strong></h5>
 <table id="AuthenticationTypeValue-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -17854,7 +17809,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_enumerations_8"><a class="anchor" href="#_enumerations_8"></a>9.2.8.6. <strong>Enumerations</strong></h5>
+<h5 id="_enumerations_8"><a class="anchor" href="#_enumerations_8"></a>9.1.9.6. <strong>Enumerations</strong></h5>
 <table id="TimeseriesTypeValue-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -17934,7 +17889,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </div>
 </div>
 <div class="sect3">
-<h4 id="Generics-package-dd"><a class="anchor" href="#Generics-package-dd"></a>9.2.9. <strong>Generics Package</strong></h4>
+<h4 id="Generics-package-dd"><a class="anchor" href="#Generics-package-dd"></a>9.1.10. <strong>Generics Package</strong></h4>
 <table class="tableblock frame-none grid-none stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -17956,7 +17911,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </tbody>
 </table>
 <div class="sect4">
-<h5 id="_classes_9"><a class="anchor" href="#_classes_9"></a>9.2.9.1. <strong>Classes</strong></h5>
+<h5 id="_classes_9"><a class="anchor" href="#_classes_9"></a>9.1.10.1. <strong>Classes</strong></h5>
 <table id="GenericLogicalSpace-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -18303,7 +18258,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_data_types_9"><a class="anchor" href="#_data_types_9"></a>9.2.9.2. <strong>Data Types</strong></h5>
+<h5 id="_data_types_9"><a class="anchor" href="#_data_types_9"></a>9.1.10.2. <strong>Data Types</strong></h5>
 <table id="DateAttribute-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -18867,19 +18822,19 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_basic_types_9"><a class="anchor" href="#_basic_types_9"></a>9.2.9.3. <strong>Basic Types</strong></h5>
+<h5 id="_basic_types_9"><a class="anchor" href="#_basic_types_9"></a>9.1.10.3. <strong>Basic Types</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_unions_9"><a class="anchor" href="#_unions_9"></a>9.2.9.4. <strong>Unions</strong></h5>
+<h5 id="_unions_9"><a class="anchor" href="#_unions_9"></a>9.1.10.4. <strong>Unions</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_code_lists_9"><a class="anchor" href="#_code_lists_9"></a>9.2.9.5. <strong>Code Lists</strong></h5>
+<h5 id="_code_lists_9"><a class="anchor" href="#_code_lists_9"></a>9.1.10.5. <strong>Code Lists</strong></h5>
 <table id="GenericLogicalSpaceClassValue-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -19242,14 +19197,14 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_enumerations_9"><a class="anchor" href="#_enumerations_9"></a>9.2.9.6. <strong>Enumerations</strong></h5>
+<h5 id="_enumerations_9"><a class="anchor" href="#_enumerations_9"></a>9.1.10.6. <strong>Enumerations</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="LandUse-package-dd"><a class="anchor" href="#LandUse-package-dd"></a>9.2.10. <strong>LandUse Package</strong></h4>
+<h4 id="LandUse-package-dd"><a class="anchor" href="#LandUse-package-dd"></a>9.1.11. <strong>LandUse Package</strong></h4>
 <table class="tableblock frame-none grid-none stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -19271,7 +19226,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </tbody>
 </table>
 <div class="sect4">
-<h5 id="_classes_10"><a class="anchor" href="#_classes_10"></a>9.2.10.1. <strong>Classes</strong></h5>
+<h5 id="_classes_10"><a class="anchor" href="#_classes_10"></a>9.1.11.1. <strong>Classes</strong></h5>
 <table id="LandUse-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -19360,25 +19315,25 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_data_types_10"><a class="anchor" href="#_data_types_10"></a>9.2.10.2. <strong>Data Types</strong></h5>
+<h5 id="_data_types_10"><a class="anchor" href="#_data_types_10"></a>9.1.11.2. <strong>Data Types</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_basic_types_10"><a class="anchor" href="#_basic_types_10"></a>9.2.10.3. <strong>Basic Types</strong></h5>
+<h5 id="_basic_types_10"><a class="anchor" href="#_basic_types_10"></a>9.1.11.3. <strong>Basic Types</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_unions_10"><a class="anchor" href="#_unions_10"></a>9.2.10.4. <strong>Unions</strong></h5>
+<h5 id="_unions_10"><a class="anchor" href="#_unions_10"></a>9.1.11.4. <strong>Unions</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_code_lists_10"><a class="anchor" href="#_code_lists_10"></a>9.2.10.5. <strong>Code Lists</strong></h5>
+<h5 id="_code_lists_10"><a class="anchor" href="#_code_lists_10"></a>9.1.11.5. <strong>Code Lists</strong></h5>
 <table id="LandUseClassValue-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -19471,14 +19426,14 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_enumerations_10"><a class="anchor" href="#_enumerations_10"></a>9.2.10.6. <strong>Enumerations</strong></h5>
+<h5 id="_enumerations_10"><a class="anchor" href="#_enumerations_10"></a>9.1.11.6. <strong>Enumerations</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="PointCloud-package-dd"><a class="anchor" href="#PointCloud-package-dd"></a>9.2.11. <strong>PointCloud Package</strong></h4>
+<h4 id="PointCloud-package-dd"><a class="anchor" href="#PointCloud-package-dd"></a>9.1.12. <strong>PointCloud Package</strong></h4>
 <table class="tableblock frame-none grid-none stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -19500,7 +19455,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </tbody>
 </table>
 <div class="sect4">
-<h5 id="_classes_11"><a class="anchor" href="#_classes_11"></a>9.2.11.1. <strong>Classes</strong></h5>
+<h5 id="_classes_11"><a class="anchor" href="#_classes_11"></a>9.1.12.1. <strong>Classes</strong></h5>
 <table id="PointCloud-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -19597,38 +19552,38 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </table>
 </div>
 <div class="sect4">
-<h5 id="_data_types_11"><a class="anchor" href="#_data_types_11"></a>9.2.11.2. <strong>Data Types</strong></h5>
+<h5 id="_data_types_11"><a class="anchor" href="#_data_types_11"></a>9.1.12.2. <strong>Data Types</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_basic_types_11"><a class="anchor" href="#_basic_types_11"></a>9.2.11.3. <strong>Basic Types</strong></h5>
+<h5 id="_basic_types_11"><a class="anchor" href="#_basic_types_11"></a>9.1.12.3. <strong>Basic Types</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_unions_11"><a class="anchor" href="#_unions_11"></a>9.2.11.4. <strong>Unions</strong></h5>
+<h5 id="_unions_11"><a class="anchor" href="#_unions_11"></a>9.1.12.4. <strong>Unions</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_code_lists_11"><a class="anchor" href="#_code_lists_11"></a>9.2.11.5. <strong>Code Lists</strong></h5>
+<h5 id="_code_lists_11"><a class="anchor" href="#_code_lists_11"></a>9.1.12.5. <strong>Code Lists</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_enumerations_11"><a class="anchor" href="#_enumerations_11"></a>9.2.11.6. <strong>Enumerations</strong></h5>
+<h5 id="_enumerations_11"><a class="anchor" href="#_enumerations_11"></a>9.1.12.6. <strong>Enumerations</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Relief-package-dd"><a class="anchor" href="#Relief-package-dd"></a>9.2.12. <strong>Relief Package</strong></h4>
+<h4 id="Relief-package-dd"><a class="anchor" href="#Relief-package-dd"></a>9.1.13. <strong>Relief Package</strong></h4>
 <table class="tableblock frame-none grid-none stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -19650,7 +19605,7 @@ IntegerBetween0and4.allInstances()&#8594;forAll( p | p &gt;= 0 and p &#8656; 4)<
 </tbody>
 </table>
 <div class="sect4">
-<h5 id="_classes_12"><a class="anchor" href="#_classes_12"></a>9.2.12.1. <strong>Classes</strong></h5>
+<h5 id="_classes_12"><a class="anchor" href="#_classes_12"></a>9.1.13.1. <strong>Classes</strong></h5>
 <table id="AbstractReliefComponent-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -20155,38 +20110,38 @@ self.extent.patch&#8594;forAll(oclIsKindOf(GM_Polygon))</p></td>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_data_types_12"><a class="anchor" href="#_data_types_12"></a>9.2.12.2. <strong>Data Types</strong></h5>
+<h5 id="_data_types_12"><a class="anchor" href="#_data_types_12"></a>9.1.13.2. <strong>Data Types</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_basic_types_12"><a class="anchor" href="#_basic_types_12"></a>9.2.12.3. <strong>Basic Types</strong></h5>
+<h5 id="_basic_types_12"><a class="anchor" href="#_basic_types_12"></a>9.1.13.3. <strong>Basic Types</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_unions_12"><a class="anchor" href="#_unions_12"></a>9.2.12.4. <strong>Unions</strong></h5>
+<h5 id="_unions_12"><a class="anchor" href="#_unions_12"></a>9.1.13.4. <strong>Unions</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_code_lists_12"><a class="anchor" href="#_code_lists_12"></a>9.2.12.5. <strong>Code Lists</strong></h5>
+<h5 id="_code_lists_12"><a class="anchor" href="#_code_lists_12"></a>9.1.13.5. <strong>Code Lists</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_enumerations_12"><a class="anchor" href="#_enumerations_12"></a>9.2.12.6. <strong>Enumerations</strong></h5>
+<h5 id="_enumerations_12"><a class="anchor" href="#_enumerations_12"></a>9.1.13.6. <strong>Enumerations</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Transportation-package-dd"><a class="anchor" href="#Transportation-package-dd"></a>9.2.13. <strong>Transportation Package</strong></h4>
+<h4 id="Transportation-package-dd"><a class="anchor" href="#Transportation-package-dd"></a>9.1.14. <strong>Transportation Package</strong></h4>
 <table class="tableblock frame-none grid-none stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -20208,7 +20163,7 @@ self.extent.patch&#8594;forAll(oclIsKindOf(GM_Polygon))</p></td>
 </tbody>
 </table>
 <div class="sect4">
-<h5 id="_classes_13"><a class="anchor" href="#_classes_13"></a>9.2.13.1. <strong>Classes</strong></h5>
+<h5 id="_classes_13"><a class="anchor" href="#_classes_13"></a>9.1.14.1. <strong>Classes</strong></h5>
 <table id="AbstractTransportationSpace-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -21671,25 +21626,25 @@ self.extent.patch&#8594;forAll(oclIsKindOf(GM_Polygon))</p></td>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_data_types_13"><a class="anchor" href="#_data_types_13"></a>9.2.13.2. <strong>Data Types</strong></h5>
+<h5 id="_data_types_13"><a class="anchor" href="#_data_types_13"></a>9.1.14.2. <strong>Data Types</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_basic_types_13"><a class="anchor" href="#_basic_types_13"></a>9.2.13.3. <strong>Basic Types</strong></h5>
+<h5 id="_basic_types_13"><a class="anchor" href="#_basic_types_13"></a>9.1.14.3. <strong>Basic Types</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_unions_13"><a class="anchor" href="#_unions_13"></a>9.2.13.4. <strong>Unions</strong></h5>
+<h5 id="_unions_13"><a class="anchor" href="#_unions_13"></a>9.1.14.4. <strong>Unions</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_code_lists_13"><a class="anchor" href="#_code_lists_13"></a>9.2.13.5. <strong>Code Lists</strong></h5>
+<h5 id="_code_lists_13"><a class="anchor" href="#_code_lists_13"></a>9.1.14.5. <strong>Code Lists</strong></h5>
 <table id="AuxiliaryTrafficAreaClassValue-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -22772,7 +22727,7 @@ self.extent.patch&#8594;forAll(oclIsKindOf(GM_Polygon))</p></td>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_enumerations_13"><a class="anchor" href="#_enumerations_13"></a>9.2.13.6. <strong>Enumerations</strong></h5>
+<h5 id="_enumerations_13"><a class="anchor" href="#_enumerations_13"></a>9.1.14.6. <strong>Enumerations</strong></h5>
 <table id="GranularityValue-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -22884,7 +22839,7 @@ self.extent.patch&#8594;forAll(oclIsKindOf(GM_Polygon))</p></td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Tunnel-package-dd"><a class="anchor" href="#Tunnel-package-dd"></a>9.2.14. <strong>Tunnel Package</strong></h4>
+<h4 id="Tunnel-package-dd"><a class="anchor" href="#Tunnel-package-dd"></a>9.1.15. <strong>Tunnel Package</strong></h4>
 <table class="tableblock frame-none grid-none stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -22906,7 +22861,7 @@ self.extent.patch&#8594;forAll(oclIsKindOf(GM_Polygon))</p></td>
 </tbody>
 </table>
 <div class="sect4">
-<h5 id="_classes_14"><a class="anchor" href="#_classes_14"></a>9.2.14.1. <strong>Classes</strong></h5>
+<h5 id="_classes_14"><a class="anchor" href="#_classes_14"></a>9.1.15.1. <strong>Classes</strong></h5>
 <table id="AbstractTunnel-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -23535,25 +23490,25 @@ self.extent.patch&#8594;forAll(oclIsKindOf(GM_Polygon))</p></td>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_data_types_14"><a class="anchor" href="#_data_types_14"></a>9.2.14.2. <strong>Data Types</strong></h5>
+<h5 id="_data_types_14"><a class="anchor" href="#_data_types_14"></a>9.1.15.2. <strong>Data Types</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_basic_types_14"><a class="anchor" href="#_basic_types_14"></a>9.2.14.3. <strong>Basic Types</strong></h5>
+<h5 id="_basic_types_14"><a class="anchor" href="#_basic_types_14"></a>9.1.15.3. <strong>Basic Types</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_unions_14"><a class="anchor" href="#_unions_14"></a>9.2.14.4. <strong>Unions</strong></h5>
+<h5 id="_unions_14"><a class="anchor" href="#_unions_14"></a>9.1.15.4. <strong>Unions</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_code_lists_14"><a class="anchor" href="#_code_lists_14"></a>9.2.14.5. <strong>Code Lists</strong></h5>
+<h5 id="_code_lists_14"><a class="anchor" href="#_code_lists_14"></a>9.1.15.5. <strong>Code Lists</strong></h5>
 <table id="HollowSpaceClassValue-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -24006,14 +23961,14 @@ self.extent.patch&#8594;forAll(oclIsKindOf(GM_Polygon))</p></td>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_enumerations_14"><a class="anchor" href="#_enumerations_14"></a>9.2.14.6. <strong>Enumerations</strong></h5>
+<h5 id="_enumerations_14"><a class="anchor" href="#_enumerations_14"></a>9.1.15.6. <strong>Enumerations</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Vegetation-package-dd"><a class="anchor" href="#Vegetation-package-dd"></a>9.2.15. <strong>Vegetation Package</strong></h4>
+<h4 id="Vegetation-package-dd"><a class="anchor" href="#Vegetation-package-dd"></a>9.1.16. <strong>Vegetation Package</strong></h4>
 <table class="tableblock frame-none grid-none stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -24035,7 +23990,7 @@ self.extent.patch&#8594;forAll(oclIsKindOf(GM_Polygon))</p></td>
 </tbody>
 </table>
 <div class="sect4">
-<h5 id="_classes_15"><a class="anchor" href="#_classes_15"></a>9.2.15.1. <strong>Classes</strong></h5>
+<h5 id="_classes_15"><a class="anchor" href="#_classes_15"></a>9.1.16.1. <strong>Classes</strong></h5>
 <table id="AbstractVegetationObject-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -24326,25 +24281,25 @@ self.extent.patch&#8594;forAll(oclIsKindOf(GM_Polygon))</p></td>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_data_types_15"><a class="anchor" href="#_data_types_15"></a>9.2.15.2. <strong>Data Types</strong></h5>
+<h5 id="_data_types_15"><a class="anchor" href="#_data_types_15"></a>9.1.16.2. <strong>Data Types</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_basic_types_15"><a class="anchor" href="#_basic_types_15"></a>9.2.15.3. <strong>Basic Types</strong></h5>
+<h5 id="_basic_types_15"><a class="anchor" href="#_basic_types_15"></a>9.1.16.3. <strong>Basic Types</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_unions_15"><a class="anchor" href="#_unions_15"></a>9.2.15.4. <strong>Unions</strong></h5>
+<h5 id="_unions_15"><a class="anchor" href="#_unions_15"></a>9.1.16.4. <strong>Unions</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_code_lists_15"><a class="anchor" href="#_code_lists_15"></a>9.2.15.5. <strong>Code Lists</strong></h5>
+<h5 id="_code_lists_15"><a class="anchor" href="#_code_lists_15"></a>9.1.16.5. <strong>Code Lists</strong></h5>
 <table id="PlantCoverClassValue-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -24557,14 +24512,14 @@ self.extent.patch&#8594;forAll(oclIsKindOf(GM_Polygon))</p></td>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_enumerations_15"><a class="anchor" href="#_enumerations_15"></a>9.2.15.6. <strong>Enumerations</strong></h5>
+<h5 id="_enumerations_15"><a class="anchor" href="#_enumerations_15"></a>9.1.16.6. <strong>Enumerations</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="Versioning-package-dd"><a class="anchor" href="#Versioning-package-dd"></a>9.2.16. <strong>Versioning Package</strong></h4>
+<h4 id="Versioning-package-dd"><a class="anchor" href="#Versioning-package-dd"></a>9.1.17. <strong>Versioning Package</strong></h4>
 <table class="tableblock frame-none grid-none stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -24586,7 +24541,7 @@ self.extent.patch&#8594;forAll(oclIsKindOf(GM_Polygon))</p></td>
 </tbody>
 </table>
 <div class="sect4">
-<h5 id="_classes_16"><a class="anchor" href="#_classes_16"></a>9.2.16.1. <strong>Classes</strong></h5>
+<h5 id="_classes_16"><a class="anchor" href="#_classes_16"></a>9.1.17.1. <strong>Classes</strong></h5>
 <table id="Version-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -24779,7 +24734,7 @@ self.extent.patch&#8594;forAll(oclIsKindOf(GM_Polygon))</p></td>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_data_types_16"><a class="anchor" href="#_data_types_16"></a>9.2.16.2. <strong>Data Types</strong></h5>
+<h5 id="_data_types_16"><a class="anchor" href="#_data_types_16"></a>9.1.17.2. <strong>Data Types</strong></h5>
 <table id="Transaction-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -24870,25 +24825,25 @@ self.extent.patch&#8594;forAll(oclIsKindOf(GM_Polygon))</p></td>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_basic_types_16"><a class="anchor" href="#_basic_types_16"></a>9.2.16.3. <strong>Basic Types</strong></h5>
+<h5 id="_basic_types_16"><a class="anchor" href="#_basic_types_16"></a>9.1.17.3. <strong>Basic Types</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_unions_16"><a class="anchor" href="#_unions_16"></a>9.2.16.4. <strong>Unions</strong></h5>
+<h5 id="_unions_16"><a class="anchor" href="#_unions_16"></a>9.1.17.4. <strong>Unions</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_code_lists_16"><a class="anchor" href="#_code_lists_16"></a>9.2.16.5. <strong>Code Lists</strong></h5>
+<h5 id="_code_lists_16"><a class="anchor" href="#_code_lists_16"></a>9.1.17.5. <strong>Code Lists</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_enumerations_16"><a class="anchor" href="#_enumerations_16"></a>9.2.16.6. <strong>Enumerations</strong></h5>
+<h5 id="_enumerations_16"><a class="anchor" href="#_enumerations_16"></a>9.1.17.6. <strong>Enumerations</strong></h5>
 <table id="TransactionTypeValue-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -25012,7 +24967,7 @@ self.extent.patch&#8594;forAll(oclIsKindOf(GM_Polygon))</p></td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="WaterBody-package-dd"><a class="anchor" href="#WaterBody-package-dd"></a>9.2.17. <strong>WaterBody Package</strong></h4>
+<h4 id="WaterBody-package-dd"><a class="anchor" href="#WaterBody-package-dd"></a>9.1.18. <strong>WaterBody Package</strong></h4>
 <table class="tableblock frame-none grid-none stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -25034,7 +24989,7 @@ self.extent.patch&#8594;forAll(oclIsKindOf(GM_Polygon))</p></td>
 </tbody>
 </table>
 <div class="sect4">
-<h5 id="_classes_17"><a class="anchor" href="#_classes_17"></a>9.2.17.1. <strong>Classes</strong></h5>
+<h5 id="_classes_17"><a class="anchor" href="#_classes_17"></a>9.1.18.1. <strong>Classes</strong></h5>
 <table id="AbstractWaterBoundarySurface-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -25349,25 +25304,25 @@ self.extent.patch&#8594;forAll(oclIsKindOf(GM_Polygon))</p></td>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_data_types_17"><a class="anchor" href="#_data_types_17"></a>9.2.17.2. <strong>Data Types</strong></h5>
+<h5 id="_data_types_17"><a class="anchor" href="#_data_types_17"></a>9.1.18.2. <strong>Data Types</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_basic_types_17"><a class="anchor" href="#_basic_types_17"></a>9.2.17.3. <strong>Basic Types</strong></h5>
+<h5 id="_basic_types_17"><a class="anchor" href="#_basic_types_17"></a>9.1.18.3. <strong>Basic Types</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_unions_17"><a class="anchor" href="#_unions_17"></a>9.2.17.4. <strong>Unions</strong></h5>
+<h5 id="_unions_17"><a class="anchor" href="#_unions_17"></a>9.1.18.4. <strong>Unions</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_code_lists_17"><a class="anchor" href="#_code_lists_17"></a>9.2.17.5. <strong>Code Lists</strong></h5>
+<h5 id="_code_lists_17"><a class="anchor" href="#_code_lists_17"></a>9.1.18.5. <strong>Code Lists</strong></h5>
 <table id="WaterBodyClassValue-section" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -25490,22 +25445,14 @@ self.extent.patch&#8594;forAll(oclIsKindOf(GM_Polygon))</p></td>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_enumerations_17"><a class="anchor" href="#_enumerations_17"></a>9.2.17.6. <strong>Enumerations</strong></h5>
+<h5 id="_enumerations_17"><a class="anchor" href="#_enumerations_17"></a>9.1.18.6. <strong>Enumerations</strong></h5>
 <div class="paragraph">
 <p>none</p>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_media_types_for_any_data_encodings"><a class="anchor" href="#_media_types_for_any_data_encodings"></a>10. Media Types for any data encoding(s)</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>A section describing the MIME-types to be used is mandatory for any standard involving data encodings. If no suitable MIME type exists in <a href="http://www.iana.org/assignments/media-types/index.html" class="bare">http://www.iana.org/assignments/media-types/index.html</a> then this section may be used to define a new MIME type for registration with IANA.</p>
-</div>
 <div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -25548,7 +25495,7 @@ self.extent.patch&#8594;forAll(oclIsKindOf(GM_Polygon))</p></td>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_change_log_for_citygml_3_0"><a class="anchor" href="#_change_log_for_citygml_3_0"></a>11. Change Log for CityGML 3.0</h2>
+<h2 id="_change_log_for_citygml_3_0"><a class="anchor" href="#_change_log_for_citygml_3_0"></a>10. Change Log for CityGML 3.0</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>CityGML 3.0 is the baseline version. Changes appearing in versions following 3.0 will be listed in this section.</p>
@@ -25627,52 +25574,19 @@ self.extent.patch&#8594;forAll(oclIsKindOf(GM_Polygon))</p></td>
 <div class="sect1">
 <h2 id="Bibliography"><a class="anchor" href="#Bibliography"></a>Annex D: Bibliography</h2>
 <div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-<div class="title">Example Bibliography (Delete this note).</div>
-<div class="paragraph">
-<p>The TC has approved Springer LNCS as the official document citation type.</p>
-</div>
-<div class="paragraph">
-<p>Springer LNCS is widely used in technical and computer science journals and other publications</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
-<p>For citations in the text please use square brackets and consecutive numbers: [1], [2], [3]</p>
+<p><a id="ogc08-131"></a> Open Geospatial Consortium: <strong>The Specification Model&#8201;&#8212;&#8201;A Standard for Modular specifications</strong>, <a href="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131</a></p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>– Actual References:</p>
-</div>
-<div class="paragraph">
-<p>[n] Journal: Author Surname, A.: Title. Publication Title. Volume number, Issue number, Pages Used (Year Published)</p>
-</div>
-<div class="paragraph">
-<p>[n] Web: Author Surname, A.: Title, <a href="http://Website-Url" class="bare">http://Website-Url</a></p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p></p>
-</div>
-<div id="OGC2015" class="paragraph">
-<p>[1] OGC: OGC Testbed 12 Annex B: Architecture. (2015).</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-05-20 22:23:04 +0100
+Last updated 2020-05-27 22:27:06 +0100
 </div>
 </div>
 </body>

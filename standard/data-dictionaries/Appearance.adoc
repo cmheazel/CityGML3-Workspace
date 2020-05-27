@@ -28,9 +28,9 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} isFront  !<<Boolean-section,Boolean>>  [0..1] !Indicates whether the texture or material is assigned to the front side or the back side of the surface geometry object.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} isFront «Property»  !<<Boolean-section,Boolean>>  [0..1] !Indicates whether the texture or material is assigned to the front side or the back side of the surface geometry object.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[AbstractTexture-section]]

@@ -1,6 +1,0 @@
-[[req_tunnel_base]]
-[width="90%",cols="2,6"]
-|===
-^|*Requirement  {counter:req-id}* |*/req/tunnel/base* 
-^|A |If a tunnel only consists of one (homogeneous) part, it shall be represented by the element Tunnel. However, if a tunnel is composed of individual structural segments, it shall be modelled as a Tunnel el-ement having one or more additional TunnelPart elements. Only the geometry and non-spatial proper-ties of the main part of the tunnel should be represented within the aggregating Tunnel element.
-|===

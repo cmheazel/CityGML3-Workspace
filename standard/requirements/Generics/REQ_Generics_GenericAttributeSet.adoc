@@ -1,9 +1,0 @@
-[[req_Generics_GenericAttributeSet]]
-[width="90%",cols="2,6"]
-|===
-^|*Requirement  {counter:req-id}* |*/req/Generics/GenericAttributeSet* 
-^|A |Any use of the GenericAttributeSet type in the Implementation Specification SHALL have the same definition as the GenericAttributeSet UML class as documented in the GenericAttributeSet section of the <<GenericAttributeSet-section,Generics Data Dictionary>>.
-^|B |The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the GenericAttributeSet UML class as documented in the GenericAttributeSet section of the <<GenericAttributeSet-section,Generics Data Dictionary>>.
-^|C |The implementation Specification SHALL represent the attributes of the GenericAttributeSet UML class; including the name, definition, type, and cardinality of those documented in the GenericAttributeSet section of the <<GenericAttributeSet-section,Generics Data Dictionary>>.
-^|D |The implementation Specification SHALL represent the attributes of all parent classes of the the GenericAttributeSet UML class; including the name, definition, type, and cardinality of those documented in the GenericAttributeSet section of the <<GenericAttributeSet-section,Generics Data Dictionary>>.
-|===

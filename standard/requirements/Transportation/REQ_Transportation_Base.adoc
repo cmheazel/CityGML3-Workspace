@@ -1,7 +1,0 @@
-[[req_transportation_base]]
-[width="90%",cols="2,6"]
-|===
-^|*Requirement  {counter:req-id}* |*/req/transportation/base* 
-^|A |For LOD0, the geometry of a TransportationComplex shall be modelled using GML line objects repre-senting the centerline of the transportation complex. The line objects shall establish a linear network. Thus, the lod0Network property (type: gml:GeometricComplexPropertyType) of the element Transpor-tationComplex may only contain or reference an appropriate curve geometry element.
-^|B |Starting from LOD2, the trafficArea property (type: TrafficAreaPropertyType) as well as the auxilia-ryTrafficArea property (type: AuxiliaryTrafficAreaPropertyType) of the element TransportationCom-plex may be used. These properties shall not be used if the transportation complex is only represented in lower LODs.
-|===

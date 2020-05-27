@@ -1,9 +1,0 @@
-[[req_Core_QualifiedVolume]]
-[width="90%",cols="2,6"]
-|===
-^|*Requirement  {counter:req-id}* |*/req/Core/QualifiedVolume* 
-^|A |Any use of the QualifiedVolume type in the Implementation Specification SHALL have the same definition as the QualifiedVolume UML class as documented in the QualifiedVolume section of the <<QualifiedVolume-section,Core Data Dictionary>>.
-^|B |The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the QualifiedVolume UML class as documented in the QualifiedVolume section of the <<QualifiedVolume-section,Core Data Dictionary>>.
-^|C |The implementation Specification SHALL represent the attributes of the QualifiedVolume UML class; including the name, definition, type, and cardinality of those documented in the QualifiedVolume section of the <<QualifiedVolume-section,Core Data Dictionary>>.
-^|D |The implementation Specification SHALL represent the attributes of all parent classes of the the QualifiedVolume UML class; including the name, definition, type, and cardinality of those documented in the QualifiedVolume section of the <<QualifiedVolume-section,Core Data Dictionary>>.
-|===

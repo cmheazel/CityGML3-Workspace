@@ -1,9 +1,0 @@
-[[req_waterbody_base]]
-[width="90%",cols="2,6"]
-|===
-^|*Requirement  {counter:req-id}* |*/req/waterbody/base* 
-^|A |For LOD0 and LOD1, the geometry of a WaterBody may be modelled as a linear network using gml:MultiCurve geometry elements. In that case, each gml:MultiCurve shall be composed of straight line segements, where the line orientation denotes the flow direction. The flow direction is from the first point of a line segment to its last point.
-^|B |Starting from LOD2, the exterior shell of a WaterBody may be semantically decomposed into _WaterBoundarySurface elements using the boundedBy property (type: BoundedByWaterSurfaceProp-ertyType) of WaterBody. The boundedBy property shall not be used if the water body is only represented in lower LODs. If the exterior shell is represented by _WaterBoundarySurface elements, an additional geometric repre-sentation as volume model using the lodXSolid, X  [2..4], property of WaterBody shall not explicitly define the geometry, but has to reference the according gml:_Surface elements of the _WaterBoundarySurface objects within each LOD using the XLink concept of GML 3.1.1.
-^|C |Each _WaterBoundarySurface element must have at least one associated surface geometry given by the lodXSurface, X  [2..4], properties of _WaterBoundarySurface.
-^|D |_WaterBoundarySurface elements shall only be included as parts of corresponding WaterBody ele-ments. They may not be given as stand-alone city objects within a CityGML model.
-|===

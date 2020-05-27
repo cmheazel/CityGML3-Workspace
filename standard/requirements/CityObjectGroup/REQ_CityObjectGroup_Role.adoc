@@ -1,9 +1,0 @@
-[[req_CityObjectGroup_Role]]
-[width="90%",cols="2,6"]
-|===
-^|*Requirement  {counter:req-id}* |*/req/CityObjectGroup/Role* 
-^|A |The Implementation Specification SHALL contain an element with the same definition as the Role UML class as documented in the Role section of the <<Role-section,CityObjectGroup Data Dictionary>>.
-^|B |The Implementation Specification SHALL represent associations with the same source, target, direction, and cardinalities as those of the Role UML class as documented in the Role section of the <<Role-section,CityObjectGroup Data Dictionary>>.
-^|C |The implementation Specification SHALL represent the attributes of the Role UML class; including the name, definition, type, and cardinality of those documented in the Role section of the <<Role-section,CityObjectGroup Data Dictionary>>.
-^|D |The implementation Specification SHALL represent the attributes of all parent classes of the the Role UML class; including the name, definition, type, and cardinality of those documented in the Role section of the <<Role-section,CityObjectGroup Data Dictionary>>.
-|===

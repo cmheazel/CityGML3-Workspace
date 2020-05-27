@@ -1,6 +1,0 @@
-[[req_building_base]]
-[width="90%",cols="2,6"]
-|===
-^|*Requirement  {counter:req-id}* |*/req/building/base* 
-^|A |If a building only consists of one (homogeneous) part, it shall be represented by the element Building. However, if a building is composed of individual structural segments, it shall be modelled as a Building element having one or more additional BuildingPart elements. Only the geometry and non-spatial prop-erties of the main part of the building should be represented within the aggregating Building element.
-|===
