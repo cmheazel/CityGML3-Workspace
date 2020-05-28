@@ -11,7 +11,7 @@ Furthermore, the openings of constructions, i.e. windows and doors, can be repre
 
 The UML diagram of the Construction module is depicted in <<construction-uml,Construction UML Diagram>>.
 The Contruction module defines concepts that are inherited and, where necessary, are specialized by the modules Building, Bridge, and Tunnel  (cf. sections <<rc_building-model_section, Building>>, <<rc_bridge-model_section, Bridge>>, and <<rc_tunnel_section, Tunnel>>).
-A detailed discussion of the Requirements Class Construction can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_construction_section[here].
+A detailed discussion of the Requirements Class Construction can be found in the https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072UG.html#bp_construction_section[CityGML Users Guide].
 
 [[construction-uml]]
 .UML diagram of the Construction Model.
@@ -26,6 +26,3 @@ include::requirements/Construction/REQ_Construction_Classes.adoc[]
 
 include::summaries/Construction.adoc[]
 
-==== Additional Information
-
-The following sections provide additional information which may not be readily available through the UML Model.

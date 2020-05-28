@@ -1,5 +1,5 @@
 [[Core-package-dd]]
-==== *Core Package*
+=== Core Package
 
 [cols="1,4",frame=none,grid=none]
 |===
@@ -8,7 +8,7 @@
 |{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: | «ApplicationSchema»
 |===
 
-===== *Classes*
+==== Classes
 
 [[AbstractAppearance-section]]
 [cols="1a"]
@@ -618,7 +618,7 @@
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |===   
 
-===== *Data Types*
+==== Data Types
 
 [[AbstractGenericAttribute-section]]
 [cols="1a"]
@@ -766,7 +766,7 @@
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
 |===   
 
-===== *Basic Types*
+==== Basic Types
 
 [[DoubleBetween0and1-section]]
 [cols="1a"]
@@ -993,7 +993,7 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
 |===
 
-===== *Unions*
+==== Unions
 
 [[CityModelMember-section]]
 [cols="1a"]
@@ -1058,7 +1058,7 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 !===
 |===
 
-===== *Code Lists*
+==== Code Lists
 
 [[IntervalValue-section]]
 [cols="1a"]
@@ -1170,7 +1170,7 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 !===
 |===
 
-===== *Enumerations*
+==== Enumerations
 
 [[RelativeToTerrain-section]]
 [cols="1a"]

@@ -10,7 +10,7 @@ Generic city objects are represented in the UML model by the top-level feature t
 
 Generic attributes are defined as name-value pairs and are always associated with a city object. Generic attributes can be of type String, Integer, Double, Date, URI, and Measure. In addition, generic attributes can be grouped under a common name as generic attribute sets.
 
-The UML diagram of the Generics module is depicted in <<generics-uml,Generics UML Diagram>>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_generics_section[here].
+The UML diagram of the Generics module is depicted in <<generics-uml,Generics UML Diagram>>. A detailed discussion of this Requirements Class can be found in the https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072UG.html#bp_generics_section[CityGML Users Guide].
 
 [[generics-uml]]
 .UML diagram of the Generics Model.
@@ -25,6 +25,3 @@ include::requirements/Generics/REQ_Generics_Classes.adoc[]
 
 include::summaries/Generics.adoc[]
 
-==== Additional Information
-
-The following sections provide additional information which may not be readily available through the UML Model.

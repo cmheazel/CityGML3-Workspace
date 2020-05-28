@@ -11,7 +11,7 @@ Surface data that depends on the exact location within the surface is modelled a
 This can either be a parameterized texture, i.e. a texture that uses texture coordinates or a transformation matrix for parameterization, or a georeferenced texture, i.e. a texture that uses a planimetric projection.
 Each surface geometry object can have both, a material and a texture per theme and side. This allows for providing a constant approximation and a complex measurement of a surface’s property simultaneously.
 
-The UML diagram of the Appearance module is illustrated in <<appearance-uml,Appearance UML Diagram>>. A detailed discussion of this Requirements Class can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_appearance_section[here].
+The UML diagram of the Appearance module is illustrated in <<appearance-uml,Appearance UML Diagram>>. A detailed discussion of this Requirements Class can be found in the https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072UG.html#bp_appearance_section[CityGML Users Guide].
 
 [[appearance-uml]]
 .UML diagram of CityGML’s appearance model.
@@ -25,6 +25,3 @@ include::requirements/Appearance/REQ_Appearance_Classes.adoc[]
 
 include::summaries/Appearance.adoc[]
 
-==== Additional Information
-
-The following sections provide additional information which may not be readily available through the UML Model.

@@ -10,7 +10,7 @@ The free space inside bridges is represented by rooms, which allows a virtual ac
 Bridges can contain installations and furniture. Installations are permanent parts of a bridge that strongly affect the outer or inner appearance of the bridge and that cannot be moved. Examples are stairways, signals, railings, and lamps. Furniture, in contrast, represent moveable objects of a bridge, like signs, art works, and benches.
 Bridges can be bounded by different types of surfaces. In this way, the outer structure of bridges can be differentiated semantically into wall surfaces, roof surfaces, ground surfaces, outer floor surfaces, and outer ceiling surfaces, whereas the visible surface of rooms can be structured into interior wall surfaces, floor surfaces, and ceiling surfaces. Furthermore, the openings of bridges, i.e. windows and doors, can be represented including their corresponding surfaces.
 
-The UML diagram of the Bridge module is depicted in <<bridge-uml,Bridge UML Diagram>>. The Bridge module inherits concepts from the Construction module <<rc_construction_section, (cf. Section Construction)>>. The Construction module defines objects that are common to all types of construction, such as the different surface types and the openings. A detailed discussion of Requirements Class Bridge can be found in the CityGML Best Practices document https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072BP.html#bp_bridge-model_section[here].
+The UML diagram of the Bridge module is depicted in <<bridge-uml,Bridge UML Diagram>>. The Bridge module inherits concepts from the Construction module <<rc_construction_section, (cf. Section Construction)>>. The Construction module defines objects that are common to all types of construction, such as the different surface types and the openings. A detailed discussion of Requirements Class Bridge can be found in the https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072UG.html#bp_bridge-model_section[CityGML Users Guide].
 
 [[bridge-uml]]
 .UML diagram of the Bridge Model.
@@ -25,6 +25,3 @@ include::requirements/Bridge/REQ_Bridge_Classes.adoc[]
 
 include::summaries/Bridge.adoc[]
 
-==== Additional Information
-
-The following sections provide additional information which may not be readily available through the UML Model.
