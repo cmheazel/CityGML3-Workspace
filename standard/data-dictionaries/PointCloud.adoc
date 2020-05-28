@@ -23,7 +23,7 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} points 
+!{set:cellbgcolor:#FFFFFF} points «Property» 
 !<<GM_MultiPoint-section,GM_MultiPoint>>  
 [0..1]
 !Relates to the 3D MultiPoint geometry of the PointCloud stored inline with the city model.
@@ -32,13 +32,13 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} mimeType  !<<MimeTypeValue-section,MimeTypeValue>>  [0..1] !Specifies the MIME type of the external point cloud file.
+!{set:cellbgcolor:#FFFFFF} mimeType «Property»  !<<MimeTypeValue-section,MimeTypeValue>>  [0..1] !Specifies the MIME type of the external point cloud file.
  
-!{set:cellbgcolor:#FFFFFF} pointFile  !<<URI-section,URI>>  [0..1] !Specifies the URI that points to the external point cloud file.
+!{set:cellbgcolor:#FFFFFF} pointFile «Property»  !<<URI-section,URI>>  [0..1] !Specifies the URI that points to the external point cloud file.
  
-!{set:cellbgcolor:#FFFFFF} pointFileSrsName  !<<CharacterString-section,CharacterString>>  [0..1] !Indicates the coordinate reference system used by the external point cloud file.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} pointFileSrsName «Property»  !<<CharacterString-section,CharacterString>>  [0..1] !Indicates the coordinate reference system used by the external point cloud file.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |===   
 
 ===== *Data Types*

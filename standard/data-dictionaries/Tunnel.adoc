@@ -23,19 +23,19 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} hollowSpace 
+!{set:cellbgcolor:#FFFFFF} hollowSpace «Property» 
 !<<HollowSpace-section,HollowSpace>>  
 [*]
 !Relates the hollow spaces to the Tunnel or TunnelPart.
-!{set:cellbgcolor:#FFFFFF} tunnelConstructiveElement 
+!{set:cellbgcolor:#FFFFFF} tunnelConstructiveElement «Property» 
 !<<TunnelConstructiveElement-section,TunnelConstructiveElement>>  
 [*]
 !Relates the constructive elements to the Tunnel or TunnelPart.
-!{set:cellbgcolor:#FFFFFF} tunnelInstallation 
+!{set:cellbgcolor:#FFFFFF} tunnelInstallation «Property» 
 !<<TunnelInstallation-section,TunnelInstallation>>  
 [*]
 !Relates the installation objects to the Tunnel or TunnelPart.
-!{set:cellbgcolor:#FFFFFF} tunnelFurniture 
+!{set:cellbgcolor:#FFFFFF} tunnelFurniture «Property» 
 !<<TunnelFurniture-section,TunnelFurniture>>  
 [*]
 !Relates the furniture objects to the Tunnel or TunnelPart.
@@ -44,13 +44,13 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class  !<<TunnelClassValue-section,TunnelClassValue>>  [0..1] !Indicates the specific type of the Tunnel or TunnelPart.
+!{set:cellbgcolor:#FFFFFF} class «Property»  !<<TunnelClassValue-section,TunnelClassValue>>  [0..1] !Indicates the specific type of the Tunnel or TunnelPart.
  
-!{set:cellbgcolor:#FFFFFF} function  !<<TunnelFunctionValue-section,TunnelFunctionValue>>  [0..*] !Specifies the intended purposes of the Tunnel or TunnelPart.
+!{set:cellbgcolor:#FFFFFF} function «Property»  !<<TunnelFunctionValue-section,TunnelFunctionValue>>  [0..*] !Specifies the intended purposes of the Tunnel or TunnelPart.
  
-!{set:cellbgcolor:#FFFFFF} usage  !<<TunnelUsageValue-section,TunnelUsageValue>>  [0..*] !Specifies the actual uses of the Tunnel or TunnelPart.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<TunnelUsageValue-section,TunnelUsageValue>>  [0..*] !Specifies the actual uses of the Tunnel or TunnelPart.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[HollowSpace-section]]
@@ -66,15 +66,15 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} tunnelInstallation 
+!{set:cellbgcolor:#FFFFFF} tunnelInstallation «Property» 
 !<<TunnelInstallation-section,TunnelInstallation>>  
 [*]
 !Relates the installation objects to the HollowSpace.
-!{set:cellbgcolor:#FFFFFF} tunnelFurniture 
+!{set:cellbgcolor:#FFFFFF} tunnelFurniture «Property» 
 !<<TunnelFurniture-section,TunnelFurniture>>  
 [*]
 !Relates the furniture objects to the HollowSpace.
-!{set:cellbgcolor:#FFFFFF} boundary 
+!{set:cellbgcolor:#FFFFFF} boundary «Property» 
 !<<AbstractThematicSurface-section,AbstractThematicSurface>>  
 [*]
 !
@@ -83,13 +83,13 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class  !<<HollowSpaceClassValue-section,HollowSpaceClassValue>>  [0..1] !Indicates the specific type of the HollowSpace.
+!{set:cellbgcolor:#FFFFFF} class «Property»  !<<HollowSpaceClassValue-section,HollowSpaceClassValue>>  [0..1] !Indicates the specific type of the HollowSpace.
  
-!{set:cellbgcolor:#FFFFFF} function  !<<HollowSpaceFunctionValue-section,HollowSpaceFunctionValue>>  [0..*] !Specifies the intended purposes of the HollowSpace.
+!{set:cellbgcolor:#FFFFFF} function «Property»  !<<HollowSpaceFunctionValue-section,HollowSpaceFunctionValue>>  [0..*] !Specifies the intended purposes of the HollowSpace.
  
-!{set:cellbgcolor:#FFFFFF} usage  !<<HollowSpaceUsageValue-section,HollowSpaceUsageValue>>  [0..*] !Specifies the actual uses of the HollowSpace.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<HollowSpaceUsageValue-section,HollowSpaceUsageValue>>  [0..*] !Specifies the actual uses of the HollowSpace.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[Tunnel-section]]
@@ -105,7 +105,7 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} tunnelPart 
+!{set:cellbgcolor:#FFFFFF} tunnelPart «Property» 
 !<<TunnelPart-section,TunnelPart>>  
 [*]
 !Relates the tunnel parts to the Tunnel.
@@ -113,8 +113,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[TunnelConstructiveElement-section]]
@@ -135,13 +135,13 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class  !<<TunnelConstructiveElementClassValue-section,TunnelConstructiveElementClassValue>>  [0..1] !Indicates the specific type of the TunnelConstructiveElement.
+!{set:cellbgcolor:#FFFFFF} class «Property»  !<<TunnelConstructiveElementClassValue-section,TunnelConstructiveElementClassValue>>  [0..1] !Indicates the specific type of the TunnelConstructiveElement.
  
-!{set:cellbgcolor:#FFFFFF} function  !<<TunnelConstructiveElementFunctionValue-section,TunnelConstructiveElementFunctionValue>>  [0..*] !Specifies the intended purposes of the TunnelConstructiveElement.
+!{set:cellbgcolor:#FFFFFF} function «Property»  !<<TunnelConstructiveElementFunctionValue-section,TunnelConstructiveElementFunctionValue>>  [0..*] !Specifies the intended purposes of the TunnelConstructiveElement.
  
-!{set:cellbgcolor:#FFFFFF} usage  !<<TunnelConstructiveElementUsageValue-section,TunnelConstructiveElementUsageValue>>  [0..*] !Specifies the actual uses of the TunnelConstructiveElement.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<TunnelConstructiveElementUsageValue-section,TunnelConstructiveElementUsageValue>>  [0..*] !Specifies the actual uses of the TunnelConstructiveElement.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[TunnelFurniture-section]]
@@ -162,13 +162,13 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class  !<<TunnelFurnitureClassValue-section,TunnelFurnitureClassValue>>  [0..1] !Indicates the specific type of the TunnelFurniture.
+!{set:cellbgcolor:#FFFFFF} class «Property»  !<<TunnelFurnitureClassValue-section,TunnelFurnitureClassValue>>  [0..1] !Indicates the specific type of the TunnelFurniture.
  
-!{set:cellbgcolor:#FFFFFF} function  !<<TunnelFurnitureFunctionValue-section,TunnelFurnitureFunctionValue>>  [0..*] !Specifies the intended purposes of the TunnelFurniture.
+!{set:cellbgcolor:#FFFFFF} function «Property»  !<<TunnelFurnitureFunctionValue-section,TunnelFurnitureFunctionValue>>  [0..*] !Specifies the intended purposes of the TunnelFurniture.
  
-!{set:cellbgcolor:#FFFFFF} usage  !<<TunnelFurnitureUsageValue-section,TunnelFurnitureUsageValue>>  [0..*] !Specifies the actual uses of the TunnelFurniture.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<TunnelFurnitureUsageValue-section,TunnelFurnitureUsageValue>>  [0..*] !Specifies the actual uses of the TunnelFurniture.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[TunnelInstallation-section]]
@@ -189,13 +189,13 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class  !<<TunnelInstallationClassValue-section,TunnelInstallationClassValue>>  [0..1] !Indicates the specific type of the TunnelInstallation.
+!{set:cellbgcolor:#FFFFFF} class «Property»  !<<TunnelInstallationClassValue-section,TunnelInstallationClassValue>>  [0..1] !Indicates the specific type of the TunnelInstallation.
  
-!{set:cellbgcolor:#FFFFFF} function  !<<TunnelInstallationFunctionValue-section,TunnelInstallationFunctionValue>>  [0..*] !Specifies the intended purposes of the TunnelInstallation.
+!{set:cellbgcolor:#FFFFFF} function «Property»  !<<TunnelInstallationFunctionValue-section,TunnelInstallationFunctionValue>>  [0..*] !Specifies the intended purposes of the TunnelInstallation.
  
-!{set:cellbgcolor:#FFFFFF} usage  !<<TunnelInstallationUsageValue-section,TunnelInstallationUsageValue>>  [0..*] !Specifies the actual uses of the TunnelInstallation.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<TunnelInstallationUsageValue-section,TunnelInstallationUsageValue>>  [0..*] !Specifies the actual uses of the TunnelInstallation.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[TunnelPart-section]]
@@ -215,8 +215,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |===   
 
 ===== *Data Types*

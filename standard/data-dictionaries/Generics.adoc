@@ -28,13 +28,13 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class  !<<GenericLogicalSpaceClassValue-section,GenericLogicalSpaceClassValue>>  [0..1] !Indicates the specific type of the GenericLogicalSpace.
+!{set:cellbgcolor:#FFFFFF} class «Property»  !<<GenericLogicalSpaceClassValue-section,GenericLogicalSpaceClassValue>>  [0..1] !Indicates the specific type of the GenericLogicalSpace.
  
-!{set:cellbgcolor:#FFFFFF} function  !<<GenericLogicalSpaceFunctionValue-section,GenericLogicalSpaceFunctionValue>>  [0..*] !Specifies the intended purposes of the GenericLogicalSpace.
+!{set:cellbgcolor:#FFFFFF} function «Property»  !<<GenericLogicalSpaceFunctionValue-section,GenericLogicalSpaceFunctionValue>>  [0..*] !Specifies the intended purposes of the GenericLogicalSpace.
  
-!{set:cellbgcolor:#FFFFFF} usage  !<<GenericLogicalSpaceUsageValue-section,GenericLogicalSpaceUsageValue>>  [0..*] !Specifies the actual uses of the GenericLogicalSpace.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<GenericLogicalSpaceUsageValue-section,GenericLogicalSpaceUsageValue>>  [0..*] !Specifies the actual uses of the GenericLogicalSpace.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[GenericOccupiedSpace-section]]
@@ -55,13 +55,13 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class  !<<GenericOccupiedSpaceClassValue-section,GenericOccupiedSpaceClassValue>>  [0..1] !Indicates the specific type of the GenericOccupiedSpace.
+!{set:cellbgcolor:#FFFFFF} class «Property»  !<<GenericOccupiedSpaceClassValue-section,GenericOccupiedSpaceClassValue>>  [0..1] !Indicates the specific type of the GenericOccupiedSpace.
  
-!{set:cellbgcolor:#FFFFFF} function  !<<GenericOccupiedSpaceFunctionValue-section,GenericOccupiedSpaceFunctionValue>>  [0..*] !Specifies the intended purposes of the GenericOccupiedSpace.
+!{set:cellbgcolor:#FFFFFF} function «Property»  !<<GenericOccupiedSpaceFunctionValue-section,GenericOccupiedSpaceFunctionValue>>  [0..*] !Specifies the intended purposes of the GenericOccupiedSpace.
  
-!{set:cellbgcolor:#FFFFFF} usage  !<<GenericOccupiedSpaceUsageValue-section,GenericOccupiedSpaceUsageValue>>  [0..*] !Specifies the actual uses of the GenericOccupiedSpace.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<GenericOccupiedSpaceUsageValue-section,GenericOccupiedSpaceUsageValue>>  [0..*] !Specifies the actual uses of the GenericOccupiedSpace.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[GenericThematicSurface-section]]
@@ -82,13 +82,13 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class  !<<GenericThematicSurfaceClassValue-section,GenericThematicSurfaceClassValue>>  [0..1] !Indicates the specific type of the GenericThematicSurface.
+!{set:cellbgcolor:#FFFFFF} class «Property»  !<<GenericThematicSurfaceClassValue-section,GenericThematicSurfaceClassValue>>  [0..1] !Indicates the specific type of the GenericThematicSurface.
  
-!{set:cellbgcolor:#FFFFFF} function  !<<GenericThematicSurfaceFunctionValue-section,GenericThematicSurfaceFunctionValue>>  [0..*] !Specifies the intended purposes of the GenericThematicSurface.
+!{set:cellbgcolor:#FFFFFF} function «Property»  !<<GenericThematicSurfaceFunctionValue-section,GenericThematicSurfaceFunctionValue>>  [0..*] !Specifies the intended purposes of the GenericThematicSurface.
  
-!{set:cellbgcolor:#FFFFFF} usage  !<<GenericThematicSurfaceUsageValue-section,GenericThematicSurfaceUsageValue>>  [0..*] !Specifies the actual uses of the GenericThematicSurface.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<GenericThematicSurfaceUsageValue-section,GenericThematicSurfaceUsageValue>>  [0..*] !Specifies the actual uses of the GenericThematicSurface.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[GenericUnoccupiedSpace-section]]
@@ -109,13 +109,13 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class  !<<GenericUnoccupiedSpaceClassValue-section,GenericUnoccupiedSpaceClassValue>>  [0..1] !Indicates the specific type of the GenericUnoccupiedSpace.
+!{set:cellbgcolor:#FFFFFF} class «Property»  !<<GenericUnoccupiedSpaceClassValue-section,GenericUnoccupiedSpaceClassValue>>  [0..1] !Indicates the specific type of the GenericUnoccupiedSpace.
  
-!{set:cellbgcolor:#FFFFFF} function  !<<GenericUnoccupiedSpaceFunctionValue-section,GenericUnoccupiedSpaceFunctionValue>>  [0..*] !Specifies the intended purposes of the GenericUnoccupiedSpace.
+!{set:cellbgcolor:#FFFFFF} function «Property»  !<<GenericUnoccupiedSpaceFunctionValue-section,GenericUnoccupiedSpaceFunctionValue>>  [0..*] !Specifies the intended purposes of the GenericUnoccupiedSpace.
  
-!{set:cellbgcolor:#FFFFFF} usage  !<<GenericUnoccupiedSpaceUsageValue-section,GenericUnoccupiedSpaceUsageValue>>  [0..*] !Specifies the actual uses of the GenericUnoccupiedSpace.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<GenericUnoccupiedSpaceUsageValue-section,GenericUnoccupiedSpaceUsageValue>>  [0..*] !Specifies the actual uses of the GenericUnoccupiedSpace.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |===   
 
 ===== *Data Types*
@@ -138,11 +138,11 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} name  !<<CharacterString-section,CharacterString>>  !Specifies the name of the DateAttribute.
+!{set:cellbgcolor:#FFFFFF} name «Property»  !<<CharacterString-section,CharacterString>>  !Specifies the name of the DateAttribute.
  
-!{set:cellbgcolor:#FFFFFF} value  !<<Date-section,Date>>  !Specifies the "Date" value.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} value «Property»  !<<Date-section,Date>>  !Specifies the "Date" value.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
 |=== 
 
 [[DoubleAttribute-section]]
@@ -163,11 +163,11 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} name  !<<CharacterString-section,CharacterString>>  !Specifies the name of the DoubleAttribute.
+!{set:cellbgcolor:#FFFFFF} name «Property»  !<<CharacterString-section,CharacterString>>  !Specifies the name of the DoubleAttribute.
  
-!{set:cellbgcolor:#FFFFFF} value  !<<Real-section,Real>>  !Specifies the "Double" value.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} value «Property»  !<<Real-section,Real>>  !Specifies the "Double" value.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
 |=== 
 
 [[GenericAttributeSet-section]]
@@ -183,7 +183,7 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} genericAttribute 
+!{set:cellbgcolor:#FFFFFF} genericAttribute «Property»
 !<<AbstractGenericAttribute-section,AbstractGenericAttribute>> 
  [1..*]
 !Relates to the generic attributes that are part of the GenericAttributeSet.
@@ -192,11 +192,11 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} codeSpace  !<<URI-section,URI>>  [0..1] !Associates the GenericAttributeSet with an authority that maintains the collection of generic attributes.
+!{set:cellbgcolor:#FFFFFF} codeSpace «Property»  !<<URI-section,URI>>  [0..1] !Associates the GenericAttributeSet with an authority that maintains the collection of generic attributes.
  
-!{set:cellbgcolor:#FFFFFF} name  !<<CharacterString-section,CharacterString>>  !Specifies the name of the GenericAttributeSet.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} name «Property»  !<<CharacterString-section,CharacterString>>  !Specifies the name of the GenericAttributeSet.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
 |=== 
 
 [[IntAttribute-section]]
@@ -217,11 +217,11 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} name  !<<CharacterString-section,CharacterString>>  !Specifies the name of the IntAttribute.
+!{set:cellbgcolor:#FFFFFF} name «Property»  !<<CharacterString-section,CharacterString>>  !Specifies the name of the IntAttribute.
  
-!{set:cellbgcolor:#FFFFFF} value  !<<Integer-section,Integer>>  !Specifies the "Integer" value.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} value «Property»  !<<Integer-section,Integer>>  !Specifies the "Integer" value.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
 |=== 
 
 [[MeasureAttribute-section]]
@@ -242,11 +242,11 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} name  !<<CharacterString-section,CharacterString>>  !Specifies the name of the MeasureAttribute.
+!{set:cellbgcolor:#FFFFFF} name «Property»  !<<CharacterString-section,CharacterString>>  !Specifies the name of the MeasureAttribute.
  
-!{set:cellbgcolor:#FFFFFF} value  !<<Measure-section,Measure>>  !Specifies the value of the MeasureAttribute. The value is of type "Measure", which can additionally provide the units of measure. [cf. ISO 19103]
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} value «Property»  !<<Measure-section,Measure>>  !Specifies the value of the MeasureAttribute. The value is of type "Measure", which can additionally provide the units of measure. [cf. ISO 19103]
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
 |=== 
 
 [[StringAttribute-section]]
@@ -267,11 +267,11 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} name  !<<CharacterString-section,CharacterString>>  !Specifies the name of the StringAttribute.
+!{set:cellbgcolor:#FFFFFF} name «Property»  !<<CharacterString-section,CharacterString>>  !Specifies the name of the StringAttribute.
  
-!{set:cellbgcolor:#FFFFFF} value  !<<CharacterString-section,CharacterString>>  !Specifies the "String" value.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} value «Property»  !<<CharacterString-section,CharacterString>>  !Specifies the "String" value.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
 |=== 
 
 [[UriAttribute-section]]
@@ -292,11 +292,11 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} name  !<<CharacterString-section,CharacterString>>  !Specifies the name of the UriAttribute.
+!{set:cellbgcolor:#FFFFFF} name «Property»  !<<CharacterString-section,CharacterString>>  !Specifies the name of the UriAttribute.
  
-!{set:cellbgcolor:#FFFFFF} value  !<<URI-section,URI>>  !Specifies the "URI" value.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} value «Property»  !<<URI-section,URI>>  !Specifies the "URI" value.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
 |===   
 
 ===== *Basic Types*

@@ -27,8 +27,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[AbstractCityObject-section]]
@@ -44,27 +44,27 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} generalizesTo 
+!{set:cellbgcolor:#FFFFFF} generalizesTo «Property» 
 !<<AbstractCityObject-section,AbstractCityObject>>  
 [*]
 !Relates generalized representations of the same real-world object in different Levels of Detail to the city object. The direction of this relation is from the city object to the corresponding generalized city objects.
-!{set:cellbgcolor:#FFFFFF} genericAttribute 
+!{set:cellbgcolor:#FFFFFF} genericAttribute «Property» 
 !<<AbstractGenericAttribute-section,AbstractGenericAttribute>>  
 [*]
 !Relates generic attributes to the city object.
-!{set:cellbgcolor:#FFFFFF} dynamizer 
+!{set:cellbgcolor:#FFFFFF} dynamizer «Property» 
 !<<AbstractDynamizer-section,AbstractDynamizer>>  
 [*]
 !Relates Dynamizer objects to the city object. These allow timeseries data to override static attribute values of the city object.
-!{set:cellbgcolor:#FFFFFF} appearance 
+!{set:cellbgcolor:#FFFFFF} appearance «Property» 
 !<<AbstractAppearance-section,AbstractAppearance>>  
 [*]
 !Relates appearances to the city object.
-!{set:cellbgcolor:#FFFFFF} externalReference 
+!{set:cellbgcolor:#FFFFFF} externalReference «Property» 
 !<<ExternalReference-section,ExternalReference>>  
 [*]
 !References external objects in other information systems that have a relation to the city object.
-!{set:cellbgcolor:#FFFFFF} relatedTo 
+!{set:cellbgcolor:#FFFFFF} relatedTo «Property» 
 !<<AbstractCityObject-section,AbstractCityObject>>  
 [*]
 !Relates other city objects to the city object. It also describes how the city objects are related to each other.
@@ -73,11 +73,11 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} relativeToTerrain  !<<RelativeToTerrain-section,RelativeToTerrain>>  [0..1] !Describes the vertical position of the city object relative to the surrounding terrain.
+!{set:cellbgcolor:#FFFFFF} relativeToTerrain «Property»  !<<RelativeToTerrain-section,RelativeToTerrain>>  [0..1] !Describes the vertical position of the city object relative to the surrounding terrain.
  
-!{set:cellbgcolor:#FFFFFF} relativeToWater  !<<RelativeToWater-section,RelativeToWater>>  [0..1] !Describes the vertical position of the city object relative to the surrounding water surface.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} relativeToWater «Property»  !<<RelativeToWater-section,RelativeToWater>>  [0..1] !Describes the vertical position of the city object relative to the surrounding water surface.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[AbstractDynamizer-section]]
@@ -97,8 +97,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[AbstractFeature-section]]
@@ -119,15 +119,15 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} description  !<<CharacterString-section,CharacterString>>  [0..1] !Provides further information on the feature.
+!{set:cellbgcolor:#FFFFFF} description «Property»  !<<CharacterString-section,CharacterString>>  [0..1] !Provides further information on the feature.
  
-!{set:cellbgcolor:#FFFFFF} featureID  !<<ID-section,ID>>  !Specifies the unique identifier of the feature that is valid in the instance document within which it occurs.
+!{set:cellbgcolor:#FFFFFF} featureID «Property»  !<<ID-section,ID>>  !Specifies the unique identifier of the feature that is valid in the instance document within which it occurs.
  
-!{set:cellbgcolor:#FFFFFF} identifier  !<<ScopedName-section,ScopedName>>  [0..1] !Specifies the unique identifier of the feature that is valid globally.
+!{set:cellbgcolor:#FFFFFF} identifier «Property»  !<<ScopedName-section,ScopedName>>  [0..1] !Specifies the unique identifier of the feature that is valid globally.
  
-!{set:cellbgcolor:#FFFFFF} name  !<<GenericName-section,GenericName>>  [0..*] !Specifies the name of the feature.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} name «Property»  !<<GenericName-section,GenericName>>  [0..*] !Specifies the name of the feature.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[AbstractFeatureWithLifespan-section]]
@@ -148,15 +148,15 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} creationDate  !<<DateTime-section,DateTime>>  [0..1] !Indicates the date at which a CityGML feature was added to the CityModel.
+!{set:cellbgcolor:#FFFFFF} creationDate «Property»  !<<DateTime-section,DateTime>>  [0..1] !Indicates the date at which a CityGML feature was added to the CityModel.
  
-!{set:cellbgcolor:#FFFFFF} terminationDate  !<<DateTime-section,DateTime>>  [0..1] !Indicates the date at which a CityGML feature was removed from the CityModel.
+!{set:cellbgcolor:#FFFFFF} terminationDate «Property»  !<<DateTime-section,DateTime>>  [0..1] !Indicates the date at which a CityGML feature was removed from the CityModel.
  
-!{set:cellbgcolor:#FFFFFF} validFrom  !<<DateTime-section,DateTime>>  [0..1] !Indicates the date at wich a CityGML feature started to exist in the real world.
+!{set:cellbgcolor:#FFFFFF} validFrom «Property»  !<<DateTime-section,DateTime>>  [0..1] !Indicates the date at wich a CityGML feature started to exist in the real world.
  
-!{set:cellbgcolor:#FFFFFF} validTo  !<<DateTime-section,DateTime>>  [0..1] !Indicates the date at wich a CityGML feature ended to exist in the real world.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} validTo «Property»  !<<DateTime-section,DateTime>>  [0..1] !Indicates the date at wich a CityGML feature ended to exist in the real world.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[AbstractLogicalSpace-section]]
@@ -176,8 +176,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[AbstractOccupiedSpace-section]]
@@ -193,15 +193,15 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} lod3ImplicitRepresentation 
+!{set:cellbgcolor:#FFFFFF} lod3ImplicitRepresentation «Property» 
 !<<ImplicitGeometry-section,ImplicitGeometry>>  
 [0..1]
 !Relates to an implicit geometry that represents the occupied space in Level of Detail 3.
-!{set:cellbgcolor:#FFFFFF} lod1ImplicitRepresentation 
+!{set:cellbgcolor:#FFFFFF} lod1ImplicitRepresentation «Property» 
 !<<ImplicitGeometry-section,ImplicitGeometry>>  
 [0..1]
 !Relates to an implicit geometry that represents the occupied space in Level of Detail 1.
-!{set:cellbgcolor:#FFFFFF} lod2ImplicitRepresentation 
+!{set:cellbgcolor:#FFFFFF} lod2ImplicitRepresentation «Property» 
 !<<ImplicitGeometry-section,ImplicitGeometry>>  
 [0..1]
 !Relates to an implicit geometry that represents the occupied space in Level of Detail 2.
@@ -209,8 +209,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[AbstractPhysicalSpace-section]]
@@ -226,19 +226,19 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} lod3TerrainIntersectionCurve 
+!{set:cellbgcolor:#FFFFFF} lod3TerrainIntersectionCurve «Property» 
 !<<GM_MultiCurve-section,GM_MultiCurve>>  
 [0..1]
 !Relates to a 3D MultiCurve geometry that represents the terrain intersection curve of the physical space in Level of Detail 3.
-!{set:cellbgcolor:#FFFFFF} lod2TerrainIntersectionCurve 
+!{set:cellbgcolor:#FFFFFF} lod2TerrainIntersectionCurve «Property» 
 !<<GM_MultiCurve-section,GM_MultiCurve>>  
 [0..1]
 !Relates to a 3D MultiCurve geometry that represents the terrain intersection curve of the physical space in Level of Detail 2.
-!{set:cellbgcolor:#FFFFFF} pointCloud 
+!{set:cellbgcolor:#FFFFFF} pointCloud «Property» 
 !<<AbstractPointCloud-section,AbstractPointCloud>>  
 [0..1]
 !Relates to a 3D PointCloud that represents the physical space.
-!{set:cellbgcolor:#FFFFFF} lod1TerrainIntersectionCurve 
+!{set:cellbgcolor:#FFFFFF} lod1TerrainIntersectionCurve «Property» 
 !<<GM_MultiCurve-section,GM_MultiCurve>>  
 [0..1]
 !Relates to a 3D MultiCurve geometry that represents the terrain intersection curve of the physical space in Level of Detail 1.
@@ -246,8 +246,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[AbstractPointCloud-section]]
@@ -267,8 +267,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[AbstractSpace-section]]
@@ -284,47 +284,47 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} lod2MultiCurve 
+!{set:cellbgcolor:#FFFFFF} lod2MultiCurve «Property» 
 !<<GM_MultiCurve-section,GM_MultiCurve>>  
 [0..1]
 !Relates to a 3D MultiCurve geometry that represents the space in Level of Detail 2.
-!{set:cellbgcolor:#FFFFFF} lod0MultiCurve 
+!{set:cellbgcolor:#FFFFFF} lod0MultiCurve «Property» 
 !<<GM_MultiCurve-section,GM_MultiCurve>>  
 [0..1]
 !Relates to a 3D MultiCurve geometry that represents the space in Level of Detail 0.
-!{set:cellbgcolor:#FFFFFF} lod0MultiSurface 
+!{set:cellbgcolor:#FFFFFF} lod0MultiSurface «Property» 
 !<<GM_MultiSurface-section,GM_MultiSurface>>  
 [0..1]
 !Relates to a 3D MultiSurface geometry that represents the space in Level of Detail 0.
-!{set:cellbgcolor:#FFFFFF} lod2MultiSurface 
+!{set:cellbgcolor:#FFFFFF} lod2MultiSurface «Property» 
 !<<GM_MultiSurface-section,GM_MultiSurface>>  
 [0..1]
 !Relates to a 3D MultiSurface geometry that represents the space in Level of Detail 2.
-!{set:cellbgcolor:#FFFFFF} lod3MultiSurface 
+!{set:cellbgcolor:#FFFFFF} lod3MultiSurface «Property» 
 !<<GM_MultiSurface-section,GM_MultiSurface>>  
 [0..1]
 !Relates to a 3D MultiSurface geometry that represents the space in Level of Detail 3.
-!{set:cellbgcolor:#FFFFFF} lod0Point 
+!{set:cellbgcolor:#FFFFFF} lod0Point «Property» 
 !<<GM_Point-section,GM_Point>>  
 [0..1]
 !Relates to a 3D Point geometry that represents the space in Level of Detail 0.
-!{set:cellbgcolor:#FFFFFF} lod3Solid 
+!{set:cellbgcolor:#FFFFFF} lod3Solid «Property» 
 !<<GM_Solid-section,GM_Solid>>  
 [0..1]
 !Relates to a 3D Solid geometry that represents the space in Level of Detail 3.
-!{set:cellbgcolor:#FFFFFF} lod3MultiCurve 
+!{set:cellbgcolor:#FFFFFF} lod3MultiCurve «Property» 
 !<<GM_MultiCurve-section,GM_MultiCurve>>  
 [0..1]
 !Relates to a 3D MultiCurve geometry that represents the space in Level of Detail 3.
-!{set:cellbgcolor:#FFFFFF} lod2Solid 
+!{set:cellbgcolor:#FFFFFF} lod2Solid «Property» 
 !<<GM_Solid-section,GM_Solid>>  
 [0..1]
 !Relates to a 3D Solid geometry that represents the space in Level of Detail 2.
-!{set:cellbgcolor:#FFFFFF} boundary 
+!{set:cellbgcolor:#FFFFFF} boundary «Property» 
 !<<AbstractSpaceBoundary-section,AbstractSpaceBoundary>>  
 [*]
 !Relates to surfaces that bound the space.
-!{set:cellbgcolor:#FFFFFF} lod1Solid 
+!{set:cellbgcolor:#FFFFFF} lod1Solid «Property» 
 !<<GM_Solid-section,GM_Solid>>  
 [0..1]
 !Relates to a 3D Solid geometry that represents the space in Level of Detail 1.
@@ -333,13 +333,13 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} area  !<<QualifiedArea-section,QualifiedArea>>  [0..*] !Specifies qualified areas related to the space.
+!{set:cellbgcolor:#FFFFFF} area «Property»  !<<QualifiedArea-section,QualifiedArea>>  [0..*] !Specifies qualified areas related to the space.
  
-!{set:cellbgcolor:#FFFFFF} spaceType  !<<SpaceType-section,SpaceType>>  [0..1] !Specifies the degree of openness of a space.
+!{set:cellbgcolor:#FFFFFF} spaceType «Property»  !<<SpaceType-section,SpaceType>>  [0..1] !Specifies the degree of openness of a space.
  
-!{set:cellbgcolor:#FFFFFF} volume  !<<QualifiedVolume-section,QualifiedVolume>>  [0..*] !Specifies qualified volumes related to the space.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} volume «Property»  !<<QualifiedVolume-section,QualifiedVolume>>  [0..*] !Specifies qualified volumes related to the space.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[AbstractSpaceBoundary-section]]
@@ -359,8 +359,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[AbstractThematicSurface-section]]
@@ -376,27 +376,27 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} lod1MultiSurface 
+!{set:cellbgcolor:#FFFFFF} lod1MultiSurface «Property» 
 !<<GM_MultiSurface-section,GM_MultiSurface>>  
 [0..1]
 !Relates to a 3D MultiSurface geometry that represents the thematic surface in Level of Detail 1.
-!{set:cellbgcolor:#FFFFFF} pointCloud 
+!{set:cellbgcolor:#FFFFFF} pointCloud «Property» 
 !<<AbstractPointCloud-section,AbstractPointCloud>>  
 [0..1]
 !Relates to a 3D PointCloud that represents the thematic surface.
-!{set:cellbgcolor:#FFFFFF} lod0MultiCurve 
+!{set:cellbgcolor:#FFFFFF} lod0MultiCurve «Property» 
 !<<GM_MultiCurve-section,GM_MultiCurve>>  
 [0..1]
 !Relates to a 3D MultiCurve geometry that represents the thematic surface in Level of Detail 0.
-!{set:cellbgcolor:#FFFFFF} lod3MultiSurface 
+!{set:cellbgcolor:#FFFFFF} lod3MultiSurface «Property» 
 !<<GM_MultiSurface-section,GM_MultiSurface>>  
 [0..1]
 !Relates to a 3D MultiSurface geometry that represents the thematic surface in Level of Detail 3.
-!{set:cellbgcolor:#FFFFFF} lod0MultiSurface 
+!{set:cellbgcolor:#FFFFFF} lod0MultiSurface «Property» 
 !<<GM_MultiSurface-section,GM_MultiSurface>>  
 [0..1]
 !Relates to a 3D MultiSurface geometry that represents the thematic surface in Level of Detail 0.
-!{set:cellbgcolor:#FFFFFF} lod2MultiSurface 
+!{set:cellbgcolor:#FFFFFF} lod2MultiSurface «Property» 
 !<<GM_MultiSurface-section,GM_MultiSurface>>  
 [0..1]
 !Relates to a 3D MultiSurface geometry that represents the thematic surface in Level of Detail 2.
@@ -405,9 +405,9 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} area  !<<QualifiedArea-section,QualifiedArea>>  [0..*] !Specifies qualified areas related to the thematic surface.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} area «Property»  !<<QualifiedArea-section,QualifiedArea>>  [0..*] !Specifies qualified areas related to the thematic surface.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[AbstractUnoccupiedSpace-section]]
@@ -427,8 +427,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[AbstractVersion-section]]
@@ -448,8 +448,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[AbstractVersionTransition-section]]
@@ -469,8 +469,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[Address-section]]
@@ -486,11 +486,11 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} multiPoint 
+!{set:cellbgcolor:#FFFFFF} multiPoint «Property» 
 !<<GM_MultiPoint-section,GM_MultiPoint>>  
 [0..1]
 !Relates to the MultiPoint geometry of the Address. The geometry relates the address spatially to a city object.
-!{set:cellbgcolor:#FFFFFF} xalAddress 
+!{set:cellbgcolor:#FFFFFF} xalAddress «Property» 
 !<<XALAddressDetails-section,XALAddressDetails>>  
 [1]
 !Relates an OASIS address object to the Address.
@@ -498,8 +498,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[CityModel-section]]
@@ -515,7 +515,7 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} cityModelMember 
+!{set:cellbgcolor:#FFFFFF} cityModelMember «Property» 
 !<<CityModelMember-section,CityModelMember>>  
 [*]
 !Relates to all objects that are part of the CityModel.
@@ -524,9 +524,9 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} engineeringCRS  !<<EngineeringCRS-section,EngineeringCRS>>  [0..1] !Specifies the local coordinate reference system of the CityModel.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} engineeringCRS «Property»  !<<EngineeringCRS-section,EngineeringCRS>>  [0..1] !Specifies the local coordinate reference system of the CityModel.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[CityObjectRelation-section]]
@@ -542,7 +542,7 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} genericAttribute 
+!{set:cellbgcolor:#FFFFFF} genericAttribute «Property» 
 !<<AbstractGenericAttribute-section,AbstractGenericAttribute>>  
 [*]
 !Relates generic attributes to the CityObjectRelation.
@@ -551,9 +551,9 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} relationType  !<<RelationTypeValue-section,RelationTypeValue>>  !Indicates the specific type of the CityObjectRelation.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} relationType «Property»  !<<RelationTypeValue-section,RelationTypeValue>>  !Indicates the specific type of the CityObjectRelation.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[ClosureSurface-section]]
@@ -573,8 +573,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[ImplicitGeometry-section]]
@@ -590,15 +590,15 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} relativeGeometry 
+!{set:cellbgcolor:#FFFFFF} relativeGeometry «Property» 
 !<<GM_Object-section,GM_Object>>  
 [0..1]
 !Relates to a prototypical geometry in a local coordinate system stored inline with the city model.
-!{set:cellbgcolor:#FFFFFF} referencePoint 
+!{set:cellbgcolor:#FFFFFF} referencePoint «Property» 
 !<<GM_Point-section,GM_Point>>  
 [1]
 !Relates to a 3D Point geometry that represents the base point of the object in the world coordinate system.
-!{set:cellbgcolor:#FFFFFF} appearance 
+!{set:cellbgcolor:#FFFFFF} appearance «Property» 
 !<<AbstractAppearance-section,AbstractAppearance>>  
 [*]
 !Relates appearances to the ImplicitGeometry.
@@ -607,15 +607,15 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} libraryObject  !<<URI-section,URI>>  [0..1] !Specifies the URI that points to the prototypical geometry stored in an external file.
+!{set:cellbgcolor:#FFFFFF} libraryObject «Property»  !<<URI-section,URI>>  [0..1] !Specifies the URI that points to the prototypical geometry stored in an external file.
  
-!{set:cellbgcolor:#FFFFFF} mimeType  !<<MimeTypeValue-section,MimeTypeValue>>  [0..1] !Specifies the MIME type of the external file that stores the prototypical geometry.
+!{set:cellbgcolor:#FFFFFF} mimeType «Property»  !<<MimeTypeValue-section,MimeTypeValue>>  [0..1] !Specifies the MIME type of the external file that stores the prototypical geometry.
  
-!{set:cellbgcolor:#FFFFFF} objectID  !<<ID-section,ID>>  !Specifies the unique identifier of the ImplicitGeometry.
+!{set:cellbgcolor:#FFFFFF} objectID «Property»  !<<ID-section,ID>>  !Specifies the unique identifier of the ImplicitGeometry.
  
-!{set:cellbgcolor:#FFFFFF} transformationMatrix  !<<TransformationMatrix4x4-section,TransformationMatrix4x4>>  !Specifies the mathematical transformation (translation, rotation, and scaling) between the prototypical geometry and the actual spatial position of the object.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} transformationMatrix «Property»  !<<TransformationMatrix4x4-section,TransformationMatrix4x4>>  !Specifies the mathematical transformation (translation, rotation, and scaling) between the prototypical geometry and the actual spatial position of the object.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |===   
 
 ===== *Data Types*
@@ -637,8 +637,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
 |=== 
 
 [[ExternalReference-section]]
@@ -659,13 +659,13 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} informationSystem  !<<URI-section,URI>>  [0..1] !Specifies the URI that points to the external information system.
+!{set:cellbgcolor:#FFFFFF} informationSystem «Property»  !<<URI-section,URI>>  [0..1] !Specifies the URI that points to the external information system.
  
-!{set:cellbgcolor:#FFFFFF} relationType  !<<URI-section,URI>>  [0..1] !Specifies an URI that additionally qualifies the ExternalReference. The URI can point to a definition from an external ontology (e.g. the sameAs relation from OWL) and allows for mapping the ExternalReference to RDF triples.
+!{set:cellbgcolor:#FFFFFF} relationType «Property»  !<<URI-section,URI>>  [0..1] !Specifies an URI that additionally qualifies the ExternalReference. The URI can point to a definition from an external ontology (e.g. the sameAs relation from OWL) and allows for mapping the ExternalReference to RDF triples.
  
-!{set:cellbgcolor:#FFFFFF} targetResource  !<<URI-section,URI>>  !Specifies the URI that points to the object in the external information system.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} targetResource «Property»  !<<URI-section,URI>>  !Specifies the URI that points to the object in the external information system.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
 |=== 
 
 [[Occupancy-section]]
@@ -686,13 +686,13 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} interval  !<<IntervalValue-section,IntervalValue>>  [0..1] !Indicates the time period the occupants are contained by a feature.
+!{set:cellbgcolor:#FFFFFF} interval «Property»  !<<IntervalValue-section,IntervalValue>>  [0..1] !Indicates the time period the occupants are contained by a feature.
  
-!{set:cellbgcolor:#FFFFFF} numberOfOccupants  !<<Integer-section,Integer>>  !Indicates the number of occupants contained by a feature.
+!{set:cellbgcolor:#FFFFFF} numberOfOccupants «Property»  !<<Integer-section,Integer>>  !Indicates the number of occupants contained by a feature.
  
-!{set:cellbgcolor:#FFFFFF} occupantType  !<<OccupantTypeValue-section,OccupantTypeValue>>  [0..1] !Indicates the specific type of the occupants that are contained by a feature.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} occupantType «Property»  !<<OccupantTypeValue-section,OccupantTypeValue>>  [0..1] !Indicates the specific type of the occupants that are contained by a feature.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
 |=== 
 
 [[QualifiedArea-section]]
@@ -713,11 +713,11 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} area  !<<Area-section,Area>>  !Specifies the value of the QualifiedArea.
+!{set:cellbgcolor:#FFFFFF} area «Property»  !<<Area-section,Area>>  !Specifies the value of the QualifiedArea.
  
-!{set:cellbgcolor:#FFFFFF} typeOfArea  !<<QualifiedAreaTypeValue-section,QualifiedAreaTypeValue>>  !Indicates the specific type of the QualifiedArea.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} typeOfArea «Property»  !<<QualifiedAreaTypeValue-section,QualifiedAreaTypeValue>>  !Indicates the specific type of the QualifiedArea.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
 |=== 
 
 [[QualifiedVolume-section]]
@@ -738,11 +738,11 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} typeOfVolume  !<<QualifiedVolumeTypeValue-section,QualifiedVolumeTypeValue>>  !Indicates the specific type of the QualifiedVolume.
+!{set:cellbgcolor:#FFFFFF} typeOfVolume «Property»  !<<QualifiedVolumeTypeValue-section,QualifiedVolumeTypeValue>>  !Indicates the specific type of the QualifiedVolume.
  
-!{set:cellbgcolor:#FFFFFF} volume  !<<Volume-section,Volume>>  !Specifies the value of the QualifiedVolume.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} volume «Property»  !<<Volume-section,Volume>>  !Specifies the value of the QualifiedVolume.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
 |=== 
 
 [[XALAddressDetails-section]]
@@ -762,8 +762,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
 |===   
 
 ===== *Basic Types*
@@ -787,8 +787,8 @@ DoubleBetween0and1.allInstances()->forAll( p \| p >=0 and p <= 1 )
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
 |=== 
 
 [[DoubleBetween0and1List-section]]
@@ -809,9 +809,9 @@ DoubleBetween0and1.allInstances()->forAll( p \| p >=0 and p <= 1 )
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} list  !<<DoubleBetween0and1-section,DoubleBetween0and1>>  !Specifies the list of double values.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} list   !<<DoubleBetween0and1-section,DoubleBetween0and1>>  !Specifies the list of double values.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
 |=== 
 
 [[DoubleList-section]]
@@ -832,9 +832,9 @@ DoubleBetween0and1.allInstances()->forAll( p \| p >=0 and p <= 1 )
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} list  !<<Real-section,Real>>  !Specifies the list of double values.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} list   !<<Real-section,Real>>  !Specifies the list of double values.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
 |=== 
 
 [[DoubleOrNilReasonList-section]]
@@ -855,9 +855,9 @@ DoubleBetween0and1.allInstances()->forAll( p \| p >=0 and p <= 1 )
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} list  !<<DoubleOrNilReason-section,DoubleOrNilReason>>  !Specifies the list of double values and/or nil reasons.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} list «Property»  !<<DoubleOrNilReason-section,DoubleOrNilReason>>  !Specifies the list of double values and/or nil reasons.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
 |=== 
 
 [[ID-section]]
@@ -877,8 +877,8 @@ DoubleBetween0and1.allInstances()->forAll( p \| p >=0 and p <= 1 )
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
 |=== 
 
 [[IntegerBetween0and3-section]]
@@ -900,8 +900,8 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
 |=== 
 
 [[MeasureOrNilReasonList-section]]
@@ -922,9 +922,9 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} uom  !<<UnitOfMeasure-section,UnitOfMeasure>>  !Specifies the unit of measurement of the double values.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} uom «Property»  !<<UnitOfMeasure-section,UnitOfMeasure>>  !Specifies the unit of measurement of the double values.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
 |=== 
 
 [[TransformationMatrix2x2-section]]
@@ -945,8 +945,8 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
 |=== 
 
 [[TransformationMatrix3x4-section]]
@@ -967,8 +967,8 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
 |=== 
 
 [[TransformationMatrix4x4-section]]
@@ -989,9 +989,9 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
-|===   
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|===
 
 ===== *Unions*
 
@@ -1056,7 +1056,7 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
  
 !{set:cellbgcolor:#FFFFFF} URI  !<<URI-section,URI>>  !Specifies a URI that points to a resource that describes the nil reason.
 !===
-|===   
+|===
 
 ===== *Code Lists*
 
@@ -1168,7 +1168,7 @@ IntegerBetween0and4.allInstances()->forAll( p \| p >= 0 and p <= 4)
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TopologicRelationTypeValue is a code list used to classify topological city object relations. 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===   
+|===
 
 ===== *Enumerations*
 

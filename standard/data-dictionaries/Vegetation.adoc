@@ -27,8 +27,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[PlantCover-section]]
@@ -49,19 +49,19 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} averageHeight  !<<Length-section,Length>>  [0..1] !Specifies the average height of the PlantCover.
+!{set:cellbgcolor:#FFFFFF} averageHeight «Property»  !<<Length-section,Length>>  [0..1] !Specifies the average height of the PlantCover.
  
-!{set:cellbgcolor:#FFFFFF} class  !<<PlantCoverClassValue-section,PlantCoverClassValue>>  [0..1] !Indicates the specific type of the PlantCover.
+!{set:cellbgcolor:#FFFFFF} class «Property»  !<<PlantCoverClassValue-section,PlantCoverClassValue>>  [0..1] !Indicates the specific type of the PlantCover.
  
-!{set:cellbgcolor:#FFFFFF} function  !<<PlantCoverFunctionValue-section,PlantCoverFunctionValue>>  [0..*] !Specifies the intended purposes of the PlantCover.
+!{set:cellbgcolor:#FFFFFF} function «Property»  !<<PlantCoverFunctionValue-section,PlantCoverFunctionValue>>  [0..*] !Specifies the intended purposes of the PlantCover.
  
-!{set:cellbgcolor:#FFFFFF} maxHeight  !<<Length-section,Length>>  [0..1] !Specifies the maximum height of the PlantCover.
+!{set:cellbgcolor:#FFFFFF} maxHeight «Property»  !<<Length-section,Length>>  [0..1] !Specifies the maximum height of the PlantCover.
  
-!{set:cellbgcolor:#FFFFFF} minHeight  !<<Length-section,Length>>  [0..1] !Specifies the minimum height of the PlantCover.
+!{set:cellbgcolor:#FFFFFF} minHeight «Property»  !<<Length-section,Length>>  [0..1] !Specifies the minimum height of the PlantCover.
  
-!{set:cellbgcolor:#FFFFFF} usage  !<<PlantCoverUsageValue-section,PlantCoverUsageValue>>  [0..*] !Specifies the actual uses of the PlantCover.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<PlantCoverUsageValue-section,PlantCoverUsageValue>>  [0..*] !Specifies the actual uses of the PlantCover.
 !===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
 
 [[SolitaryVegetationObject-section]]
@@ -82,26 +82,26 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class  !<<SolitaryVegetationObjectClassValue-section,SolitaryVegetationObjectClassValue>>  [0..1] !Indicates the specific type of the SolitaryVegetationObject.
+!{set:cellbgcolor:#FFFFFF} class «Property»  !<<SolitaryVegetationObjectClassValue-section,SolitaryVegetationObjectClassValue>>  [0..1] !Indicates the specific type of the SolitaryVegetationObject.
  
-!{set:cellbgcolor:#FFFFFF} crownDiameter  !<<Length-section,Length>>  [0..1] !Specifies the diameter of the SolitaryCityObject's crown.
+!{set:cellbgcolor:#FFFFFF} crownDiameter «Property»  !<<Length-section,Length>>  [0..1] !Specifies the diameter of the SolitaryCityObject's crown.
  
-!{set:cellbgcolor:#FFFFFF} function  !<<SolitaryVegetationObjectFunctionValue-section,SolitaryVegetationObjectFunctionValue>>  [0..*] !Specifies the intended purposes of the SolitaryVegetationObject.
+!{set:cellbgcolor:#FFFFFF} function «Property»  !<<SolitaryVegetationObjectFunctionValue-section,SolitaryVegetationObjectFunctionValue>>  [0..*] !Specifies the intended purposes of the SolitaryVegetationObject.
  
-!{set:cellbgcolor:#FFFFFF} height  !<<Length-section,Length>>  [0..1] !Distance between the highest point of the vegetation object and the lowest point of the terrain at the bottom of the object.
+!{set:cellbgcolor:#FFFFFF} height «Property»  !<<Length-section,Length>>  [0..1] !Distance between the highest point of the vegetation object and the lowest point of the terrain at the bottom of the object.
  
-!{set:cellbgcolor:#FFFFFF} maxRootBallDepth  !<<Length-section,Length>>  [0..1] !Specifies the vertical distance between the lowest point of the SolitaryVegetationObject's root ball and the terrain surface.
+!{set:cellbgcolor:#FFFFFF} maxRootBallDepth «Property»  !<<Length-section,Length>>  [0..1] !Specifies the vertical distance between the lowest point of the SolitaryVegetationObject's root ball and the terrain surface.
  
-!{set:cellbgcolor:#FFFFFF} rootBallDiameter  !<<Length-section,Length>>  [0..1] !Specifies the diameter of the SolitaryCityObject's root ball.
+!{set:cellbgcolor:#FFFFFF} rootBallDiameter «Property»  !<<Length-section,Length>>  [0..1] !Specifies the diameter of the SolitaryCityObject's root ball.
  
-!{set:cellbgcolor:#FFFFFF} species  !<<SpeciesValue-section,SpeciesValue>>  [0..1] !Indicates the botanical name of the SolitaryVegetationObject.
+!{set:cellbgcolor:#FFFFFF} species «Property»  !<<SpeciesValue-section,SpeciesValue>>  [0..1] !Indicates the botanical name of the SolitaryVegetationObject.
  
-!{set:cellbgcolor:#FFFFFF} trunkDiameter  !<<Length-section,Length>>  [0..1] !Specifies the diameter of the SolitaryCityObject's trunk.
+!{set:cellbgcolor:#FFFFFF} trunkDiameter «Property»  !<<Length-section,Length>>  [0..1] !Specifies the diameter of the SolitaryCityObject's trunk.
  
-!{set:cellbgcolor:#FFFFFF} usage  !<<SolitaryVegetationObjectUsageValue-section,SolitaryVegetationObjectUsageValue>>  [0..*] !Specifies the actual uses of the SolitaryVegetationObject.
-3+!{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes have the stereotype «Property»
+!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<SolitaryVegetationObjectUsageValue-section,SolitaryVegetationObjectUsageValue>>  [0..*] !Specifies the actual uses of the SolitaryVegetationObject.
 !===
-|===  
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
+|===   
 
 ===== *Data Types*
 
