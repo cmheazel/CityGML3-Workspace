@@ -1,0 +1,151 @@
+== Terms and Definitions
+This document uses the terms defined in Sub-clause 5.3 of [OGC 06-121r8], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this Best Practice.
+
+For the purposes of this document, the following additional terms and definitions apply.
+
+*2D data* +
+geometry of features is represented in a two-dimensional space +
+NOTE In other words, the geometry of 2D data is given using (X,Y) coordinates. +
+{blank}[INSPIRE D2.8.III.2, definition 1]
+
+*2.5D data* +
+geometry of features is represented in a three-dimensional space with the constraint that, for each (X,Y) position, there is only one Z +
+{blank}[INSPIRE D2.8.III.2, definition 2]
+
+*3D data* +
+Geometry of features is represented in a three-dimensional space. +
+NOTE In other words, the geometry of 2D data is given using (X,Y,Z) coordinates without any constraints. +
+{blank}[INSPIRE D2.8.III.2, definition 3]
+
+*conceptual model* +
+model that defines concepts of a universe of discourse +
+{blank}[ISO 19101-1:2014, 4.1.5]
+
+*conceptual schema* +
+formal description of a conceptual model +
+{blank}[ISO 19101-1:2014, 4.1.6]
+
+*conformance test class* +
+set of conformance test modules that must be applied to receive a single certificate of
+conformance +
+{blank}[OGC 08-131r3, definition 4.4]
+
+*feature* +
+abstraction of real world phenomena +
+{blank}[ISO 19101-1:2014, definition 4.1.11]
+
+*feature attribute* +
+characteristic of a feature +
+{blank}[ISO 19101-1:2014, definition 4.1.12]
+
+*feature type* +
+class of features having common characteristics +
+{blank}[ISO 19156:2011, definition 4.7]
+
+*level of detail* +
+quantity of information that portrays the real world +
+NOTE The concept comprises data capturing rules of spatial object types, the accuracy and the types of geometries, and other aspects of a data specification. In particular, it is related to the notions of scale and resolution. +
+{blank}[INSPIRE Glossary]
+
+*life-cycle information* +
+set of properties of a spatial object that describe the temporal characteristics of a version of a spatial object or the changes between versions +
+{blank}[INSPIRE Glossary]
+
+*measurement* +
+set of operations having the object of determining the value of a quantity +
+{blank}[ISO 19101-2:2018, definition 3.21] / [VIM:1993, 2.1]
+
+*model* +
+abstraction of some aspects of reality +
+{blank}[ISO 19109:2015, definition 4.15]
+
+*observation* +
+act of measuring or otherwise determining the value of a property +
+{blank}[ISO 19156:2011, definition 4.11]
+
+*observation procedure* +
+method, algorithm or instrument, or system of these, which may be used in making an
+observation +
+{blank}[ISO 19156:2011, 4.12]
+
+*observation result* +
+estimate of the value of a property determined through a known observation procedure +
+{blank}[ISO 19156:2011, 4.14]
+
+*property* +
+facet or attribute of an object referenced by a name. +
+{blank}[ISO 19143:2010, definition 4.21]
+
+*requirements class* +
+aggregate of all requirement modules that must all be satisfied to satisfy a conformance
+test class +
+{blank}[OGC 08-131r3, definition 4.19]
+
+*schema* +
+formal description of a model +
+{blank}[ISO 19101-1:2014, definition 4.1.34]
+
+*sensor* +
+type of observation procedure that provides the estimated value of an observed
+property at its output +
+{blank}[OGC 08-094r1, definition 4.5]
+
+*timeseries* +
+sequence of data values which are ordered in time +
+{blank}[OGC 15-043r3]
+
+*universe of discourse* +
+view of the real or hypothetical world that includes everything of interest +
+{blank}[ISO 19101-1:2014, definition 4.1.38]
+
+*version* +
+Particular variation of a spatial object +
+{blank}[INSPIRE Glossary]
+
+=== Abbreviated Terms
+The following abbreviated terms are used in this document:
+
+[yellow-background]*+++<color rgb="#ff0000">The list of acronyms needs to be reviewed once all sections have been updated.</color>+++*
+
+* 2D {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Two Dimensional
+* 3D {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Three Dimensional
+* AEC {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Architecture, Engineering, Construction
+* ALKIS {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} German National Standard for Cadastral Information
+* ATKIS {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} German National Standard for Topographic and Cartographic Information
+* B-Rep {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Boundary Representation
+* bSI {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} buildingSMART International
+* CAD {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Computer Aided Design
+* COLLADA {nbsp} Collaborative Design Activity
+* CSG {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Constructive Solid Geometry
+* DTM {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Digital Terrain Model
+* DXF {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Drawing Exchange Format
+* EuroSDR {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} European Spatial Data Research Organisation
+* ESRI {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Environmental Systems Research Institute
+* FM {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Facility Management
+* GDF {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Geographic Data Files
+* GDI-DE {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Spatial Data Infrastructure Germany (Geodateninfrastruktur Deutschland)
+* GDI {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} NRW Geodata Infrastructure North-Rhine Westphalia
+* GML {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Geography Markup Language
+* IAI {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} International Alliance for Interoperability (now buildingSMART International (bSI))
+* IETF {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Internet Engineering Task Force
+* IFC {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Industry Foundation Classes
+* ISO {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} International Organization for Standardisation
+* LOD {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Level of Detail
+* NBIMS {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} National Building Information Model Standard
+* OASIS {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Organisation for the Advancement of Structured Information Standards
+* OGC {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Open Geospatial Consortium
+* OSCRE {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Open Standards Consortium for Real Estate
+* SIG 3D {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Special Interest Group 3D of the GDI-DE
+* TC211 {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} ISO Technical Committee 211
+* TIC {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Terrain Intersection Curve
+* TIN {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Triangulated Irregular Network
+* UML {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Unified Modeling Language
+* URI {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Uniform Resource Identifier
+* VRML {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Virtual Reality Modeling Language
+* W3C {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} World Wide Web Consortium
+* W3DS {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} OGC Web 3D Service
+* WFS {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} OGC Web Feature Service
+* X3D {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Open Standards XML-enabled 3D file format of the Web 3D Consortium
+* XML {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Extensible Markup Language
+* xAL {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} OASIS extensible Address Language
+
