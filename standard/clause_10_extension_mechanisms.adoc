@@ -14,7 +14,7 @@ These extension mechanisms have been introduced with CityGML 1.0 and are since w
 
 === Code Lists
 
-When an attribute may have only one value selected from a small and fixed set of values, CityGML 3.0 specifies those as an enumeration. When the set of possible values is a priori unknown but predefined and fixed for a specific application domain or user organization, the values may be modelled as classes with the stereotype  << CodeList >>. 
+When an attribute may have only one value selected from a small and fixed set of values, CityGML 3.0 specifies those as an enumeration. When the set of possible values is a priori unknown but predefined and fixed for a specific application domain or user organization, the values may be modelled as classes with the stereotype &#171;CodeList&#187;. 
 
 Many attributes of CityGML types use a code list as data type such as, for instance, the attributes _class_, _usage,_ and _function_ of city objects. A code list defines a value domain including a code for each permissible value. In contrast to enumerations that specify a fixed and predefined value range in the CityGML UML model, modifications to the value domain become possible with code lists. 
 
@@ -57,7 +57,7 @@ Every ADE must be organized into one or more UML packages having globally unique
 
 Following ISO 19109, features are the primary view of geospatial information and the core elements of application schemas. ADEs therefore typically extend CityGML by defining new feature types appropriate to the application area together with additional content such as object types, data types, code lists, and enumerations.
 
-Every feature type in an ADE must be derived either directly or indirectly from the CityGML root feature type _core:AbstractFeature_ or, depending on its type and characteristics, from a more appropriate subclass thereof. According to the general space concept of CityGML, features representing spaces or space boundaries shall be derived either directly or indirectly from _core:AbstractSpace_ or _core:AbstractSpaceBoundary_ respectively. UML classes representing top-level feature types shall use the _<<TopLevelFeatureType>>_ stereotype.
+Every feature type in an ADE must be derived either directly or indirectly from the CityGML root feature type _core:AbstractFeature_ or, depending on its type and characteristics, from a more appropriate subclass thereof. According to the general space concept of CityGML, features representing spaces or space boundaries shall be derived either directly or indirectly from _core:AbstractSpace_ or _core:AbstractSpaceBoundary_ respectively. UML classes representing top-level feature types shall use the _&#171;TopLevelFeatureType&#187;_ stereotype.
 
 In contrast to feature types, object types and data types are not required to be derived from a predefined CityGML class unless explicitly stated otherwise.
 
@@ -77,7 +77,7 @@ If a predefined CityGML feature type lacks one or more properties required for a
 
 For this reason, CityGML provides a way to augment the predefined CityGML feature types with additional properties from the ADE domain without the need for subclassing. Each CityGML feature type has an extension attribute of name “adeOf__FeatureTypeName__” and type “_ADEOfFeatureTypeName”_, where _FeatureTypeName_ is replaced by the class name in which the attribute is defined. For example, the _bldg:Building_ class offers the attribute _bldg:adeOfBuilding_ of type _bldg:ADEOfBuilding_. Each of these extension attributes can occur zero to unlimited times, and the attribute types are defined as abstract and empty data types.
 
-If an ADE augments a specific CityGML feature type with additional ADE properties, the ADE shall create a subclass of the corresponding abstract data type associated with the feature class. This subclass must also be defined as data type using the stereotype _<<DataType>>_. The additional application-specific attributes and associations are then modelled as properties of the ADE subclass. This may include, amongst others, attributes with simple or complex data type, spatial properties or associations to other object and feature types from the ADE or external models such as CityGML.
+If an ADE augments a specific CityGML feature type with additional ADE properties, the ADE shall create a subclass of the corresponding abstract data type associated with the feature class. This subclass must also be defined as data type using the stereotype _&#171;DataType&#187;_. The additional application-specific attributes and associations are then modelled as properties of the ADE subclass. This may include, amongst others, attributes with simple or complex data type, spatial properties or associations to other object and feature types from the ADE or external models such as CityGML.
 
 The predefined “_ADEOfFeatureTypeName”_ data types are called “hooks” because they are used as the head of a hierarchy of ADE subclasses attaching application-specific properties. When subclassing the “hook” of a specific CityGML feature type in an ADE, the properties defined in the subclass can be used for that feature type as well as for all directly or indirectly derived feature types, including feature types defined in the same or another ADE.
 
