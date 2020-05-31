@@ -1,12 +1,8 @@
 [[Core-spatial-class-table]]
-.Spatial Classes used in Core
+.Space Classes used in Core
 [cols="2,6",options="headers"]
 |===
 ^|*Class* ^|*Description*
-|<<AbstractCityObject-section,AbstractCityObject>> +
- «FeatureType»  |AbstractCityObject is the abstract superclass of all thematic classes within the CityGML data model.
-|<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> +
- «FeatureType»  |AbstractFeatureWithLifespan is the base class for all CityGML features. It allows the optional specification of the real-world and database times for the existence of each feature.
 |<<AbstractLogicalSpace-section,AbstractLogicalSpace>> +
  «FeatureType»  |AbstractLogicalSpace is the abstract superclass for all types of logical spaces. Logical space refers to spaces that are not bounded by physical surfaces but are defined according to thematic considerations.
 |<<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> +
@@ -21,8 +17,6 @@
  «FeatureType»  |AbstractThematicSurface is the abstract superclass for all types of thematic surfaces.
 |<<AbstractUnoccupiedSpace-section,AbstractUnoccupiedSpace>> +
  «FeatureType»  |AbstractUnoccupiedSpace is the abstract superclass for all types of physically unoccupied spaces. Unoccupied space refers to spaces that are entirely or mostly free of matter.
-|<<CityModel-section,CityModel>> +
- «FeatureType»  |CityModel is the container for all objects belonging to a city model.
 |<<ClosureSurface-section,ClosureSurface>> +
  «FeatureType»  |ClosureSurface is a special type of thematic surface used to close holes in volumetric objects. Closure surfaces are virtual (non-physical) surfaces.
 |===
