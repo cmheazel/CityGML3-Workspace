@@ -2,7 +2,12 @@
 
 This document is an OGC Conceptual Data Model Standard to specify the representation of virtual 3D city and landscape models. The CityGML v3.0 Conceptual Model is expected to be the basis for a number of future Encoding Standards in which subsets of the Conceptual Model can be implemented. These Encoding Standards will enable both storage and exchange of data. Support for GML encoding is expected as a minimum, though additonal encodings in formats such as JSON and database schemas will be highly desirable. 
 
-In contrast to the previous CityGML v2.0, the v3.0 Conceptual Model is NOT implemented as an application schema of the Geography Markup Language version 3.1.1 (GML3.1), though a preliminary encoding in GML version 3.2.1 is available as an informative resource separately from this specification to allow initial implementation and testing.
+In contrast to the previous CityGML v2.0, the v3.0 Conceptual Model is NOT implemented as an application schema of the Geography Markup Language version 3.1.1 (GML3.1), though a preliminary encoding in GML version 3.2.1 is available as an informative resource separately from this specification to allow implementation and testing.
+
+The target of the conformance classes specified in this document are
+
+* CityGML encoding specifications that provide encodings for the UML data model specified in this document, and 
+* Additional UML models that can be created by users to extend this data model as Application Domain Extensions. 
 
 CityGML models comprise of georeferenced 3D vector data along with the semantics associated with the data. In contrast to other 3D vector formats, CityGML is based on a rich, general purpose information model in addition to geometry and appearance information that allows for the integration of a variety of source data to come together in a City Model. To enable the use of CityGML in specific  domain areas CityGML has historically provided an extension mechanism to enrich the data with identifiable features and properties, preserving semantic interoperability. As it is recognised that an implementable expension mechanism might have dependencies on the encoding language, the CityGML v3.0 Conceptual Model specifies high level requirements rather than an full extension model. 
 
@@ -34,6 +39,7 @@ Features of the CityGML v3.0 Conceptual Model:
 * Multiple representations in different LODs simultaneously; generalisation relations between objects in different LODs
 * Ability to combine different interior and exterior LoDs. including representation of floor plans
 * Optional topological connections between feature (sub)geometries
-* Enables a variety of different encoding specifications including GML and JSON
-* Ability to define application specific extensions by defining specific “hooks” in the CityGML schema to allow the addition of application specific extensions. This is done in the spirit of the Application Domain Extensions (ADE) mechanism in previous versions of CityGML, though as the detailed implementation will be dependent on the encoding language, the mechanism will have to be fully specified in the physical encoding standards
-
+* Enables a variety of different encoding specifications, including GML and JSON
+* Extension of data model through code lists, generic objects and Application Domain Extensions (ADEs)
+* With CityGML 3.0, ADEs become platform-independent models on a conceptual level that can be mapped to multiple and different target encodings. ADEs are implemented as UML models that extend the data model in this specification. This includes a mechanism that favours the insertion of additional feature properties into any defined feature class through 'hooks' over subtyping of features. This means that the existing feature classes can be used and additional properties from one or more ADEs can easily be supported in different encodings
+* Ability to specify an ADE that can be further extended 
