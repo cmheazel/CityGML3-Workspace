@@ -7,7 +7,7 @@ In contrast to the previous CityGML v2.0, the v3.0 Conceptual Model is NOT imple
 The target of the conformance classes specified in this document are
 
 * CityGML encoding specifications that provide encodings for the UML data model specified in this document, and 
-* Additional UML models that can be crated by users to extend this data model as Application Domain Extensions. 
+* Additional UML models that can be created by users to extend this data model as Application Domain Extensions. 
 
 CityGML models comprise of georeferenced 3D vector data along with the semantics associated with the data. In contrast to other 3D vector formats, CityGML is based on a rich, general purpose information model in addition to geometry and appearance information that allows for the integration of a variety of source data to come together in a City Model. To enable the use of CityGML in specific  domain areas CityGML has historically provided an extension mechanism to enrich the data with identifiable features and properties, preserving semantic interoperability. As it is recognised that an implementable expension mechanism might have dependencies on the encoding language, the CityGML v3.0 Conceptual Model specifies high level requirements rather than an full extension model. 
 
