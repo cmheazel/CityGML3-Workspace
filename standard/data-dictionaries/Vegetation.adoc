@@ -1,5 +1,5 @@
 [[Vegetation-package-dd]]
-=== Vegetation Package
+=== *Vegetation*
 
 [cols="1,4",frame=none,grid=none]
 |===
@@ -27,6 +27,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractVegetationObject «Property»  !<<ADEOfAbstractVegetationObject-section,ADEOfAbstractVegetationObject>>  [0..*] !Augments AbstractVegetationObject with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
@@ -48,6 +50,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} adeOfPlantCover «Property»  !<<ADEOfPlantCover-section,ADEOfPlantCover>>  [0..*] !Augments the PlantCover with properties defined in an ADE.
  
 !{set:cellbgcolor:#FFFFFF} averageHeight «Property»  !<<Length-section,Length>>  [0..1] !Specifies the average height of the PlantCover.
  
@@ -82,6 +86,8 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
+!{set:cellbgcolor:#FFFFFF} adeOfSolitaryVegetationObject «Property»  !<<ADEOfSolitaryVegetationObject-section,ADEOfSolitaryVegetationObject>>  [0..*] !Augments the SolitaryVegetationObject with properties defined in an ADE.
+ 
 !{set:cellbgcolor:#FFFFFF} class «Property»  !<<SolitaryVegetationObjectClassValue-section,SolitaryVegetationObjectClassValue>>  [0..1] !Indicates the specific type of the SolitaryVegetationObject.
  
 !{set:cellbgcolor:#FFFFFF} crownDiameter «Property»  !<<Length-section,Length>>  [0..1] !Specifies the diameter of the SolitaryCityObject's crown.
@@ -105,7 +111,68 @@
 
 ==== Data Types
 
-none
+[[ADEOfAbstractVegetationObject-section]]
+[cols="1a"]
+|===
+|*ADEOfAbstractVegetationObject*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfAbstractVegetationObject acts as a hook to define properties within an ADE that are to be added to AbstractVegetationObject. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
+
+[[ADEOfPlantCover-section]]
+[cols="1a"]
+|===
+|*ADEOfPlantCover*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfPlantCover acts as a hook to define properties within an ADE that are to be added to a PlantCover. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
+
+[[ADEOfSolitaryVegetationObject-section]]
+[cols="1a"]
+|===
+|*ADEOfSolitaryVegetationObject*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfSolitaryVegetationObject acts as a hook to define properties within an ADE that are to be added to a SolitaryVegetationObject. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|===   
 
 ==== Basic Types
 

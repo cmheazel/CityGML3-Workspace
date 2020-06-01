@@ -1,5 +1,5 @@
 [[CityFurniture-package-dd]]
-=== CityFurniture Package
+=== *CityFurniture*
 
 [cols="1,4",frame=none,grid=none]
 |===
@@ -19,7 +19,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! CityFurniture is an object or piece of equipment installed in the outdoor environment for various purposes. Examples include street signs, traffic signals, street lamps, benches, fountains. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractOccupiedSpace-section,AbstractOccupiedSpace>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
-!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! sdf (OCL): inv: function='sdf'    
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -28,6 +27,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} adeOfCityFurniture «Property»  !<<ADEOfCityFurniture-section,ADEOfCityFurniture>>  [0..*] !Augments the CityFurniture with properties defined in an ADE.
  
 !{set:cellbgcolor:#FFFFFF} class «Property»  !<<CityFurnitureClassValue-section,CityFurnitureClassValue>>  [0..1] !Indicates the specific type of the CityFurniture.
  
@@ -40,7 +41,26 @@
 
 ==== Data Types
 
-none
+[[ADEOfCityFurniture-section]]
+[cols="1a"]
+|===
+|*ADEOfCityFurniture*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfCityFurniture acts as a hook to define properties within an ADE that are to be added to a CityFurniture.  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|===
 
 ==== Basic Types
 
@@ -83,7 +103,7 @@ none
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! CityFurnitureUsageValue is a code list that enumerates the different uses of a CityFurniture. 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+|===   
 
 ==== Enumerations
 

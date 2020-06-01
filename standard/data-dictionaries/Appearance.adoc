@@ -1,5 +1,5 @@
 [[Appearance-package-dd]]
-=== Appearance Package
+=== *Appearance*
 
 [cols="1,4",frame=none,grid=none]
 |===
@@ -28,6 +28,8 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractSurfaceData «Property»  !<<ADEOfAbstractSurfaceData-section,ADEOfAbstractSurfaceData>>  [0..*] !Augments AbstractSurfaceData with properties defined in an ADE.
+ 
 !{set:cellbgcolor:#FFFFFF} isFront «Property»  !<<Boolean-section,Boolean>>  [0..1] !Indicates whether the texture or material is assigned to the front side or the back side of the surface geometry object.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
@@ -50,6 +52,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractTexture «Property»  !<<ADEOfAbstractTexture-section,ADEOfAbstractTexture>>  [0..*] !Augments AbstractTexture with properties defined in an ADE.
  
 !{set:cellbgcolor:#FFFFFF} borderColor «Property»  !<<ColorPlusOpacity-section,ColorPlusOpacity>>  [0..1] !Specifies the color of that part of the surface that is not covered by the texture.
  
@@ -86,6 +90,8 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
+!{set:cellbgcolor:#FFFFFF} adeOfAppearance «Property»  !<<ADEOfAppearance-section,ADEOfAppearance>>  [0..*] !Augments the Appearance with properties defined in an ADE.
+ 
 !{set:cellbgcolor:#FFFFFF} theme «Property»  !<<CharacterString-section,CharacterString>>  [0..1] !Specifies the topic of the Appearance. Each Appearance contains surface data for one theme only. Examples of themes are infrared radiation, noise pollution, or earthquake-induced structural stress.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
@@ -112,6 +118,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} adeOfGeoreferencedTexture «Property»  !<<ADEOfGeoreferencedTexture-section,ADEOfGeoreferencedTexture>>  [0..*] !Augments the GeoreferencedTexture with properties defined in an ADE.
  
 !{set:cellbgcolor:#FFFFFF} orientation «Property»  !<<TransformationMatrix2x2-section,TransformationMatrix2x2>>  [0..1] !Specifies the rotation and scaling of the image in form of a 2x2 matrix.
  
@@ -143,6 +151,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} adeOfParameterizedTexture «Property»  !<<ADEOfParameterizedTexture-section,ADEOfParameterizedTexture>>  [0..*] !Augments the ParameterizedTexture with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
@@ -188,6 +198,8 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
+!{set:cellbgcolor:#FFFFFF} adeOfX3DMaterial «Property»  !<<ADEOfX3DMaterial-section,ADEOfX3DMaterial>>  [0..*] !Augments the X3DMaterial with properties defined in an ADE.
+ 
 !{set:cellbgcolor:#FFFFFF} ambientIntensity «Property»  !<<DoubleBetween0and1-section,DoubleBetween0and1>>  [0..1] !Specifies the minimum percentage of diffuseColor that is visible regardless of light sources.
  
 !{set:cellbgcolor:#FFFFFF} diffuseColor «Property»  !<<Color-section,Color>>  [0..1] !Specifies the color of the light diffusely reflected by the surface geometry object.
@@ -216,6 +228,132 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AbstractTextureParameterization is the abstract superclass for different kinds of texture parameterizations. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
+
+[[ADEOfAbstractSurfaceData-section]]
+[cols="1a"]
+|===
+|*ADEOfAbstractSurfaceData*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfAbstractSurfaceData acts as a hook to define properties within an ADE that are to be added to AbstractSurfaceData. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
+
+[[ADEOfAbstractTexture-section]]
+[cols="1a"]
+|===
+|*ADEOfAbstractTexture*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfAbstractTexture acts as a hook to define properties within an ADE that are to be added to AbstractTexture. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
+
+[[ADEOfAppearance-section]]
+[cols="1a"]
+|===
+|*ADEOfAppearance*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfAppearance acts as a hook to define properties within an ADE that are to be added to an Appearance. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
+
+[[ADEOfGeoreferencedTexture-section]]
+[cols="1a"]
+|===
+|*ADEOfGeoreferencedTexture*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfGeoreferencedTexture acts as a hook to define properties within an ADE that are to be added to a GeoreferencedTexture. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
+
+[[ADEOfParameterizedTexture-section]]
+[cols="1a"]
+|===
+|*ADEOfParameterizedTexture*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfParameterizedTexture acts as a hook to define properties within an ADE that are to be added to a ParameterizedTexture. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
+
+[[ADEOfX3DMaterial-section]]
+[cols="1a"]
+|===
+|*ADEOfX3DMaterial*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfX3DMaterial acts as a hook to define properties within an ADE that are to be added to an X3DMaterial. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
 !===
@@ -293,7 +431,7 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! Color is a list of three double values between 0 and 1 defining an RGB color value. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<DoubleBetween0and1List-section,DoubleBetween0and1List>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «BasicType»
-!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! lengthOfList (OCL): inv: self.list->size() = 3    
+!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! lengthOfList (OCL): inv: list->size() = 3    
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -315,7 +453,7 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! Color is a list of four double values between 0 and 1 defining an RGBA color value. Opacity value of 0 means transparent. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<DoubleBetween0and1List-section,DoubleBetween0and1List>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «BasicType»
-!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! lengthOfList (OCL): inv: self.list->size() = 3 or self.list->size() = 4    
+!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! lengthOfList (OCL): inv: list->size() = 3 or list->size() = 4    
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -326,7 +464,7 @@
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
-|===
+|===   
 
 ==== Unions
 

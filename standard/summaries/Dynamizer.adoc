@@ -24,6 +24,20 @@
 [cols="2,6",options="headers"]
 |===
 ^|*Name* ^|*Description*
+|<<ADEOfAbstractAtomicTimeseries-section,ADEOfAbstractAtomicTimeseries>> +
+ «DataType»  |ADEOfAbstractAtomicTimeseries acts as a hook to define properties within an ADE that are to be added to AbstractAtomicTimeseries.
+|<<ADEOfAbstractTimeseries-section,ADEOfAbstractTimeseries>> +
+ «DataType»  |ADEOfAbstractTimeseries acts as a hook to define properties within an ADE that are to be added to AbstractTimeseries.
+|<<ADEOfCompositeTimeseries-section,ADEOfCompositeTimeseries>> +
+ «DataType»  |ADEOfCompositeTimeseries acts as a hook to define properties within an ADE that are to be added to a CompositeTimeseries.
+|<<ADEOfDynamizer-section,ADEOfDynamizer>> +
+ «DataType»  |ADEOfDynamizer acts as a hook to define properties within an ADE that are to be added to a Dynamizer.
+|<<ADEOfGenericTimeseries-section,ADEOfGenericTimeseries>> +
+ «DataType»  |ADEOfGenericTimeseries acts as a hook to define properties within an ADE that are to be added to a GenericTimeseries.
+|<<ADEOfStandardFileTimeseries-section,ADEOfStandardFileTimeseries>> +
+ «DataType»  |ADEOfStandardFileTimeseries acts as a hook to define properties within an ADE that are to be added to a StandardFileTimeseries.
+|<<ADEOfTabulatedFileTimeseries-section,ADEOfTabulatedFileTimeseries>> +
+ «DataType»  |ADEOfTabulatedFileTimeseries acts as a hook to define properties within an ADE that are to be added to a TabulatedFileTimeseries.
 |<<SensorConnection-section,SensorConnection>> +
  «DataType»  |A SensorConnection provides all details that are required to retrieve a specific datastream from an external sensor web service. It comprises the service type (e.g. OGC SensorThings API, OGC Sensor Observation Services, MQTT, proprietary platforms), the URL of the sensor service, the identifier for the sensor or thing and its observed property as well as information about the required authentication method.
 |<<TimeseriesComponent-section,TimeseriesComponent>> +
@@ -55,5 +69,3 @@
 |<<TabulatedFileTypeValue-section,TabulatedFileTypeValue>> +
  «CodeList»  |TabulatedFileTypeValue is a code list used to specify the data format of the referenced external tabulated data file.
 |===  
-
-

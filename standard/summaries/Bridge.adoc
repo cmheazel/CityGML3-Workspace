@@ -19,6 +19,27 @@
  «FeatureType»  |A BridgeRoom is a space within a Bridge or BridgePart intended for human occupancy (e.g. a place of work or recreation) and/or containment (storage) of animals or things. A BridgeRoom is bounded physically and/or virtually (e.g. by ClosureSurfaces or GenericSurfaces).
 |===
 
+[[Bridge-datatypes-table]]
+.Data Types used in Bridge
+[cols="2,6",options="headers"]
+|===
+^|*Name* ^|*Description*
+|<<ADEOfAbstractBridge-section,ADEOfAbstractBridge>> +
+ «DataType»  |ADEOfAbstractBridge acts as a hook to define properties within an ADE that are to be added to AbstractBridge.
+|<<ADEOfBridge-section,ADEOfBridge>> +
+ «DataType»  |ADEOfBridge acts as a hook to define properties within an ADE that are to be added to a Bridge.
+|<<ADEOfBridgeConstructiveElement-section,ADEOfBridgeConstructiveElement>> +
+ «DataType»  |ADEOfBridgeConstructiveElement acts as a hook to define properties within an ADE that are to be added to a BridgeConstructiveElement.
+|<<ADEOfBridgeFurniture-section,ADEOfBridgeFurniture>> +
+ «DataType»  |ADEOfBridgeFurniture acts as a hook to define properties within an ADE that are to be added to a BridgeFurniture.
+|<<ADEOfBridgeInstallation-section,ADEOfBridgeInstallation>> +
+ «DataType»  |ADEOfBridgeInstallation acts as a hook to define properties within an ADE that are to be added to a BridgeInstallation.
+|<<ADEOfBridgePart-section,ADEOfBridgePart>> +
+ «DataType»  |ADEOfBridgePart acts as a hook to define properties within an ADE that are to be added to a BridgePart.
+|<<ADEOfBridgeRoom-section,ADEOfBridgeRoom>> +
+ «DataType»  |ADEOfBridgeRoom acts as a hook to define properties within an ADE that are to be added to a BridgeRoom.
+|===
+
 [[Bridge-codelist-table]]
 .CodeList Classes used in Bridge
 [cols="2,6",options="headers"]
@@ -55,5 +76,3 @@
 |<<BridgeUsageValue-section,BridgeUsageValue>> +
  «CodeList»  |BridgeUsageValue is a code list that enumerates the different uses of a Bridge.
 |===  
-
-

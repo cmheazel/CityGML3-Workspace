@@ -1,5 +1,5 @@
 [[CityObjectGroup-package-dd]]
-=== CityObjectGroup Package
+=== *CityObjectGroup*
 
 [cols="1,4",frame=none,grid=none]
 |===
@@ -36,6 +36,8 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
+!{set:cellbgcolor:#FFFFFF} adeOfCityObjectGroup «Property»  !<<ADEOfCityObjectGroup-section,ADEOfCityObjectGroup>>  [0..*] !Augments the CityObjectGroup with properties defined in an ADE.
+ 
 !{set:cellbgcolor:#FFFFFF} class «Property»  !<<CityObjectGroupClassValue-section,CityObjectGroupClassValue>>  [0..1] !Indicates the specific type of the CityObjectGroup.
  
 !{set:cellbgcolor:#FFFFFF} function «Property»  !<<CityObjectGroupFunctionValue-section,CityObjectGroupFunctionValue>>  [0..*] !Specifies the intended purposes of the CityObjectGroup.
@@ -63,14 +65,33 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} role «Property»  !<<CharacterString-section,CharacterString>>  !Describes the role the city object plays within the CityObjectGroup.
+!{set:cellbgcolor:#FFFFFF} role «Property»  !<<CharacterString-section,CharacterString>>  [0..1] !Describes the role the city object plays within the CityObjectGroup.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
-|===
+|===   
 
 ==== Data Types
 
-none
+[[ADEOfCityObjectGroup-section]]
+[cols="1a"]
+|===
+|*ADEOfCityObjectGroup*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfCityObjectGroup acts as a hook to define properties within an ADE that are to be added to a CityObjectGroup. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|===
 
 ==== Basic Types
 

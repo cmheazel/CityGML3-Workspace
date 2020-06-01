@@ -1,5 +1,5 @@
 [[PointCloud-package-dd]]
-=== PointCloud Package
+=== *PointCloud*
 
 [cols="1,4",frame=none,grid=none]
 |===
@@ -19,6 +19,7 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A PointCloud is an unordered collection of points that is a sampling of the geometry of a space or space boundary. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractPointCloud-section,AbstractPointCloud>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! inlineOrExternalPointCloud (OCL): inv: (points->notEmpty() and mimeType->isEmpty() and pointFile->isEmpty() and pointFileSrsName->isEmpty()) xor (points->isEmpty() and mimeType->notEmpty() and pointFile->notEmpty())    
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -32,6 +33,8 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
+!{set:cellbgcolor:#FFFFFF} adeOfPointCloud «Property»  !<<ADEOfPointCloud-section,ADEOfPointCloud>>  [0..*] !Augments the PointCloud with properties defined in an ADE.
+ 
 !{set:cellbgcolor:#FFFFFF} mimeType «Property»  !<<MimeTypeValue-section,MimeTypeValue>>  [0..1] !Specifies the MIME type of the external point cloud file.
  
 !{set:cellbgcolor:#FFFFFF} pointFile «Property»  !<<URI-section,URI>>  [0..1] !Specifies the URI that points to the external point cloud file.
@@ -43,7 +46,26 @@
 
 ==== Data Types
 
-none
+[[ADEOfPointCloud-section]]
+[cols="1a"]
+|===
+|*ADEOfPointCloud*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfPointCloud acts as a hook to define properties within an ADE that are to be added to a PointCloud. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|===
 
 ==== Basic Types
 

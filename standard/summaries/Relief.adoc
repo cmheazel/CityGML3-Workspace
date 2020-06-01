@@ -16,3 +16,22 @@
 |<<TINRelief-section,TINRelief>> +
  «FeatureType»  |A TINRelief represents a terrain component as a triangulated irregular network.
 |===
+
+[[Relief-datatypes-table]]
+.Data Types used in Relief
+[cols="2,6",options="headers"]
+|===
+^|*Name* ^|*Description*
+|<<ADEOfAbstractReliefComponent-section,ADEOfAbstractReliefComponent>> +
+ «DataType»  |ADEOfAbstractReliefComponent acts as a hook to define properties within an ADE that are to be added to AbstractReliefComponent.
+|<<ADEOfBreaklineRelief-section,ADEOfBreaklineRelief>> +
+ «DataType»  |ADEOfBreaklineRelief acts as a hook to define properties within an ADE that are to be added to a BreaklineRelief.
+|<<ADEOfMassPointRelief-section,ADEOfMassPointRelief>> +
+ «DataType»  |ADEOfMassPointRelief acts as a hook to define properties within an ADE that are to be added to a MassPointRelief.
+|<<ADEOfRasterRelief-section,ADEOfRasterRelief>> +
+ «DataType»  |ADEOfRasterRelief acts as a hook to define properties within an ADE that are to be added to a RasterRelief.
+|<<ADEOfReliefFeature-section,ADEOfReliefFeature>> +
+ «DataType»  |ADEOfReliefFeature acts as a hook to define properties within an ADE that are to be added to a ReliefFeature.
+|<<ADEOfTINRelief-section,ADEOfTINRelief>> +
+ «DataType»  |ADEOfTINRelief acts as a hook to define properties within an ADE that are to be added to a TINRelief.
+|===

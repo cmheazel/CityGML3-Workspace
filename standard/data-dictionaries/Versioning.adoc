@@ -1,5 +1,5 @@
 [[Versioning-package-dd]]
-=== Versioning Package
+=== *Versioning*
 
 [cols="1,4",frame=none,grid=none]
 |===
@@ -31,6 +31,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} adeOfVersion «Property»  !<<ADEOfVersion-section,ADEOfVersion>>  [0..*] !Augments the Version with properties defined in an ADE.
  
 !{set:cellbgcolor:#FFFFFF} tag «Property»  !<<CharacterString-section,CharacterString>>  [0..*] !Allows for adding keywords to the city model version.
 !===
@@ -67,6 +69,8 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
+!{set:cellbgcolor:#FFFFFF} adeOfVersionTransition «Property»  !<<ADEOfVersionTransition-section,ADEOfVersionTransition>>  [0..*] !Augments the VersionTransition with properties defined in an ADE.
+ 
 !{set:cellbgcolor:#FFFFFF} clonePredecessor «Property»  !<<Boolean-section,Boolean>>  !Indicates whether the set of city object instances belonging to the successor version of the city model is either explicitly enumerated within the successor version object (attribute clonePredecessor=false), or has to be derived from the modifications of the city model provided as a list of transactions on the city object versions contained in the predecessor version (attribute clonePredecessor=true).
  
 !{set:cellbgcolor:#FFFFFF} reason «Property»  !<<CharacterString-section,CharacterString>>  [0..1] !Specifies why the VersionTransition has been carried out.
@@ -74,9 +78,51 @@
 !{set:cellbgcolor:#FFFFFF} type «Property»  !<<TransitionTypeValue-section,TransitionTypeValue>>  [0..1] !Indicates the specific type of the VersionTransition.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
-|===   
+|===
 
 ==== Data Types
+
+[[ADEOfVersion-section]]
+[cols="1a"]
+|===
+|*ADEOfVersion*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfVersion acts as a hook to define properties within an ADE that are to be added to a Version. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
+
+[[ADEOfVersionTransition-section]]
+[cols="1a"]
+|===
+|*ADEOfVersionTransition*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfVersionTransition acts as a hook to define properties within an ADE that are to be added to a VersionTransition. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
 
 [[Transaction-section]]
 [cols="1a"]
@@ -91,14 +137,14 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} oldFeature «Version»
-!<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> 
- [0..1]
-!Relates to the version of the city object prior to the Transaction.
 !{set:cellbgcolor:#FFFFFF} newFeature «Version»
 !<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> 
  [0..1]
 !Relates to the version of the city object subsequent to the Transaction.
+!{set:cellbgcolor:#FFFFFF} oldFeature «Version»
+!<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> 
+ [0..1]
+!Relates to the version of the city object prior to the Transaction.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===

@@ -19,6 +19,27 @@
  «FeatureType»  |A TunnelPart is a physical or functional subdivision of a Tunnel. It would be considered a Tunnel, if it were not part of a collection of other TunnelParts.
 |===
 
+[[Tunnel-datatypes-table]]
+.Data Types used in Tunnel
+[cols="2,6",options="headers"]
+|===
+^|*Name* ^|*Description*
+|<<ADEOfAbstractTunnel-section,ADEOfAbstractTunnel>> +
+ «DataType»  |ADEOfAbstractTunnel acts as a hook to define properties within an ADE that are to be added to AbstractTunnel.
+|<<ADEOfHollowSpace-section,ADEOfHollowSpace>> +
+ «DataType»  |ADEOfHollowSpace acts as a hook to define properties within an ADE that are to be added to a HollowSpace.
+|<<ADEOfTunnel-section,ADEOfTunnel>> +
+ «DataType»  |ADEOfTunnel acts as a hook to define properties within an ADE that are to be added to a Tunnel.
+|<<ADEOfTunnelConstructiveElement-section,ADEOfTunnelConstructiveElement>> +
+ «DataType»  |ADEOfTunnelConstructiveElement acts as a hook to define properties within an ADE that are to be added to a TunnelConstructiveElement.
+|<<ADEOfTunnelFurniture-section,ADEOfTunnelFurniture>> +
+ «DataType»  |ADEOfTunnelFurniture acts as a hook to define properties within an ADE that are to be added to a TunnelFurniture.
+|<<ADEOfTunnelInstallation-section,ADEOfTunnelInstallation>> +
+ «DataType»  |ADEOfTunnelInstallation acts as a hook to define properties within an ADE that are to be added to a TunnelInstallation.
+|<<ADEOfTunnelPart-section,ADEOfTunnelPart>> +
+ «DataType»  |ADEOfTunnelPart acts as a hook to define properties within an ADE that are to be added to a TunnelPart.
+|===
+
 [[Tunnel-codelist-table]]
 .CodeList Classes used in Tunnel
 [cols="2,6",options="headers"]
@@ -55,5 +76,3 @@
 |<<TunnelUsageValue-section,TunnelUsageValue>> +
  «CodeList»  |TunnelUsageValue is a code list that enumerates the different uses of a Tunnel.
 |===  
-
-

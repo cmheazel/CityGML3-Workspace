@@ -11,6 +11,28 @@
  «FeatureType»  |A WaterGroundSurface represents the exterior boundary surface of the submerged bottom of a water body.
 |<<WaterSurface-section,WaterSurface>> +
  «FeatureType»  |A WaterSurface represents the upper exterior interface between a water body and the atmosphere.
+|===
+
+[[WaterBody-datatypes-table]]
+.Data Types used in WaterBody
+[cols="2,6",options="headers"]
+|===
+^|*Name* ^|*Description*
+|<<ADEOfAbstractWaterBoundarySurface-section,ADEOfAbstractWaterBoundarySurface>> +
+ «DataType»  |ADEOfAbstractWaterBoundarySurface acts as a hook to define properties within an ADE that are to be added to AbstractWaterBoundarySurface.
+|<<ADEOfWaterBody-section,ADEOfWaterBody>> +
+ «DataType»  |ADEOfWaterBody acts as a hook to define properties within an ADE that are to be added to a WaterBody.
+|<<ADEOfWaterGroundSurface-section,ADEOfWaterGroundSurface>> +
+ «DataType»  |ADEOfWaterGroundSurface acts as a hook to define properties within an ADE that are to be added to a WaterGroundSurface.
+|<<ADEOfWaterSurface-section,ADEOfWaterSurface>> +
+ «DataType»  |ADEOfWaterSurface acts as a hook to define properties within an ADE that are to be added to a WaterSurface.
+|===
+
+[[WaterBody-codelist-table]]
+.CodeList Classes used in WaterBody
+[cols="2,6",options="headers"]
+|===
+^|*Name* ^|*Description*
 |<<WaterBodyClassValue-section,WaterBodyClassValue>> +
  «CodeList»  |WaterBodyClassValue is a code list used to further classify a WaterBody.
 |<<WaterBodyFunctionValue-section,WaterBodyFunctionValue>> +
@@ -19,4 +41,4 @@
  «CodeList»  |WaterBodyUsageValue is a code list that enumerates the different uses of a WaterBody.
 |<<WaterLevelValue-section,WaterLevelValue>> +
  «CodeList»  |WaterLevelValue is a code list that enumerates the different levels of a water surface.
-|===
+|===  

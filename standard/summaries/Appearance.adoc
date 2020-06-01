@@ -24,16 +24,35 @@
 [cols="2,6",options="headers"]
 |===
 ^|*Name* ^|*Description*
-|<<Color-section,Color>> +
- «BasicType»  |Color is a list of three double values between 0 and 1 defining an RGB color value.
-|<<ColorPlusOpacity-section,ColorPlusOpacity>> +
- «BasicType»  |Color is a list of four double values between 0 and 1 defining an RGBA color value. Opacity value of 0 means transparent.
 |<<AbstractTextureParameterization-section,AbstractTextureParameterization>> +
  «DataType»  |AbstractTextureParameterization is the abstract superclass for different kinds of texture parameterizations.
+|<<ADEOfAbstractSurfaceData-section,ADEOfAbstractSurfaceData>> +
+ «DataType»  |ADEOfAbstractSurfaceData acts as a hook to define properties within an ADE that are to be added to AbstractSurfaceData.
+|<<ADEOfAbstractTexture-section,ADEOfAbstractTexture>> +
+ «DataType»  |ADEOfAbstractTexture acts as a hook to define properties within an ADE that are to be added to AbstractTexture.
+|<<ADEOfAppearance-section,ADEOfAppearance>> +
+ «DataType»  |ADEOfAppearance acts as a hook to define properties within an ADE that are to be added to an Appearance.
+|<<ADEOfGeoreferencedTexture-section,ADEOfGeoreferencedTexture>> +
+ «DataType»  |ADEOfGeoreferencedTexture acts as a hook to define properties within an ADE that are to be added to a GeoreferencedTexture.
+|<<ADEOfParameterizedTexture-section,ADEOfParameterizedTexture>> +
+ «DataType»  |ADEOfParameterizedTexture acts as a hook to define properties within an ADE that are to be added to a ParameterizedTexture.
+|<<ADEOfX3DMaterial-section,ADEOfX3DMaterial>> +
+ «DataType»  |ADEOfX3DMaterial acts as a hook to define properties within an ADE that are to be added to an X3DMaterial.
 |<<TexCoordGen-section,TexCoordGen>> +
  «DataType»  |TexCoordGen defines texture parameterization using a transformation matrix.
 |<<TexCoordList-section,TexCoordList>> +
  «DataType»  |TexCoordList defines texture parameterization using texture coordinates.
+|===
+
+[[Appearance-primitives-table]]
+.Primitive Data Types used in Appearance
+[cols="2,6",options="headers"]
+|===
+^|*Name* ^|*Description*
+|<<Color-section,Color>> +
+ «BasicType»  |Color is a list of three double values between 0 and 1 defining an RGB color value.
+|<<ColorPlusOpacity-section,ColorPlusOpacity>> +
+ «BasicType»  |Color is a list of four double values between 0 and 1 defining an RGBA color value. Opacity value of 0 means transparent.
 |===
 
 [[Appearance-enumeration-table]]
@@ -42,7 +61,7 @@
 |===
 ^|*Name* ^|*Description*
 |<<TextureType-section,TextureType>> +
- «Enumeration»  |TextureType enumerates the different texture types.
+ «Enumeratione» |TextureType enumerates the different texture types.
 |<<WrapMode-section,WrapMode>> +
- «Enumeration»  |WrapMode enumerates the different fill modes for textures.
+ «Enumeratione» |WrapMode enumerates the different fill modes for textures.
 |===

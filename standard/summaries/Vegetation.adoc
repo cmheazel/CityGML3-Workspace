@@ -9,6 +9,26 @@
  «TopLevelFeatureType»  |A SolitaryVegetationObject represents individual vegetation objects, e.g. trees or bushes.
 |<<AbstractVegetationObject-section,AbstractVegetationObject>> +
  «FeatureType»  |AbstractVegetationObject is the abstract superclass for all kinds of vegetation objects.
+|===
+
+[[Vegetation-datatypes-table]]
+.Data Types used in Vegetation
+[cols="2,6",options="headers"]
+|===
+^|*Name* ^|*Description*
+|<<ADEOfAbstractVegetationObject-section,ADEOfAbstractVegetationObject>> +
+ «DataType»  |ADEOfAbstractVegetationObject acts as a hook to define properties within an ADE that are to be added to AbstractVegetationObject.
+|<<ADEOfPlantCover-section,ADEOfPlantCover>> +
+ «DataType»  |ADEOfPlantCover acts as a hook to define properties within an ADE that are to be added to a PlantCover.
+|<<ADEOfSolitaryVegetationObject-section,ADEOfSolitaryVegetationObject>> +
+ «DataType»  |ADEOfSolitaryVegetationObject acts as a hook to define properties within an ADE that are to be added to a SolitaryVegetationObject.
+|===
+
+[[Vegetation-codelist-table]]
+.CodeList Classes used in Vegetation
+[cols="2,6",options="headers"]
+|===
+^|*Name* ^|*Description*
 |<<PlantCoverClassValue-section,PlantCoverClassValue>> +
  «CodeList»  |PlantCoverClassValue is a code list used to further classify a PlantCover.
 |<<PlantCoverFunctionValue-section,PlantCoverFunctionValue>> +
@@ -23,4 +43,4 @@
  «CodeList»  |SolitaryVegetationObjectUsageValue is a code list that enumerates the different uses of a SolitaryVegetationObject.
 |<<SpeciesValue-section,SpeciesValue>> +
  «CodeList»  |A SpeciesValue is a code list that enumerates the species of a SolitaryVegetationObject.
-|===
+|===  

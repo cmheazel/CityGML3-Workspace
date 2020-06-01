@@ -1,5 +1,5 @@
 [[Relief-package-dd]]
-=== Relief Package
+=== *Relief*
 
 [cols="1,4",frame=none,grid=none]
 |===
@@ -19,9 +19,7 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! An AbstractReliefComponent represents an element of the terrain surface - either a TIN, a Grid, mass points or break lines. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
-!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! polygonGeometry (OCL): inv:
-self.extent.patch->size()=1 and 
-self.extent.patch->forAll(oclIsKindOf(GM_Polygon))    
+!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! polygonGeometry (OCL): inv: extent.patch->size()=1 and extent.patch->forAll(oclIsKindOf(GM_Polygon))    
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -34,6 +32,8 @@ self.extent.patch->forAll(oclIsKindOf(GM_Polygon))
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractReliefComponent «Property»  !<<ADEOfAbstractReliefComponent-section,ADEOfAbstractReliefComponent>>  [0..*] !Augments AbstractReliefComponent with properties defined in an ADE.
  
 !{set:cellbgcolor:#FFFFFF} lod «Property»  !<<IntegerBetween0and3-section,IntegerBetween0and3>>  !Indicates the Level of Detail of the terrain component.
 !===
@@ -65,6 +65,8 @@ self.extent.patch->forAll(oclIsKindOf(GM_Polygon))
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} adeOfBreaklineRelief «Property»  !<<ADEOfBreaklineRelief-section,ADEOfBreaklineRelief>>  [0..*] !Augments the BreaklineRelief with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
@@ -94,6 +96,8 @@ self.extent.patch->forAll(oclIsKindOf(GM_Polygon))
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} adeOfMassPointRelief «Property»  !<<ADEOfMassPointRelief-section,ADEOfMassPointRelief>>  [0..*] !Augments the MassPointRelief with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
@@ -119,6 +123,8 @@ self.extent.patch->forAll(oclIsKindOf(GM_Polygon))
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} adeOfRasterRelief «Property»  !<<ADEOfRasterRelief-section,ADEOfRasterRelief>>  [0..*] !Augments the RasterRelief with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
@@ -144,6 +150,8 @@ self.extent.patch->forAll(oclIsKindOf(GM_Polygon))
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} adeOfReliefFeature «Property»  !<<ADEOfReliefFeature-section,ADEOfReliefFeature>>  [0..*] !Augments the ReliefFeature with properties defined in an ADE.
  
 !{set:cellbgcolor:#FFFFFF} lod «Property»  !<<IntegerBetween0and3-section,IntegerBetween0and3>>  !Indicates the Level of Detail of the ReliefFeature.
 !===
@@ -171,13 +179,139 @@ self.extent.patch->forAll(oclIsKindOf(GM_Polygon))
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} adeOfTINRelief «Property»  !<<ADEOfTINRelief-section,ADEOfTINRelief>>  [0..*] !Augments the TINRelief with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |===   
 
 ==== Data Types
 
-none
+[[ADEOfAbstractReliefComponent-section]]
+[cols="1a"]
+|===
+|*ADEOfAbstractReliefComponent*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfAbstractReliefComponent acts as a hook to define properties within an ADE that are to be added to AbstractReliefComponent. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
+
+[[ADEOfBreaklineRelief-section]]
+[cols="1a"]
+|===
+|*ADEOfBreaklineRelief*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfBreaklineRelief acts as a hook to define properties within an ADE that are to be added to a BreaklineRelief. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
+
+[[ADEOfMassPointRelief-section]]
+[cols="1a"]
+|===
+|*ADEOfMassPointRelief*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfMassPointRelief acts as a hook to define properties within an ADE that are to be added to a MassPointRelief. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
+
+[[ADEOfRasterRelief-section]]
+[cols="1a"]
+|===
+|*ADEOfRasterRelief*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfRasterRelief acts as a hook to define properties within an ADE that are to be added to a RasterRelief. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
+
+[[ADEOfReliefFeature-section]]
+[cols="1a"]
+|===
+|*ADEOfReliefFeature*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfReliefFeature acts as a hook to define properties within an ADE that are to be added to a ReliefFeature. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
+
+[[ADEOfTINRelief-section]]
+[cols="1a"]
+|===
+|*ADEOfTINRelief*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfTINRelief acts as a hook to define properties within an ADE that are to be added to a TINRelief. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|===
 
 ==== Basic Types
 

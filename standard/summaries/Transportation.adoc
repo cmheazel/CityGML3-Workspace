@@ -11,6 +11,8 @@
  «TopLevelFeatureType»  |A Square is a transportation space for unrestricted movement for vehicles, bicycles and/or pedestrians. This includes plazas as well as large sealed surfaces such as parking lots.
 |<<Track-section,Track>> +
  «TopLevelFeatureType»  |A Track is a small path mainly used by pedestrians. Tracks can be segmented into Sections and Intersections.
+|<<Waterway-section,Waterway>> +
+ «TopLevelFeatureType»  |A Waterway is a transportation space used for the movement of vessels upon or within a water body.
 |<<AbstractTransportationSpace-section,AbstractTransportationSpace>> +
  «FeatureType»  |AbstractTransportationSpace is the abstract superclass of transportation objects such as Roads, Tracks, Railways, Waterways or Squares.
 |<<AuxiliaryTrafficArea-section,AuxiliaryTrafficArea>> +
@@ -33,6 +35,45 @@
  «FeatureType»  |A TrafficArea is the ground surface of a TrafficSpace. Traffic areas are the surfaces upon which traffic actually takes place.
 |<<TrafficSpace-section,TrafficSpace>> +
  «FeatureType»  |A TrafficSpace is a space in which traffic takes place. Traffic includes the movement of entities such as trains, vehicles, pedestrians, ships, or other transportation types. 
+|===
+
+[[Transportation-datatypes-table]]
+.Data Types used in Transportation
+[cols="2,6",options="headers"]
+|===
+^|*Name* ^|*Description*
+|<<ADEOfAbstractTransportationSpace-section,ADEOfAbstractTransportationSpace>> +
+ «DataType»  |ADEOfAbstractTransportationSpace acts as a hook to define properties within an ADE that are to be added to AbstractTransportationSpace.
+|<<ADEOfAuxiliaryTrafficArea-section,ADEOfAuxiliaryTrafficArea>> +
+ «DataType»  |ADEOfAuxiliaryTrafficAra acts as a hook to define properties within an ADE that are to be added to an AuxiliaryTrafficArea.
+|<<ADEOfAuxiliaryTrafficSpace-section,ADEOfAuxiliaryTrafficSpace>> +
+ «DataType»  |ADEOfAuxiliaryTrafficSpace acts as a hook to define properties within an ADE that are to be added to an AuxiliaryTrafficSpace.
+|<<ADEOfClearanceSpace-section,ADEOfClearanceSpace>> +
+ «DataType»  |ADEOfClearanceSpace acts as a hook to define properties within an ADE that are to be added to a ClearanceSpace.
+|<<ADEOfHole-section,ADEOfHole>> +
+ «DataType»  |ADEOfHole acts as a hook to define properties within an ADE that are to be added to a Hole.
+|<<ADEOfHoleSurface-section,ADEOfHoleSurface>> +
+ «DataType»  |ADEOfHoleSurface acts as a hook to define properties within an ADE that are to be added to a HoleSurface.
+|<<ADEOfIntersection-section,ADEOfIntersection>> +
+ «DataType»  |ADEOfIntersection acts as a hook to define properties within an ADE that are to be added to an Intersection.
+|<<ADEOfMarking-section,ADEOfMarking>> +
+ «DataType»  |ADEOfMarking acts as a hook to define properties within an ADE that are to be added to a Marking.
+|<<ADEOfRailway-section,ADEOfRailway>> +
+ «DataType»  |ADEOfRailway acts as a hook to define properties within an ADE that are to be added to a Railway.
+|<<ADEOfRoad-section,ADEOfRoad>> +
+ «DataType»  |ADEOfRoad acts as a hook to define properties within an ADE that are to be added to a Road.
+|<<ADEOfSection-section,ADEOfSection>> +
+ «DataType»  |ADEOfSection acts as a hook to define properties within an ADE that are to be added to a Section.
+|<<ADEOfSquare-section,ADEOfSquare>> +
+ «DataType»  |ADEOfSquare acts as a hook to define properties within an ADE that are to be added to a Square.
+|<<ADEOfTrack-section,ADEOfTrack>> +
+ «DataType»  |ADEOfTrack acts as a hook to define properties within an ADE that are to be added to a Track.
+|<<ADEOfTrafficArea-section,ADEOfTrafficArea>> +
+ «DataType»  |ADEOfTrafficArea acts as a hook to define properties within an ADE that are to be added to a TrafficArea.
+|<<ADEOfTrafficSpace-section,ADEOfTrafficSpace>> +
+ «DataType»  |ADEOfTrafficSpace acts as a hook to define properties within an ADE that are to be added to a TrafficSpace.
+|<<ADEOfWaterway-section,ADEOfWaterway>> +
+ «DataType»  |ADEOfWaterway acts as a hook to define properties within an ADE that are to be added to a Waterway.
 |===
 
 [[Transportation-enumeration-table]]
@@ -117,8 +158,6 @@
  «CodeList»  |TransportationSpaceFunctionValue is a code list that enumerates the different purposes of a TransportationSpace.
 |<<TransportationSpaceUsageValue-section,TransportationSpaceUsageValue>> +
  «CodeList»  |TransportationSpaceUsageValue is a code list that enumerates the different uses of a TransportationSpace.
-|<<Waterway-section,Waterway>> +
- «TopLevelFeatureType»  |A Waterway is a transportation space used for the movement of vessels upon or within a water body.
 |<<WaterwayClassValue-section,WaterwayClassValue>> +
  «CodeList»  |WaterwayClassValue is a code list used to further classify a Waterway.
 |<<WaterwayFunctionValue-section,WaterwayFunctionValue>> +
@@ -126,5 +165,3 @@
 |<<WaterwayUsageValue-section,WaterwayUsageValue>> +
  «CodeList»  |WaterwayUsageValue is a code list that enumerates the different uses of a Waterway.
 |===  
-
-

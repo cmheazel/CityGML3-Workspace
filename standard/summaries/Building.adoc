@@ -30,6 +30,26 @@
 [cols="2,6",options="headers"]
 |===
 ^|*Name* ^|*Description*
+|<<ADEOfAbstractBuilding-section,ADEOfAbstractBuilding>> +
+ «DataType»  |ADEOfAbstractBuilding acts as a hook to define properties within an ADE that are to be added to AbstractBuilding.
+|<<ADEOfAbstractBuildingSubdivision-section,ADEOfAbstractBuildingSubdivision>> +
+ «DataType»  |ADEOfAbstractBuildingSubdivision acts as a hook to define properties within an ADE that are to be added to AbstractBuildingSubdivision.
+|<<ADEOfBuilding-section,ADEOfBuilding>> +
+ «DataType»  |ADEOfBuilding acts as a hook to define properties within an ADE that are to be added to a Building.
+|<<ADEOfBuildingConstructiveElement-section,ADEOfBuildingConstructiveElement>> +
+ «DataType»  |ADEOfBuildingConstructiveElement acts as a hook to define properties within an ADE that are to be added to a BuildingConstructiveElement.
+|<<ADEOfBuildingFurniture-section,ADEOfBuildingFurniture>> +
+ «DataType»  |ADEOfBuildingFurniture acts as a hook to define properties within an ADE that are to be added to a BuildingFurniture.
+|<<ADEOfBuildingInstallation-section,ADEOfBuildingInstallation>> +
+ «DataType»  |ADEOfBuildingInstallation acts as a hook to define properties within an ADE that are to be added to a BuildingInstallation.
+|<<ADEOfBuildingPart-section,ADEOfBuildingPart>> +
+ «DataType»  |ADEOfBuildingPart acts as a hook to define properties within an ADE that are to be added to a BuildingPart.
+|<<ADEOfBuildingRoom-section,ADEOfBuildingRoom>> +
+ «DataType»  |ADEOfBuildingRoom acts as a hook to define properties within an ADE that are to be added to a BuildingRoom.
+|<<ADEOfBuildingUnit-section,ADEOfBuildingUnit>> +
+ «DataType»  |ADEOfBuildingUnit acts as a hook to define properties within an ADE that are to be added to a BuildingUnit. 
+|<<ADEOfStorey-section,ADEOfStorey>> +
+ «DataType»  |ADEOfStorey acts as a hook to define properties within an ADE that are to be added to a Storey.
 |<<RoomHeight-section,RoomHeight>> +
  «DataType»  |The RoomHeight represents a vertical distance (measured or estimated) between a low reference and a high reference. [cf. INSPIRE]
 |===
@@ -80,5 +100,3 @@
 |<<RoomElevationReferenceValue-section,RoomElevationReferenceValue>> +
  «CodeList»  |RoomElevationReferenceValue is a code list that enumerates the different elevation reference levels used to measure room heights.
 |===  
-
-

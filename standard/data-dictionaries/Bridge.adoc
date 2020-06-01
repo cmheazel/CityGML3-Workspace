@@ -1,5 +1,5 @@
 [[Bridge-package-dd]]
-=== Bridge Package
+=== *Bridge*
 
 [cols="1,4",frame=none,grid=none]
 |===
@@ -48,6 +48,8 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractBridge «Property»  !<<ADEOfAbstractBridge-section,ADEOfAbstractBridge>>  [0..*] !Augments AbstractBridge with properties defined in an ADE.
+ 
 !{set:cellbgcolor:#FFFFFF} class «Property»  !<<BridgeClassValue-section,BridgeClassValue>>  [0..1] !Indicates the specific type of the Bridge or BridgePart.
  
 !{set:cellbgcolor:#FFFFFF} function «Property»  !<<BridgeFunctionValue-section,BridgeFunctionValue>>  [0..*] !Specifies the intended purposes of the Bridge or BridgePart.
@@ -80,6 +82,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} adeOfBridge «Property»  !<<ADEOfBridge-section,ADEOfBridge>>  [0..*] !Augments the Bridge with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
@@ -101,6 +105,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} adeOfBridgeConstructiveElement «Property»  !<<ADEOfBridgeConstructiveElement-section,ADEOfBridgeConstructiveElement>>  [0..*] !Augments the BridgeConstructiveElement with properties defined in an ADE.
  
 !{set:cellbgcolor:#FFFFFF} class «Property»  !<<BridgeConstructiveElementClassValue-section,BridgeConstructiveElementClassValue>>  [0..1] !Indicates the specific type of the BridgeConstructiveElement.
  
@@ -129,6 +135,8 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
+!{set:cellbgcolor:#FFFFFF} adeOfBridgeFurniture «Property»  !<<ADEOfBridgeFurniture-section,ADEOfBridgeFurniture>>  [0..*] !Augments the BridgeFurniture with properties defined in an ADE.
+ 
 !{set:cellbgcolor:#FFFFFF} class «Property»  !<<BridgeFurnitureClassValue-section,BridgeFurnitureClassValue>>  [0..1] !Indicates the specific type of the BridgeFurniture.
  
 !{set:cellbgcolor:#FFFFFF} function «Property»  !<<BridgeFurnitureFunctionValue-section,BridgeFurnitureFunctionValue>>  [0..*] !Specifies the intended purposes of the BridgeFurniture.
@@ -156,6 +164,8 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
+!{set:cellbgcolor:#FFFFFF} adeOfBridgeInstallation «Property»  !<<ADEOfBridgeInstallation-section,ADEOfBridgeInstallation>>  [0..*] !Augments the BridgeInstallation with properties defined in an ADE.
+ 
 !{set:cellbgcolor:#FFFFFF} class «Property»  !<<BridgeInstallationClassValue-section,BridgeInstallationClassValue>>  [0..1] !Indicates the specific type of the BridgeInstallation.
  
 !{set:cellbgcolor:#FFFFFF} function «Property»  !<<BridgeInstallationFunctionValue-section,BridgeInstallationFunctionValue>>  [0..*] !Specifies the intended purposes of the BridgeInstallation.
@@ -182,6 +192,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} adeOfBridgePart «Property»  !<<ADEOfBridgePart-section,ADEOfBridgePart>>  [0..*] !Augments the BridgePart with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
@@ -216,6 +228,8 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
+!{set:cellbgcolor:#FFFFFF} adeOfBridgeRoom «Property»  !<<ADEOfBridgeRoom-section,ADEOfBridgeRoom>>  [0..*] !Augments the BridgeRoom with properties defined in an ADE.
+ 
 !{set:cellbgcolor:#FFFFFF} class «Property»  !<<BridgeRoomClassValue-section,BridgeRoomClassValue>>  [0..1] !Indicates the specific type of the BridgeRoom.
  
 !{set:cellbgcolor:#FFFFFF} function «Property»  !<<BridgeRoomFunctionValue-section,BridgeRoomFunctionValue>>  [0..*] !Specifies the intended purposes of the BridgeRoom.
@@ -227,7 +241,152 @@
 
 ==== Data Types
 
-none
+[[ADEOfAbstractBridge-section]]
+[cols="1a"]
+|===
+|*ADEOfAbstractBridge*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfAbstractBridge acts as a hook to define properties within an ADE that are to be added to AbstractBridge. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
+
+[[ADEOfBridge-section]]
+[cols="1a"]
+|===
+|*ADEOfBridge*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfBridge acts as a hook to define properties within an ADE that are to be added to a Bridge. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
+
+[[ADEOfBridgeConstructiveElement-section]]
+[cols="1a"]
+|===
+|*ADEOfBridgeConstructiveElement*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfBridgeConstructiveElement acts as a hook to define properties within an ADE that are to be added to a BridgeConstructiveElement. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
+
+[[ADEOfBridgeFurniture-section]]
+[cols="1a"]
+|===
+|*ADEOfBridgeFurniture*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfBridgeFurniture acts as a hook to define properties within an ADE that are to be added to a BridgeFurniture. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
+
+[[ADEOfBridgeInstallation-section]]
+[cols="1a"]
+|===
+|*ADEOfBridgeInstallation*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfBridgeInstallation acts as a hook to define properties within an ADE that are to be added to a BridgeInstallation. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
+
+[[ADEOfBridgePart-section]]
+[cols="1a"]
+|===
+|*ADEOfBridgePart*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfBridgePart acts as a hook to define properties within an ADE that are to be added to a BridgePart. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
+
+[[ADEOfBridgeRoom-section]]
+[cols="1a"]
+|===
+|*ADEOfBridgeRoom*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfBridgeRoom acts as a hook to define properties within an ADE that are to be added to a BridgeRoom. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|===   
 
 ==== Basic Types
 
@@ -402,7 +561,7 @@ none
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! BridgeUsageValue is a code list that enumerates the different uses of a Bridge. 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===
+|===   
 
 ==== Enumerations
 

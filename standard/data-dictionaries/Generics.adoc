@@ -1,5 +1,5 @@
 [[Generics-package-dd]]
-=== Generics Package
+=== *Generics*
 
 [cols="1,4",frame=none,grid=none]
 |===
@@ -28,6 +28,8 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
+!{set:cellbgcolor:#FFFFFF} adeOfGenericLogicalSpace «Property»  !<<ADEOfGenericLogicalSpace-section,ADEOfGenericLogicalSpace>>  [0..*] !Augments the GenericLogicalSpace with properties defined in an ADE.
+ 
 !{set:cellbgcolor:#FFFFFF} class «Property»  !<<GenericLogicalSpaceClassValue-section,GenericLogicalSpaceClassValue>>  [0..1] !Indicates the specific type of the GenericLogicalSpace.
  
 !{set:cellbgcolor:#FFFFFF} function «Property»  !<<GenericLogicalSpaceFunctionValue-section,GenericLogicalSpaceFunctionValue>>  [0..*] !Specifies the intended purposes of the GenericLogicalSpace.
@@ -54,6 +56,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} adeOfGenericOccupiedSpace «Property»  !<<ADEOfGenericOccupiedSpace-section,ADEOfGenericOccupiedSpace>>  [0..*] !Augments the GenericOccupiedSpace with properties defined in an ADE.
  
 !{set:cellbgcolor:#FFFFFF} class «Property»  !<<GenericOccupiedSpaceClassValue-section,GenericOccupiedSpaceClassValue>>  [0..1] !Indicates the specific type of the GenericOccupiedSpace.
  
@@ -82,6 +86,8 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
+!{set:cellbgcolor:#FFFFFF} adeOfGenericThematicSurface «Property»  !<<ADEOfGenericThematicSurface-section,ADEOfGenericThematicSurface>>  [0..*] !Augments the GenericThematicSurface with properties defined in an ADE.
+ 
 !{set:cellbgcolor:#FFFFFF} class «Property»  !<<GenericThematicSurfaceClassValue-section,GenericThematicSurfaceClassValue>>  [0..1] !Indicates the specific type of the GenericThematicSurface.
  
 !{set:cellbgcolor:#FFFFFF} function «Property»  !<<GenericThematicSurfaceFunctionValue-section,GenericThematicSurfaceFunctionValue>>  [0..*] !Specifies the intended purposes of the GenericThematicSurface.
@@ -109,6 +115,8 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
+!{set:cellbgcolor:#FFFFFF} adeOfGenericUnoccupiedSpace «Property»  !<<ADEOfGenericUnoccupiedSpace-section,ADEOfGenericUnoccupiedSpace>>  [0..*] !Augments the GenericUnoccupiedSpace with properties defined in an ADE.
+ 
 !{set:cellbgcolor:#FFFFFF} class «Property»  !<<GenericUnoccupiedSpaceClassValue-section,GenericUnoccupiedSpaceClassValue>>  [0..1] !Indicates the specific type of the GenericUnoccupiedSpace.
  
 !{set:cellbgcolor:#FFFFFF} function «Property»  !<<GenericUnoccupiedSpaceFunctionValue-section,GenericUnoccupiedSpaceFunctionValue>>  [0..*] !Specifies the intended purposes of the GenericUnoccupiedSpace.
@@ -116,9 +124,118 @@
 !{set:cellbgcolor:#FFFFFF} usage «Property»  !<<GenericUnoccupiedSpaceUsageValue-section,GenericUnoccupiedSpaceUsageValue>>  [0..*] !Specifies the actual uses of the GenericUnoccupiedSpace.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
-|===   
+|===
 
 ==== Data Types
+
+[[ADEOfGenericLogicalSpace-section]]
+[cols="1a"]
+|===
+|*ADEOfGenericLogicalSpace*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfGenericLogicalSpace acts as a hook to define properties within an ADE that are to be added to a GenericLogicalSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
+
+[[ADEOfGenericOccupiedSpace-section]]
+[cols="1a"]
+|===
+|*ADEOfGenericOccupiedSpace*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfGenericOccupiedSpace acts as a hook to define properties within an ADE that are to be added to a GenericOccupiedSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
+
+[[ADEOfGenericThematicSurface-section]]
+[cols="1a"]
+|===
+|*ADEOfGenericThematicSurface*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfGenericThematicSurface acts as a hook to define properties within an ADE that are to be added to a GenericThematicSurface. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
+
+[[ADEOfGenericUnoccupiedSpace-section]]
+[cols="1a"]
+|===
+|*ADEOfGenericUnoccupiedSpace*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfGenericUnoccupiedSpace acts as a hook to define properties within an ADE that are to be added to a GenericUnoccupiedSpace. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
+
+[[CodeAttribute-section]]
+[cols="1a"]
+|===
+|*CodeAttribute*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! CodeAttribute is a data type used to define generic attributes of type "Code". 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} name «Property»  !<<CharacterString-section,CharacterString>>  !Specifies the name of the CodeAttribute.
+ 
+!{set:cellbgcolor:#FFFFFF} value «Property»  !<<Code-section,Code>>  !Specifies the "Code" value.
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|=== 
 
 [[DateAttribute-section]]
 [cols="1a"]

@@ -18,6 +18,16 @@
 [cols="2,6",options="headers"]
 |===
 ^|*Name* ^|*Description*
+|<<ADEOfGenericLogicalSpace-section,ADEOfGenericLogicalSpace>> +
+ «DataType»  |ADEOfGenericLogicalSpace acts as a hook to define properties within an ADE that are to be added to a GenericLogicalSpace.
+|<<ADEOfGenericOccupiedSpace-section,ADEOfGenericOccupiedSpace>> +
+ «DataType»  |ADEOfGenericOccupiedSpace acts as a hook to define properties within an ADE that are to be added to a GenericOccupiedSpace.
+|<<ADEOfGenericThematicSurface-section,ADEOfGenericThematicSurface>> +
+ «DataType»  |ADEOfGenericThematicSurface acts as a hook to define properties within an ADE that are to be added to a GenericThematicSurface.
+|<<ADEOfGenericUnoccupiedSpace-section,ADEOfGenericUnoccupiedSpace>> +
+ «DataType»  |ADEOfGenericUnoccupiedSpace acts as a hook to define properties within an ADE that are to be added to a GenericUnoccupiedSpace.
+|<<CodeAttribute-section,CodeAttribute>> +
+ «DataType»  |CodeAttribute is a data type used to define generic attributes of type "Code".
 |<<DateAttribute-section,DateAttribute>> +
  «DataType»  |DateAttribute is a data type used to define generic attributes of type "Date".
 |<<DoubleAttribute-section,DoubleAttribute>> +
@@ -64,5 +74,3 @@
 |<<GenericUnoccupiedSpaceUsageValue-section,GenericUnoccupiedSpaceUsageValue>> +
  «CodeList»  |GenericUnoccupiedSpaceUsageValue is a code list that enumerates the different uses of a GenericUnoccupiedSpace.
 |===  
-
-

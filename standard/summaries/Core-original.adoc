@@ -52,6 +52,42 @@
 ^|*Name* ^|*Description*
 |<<AbstractGenericAttribute-section,AbstractGenericAttribute>> +
  «DataType»  |AbstractGenericAttribute is the abstract superclass for all types of generic attributes.
+|<<ADEOfAbstractAppearance-section,ADEOfAbstractAppearance>> +
+ «DataType»  |ADEOfAbstractAppearance acts as a hook to define properties within an ADE that are to be added to AbstractAppearance.
+|<<ADEOfAbstractCityObject-section,ADEOfAbstractCityObject>> +
+ «DataType»  |ADEOfAbstractCityObject acts as a hook to define properties within an ADE that are to be added to AbstractCityObject.
+|<<ADEOfAbstractDynamizer-section,ADEOfAbstractDynamizer>> +
+ «DataType»  |ADEOfAbstractDynamizer acts as a hook to define properties within an ADE that are to be added to AbstractDynamizer.
+|<<ADEOfAbstractFeature-section,ADEOfAbstractFeature>> +
+ «DataType»  |ADEOfAbstractFeature acts as a hook to define properties within an ADE that are to be added to AbstractFeature.
+|<<ADEOfAbstractFeatureWithLifespan-section,ADEOfAbstractFeatureWithLifespan>> +
+ «DataType»  |ADEOfAbstractFeatureWithLifespan acts as a hook to define properties within an ADE that are to be added to AbstractFeatureWithLifespan.
+|<<ADEOfAbstractLogicalSpace-section,ADEOfAbstractLogicalSpace>> +
+ «DataType»  |ADEOfAbstractLogicalSpace acts as a hook to define properties within an ADE that are to be added to AbstractLogicalSpace.
+|<<ADEOfAbstractOccupiedSpace-section,ADEOfAbstractOccupiedSpace>> +
+ «DataType»  |ADEOfAbstractOccupiedSpace acts as a hook to define properties within an ADE that are to be added to AbstractOccupiedSpace.
+|<<ADEOfAbstractPhysicalSpace-section,ADEOfAbstractPhysicalSpace>> +
+ «DataType»  |ADEOfAbstractPhysicalSpace acts as a hook to define properties within an ADE that are to be added to AbstractPhysicalSpace.
+|<<ADEOfAbstractPointCloud-section,ADEOfAbstractPointCloud>> +
+ «DataType»  |ADEOfAbstractPointCloud acts as a hook to define properties within an ADE that are to be added to AbstractPointCloud.
+|<<ADEOfAbstractSpace-section,ADEOfAbstractSpace>> +
+ «DataType»  |ADEOfAbstractSpace acts as a hook to define properties within an ADE that are to be added to AbstractSpace.
+|<<ADEOfAbstractSpaceBoundary-section,ADEOfAbstractSpaceBoundary>> +
+ «DataType»  |ADEOfAbstractSpaceBoundary acts as a hook to define properties within an ADE that are to be added to AbstractSpaceBoundary.
+|<<ADEOfAbstractThematicSurface-section,ADEOfAbstractThematicSurface>> +
+ «DataType»  |ADEOfAbstractThematicSurface acts as a hook to define properties within an ADE that are to be added to AbstractThematicSurface.
+|<<ADEOfAbstractUnoccupiedSpace-section,ADEOfAbstractUnoccupiedSpace>> +
+ «DataType»  |ADEOfAbstractUnoccupiedSpace acts as a hook to define properties within an ADE that are to be added to AbstractUnoccupiedSpace.
+|<<ADEOfAbstractVersion-section,ADEOfAbstractVersion>> +
+ «DataType»  |ADEOfAbstractVersion acts as a hook to define properties within an ADE that are to be added to AbstractVersion.
+|<<ADEOfAbstractVersionTransition-section,ADEOfAbstractVersionTransition>> +
+ «DataType»  |ADEOfAbstractVersionTransition acts as a hook to define properties within an ADE that are to be added to AbstractVersionTransition.
+|<<ADEOfAddress-section,ADEOfAddress>> +
+ «DataType»  |ADEOfAddress acts as a hook to define properties within an ADE that are to be added to an Address.
+|<<ADEOfCityModel-section,ADEOfCityModel>> +
+ «DataType»  |ADEOfCityModel acts as a hook to define properties within an ADE that are to be added to a CityModel.
+|<<ADEOfClosureSurface-section,ADEOfClosureSurface>> +
+ «DataType»  |ADEOfClosureSurface acts as a hook to define properties within an ADE that are to be added to a ClosureSurface.
 |<<ExternalReference-section,ExternalReference>> +
  «DataType»  |ExternalReference is a reference to a corresponding object in another information system, for example in the German cadastre (ALKIS), the German topographic information system (ATKIS), or the OS UK MasterMap®.
 |<<Occupancy-section,Occupancy>> +
@@ -69,6 +105,8 @@
 [cols="2,6",options="headers"]
 |===
 ^|*Name* ^|*Description*
+|<<Code-section,Code>> +
+ «BasicType»  |Code is a basic type for a String-based term, keyword, or name that can additionally have a code space.
 |<<DoubleBetween0and1-section,DoubleBetween0and1>> +
  «BasicType»  |DoubleBetween0and1 is a basic type for values, which are greater or equal than 0 and less or equal than 1. The type is used for color encoding, for example.
 |<<DoubleBetween0and1List-section,DoubleBetween0and1List>> +
@@ -143,5 +181,3 @@
 |<<TopologicRelationTypeValue-section,TopologicRelationTypeValue>> +
  «CodeList»  |TopologicRelationTypeValue is a code list used to classify topological city object relations.
 |===  
-
-

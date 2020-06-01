@@ -1,5 +1,5 @@
 [[LandUse-package-dd]]
-=== LandUse Package
+=== *LandUse*
 
 [cols="1,4",frame=none,grid=none]
 |===
@@ -28,6 +28,8 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
+!{set:cellbgcolor:#FFFFFF} adeOfLandUse «Property»  !<<ADEOfLandUse-section,ADEOfLandUse>>  [0..*] !Augments the LandUse with properties defined in an ADE.
+ 
 !{set:cellbgcolor:#FFFFFF} class «Property»  !<<LandUseClassValue-section,LandUseClassValue>>  [0..1] !Indicates the specific type of the LandUse.
  
 !{set:cellbgcolor:#FFFFFF} function «Property»  !<<LandUseFunctionValue-section,LandUseFunctionValue>>  [0..*] !Specifies the intended purposes of the LandUse.
@@ -39,7 +41,26 @@
 
 ==== Data Types
 
-none 
+[[ADEOfLandUse-section]]
+[cols="1a"]
+|===
+|*ADEOfLandUse*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfLandUse acts as a hook to define properties within an ADE that are to be added to a LandUse. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|===
 
 ==== Basic Types
 
@@ -82,7 +103,7 @@ none
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! LandUseUsageValue is a code list that enumerates the different uses of a LandUse. 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
 !===
-|===   
+|===
 
 ==== Enumerations
 
