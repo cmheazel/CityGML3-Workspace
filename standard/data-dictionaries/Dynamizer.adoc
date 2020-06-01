@@ -22,10 +22,6 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
 !{set:cellbgcolor:#FFFFFF} adeOfAbstractAtomicTimeseries «Property»  !<<ADEOfAbstractAtomicTimeseries-section,ADEOfAbstractAtomicTimeseries>>  [0..*] !Augments AbstractAtomicTimeseries with properties defined in an ADE.
@@ -46,10 +42,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AbstractTimeseries is the abstract superclass representing any type of timeseries data. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractFeature-section,AbstractFeature>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -137,21 +129,21 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A GenericTimeseries represents time-varying data in the form of embedded time-value-pairs of a specific data type for a single contiguous time interval. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractAtomicTimeseries-section,AbstractAtomicTimeseries>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
-!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! dataTypeOfValue (OCL): inv: if valueType = TimeseriesTypeValue::integer then
-TimeValuePair->forAll(c | c.intValue->size()=1)
-else if valueType = TimeseriesTypeValue::double then
-TimeValuePair->forAll(c | c.doubleValue->size()=1)
-else if valueType = TimeseriesTypeValue::string then
-TimeValuePair->forAll(c | c.stringValue->size()=1)
-else if valueType = TimeseriesTypeValue::geometry then
-TimeValuePair->forAll(c | c.geometryValue->size()=1)
-else if valueType = TimeseriesTypeValue::uri then
-TimeValuePair->forAll(c | c.uriValue->size()=1)
-else if valueType = TimeseriesTypeValue::bool then
-TimeValuePair->forAll(c | c.boolValue->size()=1)
-else if valueType = TimeseriesTypeValue::implicitGeometry then
-TimeValuePair->forAll(c | c.implicitGeometryValue->size()=1)
-else TimeValuePair->forAll(c | c.appearanceValue->size()=1)
+!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! dataTypeOfValue (OCL): inv: if valueType = TimeseriesTypeValue::integer then +
+{NBSP}{NBSP} TimeValuePair->forAll(c \| c.intValue->size()=1) +
+else if valueType = TimeseriesTypeValue::double then +
+{NBSP}{NBSP}  TimeValuePair->forAll(c \| c.doubleValue->size()=1) +
+else if valueType = TimeseriesTypeValue::string then +
+{NBSP}{NBSP}  TimeValuePair->forAll(c \| c.stringValue->size()=1) +
+else if valueType = TimeseriesTypeValue::geometry then +
+{NBSP}{NBSP} TimeValuePair->forAll(c \| c.geometryValue->size()=1) +
+else if valueType = TimeseriesTypeValue::uri then +
+{NBSP}{NBSP} TimeValuePair->forAll(c \| c.uriValue->size()=1) +
+else if valueType = TimeseriesTypeValue::bool then +
+{NBSP}{NBSP} TimeValuePair->forAll(c \| c.boolValue->size()=1) +
+else if valueType = TimeseriesTypeValue::implicitGeometry then +
+{NBSP}{NBSP} TimeValuePair->forAll(c \| c.implicitGeometryValue->size()=1) +
+else TimeValuePair->forAll(c \| c.appearanceValue->size()=1) +
 endif endif endif endif endif endif endif    
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
@@ -185,10 +177,6 @@ endif endif endif endif endif endif endif
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
 !{set:cellbgcolor:#FFFFFF} adeOfStandardFileTimeseries «Property»  !<<ADEOfStandardFileTimeseries-section,ADEOfStandardFileTimeseries>>  [0..*] !Augments the StandardFileTimeseries with properties defined in an ADE.
@@ -212,10 +200,6 @@ endif endif endif endif endif endif endif
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractAtomicTimeseries-section,AbstractAtomicTimeseries>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
 !{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! columnNumberOrColumnName (OCL): inv: (timeColumnNo->notEmpty() or timeColumnName->notEmpty()) and (valueColumnNo->notEmpty() or valueColumnName->notEmpty()) and (idValue->notEmpty() implies idColumnNo->notEmpty() or idColumnName->notEmpty())    
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -263,18 +247,10 @@ endif endif endif endif endif endif endif
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfAbstractAtomicTimeseries acts as a hook to define properties within an ADE that are to be added to AbstractAtomicTimeseries. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|{set:cellbgcolor:#FFFFFF} 
 |=== 
 
 [[ADEOfAbstractTimeseries-section]]
@@ -284,18 +260,10 @@ endif endif endif endif endif endif endif
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfAbstractTimeseries acts as a hook to define properties within an ADE that are to be added to AbstractTimeseries. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|{set:cellbgcolor:#FFFFFF} 
 |=== 
 
 [[ADEOfCompositeTimeseries-section]]
@@ -305,18 +273,10 @@ endif endif endif endif endif endif endif
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfCompositeTimeseries acts as a hook to define properties within an ADE that are to be added to a CompositeTimeseries. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|{set:cellbgcolor:#FFFFFF} 
 |=== 
 
 [[ADEOfDynamizer-section]]
@@ -326,18 +286,10 @@ endif endif endif endif endif endif endif
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfDynamizer acts as a hook to define properties within an ADE that are to be added to a Dynamizer. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|{set:cellbgcolor:#FFFFFF} 
 |=== 
 
 [[ADEOfGenericTimeseries-section]]
@@ -347,18 +299,10 @@ endif endif endif endif endif endif endif
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfGenericTimeseries acts as a hook to define properties within an ADE that are to be added to a GenericTimeseries. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|{set:cellbgcolor:#FFFFFF} 
 |=== 
 
 [[ADEOfStandardFileTimeseries-section]]
@@ -368,18 +312,10 @@ endif endif endif endif endif endif endif
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfStandardFileTimeseries acts as a hook to define properties within an ADE that are to be added to a StandardFileTimeseries. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|{set:cellbgcolor:#FFFFFF} 
 |=== 
 
 [[ADEOfTabulatedFileTimeseries-section]]
@@ -389,18 +325,10 @@ endif endif endif endif endif endif endif
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfTabulatedFileTimeseries acts as a hook to define properties within an ADE that are to be added to a TabulatedFileTimeseries. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|{set:cellbgcolor:#FFFFFF} 
 |=== 
 
 [[SensorConnection-section]]
@@ -410,7 +338,7 @@ endif endif endif endif endif endif endif
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A SensorConnection provides all details that are required to retrieve a specific datastream from an external sensor web service. It comprises the service type (e.g. OGC SensorThings API, OGC Sensor Observation Services, MQTT, proprietary platforms), the URL of the sensor service, the identifier for the sensor or thing and its observed property as well as information about the required authentication method. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
@@ -461,7 +389,7 @@ endif endif endif endif endif endif endif
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TimeseriesComponent represents an element of a CompositeTimeseries. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
@@ -490,13 +418,9 @@ endif endif endif endif endif endif endif
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A TimeValuePair represents a value that is valid for a given timepoint. For each TimeValuePair only one of the value properties can be used mutually exclusive. Which value property has to be provided depends on the selected value type in the GenericTimeSeries feature, in which the TimeValuePair is included. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
 !{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! singleValue (OCL): inv: intValue->size() + doubleValue->size() + stringValue->size() + geometryValue->size() + uriValue->size() + boolValue->size() + implicitGeometryValue->size() + appearanceValue->size() = 1    
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
