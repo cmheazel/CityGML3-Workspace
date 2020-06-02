@@ -95,3 +95,35 @@ image::./images/Energy_ADE_UML_example.png[]
 
 This document only addresses the conceptual modelling of ADEs. Rules and constraints for mapping a conceptual ADE model to a target encoding are expected to be defined in a corresponding CityGML Encoding Standard. If supported, an ADE may provide additional mapping rules and constraints in conformance with a corrresponding CityGML Encoding Standard.
 
+==== Requirements and Recommendations
+
+The following requirements and recommendations provide a formal definition of the CityGML Extension capabilities. Meeting these criteria are required to demonstrate conformance with the GityGML Core conformance class.
+
+===== Generics Classes
+
+The following Requirements govern the use of Generics classes.
+
+include::requirements/Core/REQ_Core_Generics_Use.adoc[]
+
+===== UML
+
+Any extension to the CityGML Conceptual Model should be a faithful continuation of the styles and techniques used in that model. The following Requirements and Recommendations define a "faithful continuation".
+
+include::requirements/Core/REQ_Core_ADE_UML.adoc[]
+
+include::recommendations/Core/REC_Core_ADE_UML.adoc[]
+
+===== Classes
+
+The following Requirements and Recommendations define how CityGML classes should be extended by an ADE.
+
+include::requirements/Core/REQ_Core_ADE_Elements.adoc[]
+
+include::recommendations/Core/REC_Core_ADE_Elements.adoc[]
+
+===== Properties
+
+The following Requirements define how to use the CityGML extension properties to add attributes to an existing CityGML Feature Type.
+
+include::requirements/Core/REQ_Core_ADE_Properties.adoc[]
+

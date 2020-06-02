@@ -461,7 +461,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Approval Date:   &lt;yyyy-mm-dd&gt;</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Publication Date:   &lt;2020-05-28&gt;</p></td>
+<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Publication Date:   &lt;2020-06-02&gt;</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">External identifier of this OGC&#174; document: <a href="http://www.opengis.net/doc/IS/CityGML-1/3.0" class="bare">http://www.opengis.net/doc/IS/CityGML-1/3.0</a></p></td>
@@ -1530,7 +1530,7 @@ UML Packages as illustrated in <a href="#package-diagram">CityGML UML Packages</
 </tbody>
 </table>
 <div class="paragraph">
-<p>The Core module defines the basic concepts and components of city models. This rather large body of work has been divided into six sections. These sections build on each other from the fundamental principles specified by the ISO up through the full CityGML model. These sections are summarized in the <a href="#citygml-core-table">CityGML Core Sections</a> table.</p>
+<p>The Core module defines the basic concepts and components of city models. This rather large body of work has been divided into seven sections. These sections build on each other from the fundamental principles specified by the ISO up through the full CityGML model. These sections are summarized in the <a href="#citygml-core-table">CityGML Core Sections</a> table.</p>
 </div>
 <table id="citygml-core-table" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 3. CityGML Core Sections</caption>
@@ -1562,6 +1562,10 @@ UML Packages as illustrated in <a href="#package-diagram">CityGML UML Packages</
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#b-e-c-section">Types, Enumerations and Codelist</a></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Defines the little things which make this model work.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#extensions-section">Extension Mechanisms</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Defines how the CityGML Conceptual Model can be extended to address community-specific needs.</p></td>
 </tr>
 </tbody>
 </table>
@@ -29932,7 +29936,187 @@ endif endif endif endif endif endif endif</p></td>
 <div class="paragraph">
 <p>This document only addresses the conceptual modelling of ADEs. Rules and constraints for mapping a conceptual ADE model to a target encoding are expected to be defined in a corresponding CityGML Encoding Standard. If supported, an ADE may provide additional mapping rules and constraints in conformance with a corrresponding CityGML Encoding Standard.</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_requirements_and_recommendations"><a class="anchor" href="#_requirements_and_recommendations"></a>10.3.5. Requirements and Recommendations</h4>
+<div class="paragraph">
+<p>The following requirements and recommendations provide a formal definition of the CityGML Extension capabilities. Meeting these criteria are required to demonstrate conformance with the GityGML Core conformance class.</p>
+</div>
+<div class="sect4">
+<h5 id="_generics_classes"><a class="anchor" href="#_generics_classes"></a>10.3.5.1. Generics Classes</h5>
+<div class="paragraph">
+<p>The following Requirements govern the use of Generics classes.</p>
+</div>
+<table id="req_Core_generics_use" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  18</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Core/generics/use</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">Generic objects and attributes SHALL only be used if a more specific feature class or attribute is not available from the CityGML conceptual model.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_uml"><a class="anchor" href="#_uml"></a>10.3.5.2. UML</h5>
+<div class="paragraph">
+<p>Any extension to the CityGML Conceptual Model should be a faithful continuation of the styles and techniques used in that model. The following Requirements and Recommendations define a "faithful continuation".</p>
+</div>
+<table id="req_Core_ade_uml" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  19</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Core/ade/uml</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">An ADE SHALL be defined as conceptual model in UML in accordance with the conceptual modelling framework of the ISO 19100 series of International Standards</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The UML model SHALL adhere to the General Feature Model as specified in ISO 19109.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The UML model SHALL adhere to rules and constraints for application schemas as specified in ISO/TS 19103.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Every ADE SHALL be organized into one or more UML packages having globally unique namespaces and containing all UML model elements defined by the ADE.</p></td>
+</tr>
+</tbody>
+</table>
+<table id="rec_Core_ade_uml" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation  1</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/rec/Core/ade/uml</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">In addition to meeting the requirements for a CityGML ADE, an ADE should:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The <a href="#uml_notation_section">UML notations and stereotypes</a> used in the CityGML conceptual model SHOULD be applied to corresponding model elements in an ADE.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An ADE SHOULD import and use predefined classes from external conceptual UML models such as the CityGML modules or the standardized schemas of the ISO 19100 series of International Standards.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_classes_18"><a class="anchor" href="#_classes_18"></a>10.3.5.3. Classes</h5>
+<div class="paragraph">
+<p>The following Requirements and Recommendations define how CityGML classes should be extended by an ADE.</p>
+</div>
+<table id="req_Core_ade_elements" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  20</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Core/ade/elements</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">ADEs typically extend CityGML by defining new feature types together with additional content such as object types, data types, code lists, and enumerations.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Every feature type in an ADE SHALL be derived either directly or indirectly from the CityGML root feature type <em>core:AbstractFeature</em> or a subclass thereof.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">UML classes representing top-level feature types SHALL use the <em>&#171;TopLevelFeatureType&#187;</em> stereotype.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Features representing spaces or space boundaries SHALL be derived either directly or indirectly from <em>core:AbstractSpace</em> or <em>core:AbstractSpaceBoundary</em> respectively.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">An ADE may define new and additional spatial properties. If such a spatial property should belong to a predefined LOD, then the property name SHALL start with the prefix “lod<em>X</em>”, where <em>X</em> is an integer value indicating the target LOD.</p></td>
+</tr>
+</tbody>
+</table>
+<table id="rec_Core_ade_elements" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation  21</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/rec/Core/ade/elements</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">ADEs typically extend CityGML by defining new feature types together with additional content such as object types, data types, code lists, and enumerations.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ADEs SHOULD use the predefined types from CityGML or the standardized schemas of the ISO 19100 series of International Standards.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Constraints on model elements SHOULD be expressed using a formal language such as the Object Constraint Language (OCL).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ADE subclasses of <em>core:AbstractSpace</em> SHOULD include constraints to limit the boundaries of the space object.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_properties"><a class="anchor" href="#_properties"></a>10.3.5.4. Properties</h5>
+<div class="paragraph">
+<p>The following Requirements define how to use the CityGML extension properties to add attributes to an existing CityGML Feature Type.</p>
+</div>
+<table id="req_Core_ade_properties" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement  22</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/Core/ade/properties</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">Every feature type includes an extension property (hook) of type “ADEOf&lt;FeatureTypeName&gt;” where &lt;FeatureTypeName&gt; is the name of that feature type. To add an extension property to a feature type:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The ADE SHALL create a subclass of the abstract data type associated with the hook.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">This subclass SHALL be defined as a data type using the stereotype <em>&#171;DataType&#187;</em>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Application-specific attributes and associations SHALL be modelled as properties of the ADE subclass.</p></td>
+</tr>
+</tbody>
+</table>
 <div style="page-break-after: always;"></div>
+</div>
 </div>
 </div>
 </div>
@@ -30094,7 +30278,7 @@ Another example, citing [<a href="#Beil2017">Beil et al. 2017</a>].</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-05-29 03:37:34 +0100
+Last updated 2020-06-02 22:11:50 +0100
 </div>
 </div>
 </body>
