@@ -15,7 +15,7 @@ The CityGML standard is presented in this document in diagrams using the Unified
 
 [[figure-1]]
 .UML notation (see ISO TS 19103, Geographic information - Conceptual schema language).
-image::../figures/Figure_1.png[width=80%,align="center"]
+image::../figures/Figure_1.png[width=75%,align="center"]
 
 All associations between model elements in CityGML are uni-directional. Thus, associations in CityGML are navigable in only one direction. The direction of navigation is depicted by an arrowhead. In general, the context an element takes within the association is indicated by its role. The role is displayed near the target of the association. If the graphical representation is ambiguous though, the position of the role has to be drawn to the element the association points to.
 
@@ -39,22 +39,27 @@ modularisation.
 
 In order to enhance the readability of the CityGML UML diagrams, classes are depicted in different colors. The following coloring scheme is applied:
 
-image:images/ColorScheme_yellow.png[role="left"]
+image:images/ColorScheme_yellow.png[]
+
 Classes painted in yellow belong to the Requirements Class which is subject of discussion in that clause of the specification in which the UML diagram is given. For example, in the context of chapter <<rc_core_section, Core>>, which introduces the _CityGML Core_ module, the yellow color is used to denote classes that are defined in the _CityGML Core_ Requirements Class. Likewise, the yellow classes shown in the UML diagram in chapter <<rc_building-model_section, Building>> are associated with the _Building_ Requirements Class that is subject of discussion in that chapter.
 
-image:images/ColorScheme_blue.png[role="left"]
+image:images/ColorScheme_blue.png[]
+
 Classes painted in blue belong to a Requirements Class different to that associated with the yellow color. In order to explicitly denote to which Requirements Class these classes belong, their class names carry the name of the Requirements Class as prefix. For example, in the context of the _Building_ Requirements Class, classes from the _CityGML Core_ and the _Construction_ Requirements Classes are painted in blue and their class names are preceded by the prefix _Core_ and _Construction_, respectively.
 
-image:images/ColorScheme_green.png[role="left"]
+image:images/ColorScheme_green.png[]
+
 Classes painted in green are defined in the ISO standards 19107, 19111, or 19123. Their class names are preceded by the UML package name, in which the classes are defined.
 
-image:images/ColorScheme_grey.png[role="left"]
+image:images/ColorScheme_grey.png[]
+
+
 Classes painted in grey are defined in the ISO standard 19109. In the context of this standard this only applies to the class _AnyFeature_. _AnyFeature_ is an instance of the metaclass _FeatureType_ and acts as super class of all classes in the CityGML UML model with the stereotype &#171;FeatureType&#187;.
 
-image:images/ColorScheme_white.png[role="left"]
-The color white is used for notes and OCL constraints that are provided in the UML diagrams. +
-{nbsp} +
-{nbsp} +
+image:images/ColorScheme_white.png[]
+
+The color white is used for notes and OCL constraints that are provided in the UML diagrams.
+
 The following example UML diagram demonstrates the UML notation and coloring scheme used throughout this specification. In this example, the yellow classes are associated with the _CityGML Building_ module, the blue classes are from the _CityGML Core_ and _Construction_ modules, and the green class depicts a geometry element defined by ISO 19107.
 
 [[figure-2]]
