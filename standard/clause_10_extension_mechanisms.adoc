@@ -51,13 +51,13 @@ ADEs have successfully been implemented in practice and enable a wide range of a
 
 An ADE shall be defined as conceptual model in UML in accordance with the conceptual modelling framework of the ISO 19100 series of International Standards and by adhering to the General Feature Model and the rules and constraints for application schemas as specified in ISO 19109 and ISO/TS 19103. The <<uml_notation_section, UML notations and stereotypes>> used in the CityGML conceptual model should also be applied to corresponding model elements in an ADE.
 
-Every ADE must be organized into one or more UML packages having globally unique namespaces and containing all UML model elements defined by the ADE. An ADE may additionally import and use predefined classes from external conceptual UML models such as the CityGML modules or the standardized schemas of the ISO 19100 series of International Standards.
+Every ADE shall be organized into one or more UML packages having globally unique namespaces and containing all UML model elements defined by the ADE. An ADE may additionally import and use predefined classes from external conceptual UML models such as the CityGML modules or the standardized schemas of the ISO 19100 series of International Standards.
 
 ==== Defining New ADE Model Elements
 
 Following ISO 19109, features are the primary view of geospatial information and the core elements of application schemas. ADEs therefore typically extend CityGML by defining new feature types appropriate to the application area together with additional content such as object types, data types, code lists, and enumerations.
 
-Every feature type in an ADE must be derived either directly or indirectly from the CityGML root feature type _core:AbstractFeature_ or, depending on its type and characteristics, from a more appropriate subclass thereof. According to the general space concept of CityGML, features representing spaces or space boundaries shall be derived either directly or indirectly from _core:AbstractSpace_ or _core:AbstractSpaceBoundary_ respectively. UML classes representing top-level feature types shall use the _&#171;TopLevelFeatureType&#187;_ stereotype.
+Every feature type in an ADE shall be derived either directly or indirectly from the CityGML root feature type _core:AbstractFeature_ or, depending on its type and characteristics, from a more appropriate subclass thereof. According to the general space concept of CityGML, features representing spaces or space boundaries shall be derived either directly or indirectly from _core:AbstractSpace_ or _core:AbstractSpaceBoundary_ respectively. UML classes representing top-level feature types shall use the _&#171;TopLevelFeatureType&#187;_ stereotype.
 
 In contrast to feature types, object types and data types are not required to be derived from a predefined CityGML class unless explicitly stated otherwise.
 
@@ -77,7 +77,7 @@ If a predefined CityGML feature type lacks one or more properties required for a
 
 For this reason, CityGML provides a way to augment the predefined CityGML feature types with additional properties from the ADE domain without the need for subclassing. Each CityGML feature type has an extension attribute of name “adeOf__FeatureTypeName__” and type “_ADEOfFeatureTypeName”_, where _FeatureTypeName_ is replaced by the class name in which the attribute is defined. For example, the _bldg:Building_ class offers the attribute _bldg:adeOfBuilding_ of type _bldg:ADEOfBuilding_. Each of these extension attributes can occur zero to unlimited times, and the attribute types are defined as abstract and empty data types.
 
-If an ADE augments a specific CityGML feature type with additional ADE properties, the ADE shall create a subclass of the corresponding abstract data type associated with the feature class. This subclass must also be defined as data type using the stereotype _&#171;DataType&#187;_. The additional application-specific attributes and associations are then modelled as properties of the ADE subclass. This may include, amongst others, attributes with simple or complex data type, spatial properties or associations to other object and feature types from the ADE or external models such as CityGML.
+If an ADE augments a specific CityGML feature type with additional ADE properties, the ADE shall create a subclass of the corresponding abstract data type associated with the feature class. This subclass shall also be defined as data type using the stereotype _&#171;DataType&#187;_. The additional application-specific attributes and associations are then modelled as properties of the ADE subclass. This may include, amongst others, attributes with simple or complex data type, spatial properties or associations to other object and feature types from the ADE or external models such as CityGML.
 
 The predefined “_ADEOfFeatureTypeName”_ data types are called “hooks” because they are used as the head of a hierarchy of ADE subclasses attaching application-specific properties. When subclassing the “hook” of a specific CityGML feature type in an ADE, the properties defined in the subclass can be used for that feature type as well as for all directly or indirectly derived feature types, including feature types defined in the same or another ADE.
 
@@ -87,7 +87,7 @@ Content from unknown or unsupported ADEs may be ignored by an application or ser
 
 Designers of an ADE should favor using this “hook” mechanism over subclassing a CityGML feature type when possible. If an ADE must enable other ADEs to augment its own feature types (so-called ADE of an ADE), then it shall implement “hooks” for its feature types following the same schema and naming concept as in the CityGML conceptual model.
 
-The following UML fragment shows attachment of the Energy ADE. For more details on this and other example ADEs, please see the <<_user_guide,CityGML 3.0 User Guide>> for an example ADE.
+The following UML fragment shows an example for using the "hook" mechanism. For more details on this and other example ADEs, please see the <<_user_guide,CityGML 3.0 User Guide>> for an example ADE.
 
 image::./images/Energy_ADE_UML_example.png[]
 
