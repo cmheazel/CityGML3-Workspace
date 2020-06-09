@@ -1,8 +1,0 @@
-[[req_PACKAGE_measures]]
-[width="90%",cols="2,6"]
-|===
-^|*Requirement  {counter:req-id}* |*/req/PACKAGE/measures* 
-2+|Example: If an Alignment2DHorizontal.2DLinestringRepresentation or an Alignment3D.3DLinestringRepresentation is specified as a linear element, then distanceAlong shall be measured along the LineString and offsetLateralDistance and offsetVerticalDistance values shall be measured normal to the LineString from this DistanceAlong point. 
-
-If an Alignment2DHorizontal.segment list of Alignment2DHorSegments is used as a linear element, then distanceAlong and offsetLateralDistance values shall be measured in the horizontal plane, ignoring any vertical displacement of the Alignment. OffsetVerticalDistance values shall be absolute from the horizontal plane unless an Alignment2DVertical is specified as a VerticalOffsetReferent so as to take into consideration vertical displacement of the Alignment, if present.
-|===

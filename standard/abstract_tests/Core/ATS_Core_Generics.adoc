@@ -1,0 +1,12 @@
+[[ats_Core_generics]]
+[width="90%",cols="2,6a"]
+|===
+^|*Abstract Test {counter:ats-id}* |*/ats/Core/generics* 
+^|Test Purpose |To validate the correct use of Generics objects and attributes. 
+^|Requirement |<<req_Core_generics,/req/Core/generics>>
+^|Test Method |Manual Inspection
+2+|For each Generic object and attribute defined in an Implementation Specification, validate that:
+
+. This object or attribute does not duplicate one that has already been defined by the Conceptual Model,
+. That the other extension methods provided by the CityGML Conceptual Model do not provide a more specific representation.
+|===

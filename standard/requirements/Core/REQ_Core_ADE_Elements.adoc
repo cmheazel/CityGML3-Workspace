@@ -2,9 +2,9 @@
 [width="90%",cols="2,6"]
 |===
 ^|*Requirement  {counter:req-id}* |*/req/Core/ade/elements* 
-2+|ADEs typically extend CityGML by defining new feature types together with additional content such as object types, data types, code lists, and enumerations.
-^|A |Every feature type in an ADE SHALL be derived either directly or indirectly from the CityGML root feature type _core:AbstractFeature_ or a subclass thereof.
-^|B |UML classes representing top-level feature types SHALL use the _&#171;TopLevelFeatureType&#187;_ stereotype.
+2+|ADEs typically extend CityGML by defining new Feature Types together with additional content such as Object Types, Data Types, Code Lists, and Enumerations.
+^|A |Every Feature Type in an ADE SHALL be derived either directly or indirectly from the CityGML root Feature Type _core:AbstractFeature_ or a subclass thereof.
+^|B |UML classes representing Top-Level Feature Types SHALL use the _&#171;TopLevelFeatureType&#187;_ stereotype.
 ^|C |Features representing spaces or space boundaries SHALL be derived either directly or indirectly from _core:AbstractSpace_ or _core:AbstractSpaceBoundary_ respectively.
 ^|D |An ADE may define new and additional spatial properties. If such a spatial property should belong to a predefined LOD, then the property name SHALL start with the prefix “lod__X__”, where _X_ is an integer value indicating the target LOD.
 |===

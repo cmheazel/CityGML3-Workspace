@@ -22,7 +22,17 @@ The Core module defines the basic concepts and components of city models. This r
 
 ==== Requirements
 
+The CityGML Core defines technology agnostic concepts. These concepts are then realized in technology specific Implementation Specifications. The following requirements govern the creation of those Implementation Specifications.
+
 include::requirements/Core/REQ_Core_Classes.adoc[]
+
+While the CityGML Conceptual Model builds on ISO Standards, there are some restrictions on the use of those standards.
+
+include::requirements/Core/REQ_Core_ISO.adoc[]
+
+An implementing technology may not be able to support all of the concepts defined in the CityGML Conceptual Model. Alternately, some concepts from the Conceptual Model may be inappropriate for the the application domain for which the Implemenation Specification was developed. In those cases, elements of the Conceptual Model may be mapped to null elements in the Implementation Specification. 
+
+include::recommendations/Core/PER_Core_Classes.adoc[]
 
 [[ISO-dependencies-section]]
 ==== ISO Dependencies

@@ -19,10 +19,10 @@
 |[big]*Open Geospatial Consortium*
 |Submission Date: <yyyy-mm-dd>
 |Approval Date:   <yyyy-mm-dd>
-|Publication Date:   <2020-06-04>
+|Publication Date:   <2020-06-09>
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/IS/CityGML-1/3.0
 |Internal reference number of this OGC(R) document:    20-010
-|Version: 0.6
+|Version: 0.9
 |Category: OGC(R) Conceptual Model
 |Editors: Thomas H. Kolbe, Tatjana Kutzner, Carl Stephen Smyth, Claus Nagel, Charles Heazel, and possible further editors
 |===
@@ -101,22 +101,10 @@ include::clause_9_data-dictionary.adoc[]
 
 include::clause_10_extension_mechanisms.adoc[]
 
-<<<
-////
-add or remove annexes after "A" as necessary
-////
-include::annex-a.adoc[]
+include::annex-ats.adoc[]
 
-<<<
-
-<<<
-////
-Revision History should be the last annex before the Bibliography
-Bibliography should be the last annex
-////
 include::annex-history.adoc[]
 
 include::annex-change-log.adoc[]
 
-<<<
 include::annex-bibliography.adoc[]
