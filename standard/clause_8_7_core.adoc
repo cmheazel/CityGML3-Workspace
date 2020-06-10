@@ -13,7 +13,7 @@ The Core module defines the basic concepts and components of city models. This r
 |===
 |<<ISO-dependencies-section,The Use of ISO Standards>> |Describes the use of ISO 191** standards to provide a foundation to the CityGML model.
 |<<city-objects-section,City Models and City Objects>>|Defines the basic building blocks of the CityGML model.
-|<<space-concepts-section,Space Concepts>>|Defines the concepts of space as used in the CityGML model.
+|<<space-concepts-section,Space Concept>>|Defines the concepts of space as used in the CityGML model.
 |<<geometry-lod-section,Geometry and LOD>>|Defines the geometry and Level Of Detail concepts.
 |<<CityGML-section,CityGML Core Model>>|Presents the complete Core model.
 |<<b-e-c-section,Types, Enumerations and Codelist>> |Defines the little things which make this model work.
@@ -30,7 +30,7 @@ While the CityGML Conceptual Model builds on ISO Standards, there are some restr
 
 include::requirements/Core/REQ_Core_ISO.adoc[]
 
-An implementing technology may not be able to support all of the concepts defined in the CityGML Conceptual Model. Alternately, some concepts from the Conceptual Model may be inappropriate for the the application domain for which the Implemenation Specification was developed. In those cases, elements of the Conceptual Model may be mapped to null elements in the Implementation Specification. 
+An implementing technology may not be able to support all of the concepts defined in the CityGML Conceptual Model. Alternately, some concepts from the Conceptual Model may be inappropriate for the the application domain for which the Implemenation Specification was developed. In those cases, elements of the Conceptual Model may be mapped to null elements in the Implementation Specification.
 
 include::recommendations/Core/PER_Core_Classes.adoc[]
 
@@ -75,7 +75,7 @@ The City Model and City Object classes defined in the CityGML UML model are intr
 
 include::summaries/Core-CityObjects.adoc[]
 
-[[space-concepts-section,Space Concepts]]
+[[space-concepts-section,Space Concept]]
 ==== Space Concept
 
 All city objects are differentiated into spaces and space boundaries. Spaces are entities of volumetric extent in the real world. Buildings, water bodies, trees, rooms, and traffic spaces, for instance, have a volumetric extent. Spaces can be classified into physical spaces and logical spaces. Physical spaces, in turn, can be further classified into occupied spaces and unoccupied spaces.
@@ -87,13 +87,13 @@ In particular, the classification into OccupiedSpace and UnoccupiedSpace might n
 
 [[figure-carport]]
 .Representation of a carport as OccupiedSpace in different LODs. The red boxes represent solids, the green area represents a surface. In addition, the normal vectors of the roof solid (in red) and the roof surface (in green) are shown..
-image::images/carport.png[width=50%,role="right"]
+image::images/carport.png[]
 
 In contrast, a room is a physically unoccupied space. In CityGML, a room is represented by the class BuildingRoom that is a subclass of UnoccupiedSpace. In LOD1, the entire room solid would be considered as unoccupied space, which can contain furniture and installations, though, as is shown in <<figure-room,Figure 4>>. In LOD2 and 3, the solid represents more realistically the really physically unoccupied space of the room (possibly somewhat generalised as indicated in the figure). For all UnoccupiedSpaces, the normal vectors of the bounding thematic surfaces like the InteriorWallSurface need to point inside the object, i.e. opposite to the solid geometry.
 
 [[figure-room]]
 .Representation of a room as UnoccupiedSpace in different LODs. The red boxes represent solids, the green area represents a surface. In addition, the normal vectors of the room solid (in red) and the wall surface (in green) are shown.
-image::images/room.png[width=50%]
+image::images/room.png[]
 
 The UML diagram of the Space concept classes is depicted in the <<core-spaceconcept,Space concepts UML Diagram>>.
 
