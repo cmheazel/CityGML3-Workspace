@@ -15,7 +15,7 @@ The CityGML standard is presented in this document in diagrams using the Unified
 
 [[figure-1]]
 .UML notation (see ISO TS 19103, Geographic information - Conceptual schema language).
-image::../figures/Figure_1.png[width=75%,align="center"]
+image::images/UML_Notation.png[]
 
 All associations between model elements in CityGML are uni-directional. Thus, associations in CityGML are navigable in only one direction. The direction of navigation is depicted by an arrowhead. In general, the context an element takes within the association is indicated by its role. The role is displayed near the target of the association. If the graphical representation is ambiguous though, the position of the role has to be drawn to the element the association points to.
 
@@ -53,7 +53,6 @@ Classes painted in green are defined in the ISO standards 19107, 19111, or 19123
 
 image:images/ColorScheme_grey.png[]
 
-
 Classes painted in grey are defined in the ISO standard 19109. In the context of this standard this only applies to the class _AnyFeature_. _AnyFeature_ is an instance of the metaclass _FeatureType_ and acts as super class of all classes in the CityGML UML model with the stereotype &#171;FeatureType&#187;.
 
 image:images/ColorScheme_white.png[]
@@ -64,7 +63,7 @@ The following example UML diagram demonstrates the UML notation and coloring sch
 
 [[figure-2]]
 .Example UML diagram demonstrating the UML notation and coloring scheme used throughout the CityGML specification.
-image::../figures/Figure_2.png[]
+image::images/UML_Notation_Example.png[]
 
 [[conceptual-modeling-description]]
 === Conceptual Modeling
