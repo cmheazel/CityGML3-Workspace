@@ -3,12 +3,42 @@
 [[overview-section]]
 == Overview of CityGML
 
+[[overview-section-modularisation]]
 === Modularisation
+
+The CityGML conceptual model provides data models for the most important types of objects within virtual 3D city models. These feature types have been identified to be either required or important in many different application areas. However, implementations are not required to support the overall CityGML data model in order to be conformant to the standard, but may employ a subset of constructs according to their specific information needs. For this purpose, modularisation is applied to the CityGML conceptual model.
+
+[[figure-moduleoverview]]
+.CityGML 3.0 module overview. The vertical boxes show the different thematic modules. Horizontal modules specify concepts that are applicable to all thematic modules.
+image::images/ModuleOverview.png[]
+
+The CityGML conceptual model is thematically decomposed into a _core module_ and different kinds of _extension modules_ as shown in Figure <<figure-moduleoverview,Module overview>>. The core module (shown in green) comprises the basic concepts and components of the CityGML data model and, thus, must be implemented by any conformant system. Each red coloured module covers a specific thematic field of virtual 3D city models. CityGML introduces the following eleven thematic extension modules: _Building_, _Bridge_, _Tunnel_, _Construction_, _CityFurniture_, _CityObjectGroup_, _LandUse_, _Relief_, _Transportation_, _Vegetation_, and _WaterBody_. All three modules _Building_, _Bridge_, and _Tunnel_ model civil structures and share common concepts. These are grouped within the _Construction_ module. The five blue coloured extension modules add specific modeling aspects that can be used in conjunction with all thematic modules. The _Appearance_ module contains the concepts to represent appearances (like textures and colours) of city objects. The _PointCloud_ module provides concepts to represent the geometry of city objects by 3D point clouds. The _Generics_ module defines the concepts for generic objects, attributes, and relationships. _Versioning_ adds concepts for the representation of concurrent versions and historization of city objects. The _Dynamizer_ module contains the concepts to represent city object properties by time series data and linking them with sensors, sensor data services or external files.
+
+Each CityGML encoding can decide to only support a subset of CityGML modules. If a module is supported by an encoding, all concepts shall be mapped. However, the encoding specification can define so-called _null mappings_ to restrict the use of specific elements of the conceptual model in an encoding. Null mappings can be expressed in an encoding specification for individual feature types, properties, and associations defined within a CityGML module. This means that the corresponding element will not be included in the respective encoding.
+
+Note that also CityGML applications do not have to support all modules. Applications can also decide to only support a specific subset of CityGML modules. For example, when an application only has to work with building data, only the modules _Core_, _Construction_, and _Building_ would have to be supported.
 
 === General Modeling Principles
 
 [[overview-section-semantic-modeling]]
 ==== Semantic Modeling of Real World Objects
+
+Real world objects are represented by geographic features according to the definition in ISO 19109. Geographic features of the same type (e.g. buildings, roads) are modelled by corresponding feature types that are represented as classes in the Conceptual Model. The objects within a 3D city model are instances of the different feature types.
+
+In order to distinguish and reference individual objects, each object has unique identifiers. In CityGML 3.0 each geographic feature has the mandatory _featureID_ and an optional _identifier_ property. The _featureID_ is used to distinguish all objects and their possibly existing multiple versions of the same real world object. The _identifier_ is identical for all versions of the same real world object and can be used to reference specific objects independent from their actual object version. The _featureID_ must at least be unique within the same CityGML dataset, but it is generally recommended to use globally unique identifiers like UUID values or identifiers maintained by an organisation like a mapping agency. It is also recommended to provide globally unique and stable identifiers for the _identifier_ attribute. This means these identifiers should remain stable over the lifetime of the real world object.
+
+CityGML feature types typically have a number of spatial and non-spatial properties (also called attributes) as well as relationships with other feature or object types. Note that a single CityGML object can have different spatial representations at the same time, for example, different geometry objects representing the feature's geometry in different levels of detail or as different spatial abstractions.
+
+Many attributes have simple, scalar values like a number or a character string. However, some attributes are complex, i.e.  they do not just have a single property value. In CityGML the following types of complex attributes occur:
+
+* _qualified attribute values_ – e.g. a measure consists of the value and a reference to the unit of measure, or e.g. for relative and absolute height levels the reference level has to be named, too
+* _code list values_ for enumerative attributes; in addition to the value a link to the code list definition should be provided
+* attributes consisting of a _tuple of different fields and values_ – e.g. addresses, space occupancy, and others
+* attribute value consisting of a _list of numbers_, for example, to represent coordinate lists or matrices
+
+In order to support historization CityGML 3.0 introduces bitemporal timestamps for all objects. Besides the attributes _creationDate_ and _terminationDate_ from CityGML 2.0, which refer to the time period in which a specific version of an object is an integral part of the 3D city model, all objects now can additionally have the attributes _validFrom_ and _validTo_, which represent the lifespan a specific version of an object has in the real world. With these two time intervals a CityGML dataset could be queried both for how did the _city_ look alike at a specific point in time as well as how did the _city model_ look at that time.
+
+The combination of the two types of feature identifiers explained above and bi-temporal timestamps allows that not only the current version of a 3D city model, but also its entire history can be represented in CityGML and possibly exchanged even within a single file.
 
 ==== Class Hierachy and Inheritance of Properties and Relations
 
@@ -16,11 +46,43 @@ In CityGML, the specific feature types like Building, Tunnel, or WaterBody are d
 
 ==== Relationships between CityGML objects
 
+In CityGML objects can be related to each other and different kinds of relations are distinguished. First of all, complex objects like buildings or transportation objects are typically consisting of parts. These parts are individual features of their own, and can even be further decomposed. Therefore, CityGML objects can form aggregation hierarchies. Some feature types are marked in the data models with the stereotype _&#171;TopLevelFeatureType&#187;_. These constitute the main objects of a city model and are typically the root of an aggregation hierarchy. Only top-level features are allowed as direct members of a _CityModel_ object. The information which feature types belong to the top level is required for software packages that want to filter imports, exports, and visualizations according to the general type of city object (e.g. only show buildings, solitary vegetation objects, and roads). Application Domain Extensions of CityGML should also make use of this concept, such that software tools can learn from inspecting their conceptual schema what are the main, i.e. the top-level feature types of the extension.
+
+Some relations in CityGML are qualified by additional parameters, typically to further specify the type of relationship. For example, a relationship can be qualified with a URI pointing to a definition of the respective relation type in an Ontology. Qualified relationships are used in CityGML, among others, for
+
+* general relationships between features – association _relatedTo_ between city objects,
+* user defined aggregations using _CityObjectGroup_ – this relation allows also for recursive aggregations,
+* external references – linking of city objects with corresponding entities from external resources like objects in a cadastre or within a BIM dataset.
+
+The CityGML conceptual model contains many relationships that are specifically defined between certain feature types. For example, there is the _boundary_ relationship from 3D volumetric objects to its thematically differentiated 3D boundary surfaces. Another example is the _generalizesTo_ relation between features instances that represent objects on different generalisation levels.
+
+In CityGML 3.0 there are new associations to express topologic, geometric, and semantic relations between all kinds of city objects. For example, it can be expressed that two rooms are adjacent or that one interior building installation (like a curtain rail) is overlapping with the spaces of two connected rooms. It can also be expressed that two wall surfaces are parallel and two others are orthogonal. Also distances between objects could be represented explicitly using geometric relations. In addition to spatial relations logical relations can be expressed. The _Generics_ module defines a _GenericSpaceRelation_ and _GenericBoundaryRelation_ where the relation type is represented by a URI.
+
 ==== Definition of the Semantics for all Classes, Properties, and Relations
+
+The meanings of all elements defined in the CityGML conceptual data model are normatively specified in the data dictionary in chapter <<data-dictionary-section,Data Dictionary>>.
 
 === Representation of Spatial Properties
 
 ==== Geometry and Topology
+
+Spatial properties of all CityGML feature types are represented using the geometry classes defined in ISO 19107. Spatial representations can have 0-, 1-, 2-, or 3-dimensional extents depending on the respective feature type and level of detail (LOD; the LOD concept is discussed in section <<overview-section-levelsofdetail,Levels of Detail>> and <<geometry-lod-section,Geometry and LOD>>). With only a few exceptions all geometries must use 3D coordinate values. Besides primitive geometries like single points, curves, surfaces, and solids, CityGML makes use of different kinds of aggregations of geometries like spatial aggregates (_MultiPoint_, _MultiCurve_, _MultiSurface_, _MultiSolid_), composites (_CompositeCurve_, _CompositeSurface_, _CompositeSolid_), and complexes to represent networks (consisting of curves connected via shared points). Volumetric shapes are represented in ISO 19107 according to the so-called _Boundary Representation_ (B-Rep, for explanation see [<<Foley2002>>]) only.
+
+The CityGML conceptual model does not put any restriction on the usage of specific geometry types as defined in ISO 19107. For example, 3D surfaces could be represented in a dataset using 3D polygons, 3D meshes – i.e. as triangulated irregular networks, or by non-uniform rational B-spline surfaces (NURBS). However, an encoding may restrict the usage of geometry types. For example, curved lines like B-splines or clothoids or curved surfaces like NURBS could be disallowed by explicitly defining _null encodings_ for these concepts in the encoding specification (c.f. section <<overview-section-modularisation,Modularisation>> above).
+
+Note that the conceptual schema of ISO 19107 allows that composite geometries can be given by a recursive aggregation for every primitive type of the corresponding dimension. This aggregation schema allows the definition of nested aggregations (hierarchy of components). For example, a building geometry (_CompositeSolid_) can be composed of the house geometry (_CompositeSolid_) and the garage geometry (_Solid_), while the house’s geometry is further decomposed into the roof geometry (_Solid_) and the geometry of the house body (_Solid_). This is illustrated in Figure <<figure-recursiveaggregation, Recursive aggregation>>.
+
+[[figure-recursiveaggregation]]
+.Recursive aggregation of objects and geometries in CityGML (graphic: IGG Uni Bonn).
+image::images/RecursiveAggregation.png[]
+
+While CityGML does not employ the topology classes from ISO 19107, topological relations between geometries can be established by sharing geometries (typically parts of the boundary) between different geometric objects. One part of real-world space can be represented only once by a geometry object and is referenced by all features or more complex geometries which are defined or bounded by this geometry object. Thus redundancy can be avoided and explicit topological relations between parts are maintained.
+
+Basically, there are three cases for sharing geometries: First, two different semantic objects may be spatially represented by the same geometry object. For example, if a foot path is both a transportation feature and a vegetation feature, the surface geometry defining the path is referenced both by the transportation object and by the vegetation object. Second, a geometry object may be shared between a feature and another geometry. A geometry defining a wall of a building may be referenced twice: by the solid geometry defining the geometry of the building, and by the wall feature. Third, two geometries may reference the same geometry, which is in the boundary of both. For example, a building and an adjacent garage may be represented by two solids. The surface describing the area where both solids touch may be represented only once and it is referenced by both solids. As it can be seen from Figure <<figure-recursiveaggregation, Recursive aggregation>>, this requires partitioning of the respective surfaces. In general, B-Rep only considers visible surfaces. However, to make topological adjacency explicit and to allow the possibility of deletion of one part of a composed object without leaving holes in the remaining aggregate touching elements are included. Whereas touching is allowed, permeation of objects is not in order to avoid the multiple representation of the same space.
+
+Another example for sharing geometry objects that are members of the boundaries in different higher-dimensional geometry objects is the sharing of point geometries or curve geometries, which make up the outer and inner boundaries of a polygon. This would allow that each point is only represented once, and different polygons could reference this point geometry.
+
+Note that the use of topology in CityGML datasets by sharing geometries is optional. Furthermore, an encoding of the CityGML conceptual model might restrict the usage of shared geometries. For example, it might only be allowed to share identical (support) points from different 3D polygons or only entire polygons can be shared between touching solids (like shown in Figure <<figure-recursiveaggregation, Recursive aggregation>>).
 
 ==== Prototypic objects / scene graph concepts
 
@@ -74,6 +136,7 @@ Semantic objects in CityGML are often composed of parts, i.e. they form multi-le
 
 The classification of feature types into OccupiedSpace and UnoccupiedSpace also defines the semantics of the geometries attached to the respective features. For OccupiedSpaces, the attached geometries describe volumes that are (mostly) physically occupied. For UnoccupiedSpaces, the attached geometries describe (or bound) volumes that are (mostly) physically unoccupied. This also has an impact on the required orientation of surface normals for attached thematic surfaces. For OccupiedSpaces, the normal vectors of thematic surfaces must point in the same direction as the surfaces of the outer shell of the volume. For UnoccupiedSpaces, the normal vectors of thematic surfaces must point in the opposite direction as the surfaces of the outer shell of the volume. This means that from the perspective of an observer of a city scene, the surface normals must always be directed towards the observer. In the case of OccupiedSpaces (e.g. Buildings, Furniture), the observer must be located outside the OccupiedSpace for the surface normals being directed towards the observer; whereas in the case of UnoccupiedSpaces (e.g. Rooms, Roads), the observer is typically inside the UnoccupiedSpace.
 
+[[overview-section-levelsofdetail]]
 ==== Levels of Detail
 
 ==== Closure Surfaces
@@ -138,5 +201,12 @@ Dynamizers are used to inject dynamic variations of city object properties into 
 
 Dynamizers have already been implemented as an Application Domain Extension (ADE) for CityGML 2.0 and were employed in the OGC Future City Pilot Phase 1. More details about Dynamizers are given in [<<Chaturvedi2017>>].
 
-
 === Extending CityGML
+
+CityGML has been designed as a universal topographic information model that defines object types and attributes which are useful for a broad range of applications. In practical applications the objects within specific 3D city models will most likely contain attributes which are not explicitly modelled in CityGML. Moreover, there might be 3D objects which are not covered by the thematic classes of CityGML. CityGML provides two different concepts to support the exchange of such data: 1) generic objects and attributes, and 2) Application Domain Extensions.
+
+The concept of generic objects and attributes allows for the extension of CityGML applications during runtime, i.e. any city object may be augmented by additional attributes and relations, whose names, data types, and values can be provided by a running application without requiring to extend the CityGML conceptual schema and the respective encodings. Similarly, features not represented by the predefined thematic classes of the CityGML conceptual model may be modelled and exchanged using generic objects. The generic extensions of CityGML are provided by the _Generics_ module (cf. sections <<rc_generics_section,Generics>> and <<extensions-section-genericobjects,Generic Objects and Attributes>>).
+
+Application Domain Extensions (ADE) specify additions to the CityGML conceptual model. Such additions comprise the introduction of new properties to existing CityGML feature types like e.g. the energy demand of a building or the definition of additional feature types. The difference between ADEs and generic objects and attributes is, that an ADE has to be defined in an extra conceptual schema (provided in UML) with its own namespace. Encodings have to be extended accordingly. The advantage of this approach is that the extension is formally specified. Extended CityGML datasets can be validated against the CityGML and the respective ADE schema. ADEs can be defined (and even standardised) by information communities which are interested in specific application fields. More than one ADE can be used simultaneously in the same dataset. Examples for popular ADEs are the Utility Network ADE [<<Becker2011>>; <<Kutzner2018>>] and the Energy ADE [<<Nouvel2015>>; <<Agugiaro2018>>]. A comprehensive overview of CityGML ADEs is given in [<<Biljecki2018>>]. Further details on ADEs are given in section <<extensions-section-ade,Application Domain Extension>>.
+
+CityGML can also be extended with regard to the allowed values specified in code lists. Many attributes of CityGML types use a code list as data type such as, for instance, the attributes _class_, _usage_, and _function_ of city objects. A code list defines a value domain including a code for each permissible value. In contrast to fixed enumerations, modifications and extensions to the value domain become possible with code lists. The values for all code lists in CityGML have to be defined externally, for example, by adopting classifications from global, national, or industrial standards. More details on code lists are given in section <<extensions-section-codelists,Code Lists>>.

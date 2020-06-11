@@ -12,16 +12,18 @@ CityGML affords this flexibility by providing a slim base model with the followi
 
 These extension mechanisms have been introduced with CityGML 1.0 and are since widely used and accepted in the CityGML community.
 
+[[extensions-section-codelists]]
 === Code Lists
 
-When an attribute may have only one value selected from a small and fixed set of values, CityGML 3.0 specifies those as an enumeration. When the set of possible values is a priori unknown but predefined and fixed for a specific application domain or user organization, the values may be modelled as classes with the stereotype &#171;CodeList&#187;. 
+When an attribute may have only one value selected from a small and fixed set of values, CityGML 3.0 specifies those as an enumeration. When the set of possible values is a priori unknown but predefined and fixed for a specific application domain or user organization, the values may be modelled as classes with the stereotype &#171;CodeList&#187;.
 
-Many attributes of CityGML types use a code list as data type such as, for instance, the attributes _class_, _usage,_ and _function_ of city objects. A code list defines a value domain including a code for each permissible value. In contrast to fixed enumerations, modifications to the value domain become possible with code lists. 
+Many attributes of CityGML types use a code list as data type such as, for instance, the attributes _class_, _usage,_ and _function_ of city objects. A code list defines a value domain including a code for each permissible value. In contrast to fixed enumerations, modifications to the value domain become possible with code lists.
 
 The feasible values for attributes with code lists may substantially vary for different applications, uses cases, information communities or even countries (e.g., due to national law or regulations). For this reason, code lists are modelled as empty classes without predefined normative content. The governance of code lists is rather decoupled from the governance of the CityGML conceptual model, and the contents may be defined and managed outside this International Standard by any organization or information community according to their information needs. Code lists should be made available as publicly accessible resource, either globally or within an application domain.
 
 Rules and constraints for the encoding of both code lists and attributes having a code list as value are not subject of this document but are defined in a corresponding CityGML Encoding Specification. It is recommended, though, that attributes should be encoded such that they can take a value from a code list and, optionally, provide an identifier that references the code list in a unique way.
 
+[[extensions-section-genericobjects]]
 === Generic Objects and Attributes
 
 Generic objects and attributes are available from the <<rc_generics_section, _Generics_>> module of CityGML. A generic object is intended to be used as proxy for a real-world feature that is not mapped by a specific class in CityGML. Depending on the type and geometric characteristics of the real-world feature, CityGML offers the proxy classes _GenericLogicalSpace_, _GenericOccupiedSpace_, _GenericUnoccupiedSpace_ and _GenericThematicSurface_ to capture the feature. Each proxy can have a semantic meaning defined by the attributes _class_, _function_, and _usage_.
@@ -30,13 +32,14 @@ Generic attributes are name-value pairs that can be assigned to any city object 
 
 The main advantage of generic objects and attributes is that they are simple and easy-to-use to represent application-specific content. Since this extension mechanism is built into the conceptual model of CityGML, it provides the capability of ad-hoc data enrichment (“at run-time”) without the need for modifying the conceptual model. This flexibility also faces disadvantages though:
 
-* Generic objects are “flat” and cannot be decomposed into sub-features and feature hierarchies like other CityGML features such as, for instance, buildings or transportation features. However, they may be related to other city objects through the inherited _relatedTo_ association. 
+* Generic objects are “flat” and cannot be decomposed into sub-features and feature hierarchies like other CityGML features such as, for instance, buildings or transportation features. However, they may be related to other city objects through the inherited _relatedTo_ association.
 * Names, data types, and multiplicities of generic attributes cannot be specified in a formal way. Consequently, there is no guarantee for an application that a generic attribute of a specific name and type is available a minimum or maximum number of times for a given city object.
 * Name clashes between generic attributes from different applications are possible and cannot be avoided in a formal way, which might impede semantic interoperability.
 * There is only a limited number of predefined simple data types available for generic attributes.
 
 To avoid semantic interoperability issues, generic objects and attributes shall only be used if a more specific feature class or attribute is not available from the CityGML conceptual model.
 
+[[extensions-section-ade]]
 === Application Domain Extension (ADE)
 
 An _Application Domain Extension_ (ADE) is a formal and systematic extension of CityGML for a specific application or domain in the form of a conceptual UML model. The application data is mapped to a set of additional classes, attributes, and relations. ADEs may use elements from CityGML, for instance, to derive application-specific subclasses, to inject additional properties, to associate application data with predefined CityGML content, or to define value domains for attributes.
@@ -126,4 +129,3 @@ include::recommendations/Core/REC_Core_ADE_Elements.adoc[]
 The following Requirements define how to use the CityGML extension properties to add attributes to an existing CityGML Feature Type.
 
 include::requirements/Core/REQ_Core_ADE_Properties.adoc[]
-
