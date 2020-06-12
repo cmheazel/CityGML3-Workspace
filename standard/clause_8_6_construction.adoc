@@ -9,8 +9,8 @@ Furniture, installations, and constructive elements are further concepts that ar
 Constructions and constructive elements can be bounded by different types of surfaces. In this way, the outer structure of constructions and constructive elements can be differentiated semantically into wall surfaces, roof surfaces, ground surfaces, outer floor surfaces, and outer ceiling surfaces, whereas the visible surface of interior spaces can be structured into interior wall surfaces, floor surfaces, and ceiling surfaces.
 Furthermore, the openings of constructions, i.e. windows and doors, can be represented as so-called filling elements including their corresponding filling surfaces.
 
-The UML diagram of the Construction module is depicted in <<construction-uml,Construction UML Diagram>>.
-The Contruction module defines concepts that are inherited and, where necessary, are specialized by the modules Building, Bridge, and Tunnel  (cf. sections <<rc_building-model_section, Building>>, <<rc_bridge-model_section, Bridge>>, and <<rc_tunnel_section, Tunnel>>).
+The UML diagram of the Construction module is depicted in <<construction-uml>>.
+The Contruction module defines concepts that are inherited and, where necessary, are specialized by the modules Building, Bridge, and Tunnel  (cf. <<rc_building-model_section>>, <<rc_bridge-model_section>>, and <<rc_tunnel_section>>).
 A detailed discussion of the Requirements Class Construction can be found in the https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072UG.html#bp_construction_section[CityGML Users Guide].
 
 [[construction-uml]]
@@ -25,4 +25,3 @@ include::requirements/Construction/REQ_Construction_Classes.adoc[]
 ==== Class Definitions
 
 include::summaries/Construction.adoc[]
-

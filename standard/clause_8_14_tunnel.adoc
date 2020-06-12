@@ -10,7 +10,7 @@ The interior of tunnels is represented by hollow spaces. This allows a virtual a
 Tunnels can contain installations and furniture. Installations are permanent parts of a tunnel that strongly affect the outer or inner appearance of the tunnel and that cannot be moved. Examples are stairs, railings, radiators or pipes. Furniture, in contrast, represent moveable objects inside a tunnel, like movable equipment in control areas.
 Tunnels can be bounded by different types of surfaces. In this way, the outer structure of tunnels can be differentiated semantically into wall surfaces, roof surfaces, ground surfaces, outer floor surfaces, and outer ceiling surfaces, whereas the visible surface of hollow spaces can be structured into interior wall surfaces, floor surfaces, and ceiling surfaces. Furthermore, the openings of tunnels, i.e. windows and doors, can be represented including their corresponding surfaces.
 
-The UML diagram of the Tunnel module is depicted in <<tunnel-uml,Tunnel UML Diagram>>. The Tunnel module inherits concepts from the Construction module <<rc_construction_section, (cf. Section Construction)>>. The Construction module defines objects that are common to all types of construction, such as the different surface types and the openings. A detailed discussion of the Requirements Class Tunnel can be found in the https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072UG.html#bp_tunnel_section[CityGML Users Guide].
+The UML diagram of the Tunnel module is depicted in <<tunnel-uml>>. The Tunnel module inherits concepts from the Construction module (cf. <<rc_construction_section>>). The Construction module defines objects that are common to all types of construction, such as the different surface types and the openings. A detailed discussion of the Requirements Class Tunnel can be found in the https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072UG.html#bp_tunnel_section[CityGML Users Guide].
 
 [[tunnel-uml]]
 .UML diagram of the Tunnel Model.
@@ -24,4 +24,3 @@ include::requirements/Tunnel/REQ_Tunnel_Classes.adoc[]
 ==== Class Definitions
 
 include::summaries/Tunnel.adoc[]
-

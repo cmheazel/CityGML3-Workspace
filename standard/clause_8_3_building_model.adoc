@@ -10,7 +10,7 @@ The interior of buildings is represented by rooms. This allows a virtual accessi
 Buildings can contain installations and furniture. Installations are permanent parts of a building that strongly affect the outer or inner appearance of the building and that cannot be moved. Examples are balconies, chimneys, dormers or stairs. Furniture, in contrast, represent moveable objects inside a building, like tables and chairs.
 Buildings can be bounded by different types of surfaces. In this way, the outer façade of buildings can be differentiated semantically into wall surfaces, roof surfaces, ground surfaces, outer floor surfaces, and outer ceiling surfaces, whereas the visible surface of rooms can be structured into interior wall surfaces, floor surfaces, and ceiling surfaces. Furthermore, the openings of buildings, i.e. windows and doors, can be represented including their corresponding surfaces.
 
-The UML diagram of the building module is depicted in <<building-uml,Building UML Diagram>>. The Building module inherits concepts from the Construction module <<rc_construction_section, (cf. Section Construction)>>. The Construction module defines objects that are common to all types of construction, such as the different surface types and the openings. A detailed discussion of the Requirements Class Building can be found in the https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072UG.html#bp_building-model_section[CityGML Users Guide].
+The UML diagram of the building module is depicted in <<building-uml>>. The Building module inherits concepts from the Construction module (cf. <<rc_construction_section>>). The Construction module defines objects that are common to all types of construction, such as the different surface types and the openings. A detailed discussion of the Requirements Class Building can be found in the https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072UG.html#bp_building-model_section[CityGML Users Guide].
 
 [[building-uml]]
 .UML diagram of CityGML’s building model.
@@ -24,4 +24,3 @@ include::requirements/Building/REQ_Building_Classes.adoc[]
 ==== Class Definitions
 
 include::summaries/Building.adoc[]
-

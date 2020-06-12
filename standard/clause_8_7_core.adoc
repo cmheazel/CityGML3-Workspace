@@ -5,7 +5,7 @@
 
 include::requirements/requirements_class_core.adoc[]
 
-The Core module defines the basic concepts and components of city models. This rather large body of work has been divided into seven sections. These sections build on each other from the fundamental principles specified by the ISO up through the full CityGML model. These sections are summarized in the <<citygml-core-table>> table.
+The Core module defines the basic concepts and components of city models. This rather large body of work has been divided into seven sections. These sections build on each other from the fundamental principles specified by the ISO up through the full CityGML model. These sections are summarized in <<citygml-core-table>>.
 
 [[citygml-core-table]]
 .CityGML Core Sections
@@ -37,13 +37,13 @@ include::recommendations/Core/PER_Core_Classes.adoc[]
 [[ISO-dependencies-section]]
 ==== ISO Dependencies
 
-CityGML builds on the ISO 191** family of standards. The applicable standards are identified in the <<ISO-in-CityGML-diagram>> diagram. Data dictionaries are included for all of the ISO-defined classes explicitly referenced in the CityGML UML model. These data dictionaries are provided for the convinence of the user. The ISO standards are the normative source.
+CityGML builds on the ISO 191** family of standards. The applicable standards are identified in the diagram in <<ISO-in-CityGML-diagram>>. Data dictionaries are included for all of the ISO-defined classes explicitly referenced in the CityGML UML model. These data dictionaries are provided for the convinence of the user. The ISO standards are the normative source.
 
 [[ISO-in-CityGML-diagram]]
 .Use of ISO Standards in CityGML
 image::figures/Core/ISO_and_OGC_standards_in_CityGML.png[]
 
-The ISO classes explicitly used in the CityGML UML model are introduced in the <<iso-class-table>> table. More detail about these classes can be found in the <<data-dictionaries-section,Data Dictionaries>> section.
+The ISO classes explicitly used in the CityGML UML model are introduced in <<iso-class-table>>. More details about these classes can be found in the Data Dictionary in <<data-dictionary-section>>.
 
 [[iso-class-table]]
 .ISO Classes used in CityGML
@@ -63,45 +63,45 @@ The ISO classes explicitly used in the CityGML UML model are introduced in the <
 |<<SC_CRS-section,SC_CRS>> |Coordinate reference system which is usually single but may be compound.
 |===
 
-[[city-objects-section,City Models and City Objects]]
+[[city-objects-section]]
 ==== City Models and City Objects
 
-City models are virtual representations of real-world cities and landscapes. A city model aggregates different types of objects, which can be city objects, appearances, different versions of the city model, transitions between different versions of the city model, and feature objects. All objects defined in CityGML are features with lifespan. This allows the optional specification of the real-world and database times for the existence of each feature, as is required by the Versioning module (cf. Section <<rc_versioning_section,  Versioning>>). Features that define thematic concepts related to cities and landscapes, such as building, bridge, water body, or land use, are referred to as city objects. All city objects define properties that describe the objects in more detail. These static properties can be overriden with time-varying data through Dynamizers (cf. Section <<rc_dynamizer_section, Dynamizer>>).
+City models are virtual representations of real-world cities and landscapes. A city model aggregates different types of objects, which can be city objects, appearances, different versions of the city model, transitions between different versions of the city model, and feature objects. All objects defined in CityGML are features with lifespan. This allows the optional specification of the real-world and database times for the existence of each feature, as is required by the Versioning module (cf. <<rc_versioning_section>>). Features that define thematic concepts related to cities and landscapes, such as building, bridge, water body, or land use, are referred to as city objects. All city objects define properties that describe the objects in more detail. These static properties can be overridden with time-varying data through Dynamizers (cf. <<rc_dynamizer_section>>).
 
 .UML City Models and City Objects
 image::figures/Core/Core-City_models_and_city_objects.png[]
 
-The City Model and City Object classes defined in the CityGML UML model are introduced in the <<Core-city-model-class-table>> table. More details about these classes can be found in the <<data-dictionaries-section,Data Dictionaries>> section.
+The City Model and City Object classes defined in the CityGML UML model are introduced in <<Core-city-model-class-table>>. More details about these classes can be found in the Data Dictionary in <<data-dictionary-section>>.
 
 include::summaries/Core-CityObjects.adoc[]
 
-[[space-concepts-section,Space Concept]]
+[[space-concepts-section]]
 ==== Space Concept
 
 All city objects are differentiated into spaces and space boundaries. Spaces are entities of volumetric extent in the real world. Buildings, water bodies, trees, rooms, and traffic spaces, for instance, have a volumetric extent. Spaces can be classified into physical spaces and logical spaces. Physical spaces, in turn, can be further classified into occupied spaces and unoccupied spaces.
 
 Space boundaries, in contrast, are entities with areal extent in the real world. Space boundaries can be differentiated into different types of thematic surfaces, such as wall surfaces and roof surfaces.
 
-A detailed introduction to the Space concept can be found in the CityGML 3.0 <<overview-section,Overview>> chapter.
-In particular, the classification into OccupiedSpace and UnoccupiedSpace might not always be apparent at first sight. Carports, for instance, represent an OccupiedSpace, although they are not closed and most of the space is free of matter, see Figure <<figure-carport,Representation of a carport>>. Since a carport is a roofed, immovable structure with the purpose of providing shelter to objects (i.e. cars), carports are frequently represented as buildings in cadastres. Thus, also in CityGML, a carport should be modelled as an instance of the class Building. Since Building is transitively a subclass of OccupiedSpace, a carport is an OccupiedSpace as well. However, only in LOD1, the entire volumetric region covered by the carport would be considered as physically occupied. In LOD1, the occupied space is defined by the entire carport solid (unless a room would be defined in LOD1 that would model the unoccupied part below the roof); whereas in LOD2 and LOD3, the solids represent more realistically the really physically occupied space of the carport. In addition, for all OccupiedSpaces, the normal vectors of the thematic surfaces like the RoofSurface need to point away from the solids, i.e. consistent with the solid geometry.
+A detailed introduction to the Space concept can be found in <<overview-section-coremodel>>.
+In particular, the classification into OccupiedSpace and UnoccupiedSpace might not always be apparent at first sight. Carports, for instance, represent an OccupiedSpace, although they are not closed and most of the space is free of matter, see <<figure-carport>>. Since a carport is a roofed, immovable structure with the purpose of providing shelter to objects (i.e. cars), carports are frequently represented as buildings in cadastres. Thus, also in CityGML, a carport should be modelled as an instance of the class Building. Since Building is transitively a subclass of OccupiedSpace, a carport is an OccupiedSpace as well. However, only in LOD1, the entire volumetric region covered by the carport would be considered as physically occupied. In LOD1, the occupied space is defined by the entire carport solid (unless a room would be defined in LOD1 that would model the unoccupied part below the roof); whereas in LOD2 and LOD3, the solids represent more realistically the really physically occupied space of the carport. In addition, for all OccupiedSpaces, the normal vectors of the thematic surfaces like the RoofSurface need to point away from the solids, i.e. consistent with the solid geometry.
 
 [[figure-carport]]
 .Representation of a carport as OccupiedSpace in different LODs. The red boxes represent solids, the green area represents a surface. In addition, the normal vectors of the roof solid (in red) and the roof surface (in green) are shown.
 image::images/carport.png[]
 
-In contrast, a room is a physically unoccupied space. In CityGML, a room is represented by the class BuildingRoom that is a subclass of UnoccupiedSpace. In LOD1, the entire room solid would be considered as unoccupied space, which can contain furniture and installations, though, as is shown in Figure <<figure-room,Representation of a room>>. In LOD2 and 3, the solid represents more realistically the really physically unoccupied space of the room (possibly somewhat generalised as indicated in the figure). For all UnoccupiedSpaces, the normal vectors of the bounding thematic surfaces like the InteriorWallSurface need to point inside the object, i.e. opposite to the solid geometry.
+In contrast, a room is a physically unoccupied space. In CityGML, a room is represented by the class BuildingRoom that is a subclass of UnoccupiedSpace. In LOD1, the entire room solid would be considered as unoccupied space, which can contain furniture and installations, though, as is shown in <<figure-room>>. In LOD2 and 3, the solid represents more realistically the really physically unoccupied space of the room (possibly somewhat generalised as indicated in the figure). For all UnoccupiedSpaces, the normal vectors of the bounding thematic surfaces like the InteriorWallSurface need to point inside the object, i.e. opposite to the solid geometry.
 
 [[figure-room]]
 .Representation of a room as UnoccupiedSpace in different LODs. The red boxes represent solids, the green area represents a surface. In addition, the normal vectors of the room solid (in red) and the wall surface (in green) are shown.
 image::images/room.png[]
 
-The UML diagram of the Space concept classes is depicted in the <<core-spaceconcept,Space concepts UML Diagram>>.
+The UML diagram of the Space concept classes is depicted in <<core-spaceconcept>>.
 
 [[core-spaceconcept]]
 .UML Space Concepts
 image::figures/Core/Core-Space_concepts.png[]
 
-The Space Concept classes defined in the CityGML UML model are introduced in the <<Core-spatial-class-table>> table. More detail about these classes can be found in the <<data-dictionaries-section,Data Dictionaries>> section.
+The Space Concept classes defined in the CityGML UML model are introduced in <<Core-spatial-class-table>>. More details about these classes can be found in the Data Dictionary in <<data-dictionary-section>>.
 
 include::summaries/Core-Spatial.adoc[]
 
@@ -121,13 +121,13 @@ In addition, the geometry can also be represented implicitly, i.e. the shape is 
 
 The thematic classes, such as building, tunnel, road, land use, water body, or city furniture are defined as subclasses of the space and space boundary classes within the thematic modules. Since all city objects in the thematic modules represent subclasses of the space and space boundary classes, they automatically inherit the geometries defined in the Core module.
 
-The UML diagram of the Geometry and LoD concept classes is depicted in the <<core-geometry,Geometry and LoD concepts UML Diagram>>.
+The UML diagram of the Geometry and LoD concept classes is depicted in <<core-geometry>>.
 
 [[core-geometry]]
 .UML Geometry and LoD Concepts
 image::figures/Core/Core-Geometry_and_LoD_concept.png[]
 
-The Geometry and LOD Concept classes defined in the CityGML UML model are introduced in the <<Core-geometry-class-table>> table. More detail about these classes can be found in the <<data-dictionaries-section,Data Dictionaries>> section.
+The Geometry and LOD Concept classes defined in the CityGML UML model are introduced in <<Core-geometry-class-table>>. More details about these classes can be found in the Data Dictionary in <<data-dictionary-section>>.
 
 Of particular note is the Implicit Geometry concept. Many of the objects encountered in a city landscape have the same geometry. How many types of street lamps can there be? An Implicit Geometry captures that geometry once, and re-uses that one geometry for all similar street lamp objects.
 
@@ -138,13 +138,13 @@ include::summaries/Core-Geometry.adoc[]
 
 The <<city-objects-section,City Model and City Object>> classes, the <<space-concepts-section,Space Concept>> classes, and the <<geometry-lod-section,Geometry and LOD>> classes define the majority of the CityGML Core module. In addition to these concepts, the Core module also specifies that city objects can have relations to other city objects and that they can have address information. All other modules defined in the CityGML model refer to the Core module.
 
-The UML diagram of the complete Core module is depicted in the <<core-uml,Core UML Diagram>>.
+The UML diagram of the complete Core module is depicted in <<core-uml>>.
 
 [[core-uml]]
 .UML diagram of CityGML’s core module.
 image::figures/Core/Core-Overview.png[]
 
-The tables <<Core-city-model-class-table>>, <<Core-spatial-class-table>>, and <<Core-geometry-class-table>> introduce already most of the classes of the CityGML Core module. The additional classes required to fill out this section are introduced in the <<Core-class-table>> table. More detail about these classes can be found in the <<data-dictionaries-section,Data Dictionaries>> section.
+<<Core-city-model-class-table>>, <<Core-spatial-class-table>>, and <<Core-geometry-class-table>> introduce already most of the classes of the CityGML Core module. The additional classes required to fill out this section are introduced in <<Core-class-table>>. More details about these classes can be found in the Data Dictionary in <<data-dictionary-section>>.
 
 include::summaries/Core-CityModel.adoc[]
 

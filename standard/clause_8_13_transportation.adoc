@@ -8,7 +8,7 @@ The transportation objects are represented in the UML model by the top-level fea
 
 For each transportation object, traffic spaces and auxiliary traffic spaces can be provided, which are bounded at the bottom by traffic areas and auxiliary traffic areas, respectively. Traffic areas are elements that are important in terms of traffic usage, such as driving lanes, sidewalks, and cycle lanes, whereas auxiliary traffic areas describe further elements, such as kerbstones, middle lanes, and green areas. The corresponding spaces define the free space above the areas. In addition, each traffic space can have an optional clearance space. The transportation objects can be represented in different levels of granularity, either as a single area, split up into individual lanes or even decomposed into individual (carriage)ways. Furthermore, holes in the surfaces of roads, tracks or squares, such as road damages, manholes or drains, can be represented including their corresponding boundary surfaces. In addition, markings for the structuring or restriction of traffic can be added to the transportation areas. Examples are road markings and markings related to railway or waterway traffic.
 
-The UML diagram of the Transportation module is depicted in <<transportation-uml,Transportation UML Diagram>>. A detailed discussion of this Requirements Class can be found in the  https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072UG.html#bp_transportation_section[CityGML Users Guide].
+The UML diagram of the Transportation module is depicted in <<transportation-uml>>. A detailed discussion of this Requirements Class can be found in the  https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072UG.html#bp_transportation_section[CityGML Users Guide].
 
 [[transportation-uml]]
 .UML diagram of the Transportation Model.
@@ -22,4 +22,3 @@ include::requirements/Transportation/REQ_Transportation_Classes.adoc[]
 ==== Class Definitions
 
 include::summaries/Transportation.adoc[]
-

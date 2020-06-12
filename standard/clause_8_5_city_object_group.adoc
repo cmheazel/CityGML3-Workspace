@@ -8,7 +8,7 @@ City object groups are represented in the UML model by the top-level feature typ
 
 City object groups can be linked to other city objects, the so-called parent objects, which allows for modelling a generic hierarchical grouping concept. In addition, as city object groups represent city objects themselves, a group may become a member of another group realizing recursive aggregation in this way.
 
-The UML diagram of the CityObjectGroup module is depicted in <<cityobject-uml,City Object Group UML Diagram>>. A detailed discussion of this Requirements Class can be found in the https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072UG.html#bp_city-object-group_section[CityGML Users Guide].
+The UML diagram of the CityObjectGroup module is depicted in <<cityobject-uml>>. A detailed discussion of this Requirements Class can be found in the https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072UG.html#bp_city-object-group_section[CityGML Users Guide].
 
 [[cityobject-uml]]
 .UML diagram of the City Object Group Model.
@@ -22,4 +22,3 @@ include::requirements/CityObjectGroup/REQ_CityObjectGroup_Classes.adoc[]
 ==== Class Definitions
 
 include::summaries/CityObjectGroup.adoc[]
-
