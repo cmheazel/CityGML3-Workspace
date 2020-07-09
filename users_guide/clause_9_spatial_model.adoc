@@ -1,0 +1,145 @@
+[[bp_spatialModel]]
+== Spatial Model
+
+Spatial properties of CityGML features are represented by objects of GML3’s geometry model. This model is based on the standard ISO 19107 ‘Spatial Schema’ (Herring 2001), representing 3D geometry according to the well-known Boundary Representation (B-Rep, cf. Foley et al. 1995). CityGML actually uses only a subset of the GML3 geometry package, defining a profile of GML3. This subset is depicted in Fig. 9 and Fig. 10. Further-more, GML3’s explicit Boundary Representation is extended by scene graph concepts, which allow the represen-tation of the geometry of features with the same shape implicitly and thus more space efficiently (chapter 8.2).
+
+=== Geometric-topological model
+
+The geometry model of GML3 consists of primitives, which may be combined to form complexes, composite geometries or aggregates. For each dimension, there is a geometrical primitive: a zero-dimensional object is a Point, a one-dimensional a _Curve, a two-dimensional a _Surface, and a three-dimensional a _Solid (Fig. 9). Each geometry can have its own coordinate reference system. A solid is bounded by surfaces and a surface by curves. In CityGML, a curve is restricted to be a straight line, thus only the GML3 class LineString is used. Surfaces in CityGML are represented by Polygons, which define a planar geometry, i.e. the boundary and all interior points are required to be located in one single plane.
+
+[[figure-9]]
+.UML diagram of CityGML’s geometry model (subset and profile of GML3): Primitives and Composites.
+image::figures/Figure_9.png[]
+
+Combined geometries can be aggregates, complexes or composites of primitives (see illustration in Fig. 11). For an aggregate, the spatial relationship between components is not restricted. They may be disjoint, overlapping, touching, or disconnected. GML3 provides a special aggregate for each dimension, a MultiPoint, a MultiCurve, a MultiSurface, and a MultiSolid (see Fig. 10). In contrast to aggregates, a complex is topologically structured: its parts must be disjoint, must not overlap and are allowed to touch, at most, at their boundaries or share parts of their boundaries. A composite is a special complex provided by GML3. It can only contain elements of the same dimension. Its elements must be disjoint as well, but they must be topologically connected along their bounda-ries. A composite can be a CompositeSolid, a CompositeSurface, or CompositeCurve. (cf. Fig. 9).
+
+NOTE: insert fig10 UML
+[[figure-10]]
+.UML diagram of CityGML’s geometry model: Complexes and Aggregates
+image::figures/Figure_10.png[]
+
+An OrientableSurface is a surface with an explicit orientation, i.e. two sides, front and back, can be distinguished. This may be used to assign textures to specific sides of a surface, or to distinguish the exterior and the interior side of a surface when bounding a solid. Please note, that curves and surfaces have a default orientation in GML which results from the order of the defining points. Thus, an OrientableSurface only has to be used, if the orientation of a given GML geometry has to be reversed.
+
+TriangulatedSurfaces are special surfaces, which specify triangulated irregular networks often used to represent the terrain. While a TriangulatedSurface is a composition of explicit Triangles, the subclass TIN is used to represent a triangulation in an implicit way by a set of control points, defining the nodes of the triangles. The triangulation may be reconstructed using standard triangulation methods (Delaunay triangulation). In addition, break lines and stop lines define contour characteristics of the terrain.
+
+[[figure-11]]
+.Combined geometries
+image::figures/Figure_11.png[]
+
+The GML3 composite model realises a recursive aggregation schema for every primitive type of the corresponding dimension. This aggregation schema allows the definition of nested aggregations (hierarchy of components). For example, a building geometry (CompositeSolid) can be composed of the house geometry (CompositeSolid) and the garage geometry (Solid), while the house’s geometry is further decomposed into the roof geometry (Solid) and the geometry of the house body (Solid).
+
+CityGML provides the explicit modelling of topology, for example the sharing of geometry objects between features or other geometries. One part of space is represented only once by a geometry object and is reference by all features or more complex geometries which are defined or bounded by this geometry object. Thus redundancy is avoided and explicit topological relations between parts are maintained. Basically, there are three cases. First, two features may be defined spatially by the same geometry. For example, if a path is both a transportation feature and a vegetation feature, the surface geometry defining the path is referenced both by the transportation object and by the vegetation object. Second, geometry may be shared between a feature and another geometry. A geometry defining a wall of a building may be referenced twice: by the solid geometry defining the geometry of the building, and by the wall feature. Third, two geometries may reference the same geometry, which is in the boundary of both. For example, a building and an adjacent garage may be represented by two solids. The surface describing the area where both solids touch may be represented only once and it is referenced by both solids. As it can be seen from Fig. 12, this requires partitioning of the respective surfaces. In general, Boundary Represen-tation only considers visible surfaces. However, to make topological adjacency explicit and to allow the possibil-ity of deletion of one part of a composed object without leaving holes in the remaining aggregate touching elements are included. Whereas touching is allowed, permeation of objects is not in order to avoid the multiple representation of the same space. However, the use of topology in CityGML is optional.
+
+In order to implement topology, CityGML uses the XML concept of XLinks provided by GML. Each geometry object that should be shared by different geometric aggregates or different thematic features is assigned an unique identifier, which may be referenced by a GML geometry property using a href attribute. CityGML does not deploy the built-in topology package of GML3, which provides separate topology objects accompanying the geometry. This kind of topology is very complex and elaborate. Nevertheless, it lacks flexibility when data sets, which might include or neglect topology, should be covered by the same data model. The XLink topology is simple and flexible and nearly as powerful as the explicit GML3 topology model. However, a disadvantage of the XLink topology is that navigation between topologically connected objects can only be performed in one direction (from an aggregate to its components), not (immediately) bidirectional as it is the case for GML’s built-in topology. An example for CityGML’s topology representation is given in the dataset listed in annex G.4.
+
+[[figure-12]]
+.Recursive aggregation of objects and geometries in CityGML (graphic: IGG Uni Bonn).
+image::figures/Figure_12.jpg[]
+
+The following excerpt of a CityGML example file defines a gml:Polygon with a gml:id wallSurface4711, which is part of the geometry property lod2Solid of a building. Another building being adjacent to the first building references this shared polygon in its geometry representation.
+
+NOTE: replace GML? Or retain it as an example.
+
+=== Spatial reference system
+
+When dealing with geoinformation and virtual 3D city models in particular, the exact spatial reference is of utmost importance and a key requirement for the integration of different spatial datasets in a single 3D city model. CityGML inherits GML3’s spatial capabilities of handling Coordinate Reference Systems (CRS) which is the usual way of denoting the spatial reference in GML 3.1.1. As CityGML is a true 3D standard, geometry elements are associated with a 3D CRS. There are only few exceptions to this rule where CityGML allows a 2D geometry element (for example, the referencePoint of a GeoreferencedTexture defined in CityGML’s Appear-ance module must be given with 2D coordinate values, cf. chapter 9.4).
+
+In general, a geometry may point to the CRS definition used by this geometry through the attribute srsName which is inherited from the abstract GML superclass gml:_Geometry. This may be a reference to a well-known CRS definition provided by an authority organization such as the European Petroleum Survey Group (EPSG), but may also be a pointer to a CRS that is locally defined within the same CityGML instance document. The OGC document “Definition identifier URNs in OGC namespace” (cf. Whiteside 2009; OGC Doc. No. 07-092r3) provides best practices for the URN encoding of CRS references. Amongst others, it describes how to reference a single well-known 3D CRS definition (such as a 3D geographic CRS) as well as a compound CRS which combines two or more well-known CRS definitions (e.g., a projected CRS for the planimetry with a vertical CRS for the height reference). Examples for denoting a compound CRS for a CityGML instance document are given in Annex G.
+
+GML3 also supports the definition of engineering CRSs which are used in a contextually local sense. For exam-ple, this might be a local 3D Cartesian coordinate system that is essentially based on a flat-earth approximation of the earth’s surface, and thus ignores the effect of earth curvature on feature geometry (cf. chapter 12.1.4.4 of the GML 3.1.1 specification document). Local engineering CRSs are commonly applied in the AEC/FM domain and thus are useful when integrating CAD data or BIM models into a 3D city model. Annex G.9 provides an example demonstrating the definition of an engineering CRS within a CityGML instance document and the use of local coordinate values for the feature geometry. The definition of an engineering CRS requires an anchor point which relates the origin of the local coordinate system to a point on the earth’s surface in order to facilitate the transformation of coordinates from the local engineering CRS.
+
+According to GML 3.1.1, if no srsName attribute is given on a geometry element, then the CRS shall be speci-fied as part of the larger context this geometry element is part of, e.g. a geometric aggregate. For convenience in constructing feature and feature collection instances, the value of the srsName attribute on the gml:Envelope (or gml:Box) which is the value of the gml:boundedBy property of the feature shall be inherited by all directly expressed geometries in all properties of the feature or members of the collection, unless overruled by the pres-ence of a local srsName. Thus it is not necessary for a geometry to carry an srsName attribute if it uses the same CRS as given on the gml:boundedBy property of its parent feature. Inheritance of the CRS continues to any depth of nesting, but if overruled by a local srsName declaration, then the new CRS is inherited by all its chil-dren in turn (cf. chapter 8.3 of the GML 3.1.1 specification document).
+
+It is strongly recommended that any CityGML instance document explicitly specifies the CRS for all contained geometry elements. This is especially important if the instance document is to be exchanged externally with third parties or is to be integrated with other spatial datasets. A mixed usage of different CRSs within the same dataset is possible and conformant with GML 3.1.1, whereas a single CRS reference given on the embracing CityModel feature collection (cf. chapter 10.1) simplifies the processing of the dataset by software systems. As for CityGML 2.0, this recommendation is non-normative and thus not accompanied by a conformance class. The main reason for this is to maintain backwards compatibility with CityGML 1.0.
+
+=== Implicit geometries, prototypic objects, scene graph concepts
+
+The concept of implicit geometries is an enhancement of the geometry model of GML3. It is, for example, used in CityGML’s building, bridge, tunnel, and vegetation model as well as for city furniture and generic objects. Implicit geometries may be applied to features from different thematic fields of CityGML in order to geometri-cally represent the features within a specific level of detail (LOD). Thus, each extension module may define spatial properties providing implicit geometries for its thematic classes. For this reason, the concept of implicit geometries is defined within the CityGML core module (cf. chapter 10.1). However, its description is drawn here since implicit geometries are part of CityGML’s spatial model. The UML diagram is depicted in Fig. 13. The corresponding XML schema definition is provided in annex A.1.
+
+An implicit geometry is a geometric object, where the shape is stored only once as a prototypical geometry, for example a tree or other vegetation objects, a traffic light or a traffic sign. This prototypic geometry object is re-used or referenced many times, wherever the corresponding feature occurs in the 3D city model. Each occur-rence is represented by a link to the prototypic shape geometry (in a local cartesian coordinate system), by a transformation matrix that is multiplied with each 3D coordinate of the prototype, and by an anchor point denot-ing the base point of the object in the world coordinate reference system. This reference point also defines the CRS to which the world coordinates belong after the application of the transformation. In order to determine the absolute coordinates of an implicit geometry, the anchor point coordinates have to be added to the matrix multi-plication results. The transformation matrix accounts for the intended rotation, scaling, and local translation of the prototype. It is a 4x4 matrix that is multiplied with the prototype coordinates using homogeneous coordi-nates, i.e. (x,y,z,1). This way even a projection might be modelled by the transformation matrix.
+
+[[figure-13]]
+.UML diagram of ImplicitGeometries. Prefixes are used to indicate XML namespaces associated with model elements. Element names without a prefix are defined within the CityGML Core module.
+image::figures/Figure_13.png[]
+
+The reason for using the concept of implicit geometries in CityGML is space efficiency. Since the shape of, for example, trees of the same species can be treated as identical, it would be inefficient to model the detailed geometry of each of the large number of trees explicitly. The concept of implicit geometries is similar to the well known concept of primitive instancing used for the representation of scene graphs in the field of computer graphics (Foley et al. 1995).
+
+The term implicit geometry refers to the principle that a geometry object with a complex shape can be simply represented by a base point and a transformation, implicitly unfolding the object’s shape at a specific location in the world coordinate system.
+
+The shape of an ImplicitGeometry can be represented in an external file with a proprietary format, e.g. a VRML file, a DXF file, or a 3D Studio MAX file. The reference to the implicit geometry can be specified by an URI pointing to a local or remote file, or even to an appropriate web service. Alternatively, the shape can be defined by a GML3 geometry object. This has the advantage that it can be stored or exchanged inline within the CityGML dataset. Typically, the shape of the geometry is defined in a local coordinate system where the origin lies within or near to the object’s extent. If the shape is referenced by an URI, also the MIME type of the denoted object has to be specified (e.g. “model/vrml” for VRML models or “model/x3d+xml” for X3D models).
+
+The implicit representation of 3D object geometry has some advantages compared to the explicit modelling, which represents the objects using absolute world coordinates. It is more space-efficient, and thus more exten-sive scenes can be stored or handled by a system. The visualisation is accelerated since 3D graphics cards sup-port the scene graph concept. Furthermore, the usage of different shape versions of objects is facilitated, e.g. different seasons, since only the library objects have to be exchanged (see example in Fig. 65).
+
+*XML namespace*
+
+The XML namespace of the CityGML Core module defining the concept of implicit geometries is identified by the Uniform Resource Identifier (URI) http://www.opengis.net/citygml/2.0. Within the XML Schema definition of the core module, this URI is also used to identify the default namespace.
+
+NOTE: include GML example "ImplicitGeometryType, ImplicitRepresentationPropertyType" or replace with UML
+
+==== Code lists
+
+The mimeType attribute of ImplicitGeometry is specified as gml:CodeType. The values of this property can be enumerated in a code list. A proposal for this code list can be found in annex C.6.
+
+==== Example CityGML datasets
+
+An example for an implicit geometry is given by the following city furniture object (cf. chapter 10.9), which is represented by a geometry in LOD2:
+
+----
+  <frn:CityFurniture> 
+    <!-- class “traffic”; as specified in the code list proposed by the SIG 3D (cf. annex C.4) --> 
+    <frn:class codeSpace="http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_class.xml">1000</frn:class> 
+    <!-- function “traffic light”; as specified in the code list proposed by the SIG 3D (cf. annex C.4) --> 
+    <frn:function codeSpace="http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_function.xml">1080</frn:function> 
+    <frn:lod2ImplicitRepresentation> 
+      <core:ImplicitGeometry> 
+        <core:mimeType>model/vrml</core:mimeType> 
+        <core:libraryObject> 
+          http://www.some-3d-library.com/3D/furnitures/TrafficLight434.wrl 
+        </core:libraryObject> 
+        <core:referencePoint> 
+          <gml:Point srsName="urn:ogc:def:crs,crs:EPSG:6.12:31467,crs:EPSG:6.12:5783"> 
+            <gml:pos srsDimension="3">5793898.77 3603845.54 44.8</gml:pos> 
+          </gml:Point> 
+        </core:referencePoint> 
+      </core:ImplicitGeometry> 
+    </frn:lod2ImplicitRepresentation> 
+  </frn:CityFurniture>
+----
+
+The shape of the geometry of the traffic light (city furniture with class “1000” and function “1080” according to the code lists proposed in annex C.4) is defined by a VRML file which is specified by a URL. This library object, which is defined in a local coordinate system, is transformed to its actual location by adding the coordi-nates of the reference point.
+
+The following clip of a CityGML file provides a more complex example for an implicit geometry:
+
+----
+  <frn:CityFurniture> 
+    <!-- class “traffic”; as specified in the code list proposed by the SIG 3D (cf. annex C.4) -->
+    <frn:class>1000</frn:class> 
+    <!-- function “traffic light”; as specified in the code list proposed by the SIG 3D (cf. annex C.4) -->
+    <frn:function>1080</frn:function>
+    <frn:lod2ImplicitRepresentation>
+      <core:ImplicitGeometry>
+        <core:mimeType>model/vrml</core:mimeType>
+        <core:transformationMatrix>
+          0.866025 -0.5 0 0.7 
+          0.5 0.866025 0 0.8 
+          0 0 1 0 
+          0 0 0 1 
+        </core:transformationMatrix> 
+        <core:libraryObject>
+          http://www.some-3d-library.com/3D/furnitures/TrafficLight434.wrl 
+        </core:libraryObject> 
+        <core:referencePoint> 
+          <gml:Point srsName="urn:ogc:def:crs,crs:EPSG:6.12:31467,crs:EPSG:6.12:5783"> 
+            <gml:pos srsDimension="3">5793898.77 3603845.54 44.8</gml:pos> 
+          </gml:Point> 
+        </core:referencePoint> 
+      </core:ImplicitGeometry>
+    </frn:lod2ImplicitRepresentation>
+  </frn:CityFurniture>
+----
+
+In addition to the first example, a transformation matrix is specified. It is a homogeneous matrix, serialized in a row major fashion, i.e. the first four entries in the list denote the first row of the matrix, etc. The matrix combines a translation by the vector (0.7, 0.8, 0) – the origin of the local reference system is not the center of the object – and a rotation around the z-axis by 30 degrees (cos(30) = 0.866025 and sin(30) = 0.5). This rotation is necessary to align the traffic light with respect to a road. The actual position of the traffic light is computed as follows:
+
+. each point of the VRML file (with homogeneous coordinates) is multiplied by the transformation matrix;
+. for each resulting point, the reference point (5793898.77, 3603845.54, 44.8, 1)T is added, yielding the actual geometry of the city furniture.
+
