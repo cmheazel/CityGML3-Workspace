@@ -1,46 +1,5 @@
-[[extensions-section]]
-== CityGML Extension Mechanisms
-
-CityGML defines a rich and general-purpose information model for 3D city and landscape models. While CityGML provides a common basis for a multitude of different use cases and applications, specific applications might have modelling requirements that go beyond the predefined elements of the CityGML conceptual model.
-
-CityGML affords this flexibility by providing a slim base model with the following distinct extension mechanisms:
-
-[arabic]
-. Code lists,
-. Generic objects and attributes, and
-. Application Domain Extensions (ADEs).
-
-These extension mechanisms have been introduced with CityGML 1.0 and are since widely used and accepted in the CityGML community.
-
-[[extensions-section-codelists]]
-=== Code Lists
-
-When an attribute may have only one value selected from a small and fixed set of values, CityGML 3.0 specifies those as an enumeration. When the set of possible values is a priori unknown but predefined and fixed for a specific application domain or user organization, the values may be modelled as classes with the stereotype &#171;CodeList&#187;.
-
-Many attributes of CityGML types use a code list as data type such as, for instance, the attributes _class_, _usage,_ and _function_ of city objects. A code list defines a value domain including a code for each permissible value. In contrast to fixed enumerations, modifications to the value domain become possible with code lists.
-
-The feasible values for attributes with code lists may substantially vary for different applications, uses cases, information communities or even countries (e.g., due to national law or regulations). For this reason, code lists are modelled as empty classes without predefined normative content. The governance of code lists is rather decoupled from the governance of the CityGML conceptual model, and the contents may be defined and managed outside this International Standard by any organization or information community according to their information needs. Code lists should be made available as publicly accessible resource, either globally or within an application domain.
-
-Rules and constraints for the encoding of both code lists and attributes having a code list as value are not subject of this document but are defined in a corresponding CityGML Encoding Specification. It is recommended, though, that attributes should be encoded such that they can take a value from a code list and, optionally, provide an identifier that references the code list in a unique way.
-
-[[extensions-section-genericobjects]]
-=== Generic Objects and Attributes
-
-Generic objects and attributes are available from the Generics module of CityGML (cf. <<rc_generics_section>>). A generic object is intended to be used as proxy for a real-world feature that is not mapped by a specific class in CityGML. Depending on the type and geometric characteristics of the real-world feature, CityGML offers the proxy classes _GenericLogicalSpace_, _GenericOccupiedSpace_, _GenericUnoccupiedSpace_ and _GenericThematicSurface_ to capture the feature. Each proxy can have a semantic meaning defined by the attributes _class_, _function_, and _usage_.
-
-Generic attributes are name-value pairs that can be assigned to any city object (i.e., an instance of _core:AbstractCityObject_) to augment it with application data not covered by the predefined attributes. The attribute _name_ can be freely chosen to identify the piece of information represented by the generic attribute. A fixed list of simple data types is offered as possible domains for the attribute _value_. Generic attributes can be grouped into named collections using the _GenericAttributeSet_ data type.
-
-The main advantage of generic objects and attributes is that they are simple and easy-to-use to represent application-specific content. Since this extension mechanism is built into the conceptual model of CityGML, it provides the capability of ad-hoc data enrichment (“at run-time”) without the need for modifying the conceptual model. This flexibility also faces disadvantages though:
-
-* Generic objects are “flat” and cannot be decomposed into sub-features and feature hierarchies like other CityGML features such as, for instance, buildings or transportation features. However, they may be related to other city objects through the inherited _relatedTo_ association.
-* Names, data types, and multiplicities of generic attributes cannot be specified in a formal way. Consequently, there is no guarantee for an application that a generic attribute of a specific name and type is available a minimum or maximum number of times for a given city object.
-* Name clashes between generic attributes from different applications are possible and cannot be avoided in a formal way, which might impede semantic interoperability.
-* There is only a limited number of predefined simple data types available for generic attributes.
-
-To avoid semantic interoperability issues, generic objects and attributes shall only be used if a more specific feature class or attribute is not available from the CityGML conceptual model.
-
-[[extensions-section-ade]]
-=== Application Domain Extension (ADE)
+[[rc_ade_section]]
+== Application Domain Extension (ADE)
 
 An _Application Domain Extension_ (ADE) is a formal and systematic extension of CityGML for a specific application or domain in the form of a conceptual UML model. The application data is mapped to a set of additional classes, attributes, and relations. ADEs may use elements from CityGML, for instance, to derive application-specific subclasses, to inject additional properties, to associate application data with predefined CityGML content, or to define value domains for attributes.
 
@@ -50,13 +9,13 @@ Previous versions of CityGML defined the ADE mechanism solely on the level of th
 
 ADEs have successfully been implemented in practice and enable a wide range of applications and use cases based on CityGML. An overview and discussion of existing ADEs is provided in [<<Biljecki2018>>].
 
-==== General Rules for ADEs
+=== General Rules for ADEs
 
 An ADE shall be defined as conceptual model in UML in accordance with the conceptual modelling framework of the ISO 19100 series of International Standards and by adhering to the General Feature Model and the rules and constraints for application schemas as specified in ISO 19109 and ISO/TS 19103. The <<uml_notation_section, UML notations and stereotypes>> used in the CityGML conceptual model should also be applied to corresponding model elements in an ADE.
 
 Every ADE shall be organized into one or more UML packages having globally unique namespaces and containing all UML model elements defined by the ADE. An ADE may additionally import and use predefined classes from external conceptual UML models such as the CityGML modules or the standardized schemas of the ISO 19100 series of International Standards.
 
-==== Defining New ADE Model Elements
+=== Defining New ADE Model Elements
 
 Following ISO 19109, features are the primary view of geospatial information and the core elements of application schemas. ADEs therefore typically extend CityGML by defining new feature types appropriate to the application area together with additional content such as object types, data types, code lists, and enumerations.
 
@@ -74,7 +33,7 @@ Constraints on model elements should be expressed using a formal language such a
 
 Illustrative examples for ADEs can be found in the <<_user_guide,CityGML 3.0 User Guide>>.
 
-==== Augmenting CityGML Feature Types with Additional ADE Properties
+=== Augmenting CityGML Feature Types with Additional ADE Properties
 
 If a predefined CityGML feature type lacks one or more properties required for a specific application, a feasible solution is to derive a new ADE feature type as subclass of the CityGML class and to add the properties to this subclass. While conceptually clean, this approach also faces drawbacks. If multiple ADEs require additional properties for the same CityGML feature type, this will lead to many subclasses of this feature type in different ADE namespaces. Information about the same real-world feature might therefore be spread over various instances of the different feature classes in an encoding making it difficult for software to consume the feature data.
 
@@ -94,38 +53,34 @@ The following UML fragment shows an example for using the "hook" mechanism. For 
 
 image::./images/Energy_ADE_UML_example.png[]
 
-==== Encoding of ADEs
+=== Encoding of ADEs
 
 This document only addresses the conceptual modelling of ADEs. Rules and constraints for mapping a conceptual ADE model to a target encoding are expected to be defined in a corresponding CityGML Encoding Standard. If supported, an ADE may provide additional mapping rules and constraints in conformance with a corrresponding CityGML Encoding Standard.
 
-==== Requirements and Recommendations
+=== Requirements and Recommendations
 
-The following requirements and recommendations provide a formal definition of the CityGML Extension capabilities. Meeting these criteria are required to demonstrate conformance with the GityGML Core conformance class.
+The following requirements and recommendations specify how ADEs shall be used as an extension capabilty to the CityGML Conceptual Model. 
 
-===== Generics Classes
-
-The following Requirements govern the use of Generics classes.
-
-include::requirements/Core/REQ_Core_Generics_Use.adoc[]
+include::requirements/requirements_class_ADE.adoc[
 
 ===== UML
 
 Any extension to the CityGML Conceptual Model should be a faithful continuation of the styles and techniques used in that model. The following Requirements and Recommendations define a "faithful continuation".
 
-include::requirements/Core/REQ_Core_ADE_UML.adoc[]
+include::requirements/ADE/REQ_ADE_UML.adoc[]
 
-include::recommendations/Core/REC_Core_ADE_UML.adoc[]
+include::recommendations/ADE/REC_ADE_UML.adoc[]
 
 ===== Classes
 
 The following Requirements and Recommendations define how CityGML classes should be extended by an ADE.
 
-include::requirements/Core/REQ_Core_ADE_Elements.adoc[]
+include::requirements/ADE/REQ_ADE_Elements.adoc[]
 
-include::recommendations/Core/REC_Core_ADE_Elements.adoc[]
+include::recommendations/ADE/REC_ADE_Elements.adoc[]
 
 ===== Properties
 
 The following Requirements define how to use the CityGML extension properties to add attributes to an existing CityGML Feature Type.
 
-include::requirements/Core/REQ_Core_ADE_Properties.adoc[]
+include::requirements/ADE/REQ_ADE_Properties.adoc[]

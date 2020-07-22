@@ -8,13 +8,13 @@ CityGML 3.0 is a Conceptual Model. Since it is agnostic to implementating techno
 
 The test method specified in this ATS is manual inspection. Automated methods may be used where they exist.
 
+include::abstract_tests/ATS_Core.adoc[]
+
 include::abstract_tests/ATS_Appearance.adoc[]
 
 include::abstract_tests/ATS_CityFurniture.adoc[]
 
 include::abstract_tests/ATS_CityObjectGroup.adoc[]
-
-include::abstract_tests/ATS_Core.adoc[]
 
 include::abstract_tests/ATS_Dynamizer.adoc[]
 

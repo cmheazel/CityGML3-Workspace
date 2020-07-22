@@ -21,6 +21,15 @@ image::figures/Generics.png[]
 
 include::requirements/Generics/REQ_Generics_Classes.adoc[]
 
+include::requirements/Generics/REQ_Generics_Use.adoc[]
+
 ==== Class Definitions
 
 include::summaries/Generics.adoc[]
+
+==== Additional Information
+
+The use of extension capabilities by Generics elements is constrained by the following requirement:
+
+include::requirements/Generics/REQ_Generics_ADE_Use.adoc[]
+

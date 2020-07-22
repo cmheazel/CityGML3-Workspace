@@ -17,7 +17,6 @@ The Core module defines the basic concepts and components of city models. This r
 |<<geometry-lod-section,Geometry and LOD>>|Defines the geometry and Level Of Detail concepts.
 |<<CityGML-section,CityGML Core Model>>|Presents the complete Core model.
 |<<b-e-c-section,Types, Enumerations and Codelist>> |Defines the little things which make this model work.
-|<<extensions-section,Extension Mechanisms>> |Defines how the CityGML Conceptual Model can be extended to address community-specific needs.
 |===
 
 ==== Requirements
@@ -148,6 +147,7 @@ image::figures/Core/Core-Overview.png[]
 
 include::summaries/Core-CityModel.adoc[]
 
+[[b-e-c-section]]
 ==== Data types, Enumerations and CodeLists
 
 While FeatureTypes capture the real-world concepts on the CityGML Conceptual Model, they would be incomplete without the additional concepts from which they are made. These supporting constructs are defined in the following tables.
@@ -155,5 +155,9 @@ While FeatureTypes capture the real-world concepts on the CityGML Conceptual Mod
 include::summaries/Core-others.adoc[]
 
 ==== Additional Information
+
+The use of extension capabilities by Core elements is constrained by the following requirement:
+
+include::requirements/core/REQ_Core_ADE_Use.adoc[]
 
 A detailed discussion of the CityGML Core can be found in the https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072UG.html#bp_core_section[CityGML Users Guide].

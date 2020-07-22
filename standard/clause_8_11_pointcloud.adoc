@@ -20,3 +20,10 @@ include::requirements/PointCloud/REQ_PointCloud_Classes.adoc[]
 ==== Class Definitions
 
 include::summaries/PointCloud.adoc[]
+
+==== Additional Information
+
+The use of extension capabilities by Point Cloud elements is constrained by the following requirement:
+
+include::requirements/PointCloud/REQ_PointCloud_ADE_Use.adoc[]
+

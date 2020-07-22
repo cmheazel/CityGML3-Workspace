@@ -1,5 +1,5 @@
 [[rc_relief_section]]
-=== Digital Terrain Model
+=== Relief
 
 include::requirements/requirements_class_relief.adoc[]
 
@@ -20,3 +20,10 @@ include::requirements/Relief/REQ_Relief_Classes.adoc[]
 ==== Class Definitions
 
 include::summaries/Relief.adoc[]
+
+==== Additional Information
+
+The use of extension capabilities by Relief elements is constrained by the following requirement:
+
+include::requirements/Relief/REQ_Relief_ADE_Use.adoc[]
+
