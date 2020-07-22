@@ -63,7 +63,7 @@ The following requirements and recommendations specify how ADEs shall be used as
 
 include::requirements/requirements_class_ADE.adoc[
 
-===== UML
+==== UML
 
 Any extension to the CityGML Conceptual Model should be a faithful continuation of the styles and techniques used in that model. The following Requirements and Recommendations define a "faithful continuation".
 
@@ -71,7 +71,7 @@ include::requirements/ADE/REQ_ADE_UML.adoc[]
 
 include::recommendations/ADE/REC_ADE_UML.adoc[]
 
-===== Classes
+==== Classes
 
 The following Requirements and Recommendations define how CityGML classes should be extended by an ADE.
 
@@ -79,7 +79,7 @@ include::requirements/ADE/REQ_ADE_Elements.adoc[]
 
 include::recommendations/ADE/REC_ADE_Elements.adoc[]
 
-===== Properties
+==== Properties
 
 The following Requirements define how to use the CityGML extension properties to add attributes to an existing CityGML Feature Type.
 
