@@ -17,6 +17,28 @@ The UML diagram of the Generics module is depicted in <<generics-uml>>. A detail
 
 image::figures/Generics.png[]
 
+<<generics-boundaries-table>> lists the surfaces that are allowed as thematic surface boundaries of the spaces classes defined in the Generics module:
+[[Generics-boundaries-table]]
+.Generics space classes and their allowed thematic surface boundaries
+[cols="2,6",options="headers"]
+|===
+^|*Space class* ^|*Allowed space boundaries*
+|GenericLogicalSpace
+a| * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|GenericOccupiedSpace
+a| * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|GenericUnoccupiedSpace
+a| * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+|===
+
 ==== Requirements
 
 include::requirements/Generics/REQ_Generics_Classes.adoc[]
@@ -32,4 +54,3 @@ include::summaries/Generics.adoc[]
 The use of extension capabilities by Generics elements is constrained by the following requirement:
 
 include::requirements/Generics/REQ_Generics_ADE_Use.adoc[]
-

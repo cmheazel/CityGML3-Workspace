@@ -15,6 +15,17 @@ The UML diagram of the CityObjectGroup module is depicted in <<cityobject-uml>>.
 
 image::figures/CityObjectGroup.png[]
 
+<<cityobjectgroup-boundaries-table>> lists the surfaces that are allowed as thematic surface boundaries of the spaces classes defined in the CityObjectGroup module:
+[[cityobjectgroup-boundaries-table]]
+.CityObjectGroup space classes and their allowed thematic surface boundaries
+[cols="2,6",options="headers"]
+|===
+^|*Space class* ^|*Allowed space boundaries*
+  |CityObjectGroup  a|  * Core::ClosureSurface
+                        * Generics::GenericThematicSurface
+                        * Possible classes from ADEs
+|===
+
 ==== Requirements
 
 include::requirements/CityObjectGroup/REQ_CityObjectGroup_Classes.adoc[]
@@ -28,6 +39,3 @@ include::summaries/CityObjectGroup.adoc[]
 The use of extension capabilities by City Object Group elements is constrained by the following requirement:
 
 include::requirements/CityObjectGroup/REQ_CityObjectGroup_ADE_Use.adoc[]
-
-
-

@@ -33,6 +33,38 @@ An implementing technology may not be able to support all of the concepts define
 
 include::recommendations/Core/PER_Core_Classes.adoc[]
 
+<<core-boundaries-table>> lists the surfaces that are allowed as thematic surface boundaries of the spaces classes defined in the Core module:
+[[core-boundaries-table]]
+.Core space classes and their allowed thematic surface boundaries
+[cols="2,6",options="headers"]
+|===
+^|*Space class* ^|*Allowed space boundaries*
+|AbstractLogicalSpace
+a| * Core::AbstractSpaceBoundary and the subclasses Core::AbstractThematicSurface, Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|AbstractOccupiedSpace
+a| * Core::AbstractSpaceBoundary and the subclasses Core::AbstractThematicSurface, Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|AbstractPhysicalSpace
+a| * Core::AbstractSpaceBoundary and the subclasses Core::AbstractThematicSurface, Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|AbstractSpace
+a| * Core::AbstractSpaceBoundary and the subclasses Core::AbstractThematicSurface, Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|AbstractUnoccupiedSpace
+a| * Core::AbstractSpaceBoundary and the subclasses Core::AbstractThematicSurface, Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+|===
+
 [[ISO-dependencies-section]]
 ==== ISO Dependencies
 

@@ -18,6 +18,55 @@ A detailed discussion of the Requirements Class Construction can be found in the
 
 image::figures/Construction.png[]
 
+<<construction-boundaries-table>> lists the surfaces that are allowed as thematic surface boundaries of the spaces classes defined in the Construction module:
+[[construction-boundaries-table]]
+.Construction space classes and their allowed thematic surface boundaries
+[cols="2,6",options="headers"]
+|===
+^|*Space class* ^|*Allowed space boundaries*
+|AbstractConstruction
+a| * Construction::AbstractConstructionSurface and all subclasses, i.e. Construction::GroundSurface, Construction::RoofSurface, Construction::CeilingSurface, Construction::OuterCeilingSurface, Construction::FloorSurface, Construction::OuterFloorSurface, Construction::WallSurface, Construction::InteriorWallSurface
+   * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|AbstractConstructiveElement
+a| * Construction::AbstractConstructionSurface and all subclasses, i.e. Construction::GroundSurface, Construction::RoofSurface, Construction::CeilingSurface, Construction::OuterCeilingSurface, Construction::FloorSurface, Construction::OuterFloorSurface, Construction::WallSurface, Construction::InteriorWallSurface
+   * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|AbstractFillingElement
+a| -
+
+|AbstractFurniture
+a| -
+
+|AbstractInstallation
+a| * Construction::AbstractConstructionSurface and all subclasses, i.e. Construction::GroundSurface, Construction::RoofSurface, Construction::CeilingSurface, Construction::OuterCeilingSurface, Construction::FloorSurface, Construction::OuterFloorSurface, Construction::WallSurface, Construction::InteriorWallSurface
+   * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|Door
+a| * Construction::DoorSurface
+   * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|OtherConstruction
+a| * Construction::AbstractConstructionSurface and all subclasses, i.e. Construction::GroundSurface, Construction::RoofSurface, Construction::CeilingSurface, Construction::OuterCeilingSurface, Construction::FloorSurface, Construction::OuterFloorSurface, Construction::WallSurface, Construction::InteriorWallSurface
+   * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|Window
+a| * Construction::WindowSurface
+   * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+|===
+
 ==== Requirements
 
 include::requirements/Construction/REQ_Construction_Classes.adoc[]
@@ -31,4 +80,3 @@ include::summaries/Construction.adoc[]
 The use of extension capabilities by Construction elements is constrained by the following requirement:
 
 include::requirements/Construction/REQ_Construction_ADE_Use.adoc[]
-
