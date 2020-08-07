@@ -1,0 +1,11 @@
+[[ug_metadata_section]]
+== Metadata
+
+CityGML version 2.0 provided an explicit element that implementors could use to insert metadata. This element was inherited from the GML classes upon which version 2.0 was based. Version 3.0 of CityGML is no longer based on GML. It does not explicitly support that element. The result is that version 3.0 of the CityGML Conceptual Model is agnostic of metadata.
+
+That does not mean that metadata cannot be supported. The CityGML <<ug-extensions_section,extension mechanisms>>, specifically ADEs and Generics, can be used for metadata elements. An advantage to this approach is that metadata can be added where it is needed. It provides a degree of flexibility which is absent the dedicated element approach.
+
+Another alternative is to insert metadata elements through the Implementation Specification. For example, an Implementation Specification which builds on GML would inherit the same metadata element as CityGML 2.0. 
+
+The CityGML Standards Working Group will continue the metadata discussion. Additional metadata-related requirements may be added to future versions of this Standard as they are identified and validated.
+

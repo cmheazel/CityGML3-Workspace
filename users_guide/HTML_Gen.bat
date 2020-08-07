@@ -1,2 +1,2 @@
-asciidoctor --trace -o ../19-072EG.html CityGML_Conceptual_Model_Users_Guide.adoc
+asciidoctor --trace -o ../20-066.html CityGML_Conceptual_Model_Users_Guide.adoc
 
