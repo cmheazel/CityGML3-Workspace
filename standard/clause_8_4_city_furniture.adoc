@@ -14,6 +14,17 @@ The UML diagram of the CityFurniture module is depicted in <<cityfurniture-uml>>
 
 image::figures/CityFurniture.png[]
 
+<<cityfurniture-boundaries-table>> lists the surfaces that are allowed as thematic surface boundaries of the spaces classes defined in the CityFurniture module:
+[[cityfurniture-boundaries-table]]
+.CityFurniture space classes and their allowed thematic surface boundaries
+[cols="2,6",options="headers"]
+|===
+^|*Space class* ^|*Allowed space boundaries*
+|CityFurniture  a|  * Core::ClosureSurface
+                    * Generics::GenericThematicSurface
+                    * Possible classes from ADEs
+|===
+
 ==== Requirements
 
 include::requirements/CityFurniture/REQ_CityFurniture_Classes.adoc[]
@@ -21,3 +32,9 @@ include::requirements/CityFurniture/REQ_CityFurniture_Classes.adoc[]
 ==== Class Definitions
 
 include::summaries/CityFurniture.adoc[]
+
+==== Additional Information
+
+The use of extension capabilities by City Furniture elements is constrained by the following requirement:
+
+include::requirements/cityfurniture/REQ_CityFurniture_ADE_Use.adoc[]

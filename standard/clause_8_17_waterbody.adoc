@@ -16,6 +16,19 @@ The UML diagram of the WaterBody module is depicted in <<waterbody-uml>>. A deta
 
 image::figures/WaterBody.png[]
 
+<<waterbody-boundaries-table>> lists the surfaces that are allowed as thematic surface boundaries of the spaces classes defined in the WaterBody module:
+[[waterbody-boundaries-table]]
+.WaterBody space classes and their allowed thematic surface boundaries
+[cols="2,6",options="headers"]
+|===
+^|*Space class* ^|*Allowed space boundaries*
+|WaterBody
+a| * WaterBody::AbstractWaterBoundarySurface and all subclasses, i.e. WaterBody::WaterGroundSurface, WaterBody::WaterSurface
+   * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+|===
+
 ==== Requirements
 
 include::requirements/WaterBody/REQ_WaterBody_Classes.adoc[]
@@ -23,3 +36,9 @@ include::requirements/WaterBody/REQ_WaterBody_Classes.adoc[]
 ==== Class Definitions
 
 include::summaries/WaterBody.adoc[]
+
+==== Additional Information
+
+The use of extension capabilities by Waterbody elements is constrained by the following requirement:
+
+include::requirements/Waterbody/REQ_Waterbody_ADE_Use.adoc[]

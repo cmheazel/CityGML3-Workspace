@@ -17,7 +17,6 @@ The Core module defines the basic concepts and components of city models. This r
 |<<geometry-lod-section,Geometry and LOD>>|Defines the geometry and Level Of Detail concepts.
 |<<CityGML-section,CityGML Core Model>>|Presents the complete Core model.
 |<<b-e-c-section,Types, Enumerations and Codelist>> |Defines the little things which make this model work.
-|<<extensions-section,Extension Mechanisms>> |Defines how the CityGML Conceptual Model can be extended to address community-specific needs.
 |===
 
 ==== Requirements
@@ -33,6 +32,38 @@ include::requirements/Core/REQ_Core_ISO.adoc[]
 An implementing technology may not be able to support all of the concepts defined in the CityGML Conceptual Model. Alternately, some concepts from the Conceptual Model may be inappropriate for the the application domain for which the Implemenation Specification was developed. In those cases, elements of the Conceptual Model may be mapped to null elements in the Implementation Specification.
 
 include::recommendations/Core/PER_Core_Classes.adoc[]
+
+<<core-boundaries-table>> lists the surfaces that are allowed as thematic surface boundaries of the spaces classes defined in the Core module:
+[[core-boundaries-table]]
+.Core space classes and their allowed thematic surface boundaries
+[cols="2,6",options="headers"]
+|===
+^|*Space class* ^|*Allowed space boundaries*
+|AbstractLogicalSpace
+a| * Core::AbstractSpaceBoundary and the subclasses Core::AbstractThematicSurface, Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|AbstractOccupiedSpace
+a| * Core::AbstractSpaceBoundary and the subclasses Core::AbstractThematicSurface, Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|AbstractPhysicalSpace
+a| * Core::AbstractSpaceBoundary and the subclasses Core::AbstractThematicSurface, Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|AbstractSpace
+a| * Core::AbstractSpaceBoundary and the subclasses Core::AbstractThematicSurface, Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|AbstractUnoccupiedSpace
+a| * Core::AbstractSpaceBoundary and the subclasses Core::AbstractThematicSurface, Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+|===
 
 [[ISO-dependencies-section]]
 ==== ISO Dependencies
@@ -148,6 +179,7 @@ image::figures/Core/Core-Overview.png[]
 
 include::summaries/Core-CityModel.adoc[]
 
+[[b-e-c-section]]
 ==== Data types, Enumerations and CodeLists
 
 While FeatureTypes capture the real-world concepts on the CityGML Conceptual Model, they would be incomplete without the additional concepts from which they are made. These supporting constructs are defined in the following tables.
@@ -155,5 +187,9 @@ While FeatureTypes capture the real-world concepts on the CityGML Conceptual Mod
 include::summaries/Core-others.adoc[]
 
 ==== Additional Information
+
+The use of extension capabilities by Core elements is constrained by the following requirement:
+
+include::requirements/core/REQ_Core_ADE_Use.adoc[]
 
 A detailed discussion of the CityGML Core can be found in the https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072UG.html#bp_core_section[CityGML Users Guide].

@@ -17,6 +17,66 @@ The UML diagram of the building module is depicted in <<building-uml>>. The Buil
 
 image::figures/Building.png[]
 
+<<construction-boundaries-table>> lists the surfaces that are allowed as thematic surface boundaries of the spaces classes defined in the Construction module:
+[[construction-boundaries-table]]
+.Construction space classes and their allowed thematic surface boundaries
+[cols="2,6",options="headers"]
+|===
+^|*Space class* ^|*Allowed space boundaries*
+|AbstractBuilding
+a| * Construction::AbstractConstructionSurface and all subclasses, i.e. Construction::GroundSurface, Construction::RoofSurface, Construction::CeilingSurface, Construction::OuterCeilingSurface, Construction::FloorSurface, Construction::OuterFloorSurface, Construction::WallSurface, Construction::InteriorWallSurface
+   * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|AbstractBuildingSubdivision
+a| -
+
+|Building
+a| * Construction::AbstractConstructionSurface and all subclasses, i.e. Construction::GroundSurface, Construction::RoofSurface, Construction::CeilingSurface, Construction::OuterCeilingSurface, Construction::FloorSurface, Construction::OuterFloorSurface, Construction::WallSurface, Construction::InteriorWallSurface
+   * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|BuildingConstructiveElement
+a| * Construction::AbstractConstructionSurface and all subclasses, i.e. Construction::GroundSurface, Construction::RoofSurface, Construction::CeilingSurface, Construction::OuterCeilingSurface, Construction::FloorSurface, Construction::OuterFloorSurface, Construction::WallSurface, Construction::InteriorWallSurface
+   * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|BuildingFurniture
+a| -
+
+|BuildingInstallation
+a| * Construction::AbstractConstructionSurface and all subclasses, i.e. Construction::GroundSurface, Construction::RoofSurface, Construction::CeilingSurface, Construction::OuterCeilingSurface, Construction::FloorSurface, Construction::OuterFloorSurface, Construction::WallSurface, Construction::InteriorWallSurface
+   * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|BuildingPart
+a| * Construction::AbstractConstructionSurface and all subclasses, i.e. Construction::GroundSurface, Construction::RoofSurface, Construction::CeilingSurface, Construction::OuterCeilingSurface, Construction::FloorSurface, Construction::OuterFloorSurface, Construction::WallSurface, Construction::InteriorWallSurface
+   * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|BuildingRoom
+a| * Construction::AbstractConstructionSurface and all subclasses, i.e. Construction::GroundSurface, Construction::RoofSurface, Construction::CeilingSurface, Construction::OuterCeilingSurface, Construction::FloorSurface, Construction::OuterFloorSurface, Construction::WallSurface, Construction::InteriorWallSurface
+   * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|BuildingUnit
+a| * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|Storey
+a| * Construction::AbstractConstructionSurface and all subclasses, i.e. Construction::GroundSurface, Construction::RoofSurface, Construction::CeilingSurface, Construction::OuterCeilingSurface, Construction::FloorSurface, Construction::OuterFloorSurface, Construction::WallSurface, Construction::InteriorWallSurface
+   * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+|===
+
 ==== Requirements
 
 include::requirements/Building/REQ_Building_Classes.adoc[]
@@ -24,3 +84,9 @@ include::requirements/Building/REQ_Building_Classes.adoc[]
 ==== Class Definitions
 
 include::summaries/Building.adoc[]
+
+==== Additional Information
+
+The use of extension capabilities by Building elements is constrained by the following requirement:
+
+include::requirements/Building/REQ_Building_ADE_Use.adoc[]

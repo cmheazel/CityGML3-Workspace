@@ -1,2 +1,2 @@
-asciidoctor -r asciidoctor-pdf --trace -b pdf -o ..\19-072BP.pdf CityGML_Conceptual_Model_BP.adoc
+asciidoctor -r asciidoctor-pdf --trace -b pdf -o ..\19-072EG.pdf CityGML_Conceptual_Model_Users_Guide.adoc
 

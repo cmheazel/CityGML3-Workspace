@@ -15,6 +15,84 @@ The UML diagram of the Transportation module is depicted in <<transportation-uml
 
 image::figures/Transportation.png[]
 
+<<transportation-boundaries-table>> lists the surfaces that are allowed as thematic surface boundaries of the spaces classes defined in the Transportation module:
+[[Transportation-boundaries-table]]
+.Transportation space classes and their allowed thematic surface boundaries
+[cols="2,6",options="headers"]
+|===
+^|*Space class* ^|*Allowed space boundaries*
+|AbstractTransportationSpace
+a| * Transportation::Marking
+   * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|AuxiliaryTrafficSpace
+a| * Transportation::AuxiliaryTrafficArea
+   * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|ClearanceSpace
+a| * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|Hole
+a| * Transportation::HoleSurface
+   * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|Intersection
+a| * Transportation::Marking
+   * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|Railway
+a| * Transportation::Marking
+   * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|Road
+a| * Transportation::Marking
+   * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|Section
+a| * Transportation::Marking
+   * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|Square
+a| * Transportation::Marking
+   * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|Track
+a| * Transportation::Marking
+   * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|TrafficSpace
+a| * Transportation::TrafficArea
+   * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+
+|Waterway
+a| * Transportation::Marking
+   * Core::ClosureSurface
+   * Generics::GenericThematicSurface
+   * possible classes from ADEs
+|===
+
 ==== Requirements
 
 include::requirements/Transportation/REQ_Transportation_Classes.adoc[]
@@ -22,3 +100,9 @@ include::requirements/Transportation/REQ_Transportation_Classes.adoc[]
 ==== Class Definitions
 
 include::summaries/Transportation.adoc[]
+
+==== Additional Information
+
+The use of extension capabilities by Transportation elements is constrained by the following requirement:
+
+include::requirements/Transportation/REQ_Transportation_ADE_Use.adoc[]

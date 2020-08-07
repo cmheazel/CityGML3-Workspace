@@ -13,6 +13,22 @@ The UML diagram of the Vegetation module is depicted in <<vegetation-uml>>. A de
 
 image::figures/Vegetation.png[]
 
+<<vegetation-boundaries-table>> lists the surfaces that are allowed as thematic surface boundaries of the spaces classes defined in the Vegetation module:
+[[vegetation-boundaries-table]]
+.Vegetation space classes and their allowed thematic surface boundaries
+[cols="2,6",options="headers"]
+|===
+^|*Space class* ^|*Allowed space boundaries*
+|AbstractVegetationObject
+a| -
+
+|PlantCover
+a| -
+
+|SolitaryVegetationObject
+a| -
+|===
+
 ==== Requirements
 
 include::requirements/Vegetation/REQ_Vegetation_Classes.adoc[]
@@ -20,3 +36,9 @@ include::requirements/Vegetation/REQ_Vegetation_Classes.adoc[]
 ==== Class Definitions
 
 include::summaries/Vegetation.adoc[]
+
+==== Additional Information
+
+The use of extension capabilities by Vegetation elements is constrained by the following requirement:
+
+include::requirements/Vegetation/REQ_Vegetation_ADE_Use.adoc[]
