@@ -50,7 +50,7 @@ Classes painted in green are defined in the ISO standards 19107, 19111, or 19123
 
 image:images/ColorScheme_grey.png[]
 
-Classes painted in grey are defined in the ISO standard 19109. In the context of this standard this only applies to the class _AnyFeature_. _AnyFeature_ is an instance of the metaclass _FeatureType_ and acts as super class of all classes in the CityGML UML model with the stereotype &#171;FeatureType&#187;.
+Classes painted in grey are defined in the ISO standard 19109. In the context of this standard, this only applies to the class _AnyFeature_. _AnyFeature_ is an instance of the metaclass _FeatureType_ and acts as super class of all classes in the CityGML UML model with the stereotype &#171;FeatureType&#187;.
 
 image:images/ColorScheme_white.png[]
 
@@ -75,7 +75,7 @@ GML and JSON encodings are planned and other encodings are anticipated. Each enc
 
 An added benefit of the development of a conceptual model results from the rigor involved in achieving consensus. After numerous iterations, the end result is consistent, cohesive, and complete.  Updating a conceptual model is far easier than rewriting software code. Further, the iterations help to flesh out details as well as to unearth differences in individual conceptualizations.
 
-Perhaps the greatest benefit of the standards activity is the ability to communicate the resultant model. This is in part due to using a standardized conceptual modelling language like UML and the agreed OGC and TC 211 conventions for using UML. The eventual outcome of being able to provide formal documentation for what is meant by each concept is invaluable in understanding the subsequent encodings and applications.
+Perhaps the greatest benefit of the standards activity is the ability to communicate the resultant model. This is in part due to using a standardized conceptual modelling language like UML and the agreed OGC and ISO/TC211 conventions for using UML. The eventual outcome of being able to provide formal documentation for what is meant by each concept is invaluable in understanding the subsequent encodings and applications.
 
 This will be the first OGC conceptual model standard without accompanying encodings. Yet the model is presented in a manner consistent with the formalisms adopted for writing OGC standards. This standard follows the <<ogc08-131,OGC Specification Model standard for modular specifications>> and is consistent with the OGC Naming Authority conventions and recommendations.  The target of this Standard are the encoding standards which will follow and not the application software that will implement these encodings.  Requirements for the encodings are explicit and grouped into Requirements Classes.  Accompanying Conformance Classes are included to determine if an encoding conforms to the conceptual model.
 

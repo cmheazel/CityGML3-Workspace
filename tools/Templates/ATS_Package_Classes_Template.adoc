@@ -7,7 +7,7 @@
 ^|Test Method |Manual Inspection
 2+|For each UML class defined or referenced in the PACKAGE Package:
 ^|A |Validate that the Implementation Specification contains a data element which represents the same concept as that defined for the UML class.
-^|B |Validate that the data element has the same relationships with other elements as those defined for the UML class. Validate that those relationships have the same source, target, direction, roles, and cardinalities as those documented in the Conceptual Model.
-^|C |Validate that the data element has the same properties (attributes) as those specified for the UML class. Validate that those properties have the same name, definition, type, and cardinality of those documented in the Conceptual Model.
-^|D |Validate that the properties of the data element include those of all parent classes of the UML class as documented in the Conceptual Model. Validate that those properties have the same name, definition, type, and cardinality of those documented in the Conceptual Model 
+^|B |Validate that the data element has the same relationships with other elements as those defined for the UML class. Validate that those relationships have the same source, target, direction, roles, and multiplicies as those documented in the Conceptual Model.
+^|C |Validate that the data element has the same properties (attributes) as those specified for the UML class. Validate that those properties have the same name, definition, type, and multiplicity of those documented in the Conceptual Model.
+^|D |Validate that the properties of the data element include those of all parent classes of the UML class as documented in the Conceptual Model. Validate that those properties have the same name, definition, type, and multiplicity of those documented in the Conceptual Model 
 |===
