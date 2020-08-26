@@ -79,7 +79,17 @@ a| * Construction::AbstractConstructionSurface and all subclasses, i.e. Construc
 
 ==== Requirements
 
+The following requirement defines the rules governing implementation of the CityGML Building Module as an Implementation Specification.
+
 include::requirements/Building/REQ_Building_Classes.adoc[]
+
+The implementation of this Module is further constrained by the following spatial boundary requirement:
+
+include::requirements/Building/REQ_Building_Boundaries.adoc[]
+
+The use of extension capabilities by Building elements is constrained by the following requirement:
+
+include::requirements/Building/REQ_Building_ADE_Use.adoc[]
 
 ==== Class Definitions
 
@@ -87,6 +97,4 @@ include::summaries/Building.adoc[]
 
 ==== Additional Information
 
-The use of extension capabilities by Building elements is constrained by the following requirement:
-
-include::requirements/Building/REQ_Building_ADE_Use.adoc[]
+Additional information about the Building Module can be found in the link:http://docs.opengeospatial.org/DRAFTS/20-066.html[OGC CityGML 3.0 Users Guide]

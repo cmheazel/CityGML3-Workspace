@@ -15,7 +15,13 @@ image::figures/LandUse.png[]
 
 ==== Requirements
 
+The following requirement defines the rules governing implementation of the CityGML Land Use Module as an Implementation Specification.
+
 include::requirements/LandUse/REQ_LandUse_Classes.adoc[]
+
+The use of extension capabilities by Land Use elements is constrained by the following requirement:
+
+include::requirements/LandUse/REQ_LandUse_ADE_Use.adoc[]
 
 ==== Class Definitions
 
@@ -23,7 +29,5 @@ include::summaries/LandUse.adoc[]
 
 ==== Additional Information
 
-The use of extension capabilities by Land Use elements is constrained by the following requirement:
-
-include::requirements/LandUse/REQ_LandUse_ADE_Use.adoc[]
+Additional information about the Land Use Module can be found in the link:http://docs.opengeospatial.org/DRAFTS/20-066.html[OGC CityGML 3.0 Users Guide]
 

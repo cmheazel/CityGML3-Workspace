@@ -15,7 +15,13 @@ image::figures/PointCloud.png[]
 
 ==== Requirements
 
+The following requirement defines the rules governing implementation of the CityGML Point Cloud Module as an Implementation Specification.
+
 include::requirements/PointCloud/REQ_PointCloud_Classes.adoc[]
+
+The use of extension capabilities by Point Cloud elements is constrained by the following requirement:
+
+include::requirements/PointCloud/REQ_PointCloud_ADE_Use.adoc[]
 
 ==== Class Definitions
 
@@ -23,7 +29,4 @@ include::summaries/PointCloud.adoc[]
 
 ==== Additional Information
 
-The use of extension capabilities by Point Cloud elements is constrained by the following requirement:
-
-include::requirements/PointCloud/REQ_PointCloud_ADE_Use.adoc[]
-
+Additional information about the Point Cloud Module can be found in the link:http://docs.opengeospatial.org/DRAFTS/20-066.html[OGC CityGML 3.0 Users Guide]

@@ -69,7 +69,17 @@ a| * Construction::WindowSurface
 
 ==== Requirements
 
+The following requirement defines the rules governing implementation of the CityGML Construction Module as an Implementation Specification.
+
 include::requirements/Construction/REQ_Construction_Classes.adoc[]
+
+The implementation of this Module is further constrained by the following spatial boundary requirement:
+
+include::requirements/Construction/REQ_Construction_Boundaries.adoc[]
+
+The use of extension capabilities by Construction elements is constrained by the following requirement:
+
+include::requirements/Construction/REQ_Construction_ADE_Use.adoc[]
 
 ==== Class Definitions
 
@@ -77,6 +87,4 @@ include::summaries/Construction.adoc[]
 
 ==== Additional Information
 
-The use of extension capabilities by Construction elements is constrained by the following requirement:
-
-include::requirements/Construction/REQ_Construction_ADE_Use.adoc[]
+Additional information about the Construction Module can be found in the link:http://docs.opengeospatial.org/DRAFTS/20-066.html[OGC CityGML 3.0 Users Guide]

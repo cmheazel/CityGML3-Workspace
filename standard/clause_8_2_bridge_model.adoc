@@ -63,10 +63,19 @@ a| * Construction::AbstractConstructionSurface and all subclasses, i.e. Construc
    * possible classes from ADEs
 |===
 
-
 ==== Requirements
 
+The following requirement defines the rules governing implementation of the CityGML Bridge Module as an Implementation Specification.
+
 include::requirements/Bridge/REQ_Bridge_Classes.adoc[]
+
+The implementation of this Module is further constrained by the following spatial boundary requirement:
+
+include::requirements/Bridge/REQ_Bridge_Boundaries.adoc[]
+
+The use of extension capabilities by Bridge elements is constrained by the following requirement:
+
+include::requirements/Bridge/REQ_Bridge_ADE_Use.adoc[]
 
 ==== Class Definitions
 
@@ -74,6 +83,4 @@ include::summaries/Bridge.adoc[]
 
 ==== Additional Information
 
-The use of extension capabilities by Bridge elements is constrained by the following requirement:
-
-include::requirements/Bridge/REQ_Bridge_ADE_Use.adoc[]
+Additional information about the Bridge Module can be found in the link:http://docs.opengeospatial.org/DRAFTS/20-066.html[OGC CityGML 3.0 Users Guide]
