@@ -63,7 +63,7 @@ The example UML diagram in <<figure-2>> demonstrates the UML notation and colori
 image::images/UML_Notation_Example.png[]
 
 [[conceptual-modeling-description]]
-=== Conceptual Modeling
+=== Conceptual Modelling
 
 <<iso19101,ISO 19101>> defines universe of discourse to be a view of the real or hypothetical world that includes everything of interest.  That standard then defines conceptual model to be a model that defines concepts of a universe of discourse.
 
@@ -79,6 +79,6 @@ Perhaps the greatest benefit of the standards activity is the ability to communi
 
 This will be the first OGC conceptual model standard without accompanying encodings. Yet the model is presented in a manner consistent with the formalisms adopted for writing OGC standards. This standard follows the <<ogc08-131,OGC Specification Model standard for modular specifications>> and is consistent with the OGC Naming Authority conventions and recommendations.  The target of this Standard are the encoding standards which will follow and not the application software that will implement these encodings.  Requirements for the encodings are explicit and grouped into Requirements Classes.  Accompanying Conformance Classes are included to determine if an encoding conforms to the conceptual model.
 
-UML has been used as the conceptual modeling language in this Standard.  Class Diagrams have been created and inserted as Figures. The boxes in these diagrams (officially “Classifiers” in UML) typically represent classes, data types, enumerations, code lists, unions, etc. and this terminology is used throughout the Standard. However, since this is a Conceptual Model, these should all be interpreted to be “concepts”.  For each Requirements Class, an introductory diagram is included which contains all of the concepts relevant to that Requirements Class.
+UML has been used as the conceptual modelling language in this Standard.  Class Diagrams have been created and inserted as Figures. The boxes in these diagrams (officially “Classifiers” in UML) typically represent classes, data types, enumerations, code lists, unions, etc. and this terminology is used throughout the Standard. However, since this is a Conceptual Model, these should all be interpreted to be “concepts”.  For each Requirements Class, an introductory diagram is included which contains all of the concepts relevant to that Requirements Class.
 
 Though redundant with the UML diagrams, all of the classes, class attributes, and associations are repeated in the Data Dictionary in <<data-dictionary-section>>. If these differ, the UML takes precedence.
