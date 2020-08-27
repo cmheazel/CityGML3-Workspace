@@ -22,6 +22,7 @@ J=`echo $I | tr [:upper:] [:lower:]`
 cat ./Templates/REQ_Package_Classes_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$I/ | sed s/"LPACK"/$J/g | sed s/"REFF"/"<<"$I/ >../standard/requirements/$I/REQ_`echo $I`_Classes.adoc
 
 cat ./Templates/REQ_Package_Boundaries_Template.adoc | sed s/"PACKAGE"/$I/g | sed s/"LPACK"/$J/g >../standard/requirements/$I/REQ_`echo $I`_Boundaries.adoc
+
 done
 
 
