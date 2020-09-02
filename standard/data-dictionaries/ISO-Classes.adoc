@@ -29,7 +29,7 @@
 |*CV_DiscreteGridPointCoverage* 
 |[cols="1,4",frame=none,grid=none]
 !===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !A coverage that returns the same feature attribute values for every direct position within any single spatial object, temporal object or spatiotemporal object in its domain.  
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<CV_DiscreteCoverage-section,CV_DiscreteCoverage>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «type»
 !===
@@ -99,7 +99,7 @@ NOTE As a type, GM_Object does not have a well-defined default state or value re
 |*GM_MultiCurve* 
 |[cols="1,4",frame=none,grid=none]
 !===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !An aggregate class containing only instances of GM_OrientableCurve. The association role “element” shall be the set of GM_OrientableCurves contained in this GM_MultiCurve.  
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<GM_MultiPrimitive-section,GM_MultiPrimitive>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «type»
 !===
@@ -120,7 +120,7 @@ NOTE As a type, GM_Object does not have a well-defined default state or value re
 |*GM_MultiSurface* 
 |[cols="1,4",frame=none,grid=none]
 !===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !An aggregate class containing only instances of GM_OrientableSurface. The association role “element” shall be the set of GM_OrientableSurfaces contained in this GM_MultiSurface.  
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<GM_MultiPrimitive-section,GM_MultiPrimitive>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «type»
 !===

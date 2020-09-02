@@ -17,6 +17,18 @@ The UML diagram of the Tunnel module is depicted in <<tunnel-uml>>. The Tunnel m
 
 image::figures/Tunnel.png[]
 
+The ADE data types provided for the Tunnel module are illustrated in the figure <<tunnel-uml-ade-types>>.
+
+[[tunnel-uml-ade-types]]
+.ADE classes of the CityGML Tunnel module.
+image::figures/Tunnel-ADE_Datatypes.png[]
+
+The Code Lists provided for the Tunnel module are illustrated in the figure <<tunnel-uml-codelists>>.
+
+[[tunnel-uml-codelists]]
+.Codelists from the CityGML Tunnel module.
+image::figures/Tunnel-Codelists.png[]
+
 <<tunnel-boundaries-table>> lists the surfaces that are allowed as thematic surface boundaries of the spaces classes defined in the Tunnel module:
 [[tunnel-boundaries-table]]
 .Tunnel space classes and their allowed thematic surface boundaries

@@ -190,7 +190,21 @@ include::summaries/Core-CityModel.adoc[]
 [[b-e-c-section]]
 ==== Data types, Enumerations and CodeLists
 
-While FeatureTypes capture the real-world concepts on the CityGML Conceptual Model, they would be incomplete without the additional concepts from which they are made. These supporting constructs are defined in the following tables.
+While FeatureTypes capture the real-world concepts on the CityGML Conceptual Model, they would be incomplete without the additional concepts from which they are made. These supporting constructs are illustrated in the following figures.
+
+The ADE data types provided for the Core module are illustrated in the figure <<core-uml-ade-types>>.
+
+[[core-uml-ade-types]]
+.ADE classes of the CityGML Core module.
+image::figures/Core/Core-ADE_Data_types.png[]
+
+The Basic Types, Enumerations, and Code Lists provided for the Core module are illustrated in the figure <<core-uml-codelists>>.
+
+[[core-uml-codelists]]
+.Basic Types, Enumerations, and Codelists from the CityGML Core module.
+image::figures/Core/Core-Basic_Types_Enumerations_Codelists.png[]
+
+These supporting constructs are defined in the following tables.
 
 include::summaries/Core-others.adoc[]
 

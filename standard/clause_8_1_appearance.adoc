@@ -15,8 +15,14 @@ Each surface geometry object can have both, a material and a texture per theme a
 The UML diagram of the Appearance module is illustrated in <<appearance-uml>>. A detailed discussion of this Requirements Class can be found in the https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072UG.html#bp_appearance_section[CityGML Users Guide].
 
 [[appearance-uml]]
-.UML diagram of CityGML’s appearance model.
+.UML diagram of CityGML’s Appearance model.
 image::figures/Appearance.png[]
+
+The ADE data types provided for the Appearance module are illustrated in the figure <<appearance-uml-ade-types>>.
+
+[[appearance-uml-ade-types]]
+.ADE classes of the CityGML Appearance Module.
+image::figures/Appearance-ADE_Datatypes.png[]
 
 ==== Requirements
 
