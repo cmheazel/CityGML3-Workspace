@@ -42,7 +42,7 @@ Classes painted in yellow belong to the Requirements Class which is subject of d
 
 image:images/ColorScheme_blue.png[]
 
-Classes painted in blue belong to a Requirements Class different to that associated with the yellow color. In order to explicitly denote to which Requirements Class these classes belong, their class names carry the name of the Requirements Class as prefix. For example, in the context of the _Building_ Requirements Class, classes from the _CityGML Core_ and the _Construction_ Requirements Classes are painted in blue and their class names are preceded by the prefix _Core_ and _Construction_, respectively.
+Classes painted in blue belong to a Requirements Class different to that associated with the yellow color. In order to explicitly denote to which Requirements Class these classes belong, their class names are preceded by the UML package name of that Requirements Class. For example, in the context of the _Building_ Requirements Class, classes from the _CityGML Core_ and the _Construction_ Requirements Classes are painted in blue and their class names are preceded by _Core_ and _Construction_, respectively.
 
 image:images/ColorScheme_green.png[]
 
