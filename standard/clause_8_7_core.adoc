@@ -11,12 +11,12 @@ The Core module defines the basic concepts and components of city models. This r
 .CityGML Core Sections
 [width="90%",cols="2.^,6.^"]
 |===
-|<<ISO-dependencies-section,The Use of ISO Standards>> |Describes the use of ISO 191** standards to provide a foundation to the CityGML model.
+|<<ISO-dependencies-section,The Use of ISO Standards>> |Describes the use of the ISO 19100 series of International Standards to provide a foundation to the CityGML model.
 |<<city-objects-section,City Models and City Objects>>|Defines the basic building blocks of the CityGML model.
 |<<space-concepts-section,Space Concept>>|Defines the concepts of space as used in the CityGML model.
 |<<geometry-lod-section,Geometry and LOD>>|Defines the geometry and Levels Of Detail concepts.
 |<<CityGML-section,CityGML Core Model>>|Presents the complete Core model.
-|<<b-e-c-section,Types, Enumerations and Codelist>> |Defines the little things which make this model work.
+|<<b-e-c-section,Types, Enumerations, and Codelist>> |Defines the little things which make this model work.
 |===
 
 ==== Requirements
@@ -76,7 +76,7 @@ include::requirements/core/REQ_Core_ADE_Use.adoc[]
 [[ISO-dependencies-section]]
 ==== ISO Dependencies
 
-CityGML builds on the ISO 191** family of standards. The applicable standards are identified in the diagram in <<ISO-in-CityGML-diagram>>. Data dictionaries are included for all of the ISO-defined classes explicitly referenced in the CityGML UML model. These data dictionaries are provided for the convinence of the user. The ISO standards are the normative source.
+CityGML builds on the ISO 19100 family of standards. The applicable standards are identified in the diagram in <<ISO-in-CityGML-diagram>>. Data dictionaries are included for all of the ISO-defined classes explicitly referenced in the CityGML UML model. These data dictionaries are provided for the convenience of the user. The ISO standards are the normative source.
 
 [[ISO-in-CityGML-diagram]]
 .Use of ISO Standards in CityGML
@@ -147,7 +147,7 @@ include::summaries/Core-Spatial.adoc[]
 [[geometry-lod-section]]
 ==== Geometry and LOD
 
-Spaces and space boundaries can have various geometry representations depending on the Level of Detail (LOD). Spaces can be spatially represented as single points in LOD0, multi-surfaces in LOD0/2/3, solids in LOD1/2/3, and multi-curves in LOD2/3. Space boundaries can be represented as multi-surfaces in LOD0/2/3 and as multi-curves in LOD2/3. All Levels of Detail allow for the representation of the interior of city objects.
+Spaces and space boundaries can have various geometry representations depending on the Levels of Detail (LOD). Spaces can be spatially represented as single points in LOD0, multi-surfaces in LOD0/2/3, solids in LOD1/2/3, and multi-curves in LOD2/3. Space boundaries can be represented as multi-surfaces in LOD0/2/3 and as multi-curves in LOD2/3. All Levels of Detail allow for the representation of the interior of city objects.
 
 The different Levels of Detail are defined in the following way:
 
@@ -188,7 +188,7 @@ image::figures/Core/Core-Overview.png[]
 include::summaries/Core-CityModel.adoc[]
 
 [[b-e-c-section]]
-==== Data types, Enumerations and CodeLists
+==== Data types, Enumerations, and Code lists
 
 While FeatureTypes capture the real-world concepts on the CityGML Conceptual Model, they would be incomplete without the additional concepts from which they are made. These supporting constructs are illustrated in the following figures.
 
