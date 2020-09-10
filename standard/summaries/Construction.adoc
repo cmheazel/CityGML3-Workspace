@@ -6,13 +6,13 @@
 |<<OtherConstruction-section,OtherConstruction>> +
  «TopLevelFeatureType»  |An OtherConstruction is a construction that is not covered by any of the other subclasses of AbstractConstruction.
 |<<AbstractConstruction-section,AbstractConstruction>> +
- «FeatureType»  |AbstractConstruction is the abstract superclass for objects that are manufactured by humans from construction materials, are connected to earth and are intended to be permanent. A connection with the ground also exists when the construction rests by its own weight on the ground or is moveable limited on stationary rails or if the construction is intended to be used mainly stationary.
+ «FeatureType»  |AbstractConstruction is the abstract superclass for objects that are manufactured by humans from construction materials, are connected to earth, and are intended to be permanent. A connection with the ground also exists when the construction rests by its own weight on the ground or is moveable limited on stationary rails or if the construction is intended to be used mainly stationary.
 |<<AbstractConstructionSurface-section,AbstractConstructionSurface>> +
  «FeatureType»  |AbstractConstructionSurface is the abstract superclass for different kinds of surfaces that bound a construction.
 |<<AbstractConstructiveElement-section,AbstractConstructiveElement>> +
  «FeatureType»  |AbstractConstructiveElement is the abstract superclass for the representation of volumetric elements of a construction. Examples are walls, beams, slabs.
 |<<AbstractFillingElement-section,AbstractFillingElement>> +
- «FeatureType»  |AbstractFillingElement is the abstract superclass for different kinds of elements that fill the openings of constructive elements.
+ «FeatureType»  |AbstractFillingElement is the abstract superclass for different kinds of elements that fill the openings of a construction.
 |<<AbstractFillingSurface-section,AbstractFillingSurface>> +
  «FeatureType»  |AbstractFillingSurface is the abstract superclass for different kinds of surfaces that seal openings filled by filling elements.
 |<<AbstractFurniture-section,AbstractFurniture>> +
@@ -104,11 +104,11 @@
 |===
 ^|*Name* ^|*Description*
 |<<ConditionOfConstructionValue-section,ConditionOfConstructionValue>> +
- «Enumeration»  |ConditionOfConstructionValue enumerates different conditions of a construction. [cf. INSPIRE]
+ «Enumeration» |ConditionOfConstructionValue enumerates different conditions of a construction. [cf. INSPIRE]
 |<<HeightStatusValue-section,HeightStatusValue>> +
- «Enumeration»  |HeightStatusValue enumerates the different methods used to capture a height. [cf. INSPIRE]
+ «Enumeration» |HeightStatusValue enumerates the different methods used to capture a height. [cf. INSPIRE]
 |<<RelationToConstruction-section,RelationToConstruction>> +
- «Enumeration»  |RelationToConstruction is an enumeration used to describe whether an installation is positioned inside and/or outside of a construction.
+ «Enumeration» |RelationToConstruction is an enumeration used to describe whether an installation is positioned inside and/or outside of a construction.
 |===
 
 [[Construction-codelist-table]]

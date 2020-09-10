@@ -45,7 +45,7 @@
 |<<ADEOfAbstractTransportationSpace-section,ADEOfAbstractTransportationSpace>> +
  «DataType»  |ADEOfAbstractTransportationSpace acts as a hook to define properties within an ADE that are to be added to AbstractTransportationSpace.
 |<<ADEOfAuxiliaryTrafficArea-section,ADEOfAuxiliaryTrafficArea>> +
- «DataType»  |ADEOfAuxiliaryTrafficAra acts as a hook to define properties within an ADE that are to be added to an AuxiliaryTrafficArea.
+ «DataType»  |ADEOfAuxiliaryTrafficArea acts as a hook to define properties within an ADE that are to be added to an AuxiliaryTrafficArea.
 |<<ADEOfAuxiliaryTrafficSpace-section,ADEOfAuxiliaryTrafficSpace>> +
  «DataType»  |ADEOfAuxiliaryTrafficSpace acts as a hook to define properties within an ADE that are to be added to an AuxiliaryTrafficSpace.
 |<<ADEOfClearanceSpace-section,ADEOfClearanceSpace>> +
@@ -82,9 +82,9 @@
 |===
 ^|*Name* ^|*Description*
 |<<GranularityValue-section,GranularityValue>> +
- «Enumeration»  |GranularityValue enumerates the different levels of granularity in which transportation objects are represented.
+ «Enumeration» |GranularityValue enumerates the different levels of granularity in which transportation objects are represented.
 |<<TrafficDirectionValue-section,TrafficDirectionValue>> +
- «Enumeration»  |TrafficDirectionValue enumerates the allowed directions of travel of a mobile object.
+ «Enumeration» |TrafficDirectionValue enumerates the allowed directions of travel of a mobile object.
 |===
 
 [[Transportation-codelist-table]]
@@ -152,12 +152,6 @@
  «CodeList»  |TrafficSpaceFunctionValue is a code list that enumerates the different purposes of a TrafficSpace.
 |<<TrafficSpaceUsageValue-section,TrafficSpaceUsageValue>> +
  «CodeList»  |TrafficSpaceUsageValue is a code list that enumerates the different uses of a TrafficSpace.
-|<<TransportationSpaceClassValue-section,TransportationSpaceClassValue>> +
- «CodeList»  |TransportationSpaceClassValue is a code list used to further classify a TransportationSpace.
-|<<TransportationSpaceFunctionValue-section,TransportationSpaceFunctionValue>> +
- «CodeList»  |TransportationSpaceFunctionValue is a code list that enumerates the different purposes of a TransportationSpace.
-|<<TransportationSpaceUsageValue-section,TransportationSpaceUsageValue>> +
- «CodeList»  |TransportationSpaceUsageValue is a code list that enumerates the different uses of a TransportationSpace.
 |<<WaterwayClassValue-section,WaterwayClassValue>> +
  «CodeList»  |WaterwayClassValue is a code list used to further classify a Waterway.
 |<<WaterwayFunctionValue-section,WaterwayFunctionValue>> +
@@ -165,3 +159,7 @@
 |<<WaterwayUsageValue-section,WaterwayUsageValue>> +
  «CodeList»  |WaterwayUsageValue is a code list that enumerates the different uses of a Waterway.
 |===  
+
+
+
+

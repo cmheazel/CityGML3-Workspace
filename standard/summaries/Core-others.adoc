@@ -49,8 +49,8 @@
  «DataType»  |QualifiedArea is an application-dependent measure of the area of a space or of a thematic surface.
 |<<QualifiedVolume-section,QualifiedVolume>> +
  «DataType»  |QualifiedVolume is an application-dependent measure of the volume of a space.
-|<<XALAddressDetails-section,XALAddressDetails>> +
- «DataType»  |XALAddressDetails represents address details according to the OASIS xAL standard.
+|<<XALAddress-section,XALAddress>> +
+ «DataType»  |XALAddress represents address details according to the OASIS xAL standard.
 |===
 
 [[Core-primitives-table]]
@@ -101,11 +101,11 @@
 |===
 ^|*Name* ^|*Description*
 |<<RelativeToTerrain-section,RelativeToTerrain>> +
- «Enumeration»  |RelativeToTerrain enumerates the spatial relations of a city object relative to terrain in a qualitative way.
+ «Enumeration» |RelativeToTerrain enumerates the spatial relations of a city object relative to terrain in a qualitative way.
 |<<RelativeToWater-section,RelativeToWater>> +
- «Enumeration»  |RelativeToWater enumerates the spatial relations of a city object relative to the water surface in a qualitative way.
+ «Enumeration» |RelativeToWater enumerates the spatial relations of a city object relative to the water surface in a qualitative way.
 |<<SpaceType-section,SpaceType>> +
- «Enumeration»  |SpaceType is an enumeration that characterises a space according to its closure properties.
+ «Enumeration» |SpaceType is an enumeration that characterises a space according to its closure properties.
 |===
 
 [[Core-codelist-table]]
@@ -131,6 +131,6 @@
  «CodeList»  |RelationTypeValue is a code list used to classify city object relations.
 |<<TemporalRelationTypeValue-section,TemporalRelationTypeValue>> +
  «CodeList»  |TemporalRelationTypeValue is a code list used to classify temporal city object relations.
-|<<TopologicRelationTypeValue-section,TopologicRelationTypeValue>> +
- «CodeList»  |TopologicRelationTypeValue is a code list used to classify topological city object relations.
+|<<TopologicalRelationTypeValue-section,TopologicalRelationTypeValue>> +
+ «CodeList»  |TopologicalRelationTypeValue is a code list used to classify topological city object relations.
 |===  
