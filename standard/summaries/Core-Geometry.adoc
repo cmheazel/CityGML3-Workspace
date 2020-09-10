@@ -11,8 +11,6 @@
  «FeatureType»  |AbstractPointCloud is the abstract superclass to represent PointCloud objects.
 |<<AbstractSpace-section,AbstractSpace>> +
  «FeatureType»  |AbstractSpace is the abstract superclass for all types of spaces. A space is an entity of volumetric extent in the real world.
-|<<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> +
- «FeatureType»  |AbstractSpaceBoundary is the abstract superclass for all types of space boundaries. A space boundary is an entity with areal extent in the real world. Space boundaries are objects that bound a Space. They also realize the contact between adjacent spaces.
 |<<AbstractThematicSurface-section,AbstractThematicSurface>> +
  «FeatureType»  |AbstractThematicSurface is the abstract superclass for all types of thematic surfaces.
 |<<ImplicitGeometry-section,ImplicitGeometry>> +

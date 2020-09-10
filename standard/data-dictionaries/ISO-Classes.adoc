@@ -112,6 +112,29 @@ NOTE As a type, GM_Object does not have a well-defined default state or value re
 |{set:cellbgcolor:#FFFFFF} 
 |=== 
 
+[[GM_MultiPoint-section]]
+[cols="1a"]
+|===
+|*GM_MultiPoint* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<GM_MultiPrimitive-section,GM_MultiPrimitive>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «type»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} position   !<<Set<DirectPosition>-section,Set<DirectPosition>>>  !
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
+|=== 
+
 [[GM_MultiSurface-section]]
 ==== Class GM_MultiSurface <<iso19107,(ISO 19107:2003)>>
 
