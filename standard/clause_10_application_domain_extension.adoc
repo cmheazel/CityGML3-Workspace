@@ -49,8 +49,10 @@ Content from unknown or unsupported ADEs may be ignored by an application or ser
 
 Designers of an ADE should favor using this “hook” mechanism over subclassing a CityGML feature type when possible. If an ADE must enable other ADEs to augment its own feature types (so-called ADE of an ADE), then it shall implement “hooks” for its feature types following the same schema and naming concept as in the CityGML conceptual model.
 
-The following UML fragment shows an example for using the "hook" mechanism. For more details on this and other example ADEs, please see the <<_user_guide,CityGML 3.0 User Guide>> for an example ADE.
+The UML fragment in <<figure-adeusage>> shows an example for using the "hook" mechanism. For more details on this and other example ADEs, please see the <<_user_guide,CityGML 3.0 User Guide>> for an example ADE.
 
+[[figure-adeusage]]
+.The CityGML feature type Building is augmented with additional ADE properties by defining the data type EnergyProperties as a subclass of the ADE data type ADEOfBuilding.
 image::./images/Energy_ADE_UML_example.png[]
 
 === Encoding of ADEs
