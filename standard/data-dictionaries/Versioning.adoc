@@ -17,8 +17,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! Version represents a defined state of a city model consisting of the dedicated versions of all city object instances that belong to the respective city model version. Versions can have names, a description and can be labeled with an arbitrary number of user defined tags. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractVersion-section,AbstractVersion>> 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<AbstractVersion-section,AbstractVersion>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «FeatureType»
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -32,11 +32,11 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfVersion «Property»  !<<ADEOfVersion-section,ADEOfVersion>>  [0..*] !Augments the Version with properties defined in an ADE.
- 
 !{set:cellbgcolor:#FFFFFF} tag «Property»  !<<CharacterString-section,CharacterString>>  [0..*] !Allows for adding keywords to the city model version.
+ 
+!{set:cellbgcolor:#FFFFFF} adeOfVersion «Property»  !<<ADEOfVersion-section,ADEOfVersion>>  [0..*] !Augments the Version with properties defined in an ADE.
 !===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
 
 [[VersionTransition-section]]
@@ -46,8 +46,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! VersionTransition describes the change of the state of a city model from one version to another. Version transitions can have names, a description and can be further qualified by a type and a reason. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractVersionTransition-section,AbstractVersionTransition>> 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «FeatureType»
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<AbstractVersionTransition-section,AbstractVersionTransition>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «FeatureType»
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -69,16 +69,16 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfVersionTransition «Property»  !<<ADEOfVersionTransition-section,ADEOfVersionTransition>>  [0..*] !Augments the VersionTransition with properties defined in an ADE.
- 
-!{set:cellbgcolor:#FFFFFF} clonePredecessor «Property»  !<<Boolean-section,Boolean>>  !Indicates whether the set of city object instances belonging to the successor version of the city model is either explicitly enumerated within the successor version object (attribute clonePredecessor=false), or has to be derived from the modifications of the city model provided as a list of transactions on the city object versions contained in the predecessor version (attribute clonePredecessor=true).
- 
 !{set:cellbgcolor:#FFFFFF} reason «Property»  !<<CharacterString-section,CharacterString>>  [0..1] !Specifies why the VersionTransition has been carried out.
  
+!{set:cellbgcolor:#FFFFFF} clonePredecessor «Property»  !<<Boolean-section,Boolean>> [1..1] !Indicates whether the set of city object instances belonging to the successor version of the city model is either explicitly enumerated within the successor version object (attribute clonePredecessor=false), or has to be derived from the modifications of the city model provided as a list of transactions on the city object versions contained in the predecessor version (attribute clonePredecessor=true).
+ 
 !{set:cellbgcolor:#FFFFFF} type «Property»  !<<TransitionTypeValue-section,TransitionTypeValue>>  [0..1] !Indicates the specific type of the VersionTransition.
+ 
+!{set:cellbgcolor:#FFFFFF} adeOfVersionTransition «Property»  !<<ADEOfVersionTransition-section,ADEOfVersionTransition>>  [0..*] !Augments the VersionTransition with properties defined in an ADE.
 !===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
-|===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
+|===   
 
 ==== Data Types
 
@@ -89,10 +89,18 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfVersion acts as a hook to define properties within an ADE that are to be added to a Version. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|{set:cellbgcolor:#FFFFFF} 
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfVersionTransition-section]]
@@ -102,10 +110,18 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfVersionTransition acts as a hook to define properties within an ADE that are to be added to a VersionTransition. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|{set:cellbgcolor:#FFFFFF} 
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[Transaction-section]]
@@ -115,8 +131,8 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! Transaction represents a modification of the city model by the creation, termination, or replacement of a specific city object. While the creation of a city object also marks its first object version, the termination marks the end of existence of a real world object and, hence, also terminates the final version of a city object. The replacement of a city object means that a specific version of it is replaced by a new version. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -134,9 +150,9 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} type «Property»  !<<TransactionTypeValue-section,TransactionTypeValue>>  !Indicates the specific type of the Transaction.
+!{set:cellbgcolor:#FFFFFF} type «Property»  !<<TransactionTypeValue-section,TransactionTypeValue>> [1..1] !Indicates the specific type of the Transaction.
 !===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roles have the stereotype «Property»
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |===   
 
 ==== Basic Types
@@ -160,11 +176,11 @@ none
 [cols="1,4",frame=none,grid=none]
 !===
 !Definition: ! TransactionTypeValue enumerates the three possible types of transactions: insert, delete, or replace. 
-!StereoType: !  <<enumeration>>
+!StereoType: !  \<<Enumeration>>
 !===
 |[cols="1,4",frame=none,grid=none,options="header"]
 !===
-^!{set:cellbgcolor:#DDDDDD} *Literal Values* !*Definitions*
+^!{set:cellbgcolor:#DDDDDD} *Literal value* !*Definition*
  
 ^!{set:cellbgcolor:#FFFFFF} insert  !Indicates that the feature referenced from the Transaction via the "newFeature" association has been newly created; the association "oldFeature" is empty in this case.
  
@@ -181,11 +197,11 @@ none
 [cols="1,4",frame=none,grid=none]
 !===
 !Definition: ! TransitionTypeValue enumerates the different kinds of version transitions. “planned” and “fork” should be used in cases when from one city model version multiple successor versions are being created. “realized” and “merge” should be used when different city model versions are converging into a common successor version. 
-!StereoType: !  <<enumeration>>
+!StereoType: !  \<<Enumeration>>
 !===
 |[cols="1,4",frame=none,grid=none,options="header"]
 !===
-^!{set:cellbgcolor:#DDDDDD} *Literal Values* !*Definitions*
+^!{set:cellbgcolor:#DDDDDD} *Literal value* !*Definition*
  
 ^!{set:cellbgcolor:#FFFFFF} planned  !Indicates that the successor version of the city model represents a planning state for a possible future of the city.
  
