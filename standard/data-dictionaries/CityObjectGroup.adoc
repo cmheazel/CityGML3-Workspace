@@ -17,8 +17,8 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A CityObjectGroup represents an application-specific aggregation of city objects according to some user-defined criteria. Examples for groups are the buildings in a specific region, the result of a query, or objects put together for visualization purposes. Each member of a group may be qualified by a role name, reflecting the role each city object plays in the context of the group. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<AbstractLogicalSpace-section,AbstractLogicalSpace>> 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «TopLevelFeatureType»
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<AbstractLogicalSpace-section,AbstractLogicalSpace>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «TopLevelFeatureType»
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -36,15 +36,15 @@
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfCityObjectGroup «Property»  !<<ADEOfCityObjectGroup-section,ADEOfCityObjectGroup>>  [0..*] !Augments the CityObjectGroup with properties defined in an ADE.
- 
 !{set:cellbgcolor:#FFFFFF} class «Property»  !<<CityObjectGroupClassValue-section,CityObjectGroupClassValue>>  [0..1] !Indicates the specific type of the CityObjectGroup.
  
 !{set:cellbgcolor:#FFFFFF} function «Property»  !<<CityObjectGroupFunctionValue-section,CityObjectGroupFunctionValue>>  [0..*] !Specifies the intended purposes of the CityObjectGroup.
  
 !{set:cellbgcolor:#FFFFFF} usage «Property»  !<<CityObjectGroupUsageValue-section,CityObjectGroupUsageValue>>  [0..*] !Specifies the actual usages of the CityObjectGroup.
+ 
+!{set:cellbgcolor:#FFFFFF} adeOfCityObjectGroup «Property»  !<<ADEOfCityObjectGroup-section,ADEOfCityObjectGroup>>  [0..*] !Augments the CityObjectGroup with properties defined in an ADE.
 !===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
 
 [[Role-section]]
@@ -54,8 +54,12 @@
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! Role qualifies the function of a city object within the CityObjectGroup. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «ObjectType»
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «ObjectType»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -63,7 +67,7 @@
  
 !{set:cellbgcolor:#FFFFFF} role «Property»  !<<CharacterString-section,CharacterString>>  [0..1] !Describes the role the city object plays within the CityObjectGroup.
 !===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |===   
 
 ==== Data Types
@@ -75,11 +79,19 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfCityObjectGroup acts as a hook to define properties within an ADE that are to be added to a CityObjectGroup. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «DataType»
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|{set:cellbgcolor:#FFFFFF} 
-|===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|===   
 
 ==== Basic Types
 
@@ -98,7 +110,7 @@ none
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! CityObjectGroupClassValue is a code list used to further classify a CityObjectGroup. 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «CodeList»
 !===
 |=== 
 
@@ -109,7 +121,7 @@ none
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! CityObjectGroupFunctionValue is a code list that enumerates the different purposes of a CityObjectGroup. 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «CodeList»
 !===
 |=== 
 
@@ -120,9 +132,9 @@ none
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! CityObjectGroupUsageValue is a code list that enumerates the different uses of a CityObjectGroup. 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «CodeList»
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «CodeList»
 !===
-|===
+|===   
 
 ==== Enumerations
 
