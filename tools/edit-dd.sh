@@ -16,7 +16,6 @@ DD="Appearance.adoc Bridge.adoc Building.adoc CityFurniture.adoc CityObjectGroup
 for I in $DD
 do
 echo $I
-# cat $I | sed s/'\xab'"Property"'\xbb'' '*"!"/" !"/g | sed s/">>"' '*"!"/">> [1..1] !"/g | sed s/"<<-section,>>"/None/g >../../../standard/data-dictionaries/$I
 cat $I | sed s/.Property.' '*"!"/" !"/g | sed s/"<<-section,.."/"None"/g | sed s/">>  !"/">> [1..1] !"/g >../../../standard/data-dictionaries/$I
 done
 
