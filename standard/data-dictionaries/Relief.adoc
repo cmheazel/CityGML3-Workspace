@@ -24,18 +24,15 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} extent «Property» 
-!<<GM_Surface-section,GM_Surface>>  
-[0..1]
-!Indicates the geometrical extent of the terrain component. The geometrical extent is provided as a 2D Surface geometry.
+!{set:cellbgcolor:#FFFFFF} extent  !<<GM_Surface-section,GM_Surface>> [0..1] !Indicates the geometrical extent of the terrain component. The geometrical extent is provided as a 2D Surface geometry.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} lod «Property»  !<<IntegerBetween0and3-section,IntegerBetween0and3>> [1..1] !Indicates the Level of Detail of the terrain component.
+!{set:cellbgcolor:#FFFFFF} lod  !<<IntegerBetween0and3-section,IntegerBetween0and3>> [1..1] !Indicates the Level of Detail of the terrain component.
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractReliefComponent «Property»  !<<ADEOfAbstractReliefComponent-section,ADEOfAbstractReliefComponent>>  [0..*] !Augments AbstractReliefComponent with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractReliefComponent  !<<ADEOfAbstractReliefComponent-section,ADEOfAbstractReliefComponent>>  [0..*] !Augments AbstractReliefComponent with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -53,20 +50,14 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} breaklines «Property» 
-!<<GM_MultiCurve-section,GM_MultiCurve>>  
-[0..1]
-!Relates to the 3D MultiCurve geometry of the MassPointRelief. This association role is used to represent break lines.
-!{set:cellbgcolor:#FFFFFF} ridgeOrValleyLines «Property» 
-!<<GM_MultiCurve-section,GM_MultiCurve>>  
-[0..1]
-!Relates to the 3D MultiCurve geometry of the MassPointRelief. This association role is used to represent ridge or valley lines.
+!{set:cellbgcolor:#FFFFFF} breaklines  !<<GM_MultiCurve-section,GM_MultiCurve>> [0..1] !Relates to the 3D MultiCurve geometry of the MassPointRelief. This association role is used to represent break lines.
+!{set:cellbgcolor:#FFFFFF} ridgeOrValleyLines  !<<GM_MultiCurve-section,GM_MultiCurve>> [0..1] !Relates to the 3D MultiCurve geometry of the MassPointRelief. This association role is used to represent ridge or valley lines.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfBreaklineRelief «Property»  !<<ADEOfBreaklineRelief-section,ADEOfBreaklineRelief>>  [0..*] !Augments the BreaklineRelief with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfBreaklineRelief  !<<ADEOfBreaklineRelief-section,ADEOfBreaklineRelief>>  [0..*] !Augments the BreaklineRelief with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -84,20 +75,14 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} pointCloud «Property» 
-!<<AbstractPointCloud-section,AbstractPointCloud>>  
-[0..1]
-!Relates to the 3D PointCloud of the MassPointRelief.
-!{set:cellbgcolor:#FFFFFF} reliefPoints «Property» 
-!<<GM_MultiPoint-section,GM_MultiPoint>>  
-[0..1]
-!Relates to the 3D MultiPoint geometry of the MassPointRelief.
+!{set:cellbgcolor:#FFFFFF} pointCloud  !<<AbstractPointCloud-section,AbstractPointCloud>> [0..1] !Relates to the 3D PointCloud of the MassPointRelief.
+!{set:cellbgcolor:#FFFFFF} reliefPoints  !<<GM_MultiPoint-section,GM_MultiPoint>> [0..1] !Relates to the 3D MultiPoint geometry of the MassPointRelief.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfMassPointRelief «Property»  !<<ADEOfMassPointRelief-section,ADEOfMassPointRelief>>  [0..*] !Augments the MassPointRelief with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfMassPointRelief  !<<ADEOfMassPointRelief-section,ADEOfMassPointRelief>>  [0..*] !Augments the MassPointRelief with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -115,16 +100,13 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} grid «Property» 
-!<<CV_DiscreteGridPointCoverage-section,CV_DiscreteGridPointCoverage>>  
-[1]
-!Relates to the DiscreteGridPointCoverage of the RasterRelief.
+!{set:cellbgcolor:#FFFFFF} grid  !<<CV_DiscreteGridPointCoverage-section,CV_DiscreteGridPointCoverage>> [1] !Relates to the DiscreteGridPointCoverage of the RasterRelief.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfRasterRelief «Property»  !<<ADEOfRasterRelief-section,ADEOfRasterRelief>>  [0..*] !Augments the RasterRelief with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfRasterRelief  !<<ADEOfRasterRelief-section,ADEOfRasterRelief>>  [0..*] !Augments the RasterRelief with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -142,18 +124,15 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} reliefComponent «Property» 
-!<<AbstractReliefComponent-section,AbstractReliefComponent>>  
-[1..*]
-!Relates to the terrain components that are part of the ReliefFeature.
+!{set:cellbgcolor:#FFFFFF} reliefComponent  !<<AbstractReliefComponent-section,AbstractReliefComponent>> [1..*] !Relates to the terrain components that are part of the ReliefFeature.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} lod «Property»  !<<IntegerBetween0and3-section,IntegerBetween0and3>> [1..1] !Indicates the Level of Detail of the ReliefFeature.
+!{set:cellbgcolor:#FFFFFF} lod  !<<IntegerBetween0and3-section,IntegerBetween0and3>> [1..1] !Indicates the Level of Detail of the ReliefFeature.
  
-!{set:cellbgcolor:#FFFFFF} adeOfReliefFeature «Property»  !<<ADEOfReliefFeature-section,ADEOfReliefFeature>>  [0..*] !Augments the ReliefFeature with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfReliefFeature  !<<ADEOfReliefFeature-section,ADEOfReliefFeature>>  [0..*] !Augments the ReliefFeature with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -171,16 +150,13 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} tin «Property» 
-!<<GM_TriangulatedSurface-section,GM_TriangulatedSurface>>  
-[1]
-!Relates to the triangulated surface of the TINRelief.
+!{set:cellbgcolor:#FFFFFF} tin  !<<GM_TriangulatedSurface-section,GM_TriangulatedSurface>> [1] !Relates to the triangulated surface of the TINRelief.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfTINRelief «Property»  !<<ADEOfTINRelief-section,ADEOfTINRelief>>  [0..*] !Augments the TINRelief with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfTINRelief  !<<ADEOfTINRelief-section,ADEOfTINRelief>>  [0..*] !Augments the TINRelief with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |===
@@ -197,15 +173,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfBreaklineRelief-section]]
@@ -218,15 +185,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfMassPointRelief-section]]
@@ -239,15 +197,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfRasterRelief-section]]
@@ -260,15 +209,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfReliefFeature-section]]
@@ -281,15 +221,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfTINRelief-section]]
@@ -302,15 +233,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |===   
 
 ==== Basic Types

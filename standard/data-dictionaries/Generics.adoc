@@ -22,19 +22,15 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<GenericLogicalSpaceClassValue-section,GenericLogicalSpaceClassValue>>  [0..1] !Indicates the specific type of the GenericLogicalSpace.
+!{set:cellbgcolor:#FFFFFF} class  !<<GenericLogicalSpaceClassValue-section,GenericLogicalSpaceClassValue>>  [0..1] !Indicates the specific type of the GenericLogicalSpace.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<GenericLogicalSpaceFunctionValue-section,GenericLogicalSpaceFunctionValue>>  [0..*] !Specifies the intended purposes of the GenericLogicalSpace.
+!{set:cellbgcolor:#FFFFFF} function  !<<GenericLogicalSpaceFunctionValue-section,GenericLogicalSpaceFunctionValue>>  [0..*] !Specifies the intended purposes of the GenericLogicalSpace.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<GenericLogicalSpaceUsageValue-section,GenericLogicalSpaceUsageValue>>  [0..*] !Specifies the actual uses of the GenericLogicalSpace.
+!{set:cellbgcolor:#FFFFFF} usage  !<<GenericLogicalSpaceUsageValue-section,GenericLogicalSpaceUsageValue>>  [0..*] !Specifies the actual uses of the GenericLogicalSpace.
  
-!{set:cellbgcolor:#FFFFFF} adeOfGenericLogicalSpace «Property»  !<<ADEOfGenericLogicalSpace-section,ADEOfGenericLogicalSpace>>  [0..*] !Augments the GenericLogicalSpace with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfGenericLogicalSpace  !<<ADEOfGenericLogicalSpace-section,ADEOfGenericLogicalSpace>>  [0..*] !Augments the GenericLogicalSpace with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -51,19 +47,15 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<GenericOccupiedSpaceClassValue-section,GenericOccupiedSpaceClassValue>>  [0..1] !Indicates the specific type of the GenericOccupiedSpace.
+!{set:cellbgcolor:#FFFFFF} class  !<<GenericOccupiedSpaceClassValue-section,GenericOccupiedSpaceClassValue>>  [0..1] !Indicates the specific type of the GenericOccupiedSpace.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<GenericOccupiedSpaceFunctionValue-section,GenericOccupiedSpaceFunctionValue>>  [0..*] !Specifies the intended purposes of the GenericOccupiedSpace.
+!{set:cellbgcolor:#FFFFFF} function  !<<GenericOccupiedSpaceFunctionValue-section,GenericOccupiedSpaceFunctionValue>>  [0..*] !Specifies the intended purposes of the GenericOccupiedSpace.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<GenericOccupiedSpaceUsageValue-section,GenericOccupiedSpaceUsageValue>>  [0..*] !Specifies the actual uses of the GenericOccupiedSpace.
+!{set:cellbgcolor:#FFFFFF} usage  !<<GenericOccupiedSpaceUsageValue-section,GenericOccupiedSpaceUsageValue>>  [0..*] !Specifies the actual uses of the GenericOccupiedSpace.
  
-!{set:cellbgcolor:#FFFFFF} adeOfGenericOccupiedSpace «Property»  !<<ADEOfGenericOccupiedSpace-section,ADEOfGenericOccupiedSpace>>  [0..*] !Augments the GenericOccupiedSpace with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfGenericOccupiedSpace  !<<ADEOfGenericOccupiedSpace-section,ADEOfGenericOccupiedSpace>>  [0..*] !Augments the GenericOccupiedSpace with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -80,19 +72,15 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<GenericThematicSurfaceClassValue-section,GenericThematicSurfaceClassValue>>  [0..1] !Indicates the specific type of the GenericThematicSurface.
+!{set:cellbgcolor:#FFFFFF} class  !<<GenericThematicSurfaceClassValue-section,GenericThematicSurfaceClassValue>>  [0..1] !Indicates the specific type of the GenericThematicSurface.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<GenericThematicSurfaceFunctionValue-section,GenericThematicSurfaceFunctionValue>>  [0..*] !Specifies the intended purposes of the GenericThematicSurface.
+!{set:cellbgcolor:#FFFFFF} function  !<<GenericThematicSurfaceFunctionValue-section,GenericThematicSurfaceFunctionValue>>  [0..*] !Specifies the intended purposes of the GenericThematicSurface.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<GenericThematicSurfaceUsageValue-section,GenericThematicSurfaceUsageValue>>  [0..*] !Specifies the actual uses of the GenericThematicSurface.
+!{set:cellbgcolor:#FFFFFF} usage  !<<GenericThematicSurfaceUsageValue-section,GenericThematicSurfaceUsageValue>>  [0..*] !Specifies the actual uses of the GenericThematicSurface.
  
-!{set:cellbgcolor:#FFFFFF} adeOfGenericThematicSurface «Property»  !<<ADEOfGenericThematicSurface-section,ADEOfGenericThematicSurface>>  [0..*] !Augments the GenericThematicSurface with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfGenericThematicSurface  !<<ADEOfGenericThematicSurface-section,ADEOfGenericThematicSurface>>  [0..*] !Augments the GenericThematicSurface with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -109,19 +97,15 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<GenericUnoccupiedSpaceClassValue-section,GenericUnoccupiedSpaceClassValue>>  [0..1] !Indicates the specific type of the GenericUnoccupiedSpace.
+!{set:cellbgcolor:#FFFFFF} class  !<<GenericUnoccupiedSpaceClassValue-section,GenericUnoccupiedSpaceClassValue>>  [0..1] !Indicates the specific type of the GenericUnoccupiedSpace.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<GenericUnoccupiedSpaceFunctionValue-section,GenericUnoccupiedSpaceFunctionValue>>  [0..*] !Specifies the intended purposes of the GenericUnoccupiedSpace.
+!{set:cellbgcolor:#FFFFFF} function  !<<GenericUnoccupiedSpaceFunctionValue-section,GenericUnoccupiedSpaceFunctionValue>>  [0..*] !Specifies the intended purposes of the GenericUnoccupiedSpace.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<GenericUnoccupiedSpaceUsageValue-section,GenericUnoccupiedSpaceUsageValue>>  [0..*] !Specifies the actual uses of the GenericUnoccupiedSpace.
+!{set:cellbgcolor:#FFFFFF} usage  !<<GenericUnoccupiedSpaceUsageValue-section,GenericUnoccupiedSpaceUsageValue>>  [0..*] !Specifies the actual uses of the GenericUnoccupiedSpace.
  
-!{set:cellbgcolor:#FFFFFF} adeOfGenericUnoccupiedSpace «Property»  !<<ADEOfGenericUnoccupiedSpace-section,ADEOfGenericUnoccupiedSpace>>  [0..*] !Augments the GenericUnoccupiedSpace with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfGenericUnoccupiedSpace  !<<ADEOfGenericUnoccupiedSpace-section,ADEOfGenericUnoccupiedSpace>>  [0..*] !Augments the GenericUnoccupiedSpace with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |===
@@ -138,15 +122,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfGenericOccupiedSpace-section]]
@@ -159,15 +134,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfGenericThematicSurface-section]]
@@ -180,15 +146,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfGenericUnoccupiedSpace-section]]
@@ -201,15 +158,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[CodeAttribute-section]]
@@ -224,15 +172,11 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} name «Property»  !<<CharacterString-section,CharacterString>> [1..1] !Specifies the name of the CodeAttribute.
+!{set:cellbgcolor:#FFFFFF} name  !<<CharacterString-section,CharacterString>> [1..1] !Specifies the name of the CodeAttribute.
  
-!{set:cellbgcolor:#FFFFFF} value «Property»  !<<Code-section,Code>> [1..1] !Specifies the "Code" value.
+!{set:cellbgcolor:#FFFFFF} value  !<<Code-section,Code>> [1..1] !Specifies the "Code" value.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
@@ -249,15 +193,11 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} name «Property»  !<<CharacterString-section,CharacterString>> [1..1] !Specifies the name of the DateAttribute.
+!{set:cellbgcolor:#FFFFFF} name  !<<CharacterString-section,CharacterString>> [1..1] !Specifies the name of the DateAttribute.
  
-!{set:cellbgcolor:#FFFFFF} value «Property»  !<<Date-section,Date>> [1..1] !Specifies the "Date" value.
+!{set:cellbgcolor:#FFFFFF} value  !<<Date-section,Date>> [1..1] !Specifies the "Date" value.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
@@ -274,15 +214,11 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} name «Property»  !<<CharacterString-section,CharacterString>> [1..1] !Specifies the name of the DoubleAttribute.
+!{set:cellbgcolor:#FFFFFF} name  !<<CharacterString-section,CharacterString>> [1..1] !Specifies the name of the DoubleAttribute.
  
-!{set:cellbgcolor:#FFFFFF} value «Property»  !<<Real-section,Real>> [1..1] !Specifies the "Double" value.
+!{set:cellbgcolor:#FFFFFF} value  !<<Real-section,Real>> [1..1] !Specifies the "Double" value.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
@@ -300,18 +236,15 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} genericAttribute «Property»
-!<<AbstractGenericAttribute-section,AbstractGenericAttribute>> 
- [1..*]
-!Relates to the generic attributes that are part of the GenericAttributeSet.
+!{set:cellbgcolor:#FFFFFF} genericAttribute  !<<AbstractGenericAttribute-section,AbstractGenericAttribute>> [1..*] !Relates to the generic attributes that are part of the GenericAttributeSet.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} name «Property»  !<<CharacterString-section,CharacterString>> [1..1] !Specifies the name of the GenericAttributeSet.
+!{set:cellbgcolor:#FFFFFF} name  !<<CharacterString-section,CharacterString>> [1..1] !Specifies the name of the GenericAttributeSet.
  
-!{set:cellbgcolor:#FFFFFF} codeSpace «Property»  !<<URI-section,URI>>  [0..1] !Associates the GenericAttributeSet with an authority that maintains the collection of generic attributes.
+!{set:cellbgcolor:#FFFFFF} codeSpace  !<<URI-section,URI>>  [0..1] !Associates the GenericAttributeSet with an authority that maintains the collection of generic attributes.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
@@ -328,15 +261,11 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} name «Property»  !<<CharacterString-section,CharacterString>> [1..1] !Specifies the name of the IntAttribute.
+!{set:cellbgcolor:#FFFFFF} name  !<<CharacterString-section,CharacterString>> [1..1] !Specifies the name of the IntAttribute.
  
-!{set:cellbgcolor:#FFFFFF} value «Property»  !<<Integer-section,Integer>> [1..1] !Specifies the "Integer" value.
+!{set:cellbgcolor:#FFFFFF} value  !<<Integer-section,Integer>> [1..1] !Specifies the "Integer" value.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
@@ -353,15 +282,11 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} name «Property»  !<<CharacterString-section,CharacterString>> [1..1] !Specifies the name of the MeasureAttribute.
+!{set:cellbgcolor:#FFFFFF} name  !<<CharacterString-section,CharacterString>> [1..1] !Specifies the name of the MeasureAttribute.
  
-!{set:cellbgcolor:#FFFFFF} value «Property»  !<<Measure-section,Measure>> [1..1] !Specifies the value of the MeasureAttribute. The value is of type "Measure", which can additionally provide the units of measure. [cf. ISO 19103]
+!{set:cellbgcolor:#FFFFFF} value  !<<Measure-section,Measure>> [1..1] !Specifies the value of the MeasureAttribute. The value is of type "Measure", which can additionally provide the units of measure. [cf. ISO 19103]
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
@@ -378,15 +303,11 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} name «Property»  !<<CharacterString-section,CharacterString>> [1..1] !Specifies the name of the StringAttribute.
+!{set:cellbgcolor:#FFFFFF} name  !<<CharacterString-section,CharacterString>> [1..1] !Specifies the name of the StringAttribute.
  
-!{set:cellbgcolor:#FFFFFF} value «Property»  !<<CharacterString-section,CharacterString>> [1..1] !Specifies the "String" value.
+!{set:cellbgcolor:#FFFFFF} value  !<<CharacterString-section,CharacterString>> [1..1] !Specifies the "String" value.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
@@ -403,15 +324,11 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} name «Property»  !<<CharacterString-section,CharacterString>> [1..1] !Specifies the name of the UriAttribute.
+!{set:cellbgcolor:#FFFFFF} name  !<<CharacterString-section,CharacterString>> [1..1] !Specifies the name of the UriAttribute.
  
-!{set:cellbgcolor:#FFFFFF} value «Property»  !<<URI-section,URI>> [1..1] !Specifies the "URI" value.
+!{set:cellbgcolor:#FFFFFF} value  !<<URI-section,URI>> [1..1] !Specifies the "URI" value.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |===   

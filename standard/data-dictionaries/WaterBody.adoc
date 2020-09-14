@@ -22,13 +22,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractWaterBoundarySurface «Property»  !<<ADEOfAbstractWaterBoundarySurface-section,ADEOfAbstractWaterBoundarySurface>>  [0..*] !Augments AbstractWaterBoundarySurface with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractWaterBoundarySurface  !<<ADEOfAbstractWaterBoundarySurface-section,ADEOfAbstractWaterBoundarySurface>>  [0..*] !Augments AbstractWaterBoundarySurface with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -46,22 +42,19 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} boundary «Property» 
-!<<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>>  
-[*]
-!
+!{set:cellbgcolor:#FFFFFF} boundary  !<<AbstractWaterBoundarySurface-section,AbstractWaterBoundarySurface>> [*] !
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<WaterBodyClassValue-section,WaterBodyClassValue>>  [0..1] !Indicates the specific type of the WaterBody.
+!{set:cellbgcolor:#FFFFFF} class  !<<WaterBodyClassValue-section,WaterBodyClassValue>>  [0..1] !Indicates the specific type of the WaterBody.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<WaterBodyFunctionValue-section,WaterBodyFunctionValue>>  [0..*] !Specifies the intended purposes of the WaterBody.
+!{set:cellbgcolor:#FFFFFF} function  !<<WaterBodyFunctionValue-section,WaterBodyFunctionValue>>  [0..*] !Specifies the intended purposes of the WaterBody.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<WaterBodyUsageValue-section,WaterBodyUsageValue>>  [0..*] !Specifies the actual uses of the WaterBody.
+!{set:cellbgcolor:#FFFFFF} usage  !<<WaterBodyUsageValue-section,WaterBodyUsageValue>>  [0..*] !Specifies the actual uses of the WaterBody.
  
-!{set:cellbgcolor:#FFFFFF} adeOfWaterBody «Property»  !<<ADEOfWaterBody-section,ADEOfWaterBody>>  [0..*] !Augments the WaterBody with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfWaterBody  !<<ADEOfWaterBody-section,ADEOfWaterBody>>  [0..*] !Augments the WaterBody with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -78,13 +71,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfWaterGroundSurface «Property»  !<<ADEOfWaterGroundSurface-section,ADEOfWaterGroundSurface>>  [0..*] !Augments the WaterGroundSurface with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfWaterGroundSurface  !<<ADEOfWaterGroundSurface-section,ADEOfWaterGroundSurface>>  [0..*] !Augments the WaterGroundSurface with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -101,15 +90,11 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} waterLevel «Property»  !<<WaterLevelValue-section,WaterLevelValue>>  [0..1] !Specifies the level of the WaterSurface.
+!{set:cellbgcolor:#FFFFFF} waterLevel  !<<WaterLevelValue-section,WaterLevelValue>>  [0..1] !Specifies the level of the WaterSurface.
  
-!{set:cellbgcolor:#FFFFFF} adeOfWaterSurface «Property»  !<<ADEOfWaterSurface-section,ADEOfWaterSurface>>  [0..*] !Augments the WaterSurface with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfWaterSurface  !<<ADEOfWaterSurface-section,ADEOfWaterSurface>>  [0..*] !Augments the WaterSurface with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |===     
@@ -126,15 +111,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfWaterBody-section]]
@@ -147,15 +123,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfWaterGroundSurface-section]]
@@ -168,15 +135,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfWaterSurface-section]]
@@ -189,15 +147,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |===     
 
 ==== Basic Types

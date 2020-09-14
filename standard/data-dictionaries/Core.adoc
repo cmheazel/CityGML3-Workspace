@@ -22,13 +22,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractAppearance «Property»  !<<ADEOfAbstractAppearance-section,ADEOfAbstractAppearance>>  [0..*] !Augments AbstractAppearance with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractAppearance  !<<ADEOfAbstractAppearance-section,ADEOfAbstractAppearance>>  [0..*] !Augments AbstractAppearance with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -46,40 +42,22 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} generalizesTo «Property» 
-!<<AbstractCityObject-section,AbstractCityObject>>  
-[*]
-!Relates generalized representations of the same real-world object in different Levels of Detail to the city object. The direction of this relation is from the city object to the corresponding generalized city objects.
-!{set:cellbgcolor:#FFFFFF} genericAttribute «Property» 
-!<<AbstractGenericAttribute-section,AbstractGenericAttribute>>  
-[*]
-!Relates generic attributes to the city object.
-!{set:cellbgcolor:#FFFFFF} dynamizer «Property» 
-!<<AbstractDynamizer-section,AbstractDynamizer>>  
-[*]
-!Relates Dynamizer objects to the city object. These allow timeseries data to override static attribute values of the city object.
-!{set:cellbgcolor:#FFFFFF} appearance «Property» 
-!<<AbstractAppearance-section,AbstractAppearance>>  
-[*]
-!Relates appearances to the city object.
-!{set:cellbgcolor:#FFFFFF} externalReference «Property» 
-!<<ExternalReference-section,ExternalReference>>  
-[*]
-!References external objects in other information systems that have a relation to the city object.
-!{set:cellbgcolor:#FFFFFF} relatedTo «Property» 
-!<<AbstractCityObject-section,AbstractCityObject>>  
-[*]
-!Relates other city objects to the city object. It also describes how the city objects are related to each other.
+!{set:cellbgcolor:#FFFFFF} generalizesTo  !<<AbstractCityObject-section,AbstractCityObject>> [*] !Relates generalized representations of the same real-world object in different Levels of Detail to the city object. The direction of this relation is from the city object to the corresponding generalized city objects.
+!{set:cellbgcolor:#FFFFFF} genericAttribute  !<<AbstractGenericAttribute-section,AbstractGenericAttribute>> [*] !Relates generic attributes to the city object.
+!{set:cellbgcolor:#FFFFFF} dynamizer  !<<AbstractDynamizer-section,AbstractDynamizer>> [*] !Relates Dynamizer objects to the city object. These allow timeseries data to override static attribute values of the city object.
+!{set:cellbgcolor:#FFFFFF} appearance  !<<AbstractAppearance-section,AbstractAppearance>> [*] !Relates appearances to the city object.
+!{set:cellbgcolor:#FFFFFF} externalReference  !<<ExternalReference-section,ExternalReference>> [*] !References external objects in other information systems that have a relation to the city object.
+!{set:cellbgcolor:#FFFFFF} relatedTo  !<<AbstractCityObject-section,AbstractCityObject>> [*] !Relates other city objects to the city object. It also describes how the city objects are related to each other.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} relativeToTerrain «Property»  !<<RelativeToTerrain-section,RelativeToTerrain>>  [0..1] !Describes the vertical position of the city object relative to the surrounding terrain.
+!{set:cellbgcolor:#FFFFFF} relativeToTerrain  !<<RelativeToTerrain-section,RelativeToTerrain>>  [0..1] !Describes the vertical position of the city object relative to the surrounding terrain.
  
-!{set:cellbgcolor:#FFFFFF} relativeToWater «Property»  !<<RelativeToWater-section,RelativeToWater>>  [0..1] !Describes the vertical position of the city object relative to the surrounding water surface.
+!{set:cellbgcolor:#FFFFFF} relativeToWater  !<<RelativeToWater-section,RelativeToWater>>  [0..1] !Describes the vertical position of the city object relative to the surrounding water surface.
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractCityObject «Property»  !<<ADEOfAbstractCityObject-section,ADEOfAbstractCityObject>>  [0..*] !Augments AbstractCityObject with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractCityObject  !<<ADEOfAbstractCityObject-section,ADEOfAbstractCityObject>>  [0..*] !Augments AbstractCityObject with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -96,13 +74,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractDynamizer «Property»  !<<ADEOfAbstractDynamizer-section,ADEOfAbstractDynamizer>>  [0..*] !Augments AbstractDynamizer with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractDynamizer  !<<ADEOfAbstractDynamizer-section,ADEOfAbstractDynamizer>>  [0..*] !Augments AbstractDynamizer with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -119,21 +93,17 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} featureID «Property»  !<<ID-section,ID>> [1..1] !Specifies the unique identifier of the feature that is valid in the instance document within which it occurs.
+!{set:cellbgcolor:#FFFFFF} featureID  !<<ID-section,ID>> [1..1] !Specifies the unique identifier of the feature that is valid in the instance document within which it occurs.
  
-!{set:cellbgcolor:#FFFFFF} identifier «Property»  !<<ScopedName-section,ScopedName>>  [0..1] !Specifies the unique identifier of the feature that is valid globally.
+!{set:cellbgcolor:#FFFFFF} identifier  !<<ScopedName-section,ScopedName>>  [0..1] !Specifies the unique identifier of the feature that is valid globally.
  
-!{set:cellbgcolor:#FFFFFF} name «Property»  !<<GenericName-section,GenericName>>  [0..*] !Specifies the name of the feature.
+!{set:cellbgcolor:#FFFFFF} name  !<<GenericName-section,GenericName>>  [0..*] !Specifies the name of the feature.
  
-!{set:cellbgcolor:#FFFFFF} description «Property»  !<<CharacterString-section,CharacterString>>  [0..1] !Provides further information on the feature.
+!{set:cellbgcolor:#FFFFFF} description  !<<CharacterString-section,CharacterString>>  [0..1] !Provides further information on the feature.
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractFeature «Property»  !<<ADEOfAbstractFeature-section,ADEOfAbstractFeature>>  [0..*] !Augments AbstractFeature with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractFeature  !<<ADEOfAbstractFeature-section,ADEOfAbstractFeature>>  [0..*] !Augments AbstractFeature with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -150,21 +120,17 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} creationDate «Property»  !<<DateTime-section,DateTime>>  [0..1] !Indicates the date at which a CityGML feature was added to the CityModel.
+!{set:cellbgcolor:#FFFFFF} creationDate  !<<DateTime-section,DateTime>>  [0..1] !Indicates the date at which a CityGML feature was added to the CityModel.
  
-!{set:cellbgcolor:#FFFFFF} terminationDate «Property»  !<<DateTime-section,DateTime>>  [0..1] !Indicates the date at which a CityGML feature was removed from the CityModel.
+!{set:cellbgcolor:#FFFFFF} terminationDate  !<<DateTime-section,DateTime>>  [0..1] !Indicates the date at which a CityGML feature was removed from the CityModel.
  
-!{set:cellbgcolor:#FFFFFF} validFrom «Property»  !<<DateTime-section,DateTime>>  [0..1] !Indicates the date at which a CityGML feature started to exist in the real world.
+!{set:cellbgcolor:#FFFFFF} validFrom  !<<DateTime-section,DateTime>>  [0..1] !Indicates the date at which a CityGML feature started to exist in the real world.
  
-!{set:cellbgcolor:#FFFFFF} validTo «Property»  !<<DateTime-section,DateTime>>  [0..1] !Indicates the date at which a CityGML feature ended to exist in the real world.
+!{set:cellbgcolor:#FFFFFF} validTo  !<<DateTime-section,DateTime>>  [0..1] !Indicates the date at which a CityGML feature ended to exist in the real world.
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractFeatureWithLifespan «Property»  !<<ADEOfAbstractFeatureWithLifespan-section,ADEOfAbstractFeatureWithLifespan>>  [0..*] !Augments AbstractFeatureWithLifespan with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractFeatureWithLifespan  !<<ADEOfAbstractFeatureWithLifespan-section,ADEOfAbstractFeatureWithLifespan>>  [0..*] !Augments AbstractFeatureWithLifespan with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -181,13 +147,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractLogicalSpace «Property»  !<<ADEOfAbstractLogicalSpace-section,ADEOfAbstractLogicalSpace>>  [0..*] !Augments AbstractLogicalSpace with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractLogicalSpace  !<<ADEOfAbstractLogicalSpace-section,ADEOfAbstractLogicalSpace>>  [0..*] !Augments AbstractLogicalSpace with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -205,24 +167,15 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} lod3ImplicitRepresentation «Property» 
-!<<ImplicitGeometry-section,ImplicitGeometry>>  
-[0..1]
-!Relates to an implicit geometry that represents the occupied space in Level of Detail 3.
-!{set:cellbgcolor:#FFFFFF} lod1ImplicitRepresentation «Property» 
-!<<ImplicitGeometry-section,ImplicitGeometry>>  
-[0..1]
-!Relates to an implicit geometry that represents the occupied space in Level of Detail 1.
-!{set:cellbgcolor:#FFFFFF} lod2ImplicitRepresentation «Property» 
-!<<ImplicitGeometry-section,ImplicitGeometry>>  
-[0..1]
-!Relates to an implicit geometry that represents the occupied space in Level of Detail 2.
+!{set:cellbgcolor:#FFFFFF} lod3ImplicitRepresentation  !<<ImplicitGeometry-section,ImplicitGeometry>> [0..1] !Relates to an implicit geometry that represents the occupied space in Level of Detail 3.
+!{set:cellbgcolor:#FFFFFF} lod1ImplicitRepresentation  !<<ImplicitGeometry-section,ImplicitGeometry>> [0..1] !Relates to an implicit geometry that represents the occupied space in Level of Detail 1.
+!{set:cellbgcolor:#FFFFFF} lod2ImplicitRepresentation  !<<ImplicitGeometry-section,ImplicitGeometry>> [0..1] !Relates to an implicit geometry that represents the occupied space in Level of Detail 2.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractOccupiedSpace «Property»  !<<ADEOfAbstractOccupiedSpace-section,ADEOfAbstractOccupiedSpace>>  [0..*] !Augments AbstractOccupiedSpace with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractOccupiedSpace  !<<ADEOfAbstractOccupiedSpace-section,ADEOfAbstractOccupiedSpace>>  [0..*] !Augments AbstractOccupiedSpace with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -240,28 +193,16 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} lod3TerrainIntersectionCurve «Property» 
-!<<GM_MultiCurve-section,GM_MultiCurve>>  
-[0..1]
-!Relates to a 3D MultiCurve geometry that represents the terrain intersection curve of the physical space in Level of Detail 3.
-!{set:cellbgcolor:#FFFFFF} lod2TerrainIntersectionCurve «Property» 
-!<<GM_MultiCurve-section,GM_MultiCurve>>  
-[0..1]
-!Relates to a 3D MultiCurve geometry that represents the terrain intersection curve of the physical space in Level of Detail 2.
-!{set:cellbgcolor:#FFFFFF} pointCloud «Property» 
-!<<AbstractPointCloud-section,AbstractPointCloud>>  
-[0..1]
-!Relates to a 3D PointCloud that represents the physical space.
-!{set:cellbgcolor:#FFFFFF} lod1TerrainIntersectionCurve «Property» 
-!<<GM_MultiCurve-section,GM_MultiCurve>>  
-[0..1]
-!Relates to a 3D MultiCurve geometry that represents the terrain intersection curve of the physical space in Level of Detail 1.
+!{set:cellbgcolor:#FFFFFF} lod3TerrainIntersectionCurve  !<<GM_MultiCurve-section,GM_MultiCurve>> [0..1] !Relates to a 3D MultiCurve geometry that represents the terrain intersection curve of the physical space in Level of Detail 3.
+!{set:cellbgcolor:#FFFFFF} lod2TerrainIntersectionCurve  !<<GM_MultiCurve-section,GM_MultiCurve>> [0..1] !Relates to a 3D MultiCurve geometry that represents the terrain intersection curve of the physical space in Level of Detail 2.
+!{set:cellbgcolor:#FFFFFF} pointCloud  !<<AbstractPointCloud-section,AbstractPointCloud>> [0..1] !Relates to a 3D PointCloud that represents the physical space.
+!{set:cellbgcolor:#FFFFFF} lod1TerrainIntersectionCurve  !<<GM_MultiCurve-section,GM_MultiCurve>> [0..1] !Relates to a 3D MultiCurve geometry that represents the terrain intersection curve of the physical space in Level of Detail 1.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractPhysicalSpace «Property»  !<<ADEOfAbstractPhysicalSpace-section,ADEOfAbstractPhysicalSpace>>  [0..*] !Augments AbstractPhysicalSpace with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractPhysicalSpace  !<<ADEOfAbstractPhysicalSpace-section,ADEOfAbstractPhysicalSpace>>  [0..*] !Augments AbstractPhysicalSpace with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -278,13 +219,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractPointCloud «Property»  !<<ADEOfAbstractPointCloud-section,ADEOfAbstractPointCloud>>  [0..*] !Augments AbstractPointCloud with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractPointCloud  !<<ADEOfAbstractPointCloud-section,ADEOfAbstractPointCloud>>  [0..*] !Augments AbstractPointCloud with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -302,62 +239,29 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} lod2MultiCurve «Property» 
-!<<GM_MultiCurve-section,GM_MultiCurve>>  
-[0..1]
-!Relates to a 3D MultiCurve geometry that represents the space in Level of Detail 2.
-!{set:cellbgcolor:#FFFFFF} lod0MultiCurve «Property» 
-!<<GM_MultiCurve-section,GM_MultiCurve>>  
-[0..1]
-!Relates to a 3D MultiCurve geometry that represents the space in Level of Detail 0.
-!{set:cellbgcolor:#FFFFFF} lod0MultiSurface «Property» 
-!<<GM_MultiSurface-section,GM_MultiSurface>>  
-[0..1]
-!Relates to a 3D MultiSurface geometry that represents the space in Level of Detail 0.
-!{set:cellbgcolor:#FFFFFF} lod2MultiSurface «Property» 
-!<<GM_MultiSurface-section,GM_MultiSurface>>  
-[0..1]
-!Relates to a 3D MultiSurface geometry that represents the space in Level of Detail 2.
-!{set:cellbgcolor:#FFFFFF} lod3MultiSurface «Property» 
-!<<GM_MultiSurface-section,GM_MultiSurface>>  
-[0..1]
-!Relates to a 3D MultiSurface geometry that represents the space in Level of Detail 3.
-!{set:cellbgcolor:#FFFFFF} lod0Point «Property» 
-!<<GM_Point-section,GM_Point>>  
-[0..1]
-!Relates to a 3D Point geometry that represents the space in Level of Detail 0.
-!{set:cellbgcolor:#FFFFFF} lod3Solid «Property» 
-!<<GM_Solid-section,GM_Solid>>  
-[0..1]
-!Relates to a 3D Solid geometry that represents the space in Level of Detail 3.
-!{set:cellbgcolor:#FFFFFF} lod3MultiCurve «Property» 
-!<<GM_MultiCurve-section,GM_MultiCurve>>  
-[0..1]
-!Relates to a 3D MultiCurve geometry that represents the space in Level of Detail 3.
-!{set:cellbgcolor:#FFFFFF} lod2Solid «Property» 
-!<<GM_Solid-section,GM_Solid>>  
-[0..1]
-!Relates to a 3D Solid geometry that represents the space in Level of Detail 2.
-!{set:cellbgcolor:#FFFFFF} boundary «Property» 
-!<<AbstractSpaceBoundary-section,AbstractSpaceBoundary>>  
-[*]
-!Relates to surfaces that bound the space.
-!{set:cellbgcolor:#FFFFFF} lod1Solid «Property» 
-!<<GM_Solid-section,GM_Solid>>  
-[0..1]
-!Relates to a 3D Solid geometry that represents the space in Level of Detail 1.
+!{set:cellbgcolor:#FFFFFF} lod2MultiCurve  !<<GM_MultiCurve-section,GM_MultiCurve>> [0..1] !Relates to a 3D MultiCurve geometry that represents the space in Level of Detail 2.
+!{set:cellbgcolor:#FFFFFF} lod0MultiCurve  !<<GM_MultiCurve-section,GM_MultiCurve>> [0..1] !Relates to a 3D MultiCurve geometry that represents the space in Level of Detail 0.
+!{set:cellbgcolor:#FFFFFF} lod0MultiSurface  !<<GM_MultiSurface-section,GM_MultiSurface>> [0..1] !Relates to a 3D MultiSurface geometry that represents the space in Level of Detail 0.
+!{set:cellbgcolor:#FFFFFF} lod2MultiSurface  !<<GM_MultiSurface-section,GM_MultiSurface>> [0..1] !Relates to a 3D MultiSurface geometry that represents the space in Level of Detail 2.
+!{set:cellbgcolor:#FFFFFF} lod3MultiSurface  !<<GM_MultiSurface-section,GM_MultiSurface>> [0..1] !Relates to a 3D MultiSurface geometry that represents the space in Level of Detail 3.
+!{set:cellbgcolor:#FFFFFF} lod0Point  !<<GM_Point-section,GM_Point>> [0..1] !Relates to a 3D Point geometry that represents the space in Level of Detail 0.
+!{set:cellbgcolor:#FFFFFF} lod3Solid  !<<GM_Solid-section,GM_Solid>> [0..1] !Relates to a 3D Solid geometry that represents the space in Level of Detail 3.
+!{set:cellbgcolor:#FFFFFF} lod3MultiCurve  !<<GM_MultiCurve-section,GM_MultiCurve>> [0..1] !Relates to a 3D MultiCurve geometry that represents the space in Level of Detail 3.
+!{set:cellbgcolor:#FFFFFF} lod2Solid  !<<GM_Solid-section,GM_Solid>> [0..1] !Relates to a 3D Solid geometry that represents the space in Level of Detail 2.
+!{set:cellbgcolor:#FFFFFF} boundary  !<<AbstractSpaceBoundary-section,AbstractSpaceBoundary>> [*] !Relates to surfaces that bound the space.
+!{set:cellbgcolor:#FFFFFF} lod1Solid  !<<GM_Solid-section,GM_Solid>> [0..1] !Relates to a 3D Solid geometry that represents the space in Level of Detail 1.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} spaceType «Property»  !<<SpaceType-section,SpaceType>>  [0..1] !Specifies the degree of openness of a space.
+!{set:cellbgcolor:#FFFFFF} spaceType  !<<SpaceType-section,SpaceType>>  [0..1] !Specifies the degree of openness of a space.
  
-!{set:cellbgcolor:#FFFFFF} volume «Property»  !<<QualifiedVolume-section,QualifiedVolume>>  [0..*] !Specifies qualified volumes related to the space.
+!{set:cellbgcolor:#FFFFFF} volume  !<<QualifiedVolume-section,QualifiedVolume>>  [0..*] !Specifies qualified volumes related to the space.
  
-!{set:cellbgcolor:#FFFFFF} area «Property»  !<<QualifiedArea-section,QualifiedArea>>  [0..*] !Specifies qualified areas related to the space.
+!{set:cellbgcolor:#FFFFFF} area  !<<QualifiedArea-section,QualifiedArea>>  [0..*] !Specifies qualified areas related to the space.
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractSpace «Property»  !<<ADEOfAbstractSpace-section,ADEOfAbstractSpace>>  [0..*] !Augments AbstractSpace with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractSpace  !<<ADEOfAbstractSpace-section,ADEOfAbstractSpace>>  [0..*] !Augments AbstractSpace with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -374,13 +278,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractSpaceBoundary «Property»  !<<ADEOfAbstractSpaceBoundary-section,ADEOfAbstractSpaceBoundary>>  [0..*] !Augments AbstractSpaceBoundary with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractSpaceBoundary  !<<ADEOfAbstractSpaceBoundary-section,ADEOfAbstractSpaceBoundary>>  [0..*] !Augments AbstractSpaceBoundary with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -398,38 +298,20 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} lod1MultiSurface «Property» 
-!<<GM_MultiSurface-section,GM_MultiSurface>>  
-[0..1]
-!Relates to a 3D MultiSurface geometry that represents the thematic surface in Level of Detail 1.
-!{set:cellbgcolor:#FFFFFF} pointCloud «Property» 
-!<<AbstractPointCloud-section,AbstractPointCloud>>  
-[0..1]
-!Relates to a 3D PointCloud that represents the thematic surface.
-!{set:cellbgcolor:#FFFFFF} lod0MultiCurve «Property» 
-!<<GM_MultiCurve-section,GM_MultiCurve>>  
-[0..1]
-!Relates to a 3D MultiCurve geometry that represents the thematic surface in Level of Detail 0.
-!{set:cellbgcolor:#FFFFFF} lod3MultiSurface «Property» 
-!<<GM_MultiSurface-section,GM_MultiSurface>>  
-[0..1]
-!Relates to a 3D MultiSurface geometry that represents the thematic surface in Level of Detail 3.
-!{set:cellbgcolor:#FFFFFF} lod0MultiSurface «Property» 
-!<<GM_MultiSurface-section,GM_MultiSurface>>  
-[0..1]
-!Relates to a 3D MultiSurface geometry that represents the thematic surface in Level of Detail 0.
-!{set:cellbgcolor:#FFFFFF} lod2MultiSurface «Property» 
-!<<GM_MultiSurface-section,GM_MultiSurface>>  
-[0..1]
-!Relates to a 3D MultiSurface geometry that represents the thematic surface in Level of Detail 2.
+!{set:cellbgcolor:#FFFFFF} lod1MultiSurface  !<<GM_MultiSurface-section,GM_MultiSurface>> [0..1] !Relates to a 3D MultiSurface geometry that represents the thematic surface in Level of Detail 1.
+!{set:cellbgcolor:#FFFFFF} pointCloud  !<<AbstractPointCloud-section,AbstractPointCloud>> [0..1] !Relates to a 3D PointCloud that represents the thematic surface.
+!{set:cellbgcolor:#FFFFFF} lod0MultiCurve  !<<GM_MultiCurve-section,GM_MultiCurve>> [0..1] !Relates to a 3D MultiCurve geometry that represents the thematic surface in Level of Detail 0.
+!{set:cellbgcolor:#FFFFFF} lod3MultiSurface  !<<GM_MultiSurface-section,GM_MultiSurface>> [0..1] !Relates to a 3D MultiSurface geometry that represents the thematic surface in Level of Detail 3.
+!{set:cellbgcolor:#FFFFFF} lod0MultiSurface  !<<GM_MultiSurface-section,GM_MultiSurface>> [0..1] !Relates to a 3D MultiSurface geometry that represents the thematic surface in Level of Detail 0.
+!{set:cellbgcolor:#FFFFFF} lod2MultiSurface  !<<GM_MultiSurface-section,GM_MultiSurface>> [0..1] !Relates to a 3D MultiSurface geometry that represents the thematic surface in Level of Detail 2.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} area «Property»  !<<QualifiedArea-section,QualifiedArea>>  [0..*] !Specifies qualified areas related to the thematic surface.
+!{set:cellbgcolor:#FFFFFF} area  !<<QualifiedArea-section,QualifiedArea>>  [0..*] !Specifies qualified areas related to the thematic surface.
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractThematicSurface «Property»  !<<ADEOfAbstractThematicSurface-section,ADEOfAbstractThematicSurface>>  [0..*] !Augments AbstractThematicSurface with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractThematicSurface  !<<ADEOfAbstractThematicSurface-section,ADEOfAbstractThematicSurface>>  [0..*] !Augments AbstractThematicSurface with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -446,13 +328,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractUnoccupiedSpace «Property»  !<<ADEOfAbstractUnoccupiedSpace-section,ADEOfAbstractUnoccupiedSpace>>  [0..*] !Augments AbstractUnoccupiedSpace with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractUnoccupiedSpace  !<<ADEOfAbstractUnoccupiedSpace-section,ADEOfAbstractUnoccupiedSpace>>  [0..*] !Augments AbstractUnoccupiedSpace with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -469,13 +347,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractVersion «Property»  !<<ADEOfAbstractVersion-section,ADEOfAbstractVersion>>  [0..*] !Augments AbstractVersion with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractVersion  !<<ADEOfAbstractVersion-section,ADEOfAbstractVersion>>  [0..*] !Augments AbstractVersion with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -492,13 +366,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractVersionTransition «Property»  !<<ADEOfAbstractVersionTransition-section,ADEOfAbstractVersionTransition>>  [0..*] !Augments AbstractVersionTransition with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractVersionTransition  !<<ADEOfAbstractVersionTransition-section,ADEOfAbstractVersionTransition>>  [0..*] !Augments AbstractVersionTransition with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -516,20 +386,14 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} multiPoint «Property» 
-!<<GM_MultiPoint-section,GM_MultiPoint>>  
-[0..1]
-!Relates to the MultiPoint geometry of the Address. The geometry relates the address spatially to a city object.
-!{set:cellbgcolor:#FFFFFF} xalAddress «Property» 
-!<<XALAddress-section,XALAddress>>  
-[1]
-!Relates an OASIS address object to the Address.
+!{set:cellbgcolor:#FFFFFF} multiPoint  !<<GM_MultiPoint-section,GM_MultiPoint>> [0..1] !Relates to the MultiPoint geometry of the Address. The geometry relates the address spatially to a city object.
+!{set:cellbgcolor:#FFFFFF} xalAddress  !<<XALAddress-section,XALAddress>> [1..1] !Relates an OASIS address object to the Address.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfAddress «Property»  !<<ADEOfAddress-section,ADEOfAddress>>  [0..*] !Augments the Address with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAddress  !<<ADEOfAddress-section,ADEOfAddress>>  [0..*] !Augments the Address with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -547,18 +411,15 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} cityModelMember «Property» 
-!<<CityModelMember-section,CityModelMember>>  
-[*]
-!Relates to all objects that are part of the CityModel.
+!{set:cellbgcolor:#FFFFFF} cityModelMember  !<<CityModelMember-section,CityModelMember>> [*] !Relates to all objects that are part of the CityModel.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} engineeringCRS «Property»  !<<EngineeringCRS-section,EngineeringCRS>>  [0..1] !Specifies the local engineering coordinate reference system of the CityModel that can be provided inline the CityModel instead of referencing a well-known CRS definition. The definition of an engineering CRS requires an anchor point which relates the origin of the local coordinate system to a point on the earth’s surface in order to facilitate the transformation of coordinates from the local engineering CRS.
+!{set:cellbgcolor:#FFFFFF} engineeringCRS  !<<EngineeringCRS-section,EngineeringCRS>>  [0..1] !Specifies the local engineering coordinate reference system of the CityModel that can be provided inline the CityModel instead of referencing a well-known CRS definition. The definition of an engineering CRS requires an anchor point which relates the origin of the local coordinate system to a point on the earth’s surface in order to facilitate the transformation of coordinates from the local engineering CRS.
  
-!{set:cellbgcolor:#FFFFFF} adeOfCityModel «Property»  !<<ADEOfCityModel-section,ADEOfCityModel>>  [0..*] !Augments the CityModel with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfCityModel  !<<ADEOfCityModel-section,ADEOfCityModel>>  [0..*] !Augments the CityModel with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -576,16 +437,13 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} genericAttribute «Property» 
-!<<AbstractGenericAttribute-section,AbstractGenericAttribute>>  
-[*]
-!Relates generic attributes to the CityObjectRelation.
+!{set:cellbgcolor:#FFFFFF} genericAttribute  !<<AbstractGenericAttribute-section,AbstractGenericAttribute>> [*] !Relates generic attributes to the CityObjectRelation.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} relationType «Property»  !<<RelationTypeValue-section,RelationTypeValue>> [1..1] !Indicates the specific type of the CityObjectRelation.
+!{set:cellbgcolor:#FFFFFF} relationType  !<<RelationTypeValue-section,RelationTypeValue>> [1..1] !Indicates the specific type of the CityObjectRelation.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -602,13 +460,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfClosureSurface «Property»  !<<ADEOfClosureSurface-section,ADEOfClosureSurface>>  [0..*] !Augments the ClosureSurface with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfClosureSurface  !<<ADEOfClosureSurface-section,ADEOfClosureSurface>>  [0..*] !Augments the ClosureSurface with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -626,30 +480,21 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} relativeGeometry «Property» 
-!<<GM_Object-section,GM_Object>>  
-[0..1]
-!Relates to a prototypical geometry in a local coordinate system stored inline with the city model.
-!{set:cellbgcolor:#FFFFFF} referencePoint «Property» 
-!<<GM_Point-section,GM_Point>>  
-[1]
-!Relates to a 3D Point geometry that represents the base point of the object in the world coordinate system.
-!{set:cellbgcolor:#FFFFFF} appearance «Property» 
-!<<AbstractAppearance-section,AbstractAppearance>>  
-[*]
-!Relates appearances to the ImplicitGeometry.
+!{set:cellbgcolor:#FFFFFF} relativeGeometry  !<<GM_Object-section,GM_Object>> [0..1] !Relates to a prototypical geometry in a local coordinate system stored inline with the city model.
+!{set:cellbgcolor:#FFFFFF} referencePoint  !<<GM_Point-section,GM_Point>> [1..1] !Relates to a 3D Point geometry that represents the base point of the object in the world coordinate system.
+!{set:cellbgcolor:#FFFFFF} appearance  !<<AbstractAppearance-section,AbstractAppearance>> [*] !Relates appearances to the ImplicitGeometry.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} objectID «Property»  !<<ID-section,ID>> [1..1] !Specifies the unique identifier of the ImplicitGeometry.
+!{set:cellbgcolor:#FFFFFF} objectID  !<<ID-section,ID>> [1..1] !Specifies the unique identifier of the ImplicitGeometry.
  
-!{set:cellbgcolor:#FFFFFF} transformationMatrix «Property»  !<<TransformationMatrix4x4-section,TransformationMatrix4x4>> [1..1] !Specifies the mathematical transformation (translation, rotation, and scaling) between the prototypical geometry and the actual spatial position of the object.
+!{set:cellbgcolor:#FFFFFF} transformationMatrix  !<<TransformationMatrix4x4-section,TransformationMatrix4x4>> [1..1] !Specifies the mathematical transformation (translation, rotation, and scaling) between the prototypical geometry and the actual spatial position of the object.
  
-!{set:cellbgcolor:#FFFFFF} mimeType «Property»  !<<MimeTypeValue-section,MimeTypeValue>>  [0..1] !Specifies the MIME type of the external file that stores the prototypical geometry.
+!{set:cellbgcolor:#FFFFFF} mimeType  !<<MimeTypeValue-section,MimeTypeValue>>  [0..1] !Specifies the MIME type of the external file that stores the prototypical geometry.
  
-!{set:cellbgcolor:#FFFFFF} libraryObject «Property»  !<<URI-section,URI>>  [0..1] !Specifies the URI that points to the prototypical geometry stored in an external file.
+!{set:cellbgcolor:#FFFFFF} libraryObject  !<<URI-section,URI>>  [0..1] !Specifies the URI that points to the prototypical geometry stored in an external file.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |===   
@@ -666,15 +511,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfAbstractAppearance-section]]
@@ -687,15 +523,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfAbstractCityObject-section]]
@@ -708,15 +535,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfAbstractDynamizer-section]]
@@ -729,15 +547,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfAbstractFeature-section]]
@@ -750,15 +559,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfAbstractFeatureWithLifespan-section]]
@@ -771,15 +571,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfAbstractLogicalSpace-section]]
@@ -792,15 +583,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfAbstractOccupiedSpace-section]]
@@ -813,15 +595,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfAbstractPhysicalSpace-section]]
@@ -834,15 +607,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfAbstractPointCloud-section]]
@@ -855,15 +619,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfAbstractSpace-section]]
@@ -876,15 +631,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfAbstractSpaceBoundary-section]]
@@ -897,15 +643,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfAbstractThematicSurface-section]]
@@ -918,15 +655,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfAbstractUnoccupiedSpace-section]]
@@ -939,15 +667,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfAbstractVersion-section]]
@@ -960,15 +679,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfAbstractVersionTransition-section]]
@@ -981,15 +691,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfAddress-section]]
@@ -1002,15 +703,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfCityModel-section]]
@@ -1023,15 +715,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfClosureSurface-section]]
@@ -1044,15 +727,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ExternalReference-section]]
@@ -1067,17 +741,13 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} targetResource «Property»  !<<URI-section,URI>> [1..1] !Specifies the URI that points to the object in the external information system.
+!{set:cellbgcolor:#FFFFFF} targetResource  !<<URI-section,URI>> [1..1] !Specifies the URI that points to the object in the external information system.
  
-!{set:cellbgcolor:#FFFFFF} informationSystem «Property»  !<<URI-section,URI>>  [0..1] !Specifies the URI that points to the external information system.
+!{set:cellbgcolor:#FFFFFF} informationSystem  !<<URI-section,URI>>  [0..1] !Specifies the URI that points to the external information system.
  
-!{set:cellbgcolor:#FFFFFF} relationType «Property»  !<<URI-section,URI>>  [0..1] !Specifies a URI that additionally qualifies the ExternalReference. The URI can point to a definition from an external ontology (e.g. the sameAs relation from OWL) and allows for mapping the ExternalReference to RDF triples.
+!{set:cellbgcolor:#FFFFFF} relationType  !<<URI-section,URI>>  [0..1] !Specifies a URI that additionally qualifies the ExternalReference. The URI can point to a definition from an external ontology (e.g. the sameAs relation from OWL) and allows for mapping the ExternalReference to RDF triples.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
@@ -1094,17 +764,13 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} numberOfOccupants «Property»  !<<Integer-section,Integer>> [1..1] !Indicates the number of occupants contained by a feature.
+!{set:cellbgcolor:#FFFFFF} numberOfOccupants  !<<Integer-section,Integer>> [1..1] !Indicates the number of occupants contained by a feature.
  
-!{set:cellbgcolor:#FFFFFF} interval «Property»  !<<IntervalValue-section,IntervalValue>>  [0..1] !Indicates the time period the occupants are contained by a feature.
+!{set:cellbgcolor:#FFFFFF} interval  !<<IntervalValue-section,IntervalValue>>  [0..1] !Indicates the time period the occupants are contained by a feature.
  
-!{set:cellbgcolor:#FFFFFF} occupantType «Property»  !<<OccupantTypeValue-section,OccupantTypeValue>>  [0..1] !Indicates the specific type of the occupants that are contained by a feature.
+!{set:cellbgcolor:#FFFFFF} occupantType  !<<OccupantTypeValue-section,OccupantTypeValue>>  [0..1] !Indicates the specific type of the occupants that are contained by a feature.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
@@ -1121,15 +787,11 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} area «Property»  !<<Area-section,Area>> [1..1] !Specifies the value of the QualifiedArea.
+!{set:cellbgcolor:#FFFFFF} area  !<<Area-section,Area>> [1..1] !Specifies the value of the QualifiedArea.
  
-!{set:cellbgcolor:#FFFFFF} typeOfArea «Property»  !<<QualifiedAreaTypeValue-section,QualifiedAreaTypeValue>> [1..1] !Indicates the specific type of the QualifiedArea.
+!{set:cellbgcolor:#FFFFFF} typeOfArea  !<<QualifiedAreaTypeValue-section,QualifiedAreaTypeValue>> [1..1] !Indicates the specific type of the QualifiedArea.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
@@ -1146,15 +808,11 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} volume «Property»  !<<Volume-section,Volume>> [1..1] !Specifies the value of the QualifiedVolume.
+!{set:cellbgcolor:#FFFFFF} volume  !<<Volume-section,Volume>> [1..1] !Specifies the value of the QualifiedVolume.
  
-!{set:cellbgcolor:#FFFFFF} typeOfVolume «Property»  !<<QualifiedVolumeTypeValue-section,QualifiedVolumeTypeValue>> [1..1] !Indicates the specific type of the QualifiedVolume.
+!{set:cellbgcolor:#FFFFFF} typeOfVolume  !<<QualifiedVolumeTypeValue-section,QualifiedVolumeTypeValue>> [1..1] !Indicates the specific type of the QualifiedVolume.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
@@ -1169,15 +827,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |===   
 
 ==== Basic Types
@@ -1194,13 +843,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} codeSpace «Property»  !<<URI-section,URI>>  [0..1] !Associates the Code with an authority that controls the term, keyword, or name.
+!{set:cellbgcolor:#FFFFFF} codeSpace  !<<URI-section,URI>>  [0..1] !Associates the Code with an authority that controls the term, keyword, or name.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
@@ -1214,17 +859,8 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! DoubleBetween0and1 is a basic type for values, which are greater or equal than 0 and less or equal than 1. The type is used for color encoding, for example. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «BasicType»
-!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! valueBetween0and1 (OCL): inv: DoubleBetween0and1.allInstances()->forAll(p | p >=0 and p <= 1)    
+!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! valueBetween0and1 (OCL): inv: DoubleBetween0and1.allInstances()->forAll(p \| p > = 0 and p < = 1)    
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[DoubleBetween0and1List-section]]
@@ -1239,13 +875,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} list «Property»  !<<DoubleBetween0and1-section,DoubleBetween0and1>> [1..1] !Specifies the list of double values.
+!{set:cellbgcolor:#FFFFFF} list  !<<DoubleBetween0and1-section,DoubleBetween0and1>> [1..1] !Specifies the list of double values.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
@@ -1262,13 +894,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} list «Property»  !<<Real-section,Real>> [1..1] !Specifies the list of double values.
+!{set:cellbgcolor:#FFFFFF} list  !<<Real-section,Real>> [1..1] !Specifies the list of double values.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
@@ -1285,13 +913,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} list «Property»  !<<DoubleOrNilReason-section,DoubleOrNilReason>> [1..1] !Specifies the list of double values and/or nil reasons.
+!{set:cellbgcolor:#FFFFFF} list  !<<DoubleOrNilReason-section,DoubleOrNilReason>> [1..1] !Specifies the list of double values and/or nil reasons.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
@@ -1306,15 +930,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «BasicType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[IntegerBetween0and3-section]]
@@ -1326,17 +941,8 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! IntegerBetween0and3 is a basic type for integer values, which are greater or equal than 0 and less or equal than 3. The type is used for encoding the LOD number. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «BasicType»
-!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! valueBetween0and3 (OCL): inv: IntegerBetween0and3.allInstances()->forAll(p | p >= 0 and p <= 3)    
+!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! valueBetween0and3 (OCL): inv: IntegerBetween0and3.allInstances()->forAll(p \| p > = 0 and p < = 3)    
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[MeasureOrNilReasonList-section]]
@@ -1351,13 +957,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} uom «Property»  !<<UnitOfMeasure-section,UnitOfMeasure>> [1..1] !Specifies the unit of measurement of the double values.
+!{set:cellbgcolor:#FFFFFF} uom  !<<UnitOfMeasure-section,UnitOfMeasure>> [1..1] !Specifies the unit of measurement of the double values.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
@@ -1373,15 +975,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «BasicType»
 !{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! lengthOfList (OCL): inv: list->size() = 4    
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[TransformationMatrix3x4-section]]
@@ -1395,15 +988,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «BasicType»
 !{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! lengthOfList (OCL): inv: list->size() = 12    
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[TransformationMatrix4x4-section]]
@@ -1415,17 +999,8 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TransformationMatrix4x4 is a 4 by 4 matrix represented as a list of sixteen double values in row major order. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<DoubleList-section,DoubleList>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «BasicType»
-!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! lengthOfList (OCL): inv: list->size() = 16    
+!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! lengthOfList (OCL): inv: list -> size() = 16    
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |===
 
 ==== Unions

@@ -23,18 +23,15 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} versionMember «Version» 
-!<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>>  
-[*]
-!Relates to all city objects that are part of the city model version.
+!{set:cellbgcolor:#FFFFFF} versionMember «Version» !<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> [*] !Relates to all city objects that are part of the city model version.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} tag «Property»  !<<CharacterString-section,CharacterString>>  [0..*] !Allows for adding keywords to the city model version.
+!{set:cellbgcolor:#FFFFFF} tag  !<<CharacterString-section,CharacterString>>  [0..*] !Allows for adding keywords to the city model version.
  
-!{set:cellbgcolor:#FFFFFF} adeOfVersion «Property»  !<<ADEOfVersion-section,ADEOfVersion>>  [0..*] !Augments the Version with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfVersion  !<<ADEOfVersion-section,ADEOfVersion>>  [0..*] !Augments the Version with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -52,30 +49,21 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} from «Property» 
-!<<Version-section,Version>>  
-[0..1]
-!Relates to the predecessor version of the VersionTransition.
-!{set:cellbgcolor:#FFFFFF} transaction «Property» 
-!<<Transaction-section,Transaction>>  
-[*]
-!Relates to all transactions that have been applied as part of the VersionTransition.
-!{set:cellbgcolor:#FFFFFF} to «Property» 
-!<<Version-section,Version>>  
-[0..1]
-!Relates to the sucessor version of the VersionTransition.
+!{set:cellbgcolor:#FFFFFF} from  !<<Version-section,Version>> [0..1] !Relates to the predecessor version of the VersionTransition.
+!{set:cellbgcolor:#FFFFFF} transaction  !<<Transaction-section,Transaction>> [*] !Relates to all transactions that have been applied as part of the VersionTransition.
+!{set:cellbgcolor:#FFFFFF} to  !<<Version-section,Version>> [0..1] !Relates to the sucessor version of the VersionTransition.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} reason «Property»  !<<CharacterString-section,CharacterString>>  [0..1] !Specifies why the VersionTransition has been carried out.
+!{set:cellbgcolor:#FFFFFF} reason  !<<CharacterString-section,CharacterString>>  [0..1] !Specifies why the VersionTransition has been carried out.
  
-!{set:cellbgcolor:#FFFFFF} clonePredecessor «Property»  !<<Boolean-section,Boolean>> [1..1] !Indicates whether the set of city object instances belonging to the successor version of the city model is either explicitly enumerated within the successor version object (attribute clonePredecessor=false), or has to be derived from the modifications of the city model provided as a list of transactions on the city object versions contained in the predecessor version (attribute clonePredecessor=true).
+!{set:cellbgcolor:#FFFFFF} clonePredecessor  !<<Boolean-section,Boolean>> [1..1] !Indicates whether the set of city object instances belonging to the successor version of the city model is either explicitly enumerated within the successor version object (attribute clonePredecessor=false), or has to be derived from the modifications of the city model provided as a list of transactions on the city object versions contained in the predecessor version (attribute clonePredecessor=true).
  
-!{set:cellbgcolor:#FFFFFF} type «Property»  !<<TransitionTypeValue-section,TransitionTypeValue>>  [0..1] !Indicates the specific type of the VersionTransition.
+!{set:cellbgcolor:#FFFFFF} type  !<<TransitionTypeValue-section,TransitionTypeValue>>  [0..1] !Indicates the specific type of the VersionTransition.
  
-!{set:cellbgcolor:#FFFFFF} adeOfVersionTransition «Property»  !<<ADEOfVersionTransition-section,ADEOfVersionTransition>>  [0..*] !Augments the VersionTransition with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfVersionTransition  !<<ADEOfVersionTransition-section,ADEOfVersionTransition>>  [0..*] !Augments the VersionTransition with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |===   
@@ -92,15 +80,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfVersionTransition-section]]
@@ -113,15 +92,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[Transaction-section]]
@@ -137,20 +107,14 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} newFeature «Version»
-!<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> 
- [0..1]
-!Relates to the version of the city object subsequent to the Transaction.
-!{set:cellbgcolor:#FFFFFF} oldFeature «Version»
-!<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> 
- [0..1]
-!Relates to the version of the city object prior to the Transaction.
+!{set:cellbgcolor:#FFFFFF} newFeature «Version» !<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> [0..1] !Relates to the version of the city object subsequent to the Transaction.
+!{set:cellbgcolor:#FFFFFF} oldFeature «Version» !<<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> [0..1] !Relates to the version of the city object prior to the Transaction.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} type «Property»  !<<TransactionTypeValue-section,TransactionTypeValue>> [1..1] !Indicates the specific type of the Transaction.
+!{set:cellbgcolor:#FFFFFF} type  !<<TransactionTypeValue-section,TransactionTypeValue>> [1..1] !Indicates the specific type of the Transaction.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |===   

@@ -23,52 +23,34 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} buildingFurniture «Property» 
-!<<BuildingFurniture-section,BuildingFurniture>>  
-[*]
-!Relates the furniture objects to the Building or BuildingPart.
-!{set:cellbgcolor:#FFFFFF} buildingRoom «Property» 
-!<<BuildingRoom-section,BuildingRoom>>  
-[*]
-!Relates the rooms to the Building or BuildingPart.
-!{set:cellbgcolor:#FFFFFF} buildingInstallation «Property» 
-!<<BuildingInstallation-section,BuildingInstallation>>  
-[*]
-!Relates the installation objects to the Building or BuildingPart.
-!{set:cellbgcolor:#FFFFFF} buildingSubdivision «Property» 
-!<<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>>  
-[*]
-!Relates the logical subdivisions to the Building or BuildingPart.
-!{set:cellbgcolor:#FFFFFF} buildingConstructiveElement «Property» 
-!<<BuildingConstructiveElement-section,BuildingConstructiveElement>>  
-[*]
-!Relates the constructive elements to the Building or BuildingPart.
-!{set:cellbgcolor:#FFFFFF} address «Property» 
-!<<Address-section,Address>>  
-[*]
-!Relates the addresses to the Building or BuildingPart.
+!{set:cellbgcolor:#FFFFFF} buildingFurniture  !<<BuildingFurniture-section,BuildingFurniture>> [*] !Relates the furniture objects to the Building or BuildingPart.
+!{set:cellbgcolor:#FFFFFF} buildingRoom  !<<BuildingRoom-section,BuildingRoom>> [*] !Relates the rooms to the Building or BuildingPart.
+!{set:cellbgcolor:#FFFFFF} buildingInstallation  !<<BuildingInstallation-section,BuildingInstallation>> [*] !Relates the installation objects to the Building or BuildingPart.
+!{set:cellbgcolor:#FFFFFF} buildingSubdivision  !<<AbstractBuildingSubdivision-section,AbstractBuildingSubdivision>> [*] !Relates the logical subdivisions to the Building or BuildingPart.
+!{set:cellbgcolor:#FFFFFF} buildingConstructiveElement  !<<BuildingConstructiveElement-section,BuildingConstructiveElement>> [*] !Relates the constructive elements to the Building or BuildingPart.
+!{set:cellbgcolor:#FFFFFF} address  !<<Address-section,Address>> [*] !Relates the addresses to the Building or BuildingPart.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<BuildingClassValue-section,BuildingClassValue>>  [0..1] !Indicates the specific type of the Building or BuildingPart.
+!{set:cellbgcolor:#FFFFFF} class  !<<BuildingClassValue-section,BuildingClassValue>>  [0..1] !Indicates the specific type of the Building or BuildingPart.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<BuildingFunctionValue-section,BuildingFunctionValue>>  [0..*] !Specifies the intended purposes of the Building or BuildingPart.
+!{set:cellbgcolor:#FFFFFF} function  !<<BuildingFunctionValue-section,BuildingFunctionValue>>  [0..*] !Specifies the intended purposes of the Building or BuildingPart.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<BuildingUsageValue-section,BuildingUsageValue>>  [0..*] !Specifies the actual uses of the Building or BuildingPart.
+!{set:cellbgcolor:#FFFFFF} usage  !<<BuildingUsageValue-section,BuildingUsageValue>>  [0..*] !Specifies the actual uses of the Building or BuildingPart.
  
-!{set:cellbgcolor:#FFFFFF} roofType «Property»  !<<RoofTypeValue-section,RoofTypeValue>>  [0..1] !Indicates the shape of the roof of the Building or BuildingPart.
+!{set:cellbgcolor:#FFFFFF} roofType  !<<RoofTypeValue-section,RoofTypeValue>>  [0..1] !Indicates the shape of the roof of the Building or BuildingPart.
  
-!{set:cellbgcolor:#FFFFFF} storeysAboveGround «Property»  !<<Integer-section,Integer>>  [0..1] !Indicates the number of storeys positioned above ground level.
+!{set:cellbgcolor:#FFFFFF} storeysAboveGround  !<<Integer-section,Integer>>  [0..1] !Indicates the number of storeys positioned above ground level.
  
-!{set:cellbgcolor:#FFFFFF} storeysBelowGround «Property»  !<<Integer-section,Integer>>  [0..1] !Indicates the number of storeys positioned below ground level.
+!{set:cellbgcolor:#FFFFFF} storeysBelowGround  !<<Integer-section,Integer>>  [0..1] !Indicates the number of storeys positioned below ground level.
  
-!{set:cellbgcolor:#FFFFFF} storeyHeightsAboveGround «Property»  !<<MeasureOrNilReasonList-section,MeasureOrNilReasonList>>  [0..1] !Lists the heights of each storey above ground. The first value in the list denotes the height of the storey closest to the ground level, the last value denotes the height furthest away.
+!{set:cellbgcolor:#FFFFFF} storeyHeightsAboveGround  !<<MeasureOrNilReasonList-section,MeasureOrNilReasonList>>  [0..1] !Lists the heights of each storey above ground. The first value in the list denotes the height of the storey closest to the ground level, the last value denotes the height furthest away.
  
-!{set:cellbgcolor:#FFFFFF} storeyHeightsBelowGround «Property»  !<<MeasureOrNilReasonList-section,MeasureOrNilReasonList>>  [0..1] !Lists the height of each storey below ground. The first value in the list denotes the height of the storey closest to the ground level, the last value denotes the height furthest away.
+!{set:cellbgcolor:#FFFFFF} storeyHeightsBelowGround  !<<MeasureOrNilReasonList-section,MeasureOrNilReasonList>>  [0..1] !Lists the height of each storey below ground. The first value in the list denotes the height of the storey closest to the ground level, the last value denotes the height furthest away.
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractBuilding «Property»  !<<ADEOfAbstractBuilding-section,ADEOfAbstractBuilding>>  [0..*] !Augments AbstractBuilding with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractBuilding  !<<ADEOfAbstractBuilding-section,ADEOfAbstractBuilding>>  [0..*] !Augments AbstractBuilding with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -86,38 +68,26 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} buildingRoom «Property» 
-!<<BuildingRoom-section,BuildingRoom>>  
-[*]
-!Relates the rooms to the building subdivision.
-!{set:cellbgcolor:#FFFFFF} buildingFurniture «Property» 
-!<<BuildingFurniture-section,BuildingFurniture>>  
-[*]
-!Relates the furniture objects to the building subdivision.
-!{set:cellbgcolor:#FFFFFF} buildingConstructiveElement «Property» 
-!<<BuildingConstructiveElement-section,BuildingConstructiveElement>>  
-[*]
-!Relates the constructive elements to the building subdivision.
-!{set:cellbgcolor:#FFFFFF} buildingInstallation «Property» 
-!<<BuildingInstallation-section,BuildingInstallation>>  
-[*]
-!Relates the installation objects to the building subdivision.
+!{set:cellbgcolor:#FFFFFF} buildingRoom  !<<BuildingRoom-section,BuildingRoom>> [*] !Relates the rooms to the building subdivision.
+!{set:cellbgcolor:#FFFFFF} buildingFurniture  !<<BuildingFurniture-section,BuildingFurniture>> [*] !Relates the furniture objects to the building subdivision.
+!{set:cellbgcolor:#FFFFFF} buildingConstructiveElement  !<<BuildingConstructiveElement-section,BuildingConstructiveElement>> [*] !Relates the constructive elements to the building subdivision.
+!{set:cellbgcolor:#FFFFFF} buildingInstallation  !<<BuildingInstallation-section,BuildingInstallation>> [*] !Relates the installation objects to the building subdivision.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<BuildingSubdivisionClassValue-section,BuildingSubdivisionClassValue>>  [0..1] !Indicates the specific type of the building subdivision.
+!{set:cellbgcolor:#FFFFFF} class  !<<BuildingSubdivisionClassValue-section,BuildingSubdivisionClassValue>>  [0..1] !Indicates the specific type of the building subdivision.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<BuildingSubdivisionFunctionValue-section,BuildingSubdivisionFunctionValue>>  [0..*] !Specifies the intended purposes of the building subdivision.
+!{set:cellbgcolor:#FFFFFF} function  !<<BuildingSubdivisionFunctionValue-section,BuildingSubdivisionFunctionValue>>  [0..*] !Specifies the intended purposes of the building subdivision.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<BuildingSubdivisionUsageValue-section,BuildingSubdivisionUsageValue>>  [0..*] !Specifies the actual uses of the building subdivision.
+!{set:cellbgcolor:#FFFFFF} usage  !<<BuildingSubdivisionUsageValue-section,BuildingSubdivisionUsageValue>>  [0..*] !Specifies the actual uses of the building subdivision.
  
-!{set:cellbgcolor:#FFFFFF} elevation «Property»  !<<Elevation-section,Elevation>>  [0..*] !Specifies qualified elevations of the building subdivision in relation to a well-defined surface which is commonly taken as origin (e.g. geoid or water level). [cf. INSPIRE]
+!{set:cellbgcolor:#FFFFFF} elevation  !<<Elevation-section,Elevation>>  [0..*] !Specifies qualified elevations of the building subdivision in relation to a well-defined surface which is commonly taken as origin (e.g. geoid or water level). [cf. INSPIRE]
  
-!{set:cellbgcolor:#FFFFFF} sortKey «Property»  !<<Real-section,Real>>  [0..1] !Defines an order among the objects that belong to the building subdivision. An example is the sorting of storeys.
+!{set:cellbgcolor:#FFFFFF} sortKey  !<<Real-section,Real>>  [0..1] !Defines an order among the objects that belong to the building subdivision. An example is the sorting of storeys.
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractBuildingSubdivision «Property»  !<<ADEOfAbstractBuildingSubdivision-section,ADEOfAbstractBuildingSubdivision>>  [0..*] !Augments AbstractBuildingSubdivision with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractBuildingSubdivision  !<<ADEOfAbstractBuildingSubdivision-section,ADEOfAbstractBuildingSubdivision>>  [0..*] !Augments AbstractBuildingSubdivision with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -135,16 +105,13 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} buildingPart «Property» 
-!<<BuildingPart-section,BuildingPart>>  
-[*]
-!Relates the building parts to the Building.
+!{set:cellbgcolor:#FFFFFF} buildingPart  !<<BuildingPart-section,BuildingPart>> [*] !Relates the building parts to the Building.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfBuilding «Property»  !<<ADEOfBuilding-section,ADEOfBuilding>>  [0..*] !Augments the Building with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfBuilding  !<<ADEOfBuilding-section,ADEOfBuilding>>  [0..*] !Augments the Building with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -161,19 +128,15 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<BuildingConstructiveElementClassValue-section,BuildingConstructiveElementClassValue>>  [0..1] !Indicates the specific type of the BuildingConstructiveElement.
+!{set:cellbgcolor:#FFFFFF} class  !<<BuildingConstructiveElementClassValue-section,BuildingConstructiveElementClassValue>>  [0..1] !Indicates the specific type of the BuildingConstructiveElement.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<BuildingConstructiveElementFunctionValue-section,BuildingConstructiveElementFunctionValue>>  [0..*] !Specifies the intended purposes of the BuildingConstructiveElement.
+!{set:cellbgcolor:#FFFFFF} function  !<<BuildingConstructiveElementFunctionValue-section,BuildingConstructiveElementFunctionValue>>  [0..*] !Specifies the intended purposes of the BuildingConstructiveElement.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<BuildingConstructiveElementUsageValue-section,BuildingConstructiveElementUsageValue>>  [0..*] !Specifies the actual uses of the BuildingConstructiveElement.
+!{set:cellbgcolor:#FFFFFF} usage  !<<BuildingConstructiveElementUsageValue-section,BuildingConstructiveElementUsageValue>>  [0..*] !Specifies the actual uses of the BuildingConstructiveElement.
  
-!{set:cellbgcolor:#FFFFFF} adeOfBuildingConstructiveElement «Property»  !<<ADEOfBuildingConstructiveElement-section,ADEOfBuildingConstructiveElement>>  [0..*] !Augments the BuildingConstructiveElement with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfBuildingConstructiveElement  !<<ADEOfBuildingConstructiveElement-section,ADEOfBuildingConstructiveElement>>  [0..*] !Augments the BuildingConstructiveElement with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -190,19 +153,15 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<BuildingFurnitureClassValue-section,BuildingFurnitureClassValue>>  [0..1] !Indicates the specific type of the BuildingFurniture.
+!{set:cellbgcolor:#FFFFFF} class  !<<BuildingFurnitureClassValue-section,BuildingFurnitureClassValue>>  [0..1] !Indicates the specific type of the BuildingFurniture.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<BuildingFurnitureFunctionValue-section,BuildingFurnitureFunctionValue>>  [0..*] !Specifies the intended purposes of the BuildingFurniture.
+!{set:cellbgcolor:#FFFFFF} function  !<<BuildingFurnitureFunctionValue-section,BuildingFurnitureFunctionValue>>  [0..*] !Specifies the intended purposes of the BuildingFurniture.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<BuildingFurnitureUsageValue-section,BuildingFurnitureUsageValue>>  [0..*] !Specifies the actual uses of the BuildingFurniture.
+!{set:cellbgcolor:#FFFFFF} usage  !<<BuildingFurnitureUsageValue-section,BuildingFurnitureUsageValue>>  [0..*] !Specifies the actual uses of the BuildingFurniture.
  
-!{set:cellbgcolor:#FFFFFF} adeOfBuildingFurniture «Property»  !<<ADEOfBuildingFurniture-section,ADEOfBuildingFurniture>>  [0..*] !Augments the BuildingFurniture with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfBuildingFurniture  !<<ADEOfBuildingFurniture-section,ADEOfBuildingFurniture>>  [0..*] !Augments the BuildingFurniture with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -219,19 +178,15 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<BuildingInstallationClassValue-section,BuildingInstallationClassValue>>  [0..1] !Indicates the specific type of the BuildingInstallation.
+!{set:cellbgcolor:#FFFFFF} class  !<<BuildingInstallationClassValue-section,BuildingInstallationClassValue>>  [0..1] !Indicates the specific type of the BuildingInstallation.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<BuildingInstallationFunctionValue-section,BuildingInstallationFunctionValue>>  [0..*] !Specifies the intended purposes of the BuildingInstallation.
+!{set:cellbgcolor:#FFFFFF} function  !<<BuildingInstallationFunctionValue-section,BuildingInstallationFunctionValue>>  [0..*] !Specifies the intended purposes of the BuildingInstallation.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<BuildingInstallationUsageValue-section,BuildingInstallationUsageValue>>  [0..*] !Specifies the actual uses of the BuildingInstallation.
+!{set:cellbgcolor:#FFFFFF} usage  !<<BuildingInstallationUsageValue-section,BuildingInstallationUsageValue>>  [0..*] !Specifies the actual uses of the BuildingInstallation.
  
-!{set:cellbgcolor:#FFFFFF} adeOfBuildingInstallation «Property»  !<<ADEOfBuildingInstallation-section,ADEOfBuildingInstallation>>  [0..*] !Augments the BuildingInstallation with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfBuildingInstallation  !<<ADEOfBuildingInstallation-section,ADEOfBuildingInstallation>>  [0..*] !Augments the BuildingInstallation with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -248,13 +203,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfBuildingPart «Property»  !<<ADEOfBuildingPart-section,ADEOfBuildingPart>>  [0..*] !Augments the BuildingPart with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfBuildingPart  !<<ADEOfBuildingPart-section,ADEOfBuildingPart>>  [0..*] !Augments the BuildingPart with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -272,32 +223,23 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} buildingInstallation «Property» 
-!<<BuildingInstallation-section,BuildingInstallation>>  
-[*]
-!Relates the installation objects to the BuildingRoom.
-!{set:cellbgcolor:#FFFFFF} buildingFurniture «Property» 
-!<<BuildingFurniture-section,BuildingFurniture>>  
-[*]
-!Relates the furniture objects to the BuildingRoom.
-!{set:cellbgcolor:#FFFFFF} boundary «Property» 
-!<<AbstractThematicSurface-section,AbstractThematicSurface>>  
-[*]
-!Relates to the surfaces that bound the BuildingRoom. This relation is inherited from the Core module.
+!{set:cellbgcolor:#FFFFFF} buildingInstallation  !<<BuildingInstallation-section,BuildingInstallation>> [*] !Relates the installation objects to the BuildingRoom.
+!{set:cellbgcolor:#FFFFFF} buildingFurniture  !<<BuildingFurniture-section,BuildingFurniture>> [*] !Relates the furniture objects to the BuildingRoom.
+!{set:cellbgcolor:#FFFFFF} boundary  !<<AbstractThematicSurface-section,AbstractThematicSurface>> [*] !Relates to the surfaces that bound the BuildingRoom. This relation is inherited from the Core module.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<BuildingRoomClassValue-section,BuildingRoomClassValue>>  [0..1] !Indicates the specific type of the BuildingRoom.
+!{set:cellbgcolor:#FFFFFF} class  !<<BuildingRoomClassValue-section,BuildingRoomClassValue>>  [0..1] !Indicates the specific type of the BuildingRoom.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<BuildingRoomFunctionValue-section,BuildingRoomFunctionValue>>  [0..*] !Specifies the intended purposes of the BuildingRoom.
+!{set:cellbgcolor:#FFFFFF} function  !<<BuildingRoomFunctionValue-section,BuildingRoomFunctionValue>>  [0..*] !Specifies the intended purposes of the BuildingRoom.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<BuildingRoomUsageValue-section,BuildingRoomUsageValue>>  [0..*] !Specifies the actual uses of the BuildingRoom.
+!{set:cellbgcolor:#FFFFFF} usage  !<<BuildingRoomUsageValue-section,BuildingRoomUsageValue>>  [0..*] !Specifies the actual uses of the BuildingRoom.
  
-!{set:cellbgcolor:#FFFFFF} roomHeight «Property»  !<<RoomHeight-section,RoomHeight>>  [0..*] !Specifies qualified heights of the BuildingRoom.
+!{set:cellbgcolor:#FFFFFF} roomHeight  !<<RoomHeight-section,RoomHeight>>  [0..*] !Specifies qualified heights of the BuildingRoom.
  
-!{set:cellbgcolor:#FFFFFF} adeOfBuildingRoom «Property»  !<<ADEOfBuildingRoom-section,ADEOfBuildingRoom>>  [0..*] !Augments the BuildingRoom with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfBuildingRoom  !<<ADEOfBuildingRoom-section,ADEOfBuildingRoom>>  [0..*] !Augments the BuildingRoom with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -315,20 +257,14 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} storey «Property» 
-!<<Storey-section,Storey>>  
-[*]
-!Relates to the storeys on which the BuildingUnit is located.
-!{set:cellbgcolor:#FFFFFF} address «Property» 
-!<<Address-section,Address>>  
-[*]
-!Relates to the addresses that are assigned to the BuildingUnit.
+!{set:cellbgcolor:#FFFFFF} storey  !<<Storey-section,Storey>> [*] !Relates to the storeys on which the BuildingUnit is located.
+!{set:cellbgcolor:#FFFFFF} address  !<<Address-section,Address>> [*] !Relates to the addresses that are assigned to the BuildingUnit.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfBuildingUnit «Property»  !<<ADEOfBuildingUnit-section,ADEOfBuildingUnit>>  [0..*] !Augments the BuildingUnit with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfBuildingUnit  !<<ADEOfBuildingUnit-section,ADEOfBuildingUnit>>  [0..*] !Augments the BuildingUnit with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -346,20 +282,14 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} boundary «Property» 
-!<<AbstractThematicSurface-section,AbstractThematicSurface>>  
-[*]
-!Relates to the surfaces that bound the Storey. This relation is inherited from the Core module.
-!{set:cellbgcolor:#FFFFFF} buildingUnit «Property» 
-!<<BuildingUnit-section,BuildingUnit>>  
-[*]
-!Relates to the building units that belong to the Storey.
+!{set:cellbgcolor:#FFFFFF} boundary  !<<AbstractThematicSurface-section,AbstractThematicSurface>> [*] !Relates to the surfaces that bound the Storey. This relation is inherited from the Core module.
+!{set:cellbgcolor:#FFFFFF} buildingUnit  !<<BuildingUnit-section,BuildingUnit>> [*] !Relates to the building units that belong to the Storey.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfStorey «Property»  !<<ADEOfStorey-section,ADEOfStorey>>  [0..*] !Augments the Storey with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfStorey  !<<ADEOfStorey-section,ADEOfStorey>>  [0..*] !Augments the Storey with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |===
@@ -373,18 +303,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfAbstractBuilding acts as a hook to define properties within an ADE that are to be added to AbstractBuilding. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfAbstractBuildingSubdivision-section]]
@@ -394,18 +315,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfAbstractBuildingSubdivision acts as a hook to define properties within an ADE that are to be added to AbstractBuildingSubdivision. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfBuilding-section]]
@@ -415,18 +327,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfBuilding acts as a hook to define properties within an ADE that are to be added to a Building. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfBuildingConstructiveElement-section]]
@@ -436,18 +339,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfBuildingConstructiveElement acts as a hook to define properties within an ADE that are to be added to a BuildingConstructiveElement. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfBuildingFurniture-section]]
@@ -457,18 +351,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfBuildingFurniture acts as a hook to define properties within an ADE that are to be added to a BuildingFurniture. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfBuildingInstallation-section]]
@@ -478,18 +363,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfBuildingInstallation acts as a hook to define properties within an ADE that are to be added to a BuildingInstallation. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfBuildingPart-section]]
@@ -499,18 +375,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfBuildingPart acts as a hook to define properties within an ADE that are to be added to a BuildingPart. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfBuildingRoom-section]]
@@ -520,18 +387,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfBuildingRoom acts as a hook to define properties within an ADE that are to be added to a BuildingRoom. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfBuildingUnit-section]]
@@ -542,18 +400,9 @@
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfBuildingUnit acts as a hook to define properties within an ADE that are to be added to a BuildingUnit.
  
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfStorey-section]]
@@ -563,18 +412,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfStorey acts as a hook to define properties within an ADE that are to be added to a Storey. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[RoomHeight-section]]
@@ -584,24 +424,20 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! The RoomHeight represents a vertical distance (measured or estimated) between a low reference and a high reference. [cf. INSPIRE] 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} highReference «Property»  !<<RoomElevationReferenceValue-section,RoomElevationReferenceValue>>  !Indicates the high point used to calculate the value of the room height.
+!{set:cellbgcolor:#FFFFFF} highReference  !<<RoomElevationReferenceValue-section,RoomElevationReferenceValue>> [1..1] !Indicates the high point used to calculate the value of the room height.
  
-!{set:cellbgcolor:#FFFFFF} lowReference «Property»  !<<RoomElevationReferenceValue-section,RoomElevationReferenceValue>>  !Indicates the low point used to calculate the value of the room height.
+!{set:cellbgcolor:#FFFFFF} lowReference  !<<RoomElevationReferenceValue-section,RoomElevationReferenceValue>> [1..1] !Indicates the low point used to calculate the value of the room height.
  
-!{set:cellbgcolor:#FFFFFF} status «Property»  !<<HeightStatusValue-section,HeightStatusValue>>  !Indicates the way the room height has been captured.
+!{set:cellbgcolor:#FFFFFF} status  !<<HeightStatusValue-section,HeightStatusValue>> [1..1] !Indicates the way the room height has been captured.
  
-!{set:cellbgcolor:#FFFFFF} value «Property»  !<<Length-section,Length>>  !Specifies the value of the room height.
+!{set:cellbgcolor:#FFFFFF} value  !<<Length-section,Length>> [1..1] !Specifies the value of the room height.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |===   

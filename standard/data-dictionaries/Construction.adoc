@@ -23,30 +23,27 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} boundary «Property» 
-!<<AbstractThematicSurface-section,AbstractThematicSurface>>  
-[*]
-!Relates to the surfaces that bound the construction. This relation is inherited from the Core module.
+!{set:cellbgcolor:#FFFFFF} boundary  !<<AbstractThematicSurface-section,AbstractThematicSurface>> [*] !Relates to the surfaces that bound the construction. This relation is inherited from the Core module.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} conditionOfConstruction «Property»  !<<ConditionOfConstructionValue-section,ConditionOfConstructionValue>>  [0..1] !Indicates the life-cycle status of the construction. [cf. INSPIRE]
+!{set:cellbgcolor:#FFFFFF} conditionOfConstruction  !<<ConditionOfConstructionValue-section,ConditionOfConstructionValue>>  [0..1] !Indicates the life-cycle status of the construction. [cf. INSPIRE]
  
-!{set:cellbgcolor:#FFFFFF} dateOfConstruction «Property»  !<<Date-section,Date>>  [0..1] !Indicates the date at which the construction was completed.
+!{set:cellbgcolor:#FFFFFF} dateOfConstruction  !<<Date-section,Date>>  [0..1] !Indicates the date at which the construction was completed.
  
-!{set:cellbgcolor:#FFFFFF} dateOfDemolition «Property»  !<<Date-section,Date>>  [0..1] !Indicates the date at which the construction was demolished.
+!{set:cellbgcolor:#FFFFFF} dateOfDemolition  !<<Date-section,Date>>  [0..1] !Indicates the date at which the construction was demolished.
  
-!{set:cellbgcolor:#FFFFFF} constructionEvent «Property»  !<<ConstructionEvent-section,ConstructionEvent>>  [0..*] !Describes specific events in the life-time of the construction.
+!{set:cellbgcolor:#FFFFFF} constructionEvent  !<<ConstructionEvent-section,ConstructionEvent>>  [0..*] !Describes specific events in the life-time of the construction.
  
-!{set:cellbgcolor:#FFFFFF} elevation «Property»  !<<Elevation-section,Elevation>>  [0..*] !Specifies qualified elevations of the construction in relation to a well-defined surface which is commonly taken as origin (e.g. geoid or water level). [cf. INSPIRE]
+!{set:cellbgcolor:#FFFFFF} elevation  !<<Elevation-section,Elevation>>  [0..*] !Specifies qualified elevations of the construction in relation to a well-defined surface which is commonly taken as origin (e.g. geoid or water level). [cf. INSPIRE]
  
-!{set:cellbgcolor:#FFFFFF} height «Property»  !<<Height-section,Height>>  [0..*] !Specifies qualified heights of the construction above ground or below ground. [cf. INSPIRE]
+!{set:cellbgcolor:#FFFFFF} height  !<<Height-section,Height>>  [0..*] !Specifies qualified heights of the construction above ground or below ground. [cf. INSPIRE]
  
-!{set:cellbgcolor:#FFFFFF} occupancy «Property»  !<<Occupancy-section,Occupancy>>  [0..*] !Provides qualified information on the residency of persons, animals, or other moveable objects in the construction.
+!{set:cellbgcolor:#FFFFFF} occupancy  !<<Occupancy-section,Occupancy>>  [0..*] !Provides qualified information on the residency of persons, animals, or other moveable objects in the construction.
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractConstruction «Property»  !<<ADEOfAbstractConstruction-section,ADEOfAbstractConstruction>>  [0..*] !Augments AbstractConstruction with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractConstruction  !<<ADEOfAbstractConstruction-section,ADEOfAbstractConstruction>>  [0..*] !Augments AbstractConstruction with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -64,16 +61,13 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} fillingSurface «Property» 
-!<<AbstractFillingSurface-section,AbstractFillingSurface>>  
-[*]
-!Relates to the surfaces that seal the openings of the construction surface.
+!{set:cellbgcolor:#FFFFFF} fillingSurface  !<<AbstractFillingSurface-section,AbstractFillingSurface>> [*] !Relates to the surfaces that seal the openings of the construction surface.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractConstructionSurface «Property»  !<<ADEOfAbstractConstructionSurface-section,ADEOfAbstractConstructionSurface>>  [0..*] !Augments AbstractConstructionSurface with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractConstructionSurface  !<<ADEOfAbstractConstructionSurface-section,ADEOfAbstractConstructionSurface>>  [0..*] !Augments AbstractConstructionSurface with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -91,22 +85,16 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} boundary «Property» 
-!<<AbstractThematicSurface-section,AbstractThematicSurface>>  
-[*]
-!Relates to the surfaces that bound the constructive element. This relation is inherited from the Core module.
-!{set:cellbgcolor:#FFFFFF} filling «Property» 
-!<<AbstractFillingElement-section,AbstractFillingElement>>  
-[*]
-!Relates to the elements that fill the opening of the constructive element.
+!{set:cellbgcolor:#FFFFFF} boundary  !<<AbstractThematicSurface-section,AbstractThematicSurface>> [*] !Relates to the surfaces that bound the constructive element. This relation is inherited from the Core module.
+!{set:cellbgcolor:#FFFFFF} filling  !<<AbstractFillingElement-section,AbstractFillingElement>> [*] !Relates to the elements that fill the opening of the constructive element.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} isStructuralElement «Property»  !<<Boolean-section,Boolean>>  [0..1] !Indicates whether the constructive element is essential from a structural point of view. A structural element cannot be omitted without collapsing of the construction. Examples are pylons and anchorages of bridges.
+!{set:cellbgcolor:#FFFFFF} isStructuralElement  !<<Boolean-section,Boolean>>  [0..1] !Indicates whether the constructive element is essential from a structural point of view. A structural element cannot be omitted without collapsing of the construction. Examples are pylons and anchorages of bridges.
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractConstructiveElement «Property»  !<<ADEOfAbstractConstructiveElement-section,ADEOfAbstractConstructiveElement>>  [0..*] !Augments AbstractConstructiveElement with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractConstructiveElement  !<<ADEOfAbstractConstructiveElement-section,ADEOfAbstractConstructiveElement>>  [0..*] !Augments AbstractConstructiveElement with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -123,13 +111,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractFillingElement «Property»  !<<ADEOfAbstractFillingElement-section,ADEOfAbstractFillingElement>>  [0..*] !Augments AbstractFillingElement with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractFillingElement  !<<ADEOfAbstractFillingElement-section,ADEOfAbstractFillingElement>>  [0..*] !Augments AbstractFillingElement with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -146,13 +130,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractFillingSurface «Property»  !<<ADEOfAbstractFillingSurface-section,ADEOfAbstractFillingSurface>>  [0..*] !Augments AbstractFillingSurface with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractFillingSurface  !<<ADEOfAbstractFillingSurface-section,ADEOfAbstractFillingSurface>>  [0..*] !Augments AbstractFillingSurface with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -169,13 +149,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractFurniture «Property»  !<<ADEOfAbstractFurniture-section,ADEOfAbstractFurniture>>  [0..*] !Augments AbstractFurniture with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractFurniture  !<<ADEOfAbstractFurniture-section,ADEOfAbstractFurniture>>  [0..*] !Augments AbstractFurniture with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -193,18 +169,15 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} boundary «Property» 
-!<<AbstractThematicSurface-section,AbstractThematicSurface>>  
-[*]
-!Relates to the surfaces that bound the installation. This relation is inherited from the Core module.
+!{set:cellbgcolor:#FFFFFF} boundary  !<<AbstractThematicSurface-section,AbstractThematicSurface>> [*] !Relates to the surfaces that bound the installation. This relation is inherited from the Core module.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} relationToConstruction «Property»  !<<RelationToConstruction-section,RelationToConstruction>>  [0..1] !Indicates whether the installation is located inside and/or outside of the construction.
+!{set:cellbgcolor:#FFFFFF} relationToConstruction  !<<RelationToConstruction-section,RelationToConstruction>>  [0..1] !Indicates whether the installation is located inside and/or outside of the construction.
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractInstallation «Property»  !<<ADEOfAbstractInstallation-section,ADEOfAbstractInstallation>>  [0..*] !Augments AbstractInstallation with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractInstallation  !<<ADEOfAbstractInstallation-section,ADEOfAbstractInstallation>>  [0..*] !Augments AbstractInstallation with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -221,13 +194,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfCeilingSurface «Property»  !<<ADEOfCeilingSurface-section,ADEOfCeilingSurface>>  [0..*] !Augments the CeilingSurface with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfCeilingSurface  !<<ADEOfCeilingSurface-section,ADEOfCeilingSurface>>  [0..*] !Augments the CeilingSurface with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -245,26 +214,20 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} address «Property» 
-!<<Address-section,Address>>  
-[*]
-!Relates to the addresses that are assigned to the Door.
-!{set:cellbgcolor:#FFFFFF} boundary «Property» 
-!<<DoorSurface-section,DoorSurface>>  
-[*]
-!Relates to the door surfaces that bound the Door. This relation is inherited from the Core module.
+!{set:cellbgcolor:#FFFFFF} address  !<<Address-section,Address>> [*] !Relates to the addresses that are assigned to the Door.
+!{set:cellbgcolor:#FFFFFF} boundary  !<<DoorSurface-section,DoorSurface>> [*] !Relates to the door surfaces that bound the Door. This relation is inherited from the Core module.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<DoorClassValue-section,DoorClassValue>>  [0..1] !Indicates the specific type of the Door.
+!{set:cellbgcolor:#FFFFFF} class  !<<DoorClassValue-section,DoorClassValue>>  [0..1] !Indicates the specific type of the Door.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<DoorFunctionValue-section,DoorFunctionValue>>  [0..*] !Specifies the intended purposes of the Door.
+!{set:cellbgcolor:#FFFFFF} function  !<<DoorFunctionValue-section,DoorFunctionValue>>  [0..*] !Specifies the intended purposes of the Door.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<DoorUsageValue-section,DoorUsageValue>>  [0..*] !Specifies the actual uses of the Door.
+!{set:cellbgcolor:#FFFFFF} usage  !<<DoorUsageValue-section,DoorUsageValue>>  [0..*] !Specifies the actual uses of the Door.
  
-!{set:cellbgcolor:#FFFFFF} adeOfDoor «Property»  !<<ADEOfDoor-section,ADEOfDoor>>  [0..*] !Augments the Door with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfDoor  !<<ADEOfDoor-section,ADEOfDoor>>  [0..*] !Augments the Door with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -282,16 +245,13 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} address «Property» 
-!<<Address-section,Address>>  
-[*]
-!Relates to the addresses that are assigned to the DoorSurface.
+!{set:cellbgcolor:#FFFFFF} address  !<<Address-section,Address>> [*] !Relates to the addresses that are assigned to the DoorSurface.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfDoorSurface «Property»  !<<ADEOfDoorSurface-section,ADEOfDoorSurface>>  [0..*] !Augments the DoorSurface with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfDoorSurface  !<<ADEOfDoorSurface-section,ADEOfDoorSurface>>  [0..*] !Augments the DoorSurface with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -308,13 +268,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfFloorSurface «Property»  !<<ADEOfFloorSurface-section,ADEOfFloorSurface>>  [0..*] !Augments the FloorSurface with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfFloorSurface  !<<ADEOfFloorSurface-section,ADEOfFloorSurface>>  [0..*] !Augments the FloorSurface with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -331,13 +287,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfGroundSurface «Property»  !<<ADEOfGroundSurface-section,ADEOfGroundSurface>>  [0..*] !Augments the GroundSurface with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfGroundSurface  !<<ADEOfGroundSurface-section,ADEOfGroundSurface>>  [0..*] !Augments the GroundSurface with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -354,13 +306,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfInteriorWallSurface «Property»  !<<ADEOfInteriorWallSurface-section,ADEOfInteriorWallSurface>>  [0..*] !Augments the InteriorWallSurface with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfInteriorWallSurface  !<<ADEOfInteriorWallSurface-section,ADEOfInteriorWallSurface>>  [0..*] !Augments the InteriorWallSurface with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -377,19 +325,15 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<OtherConstructionClassValue-section,OtherConstructionClassValue>>  [0..1] !Indicates the specific type of the OtherConstruction.
+!{set:cellbgcolor:#FFFFFF} class  !<<OtherConstructionClassValue-section,OtherConstructionClassValue>>  [0..1] !Indicates the specific type of the OtherConstruction.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<OtherConstructionFunctionValue-section,OtherConstructionFunctionValue>>  [0..*] !Specifies the intended purposes of the OtherConstruction.
+!{set:cellbgcolor:#FFFFFF} function  !<<OtherConstructionFunctionValue-section,OtherConstructionFunctionValue>>  [0..*] !Specifies the intended purposes of the OtherConstruction.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<OtherConstructionUsageValue-section,OtherConstructionUsageValue>>  [0..*] !Specifies the actual uses of the OtherConstruction.
+!{set:cellbgcolor:#FFFFFF} usage  !<<OtherConstructionUsageValue-section,OtherConstructionUsageValue>>  [0..*] !Specifies the actual uses of the OtherConstruction.
  
-!{set:cellbgcolor:#FFFFFF} adeOfOtherConstruction «Property»  !<<ADEOfOtherConstruction-section,ADEOfOtherConstruction>>  [0..*] !Augments the OtherConstruction with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfOtherConstruction  !<<ADEOfOtherConstruction-section,ADEOfOtherConstruction>>  [0..*] !Augments the OtherConstruction with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -406,13 +350,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfOuterCeilingSurface «Property»  !<<ADEOfOuterCeilingSurface-section,ADEOfOuterCeilingSurface>>  [0..*] !Augments the OuterCeilingSurface with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfOuterCeilingSurface  !<<ADEOfOuterCeilingSurface-section,ADEOfOuterCeilingSurface>>  [0..*] !Augments the OuterCeilingSurface with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -429,13 +369,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfOuterFloorSurface «Property»  !<<ADEOfOuterFloorSurface-section,ADEOfOuterFloorSurface>>  [0..*] !Augments the OuterFloorSurface with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfOuterFloorSurface  !<<ADEOfOuterFloorSurface-section,ADEOfOuterFloorSurface>>  [0..*] !Augments the OuterFloorSurface with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -452,13 +388,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfRoofSurface «Property»  !<<ADEOfRoofSurface-section,ADEOfRoofSurface>>  [0..*] !Augments the RoofSurface with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfRoofSurface  !<<ADEOfRoofSurface-section,ADEOfRoofSurface>>  [0..*] !Augments the RoofSurface with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -475,13 +407,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfWallSurface «Property»  !<<ADEOfWallSurface-section,ADEOfWallSurface>>  [0..*] !Augments the WallSurface with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfWallSurface  !<<ADEOfWallSurface-section,ADEOfWallSurface>>  [0..*] !Augments the WallSurface with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -499,22 +427,19 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} boundary «Property» 
-!<<WindowSurface-section,WindowSurface>>  
-[*]
-!Relates to the window surfaces that bound the Window. This relation is inherited from the Core module.
+!{set:cellbgcolor:#FFFFFF} boundary  !<<WindowSurface-section,WindowSurface>> [*] !Relates to the window surfaces that bound the Window. This relation is inherited from the Core module.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<WindowClassValue-section,WindowClassValue>>  [0..1] !Indicates the specific type of the Window.
+!{set:cellbgcolor:#FFFFFF} class  !<<WindowClassValue-section,WindowClassValue>>  [0..1] !Indicates the specific type of the Window.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<WindowFunctionValue-section,WindowFunctionValue>>  [0..*] !Specifies the intended purposes of the Window.
+!{set:cellbgcolor:#FFFFFF} function  !<<WindowFunctionValue-section,WindowFunctionValue>>  [0..*] !Specifies the intended purposes of the Window.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<WindowUsageValue-section,WindowUsageValue>>  [0..*] !Specifies the actual uses of the Window.
+!{set:cellbgcolor:#FFFFFF} usage  !<<WindowUsageValue-section,WindowUsageValue>>  [0..*] !Specifies the actual uses of the Window.
  
-!{set:cellbgcolor:#FFFFFF} adeOfWindow «Property»  !<<ADEOfWindow-section,ADEOfWindow>>  [0..*] !Augments the Window with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfWindow  !<<ADEOfWindow-section,ADEOfWindow>>  [0..*] !Augments the Window with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -531,13 +456,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfWindowSurface «Property»  !<<ADEOfWindowSurface-section,ADEOfWindowSurface>>  [0..*] !Augments the WindowSurface with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfWindowSurface  !<<ADEOfWindowSurface-section,ADEOfWindowSurface>>  [0..*] !Augments the WindowSurface with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |===   
@@ -551,18 +472,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfAbstractConstruction acts as a hook to define properties within an ADE that are to be added to AbstractConstruction. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfAbstractConstructionSurface-section]]
@@ -572,18 +484,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfAbstractConstructionSurface acts as a hook to define properties within an ADE that are to be added to AbstractConstructionSurface. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfAbstractConstructiveElement-section]]
@@ -593,18 +496,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfAbstractConstructiveElement acts as a hook to define properties within an ADE that are to be added to AbstractConstructiveElement. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfAbstractFillingElement-section]]
@@ -614,18 +508,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfAbstractFillingElement acts as a hook to define properties within an ADE that are to be added to AbstractFillingElement. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfAbstractFillingSurface-section]]
@@ -635,18 +520,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfAbstractFillingSurface acts as a hook to define properties within an ADE that are to be added to AbstractFillingSurface. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfAbstractFurniture-section]]
@@ -656,18 +532,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfAbstractFurniture acts as a hook to define properties within an ADE that are to be added to AbstractFurniture. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfAbstractInstallation-section]]
@@ -677,18 +544,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfAbstractInstallation acts as a hook to define properties within an ADE that are to be added to AbstractInstallation. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfCeilingSurface-section]]
@@ -698,18 +556,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfCeilingSurface acts as a hook to define properties within an ADE that are to be added to a CeilingSurface. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfDoor-section]]
@@ -719,18 +568,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfDoor acts as a hook to define properties within an ADE that are to be added to a Door. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfDoorSurface-section]]
@@ -740,18 +580,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfDoorSurface acts as a hook to define properties within an ADE that are to be added to a DoorSurface. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfFloorSurface-section]]
@@ -761,18 +592,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfFloorSurface acts as a hook to define properties within an ADE that are to be added to a FloorSurface. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfGroundSurface-section]]
@@ -782,18 +604,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfGroundSurface acts as a hook to define properties within an ADE that are to be added to a GroundSurface. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfInteriorWallSurface-section]]
@@ -803,18 +616,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfInteriorWallSurface acts as a hook to define properties within an ADE that are to be added to an InteriorWallSurface. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfOtherConstruction-section]]
@@ -824,18 +628,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfOtherConstruction acts as a hook to define properties within an ADE that are to be added to an OtherConstruction. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfOuterCeilingSurface-section]]
@@ -845,18 +640,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfOuterCeilingSurface acts as a hook to define properties within an ADE that are to be added to an OuterCeilingSurface. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfOuterFloorSurface-section]]
@@ -866,18 +652,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfOuterFloorSurface acts as a hook to define properties within an ADE that are to be added to an OuterFloorSurface. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfRoofSurface-section]]
@@ -887,18 +664,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfRoofSurface acts as a hook to define properties within an ADE that are to be added to a RoofSurface. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfWallSurface-section]]
@@ -908,18 +676,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfWallSurface acts as a hook to define properties within an ADE that are to be added to a WallSurface. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfWindow-section]]
@@ -929,18 +688,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfWindow acts as a hook to define properties within an ADE that are to be added to a Window. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfWindowSurface-section]]
@@ -950,18 +700,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfWindowSurface acts as a hook to define properties within an ADE that are to be added to a WindowSurface. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ConstructionEvent-section]]
@@ -971,22 +712,18 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A ConstructionEvent is a data type used to describe a specific event that is associated with a construction. Examples are the issuing of a building permit or the renovation of a building. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} event «Property»  !<<EventValue-section,EventValue>>  !Indicates the specific event type.
+!{set:cellbgcolor:#FFFFFF} event  !<<EventValue-section,EventValue>> [1..1] !Indicates the specific event type.
  
-!{set:cellbgcolor:#FFFFFF} dateOfEvent «Property»  !<<Date-section,Date>>  !Specifies the date at which the event took or will take place.
+!{set:cellbgcolor:#FFFFFF} dateOfEvent  !<<Date-section,Date>> [1..1] !Specifies the date at which the event took or will take place.
  
-!{set:cellbgcolor:#FFFFFF} description «Property»  !<<CharacterString-section,CharacterString>>  [0..1] !Provides additional information on the event. 
+!{set:cellbgcolor:#FFFFFF} description  !<<CharacterString-section,CharacterString>>  [0..1] !Provides additional information on the event. 
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
@@ -998,20 +735,16 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! Elevation is a data type that includes the elevation value itself and information on how this elevation was measured. [cf. INSPIRE] 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} elevationReference «Property»  !<<ElevationReferenceValue-section,ElevationReferenceValue>>  !Specifies the level from which the elevation was measured. [cf. INSPIRE]
+!{set:cellbgcolor:#FFFFFF} elevationReference  !<<ElevationReferenceValue-section,ElevationReferenceValue>> [1..1] !Specifies the level from which the elevation was measured. [cf. INSPIRE]
  
-!{set:cellbgcolor:#FFFFFF} elevationValue «Property»  !<<DirectPosition-section,DirectPosition>>  !Specifies the value of the elevation. [cf. INSPIRE]
+!{set:cellbgcolor:#FFFFFF} elevationValue  !<<DirectPosition-section,DirectPosition>> [1..1] !Specifies the value of the elevation. [cf. INSPIRE]
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
@@ -1023,24 +756,20 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! Height represents a vertical distance (measured or estimated) between a low reference and a high reference. [cf. INSPIRE] 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} highReference «Property»  !<<ElevationReferenceValue-section,ElevationReferenceValue>>  !Indicates the high point used to calculate the value of the height. [cf. INSPIRE]
+!{set:cellbgcolor:#FFFFFF} highReference  !<<ElevationReferenceValue-section,ElevationReferenceValue>> [1..1] !Indicates the high point used to calculate the value of the height. [cf. INSPIRE]
  
-!{set:cellbgcolor:#FFFFFF} lowReference «Property»  !<<ElevationReferenceValue-section,ElevationReferenceValue>>  !Indicates the low point used to calculate the value of the height. [cf. INSPIRE]
+!{set:cellbgcolor:#FFFFFF} lowReference  !<<ElevationReferenceValue-section,ElevationReferenceValue>> [1..1] !Indicates the low point used to calculate the value of the height. [cf. INSPIRE]
  
-!{set:cellbgcolor:#FFFFFF} status «Property»  !<<HeightStatusValue-section,HeightStatusValue>>  !Indicates the way the height has been captured. [cf. INSPIRE]
+!{set:cellbgcolor:#FFFFFF} status  !<<HeightStatusValue-section,HeightStatusValue>> [1..1] !Indicates the way the height has been captured. [cf. INSPIRE]
  
-!{set:cellbgcolor:#FFFFFF} value «Property»  !<<Length-section,Length>>  !Specifies the value of the height above or below ground. [cf. INSPIRE]
+!{set:cellbgcolor:#FFFFFF} value  !<<Length-section,Length>> [1..1] !Specifies the value of the height above or below ground. [cf. INSPIRE]
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |===   
@@ -1175,3 +904,7 @@ none
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «CodeList»
 !===
 |===   
+
+==== Enumerations
+
+none

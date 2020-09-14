@@ -23,32 +23,20 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} marking «Property» 
-!<<Marking-section,Marking>>  
-[*]
-!Relates to the markings that are part of the transportation space.
-!{set:cellbgcolor:#FFFFFF} trafficSpace «Property» 
-!<<TrafficSpace-section,TrafficSpace>>  
-[*]
-!Relates to the traffic spaces that are part of the transportation space.
-!{set:cellbgcolor:#FFFFFF} auxiliaryTrafficSpace «Property» 
-!<<AuxiliaryTrafficSpace-section,AuxiliaryTrafficSpace>>  
-[*]
-!Relates to the auxiliary traffic spaces that are part of the transportation space.
-!{set:cellbgcolor:#FFFFFF} hole «Property» 
-!<<Hole-section,Hole>>  
-[*]
-!Relates to the holes that are part of the transportation space.
+!{set:cellbgcolor:#FFFFFF} marking  !<<Marking-section,Marking>> [*] !Relates to the markings that are part of the transportation space.
+!{set:cellbgcolor:#FFFFFF} trafficSpace  !<<TrafficSpace-section,TrafficSpace>> [*] !Relates to the traffic spaces that are part of the transportation space.
+!{set:cellbgcolor:#FFFFFF} auxiliaryTrafficSpace  !<<AuxiliaryTrafficSpace-section,AuxiliaryTrafficSpace>> [*] !Relates to the auxiliary traffic spaces that are part of the transportation space.
+!{set:cellbgcolor:#FFFFFF} hole  !<<Hole-section,Hole>> [*] !Relates to the holes that are part of the transportation space.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} trafficDirection «Property»  !<<TrafficDirectionValue-section,TrafficDirectionValue>>  [0..1] !Indicates the direction of traffic flow relative to the corresponding linear geometry representation.
+!{set:cellbgcolor:#FFFFFF} trafficDirection  !<<TrafficDirectionValue-section,TrafficDirectionValue>>  [0..1] !Indicates the direction of traffic flow relative to the corresponding linear geometry representation.
  
-!{set:cellbgcolor:#FFFFFF} occupancy «Property»  !<<Occupancy-section,Occupancy>>  [0..*] !Provides information on the residency of persons, vehicles, or other moving features in the transportation space.
+!{set:cellbgcolor:#FFFFFF} occupancy  !<<Occupancy-section,Occupancy>>  [0..*] !Provides information on the residency of persons, vehicles, or other moving features in the transportation space.
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractTransportationSpace «Property»  !<<ADEOfAbstractTransportationSpace-section,ADEOfAbstractTransportationSpace>>  [0..*] !Augments AbstractTransportationSpace with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractTransportationSpace  !<<ADEOfAbstractTransportationSpace-section,ADEOfAbstractTransportationSpace>>  [0..*] !Augments AbstractTransportationSpace with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -65,21 +53,17 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<AuxiliaryTrafficAreaClassValue-section,AuxiliaryTrafficAreaClassValue>>  [0..1] !Indicates the specific type of the AuxiliaryTrafficArea.
+!{set:cellbgcolor:#FFFFFF} class  !<<AuxiliaryTrafficAreaClassValue-section,AuxiliaryTrafficAreaClassValue>>  [0..1] !Indicates the specific type of the AuxiliaryTrafficArea.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<AuxiliaryTrafficAreaFunctionValue-section,AuxiliaryTrafficAreaFunctionValue>>  [0..*] !Specifies the intended purposes of the AuxiliaryTrafficArea.
+!{set:cellbgcolor:#FFFFFF} function  !<<AuxiliaryTrafficAreaFunctionValue-section,AuxiliaryTrafficAreaFunctionValue>>  [0..*] !Specifies the intended purposes of the AuxiliaryTrafficArea.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<AuxiliaryTrafficAreaUsageValue-section,AuxiliaryTrafficAreaUsageValue>>  [0..*] !Specifies the actual uses of the AuxiliaryTrafficArea.
+!{set:cellbgcolor:#FFFFFF} usage  !<<AuxiliaryTrafficAreaUsageValue-section,AuxiliaryTrafficAreaUsageValue>>  [0..*] !Specifies the actual uses of the AuxiliaryTrafficArea.
  
-!{set:cellbgcolor:#FFFFFF} surfaceMaterial «Property»  !<<SurfaceMaterialValue-section,SurfaceMaterialValue>>  [0..1] !Specifies the type of pavement of the AuxiliaryTrafficArea.
+!{set:cellbgcolor:#FFFFFF} surfaceMaterial  !<<SurfaceMaterialValue-section,SurfaceMaterialValue>>  [0..1] !Specifies the type of pavement of the AuxiliaryTrafficArea.
  
-!{set:cellbgcolor:#FFFFFF} adeOfAuxiliaryTrafficArea «Property»  !<<ADEOfAuxiliaryTrafficArea-section,ADEOfAuxiliaryTrafficArea>>  [0..*] !Augments the AuxiliaryTrafficArea with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAuxiliaryTrafficArea  !<<ADEOfAuxiliaryTrafficArea-section,ADEOfAuxiliaryTrafficArea>>  [0..*] !Augments the AuxiliaryTrafficArea with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -97,24 +81,21 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} boundary «Property» 
-!<<AuxiliaryTrafficArea-section,AuxiliaryTrafficArea>>  
-[*]
-!Relates to the auxiliary traffic areas that bound the AuxiliaryTrafficSpace. This relation is inherited from the Core module.
+!{set:cellbgcolor:#FFFFFF} boundary  !<<AuxiliaryTrafficArea-section,AuxiliaryTrafficArea>> [*] !Relates to the auxiliary traffic areas that bound the AuxiliaryTrafficSpace. This relation is inherited from the Core module.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<AuxiliaryTrafficSpaceClassValue-section,AuxiliaryTrafficSpaceClassValue>>  [0..1] !Indicates the specific type of the AuxiliaryTrafficSpace.
+!{set:cellbgcolor:#FFFFFF} class  !<<AuxiliaryTrafficSpaceClassValue-section,AuxiliaryTrafficSpaceClassValue>>  [0..1] !Indicates the specific type of the AuxiliaryTrafficSpace.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<AuxiliaryTrafficSpaceFunctionValue-section,AuxiliaryTrafficSpaceFunctionValue>>  [0..*] !Specifies the intended purposes of the AuxiliaryTrafficSpace.
+!{set:cellbgcolor:#FFFFFF} function  !<<AuxiliaryTrafficSpaceFunctionValue-section,AuxiliaryTrafficSpaceFunctionValue>>  [0..*] !Specifies the intended purposes of the AuxiliaryTrafficSpace.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<AuxiliaryTrafficSpaceUsageValue-section,AuxiliaryTrafficSpaceUsageValue>>  [0..*] !Specifies the actual uses of the AuxiliaryTrafficSpace.
+!{set:cellbgcolor:#FFFFFF} usage  !<<AuxiliaryTrafficSpaceUsageValue-section,AuxiliaryTrafficSpaceUsageValue>>  [0..*] !Specifies the actual uses of the AuxiliaryTrafficSpace.
  
-!{set:cellbgcolor:#FFFFFF} granularity «Property»  !<<GranularityValue-section,GranularityValue>> [1..1] !Defines whether auxiliary traffic spaces are represented by individual ways or by individual lanes, depending on the desired level of spatial and semantic decomposition.
+!{set:cellbgcolor:#FFFFFF} granularity  !<<GranularityValue-section,GranularityValue>> [1..1] !Defines whether auxiliary traffic spaces are represented by individual ways or by individual lanes, depending on the desired level of spatial and semantic decomposition.
  
-!{set:cellbgcolor:#FFFFFF} adeOfAuxiliaryTrafficSpace «Property»  !<<ADEOfAuxiliaryTrafficSpace-section,ADEOfAuxiliaryTrafficSpace>>  [0..*] !Augments the AuxiliaryTrafficSpace with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAuxiliaryTrafficSpace  !<<ADEOfAuxiliaryTrafficSpace-section,ADEOfAuxiliaryTrafficSpace>>  [0..*] !Augments the AuxiliaryTrafficSpace with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -131,15 +112,11 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<ClearanceSpaceClassValue-section,ClearanceSpaceClassValue>>  [0..*] !Indicates the specific type of the ClearanceSpace.
+!{set:cellbgcolor:#FFFFFF} class  !<<ClearanceSpaceClassValue-section,ClearanceSpaceClassValue>>  [0..*] !Indicates the specific type of the ClearanceSpace.
  
-!{set:cellbgcolor:#FFFFFF} adeOfClearanceSpace «Property»  !<<ADEOfClearanceSpace-section,ADEOfClearanceSpace>>  [0..*] !Augments the ClearanceSpace with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfClearanceSpace  !<<ADEOfClearanceSpace-section,ADEOfClearanceSpace>>  [0..*] !Augments the ClearanceSpace with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -157,18 +134,15 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} boundary «Property» 
-!<<AbstractThematicSurface-section,AbstractThematicSurface>>  
-[*]
-!Relates to the surfaces that bound the Hole. This relation is inherited from the Core module.
+!{set:cellbgcolor:#FFFFFF} boundary  !<<AbstractThematicSurface-section,AbstractThematicSurface>> [*] !Relates to the surfaces that bound the Hole. This relation is inherited from the Core module.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<HoleClassValue-section,HoleClassValue>>  [0..1] !Indicates the specific type of the Hole.
+!{set:cellbgcolor:#FFFFFF} class  !<<HoleClassValue-section,HoleClassValue>>  [0..1] !Indicates the specific type of the Hole.
  
-!{set:cellbgcolor:#FFFFFF} adeOfHole «Property»  !<<ADEOfHole-section,ADEOfHole>>  [0..*] !Augments the Hole with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfHole  !<<ADEOfHole-section,ADEOfHole>>  [0..*] !Augments the Hole with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -185,13 +159,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfHoleSurface «Property»  !<<ADEOfHoleSurface-section,ADEOfHoleSurface>>  [0..*] !Augments the HoleSurface with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfHoleSurface  !<<ADEOfHoleSurface-section,ADEOfHoleSurface>>  [0..*] !Augments the HoleSurface with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -208,15 +178,11 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<IntersectionClassValue-section,IntersectionClassValue>>  [0..1] !Indicates the specific type of the Intersection.
+!{set:cellbgcolor:#FFFFFF} class  !<<IntersectionClassValue-section,IntersectionClassValue>>  [0..1] !Indicates the specific type of the Intersection.
  
-!{set:cellbgcolor:#FFFFFF} adeOfIntersection «Property»  !<<ADEOfIntersection-section,ADEOfIntersection>>  [0..*] !Augments the Intersection with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfIntersection  !<<ADEOfIntersection-section,ADEOfIntersection>>  [0..*] !Augments the Intersection with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -233,15 +199,11 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<MarkingClassValue-section,MarkingClassValue>>  [0..1] !Indicates the specific type of the Marking.
+!{set:cellbgcolor:#FFFFFF} class  !<<MarkingClassValue-section,MarkingClassValue>>  [0..1] !Indicates the specific type of the Marking.
  
-!{set:cellbgcolor:#FFFFFF} adeOfMarking «Property»  !<<ADEOfMarking-section,ADEOfMarking>>  [0..*] !Augments the Marking with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfMarking  !<<ADEOfMarking-section,ADEOfMarking>>  [0..*] !Augments the Marking with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -259,26 +221,20 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} intersection «Property» 
-!<<Intersection-section,Intersection>>  
-[*]
-!Relates to the intersections that are part of the Railway.
-!{set:cellbgcolor:#FFFFFF} section «Property» 
-!<<Section-section,Section>>  
-[*]
-!Relates to the sections that are part of the Railway.
+!{set:cellbgcolor:#FFFFFF} intersection  !<<Intersection-section,Intersection>> [*] !Relates to the intersections that are part of the Railway.
+!{set:cellbgcolor:#FFFFFF} section  !<<Section-section,Section>> [*] !Relates to the sections that are part of the Railway.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<RailwayClassValue-section,RailwayClassValue>>  [0..1] !Indicates the specific type of the Railway.
+!{set:cellbgcolor:#FFFFFF} class  !<<RailwayClassValue-section,RailwayClassValue>>  [0..1] !Indicates the specific type of the Railway.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<RailwayFunctionValue-section,RailwayFunctionValue>>  [0..*] !Specifies the intended purposes of the Railway.
+!{set:cellbgcolor:#FFFFFF} function  !<<RailwayFunctionValue-section,RailwayFunctionValue>>  [0..*] !Specifies the intended purposes of the Railway.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<RailwayUsageValue-section,RailwayUsageValue>>  [0..*] !Specifies the actual uses of the Railway.
+!{set:cellbgcolor:#FFFFFF} usage  !<<RailwayUsageValue-section,RailwayUsageValue>>  [0..*] !Specifies the actual uses of the Railway.
  
-!{set:cellbgcolor:#FFFFFF} adeOfRailway «Property»  !<<ADEOfRailway-section,ADEOfRailway>>  [0..*] !Augments the Railway with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfRailway  !<<ADEOfRailway-section,ADEOfRailway>>  [0..*] !Augments the Railway with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -296,26 +252,20 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} intersection «Property» 
-!<<Intersection-section,Intersection>>  
-[*]
-!Relates to the intersections that are part of the Road.
-!{set:cellbgcolor:#FFFFFF} section «Property» 
-!<<Section-section,Section>>  
-[*]
-!Relates to the sections that are part of the Road.
+!{set:cellbgcolor:#FFFFFF} intersection  !<<Intersection-section,Intersection>> [*] !Relates to the intersections that are part of the Road.
+!{set:cellbgcolor:#FFFFFF} section  !<<Section-section,Section>> [*] !Relates to the sections that are part of the Road.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<RoadClassValue-section,RoadClassValue>>  [0..1] !Indicates the specific type of the Road.
+!{set:cellbgcolor:#FFFFFF} class  !<<RoadClassValue-section,RoadClassValue>>  [0..1] !Indicates the specific type of the Road.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<RoadFunctionValue-section,RoadFunctionValue>>  [0..*] !Specifies the intended purposes of the Road.
+!{set:cellbgcolor:#FFFFFF} function  !<<RoadFunctionValue-section,RoadFunctionValue>>  [0..*] !Specifies the intended purposes of the Road.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<RoadUsageValue-section,RoadUsageValue>>  [0..*] !Specifies the actual uses of the Road.
+!{set:cellbgcolor:#FFFFFF} usage  !<<RoadUsageValue-section,RoadUsageValue>>  [0..*] !Specifies the actual uses of the Road.
  
-!{set:cellbgcolor:#FFFFFF} adeOfRoad «Property»  !<<ADEOfRoad-section,ADEOfRoad>>  [0..*] !Augments the Road with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfRoad  !<<ADEOfRoad-section,ADEOfRoad>>  [0..*] !Augments the Road with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -332,15 +282,11 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<SectionClassValue-section,SectionClassValue>>  [0..1] !Indicates the specific type of the Section.
+!{set:cellbgcolor:#FFFFFF} class  !<<SectionClassValue-section,SectionClassValue>>  [0..1] !Indicates the specific type of the Section.
  
-!{set:cellbgcolor:#FFFFFF} adeOfSection «Property»  !<<ADEOfSection-section,ADEOfSection>>  [0..*] !Augments the Section with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfSection  !<<ADEOfSection-section,ADEOfSection>>  [0..*] !Augments the Section with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -357,19 +303,15 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<SquareClassValue-section,SquareClassValue>>  [0..1] !Indicates the specific type of the Square.
+!{set:cellbgcolor:#FFFFFF} class  !<<SquareClassValue-section,SquareClassValue>>  [0..1] !Indicates the specific type of the Square.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<SquareFunctionValue-section,SquareFunctionValue>>  [0..*] !Specifies the intended purposes of the Square.
+!{set:cellbgcolor:#FFFFFF} function  !<<SquareFunctionValue-section,SquareFunctionValue>>  [0..*] !Specifies the intended purposes of the Square.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<SquareUsageValue-section,SquareUsageValue>>  [0..*] !Specifies the actual uses of the Square.
+!{set:cellbgcolor:#FFFFFF} usage  !<<SquareUsageValue-section,SquareUsageValue>>  [0..*] !Specifies the actual uses of the Square.
  
-!{set:cellbgcolor:#FFFFFF} adeOfSquare «Property»  !<<ADEOfSquare-section,ADEOfSquare>>  [0..*] !Augments the Square with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfSquare  !<<ADEOfSquare-section,ADEOfSquare>>  [0..*] !Augments the Square with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -387,26 +329,20 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} section «Property» 
-!<<Section-section,Section>>  
-[*]
-!Relates to the sections that are part of the Track.
-!{set:cellbgcolor:#FFFFFF} intersection «Property» 
-!<<Intersection-section,Intersection>>  
-[*]
-!Relates to the intersections that are part of the Track.
+!{set:cellbgcolor:#FFFFFF} section  !<<Section-section,Section>> [*] !Relates to the sections that are part of the Track.
+!{set:cellbgcolor:#FFFFFF} intersection  !<<Intersection-section,Intersection>> [*] !Relates to the intersections that are part of the Track.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<TrackClassValue-section,TrackClassValue>>  [0..1] !Indicates the specific type of the Track.
+!{set:cellbgcolor:#FFFFFF} class  !<<TrackClassValue-section,TrackClassValue>>  [0..1] !Indicates the specific type of the Track.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<TrackFunctionValue-section,TrackFunctionValue>>  [0..*] !Specifies the intended purposes of the Track.
+!{set:cellbgcolor:#FFFFFF} function  !<<TrackFunctionValue-section,TrackFunctionValue>>  [0..*] !Specifies the intended purposes of the Track.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<TrackUsageValue-section,TrackUsageValue>>  [0..*] !Specifies the actual uses of the Track.
+!{set:cellbgcolor:#FFFFFF} usage  !<<TrackUsageValue-section,TrackUsageValue>>  [0..*] !Specifies the actual uses of the Track.
  
-!{set:cellbgcolor:#FFFFFF} adeOfTrack «Property»  !<<ADEOfTrack-section,ADEOfTrack>>  [0..*] !Augments the Track with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfTrack  !<<ADEOfTrack-section,ADEOfTrack>>  [0..*] !Augments the Track with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -423,21 +359,17 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<TrafficAreaClassValue-section,TrafficAreaClassValue>>  [0..1] !Indicates the specific type of the TrafficArea.
+!{set:cellbgcolor:#FFFFFF} class  !<<TrafficAreaClassValue-section,TrafficAreaClassValue>>  [0..1] !Indicates the specific type of the TrafficArea.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<TrafficAreaFunctionValue-section,TrafficAreaFunctionValue>>  [0..*] !Specifies the intended purposes of the TrafficArea.
+!{set:cellbgcolor:#FFFFFF} function  !<<TrafficAreaFunctionValue-section,TrafficAreaFunctionValue>>  [0..*] !Specifies the intended purposes of the TrafficArea.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<TrafficAreaUsageValue-section,TrafficAreaUsageValue>>  [0..*] !Specifies the actual uses of the TrafficArea.
+!{set:cellbgcolor:#FFFFFF} usage  !<<TrafficAreaUsageValue-section,TrafficAreaUsageValue>>  [0..*] !Specifies the actual uses of the TrafficArea.
  
-!{set:cellbgcolor:#FFFFFF} surfaceMaterial «Property»  !<<SurfaceMaterialValue-section,SurfaceMaterialValue>>  [0..1] !Specifies the type of pavement of the TrafficArea.
+!{set:cellbgcolor:#FFFFFF} surfaceMaterial  !<<SurfaceMaterialValue-section,SurfaceMaterialValue>>  [0..1] !Specifies the type of pavement of the TrafficArea.
  
-!{set:cellbgcolor:#FFFFFF} adeOfTrafficArea «Property»  !<<ADEOfTrafficArea-section,ADEOfTrafficArea>>  [0..*] !Augments the TrafficArea with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfTrafficArea  !<<ADEOfTrafficArea-section,ADEOfTrafficArea>>  [0..*] !Augments the TrafficArea with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -455,40 +387,28 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} successor «Property» 
-!<<TrafficSpace-section,TrafficSpace>>  
-[*]
-!Indicates the successor(s) of the TrafficSpace. 
-!{set:cellbgcolor:#FFFFFF} clearanceSpace «Property» 
-!<<ClearanceSpace-section,ClearanceSpace>>  
-[*]
-!Relates to the clearance spaces that are part of the TrafficSpace.
-!{set:cellbgcolor:#FFFFFF} predecessor «Property» 
-!<<TrafficSpace-section,TrafficSpace>>  
-[*]
-!Indicates the predecessor(s) of the TrafficSpace. 
-!{set:cellbgcolor:#FFFFFF} boundary «Property» 
-!<<TrafficArea-section,TrafficArea>>  
-[*]
-!Relates to the traffic areas that bound the TrafficSpace. This relation is inherited from the Core module.
+!{set:cellbgcolor:#FFFFFF} successor  !<<TrafficSpace-section,TrafficSpace>> [*] !Indicates the successor(s) of the TrafficSpace. 
+!{set:cellbgcolor:#FFFFFF} clearanceSpace  !<<ClearanceSpace-section,ClearanceSpace>> [*] !Relates to the clearance spaces that are part of the TrafficSpace.
+!{set:cellbgcolor:#FFFFFF} predecessor  !<<TrafficSpace-section,TrafficSpace>> [*] !Indicates the predecessor(s) of the TrafficSpace. 
+!{set:cellbgcolor:#FFFFFF} boundary  !<<TrafficArea-section,TrafficArea>> [*] !Relates to the traffic areas that bound the TrafficSpace. This relation is inherited from the Core module.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<TrafficSpaceClassValue-section,TrafficSpaceClassValue>>  [0..1] !Indicates the specific type of the TrafficSpace.
+!{set:cellbgcolor:#FFFFFF} class  !<<TrafficSpaceClassValue-section,TrafficSpaceClassValue>>  [0..1] !Indicates the specific type of the TrafficSpace.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<TrafficSpaceFunctionValue-section,TrafficSpaceFunctionValue>>  [0..*] !Specifies the intended purposes of the TrafficSpace.
+!{set:cellbgcolor:#FFFFFF} function  !<<TrafficSpaceFunctionValue-section,TrafficSpaceFunctionValue>>  [0..*] !Specifies the intended purposes of the TrafficSpace.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<TrafficSpaceUsageValue-section,TrafficSpaceUsageValue>>  [0..*] !Specifies the actual uses of the TrafficSpace.
+!{set:cellbgcolor:#FFFFFF} usage  !<<TrafficSpaceUsageValue-section,TrafficSpaceUsageValue>>  [0..*] !Specifies the actual uses of the TrafficSpace.
  
-!{set:cellbgcolor:#FFFFFF} granularity «Property»  !<<GranularityValue-section,GranularityValue>> [1..1] !Defines whether traffic spaces are represented by individual ways or by individual lanes, depending on the desired level of spatial and semantic decomposition.
+!{set:cellbgcolor:#FFFFFF} granularity  !<<GranularityValue-section,GranularityValue>> [1..1] !Defines whether traffic spaces are represented by individual ways or by individual lanes, depending on the desired level of spatial and semantic decomposition.
  
-!{set:cellbgcolor:#FFFFFF} trafficDirection «Property»  !<<TrafficDirectionValue-section,TrafficDirectionValue>>  [0..1] !Indicates the direction of traffic flow relative to the corresponding linear geometry representation.
+!{set:cellbgcolor:#FFFFFF} trafficDirection  !<<TrafficDirectionValue-section,TrafficDirectionValue>>  [0..1] !Indicates the direction of traffic flow relative to the corresponding linear geometry representation.
  
-!{set:cellbgcolor:#FFFFFF} occupancy «Property»  !<<Occupancy-section,Occupancy>>  [0..*] !Provides information on the residency of persons, vehicles, or other moving features in the TrafficSpace.
+!{set:cellbgcolor:#FFFFFF} occupancy  !<<Occupancy-section,Occupancy>>  [0..*] !Provides information on the residency of persons, vehicles, or other moving features in the TrafficSpace.
  
-!{set:cellbgcolor:#FFFFFF} adeOfTrafficSpace «Property»  !<<ADEOfTrafficSpace-section,ADEOfTrafficSpace>>  [0..*] !Augments the TrafficSpace with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfTrafficSpace  !<<ADEOfTrafficSpace-section,ADEOfTrafficSpace>>  [0..*] !Augments the TrafficSpace with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -506,26 +426,20 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} intersection «Property» 
-!<<Intersection-section,Intersection>>  
-[*]
-!Relates to the intersections that are part of the Waterway.
-!{set:cellbgcolor:#FFFFFF} section «Property» 
-!<<Section-section,Section>>  
-[*]
-!Relates to the sections that are part of the Waterway.
+!{set:cellbgcolor:#FFFFFF} intersection  !<<Intersection-section,Intersection>> [*] !Relates to the intersections that are part of the Waterway.
+!{set:cellbgcolor:#FFFFFF} section  !<<Section-section,Section>> [*] !Relates to the sections that are part of the Waterway.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<WaterwayClassValue-section,WaterwayClassValue>>  [0..1] !Indicates the specific type of the Waterway.
+!{set:cellbgcolor:#FFFFFF} class  !<<WaterwayClassValue-section,WaterwayClassValue>>  [0..1] !Indicates the specific type of the Waterway.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<WaterwayFunctionValue-section,WaterwayFunctionValue>>  [0..*] !Specifies the intended purposes of the Waterway.
+!{set:cellbgcolor:#FFFFFF} function  !<<WaterwayFunctionValue-section,WaterwayFunctionValue>>  [0..*] !Specifies the intended purposes of the Waterway.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<WaterwayUsageValue-section,WaterwayUsageValue>>  [0..*] !Specifies the actual uses of the Waterway.
+!{set:cellbgcolor:#FFFFFF} usage  !<<WaterwayUsageValue-section,WaterwayUsageValue>>  [0..*] !Specifies the actual uses of the Waterway.
  
-!{set:cellbgcolor:#FFFFFF} adeOfWaterway «Property»  !<<ADEOfWaterway-section,ADEOfWaterway>>  [0..*] !Augments the Waterway with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfWaterway  !<<ADEOfWaterway-section,ADEOfWaterway>>  [0..*] !Augments the Waterway with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |===   
@@ -542,15 +456,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfAuxiliaryTrafficArea-section]]
@@ -563,15 +468,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfAuxiliaryTrafficSpace-section]]
@@ -584,15 +480,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfClearanceSpace-section]]
@@ -605,15 +492,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfHole-section]]
@@ -626,15 +504,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfHoleSurface-section]]
@@ -647,15 +516,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfIntersection-section]]
@@ -668,15 +528,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfMarking-section]]
@@ -689,15 +540,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfRailway-section]]
@@ -710,15 +552,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfRoad-section]]
@@ -731,15 +564,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfSection-section]]
@@ -752,15 +576,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfSquare-section]]
@@ -773,15 +588,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfTrack-section]]
@@ -794,15 +600,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfTrafficArea-section]]
@@ -815,15 +612,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfTrafficSpace-section]]
@@ -836,15 +624,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfWaterway-section]]
@@ -857,15 +636,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |===
 
 ==== Basic Types

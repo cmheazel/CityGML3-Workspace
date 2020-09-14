@@ -23,26 +23,20 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} parent «Property» 
-!<<AbstractCityObject-section,AbstractCityObject>>  
-[0..1]
-!Relates to a city object to which the CityObjectGroup belongs.
-!{set:cellbgcolor:#FFFFFF} groupMember «Property» 
-!<<AbstractCityObject-section,AbstractCityObject>>  
-[*]
-!Relates to the city objects that are part of the CityObjectGroup.
+!{set:cellbgcolor:#FFFFFF} parent  !<<AbstractCityObject-section,AbstractCityObject>> [0..1] !Relates to a city object to which the CityObjectGroup belongs.
+!{set:cellbgcolor:#FFFFFF} groupMember  !<<AbstractCityObject-section,AbstractCityObject>> [*] !Relates to the city objects that are part of the CityObjectGroup.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<CityObjectGroupClassValue-section,CityObjectGroupClassValue>>  [0..1] !Indicates the specific type of the CityObjectGroup.
+!{set:cellbgcolor:#FFFFFF} class  !<<CityObjectGroupClassValue-section,CityObjectGroupClassValue>>  [0..1] !Indicates the specific type of the CityObjectGroup.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<CityObjectGroupFunctionValue-section,CityObjectGroupFunctionValue>>  [0..*] !Specifies the intended purposes of the CityObjectGroup.
+!{set:cellbgcolor:#FFFFFF} function  !<<CityObjectGroupFunctionValue-section,CityObjectGroupFunctionValue>>  [0..*] !Specifies the intended purposes of the CityObjectGroup.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<CityObjectGroupUsageValue-section,CityObjectGroupUsageValue>>  [0..*] !Specifies the actual usages of the CityObjectGroup.
+!{set:cellbgcolor:#FFFFFF} usage  !<<CityObjectGroupUsageValue-section,CityObjectGroupUsageValue>>  [0..*] !Specifies the actual usages of the CityObjectGroup.
  
-!{set:cellbgcolor:#FFFFFF} adeOfCityObjectGroup «Property»  !<<ADEOfCityObjectGroup-section,ADEOfCityObjectGroup>>  [0..*] !Augments the CityObjectGroup with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfCityObjectGroup  !<<ADEOfCityObjectGroup-section,ADEOfCityObjectGroup>>  [0..*] !Augments the CityObjectGroup with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -59,13 +53,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} role «Property»  !<<CharacterString-section,CharacterString>>  [0..1] !Describes the role the city object plays within the CityObjectGroup.
+!{set:cellbgcolor:#FFFFFF} role  !<<CharacterString-section,CharacterString>>  [0..1] !Describes the role the city object plays within the CityObjectGroup.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |===   
@@ -79,18 +69,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfCityObjectGroup acts as a hook to define properties within an ADE that are to be added to a CityObjectGroup. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |===   
 
 ==== Basic Types

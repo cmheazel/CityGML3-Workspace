@@ -22,19 +22,15 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<CityFurnitureClassValue-section,CityFurnitureClassValue>>  [0..1] !Indicates the specific type of the CityFurniture.
+!{set:cellbgcolor:#FFFFFF} class  !<<CityFurnitureClassValue-section,CityFurnitureClassValue>>  [0..1] !Indicates the specific type of the CityFurniture.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<CityFurnitureFunctionValue-section,CityFurnitureFunctionValue>>  [0..*] !Specifies the intended purposes of the CityFurniture.
+!{set:cellbgcolor:#FFFFFF} function  !<<CityFurnitureFunctionValue-section,CityFurnitureFunctionValue>>  [0..*] !Specifies the intended purposes of the CityFurniture.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<CityFurnitureUsageValue-section,CityFurnitureUsageValue>>  [0..*] !Specifies the actual uses of the CityFurniture.
+!{set:cellbgcolor:#FFFFFF} usage  !<<CityFurnitureUsageValue-section,CityFurnitureUsageValue>>  [0..*] !Specifies the actual uses of the CityFurniture.
  
-!{set:cellbgcolor:#FFFFFF} adeOfCityFurniture «Property»  !<<ADEOfCityFurniture-section,ADEOfCityFurniture>>  [0..*] !Augments the CityFurniture with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfCityFurniture  !<<ADEOfCityFurniture-section,ADEOfCityFurniture>>  [0..*] !Augments the CityFurniture with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |===   
@@ -48,18 +44,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfCityFurniture acts as a hook to define properties within an ADE that are to be added to a CityFurniture.  
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |===
 
 ==== Basic Types
@@ -107,5 +94,5 @@ none
 
 ==== Enumerations
 
- none
+none
  

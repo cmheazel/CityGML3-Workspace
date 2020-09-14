@@ -22,19 +22,15 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<LandUseClassValue-section,LandUseClassValue>>  [0..1] !Indicates the specific type of the LandUse.
+!{set:cellbgcolor:#FFFFFF} class  !<<LandUseClassValue-section,LandUseClassValue>>  [0..1] !Indicates the specific type of the LandUse.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<LandUseFunctionValue-section,LandUseFunctionValue>>  [0..*] !Specifies the intended purposes of the LandUse.
+!{set:cellbgcolor:#FFFFFF} function  !<<LandUseFunctionValue-section,LandUseFunctionValue>>  [0..*] !Specifies the intended purposes of the LandUse.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<LandUseUsageValue-section,LandUseUsageValue>>  [0..*] !Specifies the actual uses of the LandUse.
+!{set:cellbgcolor:#FFFFFF} usage  !<<LandUseUsageValue-section,LandUseUsageValue>>  [0..*] !Specifies the actual uses of the LandUse.
  
-!{set:cellbgcolor:#FFFFFF} adeOfLandUse «Property»  !<<ADEOfLandUse-section,ADEOfLandUse>>  [0..*] !Augments the LandUse with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfLandUse  !<<ADEOfLandUse-section,ADEOfLandUse>>  [0..*] !Augments the LandUse with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |===
@@ -51,15 +47,6 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |===   
 
 ==== Basic Types

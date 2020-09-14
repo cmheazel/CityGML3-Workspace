@@ -23,40 +23,25 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} bridgeConstructiveElement «Property» 
-!<<BridgeConstructiveElement-section,BridgeConstructiveElement>>  
-[*]
-!Relates the constructive elements to the Bridge or BridgePart.
-!{set:cellbgcolor:#FFFFFF} bridgeInstallation «Property» 
-!<<BridgeInstallation-section,BridgeInstallation>>  
-[*]
-!Relates the installation objects to the Bridge or BridgePart.
-!{set:cellbgcolor:#FFFFFF} bridgeFurniture «Property» 
-!<<BridgeFurniture-section,BridgeFurniture>>  
-[*]
-!Relates the furniture objects to the Bridge or BridgePart.
-!{set:cellbgcolor:#FFFFFF} bridgeRoom «Property» 
-!<<BridgeRoom-section,BridgeRoom>>  
-[*]
-!Relates the rooms to the Bridge or BridgePart.
-!{set:cellbgcolor:#FFFFFF} address «Property» 
-!<<Address-section,Address>>  
-[*]
-!Relates the addresses to the Bridge or BridgePart.
+!{set:cellbgcolor:#FFFFFF} bridgeConstructiveElement  !<<BridgeConstructiveElement-section,BridgeConstructiveElement>> [*] !Relates the constructive elements to the Bridge or BridgePart.
+!{set:cellbgcolor:#FFFFFF} bridgeInstallation  !<<BridgeInstallation-section,BridgeInstallation>> [*] !Relates the installation objects to the Bridge or BridgePart.
+!{set:cellbgcolor:#FFFFFF} bridgeFurniture  !<<BridgeFurniture-section,BridgeFurniture>> [*] !Relates the furniture objects to the Bridge or BridgePart.
+!{set:cellbgcolor:#FFFFFF} bridgeRoom  !<<BridgeRoom-section,BridgeRoom>> [*] !Relates the rooms to the Bridge or BridgePart.
+!{set:cellbgcolor:#FFFFFF} address  !<<Address-section,Address>> [*] !Relates the addresses to the Bridge or BridgePart.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<BridgeClassValue-section,BridgeClassValue>>  [0..1] !Indicates the specific type of the Bridge or BridgePart.
+!{set:cellbgcolor:#FFFFFF} class  !<<BridgeClassValue-section,BridgeClassValue>>  [0..1] !Indicates the specific type of the Bridge or BridgePart.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<BridgeFunctionValue-section,BridgeFunctionValue>>  [0..*] !Specifies the intended purposes of the Bridge or BridgePart.
+!{set:cellbgcolor:#FFFFFF} function  !<<BridgeFunctionValue-section,BridgeFunctionValue>>  [0..*] !Specifies the intended purposes of the Bridge or BridgePart.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<BridgeUsageValue-section,BridgeUsageValue>>  [0..*] !Specifies the actual uses of the Bridge or BridgePart.
+!{set:cellbgcolor:#FFFFFF} usage  !<<BridgeUsageValue-section,BridgeUsageValue>>  [0..*] !Specifies the actual uses of the Bridge or BridgePart.
  
-!{set:cellbgcolor:#FFFFFF} isMovable «Property»  !<<Boolean-section,Boolean>>  [0..1] !Indicates whether the Bridge or BridgePart can be moved to allow for watercraft to pass.
+!{set:cellbgcolor:#FFFFFF} isMovable  !<<Boolean-section,Boolean>>  [0..1] !Indicates whether the Bridge or BridgePart can be moved to allow for watercraft to pass.
  
-!{set:cellbgcolor:#FFFFFF} adeOfAbstractBridge «Property»  !<<ADEOfAbstractBridge-section,ADEOfAbstractBridge>>  [0..*] !Augments AbstractBridge with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfAbstractBridge  !<<ADEOfAbstractBridge-section,ADEOfAbstractBridge>>  [0..*] !Augments AbstractBridge with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -74,16 +59,13 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} bridgePart «Property» 
-!<<BridgePart-section,BridgePart>>  
-[*]
-!Relates the bridge parts to the Bridge.
+!{set:cellbgcolor:#FFFFFF} bridgePart  !<<BridgePart-section,BridgePart>> [*] !Relates the bridge parts to the Bridge.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfBridge «Property»  !<<ADEOfBridge-section,ADEOfBridge>>  [0..*] !Augments the Bridge with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfBridge  !<<ADEOfBridge-section,ADEOfBridge>>  [0..*] !Augments the Bridge with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -100,19 +82,15 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<BridgeConstructiveElementClassValue-section,BridgeConstructiveElementClassValue>>  [0..1] !Indicates the specific type of the BridgeConstructiveElement.
+!{set:cellbgcolor:#FFFFFF} class  !<<BridgeConstructiveElementClassValue-section,BridgeConstructiveElementClassValue>>  [0..1] !Indicates the specific type of the BridgeConstructiveElement.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<BridgeConstructiveElementFunctionValue-section,BridgeConstructiveElementFunctionValue>>  [0..*] !Specifies the intended purposes of the BridgeConstructiveElement.
+!{set:cellbgcolor:#FFFFFF} function  !<<BridgeConstructiveElementFunctionValue-section,BridgeConstructiveElementFunctionValue>>  [0..*] !Specifies the intended purposes of the BridgeConstructiveElement.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<BridgeConstructiveElementUsageValue-section,BridgeConstructiveElementUsageValue>>  [0..*] !Specifies the actual uses of the BridgeConstructiveElement.
+!{set:cellbgcolor:#FFFFFF} usage  !<<BridgeConstructiveElementUsageValue-section,BridgeConstructiveElementUsageValue>>  [0..*] !Specifies the actual uses of the BridgeConstructiveElement.
  
-!{set:cellbgcolor:#FFFFFF} adeOfBridgeConstructiveElement «Property»  !<<ADEOfBridgeConstructiveElement-section,ADEOfBridgeConstructiveElement>>  [0..*] !Augments the BridgeConstructiveElement with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfBridgeConstructiveElement  !<<ADEOfBridgeConstructiveElement-section,ADEOfBridgeConstructiveElement>>  [0..*] !Augments the BridgeConstructiveElement with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -129,19 +107,15 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<BridgeFurnitureClassValue-section,BridgeFurnitureClassValue>>  [0..1] !Indicates the specific type of the BridgeFurniture.
+!{set:cellbgcolor:#FFFFFF} class  !<<BridgeFurnitureClassValue-section,BridgeFurnitureClassValue>>  [0..1] !Indicates the specific type of the BridgeFurniture.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<BridgeFurnitureFunctionValue-section,BridgeFurnitureFunctionValue>>  [0..*] !Specifies the intended purposes of the BridgeFurniture.
+!{set:cellbgcolor:#FFFFFF} function  !<<BridgeFurnitureFunctionValue-section,BridgeFurnitureFunctionValue>>  [0..*] !Specifies the intended purposes of the BridgeFurniture.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<BridgeFurnitureUsageValue-section,BridgeFurnitureUsageValue>>  [0..*] !Specifies the actual uses of the BridgeFurniture.
+!{set:cellbgcolor:#FFFFFF} usage  !<<BridgeFurnitureUsageValue-section,BridgeFurnitureUsageValue>>  [0..*] !Specifies the actual uses of the BridgeFurniture.
  
-!{set:cellbgcolor:#FFFFFF} adeOfBridgeFurniture «Property»  !<<ADEOfBridgeFurniture-section,ADEOfBridgeFurniture>>  [0..*] !Augments the BridgeFurniture with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfBridgeFurniture  !<<ADEOfBridgeFurniture-section,ADEOfBridgeFurniture>>  [0..*] !Augments the BridgeFurniture with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -158,19 +132,15 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<BridgeInstallationClassValue-section,BridgeInstallationClassValue>>  [0..1] !Indicates the specific type of the BridgeInstallation.
+!{set:cellbgcolor:#FFFFFF} class  !<<BridgeInstallationClassValue-section,BridgeInstallationClassValue>>  [0..1] !Indicates the specific type of the BridgeInstallation.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<BridgeInstallationFunctionValue-section,BridgeInstallationFunctionValue>>  [0..*] !Specifies the intended purposes of the BridgeInstallation.
+!{set:cellbgcolor:#FFFFFF} function  !<<BridgeInstallationFunctionValue-section,BridgeInstallationFunctionValue>>  [0..*] !Specifies the intended purposes of the BridgeInstallation.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<BridgeInstallationUsageValue-section,BridgeInstallationUsageValue>>  [0..*] !Specifies the actual uses of the BridgeInstallation.
+!{set:cellbgcolor:#FFFFFF} usage  !<<BridgeInstallationUsageValue-section,BridgeInstallationUsageValue>>  [0..*] !Specifies the actual uses of the BridgeInstallation.
  
-!{set:cellbgcolor:#FFFFFF} adeOfBridgeInstallation «Property»  !<<ADEOfBridgeInstallation-section,ADEOfBridgeInstallation>>  [0..*] !Augments the BridgeInstallation with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfBridgeInstallation  !<<ADEOfBridgeInstallation-section,ADEOfBridgeInstallation>>  [0..*] !Augments the BridgeInstallation with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -187,13 +157,9 @@
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} adeOfBridgePart «Property»  !<<ADEOfBridgePart-section,ADEOfBridgePart>>  [0..*] !Augments the BridgePart with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfBridgePart  !<<ADEOfBridgePart-section,ADEOfBridgePart>>  [0..*] !Augments the BridgePart with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |=== 
@@ -211,30 +177,21 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!{set:cellbgcolor:#FFFFFF} bridgeInstallation «Property» 
-!<<BridgeInstallation-section,BridgeInstallation>>  
-[*]
-!Relates to the installation objects to the BridgeRoom.
-!{set:cellbgcolor:#FFFFFF} boundary «Property» 
-!<<AbstractThematicSurface-section,AbstractThematicSurface>>  
-[*]
-!Relates to the surfaces that bound the BridgeRoom. This relation is inherited from the Core module.
-!{set:cellbgcolor:#FFFFFF} bridgeFurniture «Property» 
-!<<BridgeFurniture-section,BridgeFurniture>>  
-[*]
-!Relates the furniture objects to the BridgeRoom.
+!{set:cellbgcolor:#FFFFFF} bridgeInstallation  !<<BridgeInstallation-section,BridgeInstallation>> [*] !Relates to the installation objects to the BridgeRoom.
+!{set:cellbgcolor:#FFFFFF} boundary  !<<AbstractThematicSurface-section,AbstractThematicSurface>> [*] !Relates to the surfaces that bound the BridgeRoom. This relation is inherited from the Core module.
+!{set:cellbgcolor:#FFFFFF} bridgeFurniture  !<<BridgeFurniture-section,BridgeFurniture>> [*] !Relates the furniture objects to the BridgeRoom.
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} class «Property»  !<<BridgeRoomClassValue-section,BridgeRoomClassValue>>  [0..1] !Indicates the specific type of the BridgeRoom.
+!{set:cellbgcolor:#FFFFFF} class  !<<BridgeRoomClassValue-section,BridgeRoomClassValue>>  [0..1] !Indicates the specific type of the BridgeRoom.
  
-!{set:cellbgcolor:#FFFFFF} function «Property»  !<<BridgeRoomFunctionValue-section,BridgeRoomFunctionValue>>  [0..*] !Specifies the intended purposes of the BridgeRoom.
+!{set:cellbgcolor:#FFFFFF} function  !<<BridgeRoomFunctionValue-section,BridgeRoomFunctionValue>>  [0..*] !Specifies the intended purposes of the BridgeRoom.
  
-!{set:cellbgcolor:#FFFFFF} usage «Property»  !<<BridgeRoomUsageValue-section,BridgeRoomUsageValue>>  [0..*] !Specifies the actual uses of the BridgeRoom.
+!{set:cellbgcolor:#FFFFFF} usage  !<<BridgeRoomUsageValue-section,BridgeRoomUsageValue>>  [0..*] !Specifies the actual uses of the BridgeRoom.
  
-!{set:cellbgcolor:#FFFFFF} adeOfBridgeRoom «Property»  !<<ADEOfBridgeRoom-section,ADEOfBridgeRoom>>  [0..*] !Augments the BridgeRoom with properties defined in an ADE.
+!{set:cellbgcolor:#FFFFFF} adeOfBridgeRoom  !<<ADEOfBridgeRoom-section,ADEOfBridgeRoom>>  [0..*] !Augments the BridgeRoom with properties defined in an ADE.
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
 |===   
@@ -248,18 +205,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfAbstractBridge acts as a hook to define properties within an ADE that are to be added to AbstractBridge. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfBridge-section]]
@@ -269,18 +217,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfBridge acts as a hook to define properties within an ADE that are to be added to a Bridge. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfBridgeConstructiveElement-section]]
@@ -290,18 +229,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfBridgeConstructiveElement acts as a hook to define properties within an ADE that are to be added to a BridgeConstructiveElement. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfBridgeFurniture-section]]
@@ -311,18 +241,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfBridgeFurniture acts as a hook to define properties within an ADE that are to be added to a BridgeFurniture. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfBridgeInstallation-section]]
@@ -332,18 +253,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfBridgeInstallation acts as a hook to define properties within an ADE that are to be added to a BridgeInstallation. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfBridgePart-section]]
@@ -353,18 +265,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfBridgePart acts as a hook to define properties within an ADE that are to be added to a BridgePart. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[ADEOfBridgeRoom-section]]
@@ -374,18 +277,9 @@
 [cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ADEOfBridgeRoom acts as a hook to define properties within an ADE that are to be added to a BridgeRoom. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
 !===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |===   
 
 ==== Basic Types
@@ -565,5 +459,5 @@ none
 
 ==== Enumerations
 
- none
+none
  
