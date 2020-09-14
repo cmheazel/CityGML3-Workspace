@@ -48,6 +48,34 @@
 |{set:cellbgcolor:#FFFFFF} 
 |=== 
 
+[[DirectPosition-section]]
+==== Class DirectPosition <<iso19107,(ISO 19107: 2003)>>
+
+[[DirectPosition-section]]
+[cols="1a"]
+|===
+|*DirectPosition* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! DirectPosition object data types (Figure 14) hold the coordinates for a position within some coordinate reference system. The coordinate reference system is described in ISO 19111. Since DirectPositions, as data types, will often be included in larger objects (such as GM_Objects) that have references to ISO19111::SC_CRS, the DirectPosition::cordinateReferenceSystem may be left NULL if this particular DirectPosition is included in a larger object with such a reference to a SC_CRS. In this case, the DirectPosition::cordinateReferenceSystem is implicitly assumed to take on the value of the containing object's SC_CRS.  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} CRS !<<CRS-section,CRS>> [0..1]!
+!{set:cellbgcolor:#FFFFFF} CRS !<<SC_CRS-section,SC_CRS>> [0..1]!
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!{set:cellbgcolor:#FFFFFF} coordinate   !Sequence<Number> !
+!{set:cellbgcolor:#FFFFFF} dimension   !Integer  !
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
+|=== 
+
 [[GM_Object-section]]
 ==== Class GM_Object <<iso19107,(ISO 19107: 2003)>>
 
@@ -113,6 +141,8 @@ NOTE As a type, GM_Object does not have a well-defined default state or value re
 |=== 
 
 [[GM_MultiPoint-section]]
+==== Class GM_MultiPoint <<iso19107,(ISO 19107:2003)>>
+
 [cols="1a"]
 |===
 |*GM_MultiPoint* 
@@ -121,10 +151,6 @@ NOTE As a type, GM_Object does not have a well-defined default state or value re
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<GM_MultiPrimitive-section,GM_MultiPrimitive>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «type»
-!===
-|[cols="15,20,60",frame=none,grid=none,options="header"]
-!===
-!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -322,3 +348,31 @@ NOTE Other than the restriction on orientability, no other "validity" condition 
 !===
 |{set:cellbgcolor:#FFFFFF} 
 |=== 
+
+[[TM_Position-section]]
+==== Class TM_Position <<iso19108,(ISO 19108:2006)>>
+
+[cols="1a"]
+|===
+|*TM_Position* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «Union»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} anyOther   !<<TM_TemporalPosition-section,TM_TemporalPosition>>  !
+ 
+!{set:cellbgcolor:#FFFFFF} date8601   !<<Date-section,Date>>  !
+ 
+!{set:cellbgcolor:#FFFFFF} time8601   !<<Time-section,Time>>  !
+ 
+!{set:cellbgcolor:#FFFFFF} dateTime8601   !<<DateTime-section,DateTime>>  !
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
+|=== 
+
