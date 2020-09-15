@@ -7,7 +7,7 @@ The CityFurniture module provides the representation of objects or pieces of equ
 
 City furniture is represented in the UML model by the top-level feature type _CityFurniture_, which is also the only class of the CityFurniture module.
 
-The UML diagram of the CityFurniture module is depicted in <<cityfurniture-uml>>. A detailed discussion of this Requirements Class can be found in the https://github.com/opengeospatial/CityGML3-Workspace/blob/master/19-072UG.html#bp_city-furniture_section[CityGML Users Guide].
+The UML diagram of the CityFurniture module is depicted in <<cityfurniture-uml>>. A detailed discussion of this Requirements Class can be found in the link:http://docs.opengeospatial.org/DRAFTS/20-066.html[CityGML 3.0 Users Guide].
 
 [[cityfurniture-uml]]
 .UML diagram of CityGML’s City Furniture model.
@@ -18,7 +18,7 @@ The ADE data types and Code Lists provided for the CityFurniture module are illu
 
 [[cityfurniture-uml-ade-types]]
 .ADE classes and Code Lists of the CityGML CityFurniture module.
-image::figures/CityFurniture-with_codelists_and_ADE_Datatypes.png[]
+image::figures/CityFurniture-with_codelists_and_ADE_datatypes.png[]
 
 <<cityfurniture-boundaries-table>> lists the surfaces that are allowed as thematic surface boundaries of the space classes defined in the CityFurniture module:
 [[cityfurniture-boundaries-table]]
@@ -43,7 +43,7 @@ include::requirements/CityFurniture/REQ_CityFurniture_Boundaries.adoc[]
 
 The use of extension capabilities by City Furniture elements is constrained by the following requirement:
 
-include::requirements/cityfurniture/REQ_CityFurniture_ADE_Use.adoc[]
+include::requirements/CityFurniture/REQ_CityFurniture_ADE_Use.adoc[]
 
 ==== Class Definitions
 

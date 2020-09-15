@@ -45,11 +45,11 @@ a| * WaterBody::AbstractWaterBoundarySurface and all subclasses, i.e. WaterBody:
 
 The following requirement defines the rules governing implementation of the CityGML WaterBody Module as an Implementation Specification.
 
-include::requirements/WaterBody/REQ_WaterBody_Classes.adoc[]
+include::requirements/Waterbody/REQ_WaterBody_Classes.adoc[]
 
 The implementation of this Module is further constrained by the following spatial boundary requirement:
 
-include::requirements/WaterBody/REQ_WaterBody_Boundaries.adoc[]
+include::requirements/Waterbody/REQ_WaterBody_Boundaries.adoc[]
 
 The use of extension capabilities by Waterbody elements is constrained by the following requirement:
 

@@ -40,27 +40,37 @@ include::recommendations/Core/PER_Core_Classes.adoc[]
 |===
 ^|*Space class* ^|*Allowed space boundaries*
 |AbstractLogicalSpace
-a| * Core::AbstractSpaceBoundary and the subclasses Core::AbstractThematicSurface, and Core::ClosureSurface
+a| * Core::AbstractSpaceBoundary and the subclasses: +
+{nbsp}{nbsp}{nbsp}{nbsp}Core::AbstractThematicSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp}Core::ClosureSurface
    * Generics::GenericThematicSurface
    * possible classes from ADEs
 
 |AbstractOccupiedSpace
-a| * Core::AbstractSpaceBoundary and the subclasses Core::AbstractThematicSurface, Core::ClosureSurface
+a| * Core::AbstractSpaceBoundary and the subclasses: + 
+{nbsp}{nbsp}{nbsp}{nbsp}Core::AbstractThematicSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp}Core::ClosureSurface
    * Generics::GenericThematicSurface
    * possible classes from ADEs
 
 |AbstractPhysicalSpace
-a| * Core::AbstractSpaceBoundary and the subclasses Core::AbstractThematicSurface, Core::ClosureSurface
+a| * Core::AbstractSpaceBoundary and the subclasses: +
+{nbsp}{nbsp}{nbsp}{nbsp}Core::AbstractThematicSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp}Core::ClosureSurface
    * Generics::GenericThematicSurface
    * possible classes from ADEs
 
 |AbstractSpace
-a| * Core::AbstractSpaceBoundary and the subclasses Core::AbstractThematicSurface, Core::ClosureSurface
+a| * Core::AbstractSpaceBoundary and the subclasses: +
+{nbsp}{nbsp}{nbsp}{nbsp}Core::AbstractThematicSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp}Core::ClosureSurface
    * Generics::GenericThematicSurface
    * possible classes from ADEs
 
 |AbstractUnoccupiedSpace
-a| * Core::AbstractSpaceBoundary and the subclasses Core::AbstractThematicSurface, Core::ClosureSurface
+a| * Core::AbstractSpaceBoundary and the subclasses: +
+{nbsp}{nbsp}{nbsp}{nbsp}Core::AbstractThematicSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp}Core::ClosureSurface
    * Generics::GenericThematicSurface
    * possible classes from ADEs
 |===
@@ -90,16 +100,19 @@ The ISO classes explicitly used in the CityGML UML model are introduced in <<iso
 |===
 ^|*Class Name* ^|*Description*
 |<<AnyFeature-section,AnyFeature>> |A generalization of all feature types
-|<<CV_DiscreteGridPointCoverage-section,CV_DiscreteGridPointCoverage>> |undefined
+|<<CV_DiscreteGridPointCoverage-section,CV_DiscreteGridPointCoverage>> |A coverage that returns the same feature attribute values for every direct position within any object in its domain.
+|<<DirectPosition-section,Direct Position>> |The coordinates for a position within some coordinate reference system.
 |<<GM_Object-section,GM_Object>> | root class of the geometric object taxonomy.
-|<<GM_MultiCurve-section,GM_MultiCurve>> |undefined.
-|<<GM_MultiSurface-section,GM_MultiSurface>> |undefined.
+|<<GM_MultiCurve-section,GM_MultiCurve>> |An aggregate class containing only instances of GM_OrientableCurve.
+|<<GM_MultiPoint-section,GM_MultiPoint>> |undefined
+|<<GM_MultiSurface-section,GM_MultiSurface>> | An aggregate class containing only instances of GM_OrientableSurface.
 |<<GM_Point-section,GM_Point>> |The basic data type for a geometric object consisting of one and only one point.
 |<<GM_Solid-section,GM_Solid>> |The basis for 3-dimensional geometry. The extent of a solid is defined by the boundary surfaces.
 |<<GM_Surface-section,GM_Surface>> |The basis for 2-dimensional geometry.
 |<<GM_Tin-section,GM_Tin>> |A GM_TriangulatedSurface which uses the Delaunay or similar algorithm.
 |<<GM_TriangulatedSurface-section,GM_TriangulatedSurface>> |A GM_PolyhedralSurface that is composed only of triangles
 |<<SC_CRS-section,SC_CRS>> |Coordinate reference system which is usually single but may be compound.
+|<<TM_Position-section,TM_Position>> |undefined
 |===
 
 [[city-objects-section]]
@@ -210,4 +223,4 @@ include::summaries/Core-others.adoc[]
 
 ==== Additional Information
 
-A detailed discussion of the CityGML Core can be found in the link:http://docs.opengeospatial.org/DRAFTS/20-066.html[OGC CityGML 3.0 Users Guide]
+A detailed discussion of the CityGML Core can be found in the link:http://docs.opengeospatial.org/DRAFTS/20-066.html[OGC CityGML 3.0 Users Guide].

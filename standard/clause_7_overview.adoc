@@ -233,7 +233,7 @@ CityGML has been designed as a universal topographic information model that defi
 
 . <<rc_generics_section,Generic objects and attributes>>,
 . <<rc_ade_section,Application Domain Extensions>>, and
-. Code lists.
+. <<codelist-definition,Code lists>>.
 
 The concept of generic objects and attributes allows for the extension of CityGML applications during runtime, i.e. any city object may be augmented by additional attributes and relations, whose names, data types, and values can be provided by a running application without requiring to extend the CityGML conceptual schema and the respective encodings. Similarly, features not represented by the predefined thematic classes of the CityGML conceptual model may be modelled and exchanged using generic objects. The generic extensions of CityGML are provided by the _Generics_ module (cf. <<rc_generics_section>>).
 
@@ -241,4 +241,4 @@ Application Domain Extensions (ADE) specify additions to the CityGML conceptual 
 
 CityGML can also be extended with regard to the allowed values specified in code lists. Many attributes of CityGML types use a code list as data type such as, for instance, the attributes _class_, _usage_, and _function_ of city objects. A code list defines a value domain including a code for each permissible value. In contrast to fixed enumerations, modifications and extensions to the value domain become possible with code lists. The values for all code lists in CityGML have to be defined externally, for example, by adopting classifications from global, national, or industrial standards.
 
-Additional information about the extension features of CityGML can be found in the CityGML 3.0 Users Guide at https://github.com/opengeospatial/CityGML3-Workspace/blob/master/20-066.pdf[https://github.com/opengeospatial/CityGML3-Workspace/blob/master/20-066.pdf].
+Additional information about the extension features of CityGML can be found in the link:http://docs.opengeospatial.org/DRAFTS/20-066.html[CityGML 3.0 Users Guide].
