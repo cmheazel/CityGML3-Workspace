@@ -15,7 +15,7 @@
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF}   
 !<<FeatureType-section,FeatureType>>  
-[]
+[1..1]
 !
 !===
 |{set:cellbgcolor:#FFFFFF}
@@ -42,7 +42,7 @@
 !
 !{set:cellbgcolor:#FFFFFF} valueAssignment  
 !<<CV_GridValuesMatrix-section,CV_GridValuesMatrix>>  
-[1]
+[1..1]
 !
 !===
 |{set:cellbgcolor:#FFFFFF} 
@@ -59,7 +59,7 @@
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! DirectPosition object data types (Figure 14) hold the coordinates for a position within some coordinate reference system. The coordinate reference system is described in ISO 19111. Since DirectPositions, as data types, will often be included in larger objects (such as GM_Objects) that have references to ISO19111::SC_CRS, the DirectPosition::cordinateReferenceSystem may be left NULL if this particular DirectPosition is included in a larger object with such a reference to a SC_CRS. In this case, the DirectPosition::cordinateReferenceSystem is implicitly assumed to take on the value of the containing object's SC_CRS.  
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
-!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}StereoType: ! None 
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -70,8 +70,8 @@
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
-!{set:cellbgcolor:#FFFFFF} coordinate   !Sequence<Number> !
-!{set:cellbgcolor:#FFFFFF} dimension   !Integer  !
+!{set:cellbgcolor:#FFFFFF} coordinate   !Sequence<<<number-section,Number>>> [1..1]!
+!{set:cellbgcolor:#FFFFFF} dimension   !<<integer-section,Integer>> [1..1] !
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
@@ -96,16 +96,15 @@ NOTE As a type, GM_Object does not have a well-defined default state or value re
 !===
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF}   
-!<<Geometry-section,Geometry>>  
-[]
+!<<Geometry-section,Geometry>> [1..1]
 !
 !{set:cellbgcolor:#FFFFFF}   
-!<<TransfiniteSet<DirectPosition>-section,TransfiniteSet<DirectPosition>>>  
-[]
+!TransfiniteSet<<<DirectPosition-section,DirectPosition>>>  
+[1..1]
 !
 !{set:cellbgcolor:#FFFFFF}   
 !<<CV_DomainObject-section,CV_DomainObject>>  
-[]
+[1..1]
 !
 !{set:cellbgcolor:#FFFFFF} CRS  
 !<<CRS-section,CRS>>  
@@ -135,7 +134,7 @@ NOTE As a type, GM_Object does not have a well-defined default state or value re
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} length   !<<Length-section,Length>>  !
+!{set:cellbgcolor:#FFFFFF} length  !<<Length-section,Length>> [1..1] !
 !===
 |{set:cellbgcolor:#FFFFFF} 
 |=== 
@@ -156,7 +155,7 @@ NOTE As a type, GM_Object does not have a well-defined default state or value re
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} position   !<<Set<DirectPosition>-section,Set<DirectPosition>>>  !
+!{set:cellbgcolor:#FFFFFF} position   !Set<<<DirectPosition-section,DirectPosition>>> [1..1] !
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 
@@ -177,9 +176,9 @@ NOTE As a type, GM_Object does not have a well-defined default state or value re
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} area   !<<Area-section,Area>>  !
+!{set:cellbgcolor:#FFFFFF} area   !<<Area-section,Area>> [1..1] !
  
-!{set:cellbgcolor:#FFFFFF} perimeter   !<<Length-section,Length>>  !
+!{set:cellbgcolor:#FFFFFF} perimeter   !<<Length-section,Length>> [1..1] !
 !===
 |{set:cellbgcolor:#FFFFFF} 
 |===   
@@ -201,7 +200,7 @@ NOTE As a type, GM_Object does not have a well-defined default state or value re
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF}   
 !<<Point-section,Point>>  
-[]
+[1..1]
 !
 !{set:cellbgcolor:#FFFFFF} composite  
 !<<GM_CompositePoint-section,GM_CompositePoint>>  
@@ -212,7 +211,7 @@ NOTE As a type, GM_Object does not have a well-defined default state or value re
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} position   !<<DirectPosition-section,DirectPosition>>  !The attribute "position" shall be the DirectPosition of this GM_Point.
+!{set:cellbgcolor:#FFFFFF} position   !<<DirectPosition-section,DirectPosition>> [1..1]  !The attribute "position" shall be the DirectPosition of this GM_Point.
 GM_Point::position [1] : DirectPosition
 NOTE In most cases, the state of a GM_Point is fully determined by its position attribute. The only exception to this is if the GM_Point has been subclassed to provide additional non-geometric information such as symbology.
 !===
@@ -240,7 +239,7 @@ NOTE In most cases, the state of a GM_Point is fully determined by its position 
 !
 !{set:cellbgcolor:#FFFFFF}   
 !<<Solid-section,Solid>>  
-[]
+[1..1]
 !
 !===
 |{set:cellbgcolor:#FFFFFF} 
@@ -264,7 +263,7 @@ NOTE Other than the restriction on orientability, no other "validity" condition 
 !{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
 !{set:cellbgcolor:#FFFFFF}   
 !<<GM_GenericSurface-section,GM_GenericSurface>>  
-[]
+[1..1]
 !
 !{set:cellbgcolor:#FFFFFF}   
 !<<Building-section,Building>>  
@@ -290,13 +289,13 @@ NOTE Other than the restriction on orientability, no other "validity" condition 
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} breakLines   !<<Set<GM_LineString>-section,Set<GM_LineString>>>  !
+!{set:cellbgcolor:#FFFFFF} breakLines   !Set<<<GM_LineString-section,GM_LineString>>> [1..1] !
  
 !{set:cellbgcolor:#FFFFFF} controlPoint   !<<GM_Position-section,GM_Position>>  [3..*] !
  
-!{set:cellbgcolor:#FFFFFF} maxLength   !<<Distance-section,Distance>>  !
+!{set:cellbgcolor:#FFFFFF} maxLength   !<<Distance-section,Distance>> [1..1] !
  
-!{set:cellbgcolor:#FFFFFF} stopLines   !<<Set<GM_LineString>-section,Set<GM_LineString>>>  !
+!{set:cellbgcolor:#FFFFFF} stopLines   !Set<<<GM_LineString-section,GM_LineString>>> [1..1] !
 !===
 |{set:cellbgcolor:#FFFFFF} 
 |=== 
@@ -325,7 +324,7 @@ NOTE Other than the restriction on orientability, no other "validity" condition 
 |[cols="1,4",frame=none,grid=none]
 !===
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! Coordinate reference system which is usually single but may be compound. 
-!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<IO_IdentifiedObjectBase, RS_ReferenceSystem-section,IO_IdentifiedObjectBase, RS_ReferenceSystem>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<IO_IdentifiedObjectBase-section,IO_IdentifiedObjectBase>>, <<RS_ReferenceSystem-section,RS_ReferenceSystem>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «type»
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
@@ -365,13 +364,13 @@ NOTE Other than the restriction on orientability, no other "validity" condition 
 !===
 !{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
  
-!{set:cellbgcolor:#FFFFFF} anyOther   !<<TM_TemporalPosition-section,TM_TemporalPosition>>  !
+!{set:cellbgcolor:#FFFFFF} anyOther   !<<TM_TemporalPosition-section,TM_TemporalPosition>> [1..1] !
  
-!{set:cellbgcolor:#FFFFFF} date8601   !<<Date-section,Date>>  !
+!{set:cellbgcolor:#FFFFFF} date8601   !<<Date-section,Date>> [1..1] !
  
-!{set:cellbgcolor:#FFFFFF} time8601   !<<Time-section,Time>>  !
+!{set:cellbgcolor:#FFFFFF} time8601   !<<Time-section,Time>> [1..1] !
  
-!{set:cellbgcolor:#FFFFFF} dateTime8601   !<<DateTime-section,DateTime>>  !
+!{set:cellbgcolor:#FFFFFF} dateTime8601   !<<DateTime-section,DateTime>> [1..1] !
 !===
 |{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and rolls have the stereotype «Property»
 |=== 

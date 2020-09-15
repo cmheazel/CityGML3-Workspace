@@ -16,6 +16,7 @@ abstraction of real world phenomena +
 characteristic of a feature +
 {blank}[ISO 19101-1:2014, definition 4.1.12]
 
+[[FeatureType-section]]
 *feature type* +
 class of features having common characteristics +
 {blank}[ISO 19156:2011, definition 4.7]
@@ -119,3 +120,101 @@ Particular variation of a spatial object +
 * X3D {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Open Standards XML-enabled 3D file format of the Web 3D Consortium
 * XML {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Extensible Markup Language
 * xAL {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} OASIS extensible Address Language
+
+=== ISO Concepts
+
+The following concepts are referenced from the ISO classes detailed above. They are provided here to support a more complete definition of those classes.
+
+[[CV_DiscreteCoverage-section]]
+*CVF_DiscreteCoverage*
+
+[[CV_GridPointValuePair-section]]
+*CV_GridPointValuePair*
+
+[[CV_GridValuesMatrix-section]]
+*CV_GridValuesMatrix*
+
+[[CRS-section]]
+*CRS*
+
+[[Geometry-section]]
+*Geometry*
+
+[[CV_DomainObject-section]]
+*CV_DomainObject*
+
+[[Length-section]]
+*Length*
+
+[[GM_MultiPrimitive-section]]
+*GM_MultiPrimitive*
+
+[[Area-section]]
+*Area*
+
+[[GM_Primitive-section]]
+*GM_Primitive*
+
+[[Point-section]]
+*Point*
+
+[[GM_CompositePoint-section]]
+*GM_CompositePoint*
+
+[[GM_CompositeSolid-section]]
+*GM_CompositeSolid*
+
+[[Solid-section]]
+*Solid*
+
+[[GM_OrientableSurface-section]]
+*GM_OrientableSurface*
+
+[[GM_GenericSurface-section]]
+*GM_GenericSurface*
+
+[[GM_PolyhedralSurface-section]]
+*GM_PolyhedralSurface*
+
+[[GM_LineString-section]]
+*GM_LineString*
+
+[[GM_Position-section]]
+*GM_Position*
+
+[[Distance-section]]
+*Distance*
+
+[[TM_TemporalPosition-section]]
+*TM_TemporalPosition*
+
+[[Date-section]]
+*Date*
+
+[[Time-section]]
+*Time*
+
+[[DateTime-section]]
+*DateTime*
+
+[[CharacterString-section]]
+*CharacterString*
+
+[[CV_ReferenceableGrid-section]]
+*CV_ReferenceableGrid*
+
+[[CC_CoordinateOperation-section]]
+*CC_CoordinateOperation*
+
+[[IO_IdentifiedObjectBase-section]]
+*IO_IdentifiedObjectBase*
+
+[[RS_ReferenceSystem-section]]
+*RS_ReferenceSystem*
+
+[[integer-section]]
+*Integer*
+
+[[number-section]]
+*Number*
+
