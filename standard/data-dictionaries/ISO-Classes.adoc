@@ -18,7 +18,7 @@
 [1..1]
 !
 !===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and roll names have the stereotype «Property»
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and role names have the stereotype «Property»
 |=== 
 
 [[CV_DiscreteGridPointCoverage-section]]
@@ -45,7 +45,7 @@
 [1..1]
 !
 !===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and roll names have the stereotype «Property»
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and role names have the stereotype «Property»
 |=== 
 
 [[DirectPosition-section]]
@@ -72,7 +72,7 @@
 !{set:cellbgcolor:#FFFFFF} coordinate   !Sequence<<<number-section,Number>>> [1..1]!
 !{set:cellbgcolor:#FFFFFF} dimension   !<<integer-section,Integer>> [1..1] !
 !===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and roll names have the stereotype «Property»
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and role names have the stereotype «Property»
 |=== 
 
 [[GM_Object-section]]
@@ -114,7 +114,7 @@ NOTE As a type, GM_Object does not have a well-defined default state or value re
 [0..1]
 !
 !===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and roll names have the stereotype «Property»
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and role names have the stereotype «Property»
 |=== 
 
 [[GM_MultiCurve-section]]
@@ -135,7 +135,7 @@ NOTE As a type, GM_Object does not have a well-defined default state or value re
  
 !{set:cellbgcolor:#FFFFFF} length  !<<Length-section,Length>> [1..1] !
 !===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and roll names have the stereotype «Property»
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and role names have the stereotype «Property»
 |=== 
 
 [[GM_MultiPoint-section]]
@@ -156,7 +156,7 @@ NOTE As a type, GM_Object does not have a well-defined default state or value re
  
 !{set:cellbgcolor:#FFFFFF} position   !Set<<<DirectPosition-section,DirectPosition>>> [1..1] !
 !===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and roll names have the stereotype «Property»
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and role names have the stereotype «Property»
 |=== 
 
 [[GM_MultiSurface-section]]
@@ -179,7 +179,7 @@ NOTE As a type, GM_Object does not have a well-defined default state or value re
  
 !{set:cellbgcolor:#FFFFFF} perimeter   !<<Length-section,Length>> [1..1] !
 !===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and roll names have the stereotype «Property»
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and role names have the stereotype «Property»
 |=== 
 
 [[GM_Point-section]]
@@ -214,7 +214,7 @@ NOTE As a type, GM_Object does not have a well-defined default state or value re
 GM_Point::position [1] : DirectPosition
 NOTE In most cases, the state of a GM_Point is fully determined by its position attribute. The only exception to this is if the GM_Point has been subclassed to provide additional non-geometric information such as symbology.
 !===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and roll names have the stereotype «Property»
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and role names have the stereotype «Property»
 |=== 
 
 [[GM_Solid-section]]
@@ -241,7 +241,7 @@ NOTE In most cases, the state of a GM_Point is fully determined by its position 
 [1..1]
 !
 !===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and roll names have the stereotype «Property»
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and role names have the stereotype «Property»
 |=== 
 
 [[GM_Surface-section]]
@@ -269,7 +269,7 @@ NOTE Other than the restriction on orientability, no other "validity" condition 
 [0..*]
 !
 !===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and roll names have the stereotype «Property»
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and role names have the stereotype «Property»
 |=== 
 
 [[GM_Tin-section]]
@@ -296,7 +296,7 @@ NOTE Other than the restriction on orientability, no other "validity" condition 
  
 !{set:cellbgcolor:#FFFFFF} stopLines   !Set<<<GM_LineString-section,GM_LineString>>> [1..1] !
 !===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and roll names have the stereotype «Property»
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and role names have the stereotype «Property»
 |=== 
 
 [[GM_TriangulatedSurface-section]]
@@ -311,7 +311,7 @@ NOTE Other than the restriction on orientability, no other "validity" condition 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<GM_PolyhedralSurface-section,GM_PolyhedralSurface>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «type»
 !===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and roll names have the stereotype «Property»
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and role names have the stereotype «Property»
 |=== 
 
 [[SC_CRS-section]]
@@ -344,7 +344,7 @@ NOTE Other than the restriction on orientability, no other "validity" condition 
  
 !{set:cellbgcolor:#FFFFFF} scope   !<<CharacterString-section,CharacterString>>  [1..*] !Description of usage, or limitations of usage, for which this CRS is valid. If unknown, enter "not known".
 !===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and roll names have the stereotype «Property»
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and role names have the stereotype «Property»
 |=== 
 
 [[TM_Position-section]]
@@ -371,6 +371,6 @@ NOTE Other than the restriction on orientability, no other "validity" condition 
  
 !{set:cellbgcolor:#FFFFFF} dateTime8601   !<<DateTime-section,DateTime>> [1..1] !
 !===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and roll names have the stereotype «Property»
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attribute and role names have the stereotype «Property»
 |=== 
 

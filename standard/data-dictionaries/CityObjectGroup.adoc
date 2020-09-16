@@ -38,7 +38,7 @@
  
 !{set:cellbgcolor:#FFFFFF} adeOfCityObjectGroup  !<<ADEOfCityObjectGroup-section,ADEOfCityObjectGroup>>  [0..*] !Augments the CityObjectGroup with properties defined in an ADE.
 !===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |=== 
 
 [[Role-section]]
@@ -57,7 +57,7 @@
  
 !{set:cellbgcolor:#FFFFFF} role  !<<CharacterString-section,CharacterString>>  [0..1] !Describes the role the city object plays within the CityObjectGroup.
 !===
-|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and roll names have the stereotype «Property».
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
 |===   
 
 ==== Data Types
