@@ -104,7 +104,7 @@ The ISO classes explicitly used in the CityGML UML model are introduced in <<iso
 |<<DirectPosition-section,Direct Position>> |The coordinates for a position within some coordinate reference system.
 |<<GM_Object-section,GM_Object>> | root class of the geometric object taxonomy.
 |<<GM_MultiCurve-section,GM_MultiCurve>> |An aggregate class containing only instances of GM_OrientableCurve.
-|<<GM_MultiPoint-section,GM_MultiPoint>> |undefined
+|<<GM_MultiPoint-section,GM_MultiPoint>> |An aggregate class containing only points.
 |<<GM_MultiSurface-section,GM_MultiSurface>> | An aggregate class containing only instances of GM_OrientableSurface.
 |<<GM_Point-section,GM_Point>> |The basic data type for a geometric object consisting of one and only one point.
 |<<GM_Solid-section,GM_Solid>> |The basis for 3-dimensional geometry. The extent of a solid is defined by the boundary surfaces.
@@ -112,7 +112,7 @@ The ISO classes explicitly used in the CityGML UML model are introduced in <<iso
 |<<GM_Tin-section,GM_Tin>> |A GM_TriangulatedSurface which uses the Delaunay or similar algorithm.
 |<<GM_TriangulatedSurface-section,GM_TriangulatedSurface>> |A GM_PolyhedralSurface that is composed only of triangles
 |<<SC_CRS-section,SC_CRS>> |Coordinate reference system which is usually single but may be compound.
-|<<TM_Position-section,TM_Position>> |undefined
+|<<TM_Position-section,TM_Position>> |A union class that consists of one of the data types listed as its attributes.
 |===
 
 [[city-objects-section]]

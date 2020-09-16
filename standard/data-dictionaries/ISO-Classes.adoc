@@ -146,7 +146,7 @@ NOTE As a type, GM_Object does not have a well-defined default state or value re
 |*GM_MultiPoint* 
 |[cols="1,4",frame=none,grid=none]
 !===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GM_MultiPoint is an aggregate class containing only points. The association role “element” shall be the set of GM_Points contained in this GM_MultiPoint. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! <<GM_MultiPrimitive-section,GM_MultiPrimitive>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «type»
 !===
@@ -355,7 +355,7 @@ NOTE Other than the restriction on orientability, no other "validity" condition 
 |*TM_Position* 
 |[cols="1,4",frame=none,grid=none]
 !===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! TM_Position is a union class that consists of one of the data types listed as its attributes. Date, Time, and DateTime are basic data types defined in ISO/TS 19103. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass Of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}StereoType: !  «Union»
 !===
