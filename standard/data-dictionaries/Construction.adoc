@@ -907,4 +907,69 @@ none
 
 ==== Enumerations
 
-none
+[[ConditionOfConstructionValue-section]]
+[cols="1a"]
+|===
+|*ConditionOfConstructionValue*
+[cols="1,4",frame=none,grid=none]
+!===
+!Definition: ! ConditionOfConstructionValue enumerates different conditions of a construction. [cf. INSPIRE] 
+!StereoType: !  \<<Enumeration>>
+!===
+|[cols="1,4",frame=none,grid=none,options="header"]
+!===
+^!{set:cellbgcolor:#DDDDDD} *Literal value* !*Definition*
+ 
+^!{set:cellbgcolor:#FFFFFF} declined  !Indicates that the construction cannot be used under normal conditions, though its main elements (walls, roof) are still present. [cf. INSPIRE]
+ 
+^!{set:cellbgcolor:#FFFFFF} demolished  !Indicates that the construction has been demolished. There are no more visible remains. [cf. INSPIRE]
+ 
+^!{set:cellbgcolor:#FFFFFF} functional  !Indicates that the construction is functional. [cf. INSPIRE]
+ 
+^!{set:cellbgcolor:#FFFFFF} projected  !Indicates that the construction is being designed. Construction works have not yet started. [cf. INSPIRE]
+ 
+^!{set:cellbgcolor:#FFFFFF} ruin  !Indicates that the construction has been partly demolished and some main elements (roof, walls) have been destroyed. There are some visible remains of the construction. [cf. INSPIRE]
+ 
+^!{set:cellbgcolor:#FFFFFF} underConstruction  !Indicates that the construction is under construction and not yet functional. This applies only to the initial construction works of the construction and not to maintenance work. [cf. INSPIRE]
+!===
+|=== 
+
+[[HeightStatusValue-section]]
+[cols="1a"]
+|===
+|*HeightStatusValue*
+[cols="1,4",frame=none,grid=none]
+!===
+!Definition: ! HeightStatusValue enumerates the different methods used to capture a height. [cf. INSPIRE] 
+!StereoType: !  \<<Enumeration>>
+!===
+|[cols="1,4",frame=none,grid=none,options="header"]
+!===
+^!{set:cellbgcolor:#DDDDDD} *Literal value* !*Definition*
+ 
+^!{set:cellbgcolor:#FFFFFF} estimated  !Indicates that the height has been estimated and not measured. [cf. INSPIRE]
+ 
+^!{set:cellbgcolor:#FFFFFF} measured  !Indicates that the height has been (directly or indirectly) measured. [cf. INSPIRE]
+!===
+|=== 
+
+[[RelationToConstruction-section]]
+[cols="1a"]
+|===
+|*RelationToConstruction*
+[cols="1,4",frame=none,grid=none]
+!===
+!Definition: ! RelationToConstruction is an enumeration used to describe whether an installation is positioned inside and/or outside of a construction. 
+!StereoType: !  \<<Enumeration>>
+!===
+|[cols="1,4",frame=none,grid=none,options="header"]
+!===
+^!{set:cellbgcolor:#DDDDDD} *Literal value* !*Definition*
+ 
+^!{set:cellbgcolor:#FFFFFF} inside  !Indicates that the installation is positioned inside of the construction.
+ 
+^!{set:cellbgcolor:#FFFFFF} outside  !Indicates that the installation is positioned outside of the construction.
+ 
+^!{set:cellbgcolor:#FFFFFF} bothInsideAndOutside  !Indicates that the installation is positioned inside as well as outside of the construction.
+!===
+|===   
