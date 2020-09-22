@@ -18,7 +18,13 @@ PKG="Appearance Bridge Building CityFurniture CityObjectGroup Construction Core 
 
 for I in $PKG
 do
-cat ./Templates/ATS_Package_Classes_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$I/g | sed s/"REFF"/"<<"$I/ >../standard/abstract_tests/$I/ATS_`echo $I`_Classes.adoc
+
+J=`echo $I | tr [:upper:] [:lower:]`
+
+cat ./Templates/ATS_Package_Classes_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$I/g | sed s/"LPACK"/$J/g | sed s/"REFF"/"<<"$I/ >../standard/abstract_tests/$I/ATS_`echo $I`_Classes.adoc
+
+cat ./Templates/ATS_Package_Boundaries_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$I/g | sed s/"LPACK"/$J/g | sed s/"REFF"/"<<"$I/ >../standard/abstract_tests/$I/ATS_`echo $I`_Boundaries.adoc
+
+cat ./Templates/ATS_Package_ADE_Use_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$I/g | sed s/"LPACK"/$J/g | sed s/"REFF"/"<<"$I/ >../standard/abstract_tests/$I/ATS_`echo $I`_ADE_Use.adoc
+
 done
-
-

@@ -1,9 +1,9 @@
-[[ats_Core_ade_uml]]
+[[ats_ade_uml]]
 [width="90%",cols="2,6a"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/Core/ade/uml* 
-^|Test Purpose |To validate that Application Domain Extension s (ADE) to the CityGML Conceptual Model is modeled correctly in UML.
-^|Requirement |<<req_Core_ade_uml,/req/Core/ade/uml>>
+^|*Abstract Test {counter:ats-id}* |*/ats/ade/uml* 
+^|Test Purpose |To validate that Application Domain Extensions (ADE) to the CityGML Conceptual Model are modeled correctly in UML.
+^|Requirement |<<req_ade_uml,/req/ade/uml>>
 ^|Test Method |Manual Inspection
 2+|An ADE is defined as conceptual model in UML in accordance with the conceptual modelling framework of the ISO 19100 series of International Standards
 ^|A |Validate that the ADE UML model adheres to the General Feature Model as specified in ISO 19109.

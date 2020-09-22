@@ -1,9 +1,9 @@
-[[ats_Core_ade_elements]]
+[[ats_ade_elements]]
 [width="90%",cols="2,6a"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/Core/ade/elements* 
+^|*Abstract Test {counter:ats-id}* |*/ats/ade/elements* 
 ^|Test Purpose |To validate that Application Domain Extension s (ADE) to the CityGML Conceptual Model are implemented correctly.
-^|Requirement |<<req_Core_ade_elements,/req/Core/ade/elements>>
+^|Requirement |<<req_ade_elements,/req/ade/elements>>
 ^|Test Method |Manual Inspection
 2+|For each new UML class defined by an ADE:
 ^|A |Validate that every Feature Type class in an ADE is derived either directly or indirectly from the CityGML root Feature Type _core:AbstractFeature_ or a subclass thereof.

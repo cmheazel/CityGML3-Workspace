@@ -9,20 +9,22 @@
 #
 # Created by Chuck Heazel
 # January, 2020
-# 
-
+ 
 # First define the variables
 # The package names
-
+#
 PKG="Appearance Bridge Building CityFurniture CityObjectGroup Construction Core Dynamizer Generics LandUse PointCloud Relief Transportation Tunnel Vegetation Versioning Waterbody"
 
-for I in $PKG
+for I in $PKG 
 do
+
 J=`echo $I | tr [:upper:] [:lower:]`
+
 cat ./Templates/REQ_Package_Classes_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$I/ | sed s/"LPACK"/$J/g | sed s/"REFF"/"<<"$I/ >../standard/requirements/$I/REQ_`echo $I`_Classes.adoc
 
 cat ./Templates/REQ_Package_Boundaries_Template.adoc | sed s/"PACKAGE"/$I/g | sed s/"LPACK"/$J/g >../standard/requirements/$I/REQ_`echo $I`_Boundaries.adoc
 
-done
+cat ./Templates/REQ_Package_ADE_Use_Template.adoc | sed s/"PACKAGE"/$I/g | sed s/"LPACK"/$J/g >../standard/requirements/$I/REQ_`echo $I`_ADE_Use.adoc
 
+done
 

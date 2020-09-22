@@ -1,4 +1,4 @@
-FILES=`/bin/ls edit-dd.sh`
+FILES=`/bin/ls *gen.sh`
 
 for I in $FILES
 do
