@@ -17,13 +17,13 @@ The UML diagram of the Tunnel module is depicted in <<tunnel-uml>>. The Tunnel m
 
 image::figures/Tunnel.png[]
 
-The ADE data types provided for the Tunnel module are illustrated in the figure <<tunnel-uml-ade-types>>.
+The ADE data types provided for the Tunnel module are illustrated in <<tunnel-uml-ade-types>>.
 
 [[tunnel-uml-ade-types]]
 .ADE classes of the CityGML Tunnel module.
 image::figures/Tunnel-ADE_Datatypes.png[]
 
-The Code Lists provided for the Tunnel module are illustrated in the figure <<tunnel-uml-codelists>>.
+The Code Lists provided for the Tunnel module are illustrated in <<tunnel-uml-codelists>>.
 
 [[tunnel-uml-codelists]]
 .Codelists from the CityGML Tunnel module.
@@ -37,56 +37,56 @@ image::figures/Tunnel-Codelists.png[]
 |===
 ^|*Space class* ^|*Allowed space boundaries*
 |AbstractTunnel
-a| * Construction::AbstractConstructionSurface and all subclasses, i.e. + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::GroundSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::RoofSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::CeilingSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterCeilingSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::FloorSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterFloorSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::WallSurface, + 
+a| * Construction::AbstractConstructionSurface and all subclasses, i.e. +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::GroundSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::RoofSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::CeilingSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterCeilingSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::FloorSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterFloorSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::WallSurface, +
 {nbsp}{nbsp}{nbsp}{nbsp} Construction::InteriorWallSurface
    * Core::ClosureSurface
    * Generics::GenericThematicSurface
    * possible classes from ADEs
 
 |HollowSpace
-a| * Construction::AbstractConstructionSurface and all subclasses, i.e. + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::GroundSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::RoofSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::CeilingSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterCeilingSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::FloorSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterFloorSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::WallSurface, + 
+a| * Construction::AbstractConstructionSurface and all subclasses, i.e. +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::GroundSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::RoofSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::CeilingSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterCeilingSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::FloorSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterFloorSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::WallSurface, +
 {nbsp}{nbsp}{nbsp}{nbsp} Construction::InteriorWallSurface
    * Core::ClosureSurface
    * Generics::GenericThematicSurface
    * possible classes from ADEs
 
 |Tunnel
-a| * Construction::AbstractConstructionSurface and all subclasses, i.e. + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::GroundSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::RoofSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::CeilingSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterCeilingSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::FloorSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterFloorSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::WallSurface, + 
+a| * Construction::AbstractConstructionSurface and all subclasses, i.e. +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::GroundSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::RoofSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::CeilingSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterCeilingSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::FloorSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterFloorSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::WallSurface, +
 {nbsp}{nbsp}{nbsp}{nbsp} Construction::InteriorWallSurface
    * Core::ClosureSurface
    * Generics::GenericThematicSurface
    * possible classes from ADEs
 
 |TunnelConstructiveElement
-a| * Construction::AbstractConstructionSurface and all subclasses, i.e. + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::GroundSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::RoofSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::CeilingSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterCeilingSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::FloorSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterFloorSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::WallSurface, + 
+a| * Construction::AbstractConstructionSurface and all subclasses, i.e. +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::GroundSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::RoofSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::CeilingSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterCeilingSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::FloorSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterFloorSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::WallSurface, +
 {nbsp}{nbsp}{nbsp}{nbsp} Construction::InteriorWallSurface
    * Core::ClosureSurface
    * Generics::GenericThematicSurface
@@ -96,28 +96,28 @@ a| * Construction::AbstractConstructionSurface and all subclasses, i.e. +
 a|No boundaries allowed
 
 |TunnelInstallation
-a| * Construction::AbstractConstructionSurface and all subclasses, i.e. + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::GroundSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::RoofSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::CeilingSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterCeilingSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::FloorSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterFloorSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::WallSurface, + 
+a| * Construction::AbstractConstructionSurface and all subclasses, i.e. +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::GroundSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::RoofSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::CeilingSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterCeilingSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::FloorSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterFloorSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::WallSurface, +
 {nbsp}{nbsp}{nbsp}{nbsp} Construction::InteriorWallSurface
    * Core::ClosureSurface
    * Generics::GenericThematicSurface
    * possible classes from ADEs
 
 |TunnelPart
-a| * Construction::AbstractConstructionSurface and all subclasses, i.e. + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::GroundSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::RoofSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::CeilingSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterCeilingSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::FloorSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterFloorSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::WallSurface, + 
+a| * Construction::AbstractConstructionSurface and all subclasses, i.e. +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::GroundSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::RoofSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::CeilingSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterCeilingSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::FloorSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterFloorSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::WallSurface, +
 {nbsp}{nbsp}{nbsp}{nbsp} Construction::InteriorWallSurface
    * Core::ClosureSurface
    * Generics::GenericThematicSurface

@@ -16,13 +16,13 @@ The UML diagram of the WaterBody module is depicted in <<waterbody-uml>>. A deta
 
 image::figures/WaterBody.png[]
 
-The ADE data types provided for the Water Body module are illustrated in the figure <<waterbody-uml-ade-types>>.
+The ADE data types provided for the Water Body module are illustrated in <<waterbody-uml-ade-types>>.
 
 [[waterbody-uml-ade-types]]
 .ADE classes of the CityGML Water Body module.
 image::figures/WaterBody-ADE_Datatypes.png[]
 
-The Code Lists provided for the Water Body module are illustrated in the figure <<waterbody-uml-codelists>>.
+The Code Lists provided for the Water Body module are illustrated in <<waterbody-uml-codelists>>.
 
 [[waterbody-uml-codelists]]
 .Codelists from the CityGML Water Body module.
@@ -36,8 +36,8 @@ image::figures/WaterBody-Codelists.png[]
 |===
 ^|*Space class* ^|*Allowed space boundaries*
 |WaterBody
-a| * WaterBody::AbstractWaterBoundarySurface and all subclasses, i.e. + 
-{nbsp}{nbsp}{nbsp}{nbsp} WaterBody::WaterGroundSurface, + 
+a| * WaterBody::AbstractWaterBoundarySurface and all subclasses, i.e. +
+{nbsp}{nbsp}{nbsp}{nbsp} WaterBody::WaterGroundSurface, +
 {nbsp}{nbsp}{nbsp}{nbsp} WaterBody::WaterSurface
    * Core::ClosureSurface
    * Generics::GenericThematicSurface

@@ -17,13 +17,13 @@ The UML diagram of the Bridge module is depicted in <<bridge-uml>>. The Bridge m
 
 image::figures/Bridge.png[]
 
-The ADE data types provided for the Bridge module are illustrated in the figure <<bridge-uml-ade-types>>.
+The ADE data types provided for the Bridge module are illustrated in <<bridge-uml-ade-types>>.
 
 [[bridge-uml-ade-types]]
 .ADE classes of the CityGML Bridge module.
 image::figures/Bridge-ADE_Datatypes.png[]
 
-The Code Lists provided for the Bridge module are illustrated in the figure <<bridge-uml-codelists>>.
+The Code Lists provided for the Bridge module are illustrated in <<bridge-uml-codelists>>.
 
 [[bridge-uml-codelists]]
 .Codelists from the CityGML Bridge module.
@@ -37,42 +37,42 @@ image::figures/Bridge-Codelists.png[]
 |===
 ^|*Space class* ^|*Allowed space boundaries*
 |AbstractBridge
-a| * Construction::AbstractConstructionSurface and all subclasses, i.e. + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::GroundSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::RoofSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::CeilingSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterCeilingSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::FloorSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterFloorSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::WallSurface, + 
+a| * Construction::AbstractConstructionSurface and all subclasses, i.e. +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::GroundSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::RoofSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::CeilingSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterCeilingSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::FloorSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterFloorSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::WallSurface, +
 {nbsp}{nbsp}{nbsp}{nbsp} Construction::InteriorWallSurface
    * Core::ClosureSurface
    * Generics::GenericThematicSurface
    * possible classes from ADEs
 
 |Bridge
-a| * Construction::AbstractConstructionSurface and all subclasses, i.e. + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::GroundSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::RoofSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::CeilingSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterCeilingSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::FloorSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterFloorSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::WallSurface, + 
+a| * Construction::AbstractConstructionSurface and all subclasses, i.e. +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::GroundSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::RoofSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::CeilingSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterCeilingSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::FloorSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterFloorSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::WallSurface, +
 {nbsp}{nbsp}{nbsp}{nbsp} Construction::InteriorWallSurface
    * Core::ClosureSurface
    * Generics::GenericThematicSurface
    * possible classes from ADEs
 
 |BridgeConstructiveElement
-a| * Construction::AbstractConstructionSurface and all subclasses, i.e. + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::GroundSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::RoofSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::CeilingSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterCeilingSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::FloorSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterFloorSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::WallSurface, + 
+a| * Construction::AbstractConstructionSurface and all subclasses, i.e. +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::GroundSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::RoofSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::CeilingSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterCeilingSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::FloorSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterFloorSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::WallSurface, +
 {nbsp}{nbsp}{nbsp}{nbsp} Construction::InteriorWallSurface
    * Core::ClosureSurface
    * Generics::GenericThematicSurface
@@ -82,42 +82,42 @@ a| * Construction::AbstractConstructionSurface and all subclasses, i.e. +
 a|No boundaries allowed
 
 |BridgeInstallation
-a| * Construction::AbstractConstructionSurface and all subclasses, i.e. + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::GroundSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::RoofSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::CeilingSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterCeilingSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::FloorSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterFloorSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::WallSurface, + 
+a| * Construction::AbstractConstructionSurface and all subclasses, i.e. +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::GroundSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::RoofSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::CeilingSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterCeilingSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::FloorSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterFloorSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::WallSurface, +
 {nbsp}{nbsp}{nbsp}{nbsp} Construction::InteriorWallSurface
    * Core::ClosureSurface
    * Generics::GenericThematicSurface
    * possible classes from ADEs
 
 |BridgePart
-a| * Construction::AbstractConstructionSurface and all subclasses, i.e. + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::GroundSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::RoofSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::CeilingSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterCeilingSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::FloorSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterFloorSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::WallSurface, + 
+a| * Construction::AbstractConstructionSurface and all subclasses, i.e. +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::GroundSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::RoofSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::CeilingSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterCeilingSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::FloorSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterFloorSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::WallSurface, +
 {nbsp}{nbsp}{nbsp}{nbsp} Construction::InteriorWallSurface
    * Core::ClosureSurface
    * Generics::GenericThematicSurface
    * possible classes from ADEs
 
 |BridgeRoom
-a| * Construction::AbstractConstructionSurface and all subclasses, i.e. + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::GroundSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::RoofSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::CeilingSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterCeilingSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::FloorSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterFloorSurface, + 
-{nbsp}{nbsp}{nbsp}{nbsp} Construction::WallSurface, + 
+a| * Construction::AbstractConstructionSurface and all subclasses, i.e. +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::GroundSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::RoofSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::CeilingSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterCeilingSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::FloorSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::OuterFloorSurface, +
+{nbsp}{nbsp}{nbsp}{nbsp} Construction::WallSurface, +
 {nbsp}{nbsp}{nbsp}{nbsp} Construction::InteriorWallSurface
    * Core::ClosureSurface
    * Generics::GenericThematicSurface

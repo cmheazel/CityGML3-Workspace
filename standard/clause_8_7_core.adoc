@@ -29,7 +29,7 @@ While the CityGML Conceptual Model builds on ISO Standards, there are some restr
 
 include::requirements/Core/REQ_Core_ISO.adoc[]
 
-An implementing technology may not be able to support all of the concepts defined in the CityGML Conceptual Model. Alternately, some concepts from the Conceptual Model may be inappropriate for the application domain for which the Implemenation Specification was developed. In those cases, elements of the Conceptual Model may be mapped to null elements in the Implementation Specification.
+An implementing technology may not be able to support all of the concepts defined in the CityGML Conceptual Model. Alternately, some concepts from the Conceptual Model may be inappropriate for the application domain for which the Implementation Specification was developed. In those cases, elements of the Conceptual Model may be mapped to null elements in the Implementation Specification.
 
 include::recommendations/Core/PER_Core_Classes.adoc[]
 
@@ -48,7 +48,7 @@ a| * Core::AbstractSpaceBoundary and the subclasses: +
    * possible classes from ADEs
 
 |AbstractOccupiedSpace
-a| * Core::AbstractSpaceBoundary and the subclasses: + 
+a| * Core::AbstractSpaceBoundary and the subclasses: +
 {nbsp}{nbsp}{nbsp}{nbsp}Core::AbstractThematicSurface, +
 {nbsp}{nbsp}{nbsp}{nbsp}Core::ClosureSurface
    * Generics::GenericThematicSurface
@@ -177,7 +177,7 @@ The thematic classes, such as building, tunnel, road, land use, water body, or c
 The UML diagram of the Geometry and LoD concept classes is depicted in <<core-geometry>>.
 
 [[core-geometry]]
-.UML Geometry and LoD Concepts
+.UML Geometry and LOD Concepts
 image::figures/Core/Core-Geometry_and_LoD_concept.png[]
 
 The Geometry and LOD Concept classes defined in the CityGML UML model are introduced in <<Core-geometry-class-table>>. More details about these classes can be found in the Data Dictionary in <<data-dictionary-section>>.
@@ -206,13 +206,13 @@ include::summaries/Core-CityModel.adoc[]
 
 While FeatureTypes capture the real-world concepts on the CityGML Conceptual Model, they would be incomplete without the additional concepts from which they are made. These supporting constructs are illustrated in the following figures.
 
-The ADE data types provided for the Core module are illustrated in the figure <<core-uml-ade-types>>.
+The ADE data types provided for the Core module are illustrated in <<core-uml-ade-types>>.
 
 [[core-uml-ade-types]]
 .ADE classes of the CityGML Core module.
 image::figures/Core/Core-ADE_Data_types.png[]
 
-The Basic Types, Enumerations, and Code Lists provided for the Core module are illustrated in the figure <<core-uml-codelists>>.
+The Basic Types, Enumerations, and Code Lists provided for the Core module are illustrated in <<core-uml-codelists>>.
 
 [[core-uml-codelists]]
 .Basic Types, Enumerations, and Codelists from the CityGML Core module.

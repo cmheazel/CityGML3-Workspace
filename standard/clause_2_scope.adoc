@@ -13,18 +13,18 @@ CityGML models are comprised of georeferenced 3D vector data along with the sema
 
 Targeted application areas explicitly include:
 
-* Urban and landscape planning; 
-* Architectural design; 
-* Tourist and leisure activities; 
-* Environmental, 
-* Energy and mobility simulations; 
-* Mobile telecommunications; 
-* Disaster management; 
-* Homeland security; 
-* Vehicle and pedestrian navigation; 
+* Urban and landscape planning;
+* Architectural design;
+* Tourist and leisure activities;
+* Environmental,
+* Energy and mobility simulations;
+* Mobile telecommunications;
+* Disaster management;
+* Homeland security;
+* Vehicle and pedestrian navigation;
 * Training simulators and mobile robotics.
 
-The future CityGML 3.0 Implementation Specifications will be implementable source formats for 3D portraying or transformation into dedicated portayal formats such as the OGC I3S or the OGC 3D Tiles Community Standards, OGC KML, COLLADA or glTF. The OGC 3D Portrayal Service (3DPS) may be used for content delivery.
+The future CityGML 3.0 Implementation Specifications will be implementable source formats for 3D portraying or transformation into dedicated portrayal formats such as the OGC I3S or the OGC 3D Tiles Community Standards, OGC KML, COLLADA or glTF. The OGC 3D Portrayal Service (3DPS) may be used for content delivery.
 
 Features of the CityGML 3.0 Conceptual Model:
 
@@ -49,7 +49,7 @@ Features of the CityGML 3.0 Conceptual Model:
 ** LOD2 – Realistic, but still generalized model.
 ** LOD3 – Highly detailed model.
 * Multiple representations in different LODs simultaneously and generalization relations between objects in different LODs.
-* Ability to combine different interior and exterior LoDs, including representation of floor plans.
+* Ability to combine different interior and exterior LODs, including representation of floor plans.
 * Optional topological connections between feature (sub)geometries.
 * Enables a variety of different encoding specifications, including GML and JSON.
 * Extension of the conceptual model through code lists, generic objects and Application Domain Extensions (ADEs).
