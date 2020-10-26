@@ -1,6 +1,6 @@
 == Scope
 
-This document is an OGC Conceptual Model (CM) Standard for specifying the representation of virtual 3D city and landscape models. The CityGML 3.0 Conceptual Model is expected to be the basis for a number of future Encoding Standards in which subsets of the Conceptual Model can be implemented. These Encoding Standards will enable both storage and exchange of data. At a minimum, support for a Geography Markup Language (GML) encoding is expected. Additional encodings in formats such as JSON and database schemas will be highly desirable.
+This document is an OGC Conceptual Model (CM) Standard for specifying the representation of virtual 3D city and landscape models. The CityGML 3.0 Conceptual Model is a Platform Independent Model (PIM). A PIM is independent of any specific technological platform that may be used to implement it.   expected to be the basis for a number of future Encoding Standards in which subsets of the Conceptual Model can be implemented. These Encoding Standards will enable both storage and exchange of data. At a minimum, support for a Geography Markup Language (GML) encoding is expected. Additional encodings in formats such as JSON and database schemas will be highly desirable.
 
 In contrast to CityGML 2.0, the 3.0 Conceptual Model is NOT implemented as an application schema of GML. However, a preliminary encoding in GML version 3.2 is available as an informative resource separately from this standard to allow implementation and testing of the CityGML Conceptual Model.
 
