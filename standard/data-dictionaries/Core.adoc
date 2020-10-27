@@ -35,7 +35,7 @@
 |*AbstractCityObject* 
 |[cols="1,4",frame=none,grid=none]
 !===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AbstractCityObject is the abstract superclass of all thematic classes within the CityGML conceptual model. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AbstractCityObject is the abstract superclass of all thematic classes within the CityGML Conceptual Model. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<AbstractFeatureWithLifespan-section,AbstractFeatureWithLifespan>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «FeatureType»
 !===
@@ -87,7 +87,7 @@
 |*AbstractFeature* 
 |[cols="1,4",frame=none,grid=none]
 !===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AbstractFeature is the abstract superclass of all feature types within the CityGML conceptual model. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AbstractFeature is the abstract superclass of all feature types within the CityGML Conceptual Model. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<AnyFeature-section,AnyFeature>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «FeatureType»
 !===
@@ -114,7 +114,7 @@
 |*AbstractFeatureWithLifespan* 
 |[cols="1,4",frame=none,grid=none]
 !===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AbstractFeatureWithLifespan is the base class for all CityGML features. It allows the optional specification of the real-world and database times for the existence of each feature. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! AbstractFeatureWithLifespan is the base class for all CityGML features. This class allows the optional specification of the real-world and database times for the existence of each feature. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<AbstractFeature-section,AbstractFeature>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «FeatureType»
 !===
@@ -430,7 +430,7 @@
 |*CityObjectRelation* 
 |[cols="1,4",frame=none,grid=none]
 !===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! CityObjectRelation represents a specific relation from the city object in which it is included to another city object. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! CityObjectRelation represents a specific relation from the city object in which the relation is included to another city object. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «ObjectType»
 !===
@@ -473,7 +473,7 @@
 |*ImplicitGeometry* 
 |[cols="1,4",frame=none,grid=none]
 !===
-!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ImplicitGeometry is a geometry representation where the shape is stored only once as a prototypical geometry, for example a tree or other vegetation object, a traffic light or a traffic sign. This prototypic geometry object can be re-used or referenced many times, wherever the corresponding feature occurs in the 3D city model. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! ImplicitGeometry is a geometry representation where the shape is stored only once as a prototypical geometry. For example a tree or other vegetation object, a traffic light or a traffic sign. This prototypic geometry object can be re-used or referenced many times, wherever the corresponding feature occurs in the 3D city model. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «ObjectType»
 !===
