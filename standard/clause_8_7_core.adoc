@@ -5,7 +5,7 @@
 
 include::requirements/requirements_class_core.adoc[]
 
-The Core module defines the basic concepts and components of city models. This rather large body of work has been divided into seven sections. These sections build on each other from the fundamental principles specified by the ISO up through the full CityGML model. These sections are summarized in <<citygml-core-table>>.
+The CityGML Core module defines the basic concepts and components of city models. This rather large body of work is divided into seven sections. These sections build on each other from the fundamental principles specified by the relevant ISO standards up to the full CityGML model. These sections are summarized in <<citygml-core-table>>.
 
 [[citygml-core-table]]
 .CityGML Core Sections
@@ -21,7 +21,7 @@ The Core module defines the basic concepts and components of city models. This r
 
 ==== Requirements
 
-The CityGML Core defines technology-agnostic concepts. These concepts are then realized in technology-specific Implementation Specifications. The following requirements govern the creation of those Implementation Specifications.
+The CityGML Core defines technology-agnostic concepts. These concepts are then realized in technology-specific Implementation Specifications. The following requirements govern the creation of any CityGML compliant Implementation Specification (IS).
 
 include::requirements/Core/REQ_Core_Classes.adoc[]
 
@@ -119,7 +119,7 @@ The ISO classes explicitly used in the CityGML UML model are introduced in <<iso
 [[city-objects-section]]
 ==== City Models and City Objects
 
-City models are virtual representations of real-world cities and landscapes. A city model aggregates different types of objects, which can be city objects, appearances, different versions of the city model, transitions between different versions of the city model, and feature objects. All objects defined in CityGML are features with lifespan. This allows the optional specification of the real-world and database times for the existence of each feature, as is required by the Versioning module (cf. <<rc_versioning_section>>). Features that define thematic concepts related to cities and landscapes, such as building, bridge, water body, or land use, are referred to as city objects. All city objects define properties that describe the objects in more detail. These static properties can be overridden with time-varying data through Dynamizers (cf. <<rc_dynamizer_section>>).
+City models are virtual representations of real-world cities and landscapes. A city model aggregates different types of objects, which can be city objects, appearances, different versions of the city model, transitions between different versions of the city model, and feature objects. All objects defined in the CityGML CM are features with lifespan. This allows the optional specification of the real-world and database times for the existence of each feature, as is required by the Versioning module (cf. <<rc_versioning_section>>). Features that define thematic concepts related to cities and landscapes, such as building, bridge, water body, or land use, are referred to as city objects. All city objects define properties that describe the objects in more detail. These static properties can be overridden with time-varying data through Dynamizers (cf. <<rc_dynamizer_section>>).
 
 .UML City Models and City Objects
 image::figures/Core/Core-City_models_and_city_objects.png[]
@@ -142,7 +142,7 @@ In particular, the classification into OccupiedSpace and UnoccupiedSpace might n
 .Representation of a carport as OccupiedSpace in different LODs. The red boxes represent solids, the green area represents a surface. In addition, the normal vectors of the roof solid (in red) and the roof surface (in green) are shown.
 image::images/carport.png[]
 
-In contrast, a room is a physically unoccupied space. In CityGML, a room is represented by the class BuildingRoom that is a subclass of UnoccupiedSpace. In LOD1, the entire room solid would be considered as unoccupied space, which can contain furniture and installations, though, as is shown in <<figure-room>>. In LOD2 and 3, the solid represents more realistically the really physically unoccupied space of the room (possibly somewhat generalised as indicated in the figure). For all UnoccupiedSpaces, the normal vectors of the bounding thematic surfaces like the InteriorWallSurface need to point inside the object, i.e. opposite to the solid geometry.
+In contrast, a room is a physically unoccupied space. In CityGML, a room is represented by the class BuildingRoom that is a subclass of UnoccupiedSpace. In LOD1, the entire room solid would be considered as unoccupied space, which can contain furniture and installations, though, as is shown in <<figure-room>>. In LOD2 and 3, the solid represents more realistically the really physically unoccupied space of the room (possibly somewhat generalized as indicated in the figure). For all UnoccupiedSpaces, the normal vectors of the bounding thematic surfaces like the InteriorWallSurface need to point inside the object, i.e. opposite to the solid geometry.
 
 [[figure-room]]
 .Representation of a room as UnoccupiedSpace in different LODs. The red boxes represent solids, the green area represents a surface. In addition, the normal vectors of the room solid (in red) and the wall surface (in green) are shown.
@@ -165,12 +165,12 @@ Spaces and space boundaries can have various geometry representations depending 
 
 The different Levels of Detail are defined in the following way:
 
-* LOD 0: volumetric real-world objects (Spaces) can be spatially represented by a single point, by a set of curves, or by a set of surfaces. Areal real-world objects (Space Boundaries) can be spatially represented in LOD0 by a set of curves or a set of surfaces. LOD0 surface representations are typically the result of a projection of the shape of a volumetric object onto a plane parallel to the ground, hence, representing a footprint (e.g. a building footprint or a floor plan of the rooms inside a building). LOD0 curve representations are either the result of a projection of the shape of a vertical surface (e.g. a wall surface) onto a grounding plane or the skeleton of a volumetric shape of longitudinal extent like a road or river segment.
-* LOD 1: volumetric real-world objects (Spaces) are spatially represented by a vertical extrusion solid, i.e. a solid created from a horizontal footprint by vertical extrusion. Areal real-world objects (Space Boundaries) can be spatially represented in LOD1 by a set of horizontal or vertical surfaces.
-* LOD 2: volumetric real-world objects (Spaces) can be spatially represented by a set of curves, a set of surfaces, or a single solid geometry. Areal real-world objects (Space Boundaries) can be spatially represented in LOD2 by a set of surfaces. The shape of the real-world object is generalized in LOD2 and smaller details (e.g. bulges, dents, sills, but also structures like e.g. balconies or dormers of buildings) are typically neglected. LOD2 curve representations are skeletons of volumetric shapes of longitudinal extent like an antenna or a chimney.
-* LOD 3: volumetric real-world objects (Spaces) can be spatially represented by a set of curves, a set of surfaces, or a single solid geometry. Areal real-world objects (Space Boundaries) can be spatially represented in LOD3 by a set of surfaces. LOD3 is the highest level of detail and respective geometries include all available shape details.
+* LOD 0: Volumetric real-world objects (Spaces) can be spatially represented by a single point, by a set of curves, or by a set of surfaces. Areal real-world objects (Space Boundaries) can be spatially represented in LOD0 by a set of curves or a set of surfaces. LOD0 surface representations are typically the result of a projection of the shape of a volumetric object onto a plane parallel to the ground, hence, representing a footprint (e.g. a building footprint or a floor plan of the rooms inside a building). LOD0 curve representations are either the result of a projection of the shape of a vertical surface (e.g. a wall surface) onto a grounding plane or the skeleton of a volumetric shape of longitudinal extent such as a road or river segment.
+* LOD 1: Volumetric real-world objects (Spaces) are spatially represented by a vertical extrusion solid, i.e. a solid created from a horizontal footprint by vertical extrusion. Areal real-world objects (Space Boundaries) can be spatially represented in LOD1 by a set of horizontal or vertical surfaces.
+* LOD 2: Volumetric real-world objects (Spaces) can be spatially represented by a set of curves, a set of surfaces, or a single solid geometry. Areal real-world objects (Space Boundaries) can be spatially represented in LOD2 by a set of surfaces. The shape of the real-world object is generalized in LOD2 and smaller details (e.g. bulges, dents, sills, but also structures like e.g. balconies or dormers of buildings) are typically neglected. LOD2 curve representations are skeletons of volumetric shapes of longitudinal extent like an antenna or a chimney.
+* LOD 3: Volumetric real-world objects (Spaces) can be spatially represented by a set of curves, a set of surfaces, or a single solid geometry. Areal real-world objects (Space Boundaries) can be spatially represented in LOD3 by a set of surfaces. LOD3 is the highest level of detail and respective geometries include all available shape details.
 
-In addition, the geometry can also be represented implicitly, i.e. the shape is stored only once as a prototypical geometry, which then is re-used or referenced, wherever the corresponding feature occurs in the 3D city model.
+In addition, the geometry can also be represented implicitly. The shape is stored only once as a prototypical geometry, which then is re-used or referenced, wherever the corresponding feature occurs in the 3D city model.
 
 The thematic classes, such as building, tunnel, road, land use, water body, or city furniture are defined as subclasses of the space and space boundary classes within the thematic modules. Since all city objects in the thematic modules represent subclasses of the space and space boundary classes, they automatically inherit the geometries defined in the Core module.
 
@@ -197,22 +197,20 @@ The UML diagram of the complete Core module is depicted in <<core-uml>>.
 .UML diagram of CityGML’s core module.
 image::figures/Core/Core-Overview.png[]
 
-<<Core-city-model-class-table>>, <<Core-spatial-class-table>>, and <<Core-geometry-class-table>> introduce already most of the classes of the CityGML Core module. The additional classes required to fill out this section are introduced in <<Core-class-table>>. More details about these classes can be found in the Data Dictionary in <<data-dictionary-section>>.
+<<Core-city-model-class-table>>, <<Core-spatial-class-table>>, and <<Core-geometry-class-table>> introduce already most of the classes of the CityGML Core module. The additional classes required to complete this section of the standard are introduced in <<Core-class-table>>. More details about these classes can be found in the Data Dictionary in <<data-dictionary-section>>.
 
 include::summaries/Core-CityModel.adoc[]
 
 [[b-e-c-section]]
 ==== Data types, Enumerations, and Code lists
 
-While FeatureTypes capture the real-world concepts on the CityGML Conceptual Model, they would be incomplete without the additional concepts from which they are made. These supporting constructs are illustrated in the following figures.
-
-The ADE data types provided for the Core module are illustrated in <<core-uml-ade-types>>.
+The ADE data types provided for in the Core module are illustrated in the figure <<core-uml-ade-types>>.
 
 [[core-uml-ade-types]]
 .ADE classes of the CityGML Core module.
 image::figures/Core/Core-ADE_Data_types.png[]
 
-The Basic Types, Enumerations, and Code Lists provided for the Core module are illustrated in <<core-uml-codelists>>.
+The Data Types, Basic Types, Enumerations, Unions, and Code Lists provided for the Core module are illustrated in <<core-uml-codelists>>.
 
 [[core-uml-codelists]]
 .Basic Types, Enumerations, and Codelists from the CityGML Core module.

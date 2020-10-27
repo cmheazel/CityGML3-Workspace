@@ -3,11 +3,22 @@
 
 include::requirements/requirements_class_dynamizer.adoc[]
 
-The Dynamizer module provides the concepts that allow for representing time-varying data for city object properties as well as for integrating sensors with 3D city models. Dynamizers are objects that inject timeseries data for an individual attribute of the city object in which it is included. The timeseries data overrides the static value of the referenced city object attribute in order to represent dynamic, i.e. time-dependent, variations of its value.
+The Dynamizer module provides the concepts that enable representation of time-varying data for city object properties as well as for integrating sensors with 3D city models. Dynamizers are objects that inject timeseries data for an individual attribute of the city object in which the timeseries data is included. In order to represent dynamic (time-dependent) variations of its value, the timeseries data overrides the static value of the referenced city object attribute.
 
-The dynamic values may be given by retrieving observation results directly from external sensor/IoT services using a sensor connection (e.g. OGC SensorThings API, Sensor Observation Service, or other sensor data platforms including MQTT). Alternatively, the dynamic values may be provided as atomic timeseries that represent time-varying data of a specific data type for a single contiguous time interval. The data can be provided in external tabulated files, such as CSV or Excel sheets, in external files that format timeseries data according to the OGC TimeseriesML or OGC Observations & Measurements standards, or inline as embedded time-value-pairs. Furthermore, timeseries data can also be aggregated to form composite timeseries with non-overlapping time intervals.
+The dynamic values may be given by retrieving observation results directly from external sensor/<<IoT_definition,IoT>> services using a sensor connection (e.g. OGC SensorThings API, Sensor Observation Service, or other sensor data platforms including <<MQTT2019,MQTT>>). Alternatively, the dynamic values may be provided as atomic timeseries that represent time-varying data of a specific data type for a single contiguous time interval. The data can be provided in:
 
-By using the Dynamizer module, fast changes over a short or longer time period with respect to cities and city models can be represented. This includes variations of spatial properties, i.e. change of a feature’s geometry, both in respect to shape and to location (e.g. moving objects), variations of thematic attributes, i.e. changes of physical quantities like energy demands, temperatures, solar irradiation, traffic density, pollution concentration, or overpressure on building walls, and variations with respect to sensor or real-time data resulting from simulations or measurements.
+* external tabulated files, such as CSV or Excel sheets, 
+* external files that format timeseries data according to the OGC TimeseriesML Standard or the OGC Observations & Measurements standards, 
+* or inline as embedded time-value-pairs. 
+
+Furthermore, timeseries data can also be aggregated to form composite timeseries with non-overlapping time intervals.
+
+By using the Dynamizer module, fast changes over a short or longer time period with respect to cities and city models can be represented. This includes:
+
+* variations of spatial properties such as change of a feature’s geometry, both in respect to shape and to location (e.g. moving objects), 
+* variations of thematic attributes, 
+* changes of physical quantities like energy demands, temperatures, solar irradiation, traffic density, pollution concentration, or overpressure on building walls, 
+* and variations with respect to sensor or real-time data resulting from simulations or measurements.
 
 The UML diagram of the Dynamizer module is depicted in <<dynamizer-uml>>. A detailed discussion of this Requirements Class can be found in the link:http://docs.opengeospatial.org/DRAFTS/20-066.html[CityGML 3.0 Users Guide].
 
