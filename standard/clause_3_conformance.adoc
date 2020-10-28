@@ -17,9 +17,9 @@ A Conceptual Model standardization target is a version of the CityGML 3.0 Concep
 . Restriction on the valid values for an attribute
 . Additional concepts documented through ADEs.
 
-Of these options, actions #1, #2, and #3 can be performed when creating an implementation specification. Only action #4 requires an extension of the CityGML Conceptual Model. These extensions should be accomplished using the ADE mechanism described in <<rc_ade_section,Section 10>> Application Domain Extensions (ADE).
+Of these options, actions #1, #2, and #3 can be performed when creating an implementation specification. Only action #4 requires an extension of the CityGML conceptual model. These extensions are accomplished using the ADE mechanism described in <<rc_ade_section,Section 10>> Application Domain Extensions (ADE).
 
-Extensions of the CityGML Conceptual Model SHALL conform with the ADE Conformance Class.
+Extensions of the CityGML Conceptual Model conform with the ADE Conformance Class.
 
 [[implementation-specification-conformance]]
 === Implementation Specifications
@@ -35,4 +35,4 @@ This standard identifies seventeen (17) conformance classes. One conformance cla
 
 Of these seventeen conformance classes, only the _Core_ conformance class is mandatory. All other conformance classes are optional. In the case where a conformance class has a dependency on another conformance class, that conformance class should also be implemented.
 
-The CityGML Conceptual Model is defined by the CityGML UML model. This standard is a representation of that UML model in document form. In the case of a discrepancy between the UML model and this document, the UML model is authoritative.
+The CityGML Conceptual Model is defined by the CityGML UML model. This standard is a representation of that UML model in document form. In the case of a discrepancy between the UML model and this document, the UML model takes precedence.

@@ -18,6 +18,8 @@ PKG="Appearance Bridge Building CityFurniture CityObjectGroup Construction Core 
 for I in $PKG 
 do
 
+echo processing $I
+
 J=`echo $I | tr [:upper:] [:lower:]`
 
 cat ./Templates/REQ_Package_Classes_Template.adoc | sed s/"CLASS"/$I/g | sed s/"PACKAGE"/$I/ | sed s/"LPACK"/$J/g | sed s/"REFF"/"<<"$I/ >../standard/requirements/$I/REQ_`echo $I`_Classes.adoc
