@@ -40,7 +40,7 @@ model that defines concepts of a universe of discourse +
 
 . formal description of a <<conceptual-model-definition,conceptual model>> +
 {blank}[ISO 19101-1:2014, 4.1.6]
-. base schema. Formal description of the model of any geospatial information. <<application-schema-definition,Application schemas> are built from conceptual schemas. +
+. base schema. Formal description of the model of any geospatial information. <<application-schema-definition,Application schemas>> are built from conceptual schemas. +
 {blank}OGC Definitions Register at link:http://www.opengis.net/def/glossary/term/ConceptualSchema[]
 
 [[implementation-specification-definition]]
@@ -57,3 +57,20 @@ NOTE The concept comprises data capturing rules of spatial object types, the acc
 *life-cycle information* +
 set of properties of a spatial object that describe the temporal characteristics of a version of a spatial object or the changes between versions +
 {blank}[INSPIRE Glossary]
+
+[[mda-platform-definition]]
+*Platform (Model Driven Architecture)* +
+the set of resources on which a system is realized. +
+{blank}[Object Management Group, Model Driven Architecture Guide rev. 2.0]
+
+[[pim-definition]]
+*Platform Independent Model* +
+a model that is independent of a spacific platform +
+{blank}[Object Management Group, Model Driven Architecture Guide rev. 2.0]
+
+[[psm-definition]]
+*Platform Specific Model* +
+a model of a system that is defined in terms of a specific platform +
+{blank}[Object Management Group, Model Driven Architecture Guide rev. 2.0]
+
+
