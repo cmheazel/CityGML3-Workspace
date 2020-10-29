@@ -134,10 +134,12 @@ The geometry represented by the various offset vectors is in the image plane of 
 
 [[Date-section]]
 *Date* +
+Date gives values for year, month and day. Representation of Date is specified in ISO 8601. Principles for date and time are further discussed in ISO 19108. +
 {blank}[<<iso19103>>]
 
 [[DateTime-section]]
 *DateTime* +
+A DateTime is a combination of a date and a time types. Representation of DateTime is specified in ISO 8601. Principles for date and time are further discussed in ISO 19108. +
 {blank}[<<iso19103>>]
 
 [[Distance-section]]
@@ -261,6 +263,7 @@ GM_Solid, a subclass of GM_Primitive, is the basis for 3-dimensional geometry. T
 
 [[Time-section]]
 *Time* +
+Time is the designation of an instant on a selected time scale, astronomical or atomic.  It is used in the sense of time of day. +
 {blank}[<<iso19103>>]
 
 [[TM_Duration-section]]
@@ -284,6 +287,7 @@ Uniform Resource Identifier (URI), is a compact string of characters used to ide
 
 [[Volume-section]]
 *Volume* +
+Volume is the measure of the physical space of any 3-D geometric object. +
 {blank}[<<iso19103>>]
 
 === Abbreviated Terms

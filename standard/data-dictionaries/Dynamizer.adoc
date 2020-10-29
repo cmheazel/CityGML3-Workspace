@@ -120,22 +120,23 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A GenericTimeseries represents time-varying data in the form of embedded time-value-pairs of a specific data type for a single contiguous time interval. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<AbstractAtomicTimeseries-section,AbstractAtomicTimeseries>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «FeatureType»
-!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! dataTypeOfValue (OCL): inv: if valueType = TimeseriesTypeValue::integer then
-TimeValuePair->forAll(c \| c.intValue->size()=1)
-else if valueType = TimeseriesTypeValue::double then
-TimeValuePair->forAll(c \| c.doubleValue->size()=1)
-else if valueType = TimeseriesTypeValue::string then
-TimeValuePair->forAll(c \| c.stringValue->size()=1)
-else if valueType = TimeseriesTypeValue::geometry then
-TimeValuePair->forAll(c \| c.geometryValue->size()=1)
-else if valueType = TimeseriesTypeValue::uri then
-TimeValuePair->forAll(c \| c.uriValue->size()=1)
-else if valueType = TimeseriesTypeValue::bool then
-TimeValuePair->forAll(c \| c.boolValue->size()=1)
-else if valueType = TimeseriesTypeValue::implicitGeometry then
-TimeValuePair->forAll(c \| c.implicitGeometryValue->size()=1)
+!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! dataTypeOfValue (OCL): inv: +
+if valueType = TimeseriesTypeValue::integer then +
+{nbsp}{nbsp}{nbsp}{nbsp}TimeValuePair->forAll(c \| c.intValue->size()=1) +
+else if valueType = TimeseriesTypeValue::double then +
+{nbsp}{nbsp}{nbsp}{nbsp}TimeValuePair->forAll(c \| c.doubleValue->size()=1) +
+else if valueType = TimeseriesTypeValue::string then +
+{nbsp}{nbsp}{nbsp}{nbsp}TimeValuePair->forAll(c \| c.stringValue->size()=1) +
+else if valueType = TimeseriesTypeValue::geometry then +
+{nbsp}{nbsp}{nbsp}{nbsp}TimeValuePair->forAll(c \| c.geometryValue->size()=1) +
+else if valueType = TimeseriesTypeValue::uri then +
+{nbsp}{nbsp}{nbsp}{nbsp}TimeValuePair->forAll(c \| c.uriValue->size()=1) +
+else if valueType = TimeseriesTypeValue::bool then +
+{nbsp}{nbsp}{nbsp}{nbsp}TimeValuePair->forAll(c \| c.boolValue->size()=1) +
+else if valueType = TimeseriesTypeValue::implicitGeometry then +
+{nbsp}{nbsp}{nbsp}{nbsp}TimeValuePair->forAll(c \| c.implicitGeometryValue->size()=1) +
 else TimeValuePair->forAll(c \| c.appearanceValue->size()=1)
-endif endif endif endif endif endif endif    
+  
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -187,7 +188,10 @@ endif endif endif endif endif endif endif
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A TabulatedFileTimeseries represents time-varying data of a specific data type for a single contiguous time interval. The data is provided in an external file referenced in the TabulatedFileTimeseries. The file contains table structured data using an appropriate file format such as comma-separated values (CSV), Microsoft Excel (XLSX) or Google Spreadsheet. The timestamps and the values are given in specific columns of the table. Each row represents a single time-value-pair. A subset of rows can be selected using the idColumn and idValue attributes. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<AbstractAtomicTimeseries-section,AbstractAtomicTimeseries>> 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «FeatureType»
-!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! columnNumberOrColumnName (OCL): inv: (timeColumnNo->notEmpty() or timeColumnName->notEmpty()) and (valueColumnNo->notEmpty() or valueColumnName->notEmpty()) and (idValue->notEmpty() implies idColumnNo->notEmpty() or idColumnName->notEmpty())    
+!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! columnNumberOrColumnName (OCL): inv: +
+(timeColumnNo->notEmpty() or timeColumnName->notEmpty()) and +
+(valueColumnNo->notEmpty() or valueColumnName->notEmpty()) and +
+(idValue->notEmpty() implies idColumnNo->notEmpty() or + idColumnName->notEmpty())    
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===
@@ -395,7 +399,10 @@ endif endif endif endif endif endif endif
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A TimeValuePair represents a value that is valid for a given timepoint. For each TimeValuePair, only one of the value properties can be used mutually exclusive. Which value property has to be provided depends on the selected value type in the GenericTimeSeries feature, in which the TimeValuePair is included. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «DataType»
-!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! singleValue (OCL): inv: intValue->size() + doubleValue->size() + stringValue->size() + geometryValue->size() + uriValue->size() + boolValue->size() + implicitGeometryValue->size() + appearanceValue->size() = 1    
+!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! singleValue (OCL): inv: +
+intValue->size() + doubleValue->size() + stringValue->size() + +
+geometryValue->size() + uriValue->size() + boolValue->size() + +
+implicitGeometryValue->size() + appearanceValue->size() = 1    
 !===
 |[cols="15,20,60",frame=none,grid=none,options="header"]
 !===

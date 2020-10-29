@@ -859,7 +859,8 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! DoubleBetween0and1 is a basic type for values, which are greater or equal than 0 and less or equal than 1. The type is used for color encoding, for example. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «BasicType»
-!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! valueBetween0and1 (OCL): inv: DoubleBetween0and1.allInstances()->forAll(p \| p > = 0 and p < = 1)    
+!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! valueBetween0and1 (OCL): inv: DoubleBetween0and1.allInstances() -> +
+forAll(p \| p > = 0 and p < = 1)    
 !===
 |=== 
 
@@ -941,7 +942,8 @@
 !{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! IntegerBetween0and3 is a basic type for integer values, which are greater or equal than 0 and less or equal than 3. The type is used for encoding the LOD number. 
 !{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! None 
 !{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «BasicType»
-!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! valueBetween0and3 (OCL): inv: IntegerBetween0and3.allInstances()->forAll(p \| p > = 0 and p < = 3)    
+!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! valueBetween0and3 (OCL): inv: IntegerBetween0and3.allInstances() -> +
+forAll(p \| p > = 0 and p < = 3)    
 !===
 |=== 
 
