@@ -18,7 +18,7 @@
 |[big]*Open Geospatial Consortium*
 |Submission Date: <yyyy-mm-dd>
 |Approval Date:   <yyyy-mm-dd>
-|Publication Date:   <2020-08-05>
+|Publication Date:   <2020-12-11>
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/EG/CityGML/3.0
 |Internal reference number of this OGC(R) document:    20-066
 |Version: 0.1
@@ -73,9 +73,6 @@ toc::[]
 
 <<<
 
-////
-Make sure to complete each included document
-////
 include::clause_0_front_material.adoc[]
 
 include::clause_1_introduction.adoc[]
@@ -86,113 +83,69 @@ include::clause_3_references.adoc[]
 
 include::clause_4_terms_and_definitions.adoc[]
 
-[[ug_user-guide_section]]
-== User Guide
+[[ug_general_principles_section]]
+== General Principles
 
-[[ug_conceptual-modeling_section]]
-=== Conceptual Modeling
+include::clause_5_1_modularization.adoc[]
 
-NOTE: Under Construction
+include::clause_5_2_general_principles.adoc[]
 
-[[ug_spatial-temporal-fundamentals_section]]
-=== Spatial-Temporal Fundamentals
+include::clause_5_3_spatial_model.adoc[]
 
-NOTE: Under Construction
+include::clause_5_4_core_model.adoc[]
 
-[[ug-metadata-section]]
-=== Metadata
+include::clause_5_5_appearances.adoc[]
 
-include::clause_n_metadata.adoc[]
+include::clause_5_6_dynamics.adoc[]
 
-[[ug-extensions_section]]
-=== Extensions
+include::clause_5_7_extensions.adoc[]
 
-include::clause_n_extensions.adoc[]
+include::clause_5_8_conceptual_modeling.adoc[]
 
-[[ug_core_section]]
-=== Core
+[[ug_citygml_uml_model_section]]
+== CityGML UML Model
 
-NOTE: Under Construction
+include::clause_6_1_overview.adoc[]
 
-[[ug_appearance_section]]
-=== Appearance
+include::clause_6_2_core.adoc[]
 
-NOTE: Under Construction
+include::clause_6_3_appearance.adoc[]
 
-[[ug_bridge-model_section]]
-=== Bridge Model
+include::clause_6_4_bridge_model.adoc[]
 
-NOTE: Under Construction
+include::clause_6_5_building_model.adoc[]
 
-[[ug_building-model_section]]
-=== Building Model
+include::clause_6_6_city_furniture.adoc[]
 
-NOTE: Under Construction
+include::clause_6_7_city_object_group.adoc[]
 
-[[ug_city-furniture_section]]
-=== City Furniture
+include::clause_6_8_construction.adoc[]
 
-NOTE: Under Construction
+include::clause_6_9_dynamizer.adoc[]
 
-[[ug_city-object-group_section]]
-=== City Object Group
+include::clause_6_10_generics.adoc[]
 
-NOTE: Under Construction
+include::clause_6_11_land_use.adoc[]
 
-[[ug_construction_section]]
-=== Construction
+include::clause_6_12_point_cloud.adoc[]
 
-NOTE: Under Construction
+include::clause_6_13_relief.adoc[]
 
-[[ug_dynamizer_section]]
-=== Dynamizer
+include::clause_6_14_transportation.adoc[]
 
-NOTE: Under Construction
+include::clause_6_15_tunnel.adoc[]
 
-[[ug_generics_section]]
-=== Generics
+include::clause_6_16_vegetation.adoc[]
 
-NOTE: Under Construction
+include::clause_6_17_versioning.adoc[]
 
-[[ug_land-use_section]]
-=== Land Use
+include::clause_6_18_waterbody.adoc[]
 
-NOTE: Under Construction
+include::clause_6_19_ade.adoc[]
 
-[[ug_point-cloud_section]]
-=== Point Cloud
+include::clause_6_20_codelists.adoc[]
 
-NOTE: Under Construction
-
-[[ug_relief_section]]
-=== Relief
-
-NOTE: Under Construction
-
-[[ug_transportation_section]]
-=== Transportation
-
-NOTE: Under Construction
-
-[[ug_tunnel_section]]
-=== Tunnel Model
-
-NOTE: Under Construction
-
-[[ug_vegetation_section]]
-=== Vegetation
-
-NOTE: Under Construction
-
-[[ug_versioning_section]]
-=== Versioning
-
-NOTE: Under Construction
-
-[[ug_waterbody_section]]
-=== Waterbodies
-
-NOTE: Under Construction
+include::clause_6_21_metadata.adoc[]
 
 include::annex-history.adoc[]
 
