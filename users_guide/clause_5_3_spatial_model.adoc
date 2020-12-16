@@ -6,9 +6,7 @@
 |TBD
 |===
 
-NOTE: The following text needs to be reviewed and updated.
-
-
+NOTE: Still contains GML-specific content
 
 Spatial properties of CityGML features are represented by objects of GML3’s geometry model. This model is based on the standard ISO 19107 ‘Spatial Schema’ (Herring 2001), representing 3D geometry according to the well-known Boundary Representation (B-Rep, cf. Foley et al. 1995). CityGML actually uses only a subset of the GML3 geometry package, defining a profile of GML3. This subset is depicted in Fig. 9 and Fig. 10. Further-more, GML3’s explicit Boundary Representation is extended by scene graph concepts, which allow the represen-tation of the geometry of features with the same shape implicitly and thus more space efficiently (chapter 8.2).
 
