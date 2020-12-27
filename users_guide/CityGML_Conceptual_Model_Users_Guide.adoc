@@ -9,7 +9,6 @@
 :numbered:
 :sectanchors:
 :sectnums:
-:source-highlighter: coderay
 
 <<<
 [cols = ">",frame = "none",grid = "none"]
@@ -18,7 +17,7 @@
 |[big]*Open Geospatial Consortium*
 |Submission Date: <yyyy-mm-dd>
 |Approval Date:   <yyyy-mm-dd>
-|Publication Date:   <2020-12-14>
+|Publication Date:   <2020-12-22>
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/EG/CityGML/3.0
 |Internal reference number of this OGC(R) document:    20-066
 |Version: 0.1
@@ -86,23 +85,17 @@ include::clause_4_terms_and_definitions.adoc[]
 [[ug_general_principles_section]]
 == General Principles
 
-include::clause_5_1_modularization.adoc[]
+include::clause_5_1_general_principles.adoc[]
 
-include::clause_5_2_general_principles.adoc[]
+include::clause_5_4_spatial_model.adoc[]
 
-include::clause_5_3_spatial_model.adoc[]
+include::clause_5_3_metadata.adoc[]
 
-include::clause_5_4_core_model.adoc[]
+include::clause_5_2_modularization.adoc[]
 
-include::clause_5_5_appearances.adoc[]
+include::clause_5_5_extensions.adoc[]
 
-include::clause_5_6_dynamics.adoc[]
-
-include::clause_5_7_extensions.adoc[]
-
-include::clause_5_8_conceptual_modeling.adoc[]
-
-include::clause_5_9_metadata.adoc[]
+include::clause_5_3_profiles.adoc[]
 
 [[ug_citygml_uml_model_section]]
 == CityGML UML Model
@@ -144,10 +137,6 @@ include::clause_6_17_versioning.adoc[]
 include::clause_6_18_waterbody.adoc[]
 
 include::clause_6_19_ade.adoc[]
-
-include::clause_6_20_codelists.adoc[]
-
-include::clause_6_21_metadata.adoc[]
 
 include::annex-history.adoc[]
 

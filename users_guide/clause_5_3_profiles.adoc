@@ -1,0 +1,31 @@
+[[ug_profiles_section]]
+=== CityGML profiles
+
+|===
+^|*Contributors*
+|TBD
+|===
+
+NOTE: Old content which needs to be replaced
+
+A CityGML profile is a combination of thematic extension modules in conjunction with the core module of CityGML. Each CityGML instance document shall employ the CityGML profile appropriate to the provided data. In general, two approaches to employ a CityGML profile within an instance document can be differentiated:
+
+. CityGML profile definition embedded inline the CityGML instance document A CityGML profile can be bound to an instance document using the schemaLocation attribute defined in the XML Schema instance namespace, http://www.w3.org/2001/XMLSchema-instance (commonly associated with the prefix xsi). The xsi:schemaLocation attribute provides a way to locate the XML Schema definition for namespaces defined in an XML instance document. Its value is a whitespace-delimited list of pairs of Uniform Resource Identifiers (URIs) where each pair consists of a namespace followed by the location of that namespace’s XML Schema definition, which is typically a .xsd file. +
+{nbsp} +
+By this means, the namespaces of the respective CityGML modules shall be defined within a CityGML instance document. The xsi:schemaLocation attribute then shall be used to provide the location to the respective XML Schema definition of each module. All example instance documents given in Annex G follow this first approach.
+. CityGML profile definition provided by a separate XML Schema definition file The CityGML profile may also be specified by its own XML Schema file. This schema file shall com-bine the appropriate CityGML modules by importing the corresponding XML Schema definitions. For this purpose, the import element defined in the XML Schema namespace shall be used, http://www.w3.org/2001/XMLSchema (commonly associated with the prefix xs). For the xs:import el-ement, the namespace of the imported CityGML module along with the location of the namespace’s XML Schema definition have to be declared. In order to apply a CityGML profile to an instance docu-ment, the profile’s schema has to be bound to the instance document using the xsi:schemaLocation at-tribute. The XML Schema file of the CityGML profile shall not contain any further content. +
+{nbsp} +
+The targetNamespace of the profile’s schema shall differ from the namespaces of the imported CityGML modules. The namespace associated with the profile should be in control of the originator of the instance document and must be given as a previously unused and globally unique URI. The profile’s XML Schema file must be available (or accessible on the internet) to everybody parsing the associated CityGML instance document.
+
+The second approach is illustrated by the following example XML Schema definition for the base profile of CityGML. Since the base profile is the union of all CityGML modules, the corresponding XML Schema defini-tion imports each and every CityGML module. By this means, all components of the CityGML data model are available in and may be exchanged by instance documents referencing this example base profile. The schema definition file of the base profile is shipped with the CityGML schema package, and is accessible at http://schemas.opengis.net/citygml/profiles/base/2.0/CityGML.xsd.
+
+NOTE: replace XML with UML if feasible.
+
+The following excerpt of a CityGML dataset exemplifies how to apply the base profile schema CityGML.xsd to a CityGML instance document. The dataset contains two building objects and a city object group. The base profile defined by CityGML.xsd is referenced using the xsi:schemaLocation attribute of the root element. Thus, all CityGML modules are employed by the instance document and no further references to the XML Schema documents of the CityGML modules are necessary.
+
+NOTE: replace XML with UML if feasible
+
+
+
+
+
