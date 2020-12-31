@@ -1,0 +1,70 @@
+[[ug_model_construction_section]]
+=== Construction
+
+[[ug_construction_synopsis_section]]
+==== Synopsis
+
+The Construction module defines concepts that are common to all forms of constructions. 
+
+[[ug_construction_concepts_section]]
+==== Key Concepts
+
+[[abstract-construction-concept]]
+*AbstractConstruction*: Classes of objects that are manufactured by humans from construction materials, are connected to earth, and are intended to be permanent. A type of <<abstract-occupied-space-concept,AbstractOccupiedSpace>>
+
+[[abstract-construction-element-concept]]
+*AbstractConstructionElement*: Classes that represent volumetric elements of a construction. Examples are walls, beams, slabs. A type of <<abstract-occupied-space-concept,AbstractOccupiedSpace>>.
+
+[[abstract-filling-element-concept]]
+*AbstractFillingElement*: Classes that represent different kinds of elements that fill the openings of a construction such as windows and doors. A type of <<abstract-occupied-space-concept,AbstractOccupiedSpace>>.
+
+[[abstract-furniture-concept]]
+*AbstractFurniture*: Classes that represent furniture objects of a construction. A type of <<abstract-occupied-space-concept,AbstractOccupiedSpace>>.
+
+[[abstract-installation-concept]]
+*AbstractInstallation*: Classes that represent installation objects of a construction. A type of <<abstract-occupied-space-concept,AbstractOccupiedSpace>>.
+
+[[abstract-construction-surface-concept]]
+*AbstractConstructionSurface*: Classes that represent different kinds of surfaces that bound a construction such as roof and wall surfaces. A type of <<abstract-thematic-surface-concept,AbstractThematicSurface>>.
+
+[[abstract-filling-surface-concept]]
+*AbstractFillingSurface*: Classes that represent different kinds of surfaces that seal openings. The openings are filled by filling elements such as window and door surfaces. A type of <<abstract-thematic-surface-concept,AbstractThematicSurface>>.
+
+[[ug_construction_discussion_section]]
+==== Discussion
+
+The Construction module defines concepts that are common to all forms of constructions. Constructions are objects that are manufactured by humans from construction materials, are connected to earth, and are intended to be permanent. The Construction module focuses on as-built representations of constructions and integrates all concepts that are similar over different types of constructions, in particular buildings, bridges, and tunnels. In addition, for representing man-made structures that are neither buildings, nor bridges, nor tunnels so-called other constructions (e.g. large chimneys or city walls) can be defined.
+
+Furniture, installations, and constructive elements are further concepts that are defined in the Construction module. Installations are permanent parts of a construction that strongly affect the outer or inner appearance of the construction and that cannot be moved (e.g. balconies, chimneys, or stairs), whereas furniture represent moveable objects of a construction (e.g. tables and chairs). Constructive elements allow for decomposing a construction into volumetric components, such as walls, beams, and slabs.
+
+Constructions and constructive elements can be bounded by different types of surfaces. In this way, the outer structure of constructions and constructive elements can be differentiated semantically into wall surfaces, roof surfaces, ground surfaces, outer floor surfaces, and outer ceiling surfaces, whereas the visible surface of interior spaces can be structured into interior wall surfaces, floor surfaces, and ceiling surfaces.
+
+Furthermore, the openings of constructions, i.e. windows and doors, can be represented as so-called filling elements including their corresponding filling surfaces.
+
+The Construction module defines concepts that are inherited and, where necessary, are specialized by the modules Building, Bridge, and Tunnel  (cf. <<ug_model_building_section>>, <<ug_model_bridge_section>>, and <<ug_model_tunnel_section>>).
+
+[[ug_construction_uml_section]]
+==== UML Model
+
+The UML diagram of the Construction module is depicted in <<construction-uml>>.
+
+[[construction-uml,Figure {counter:figure-num}]]
+.UML diagram of the Construction Model.
+
+image::../standard/figures/Construction.png[align="center"]
+
+The ADE data types provided for the Construction module are illustrated in <<construction-uml-ade-types>>.
+
+[[construction-uml-ade-types,Figure {counter:figure-num}]]
+.ADE classes of the CityGML Construction module.
+image::../standard/figures/Construction-ADE_Datatypes.png[align="center"]
+
+The Code Lists provided for the Construction module are illustrated in <<construction-uml-codelists>>.
+
+[[construction-uml-codelists,Figure {counter:figure-num}]]
+.Codelists from the CityGML Construction module.
+image::../standard/figures/Construction-Codelists.png[align="center"]
+
+[[ug_construction_examples_section]]
+==== Examples
+

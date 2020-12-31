@@ -17,7 +17,7 @@
 |[big]*Open Geospatial Consortium*
 |Submission Date: <yyyy-mm-dd>
 |Approval Date:   <yyyy-mm-dd>
-|Publication Date:   <2020-12-22>
+|Publication Date:   <2020-12-31>
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/EG/CityGML/3.0
 |Internal reference number of this OGC(R) document:    20-066
 |Version: 0.1
@@ -82,62 +82,54 @@ include::clause_3_references.adoc[]
 
 include::clause_4_terms_and_definitions.adoc[]
 
-[[ug_general_principles_section]]
-== General Principles
+include::clause_5_conventions.adoc[]
 
-include::clause_5_1_general_principles.adoc[]
+include::clause_6_foundations.adoc[]
 
-include::clause_5_4_spatial_model.adoc[]
+[[citygml_model_section]]
+== CityGML Model
 
-include::clause_5_3_metadata.adoc[]
+include::clause_7_1_core.adoc[]
 
-include::clause_5_2_modularization.adoc[]
+include::clause_7_2_appearance.adoc[] (still needs work)
 
-include::clause_5_5_extensions.adoc[]
+ include::clause_7_4_bridge_model.adoc[]
 
-include::clause_5_3_profiles.adoc[]
+ include::clause_7_5_building_model.adoc[]
 
-[[ug_citygml_uml_model_section]]
-== CityGML UML Model
+include::clause_7_6_city_furniture.adoc[]
 
-include::clause_6_1_overview.adoc[]
+include::clause_7_7_city_object_group.adoc[]
 
-include::clause_6_2_core.adoc[]
+include::clause_7_8_construction.adoc[]
 
-include::clause_6_3_appearance.adoc[]
+include::clause_7_9_dynamizer.adoc[]
 
-include::clause_6_4_bridge_model.adoc[]
+include::clause_7_10_generics.adoc[]
 
-include::clause_6_5_building_model.adoc[]
+include::clause_7_11_land_use.adoc[]
 
-include::clause_6_6_city_furniture.adoc[]
+include::clause_7_12_point_cloud.adoc[]
 
-include::clause_6_7_city_object_group.adoc[]
+include::clause_7_13_relief.adoc[]
 
-include::clause_6_8_construction.adoc[]
+include::clause_7_14_transportation.adoc[]
 
-include::clause_6_9_dynamizer.adoc[]
+include::clause_7_15_tunnel.adoc[]
 
-include::clause_6_10_generics.adoc[]
+include::clause_7_16_vegetation.adoc[]
 
-include::clause_6_11_land_use.adoc[]
+include::clause_7_17_versioning.adoc[]
 
-include::clause_6_12_point_cloud.adoc[]
+include::clause_7_18_waterbody.adoc[]
 
-include::clause_6_13_relief.adoc[]
+include::clause_7_19_ade.adoc[]
 
-include::clause_6_14_transportation.adoc[]
-
-include::clause_6_15_tunnel.adoc[]
-
-include::clause_6_16_vegetation.adoc[]
-
-include::clause_6_17_versioning.adoc[]
-
-include::clause_6_18_waterbody.adoc[]
-
-include::clause_6_19_ade.adoc[]
+include::clause_8_data-dictionary.adoc[]
 
 include::annex-history.adoc[]
 
+include::annex-glossary.adoc[]
+
 include::annex-bibliography.adoc[]
+

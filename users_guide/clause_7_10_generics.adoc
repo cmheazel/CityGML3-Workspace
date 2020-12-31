@@ -1,0 +1,76 @@
+[[ug_model_generics_section]]
+=== Generics
+
+|===
+^|*Contributors*
+|C. Heazel - first draft
+|===
+
+[[ug_generics_synopsis_section]]
+==== Synopsis
+
+The WaterBody module provides the representation of significant and permanent or semi-permanent accumulations of surface water, usually covering a part of the Earth. Examples of such water bodies that can be modelled with CityGML are rivers, canals, lakes, and basins.
+
+[[ug_generics_concepts_section]]
+==== Key Concepts
+
+[[generic-logical-space-concept]]
+*GenericLogicalSpace*: A space that is not represented by any explicitly modelled AbstractLogicalSpace subclass within CityGML. +
+A type of <<abstract-logical-space-concept,AbstractLogicalSpace>>.
+
+[[generic-occupied-space-concept]]
+*GenericOccupiedSpace*: A space that is not represented by any explicitly modelled AbstractOccupiedSpace subclass within CityGML. +
+A type of <<abstract-occupied-space-concept,AbstractOccupiedSpace>>.
+
+[[generic-unoccupied-space-concept]]
+*GenericUnoccupiedSpace*: A space that is not represented by any explicitly modelled AbstractUnoccupiedSpace subclass within CityGML. +
+A type of <<abstract-unoccupied-space-concept,AbstractUnoccupiedSpace>>.
+
+[[generic-thematic-surface-concept]]
+*GenericThematicSurface*: A surface that is not represented by any explicitly modelled AbstractThematicSurface subclass within CityGML. +
+A type of <<abstract-thematic-surface-concept,AbstractThematicSurface>>.
+
+[[generic-attribute-set-concept]]
+*GenericAttributeSet*: A named collection of generic attributes. +
+A type of <<abstract-generic-attribute-concept,AbstractGenericAttribute>>.
+
+[[generic-attribute-concept]]
+*<type>Attribute*: a data type used to define generic attributes of type <type> where type = "String", "Int", "Double", "Date", "Uri", "Measure", or "Code". +
+A type of <<abstract-generic-attribute-concept,AbstractGenericAttribute>>.
+
+[[ug_generics_discussion_section]]
+==== Discussion
+
+The Generics module provides the representation of generic city objects. These are city objects that are not covered by any explicitly modelled thematic class within the CityGML Conceptual Model. The Generics module also provides the representation of generic attributes which are attributes that are not explicitly represented in the CityGML Conceptual Model. In order to avoid problems concerning semantic interoperability, generic city objects and generic attributes shall only be used if appropriate thematic classes and attributes are not provided by any other CityGML module.
+
+In accordance with the CityGML Space concept defined in the  <<ug_core_section,Core module>> generic city objects can be represented as generic logical spaces, generic occupied spaces, generic unoccupied spaces, and generic thematic surfaces. In this way, spaces and surfaces can be defined that are not represented by any explicitly modelled class within CityGML that is a subclass of the classes AbstractLogicalSpace, AbstractOccupiedSpace, AbstractUnoccupiedSpace or AbstractThematicSurface, respectively.
+Generic city objects are represented in the UML model by the top-level feature types _GenericLogicalSpace_, _GenericOccupiedSpace_, _GenericUnoccupiedSpace_ and _GenericThematicSurface_.
+
+Generic attributes are defined as name-value pairs and are always associated with a city object. Generic attributes can be of type String, Integer, Double, Date, URI, Measure, and Code. In addition, generic attributes can be grouped under a common name as generic attribute sets.
+
+[[ug_generics_uml_section]]
+==== UML Model
+
+The UML diagram of the Generics module is depicted in <<generics-uml>>.
+
+[[generics-uml]]
+.UML diagram of the Generics Model.
+
+image::../standard/figures/Generics.png[align="center"]
+
+The ADE data types provided for the Generics module are illustrated in <<generics-uml-ade-types>>.
+
+[[generics-uml-ade-types]]
+.ADE classes of the CityGML Generics module.
+image::../standard/figures/Generics-ADE_Datatypes.png[align="center"]
+
+The Code Lists provided for the Generics module are illustrated in <<generics-uml-codelists>>.
+
+[[generics-uml-codelists]]
+.Codelists from the CityGML Generics module.
+image::../standard/figures/Generics-Codelists.png[align="center"]
+
+[[ug_generics_examples_section]]
+==== Examples
+
+
