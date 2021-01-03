@@ -17,7 +17,7 @@
 |[big]*Open Geospatial Consortium*
 |Submission Date: <yyyy-mm-dd>
 |Approval Date:   <yyyy-mm-dd>
-|Publication Date:   <2020-12-31>
+|Publication Date:   <2021-01-02>
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/EG/CityGML/3.0
 |Internal reference number of this OGC(R) document:    20-066
 |Version: 0.1
@@ -76,6 +76,8 @@ include::clause_0_front_material.adoc[]
 
 include::clause_1_introduction.adoc[]
 
+include::clause_1-1_usage.adoc[]
+
 include::clause_2_scope.adoc[]
 
 include::clause_3_references.adoc[]
@@ -91,11 +93,11 @@ include::clause_6_foundations.adoc[]
 
 include::clause_7_1_core.adoc[]
 
-include::clause_7_2_appearance.adoc[] (still needs work)
+include::clause_7_2_appearance.adoc[] 
 
- include::clause_7_4_bridge_model.adoc[]
+include::clause_7_4_bridge_model.adoc[]
 
- include::clause_7_5_building_model.adoc[]
+include::clause_7_5_building_model.adoc[]
 
 include::clause_7_6_city_furniture.adoc[]
 
