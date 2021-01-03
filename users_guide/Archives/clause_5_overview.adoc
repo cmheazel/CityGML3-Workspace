@@ -1,0 +1,37 @@
+[[ug_overview_section]]
+=== Overview
+
+|===
+^|*Contributors*
+|C. Heazel - first draft
+|===
+
+CityGML is an open data model for the storage and exchange of virtual 3D city models.
+
+The aim of the development of CityGML is to reach a common definition of the basic entities, attributes, and relations of a 3D city model. This is especially important with respect to the cost-effective sustainable maintenance of 3D city models, allowing the reuse of the same data in different application fields.
+
+CityGML not only represents the graphical appearance of city models but specifically addresses the representation of the semantic and thematic properties, taxonomies and aggregations. CityGML includes a geometry model and a thematic model. 
+
+The geometry model allows for the consistent and homogeneous definition of geometrical and topological properties of spatial objects within 3D city models (<<reference>>). This model builds on the geometry classes and General Feature Model defined by ISO TC211.  
+
+The thematic model of CityGML employs the geometry model for different thematic fields like Digital Terrain Models, constructions (i.e. buildings, bridges, and tunnels), vegetation (solitary objects and also areal and volumetric biotopes), land use, water bodies, transportation facilities, and city furniture (<<reference>>). 
+
+Further objects, which are not explicitly modelled yet, can be represented using the concept of generic objects and attributes (<<reference>>). 
+
+In addition, extensions to the CityGML Conceptual Model applying to specific application fields can be realised using the Application Domain Extensions (ADE) (<<reference>>). 
+
+Spatial objects of equal shape which appear many times at different positions like e.g. trees, can also be modelled as prototypes and used multiple times in the city model (<<reference>>). 
+
+A grouping concept allows the combination of single 3D objects, e.g. buildings to a building complex (<<reference>>). 
+
+Objects which are not geometrically modelled by closed solids can be virtually sealed in order to compute their volume (e.g. pedestrian underpasses, tunnels, or airplane hangars). They can be closed using ClosureSurfaces (<<reference>>). 
+
+The concept of the TerrainIntersectionCurve is introduced to integrate 3D objects with the Digital Terrain Model at their correct positions in order to prevent e.g. buildings from floating over or sinking into the terrain (<<reference>>).
+
+CityGML differentiates four consecutive Levels of Detail (LOD), where objects become more detailed with increasing LOD regarding both their geometry and thematic differentiation (<<reference>>). CityGML models can - but do not have to - contain multiple representations (and geometries) for each object in different LOD simultaneously. Generalisation relations allow the explicit representation of aggregated objects over different scales. 
+
+In addition to spatial properties, CityGML features can be assigned appearances. Appearances are not limited to visual data but represent arbitrary observable properties of the feature’s surface such as infrared radiation, noise pollution, or earthquake-induced structural stress (<<reference).
+
+Furthermore, objects can have external references to corresponding objects in external datasets (<<referemnce>>). 
+
+The possible attribute values of enumerative object attributes can be enumerated in code lists defined in external, redefinable dictionaries (<<reference>>).

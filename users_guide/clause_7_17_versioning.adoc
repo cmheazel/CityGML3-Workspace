@@ -1,0 +1,50 @@
+[[ug_model_versioning_section]]
+=== Versioning
+
+|===
+^|*Contributors*
+|C. Heazel - first draft
+|===
+
+[[ug_versioning_synopsis_section]]
+==== Synopsis
+
+The Versioning module defines the concepts that enable encoding representing multiple versions of a city model. 
+
+[[ug_versioning_concepts_section]]
+==== Key Concepts
+
+[[version-concept]]
+*Version*: Version represents a defined state of a city model consisting of the dedicated versions of all city object instances that belong to the respective city model version. Versions can have names, a description and can be labeled with an arbitrary number of user defined tags. +
+A type of <<abstract-version-concept,AbstractVersion>>.
+
+[[version-transition-concept]]
+*VersionTransition*: VersionTransition describes the change of the state of a city model from one version to another. Version transitions can have names, a description and can be further qualified by a type and a reason. +
+A type of <<abstract-version-transition-concept,AbstractVersionTransition>>.
+
+[[ug_versioning_discussion_section]]
+==== Discussion
+
+The Versioning module defines the concepts that enable encoding representing multiple versions of a city model. A specific version represents a defined state of a city model consisting of the dedicated versions of all city object instances that belong to the respective city model version. Each version can be complemented by version transitions that describe the change of the state of a city model from one version to another and that give the reason for the change and the modifications applied. In addition, the Versioning module introduces bitemporal timestamps for all objects. This allows for providing all objects with information on 1) the time period a specific version of an object is an integral part of the 3D city model and 2) the lifespan a specific version of an object exists in the real world.
+
+By using the Versioning module, slow changes over a long time period with respect to cities and city models can be represented. This includes the creation and termination of objects (e.g. construction or demolition of sites, planting of trees, construction of new roads), structural changes of objects (e.g. extension of buildings), and changes in the status of an object (e.g. change of building owner, change of the traffic direction of a road to a one-way street). In this way, the history or evolution of cities and city models can be modelled, parallel or alternative versions of cities and city models can be managed, and changes of geometries and thematic properties of individual city objects over time can be tracked.
+
+[[ug_versionings_uml_section]]
+==== UML Model
+
+The UML diagram of the Versioning module is depicted in <<versioning-uml>>. 
+
+[[versioning-uml]]
+.UML diagram of the Versioning Model.
+
+image::../standard/figures/Versioning.png[align="center"]
+
+The ADE data types provided for the Versioning module are illustrated in <<versioning-uml-ade-types>>.
+
+[[versioning-uml-ade-types]]
+.ADE classes of the CityGML Versioning module.
+image::../standard/figures/Versioning-ADE_Datatypes.png[align="center"]
+
+[[ug_versioning_examples_section]]
+==== Examples
+
