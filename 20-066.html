@@ -461,7 +461,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Approval Date:   &lt;yyyy-mm-dd&gt;</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Publication Date:   &lt;2021-01-03&gt;</p></td>
+<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Publication Date:   &lt;2021-01-04&gt;</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">External identifier of this OGC&#174; document: <a href="http://www.opengis.net/doc/EG/CityGML/3.0" class="bare">http://www.opengis.net/doc/EG/CityGML/3.0</a></p></td>
@@ -620,7 +620,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#ug_core_section">8.1. Core</a>
 <ul class="sectlevel3">
 <li><a href="#core-key-concepts-section">8.1.1. Key Concepts</a></li>
-<li><a href="#ISO-dependencies-section">8.1.2. ISO Dependencies</a></li>
+<li><a href="#ug-iso-dependencies-section">8.1.2. ISO Dependencies</a></li>
 <li><a href="#city-objects-section">8.1.3. City Models and City Objects</a></li>
 <li><a href="#space-concepts-section">8.1.4. Space Concept</a></li>
 <li><a href="#geometry-lod-section">8.1.5. Geometry and LOD</a></li>
@@ -692,11 +692,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#ug_construction_synopsis_section">8.7.1. Synopsis</a></li>
 <li><a href="#ug_construction_concepts_section">8.7.2. Key Concepts</a></li>
 <li><a href="#ug_construction_discussion_section">8.7.3. Discussion</a></li>
-<li><a href="#_construction_geometry">8.7.4. Construction Geometry</a></li>
-<li><a href="#ug-construction-occupied-spaces-section">8.7.5. Occupied Spaces (class AbstractOccupiedSpace)</a></li>
-<li><a href="#ug-construction-abstract-thematic-surface-section">8.7.6. Thematic Surfaces (class AbstractThematicSurface)</a></li>
-<li><a href="#_uml_model">8.7.7. UML Model</a></li>
-<li><a href="#ug_construction_examples_section">8.7.8. Examples</a></li>
+<li><a href="#ug-construction-space-section">8.7.4. Construction Spaces</a></li>
+<li><a href="#ug-construction-surfaces-section">8.7.5. Construction Surfaces</a></li>
+<li><a href="#ug-construction-lod-section">8.7.6. Levels of Detail</a></li>
+<li><a href="#ug-construction-spaces-and-surfaces-section">8.7.7. Spaces and Surfaces</a></li>
+<li><a href="#_uml_model">8.7.8. UML Model</a></li>
+<li><a href="#ug_construction_examples_section">8.7.9. Examples</a></li>
 </ul>
 </li>
 <li><a href="#ug_model_dynamizer_section">8.8. Dynamizer</a>
@@ -2122,7 +2123,7 @@ view of the real or hypothetical world that includes everything of interest<br>
 </div>
 </div>
 <div class="sect3">
-<h4 id="ISO-dependencies-section"><a class="anchor" href="#ISO-dependencies-section"></a>8.1.2. ISO Dependencies</h4>
+<h4 id="ug-iso-dependencies-section"><a class="anchor" href="#ug-iso-dependencies-section"></a>8.1.2. ISO Dependencies</h4>
 <div class="paragraph">
 <p>CityGML builds on the ISO 19100 family of standards. The applicable standards are identified in <a href="#ISO-in-CityGML-diagram">Figure 12</a>. A <a href="#ISO-classes-dd">Data dictionaries</a> is also included for all of the ISO-defined classes explicitly referenced in the CityGML UML model. These data dictionaries are provided for the convenience of the user. The ISO standards are the normative source.</p>
 </div>
@@ -2132,8 +2133,10 @@ view of the real or hypothetical world that includes everything of interest<br>
 </div>
 <div class="title">Figure 12. Use of ISO Standards in CityGML</div>
 </div>
+<div class="sect4">
+<h5 id="ug-iso-classes-section"><a class="anchor" href="#ug-iso-classes-section"></a>ISO Classes</h5>
 <div class="paragraph">
-<p>The ISO classes explicitly used in the CityGML UML model introduced in <a href="#iso-class-table">Table 3</a>. Detailed descriptions are provided in the  <a href="#ISO-classes-dd">Data Dictionary</a>.</p>
+<p>The ISO classes explicitly used in the CityGML UML model are introduced in <a href="#iso-class-table">Table 3</a>. Detailed descriptions are provided in the  <a href="#ISO-classes-dd">Data Dictionary</a>.</p>
 </div>
 <table id="iso-class-table" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 3. ISO Classes used in CityGML</caption>
@@ -2205,6 +2208,153 @@ view of the real or hypothetical world that includes everything of interest<br>
 </tbody>
 </table>
 </div>
+<div class="sect4">
+<h5 id="ug-iso-geometry-section"><a class="anchor" href="#ug-iso-geometry-section"></a>ISO Geometry</h5>
+<div class="paragraph">
+<p>The most common geometry concept found in the CityGML 3.0 Standard is the concept of <a href="#ug-gm-multiprimitive-section">multi-primitives</a>. These are homogeneous collections of <a href="#ug-gm-primitive-section">GM_Primitives</a> which are aggregated to form a more compex geometry.</p>
+</div>
+<div class="paragraph">
+<p><a href="#ug-gm-composite-section">GM_Composites</a> are another form of <a href="#ug-gm-primitive-section">GM_Primitive</a> collection. These differ from <a href="#ug-gm-multiprimitive-section">GM_MultiPrimitive</a> in that the collection can be heterogeneous. It should be  noted that none of the classes in the CityGML 3.0 Standard are decended from <a href="#ug-gm-composite-section">GM_Composites</a>. However, the terms "CompositeCurve", "CompositeSurface", and "CompositeSolid" do appear in the text. The <code>composit</code> concept can also be seen in the assocation between spaces and surfaces. Therefore, an explanation of <code>composits</code> has been included for completeness.</p>
+</div>
+<div class="sect5">
+<h6 id="ug-gm-primitive-section"><a class="anchor" href="#ug-gm-primitive-section"></a>GM_Primitive</h6>
+<div class="paragraph">
+<p>GM_Primitive is the abstract root class of the geometric primitives. Its main purpose is to define the basic "boundary" operation that ties the primitives in each dimension together. A geometric primitive (GM_Primitive) is a geometric object that is not decomposed further into other primitives in the system. This includes curves and surfaces, even though they are composed of curve segments and surface patches, respectively. This composition is a strong aggregation: curve segments and surface patches cannot exist outside the context of a primitive.</p>
+</div>
+<div class="paragraph">
+<p>NOTE Most geometric primitives are decomposable infinitely many times. Adding a centre point to a line may split that line into two separate lines. A new curve drawn across a surface may divide that surface into two parts, each of which is a surface. This is the reason that the normal definition of primitive as "non-decomposable" is not plausible in a geometry model - the only non-decomposable object in geometry is a point.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="ug-gm-multiprimitive-section"><a class="anchor" href="#ug-gm-multiprimitive-section"></a>GM_MultiPrimitive</h6>
+<div class="paragraph">
+<p>Any geometric object that is used to describe a feature is a collection of <a href="#ug-gm-primitive-section">geometric primitives</a>. A homogeneous collection of geometric primitives may be a multi-primitive (GM_MultiPrimitive). Geometric complexes have additional properties specific to the type of <a href="#ug-gm-primitive-section">geometric primitive</a> they aggregate.</p>
+</div>
+<div id="gm-aggregate-figure" class="imageblock text-center">
+<div class="content">
+<img src="figures/GM_Aggregate.png" alt="GM Aggregate">
+</div>
+<div class="title">Figure 13. GM_MultiPrimitive Context Diagram</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="ug-gm-complex-section"><a class="anchor" href="#ug-gm-complex-section"></a>GM_Complex</h6>
+<div class="paragraph">
+<p>A GM_Complex is a set of disjoint geometric primitives (<a href="#ug-gm-primitive-section">GM_Primitive</a>) such that the boundary of each primitive can be represented as the union of other geometric primitives within the complex.</p>
+</div>
+<div class="paragraph">
+<p>Any geometric object that is used to describe a feature is a collection of <a href="#ug-gm-primitive-section">geometric primitives</a>. A collection of geometric primitives may be a geometric complex (GM_Complex). Geometric complexes have additional properties such as closure by boundary operations and mutually exclusive component parts.</p>
+</div>
+<div id="gm-complex-figure" class="imageblock text-center">
+<div class="content">
+<img src="figures/GM_Complex.png" alt="GM Complex">
+</div>
+<div class="title">Figure 14. GM_Complex Context Diagram</div>
+</div>
+<div class="paragraph">
+<p><a href="#ug-gm-primitive-section">GM_Primitive</a> and GM_Complex share most semantics, in the meaning of operations, attributes and associations. There is an exception in that a GM_Primitive shall not contain its boundary (except in the trivial case of GM_Point where the boundary is empty), while a GM_Complex shall contain its boundary in all cases. This means that if an instantiated object implements GM_Object operations both as GM_Primitive and as a GM_Complex, the semantics of each set theoretic operation is determined by the its name resolution. Specifically, for a particular object such as GM_CompositeCurve, GM_Primitive::contains (returns FALSE for end points) is different from GM_Complex::contains (returns TRUE for end points). Further, if that object is cast as a GM_Primitive value and as a GM_Complex value, then the two values need not be equal as GM_Objects.</p>
+</div>
+<div class="paragraph">
+<p>GM_Complex aggregates GM_Primitives through the <code>element</code> property. Since this is an aggregation, the target GM_Primitive may be associated with more than one GM_Complex.</p>
+</div>
+<div class="paragraph">
+<p>A GM_Complex object can also have a whole/part relationship with other GM_Complex objects. The <code>contains</code> association is used to associate the <code>superComplex</code> instance with the <code>subComplex</code> instance.</p>
+</div>
+<div class="paragraph">
+<p>Note that the geometric primitives in the set are mutually exclusive in the sense that no point is interior to more than one primitive.  The set is closed under boundary operations, meaning that for each element in the complex, there is a collection (also a complex) of geometric primitives that represents the boundary of that element.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="ug-gm-composite-section"><a class="anchor" href="#ug-gm-composite-section"></a>GM_Composite</h6>
+<div class="paragraph">
+<p>GM_Composite is a subclass of <a href="#ug-gm-complex-section">GM_Complex</a>. Like <a href="#ug-gm-complex-section">GM_Complex</a>, it has an association with <a href="#ug-gm-primitive-section">GM_Primitives</a>. In this case this is an <code>composition</code> association with a <code>composite</code> role (GM_Composite) and a <code>generator</code> role (GM_Primitive). As with the GM_Complex, the GM_Primitve may be associated with more than one GM_Composite.</p>
+</div>
+<div id="gm-composite-figure" class="imageblock text-center">
+<div class="content">
+<img src="figures/GM_Composite.png" alt="GM Composite">
+</div>
+<div class="title">Figure 15. GM_Composite Context Diagram</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_gm_compositesurface"><a class="anchor" href="#_gm_compositesurface"></a>GM_CompositeSurface</h6>
+<div class="paragraph">
+<p>A GM_Composite where the <a href="#ug-gm-primitive-section">GM_Primitives</a> is a <a href="#ug-gm-orientable-surface-section">GM_OrientatableSurface</a>.</p>
+</div>
+<div class="paragraph">
+<p>A GM_CompositeSurface is also a subclass of <a href="#ug-gm-primitive-section">GM_Primitives</a> is a <a href="#ug-gm-orientable-surface-section">GM_OrientatableSurface</a>. One of the few examples of multiple inheritance.</p>
+</div>
+<div id="gm-composite-surface-figure" class="imageblock text-center">
+<div class="content">
+<img src="figures/GM_CompositeSurface.png" alt="GM CompositeSurface">
+</div>
+<div class="title">Figure 16. GM_CompositeSurface Context Diagram</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="ug-gm-orientable-surface-section"><a class="anchor" href="#ug-gm-orientable-surface-section"></a>GM_OrientatableSurface</h6>
+<div class="paragraph">
+<p>GM_OrientableSurface consists of a surface and an orientation inherited from GM_OrientablePrimitive. If the orientation is "+", then the GM_OrientableSurface is a GM_Surface. If the orientation is "-", then the GM_OrientableSurface is a reference to a GM_Surface with an upNormal that reverses the direction for this GM_OrientableSurface, the sense of "the top of the surface" (see 6.4.33.2).</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>GM_OrientableSurface:
+{Orientation = "+" implies primitive = self};
+{(Orientation = "-" and TransfiniteSet::contains(p : DirectPosition)) implies (primitive.upNormal(p) = - self.upNormal(p))};</pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="gm-composite-curve-section"><a class="anchor" href="#gm-composite-curve-section"></a>GM_CompositeCurve</h6>
+<div class="paragraph">
+<p>A GM_CompositeCurve is a list of geometric curves such that the each geometric curve in the set terminates at the start point of the subsequent curve in the list</p>
+</div>
+<div class="paragraph">
+<p>The <code>generator</code> is a GM_OrientableCurve.</p>
+</div>
+<div class="paragraph">
+<p>A GM_CompositCurve is also a subclass of GM_OrientatableCurve. One of the few examples of multiple inheritance.</p>
+</div>
+<div id="gm-composite-curve-figure" class="imageblock text-center">
+<div class="content">
+<img src="figures/GM_CompositeCurve.png" alt="GM CompositeCurve">
+</div>
+<div class="title">Figure 17. GM_CompositeCurve Context Diagram</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="ug-gm-orientable-curve-section"><a class="anchor" href="#ug-gm-orientable-curve-section"></a>GM_OrientatableCurve</h6>
+<div class="paragraph">
+<p>GM_OrientableCurve consists of a curve and an orientation inherited from GM_OrientablePrimitive. If the orientation is "+", then the GM_OrientableCurve is a <a href="#GM_curve-section">GM_Curve</a>. If the orientation is "-", then the GM_OrientableCurve is related to another <a href="#GM_curve-section">GM_Curve</a> with a parameterization that reverses the sense of the curve traversal.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>GM_OrientableCurve:
+{Orientation = "+" implies primitive = self}; +
+{Orientation = "-" implies primitive.parameterization(length()-s) = parameterization(s)};</pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="gm-composite-solid-section"><a class="anchor" href="#gm-composite-solid-section"></a>GM_CompositeSolid</h6>
+<div class="paragraph">
+<p>A GM_CompositeSolid is a set of geometric solids adjoining one another along common boundary geometric surfaces.</p>
+</div>
+<div class="paragraph">
+<p>The <code>generator</code> is a <a href="#GM_Solid-section">GM_Solid</a>.</p>
+</div>
+<div class="paragraph">
+<p>A GM_CompositSolid is also a subclass of <a href="#GM_Solid-section">GM_Solid</a>. One of the few examples of multiple inheritance.</p>
+</div>
+<div id="gm-composite-solid-figure" class="imageblock text-center">
+<div class="content">
+<img src="figures/GM_CompositeSolid.png" alt="GM CompositeSolid">
+</div>
+<div class="title">Figure 18. GM_CompositeSolid Context Diagram</div>
+</div>
+</div>
+</div>
+</div>
 <div class="sect3">
 <h4 id="city-objects-section"><a class="anchor" href="#city-objects-section"></a>8.1.3. City Models and City Objects</h4>
 <div class="paragraph">
@@ -2214,7 +2364,7 @@ view of the real or hypothetical world that includes everything of interest<br>
 <div class="content">
 <img src="../standard/figures/Core/Core-City_models_and_city_objects.png" alt="Core City models and city objects">
 </div>
-<div class="title">Figure 13. UML City Models and City Objects</div>
+<div class="title">Figure 19. UML City Models and City Objects</div>
 </div>
 <div class="paragraph">
 <p>The City Model and City Object classes in the in the <a href="#data-dictionary-core">Data Dictionary</a>.</p>
@@ -2267,6 +2417,15 @@ Significant concepts
 </div>
 <div class="paragraph">
 <p><a href="#abstract-space-boundary-concept">Space boundaries</a>, in contrast, are entities with areal extent in the real world. Space boundaries can be differentiated into different types of thematic surfaces, such as wall surfaces and roof surfaces.</p>
+</div>
+<div class="paragraph">
+<p>The term <code>Boundary Surface</code> is used in the CityGML 3.0 Standard but it is not defined. It is best understood as an artiface of the B_Rep model (<a href="#Foley2002">Foley et al. 2002</a>).</p>
+</div>
+<div class="paragraph">
+<p>The <a href="#abstract-space-concept">AbstractSpace</a> class has a <code>boundary</code> association (property) with the <a href="#abstract-space-boundary-concept">AbstractSpaceBoundary</a> class. <a href="#abstract-space-boundary-concept">AbstractSpaceBoundary</a> is specialized into <a href="#abstract-thematic-surface">thematic surfaces</a>. It is the subclassing of the <a href="#abstract-thematic-surface">thematic surfaces</a> which gives semantics to the CityGML surfaces. Note that a <a href="#closure-surface-concept">Closure Surface</a> is also a thematic surface. so a solid can be fully B_Rep enclosed even if part of the surface does not physically exist.</p>
+</div>
+<div class="paragraph">
+<p>Consider that the AbstractSpaceBoundary is a Multi-Surface. So it stands to reason that a <code>space boundary</code> is an <a href="#abstract-space-boundary-concept">AbstractSpaceBoundary</a> which is composed of one or more <code>Boundary Surfaces</code>. Per the B_Rep concept, those <code>Boundary Surfaces</code> must completely enclose the Abstract Space. This may include the addition of surfaces both internal (but visible) as well as external. Hence, the distinction between internal and external space is moot. Internal surfaces are just a continuation of the space boundary around the solid.</p>
 </div>
 <div class="paragraph">
 <p><a href="#core-boundaries-table">Table 4</a> lists the surfaces that are allowed as thematic surface boundaries of the space classes defined in the Core module:</p>
@@ -2384,7 +2543,7 @@ Significant concepts
 <div class="content">
 <img src="../standard/images/carport.png" alt="carport">
 </div>
-<div class="title">Figure 14. Representation of a carport as OccupiedSpace in different LODs. The red boxes represent solids, the green area represents a surface. In addition, the normal vectors of the roof solid (in red) and the roof surface (in green) are shown.</div>
+<div class="title">Figure 20. Representation of a carport as OccupiedSpace in different LODs. The red boxes represent solids, the green area represents a surface. In addition, the normal vectors of the roof solid (in red) and the roof surface (in green) are shown.</div>
 </div>
 <div class="paragraph">
 <p>In contrast, a room is a physically unoccupied space. In CityGML, a room is represented by the class BuildingRoom that is a subclass of UnoccupiedSpace. In LOD1, the entire room solid would be considered as unoccupied space, which can contain furniture and installations, though, as is shown in <a href="#figure-room">Figure 15</a>. In LOD2 and 3, the solid represents more realistically the really physically unoccupied space of the room (possibly somewhat generalized as indicated in the figure). For all UnoccupiedSpaces, the normal vectors of the bounding thematic surfaces like the InteriorWallSurface need to point inside the object, i.e. opposite to the solid geometry.</p>
@@ -2393,7 +2552,7 @@ Significant concepts
 <div class="content">
 <img src="../standard/images/room.png" alt="room">
 </div>
-<div class="title">Figure 15. Representation of a room as UnoccupiedSpace in different LODs. The red boxes represent solids, the green area represents a surface. In addition, the normal vectors of the room solid (in red) and the wall surface (in green) are shown.</div>
+<div class="title">Figure 21. Representation of a room as UnoccupiedSpace in different LODs. The red boxes represent solids, the green area represents a surface. In addition, the normal vectors of the room solid (in red) and the wall surface (in green) are shown.</div>
 </div>
 <div class="paragraph">
 <p>The UML diagram of the Space concept classes is depicted in <a href="#core-spaceconcept">Figure 16]</a>.</p>
@@ -2402,7 +2561,7 @@ Significant concepts
 <div class="content">
 <img src="../standard/figures/Core/Core-Space_concepts.png" alt="Core Space concepts">
 </div>
-<div class="title">Figure 16. UML Space Concepts</div>
+<div class="title">Figure 22. UML Space Concepts</div>
 </div>
 <div class="paragraph">
 <p>The Space Concept classes defined in the CityGML UML model are documented in the <a href="#data-dictionary-core">Data Dictionary</a>.</p>
@@ -2445,7 +2604,7 @@ Significant concepts
 <div class="content">
 <img src="../standard/figures/Core/Core-Geometry_and_LoD_concept.png" alt="Core Geometry and LoD concept">
 </div>
-<div class="title">Figure 17. UML Geometry and LOD Concepts</div>
+<div class="title">Figure 23. UML Geometry and LOD Concepts</div>
 </div>
 <div class="paragraph">
 <p>The Geometry and LOD Concept classes defined in the CityGML UML model and documented in the <a href="#data-dictionary-core">Data Dictionary</a>.</p>
@@ -2466,7 +2625,7 @@ Significant concepts
 <div class="content">
 <img src="../standard/figures/Core/Core-Overview.png" alt="Core Overview">
 </div>
-<div class="title">Figure 18. UML diagram of CityGML’s core module.</div>
+<div class="title">Figure 24. UML diagram of CityGML’s core module.</div>
 </div>
 <div class="paragraph">
 <p>The most important of the Core classes have been introduce already in the <a href="#core-key-concepts-section">Key Concepts</a> Section. More details about these classes can be found in the <a href="#data-dictionary-core">Data Dictionary</a>.</p>
@@ -2481,7 +2640,7 @@ Significant concepts
 <div class="content">
 <img src="../standard/figures/Core/Core-ADE_Data_types.png" alt="Core ADE Data types">
 </div>
-<div class="title">Figure 19. ADE classes of the CityGML Core module.</div>
+<div class="title">Figure 25. ADE classes of the CityGML Core module.</div>
 </div>
 <div class="paragraph">
 <p>The Data Types, Basic Types, Enumerations, Unions, and Code Lists provided for the Core module are illustrated in <a href="#core-uml-codelists">Figure 20</a>.</p>
@@ -2490,7 +2649,7 @@ Significant concepts
 <div class="content">
 <img src="../standard/figures/Core/Core-Basic_Types_Enumerations_Codelists.png" alt="Core Basic Types Enumerations Codelists">
 </div>
-<div class="title">Figure 20. Basic Types, Enumerations, and Codelists from the CityGML Core module.</div>
+<div class="title">Figure 26. Basic Types, Enumerations, and Codelists from the CityGML Core module.</div>
 </div>
 </div>
 </div>
@@ -2624,7 +2783,7 @@ A type of <a href="#abstract-texture-concept">AbstractTexture</a>.</p>
 <div class="content">
 <img src="figures/Figure_15.png" alt="Figure 15">
 </div>
-<div class="title">Figure 21. A texture (a) applied to a facade using different wrap modes: (b) none, (c) wrap, (d) mirror, (e) clamp and (f) border. The border color is red. The numbers denote texture coordinates (image: Hasso-Plattner-Institute).</div>
+<div class="title">Figure 27. A texture (a) applied to a facade using different wrap modes: (b) none, (c) wrap, (d) mirror, (e) clamp and (f) border. The border color is red. The numbers denote texture coordinates (image: Hasso-Plattner-Institute).</div>
 </div>
 <div class="sect4">
 <h5 id="ug-georeferenced-texture-section"><a class="anchor" href="#ug-georeferenced-texture-section"></a>Georeferenced Texture</h5>
@@ -2635,7 +2794,7 @@ A type of <a href="#abstract-texture-concept">AbstractTexture</a>.</p>
 <div class="content">
 <img src="figures/Figure_16.jpg" alt="Figure 16">
 </div>
-<div class="title">Figure 22. A georeferenced texture applied to ground and roof surfaces (source: Senate of Berlin, Hasso-Plattner-Institute).</div>
+<div class="title">Figure 28. A georeferenced texture applied to ground and roof surfaces (source: Senate of Berlin, Hasso-Plattner-Institute).</div>
 </div>
 <div class="paragraph">
 <p>The class <a href="#georeferenced-texture-concept">GeoreferencedTexture</a> describes a texture that uses a planimetric projection. Consequently, it does not make sense to texture vertical surfaces using a <a href="#georeferenced-texture-concept">GeoreferencedTexture</a>. Such a texture has a unique mapping function which is usually provided with the image file (e.g. georeferenced TIFF) of an ESRI World file. The search order for an external georeference is determined by the boolean flag <code>preferWorldFile</code>. If this flag is set to true (its default value), a world file is looked for first and only if it is not found the georeference from the image data is used. If <code>preferWorldFile</code> is false, the world file is used only if no georeference from the image data is available.</p>
@@ -2662,7 +2821,7 @@ A type of <a href="#abstract-texture-concept">AbstractTexture</a>.</p>
 <div class="content">
 <img src="figures/Figure_17.jpg" alt="Figure 17">
 </div>
-<div class="title">Figure 23. Positioning of textures using texture coordinates (image: IGG Uni Bonn).</div>
+<div class="title">Figure 29. Positioning of textures using texture coordinates (image: IGG Uni Bonn).</div>
 </div>
 <div class="paragraph">
 <p>Texture coordinates are applicable only to polygonal surfaces, whose boundaries are described by <a href="#GM_MultiSurface-section">GM_MultiSurface</a> or <a href="#GM_MultiCurve-section">GM_MultiCurve</a>. They define an explicit mapping of a surface’s vertices to points in texture space, i.e. each vertex including interior ring vertices must receive a corresponding coordinate pair in texture space (for the notion of coordinates, refer to ISO 19111). These coordinates are not restricted to the [0,1] interval. Texture coordinates for interior surface points are planarly interpolated from the vertices’ texture coordinates.</p>
@@ -2706,7 +2865,7 @@ Update the text between this and the previous note.
 <div class="content">
 <img src="figures/inwork/figure_18_b.jpg" alt="figure 18 b">
 </div>
-<div class="title">Figure 24. Projecting a photograph (a) onto multiple facades (b) using the worldToTexture transformation. The photograph does not cover the left facade completely. Thus, the texture appears to be clipped. Texture wrapping is set to “none” (source: Senate of Berlin, Hasso-Plattner-Institute).</div>
+<div class="title">Figure 30. Projecting a photograph (a) onto multiple facades (b) using the worldToTexture transformation. The photograph does not cover the left facade completely. Thus, the texture appears to be clipped. Texture wrapping is set to “none” (source: Senate of Berlin, Hasso-Plattner-Institute).</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2753,7 +2912,7 @@ and P stands for the camera’s location in world space. Fig. 19 sketches this s
 <div class="content">
 <img src="figures/figure_19.png" alt="figure 19">
 </div>
-<div class="title">Figure 25. Projective texture mapping. All points on a ray R starting from the projection center P are mapped to the same point T in texture space (image: Hasso-Plattner-Institute, IGG TU Berlin).</div>
+<div class="title">Figure 31. Projective texture mapping. All points on a ray R starting from the projection center P are mapped to the same point T in texture space (image: Hasso-Plattner-Institute, IGG TU Berlin).</div>
 </div>
 <div class="paragraph">
 <p>Alternatively, if the 3x4 camera matrix MP is known (e.g. through a calibration and registration process), it can easily be adopted for use in worldToTexture. MP is derived from intrinsic and extrinsic camera parameters (interior and exterior orientation) and transforms a location in world space to a pixel location in the image. Assuming the upper left image corner has pixel coordinates (0,0), the complete transformation to texture space coordinates can be written as (widthimage and heightimage denote the image size in pixels):</p>
@@ -2947,7 +3106,7 @@ insert formula
 <div class="content">
 <img src="../standard/figures/Appearance.png" alt="Appearance">
 </div>
-<div class="title">Figure 26. UML diagram of CityGML’s Appearance model.</div>
+<div class="title">Figure 32. UML diagram of CityGML’s Appearance model.</div>
 </div>
 <div class="paragraph">
 <p>The ADE data types provided for the Appearance module are illustrated in <a href="#appearance-uml-ade-types">ADE classes of the CityGML Appearance Module.</a>.</p>
@@ -2956,7 +3115,7 @@ insert formula
 <div class="content">
 <img src="../standard/figures/Appearance-ADE_Datatypes.png" alt="Appearance ADE Datatypes">
 </div>
-<div class="title">Figure 27. ADE classes of the CityGML Appearance Module.</div>
+<div class="title">Figure 33. ADE classes of the CityGML Appearance Module.</div>
 </div>
 </div>
 <div class="sect3">
@@ -3075,7 +3234,7 @@ Many of these concepts have been moved into the Construction module. They should
 <div class="content">
 <img src="figures/null.png" alt="null">
 </div>
-<div class="title">Figure 28. Examples for bridge models in LOD1 (upper left), LOD2 (upper right), LOD3 (lower left) and LOD4 (lower right) (source: Google 3D warehouse).</div>
+<div class="title">Figure 34. Examples for bridge models in LOD1 (upper left), LOD2 (upper right), LOD3 (lower left) and LOD4 (lower right) (source: Google 3D warehouse).</div>
 </div>
 <div class="paragraph">
 <p>The bridge model was developed in analogy to the building model (cf. chapter 10.3) with regard to structure and attributes. The UML diagram of the bridge model is depicted in <a href="#figure-45">UML diagram of the bridge model, part one</a>.</p>
@@ -3084,7 +3243,7 @@ Many of these concepts have been moved into the Construction module. They should
 <div class="content">
 <img src="figures/Figure_45.png" alt="Figure 45">
 </div>
-<div class="title">Figure 29. UML diagram of the bridge model, part one</div>
+<div class="title">Figure 35. UML diagram of the bridge model, part one</div>
 </div>
 <div class="paragraph">
 <p>A (movable or unmovable) bridge is represented by an object of the class Bridge. This class inherits its attributes and relations from the abstract base class _AbstractBridge. The spatial properties are defined by a solid for each of the four LODs (relations lod1Solid to lod4Solid). In analogy to the building model, the semantical as well as the geometrical richness increases from LOD1 (blocks model) to LOD3 (architectural model). Simple examples of bridges in each of those LODs are depicted in Fig. 46. Interior structures like rooms are dedicated to LOD4. To cover the case of bridge models where the topology does not satisfy the properties of a solid (essentially water tightness), a multi surface representation is allowed (lod1MultiSurface to lod4MultiSurface). The line where the bridge touches the terrain surface is represented by a terrain intersection curve, which is provided for each LOD (relations lod1TerrainIntersection to lod4TerrainIntersection). In addition to the solid representation of a bridge, linear characteristics like ropes or antennas can be specified geometrically by the lod1MultiCurve to lod4MultiCurve relations. If those characteristics shall be represented semantically, the features BridgeInstalla-tion or BridgeConstructionElement can be used (see section 10.5.2). All relations to semantic objects and geo-metric properties are listed in Tab. 7.</p>
@@ -3169,7 +3328,7 @@ Many of these concepts have been moved into the Construction module. They should
 <div class="content">
 <img src="figures/null.png" alt="null">
 </div>
-<div class="title">Figure 30. Bridge model in LOD1 – LOD4. (source: Karlsruhe Institute of Technology (KIT)).</div>
+<div class="title">Figure 36. Bridge model in LOD1 – LOD4. (source: Karlsruhe Institute of Technology (KIT)).</div>
 </div>
 <div class="paragraph">
 <p>The semantic attributes of an _AbstractBridge are class, function, usage and is_movable. The attribute class is used to classify bridges, e.g. to distinguish different construction types (cf. Fig. 48). The attribute function allows representing the utilization of the bridge independently of the construction. Possible values may be railway bridge, roadway bridge, pedestrian bridge, aqueduct, etc. The option to denote a usage which is divergent to one of the primary functions of the bridge (function) is given by the attribute usage. The type of these attributes is gml:CodeType, the values of which can be defined in code lists. The name of the bridge can be represented by the gml:name attribute, which is inherited from the base class gml:_GML via the classes gml:_Feature, _CityObject, and _Site. Each Bridge or BridgePart feature may be assigned zero or more addresses using the address property. The corresponding AddressPropertyType is defined within the CityGML core module (cf. chapter 10.1.4).</p>
@@ -3324,7 +3483,7 @@ the following are annimated GIFs. Currently these do not render for PDF.
 <div class="content">
 <img src="figures/inwork/Figure_47_5.gif" alt="[align=&quot;center&quot;">
 </div>
-<div class="title">Figure 31. Examples for movable bridges (source: ISO 6707).</div>
+<div class="title">Figure 37. Examples for movable bridges (source: ISO 6707).</div>
 </div>
 </div>
 <div class="sect3">
@@ -3408,7 +3567,7 @@ insert Fig 49 - currently does not render
 <div class="content">
 <img src="figures/inwork/Figure_50.png" alt="Figure 50">
 </div>
-<div class="title">Figure 32. Different BoundarySurfaces of a bridge.</div>
+<div class="title">Figure 38. Different BoundarySurfaces of a bridge.</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3535,7 +3694,7 @@ need to add annotations to Figure 50
 <div class="content">
 <img src="../standard/figures/Bridge.png" alt="Bridge">
 </div>
-<div class="title">Figure 33. UML diagram of the Bridge Model.</div>
+<div class="title">Figure 39. UML diagram of the Bridge Model.</div>
 </div>
 <div class="paragraph">
 <p>The ADE data types provided for the Bridge module are illustrated in <a href="#bridge-uml-ade-types">ADE classes of the CityGML Bridge module.</a>.</p>
@@ -3544,7 +3703,7 @@ need to add annotations to Figure 50
 <div class="content">
 <img src="../standard/figures/Bridge-ADE_Datatypes.png" alt="Bridge ADE Datatypes">
 </div>
-<div class="title">Figure 34. ADE classes of the CityGML Bridge module.</div>
+<div class="title">Figure 40. ADE classes of the CityGML Bridge module.</div>
 </div>
 <div class="paragraph">
 <p>The Code Lists provided for the Bridge module are illustrated in <a href="#bridge-uml-codelists">Codelists from the CityGML Bridge module.</a>.</p>
@@ -3553,7 +3712,7 @@ need to add annotations to Figure 50
 <div class="content">
 <img src="../standard/figures/Bridge-Codelists.png" alt="Bridge Codelists">
 </div>
-<div class="title">Figure 35. Codelists from the CityGML Bridge module.</div>
+<div class="title">Figure 41. Codelists from the CityGML Bridge module.</div>
 </div>
 </div>
 <div class="sect3">
@@ -3570,7 +3729,7 @@ need to add annotations to Figure 50
 <div class="content">
 <img src="figures/inwork/Figure_51_b.png" alt="Figure 51 b">
 </div>
-<div class="title">Figure 36. The bridge of Rees, consisting of a Bridge feature and three BridgePart features (left). The bridge contains BridgeConstructionElement and BridgeInstallation features (right).</div>
+<div class="title">Figure 42. The bridge of Rees, consisting of a Bridge feature and three BridgePart features (left). The bridge contains BridgeConstructionElement and BridgeInstallation features (right).</div>
 </div>
 <div class="paragraph">
 <p>In the following Fig. 52, the main part of the bridge of Rees is shown as photograph on the left side (source: Harald Halfpapp), and the corresponding part of the LOD2 bridge model is depicted on the the right side (source: District of Recklinghausen / KIT).</p>
@@ -3591,7 +3750,7 @@ Figures 52, 53 and 54 are from the images folder.
 <div class="content">
 <img src="images/Fig52.jpg" alt="][align=&quot;center&quot;">
 </div>
-<div class="title">Figure 37. The bridge of Rees (left photo (source: Harald Halfpapp); right LOD2 model (source: District of Recklinghausen / KIT)).</div>
+<div class="title">Figure 43. The bridge of Rees (left photo (source: Harald Halfpapp); right LOD2 model (source: District of Recklinghausen / KIT)).</div>
 </div>
 <div class="paragraph">
 <p>There are two bridges crossing the river Rhine at Karlsruhe, Germany. The first one is a two track railway bridge constructed as a truss bridge (cf. Fig. 53 front). The second one is a four lane highway bridge constructed as a cable-stayed bridge (cf. Fig. 53 background).</p>
@@ -3600,7 +3759,7 @@ Figures 52, 53 and 54 are from the images folder.
 <div class="content">
 <img src="images/Fig53.jpg" alt="][align=&quot;center&quot;">
 </div>
-<div class="title">Figure 38. Bridge over the river Rhine at Karlsruhe (left a photo, right the 3D CityGML model) (source: Karlsruhe Institute of Technology (KIT), courtesy of City of Karlsruhe).</div>
+<div class="title">Figure 44. Bridge over the river Rhine at Karlsruhe (left a photo, right the 3D CityGML model) (source: Karlsruhe Institute of Technology (KIT), courtesy of City of Karlsruhe).</div>
 </div>
 <div class="paragraph">
 <p>In CityGML both bridges are modeled as single Bridge object with BridgeConstructionElements and BridgeIn-stallations. The construction elements of the cable stayed bridge are the footings on both river sides and in the middle of the river, as well as the cables and the pylon. The construction elements of the truss bridge are the footings and the truss itself. Both bridges have several railings which are modeled as BridgeInstallation.
@@ -3610,7 +3769,7 @@ The bridge “Oberbaumbrücke” shown in Fig. 54 is located in the centre of Be
 <div class="content">
 <img src="images/Fig54.jpg" alt="][align=&quot;center&quot;">
 </div>
-<div class="title">Figure 39. The bridge“Oberbaumbrücke” in Berlin represented as bridge model in LOD4 (left a photo, right the 3D CityGML model) (source: Berlin Senate of Business, Technology and Women; Business Location Center, Berlin; Technische Universität Berlin; Karlsruhe Institute of Technology (KIT)).</div>
+<div class="title">Figure 45. The bridge“Oberbaumbrücke” in Berlin represented as bridge model in LOD4 (left a photo, right the 3D CityGML model) (source: Berlin Senate of Business, Technology and Women; Business Location Center, Berlin; Technische Universität Berlin; Karlsruhe Institute of Technology (KIT)).</div>
 </div>
 </div>
 </div>
@@ -3650,7 +3809,7 @@ Figure needs to be updated
 <div class="content">
 <img src="images/Fig26.jpg" alt="Fig26">
 </div>
-<div class="title">Figure 40. Examples for city or building models in LOD1 (upper left), LOD2 (upper right), and LOD3 (lower left). (source: District of Recklinghausen, m-g-h ingenieure+architekten GmbH).</div>
+<div class="title">Figure 46. Examples for city or building models in LOD1 (upper left), LOD2 (upper right), and LOD3 (lower left). (source: District of Recklinghausen, m-g-h ingenieure+architekten GmbH).</div>
 </div>
 </div>
 <div class="sect3">
@@ -3819,7 +3978,7 @@ The following content is from CityGML 2.0 with some updates to CityGML 3.0. Some
 <div class="content">
 <img src="../standard/figures/Building.png" alt="Building">
 </div>
-<div class="title">Figure 41. UML diagram of CityGML’s building model.</div>
+<div class="title">Figure 47. UML diagram of CityGML’s building model.</div>
 </div>
 <div class="paragraph">
 <p>The geometric representation and semantic structure of an <a href="#abstract-building-concept">AbstractBuilding</a> is shown in <a href="#Figure-27">[Figure-27]</a>. The model is successively refined from LOD0 to LOD3. Therefore, not all components of a building model are represented equally in each LOD and not all aggregation levels are allowed in each LOD. In CityGML, all object classes are associated to the LODs with respect to the proposed minimum acquisition criteria for each LOD. An object can be represented simultaneously in different LODs by providing distinct geometries for the corresponding LODs.</p>
@@ -3854,7 +4013,7 @@ The following content is from CityGML 2.0 with some updates to CityGML 3.0. Some
 <div class="content">
 <img src="figures/Figure_28.png" alt="Figure 28">
 </div>
-<div class="title">Figure 42. Examples of buildings consisting of one and two building parts (source: City of Coburg)</div>
+<div class="title">Figure 48. Examples of buildings consisting of one and two building parts (source: City of Coburg)</div>
 </div>
 </div>
 <div class="sect4">
@@ -3896,13 +4055,13 @@ The following content is from CityGML 2.0 with some updates to CityGML 3.0. Some
 <div class="content">
 <img src="figures/inwork/Figure_29_b.png" alt="Figure 29 b">
 </div>
-<div class="title">Figure 43. The two possibilities of modeling a building in LOD0 using horizontal 3D surfaces. On the left, the building footprint (lod0FootPrint) is shown (cyan) which denotes the shape of the building on the ground. The corresponding surface representation is located at ground level. On the right, the lod0RoofEgde representation is illustrated (cyan) which results from a horizontal projection of the building’s roof and which is located at the eaves height (source: Karlsruhe Institute of Technology (KIT), courtesy of Franz-Josef Kaiser).</div>
+<div class="title">Figure 49. The two possibilities of modeling a building in LOD0 using horizontal 3D surfaces. On the left, the building footprint (lod0FootPrint) is shown (cyan) which denotes the shape of the building on the ground. The corresponding surface representation is located at ground level. On the right, the lod0RoofEgde representation is illustrated (cyan) which results from a horizontal projection of the building’s roof and which is located at the eaves height (source: Karlsruhe Institute of Technology (KIT), courtesy of Franz-Josef Kaiser).</div>
 </div>
 <div id="figure-30" class="imageblock text-center">
 <div class="content">
 <img src="figures/inwork/Figure_30.png" alt="Figure 30">
 </div>
-<div class="title">Figure 44. Building model in LOD1 – LOD4 (source: Karlsruhe Institute of Technology (KIT), courtesy of Franz-Josef Kaiser).&lt;o:p&gt;&lt;/o:p&gt;</div>
+<div class="title">Figure 50. Building model in LOD1 – LOD4 (source: Karlsruhe Institute of Technology (KIT), courtesy of Franz-Josef Kaiser).&lt;o:p&gt;&lt;/o:p&gt;</div>
 </div>
 <div class="paragraph">
 <p>Tab. 5 shows the correspondence of the different geometric and semantic themes of the building model to LODs. In LOD1 – 3, the volume of a building can be expressed by a GM_Solid geometry and/or a GM_MultiSurface geometry. The definition of a 3D Terrain Intersection Curve (TIC), used to integrate buildings from different sources with the Digital Terrain Model, is also possible in LOD1 – 3. The TIC can – but does not have to – build closed rings around the building or building parts.</p>
@@ -4092,7 +4251,7 @@ Is this now AbstractConstructionSurface?
 <div class="content">
 <img src="figures/Figure_31.png" alt="Figure 31">
 </div>
-<div class="title">Figure 45. Examples of the classification of _BoundarySurfaces of the outer building shell (source: Karlsruhe Institute of Technology (KIT))</div>
+<div class="title">Figure 51. Examples of the classification of _BoundarySurfaces of the outer building shell (source: Karlsruhe Institute of Technology (KIT))</div>
 </div>
 <div id="figure-32" class="imageblock text-center">
 <div class="content">
@@ -4103,7 +4262,7 @@ Is this now AbstractConstructionSurface?
 <div class="content">
 <img src="figures/inwork/Figure_32_b.png" alt="Figure 32 b">
 </div>
-<div class="title">Figure 46. Classification of BoundarySurfaces (left), in particular for Openings (right) (graphic: IGG Uni Bonn).</div>
+<div class="title">Figure 52. Classification of BoundarySurfaces (left), in particular for Openings (right) (graphic: IGG Uni Bonn).</div>
 </div>
 </div>
 <div class="sect4">
@@ -4199,7 +4358,7 @@ Is this now AbstractConstructionSurface?
 <div class="content">
 <img src="figures/Figure_33.jpg" alt="Figure 33">
 </div>
-<div class="title">Figure 47. Accessibility graph derived from topological adjacencies of room surfaces (graphic: IGG Uni Bonn).</div>
+<div class="title">Figure 53. Accessibility graph derived from topological adjacencies of room surfaces (graphic: IGG Uni Bonn).</div>
 </div>
 </div>
 <div class="sect4">
@@ -4249,7 +4408,7 @@ Is this now AbstractConstructionSurface?
 <div class="content">
 <img src="../standard/figures/Building.png" alt="Building">
 </div>
-<div class="title">Figure 48. UML diagram of CityGML’s building model.</div>
+<div class="title">Figure 54. UML diagram of CityGML’s building model.</div>
 </div>
 <div class="paragraph">
 <p>The ADE data types provided for the Building module are illustrated in <a href="#building-uml-ade-types">ADE classes of the CityGML Building module.</a>.</p>
@@ -4258,7 +4417,7 @@ Is this now AbstractConstructionSurface?
 <div class="content">
 <img src="../standard/figures/Building-ADE_Datatypes.png" alt="Building ADE Datatypes">
 </div>
-<div class="title">Figure 49. ADE classes of the CityGML Building module.</div>
+<div class="title">Figure 55. ADE classes of the CityGML Building module.</div>
 </div>
 <div class="paragraph">
 <p>The Code Lists provided for the Building module are illustrated in <a href="#building-uml-codelists">Codelists from the CityGML Building module.</a>.</p>
@@ -4267,7 +4426,7 @@ Is this now AbstractConstructionSurface?
 <div class="content">
 <img src="../standard/figures/Building-Codelists.png" alt="Building Codelists">
 </div>
-<div class="title">Figure 50. Codelists from the CityGML Building module.</div>
+<div class="title">Figure 56. Codelists from the CityGML Building module.</div>
 </div>
 </div>
 <div class="sect3">
@@ -4284,7 +4443,7 @@ Is this now AbstractConstructionSurface?
 <div class="content">
 <img src="figures/inwork/Figure_34_b.png" alt="Figure 34 b">
 </div>
-<div class="title">Figure 51. LOD1 model of the KIT Campus North (source: Karlsruhe Institute of Technology (KIT)).</div>
+<div class="title">Figure 57. LOD1 model of the KIT Campus North (source: Karlsruhe Institute of Technology (KIT)).</div>
 </div>
 <div class="paragraph">
 <p>An example for a fully textured LOD2 building model is given in Fig. 35 which shows the Bernhardus church located in the city of Karlsruhe, Germany. On the left side of Fig. 35, a photograph of the church in real world is shown whereas the CityGML building model of the church with photorealistic textures is illustrated on the right. The model is bounded by a ground surface, several wall and roof surfaces. The railing above the church clock is modeled as a building installation (BuildingInstallation).</p>
@@ -4298,7 +4457,7 @@ Is this now AbstractConstructionSurface?
 <div class="content">
 <img src="figures/inwork/Figure_35_b.png" alt="Figure 35 b">
 </div>
-<div class="title">Figure 52. Textured LOD2 model of the Bernhardus church in Karlsruhe (source: Karlsruhe Institute of Technology (KIT), courtesy of City of Karlsruhe).</div>
+<div class="title">Figure 58. Textured LOD2 model of the Bernhardus church in Karlsruhe (source: Karlsruhe Institute of Technology (KIT), courtesy of City of Karlsruhe).</div>
 </div>
 <div class="paragraph">
 <p>The model shown in Fig. 36 was derived from a 3D CAD model generated during the planning phase of the building. On the left side of Fig. 36, the building is shown whereas on the right side the LOD3 model is present-ed. The building itself is bounded by wall surfaces, roof surfaces and a ground surface. Doors and windows are modeled including reveals. According to the cadaster data, the car port next to the building is not part of the building. Therefore the car port, the balcony and the chimney are modeled as building installations (BuildingIn-stallation). The model also contains the terrain intersection curve (lod3TerrainIntersection) as planned by the architect.</p>
@@ -4315,7 +4474,7 @@ Is this now AbstractConstructionSurface?
 <div class="content">
 <img src="figures/inwork/Figure_36_b.png" alt="Figure 36 b">
 </div>
-<div class="title">Figure 53. Example of a buildingmodeled in the Level of Detail 3. The chimney, the balcony and the car port are modeled as building installations (source: Karlsruhe Institute of Technology (KIT), courtesy of Franz-Josef Kaiser).</div>
+<div class="title">Figure 59. Example of a buildingmodeled in the Level of Detail 3. The chimney, the balcony and the car port are modeled as building installations (source: Karlsruhe Institute of Technology (KIT), courtesy of Franz-Josef Kaiser).</div>
 </div>
 </div>
 </div>
@@ -4376,7 +4535,7 @@ The following text needs to be reviewed and updated.
 <div class="content">
 <img src="figures/inwork/Figure_67_b.jpg" alt="Figure 67 b">
 </div>
-<div class="title">Figure 54. Real situation showing a bus stop (left). The advertising billboard and the refuge are modelled as CityFurniture objects in the right image (source: 3D city model of Barkenberg).</div>
+<div class="title">Figure 60. Real situation showing a bus stop (left). The advertising billboard and the refuge are modelled as CityFurniture objects in the right image (source: 3D city model of Barkenberg).</div>
 </div>
 <div id="figure-68" class="imageblock text-center">
 <div class="content">
@@ -4387,7 +4546,7 @@ The following text needs to be reviewed and updated.
 <div class="content">
 <img src="figures/inwork/Figure_68_b.jpg" alt="Figure 68 b">
 </div>
-<div class="title">Figure 55. Real situation showing lanterns and delimitation stakes (left). In the right image they are modelled as CityFurniture ob-jects with ImplicitGeometry representations (source: 3D city model of Barkenberg).</div>
+<div class="title">Figure 61. Real situation showing lanterns and delimitation stakes (left). In the right image they are modelled as CityFurniture ob-jects with ImplicitGeometry representations (source: 3D city model of Barkenberg).</div>
 </div>
 <div class="paragraph">
 <p>The class CityFurniture may have the attributes <code>class</code>, <code>function</code> and <code>usage</code>. Their possible values can be specified in corresponding <a href="#ug-codelist-section">code lists</a>. The class <code>attribute</code> allows an object classification like traffic light, traffic sign, delimitation stake, or garbage can, and can occur only once. The <code>function</code> attribute describes to which thematic area the city furniture object belongs to (e.g. transportation, traffic regulation, architecture), and can occur multiple times. The attribute <code>usage</code> denotes the real purpose of the object.</p>
@@ -4411,7 +4570,7 @@ The following text needs to be reviewed and updated.
 <div class="content">
 <img src="../standard/figures/CityFurniture.png" alt="CityFurniture">
 </div>
-<div class="title">Figure 56. UML diagram of CityGML’s City Furniture model.</div>
+<div class="title">Figure 62. UML diagram of CityGML’s City Furniture model.</div>
 </div>
 <div class="paragraph">
 <p>The ADE data types and Code Lists provided for the CityFurniture module are illustrated in <a href="#cityfurniture-uml-ade-types">ADE classes and Code Lists of the CityGML CityFurniture module.</a>.</p>
@@ -4420,7 +4579,7 @@ The following text needs to be reviewed and updated.
 <div class="content">
 <img src="../standard/figures/CityFurniture-with_codelists_and_ADE_datatypes.png" alt="CityFurniture with codelists and ADE datatypes">
 </div>
-<div class="title">Figure 57. ADE classes and Code Lists of the CityGML CityFurniture module.</div>
+<div class="title">Figure 63. ADE classes and Code Lists of the CityGML CityFurniture module.</div>
 </div>
 </div>
 <div class="sect3">
@@ -4447,7 +4606,7 @@ the following example is from version 2.0
 <div class="content">
 <img src="figures/Figure_70.png" alt="Figure 70">
 </div>
-<div class="title">Figure 58. Example of a simple city furniture object (source: District of Recklinghausen).</div>
+<div class="title">Figure 64. Example of a simple city furniture object (source: District of Recklinghausen).</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -4518,7 +4677,7 @@ A type of <a href="#abstract-logical-space-concept">AbstractLogicalSpace</a>.</p
 <div class="content">
 <img src="../standard/figures/CityObjectGroup.png" alt="CityObjectGroup">
 </div>
-<div class="title">Figure 59. UML diagram of the City Object Group Model.</div>
+<div class="title">Figure 65. UML diagram of the City Object Group Model.</div>
 </div>
 <div class="paragraph">
 <p>The ADE data types provided for the CityObjectGroup module are illustrated in <a href="#cityobject-uml-ade-types">ADE classes of the CityGML CityObjectGroup module.</a>.</p>
@@ -4527,7 +4686,7 @@ A type of <a href="#abstract-logical-space-concept">AbstractLogicalSpace</a>.</p
 <div class="content">
 <img src="../standard/figures/CityObjectGroup-ADE_Datatypes.png" alt="CityObjectGroup ADE Datatypes">
 </div>
-<div class="title">Figure 60. ADE classes of the CityGML CityObjectGroup module.</div>
+<div class="title">Figure 66. ADE classes of the CityGML CityObjectGroup module.</div>
 </div>
 <div class="paragraph">
 <p>The Code Lists provided for the CityObjectGroup module are illustrated in <a href="#cityobject-uml-codelists">Codelists from the CityGML CityObjectGroup module.</a>.</p>
@@ -4536,7 +4695,7 @@ A type of <a href="#abstract-logical-space-concept">AbstractLogicalSpace</a>.</p
 <div class="content">
 <img src="../standard/figures/CityObjectGroup-Codelists.png" alt="CityObjectGroup Codelists">
 </div>
-<div class="title">Figure 61. Codelists from the CityGML CityObjectGroup module.</div>
+<div class="title">Figure 67. Codelists from the CityGML CityObjectGroup module.</div>
 </div>
 </div>
 <div class="sect3">
@@ -4606,29 +4765,46 @@ A type of <a href="#abstract-logical-space-concept">AbstractLogicalSpace</a>.</p
 <div class="paragraph">
 <p>The Construction module defines concepts that are inherited and, where necessary, are specialized by the modules Building, Bridge, and Tunnel  (cf. <a href="#ug_model_building_section">Building Model</a>, <a href="#ug_model_bridge_section">Bridge Model</a>, and <a href="#ug_model_tunnel_section">Tunnel Model</a>).</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-in-work section
-</td>
-</tr>
-</table>
-</div>
 </div>
 <div class="sect3">
-<h4 id="_construction_geometry"><a class="anchor" href="#_construction_geometry"></a>8.7.4. Construction Geometry</h4>
+<h4 id="ug-construction-space-section"><a class="anchor" href="#ug-construction-space-section"></a>8.7.4. Construction Spaces</h4>
+
+</div>
+<div class="sect3">
+<h4 id="ug-construction-surfaces-section"><a class="anchor" href="#ug-construction-surfaces-section"></a>8.7.5. Construction Surfaces</h4>
+
+</div>
+<div class="sect3">
+<h4 id="ug-construction-lod-section"><a class="anchor" href="#ug-construction-lod-section"></a>8.7.6. Levels of Detail</h4>
 <div class="paragraph">
-<p>The semantic structure of a <code>Construction Model</code> is shown in <a href="#construction-uml">Figure 32</a>. The «FeatureType» classes in this model fall into two categories; <code>Spaces</code> and <code>Surfaces</code>. <code>Spaces</code> are descended from the <a href="#abstract-occupied-space-concept">AbstractOccupiedSpace</a> class and inherit their geometry from this class. <code>Surfaces</code> are decended from the <a href="#abstract-thematic-surface-concept">AbstractThematicSurface</a> class and inherit their geometry from that class.</p>
+<p>The different Levels of Detail are defined in the following way:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>LOD 0: Volumetric real-world objects (Spaces) can be spatially represented by a single point, by a set of curves, <span class="underline">or by</span> a set of surfaces.<br>
+Areal real-world objects (Space Boundaries) can be spatially represented in LOD0 by a set of curves or a set of surfaces. LOD0 surface representations are typically the result of a projection of the shape of a volumetric object onto a plane parallel to the ground, hence, representing a footprint (e.g. a building footprint or a floor plan of the rooms inside a building). LOD0 curve representations are either the result of a projection of the shape of a vertical surface (e.g. a wall surface) onto a grounding plane or the skeleton of a volumetric shape of longitudinal extent such as a road or river segment.</p>
+</li>
+<li>
+<p>LOD 1: Volumetric real-world objects (Spaces) are spatially represented by a vertical extrusion solid, i.e. a solid created from a horizontal footprint by vertical extrusion.<br>
+Areal real-world objects (Space Boundaries) can be spatially represented in LOD1 by a set of horizontal or vertical surfaces.</p>
+</li>
+<li>
+<p>LOD 2: Volumetric real-world objects (Spaces) can be spatially represented by a set of curves, a set of surfaces, or a single solid geometry.<br>
+Areal real-world objects (Space Boundaries) can be spatially represented in LOD2 by a set of surfaces. The shape of the real-world object is generalized in LOD2 and smaller details (e.g. bulges, dents, sills, but also structures like e.g. balconies or dormers of buildings) are typically neglected.<br>
+LOD2 curve representations are skeletons of volumetric shapes of longitudinal extent like an antenna or a chimney.</p>
+</li>
+<li>
+<p>LOD 3: Volumetric real-world objects (Spaces) can be spatially represented by a set of curves, a set of surfaces, or a single solid geometry.<br>
+Areal real-world objects (Space Boundaries) can be spatially represented in LOD3 by a set of surfaces. LOD3 is the highest level of detail and respective geometries include all available shape details.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>A <code>Construction Model</code> is successively refined from LOD0 to LOD3. Therefore, not all components of a construction model are represented equally in each LOD and not all aggregation levels are allowed in each LOD. In CityGML, all object classes are associated to the LODs with respect to the proposed minimum acquisition criteria for each LOD. An object can be represented simultaneously in different LODs by providing distinct geometries for the corresponding LODs.</p>
 </div>
 <div class="sect4">
-<h5 id="_lod0"><a class="anchor" href="#_lod0"></a>LOD0</h5>
+<h5 id="ug-construction-lod0-section"><a class="anchor" href="#ug-construction-lod0-section"></a>LOD0</h5>
 <div class="paragraph">
 <p>In LOD0, a <code>Construction Object</code> can be represented by two horizontal, 3-dimensional surfaces (<a href="#abstract-thematic-surface-concept">AbstractThematicSurface</a>). These two surfaces represent the foot-print of a <code>Construction Object</code> and a top surface such as a roof edge (see <a href="#figure-lod0">Figure 31</a>). This allows the easy integration of 2D data into the model.</p>
 </div>
@@ -4665,20 +4841,20 @@ in-work section
 <div class="content">
 <img src="figures/null.png" alt="null">
 </div>
-<div class="title">Figure 62. Modeling a construction (building) in LOD0 (source: Karlsruhe Institute of Technology (KIT), courtesy of Franz-Josef Kaiser).</div>
+<div class="title">Figure 68. Modeling a construction (building) in LOD0 (source: Karlsruhe Institute of Technology (KIT), courtesy of Franz-Josef Kaiser).</div>
 </div>
 <div class="paragraph">
 <p>Note that at LOD0 a <code>construction object</code> also has a <code>Space</code> geometry but that geometry is limited to no more than one <a href="#GM_Point-section">GM_Point</a>.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_lod1"><a class="anchor" href="#_lod1"></a>LOD1</h5>
+<h5 id="ug-construction-lod1-section"><a class="anchor" href="#ug-construction-lod1-section"></a>LOD1</h5>
 <div class="paragraph">
 <p>In LOD1, a <code>construction object</code> consists of the generalized geometric shape of the object (<a href="#GM_Solid-section">GM_Solid</a>) as represented by its' boundary sufaces. The boundary surfaces are <a href="#abstract-thematic-surface-concept">AbstractThematicSurfaces</a> identified by the <code>boundary</code> attribute. Optionally, a <a href="#GM_MultiCurve-section">GM_MultiCurve</a> representing the <a href="#terrain-intersection-curve-concept">TerrainIntersectionCurve</a> can also be specified.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_lod2"><a class="anchor" href="#_lod2"></a>LOD2</h5>
+<h5 id="ug-construction-lod2-section"><a class="anchor" href="#ug-construction-lod2-section"></a>LOD2</h5>
 <div class="paragraph">
 <p>This geometric representation is refined in LOD2 by additional <a href="#GM_MultiSurface-section">GM_MultiSurface</a>, <a href="#GM_MultiCurve-section">GM_MultiCurve</a>, and <a href="#GM_Solid-section">GM_Solid</a> geometries, used for modelling architectural details like roof overhangs, columns, or antennas.</p>
 </div>
@@ -4736,7 +4912,7 @@ LOD2 and LOD3 needs some work. It would be helpful if we could identify which Th
 </div>
 </div>
 <div class="sect4">
-<h5 id="_lod3"><a class="anchor" href="#_lod3"></a>LOD3</h5>
+<h5 id="ug-construction-lod3-section"><a class="anchor" href="#ug-construction-lod3-section"></a>LOD3</h5>
 <div class="paragraph">
 <p>In LOD3, the openings in <a href="#building-constructive-element-concept">BuildingConstructiveElement</a> objects (doors and windows) can be represented as thematic objects. In LOD4, the highest level of resolution, also the interior of a building, composed of several rooms, is represented in the building model by the class Room. This enlargement allows a virtual accessibility of buildings, e.g. for visitor information in a museum (“Location Based Services“), the examination of accommodation standards or the presentation of daylight illumination of a building. The aggregation of rooms according to arbitrary, user defined criteria (e.g. for defining the rooms corresponding to a certain storey) is achieved by employing the general grouping concept provided by CityGML (cf. chapter 10.3.6). Interior installations of a building, i.e. objects within a building which (in contrast to furniture) cannot be moved, are represented by the class IntBuildingInstallation. If an installation is attached to a specific room (e.g. radiators or lamps), they are associated with the Room class, otherwise (e.g. in case of rafters or pipes) with _AbstractBuilding. A Room may have the attributes class, function and usage whose value can be defined in code lists (chapter 10.3.8 and annex C.1). The class attribute allows a classification of rooms with respect to the stated function, e.g. commercial or private rooms, and occurs only once. The function attribute is intended to express the main purpose of the room, e.g. living room, kitchen. The attribute usage can be used if the way the object is actually used differs from the function. Both attributes can occur multiple times.</p>
 </div>
@@ -4747,14 +4923,19 @@ LOD2 and LOD3 needs some work. It would be helpful if we could identify which Th
 <div class="content">
 <img src="figures/inwork/Figure_30.png" alt="Figure 30">
 </div>
-<div class="title">Figure 63. Building model in LOD1 – LOD4 (source: Karlsruhe Institute of Technology (KIT), courtesy of Franz-Josef Kaiser).&lt;o:p&gt;&lt;/o:p&gt;</div>
+<div class="title">Figure 69. Building model in LOD1 – LOD4 (source: Karlsruhe Institute of Technology (KIT), courtesy of Franz-Josef Kaiser).&lt;o:p&gt;&lt;/o:p&gt;</div>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="ug-construction-occupied-spaces-section"><a class="anchor" href="#ug-construction-occupied-spaces-section"></a>8.7.5. Occupied Spaces (class AbstractOccupiedSpace)</h4>
+<h4 id="ug-construction-spaces-and-surfaces-section"><a class="anchor" href="#ug-construction-spaces-and-surfaces-section"></a>8.7.7. Spaces and Surfaces</h4>
+<div class="paragraph">
+<p>The semantic structure of a <code>Construction Model</code> is shown in <a href="#construction-uml">Figure 32</a>. The «FeatureType» classes in this model fall into two categories; <code>Spaces</code> and <code>Surfaces</code>. <code>Spaces</code> are descended from the <a href="#abstract-occupied-space-concept">AbstractOccupiedSpace</a> class and inherit their geometry from this class. <code>Surfaces</code> are decended from the <a href="#abstract-thematic-surface-concept">AbstractThematicSurface</a> class and inherit their geometry from that class.</p>
+</div>
 <div class="sect4">
-<h5 id="ug-abstract-construction-section"><a class="anchor" href="#ug-abstract-construction-section"></a>Abstract Construction (class AbstractConstruction)</h5>
+<h5 id="ug-construction-occupied-spaces-section"><a class="anchor" href="#ug-construction-occupied-spaces-section"></a>Occupied Spaces (class AbstractOccupiedSpace)</h5>
+<div class="sect5">
+<h6 id="ug-abstract-construction-section"><a class="anchor" href="#ug-abstract-construction-section"></a>Abstract Construction (class AbstractConstruction)</h6>
 <div class="paragraph">
 <p>The <a href="#abstract-construction-concept">AbstractConstruction</a> class is used for free-standing, self-supporting constructions. It represents the construction as a whole. A construction composed of structural segments differing in, for example, the number of storeys or the roof type has to be separated into one Construction having one or more additional Construction Elements (see <a href="#figure-28">Examples of buildings consisting of one and two building parts (source: City of Coburg)</a>). The geometry and non-spatial properties of the central part of the construction should be represented in the aggregating Construction feature.</p>
 </div>
@@ -4793,14 +4974,14 @@ LOD2 and LOD3 needs some work. It would be helpful if we could identify which Th
 <p><a href="#abstract-construction-concept">AbstractConstruction</a> is a subclass of <a href="#abstract-occupied-space-concept">AbstractOccupiedSpace</a> and inherits the geometry properties from that class.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="ug-other-construction-section"><a class="anchor" href="#ug-other-construction-section"></a>Other Construction (class OtherConstruction)</h5>
+<div class="sect5">
+<h6 id="ug-other-construction-section"><a class="anchor" href="#ug-other-construction-section"></a>Other Construction (class OtherConstruction)</h6>
 <div class="paragraph">
 <p><strong><em>Under construction</em></strong></p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="ug-abstract-construction-element-section"><a class="anchor" href="#ug-abstract-construction-element-section"></a>Abstract Construction Element (class AbstractConstructionElement)</h5>
+<div class="sect5">
+<h6 id="ug-abstract-construction-element-section"><a class="anchor" href="#ug-abstract-construction-element-section"></a>Abstract Construction Element (class AbstractConstructionElement)</h6>
 <div class="paragraph">
 <p>The class <a href="#abstract-construction-element-concept">AbstractConstructionElement</a> is derived from <a href="#abstract-occupied-space-concept">AbstractOccupiedSpace</a>. Subclasses of this class are used to identify the constiuent parts of a <code>Construc tion Object</code> (see <a href="#figure-28">Examples of buildings consisting of one and two building parts (source: City of Coburg)</a>). A <code>construction element</code> object should be uniquely related to exactly one <code>construction</code> or <code>construction element</code> object.</p>
 </div>
@@ -4827,17 +5008,17 @@ LOD2 and LOD3 needs some work. It would be helpful if we could identify which Th
 <div class="content">
 <img src="figures/Figure_28.png" alt="Figure 28">
 </div>
-<div class="title">Figure 64. Examples of buildings consisting of one and two building parts (source: City of Coburg)</div>
+<div class="title">Figure 70. Examples of buildings consisting of one and two building parts (source: City of Coburg)</div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="ug-abstract-furniture-section"><a class="anchor" href="#ug-abstract-furniture-section"></a>Abstract Furniture (class AbstractFurniture)</h5>
+<div class="sect5">
+<h6 id="ug-abstract-furniture-section"><a class="anchor" href="#ug-abstract-furniture-section"></a>Abstract Furniture (class AbstractFurniture)</h6>
 <div class="paragraph">
 <p><code>Construction Objects</code> may have <code>Furnitures</code> and <code>Installations</code>. An <a href="#ug-abstract-furniture-section">AbstractFurniture</a> is a movable part of a <code>Construction</code>, such as a chair or table. An <a href="#ug-abstract-furniture-section">AbstractFurniture</a> object should be uniquely related to exactly one <code>Construction Object</code>. Its geometry may be represented by an explicit geometry or an <a href="#implicit-geometry-concept">ImplicitGeometry</a> object. Following the concept of <a href="#implicit-geometry-concept">ImplicitGeometry</a> the geometry of a prototype bridge furniture is stored only once in a local coordinate system and referenced by other <code>furniture</code> features.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="ug-abstract-installation-section"><a class="anchor" href="#ug-abstract-installation-section"></a>Abstract Installation (class AbstractInstallation)</h5>
+<div class="sect5">
+<h6 id="ug-abstract-installation-section"><a class="anchor" href="#ug-abstract-installation-section"></a>Abstract Installation (class AbstractInstallation)</h6>
 <div class="paragraph">
 <p>An <a href="#abstract-installation-section">AbstractInstallation</a> is an object inside a <code>Construction Object</code> with a specialised function or semantic meaning. In contrast to <code>Furniture</code>, <a href="#abstract-installation-section">AbstractInstallation</a> are permanently attached to the structure and cannot be moved. Examples for <a href="#abstract-installation-section">AbstractInstallation</a> are stairways, railings and heaters. An <a href="#abstract-installation-section">AbstractInstallation</a> object should be uniquely related to exactly one <code>Construction Object</code>. Its geometry may be represented by an explicit geometry or an <a href="#implicit-geometry-concept">ImplicitGeometry</a> object. Following the concept of <a href="#implicit-geometry-concept">ImplicitGeometry</a> the geometry of a prototype bridge furniture is stored only once in a local coordinate system and referenced by other <code>furniture</code> features.</p>
 </div>
@@ -4848,111 +5029,112 @@ LOD2 and LOD3 needs some work. It would be helpful if we could identify which Th
 <p><a href="#abstract-installation-section">AbstractInstallation</a> is a subclass of <a href="#abstract-occupied-space-concept">AbstractOccupiedSpace</a> and inherits the geometry properties from that class.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="ug-abstract-filling-element-section"><a class="anchor" href="#ug-abstract-filling-element-section"></a>Abstract Filling Element (class AbsrtactFillingElement)</h5>
+<div class="sect5">
+<h6 id="ug-abstract-filling-element-section"><a class="anchor" href="#ug-abstract-filling-element-section"></a>Abstract Filling Element (class AbsrtactFillingElement)</h6>
 <div class="paragraph">
 <p>The class <a href="#ug-abstract-filling-element-section">AbsrtactFillingElement</a> is the abstract base class for semantically describing openings like doors or windows in outer or inner boundary surfaces like walls and roofs. Openings only exist in models of LOD3. Each _Opening is associated with a <a href="#GM_MultiSurface-section">GM_MultiSurface</a> geometry. Alternatively, the geometry may be given as <a href="#implicit-geometry-concept">ImplicitGeometry</a> object. Following the concept of <a href="#implicit-geometry-concept">ImplicitGeometry</a> the geometry of a prototype opening is stored only once in a local coordinate system and referenced by other opening features.</p>
 </div>
-<div class="sect5">
-<h6 id="ug-window-section"><a class="anchor" href="#ug-window-section"></a>Window (class Window)</h6>
+<div id="ug-window-section" class="paragraph">
+<p>======= Window (class Window)</p>
+</div>
 <div class="paragraph">
 <p>The class Window is used for modelling windows in the exterior shell of a <code>Construction Object</code>, or between adjacent <code>Construction Elements</code>. The formal difference between the classes Window and Door is that – in normal cases – Windows are not specifically intended for the transit of people or vehicles.</p>
 </div>
+<div id="ug-door-section" class="paragraph">
+<p>======= Door (class Door)</p>
 </div>
-<div class="sect5">
-<h6 id="ug-door-section"><a class="anchor" href="#ug-door-section"></a>Door (class Door)</h6>
 <div class="paragraph">
 <p>The class Door is used for modelling doors in the exterior shell of a <code>Construction Object</code>, or between adjacent <code>Construction Elements</code>. Doors can be used by people to enter or leave a <code>Construction Object</code> or <code>Construction Element</code>. In contrast to a <a href="#ug-construction-closure-surface-section">ClosureSurface</a> a door may be closed, blocking the transit of people. A Door may be assigned zero or more addresses. The corresponding Address-PropertyType is defined within the CityGML core module.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect3">
-<h4 id="ug-construction-abstract-thematic-surface-section"><a class="anchor" href="#ug-construction-abstract-thematic-surface-section"></a>8.7.6. Thematic Surfaces (class AbstractThematicSurface)</h4>
-<div class="paragraph">
-<p><strong><em>Under construction</em></strong></p>
-</div>
 <div class="sect4">
-<h5 id="ug-abstract-filling-surface-section"><a class="anchor" href="#ug-abstract-filling-surface-section"></a>Filling Surfaces (class AbstractFillingSurface)</h5>
+<h5 id="ug-construction-abstract-thematic-surface-section"><a class="anchor" href="#ug-construction-abstract-thematic-surface-section"></a>Thematic Surfaces (class AbstractThematicSurface)</h5>
 <div class="paragraph">
 <p><strong><em>Under construction</em></strong></p>
 </div>
 <div class="sect5">
-<h6 id="ug-door-surface-section"><a class="anchor" href="#ug-door-surface-section"></a>Door Surface (class DoorSurface)</h6>
+<h6 id="ug-abstract-filling-surface-section"><a class="anchor" href="#ug-abstract-filling-surface-section"></a>Filling Surfaces (class AbstractFillingSurface)</h6>
 <div class="paragraph">
 <p><strong><em>Under construction</em></strong></p>
 </div>
+<div id="ug-door-surface-section" class="paragraph">
+<p>======= Door Surface (class DoorSurface)</p>
 </div>
-<div class="sect5">
-<h6 id="ug-window-surface-section"><a class="anchor" href="#ug-window-surface-section"></a>Window Surface (class WindowSurface)</h6>
 <div class="paragraph">
 <p><strong><em>Under construction</em></strong></p>
 </div>
+<div id="ug-window-surface-section" class="paragraph">
+<p>======= Window Surface (class WindowSurface)</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="ug-abstract-construction-surface-section"><a class="anchor" href="#ug-abstract-construction-surface-section"></a>Construction Surfaces (class AbstractConstructionSurface)</h5>
-<div class="paragraph">
-<p><strong><em>Under construction</em></strong></p>
-</div>
-<div class="sect5">
-<h6 id="ug-roof-surface-section"><a class="anchor" href="#ug-roof-surface-section"></a>Roof (class RoofSurface),</h6>
 <div class="paragraph">
 <p><strong><em>Under construction</em></strong></p>
 </div>
 </div>
 <div class="sect5">
-<h6 id="ug-ground-surface-section"><a class="anchor" href="#ug-ground-surface-section"></a>Ground Plate (class GroundSurface)</h6>
+<h6 id="ug-abstract-construction-surface-section"><a class="anchor" href="#ug-abstract-construction-surface-section"></a>Construction Surfaces (class AbstractConstructionSurface)</h6>
+<div class="paragraph">
+<p><strong><em>Under construction</em></strong></p>
+</div>
+<div id="ug-roof-surface-section" class="paragraph">
+<p>======= Roof (class RoofSurface),</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Under construction</em></strong></p>
+</div>
+<div id="ug-ground-surface-section" class="paragraph">
+<p>======= Ground Plate (class GroundSurface)</p>
+</div>
 <div class="paragraph">
 <p>The ground plate of a <code>Construction</code> or <code>Constructive Element</code> is modelled by the class <a href="#ug-ground-surface-section">GroundSurface</a>. The polygon defining the ground plate is congruent with the construction&#8217;s footprint. However, the surface normal of the ground plate is pointing downwards.</p>
 </div>
+<div id="ug-wall-surface-section" class="paragraph">
+<p>======= External Walls (class WallSurface),</p>
 </div>
-<div class="sect5">
-<h6 id="ug-wall-surface-section"><a class="anchor" href="#ug-wall-surface-section"></a>External Walls (class WallSurface),</h6>
 <div class="paragraph">
 <p>All parts of the <code>Construction</code> facade belonging to the outer shell can be modelled by the class <a href="#ug-wall-surface-section">WallSurface</a>.</p>
 </div>
+<div id="ug-interior-wall-surface-section" class="paragraph">
+<p>======= Interior Walls (class InteriorWallSurface)</p>
 </div>
-<div class="sect5">
-<h6 id="ug-interior-wall-surface-section"><a class="anchor" href="#ug-interior-wall-surface-section"></a>Interior Walls (class InteriorWallSurface)</h6>
 <div class="paragraph">
 <p><strong><em>Under construction</em></strong></p>
 </div>
+<div id="ug-floor-surface-section" class="paragraph">
+<p>======= Interior Floors (class FloorSurface)</p>
 </div>
-<div class="sect5">
-<h6 id="ug-floor-surface-section"><a class="anchor" href="#ug-floor-surface-section"></a>Interior Floors (class FloorSurface)</h6>
 <div class="paragraph">
 <p><strong><em>Under construction</em></strong></p>
 </div>
+<div id="ug-exterior-floor-surface-section" class="paragraph">
+<p>======= Exterior Floors (class OuterFloorSurface),</p>
 </div>
-<div class="sect5">
-<h6 id="ug-exterior-floor-surface-section"><a class="anchor" href="#ug-exterior-floor-surface-section"></a>Exterior Floors (class OuterFloorSurface),</h6>
 <div class="paragraph">
 <p>A mostly horizontal surface belonging to the outer shell of the <code>Construction Object</code> and with the orientation pointing upwards can be modeled as an <a href="#ug-exterior-floor-surface-section">OuterFloorSurface</a>.</p>
 </div>
+<div id="ug-ceiling-surface-section" class="paragraph">
+<p>======= Interior Ceiling (class CeilingSurface),</p>
 </div>
-<div class="sect5">
-<h6 id="ug-ceiling-surface-section"><a class="anchor" href="#ug-ceiling-surface-section"></a>Interior Ceiling (class CeilingSurface),</h6>
 <div class="paragraph">
 <p><strong><em>Under construction</em></strong></p>
 </div>
+<div id="ug-exterior-ceiling-surface-section" class="paragraph">
+<p>======= Exterior Ceiling (class OuterCeilingSurface),</p>
 </div>
-<div class="sect5">
-<h6 id="ug-exterior-ceiling-surface-section"><a class="anchor" href="#ug-exterior-ceiling-surface-section"></a>Exterior Ceiling (class OuterCeilingSurface),</h6>
 <div class="paragraph">
 <p>A mostly horizontal surface belonging to the outer shell of the <code>Construction Object</code> and having the orientation pointing downwards can be modeled as an <a href="#ug-exterior-ceiling-surface-section">OuterCeilingSurface</a>.</p>
 </div>
 </div>
-</div>
-<div class="sect4">
-<h5 id="ug-construction-closure-surface-section"><a class="anchor" href="#ug-construction-closure-surface-section"></a>Closure Surface (class <a href="#closure-surface-concept">ClosureSurface</a>).</h5>
+<div class="sect5">
+<h6 id="ug-construction-closure-surface-section"><a class="anchor" href="#ug-construction-closure-surface-section"></a>Closure Surface (class <a href="#closure-surface-concept">ClosureSurface</a>).</h6>
 <div class="paragraph">
 <p>An opening in a <code>Construction Object</code> not filled by a <a href="#ug-door-section">door</a> or <a href="#ug-window-section">window</a> can be sealed by a virtual surface called a <a href="#closure-surface-concept">ClosureSurface</a>. Hence, <code>Constructions</code> with open sides can be virtually closed in order to be able to compute their volume.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="sect3">
-<h4 id="_uml_model"><a class="anchor" href="#_uml_model"></a>8.7.7. UML Model</h4>
+<h4 id="_uml_model"><a class="anchor" href="#_uml_model"></a>8.7.8. UML Model</h4>
 <div class="paragraph">
 <p>The UML diagram of the Construction module is depicted in <a href="#construction-uml">Figure 32</a>.</p>
 </div>
@@ -4960,7 +5142,7 @@ LOD2 and LOD3 needs some work. It would be helpful if we could identify which Th
 <div class="content">
 <img src="../standard/figures/Construction.png" alt="Construction">
 </div>
-<div class="title">Figure 65. UML diagram of the Construction Model.</div>
+<div class="title">Figure 71. UML diagram of the Construction Model.</div>
 </div>
 <div class="paragraph">
 <p>The ADE data types provided for the Construction module are illustrated in <a href="#construction-uml-ade-types">Figure 33</a>.</p>
@@ -4969,7 +5151,7 @@ LOD2 and LOD3 needs some work. It would be helpful if we could identify which Th
 <div class="content">
 <img src="../standard/figures/Construction-ADE_Datatypes.png" alt="Construction ADE Datatypes">
 </div>
-<div class="title">Figure 66. ADE classes of the CityGML Construction module.</div>
+<div class="title">Figure 72. ADE classes of the CityGML Construction module.</div>
 </div>
 <div class="paragraph">
 <p>The Code Lists provided for the Construction module are illustrated in <a href="#construction-uml-codelists">Figure 34</a>.</p>
@@ -4978,11 +5160,11 @@ LOD2 and LOD3 needs some work. It would be helpful if we could identify which Th
 <div class="content">
 <img src="../standard/figures/Construction-Codelists.png" alt="Construction Codelists">
 </div>
-<div class="title">Figure 67. Codelists from the CityGML Construction module.</div>
+<div class="title">Figure 73. Codelists from the CityGML Construction module.</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="ug_construction_examples_section"><a class="anchor" href="#ug_construction_examples_section"></a>8.7.8. Examples</h4>
+<h4 id="ug_construction_examples_section"><a class="anchor" href="#ug_construction_examples_section"></a>8.7.9. Examples</h4>
 
 </div>
 </div>
@@ -5069,7 +5251,7 @@ LOD2 and LOD3 needs some work. It would be helpful if we could identify which Th
 <div class="content">
 <img src="../standard/figures/Dynamizer.png" alt="Dynamizer">
 </div>
-<div class="title">Figure 68. UML diagram of the Dynamizer Model.</div>
+<div class="title">Figure 74. UML diagram of the Dynamizer Model.</div>
 </div>
 <div class="paragraph">
 <p>The ADE data types provided for the Dynamizer module are illustrated in <a href="#dynamizer-uml-ade-types">ADE classes of the CityGML Dynamizer module.</a>.</p>
@@ -5078,7 +5260,7 @@ LOD2 and LOD3 needs some work. It would be helpful if we could identify which Th
 <div class="content">
 <img src="../standard/figures/Dynamizer-ADE_Datatypes.png" alt="Dynamizer ADE Datatypes">
 </div>
-<div class="title">Figure 69. ADE classes of the CityGML Dynamizer module.</div>
+<div class="title">Figure 75. ADE classes of the CityGML Dynamizer module.</div>
 </div>
 <div class="paragraph">
 <p>The Code Lists provided for the Dynamizer module are illustrated in <a href="#dynamizer-uml-codelists">Codelists from the CityGML Dynamizer module.</a>.</p>
@@ -5087,7 +5269,7 @@ LOD2 and LOD3 needs some work. It would be helpful if we could identify which Th
 <div class="content">
 <img src="../standard/figures/Dynamizer-Codelists.png" alt="Dynamizer Codelists">
 </div>
-<div class="title">Figure 70. Codelists from the CityGML Dynamizer module.</div>
+<div class="title">Figure 76. Codelists from the CityGML Dynamizer module.</div>
 </div>
 </div>
 <div class="sect3">
@@ -5165,7 +5347,7 @@ Generic city objects are represented in the UML model by the top-level feature t
 <div class="content">
 <img src="../standard/figures/Generics.png" alt="Generics">
 </div>
-<div class="title">Figure 71. UML diagram of the Generics Model.</div>
+<div class="title">Figure 77. UML diagram of the Generics Model.</div>
 </div>
 <div class="paragraph">
 <p>The ADE data types provided for the Generics module are illustrated in <a href="#generics-uml-ade-types">ADE classes of the CityGML Generics module.</a>.</p>
@@ -5174,7 +5356,7 @@ Generic city objects are represented in the UML model by the top-level feature t
 <div class="content">
 <img src="../standard/figures/Generics-ADE_Datatypes.png" alt="Generics ADE Datatypes">
 </div>
-<div class="title">Figure 72. ADE classes of the CityGML Generics module.</div>
+<div class="title">Figure 78. ADE classes of the CityGML Generics module.</div>
 </div>
 <div class="paragraph">
 <p>The Code Lists provided for the Generics module are illustrated in <a href="#generics-uml-codelists">Codelists from the CityGML Generics module.</a>.</p>
@@ -5183,7 +5365,7 @@ Generic city objects are represented in the UML model by the top-level feature t
 <div class="content">
 <img src="../standard/figures/Generics-Codelists.png" alt="Generics Codelists">
 </div>
-<div class="title">Figure 73. Codelists from the CityGML Generics module.</div>
+<div class="title">Figure 79. Codelists from the CityGML Generics module.</div>
 </div>
 </div>
 <div class="sect3">
@@ -5243,7 +5425,7 @@ A type of <a href="#abstract-thematic-surface-concept">AbstractThematicSurface</
 <div class="content">
 <img src="figures/Figure_72.png" alt="Figure 72">
 </div>
-<div class="title">Figure 74. LOD0 regional model consisting of land use objects in CityGML (source: IGG Uni Bonn).</div>
+<div class="title">Figure 80. LOD0 regional model consisting of land use objects in CityGML (source: IGG Uni Bonn).</div>
 </div>
 </div>
 <div class="sect3">
@@ -5255,7 +5437,7 @@ A type of <a href="#abstract-thematic-surface-concept">AbstractThematicSurface</
 <div class="content">
 <img src="../standard/figures/LandUse.png" alt="LandUse">
 </div>
-<div class="title">Figure 75. UML diagram of the Land Use Model.</div>
+<div class="title">Figure 81. UML diagram of the Land Use Model.</div>
 </div>
 <div class="paragraph">
 <p>The ADE data types provided for the Land Use module are illustrated in <a href="#landuse-uml-ade-types">ADE classes of the CityGML Land Use module.</a>.</p>
@@ -5264,7 +5446,7 @@ A type of <a href="#abstract-thematic-surface-concept">AbstractThematicSurface</
 <div class="content">
 <img src="../standard/figures/LandUse-ADE_Datatypes.png" alt="LandUse ADE Datatypes">
 </div>
-<div class="title">Figure 76. ADE classes of the CityGML Land Use module.</div>
+<div class="title">Figure 82. ADE classes of the CityGML Land Use module.</div>
 </div>
 <div class="paragraph">
 <p>The Code Lists provided for the Land Use module are illustrated in <a href="#landuse-uml-codelists">Codelists from the CityGML Land Use module.</a>.</p>
@@ -5273,7 +5455,7 @@ A type of <a href="#abstract-thematic-surface-concept">AbstractThematicSurface</
 <div class="content">
 <img src="../standard/figures/LandUse-Codelists.png" alt="LandUse Codelists">
 </div>
-<div class="title">Figure 77. Codelists from the CityGML Land Use module.</div>
+<div class="title">Figure 83. Codelists from the CityGML Land Use module.</div>
 </div>
 </div>
 <div class="sect3">
@@ -5327,7 +5509,7 @@ A type of <a href="#abstract-pointcloud-concept">AbstractPointCloud</a>.</p>
 <div class="content">
 <img src="../standard/figures/PointCloud.png" alt="PointCloud">
 </div>
-<div class="title">Figure 78. UML diagram of the Point Cloud Model.</div>
+<div class="title">Figure 84. UML diagram of the Point Cloud Model.</div>
 </div>
 <div class="paragraph">
 <p>The ADE data types provided for the Point Cloud module are illustrated in <a href="#pointcloud-uml-ade-types">ADE classes of the CityGML Point Cloud module.</a>.</p>
@@ -5336,7 +5518,7 @@ A type of <a href="#abstract-pointcloud-concept">AbstractPointCloud</a>.</p>
 <div class="content">
 <img src="../standard/figures/PointCloud-ADE_Datatypes.png" alt="PointCloud ADE Datatypes">
 </div>
-<div class="title">Figure 79. ADE classes of the CityGML Point Cloud module.</div>
+<div class="title">Figure 85. ADE classes of the CityGML Point Cloud module.</div>
 </div>
 </div>
 <div class="sect3">
@@ -5445,7 +5627,7 @@ A type of <a href="#abstract-relief-component-concept">AbstractReliefComponent</
 <div class="content">
 <img src="figures/Figure_25.png" alt="Figure 25">
 </div>
-<div class="title">Figure 80. Nested DTMs in CityGML using validity extent polygons (graphic: IGG Uni Bonn).</div>
+<div class="title">Figure 86. Nested DTMs in CityGML using validity extent polygons (graphic: IGG Uni Bonn).</div>
 </div>
 <div class="paragraph">
 <p>Accuracy and resolution of the DTM are not necessarily dependent on features of other CityGML extenstion modules such as building models. Hence, there is the possibility to integrate building models with higher LOD to a DTM with lower accuracy or resolution.</p>
@@ -5466,7 +5648,7 @@ A type of <a href="#abstract-relief-component-concept">AbstractReliefComponent</
 <div class="content">
 <img src="../standard/figures/Relief.png" alt="Relief">
 </div>
-<div class="title">Figure 81. UML diagram of Relief module.</div>
+<div class="title">Figure 87. UML diagram of Relief module.</div>
 </div>
 <div class="paragraph">
 <p>The ADE data types provided for the Relief module are illustrated in <a href="#relief-uml-ade-types">ADE classes of the CityGML Relief module.</a>.</p>
@@ -5475,7 +5657,7 @@ A type of <a href="#abstract-relief-component-concept">AbstractReliefComponent</
 <div class="content">
 <img src="../standard/figures/Relief-ADE_Datatypes.png" alt="Relief ADE Datatypes">
 </div>
-<div class="title">Figure 82. ADE classes of the CityGML Relief module.</div>
+<div class="title">Figure 88. ADE classes of the CityGML Relief module.</div>
 </div>
 </div>
 <div class="sect3">
@@ -5587,7 +5769,7 @@ Need to add a waterway to figure 57.
 <div class="content">
 <img src="figures/inwork/Figure_57_4.jpg" alt="Figure 57 4">
 </div>
-<div class="title">Figure 83. Transportation classes (from left to right: examples of road, track, rail, waterway, and square) (source: Rheinmetall Defence Electronics)</div>
+<div class="title">Figure 89. Transportation classes (from left to right: examples of road, track, rail, waterway, and square) (source: Rheinmetall Defence Electronics)</div>
 </div>
 <div class="paragraph">
 <p>Two major concepts associated with all transportation classes are Traffic Space and Auxillary Traffic Space. Traffic Space describes the space that traffic can traverse. Auxillary Traffic Spaces are associated spaces where traffic does not traverse.</p>
@@ -5624,7 +5806,7 @@ image::figures/Figure_58.png[align="center"]</p>
 <div class="content">
 <img src="figures/inwork/Figure_60_2.png" alt="Figure 60 2">
 </div>
-<div class="title">Figure 84. Transportation Concepts in LOD0, 1, and 2-3 (example shows part of a motorway) (source: Rheinmetall Defence Electronics).</div>
+<div class="title">Figure 90. Transportation Concepts in LOD0, 1, and 2-3 (example shows part of a motorway) (source: Rheinmetall Defence Electronics).</div>
 </div>
 <div class="paragraph">
 <p>In LOD0 areal transportation objects, like squares, should be modeled in the same way as in GDF. GDF is the ISO standard for transportation networks and is used in most car navigation systems. In GDF a square is typically represented as a ring surrounding the place and to which the incident roads connect. CityGML does not cover further functional aspects of transportation network models (e.g. speed limits) as it is intended to complement and not replace existing standards like GDF. However, if specific functional aspects have to be associated with CityGML transportation objects, generic attributes provided by CityGML’s <a href="#ug_model_generics_section">Generics</a> module can be used.</p>
@@ -5636,7 +5818,7 @@ image::figures/Figure_58.png[align="center"]</p>
 <div class="content">
 <img src="figures/Figure_61.png" alt="Figure 61">
 </div>
-<div class="title">Figure 85. TransportationComplex in LOD 2-3: representation of a road with a complex cross-section profile (example shows urban road) (source: Rheinmetall Defence Electronics).</div>
+<div class="title">Figure 91. TransportationComplex in LOD 2-3: representation of a road with a complex cross-section profile (example shows urban road) (source: Rheinmetall Defence Electronics).</div>
 </div>
 </div>
 <div class="sect3">
@@ -5648,7 +5830,7 @@ image::figures/Figure_58.png[align="center"]</p>
 <div class="content">
 <img src="../standard/figures/Transportation.png" alt="Transportation">
 </div>
-<div class="title">Figure 86. UML diagram of the Transportation Model.</div>
+<div class="title">Figure 92. UML diagram of the Transportation Model.</div>
 </div>
 <div class="paragraph">
 <p>The ADE data types provided for the Transportation module are illustrated in <a href="#transportation-uml-ade-types">ADE classes of the CityGML Transportation module.</a>.</p>
@@ -5657,7 +5839,7 @@ image::figures/Figure_58.png[align="center"]</p>
 <div class="content">
 <img src="../standard/figures/Transportation-ADE_Datatypes.png" alt="Transportation ADE Datatypes">
 </div>
-<div class="title">Figure 87. ADE classes of the CityGML Transportation module.</div>
+<div class="title">Figure 93. ADE classes of the CityGML Transportation module.</div>
 </div>
 <div class="paragraph">
 <p>The Code Lists provided for the Transportation module are illustrated in <a href="#transportation-uml-codelists">Codelists from the CityGML Transportation module.</a>.</p>
@@ -5666,7 +5848,7 @@ image::figures/Figure_58.png[align="center"]</p>
 <div class="content">
 <img src="../standard/figures/Bridge-Codelists.png" alt="Bridge Codelists">
 </div>
-<div class="title">Figure 88. Codelists from the CityGML Transportation module.</div>
+<div class="title">Figure 94. Codelists from the CityGML Transportation module.</div>
 </div>
 </div>
 <div class="sect3">
@@ -5720,7 +5902,7 @@ image::figures/Figure_58.png[align="center"]</p>
 <div class="content">
 <img src="figures/inwork/Figure_62_b.jpg" alt="Figure 62 b">
 </div>
-<div class="title">Figure 89. Complex urban intersection (left: linear transportation network with surface descriptions and external references, right: generated scene) (source: Rheinmetall Defence Electronics).</div>
+<div class="title">Figure 95. Complex urban intersection (left: linear transportation network with surface descriptions and external references, right: generated scene) (source: Rheinmetall Defence Electronics).</div>
 </div>
 </div>
 </div>
@@ -5841,7 +6023,7 @@ This figure is from CityGML 2.0. It needs to be updated for CityGML 3.0
 <div class="content">
 <img src="figures/null.png" alt="null">
 </div>
-<div class="title">Figure 90. Examples for tunnel models in LOD1 (upper left), LOD2 (upper right), LOD3 (lower left) and LOD4 (lower right) (source: Google 3D warehouse).</div>
+<div class="title">Figure 96. Examples for tunnel models in LOD1 (upper left), LOD2 (upper right), LOD3 (lower left) and LOD4 (lower right) (source: Google 3D warehouse).</div>
 </div>
 <div class="sect4">
 <h5 id="ug_tunnel-class"><a class="anchor" href="#ug_tunnel-class"></a>Tunnel Class</h5>
@@ -5858,7 +6040,7 @@ This figure is from CityGML 2.0. It needs to be updated for CityGML 3.0
 <div class="content">
 <img src="figures/Figure_39.jpg" alt="Figure 39">
 </div>
-<div class="title">Figure 91. Example of a tunnel modeled with two tunnel parts (source: Helmut Stracke).</div>
+<div class="title">Figure 97. Example of a tunnel modeled with two tunnel parts (source: Helmut Stracke).</div>
 </div>
 </div>
 <div class="sect4">
@@ -5980,7 +6162,7 @@ This figure is from CityGML 2.0 and needs to be updated to the CityGML 3.0 LODs.
 <div class="content">
 <img src="figures/null.png" alt="null">
 </div>
-<div class="title">Figure 92. Tunnel model in LOD1 – LOD4 (source: Karlsruhe Institute of Technology (KIT)).</div>
+<div class="title">Figure 98. Tunnel model in LOD1 – LOD4 (source: Karlsruhe Institute of Technology (KIT)).</div>
 </div>
 <div class="paragraph">
 <p><a href="#abstracttunnel_semantics">Table 8</a> shows the correspondence of the different geometric and semantic themes of the tunnel model to LODs. In each LOD, the volume of a tunnel can be expressed by a <a href="#GM_Solid-section">GM_Solid</a> geometry and/or a <a href="#GM_MultiSurface">MultiSurface</a> geometry. The definition of a 3D <a href="#terrain-intersection-curve-section">Terrain Intersection Curve (TIC)</a>, used to integrate tunnels from different sources with the Digital Terrain Model, is also possible in all LODs. The TIC can – but does not have to – build closed rings around the tunnel or tunnel parts.</p>
@@ -6171,7 +6353,7 @@ The term Boundary Surface is never defined.
 <div class="content">
 <img src="../standard/figures/Tunnel.png" alt="Tunnel">
 </div>
-<div class="title">Figure 93. UML diagram of the Tunnel Model.</div>
+<div class="title">Figure 99. UML diagram of the Tunnel Model.</div>
 </div>
 <div class="paragraph">
 <p>The ADE data types provided for the Tunnel module are illustrated in <a href="#tunnel-uml-ade-types">Figure 43</a>.</p>
@@ -6180,7 +6362,7 @@ The term Boundary Surface is never defined.
 <div class="content">
 <img src="../standard/figures/Tunnel-ADE_Datatypes.png" alt="Tunnel ADE Datatypes">
 </div>
-<div class="title">Figure 94. ADE classes of the CityGML Tunnel module.</div>
+<div class="title">Figure 100. ADE classes of the CityGML Tunnel module.</div>
 </div>
 <div class="paragraph">
 <p>The Code Lists provided for the Tunnel module are illustrated in <a href="#tunnel-uml-codelists">Figure 44</a>.</p>
@@ -6189,7 +6371,7 @@ The term Boundary Surface is never defined.
 <div class="content">
 <img src="../standard/figures/Tunnel-Codelists.png" alt="Tunnel Codelists">
 </div>
-<div class="title">Figure 95. Codelists from the CityGML Tunnel module.</div>
+<div class="title">Figure 101. Codelists from the CityGML Tunnel module.</div>
 </div>
 </div>
 <div class="sect3">
@@ -6206,7 +6388,7 @@ The term Boundary Surface is never defined.
 <div class="content">
 <img src="figures/inwork/Figure_42_b.png" alt="Figure 42 b">
 </div>
-<div class="title">Figure 96. Example of a tunnel modeled in LOD3 (real situation on the left side; CityGML model on the right side) (source: Karlsruhe Institute of Technology (KIT), courtesy of City of Karlsruhe).</div>
+<div class="title">Figure 102. Example of a tunnel modeled in LOD3 (real situation on the left side; CityGML model on the right side) (source: Karlsruhe Institute of Technology (KIT), courtesy of City of Karlsruhe).</div>
 </div>
 <div id="figure-43" class="imageblock">
 <div class="content">
@@ -6217,7 +6399,7 @@ The term Boundary Surface is never defined.
 <div class="content">
 <img src="figures/inwork/Figure_43_b.png" alt="Figure 43 b">
 </div>
-<div class="title">Figure 97. The same LOD3 tunnel shown from a different perspective. The camera is positioned in front of the left entrance and pointing in the direction of the right entrance. (real situation on the left side; CityGML model on the right side). The model on the right also includes an LOD1 representation of the nearby buildings in the background (painted in light brown) (source: Karlsruhe Institute of Technology (KIT), courtesy of City of Karlsruhe).</div>
+<div class="title">Figure 103. The same LOD3 tunnel shown from a different perspective. The camera is positioned in front of the left entrance and pointing in the direction of the right entrance. (real situation on the left side; CityGML model on the right side). The model on the right also includes an LOD1 representation of the nearby buildings in the background (painted in light brown) (source: Karlsruhe Institute of Technology (KIT), courtesy of City of Karlsruhe).</div>
 </div>
 <div class="paragraph">
 <p>The model is subdivided into one Tunnel (the actual underpass) and two TunnelParts (both entrances). The tunnel and tunnel parts are bounded by GroundSurface, WallSurface, RoofSurface. ClosureSurface objects are used to virtually seal the tunnel entrances. For safety reasons each of the two entrances has railings which are modeled as TunnelInstallation. Due to the high geometrical accuracy and the semantic richness, the model is classified as LOD3.</p>
@@ -6268,7 +6450,7 @@ A type of <a href="#abstract-occupied-space-concept">AbstractOccupiedSpace</a>.<
 <div class="content">
 <img src="figures/Figure_63.png" alt="Figure 63">
 </div>
-<div class="title">Figure 98. Example for vegetation objects of the classes SolitaryVegetationObject and PlantCover (graphic: District of Recklinghausen).</div>
+<div class="title">Figure 104. Example for vegetation objects of the classes SolitaryVegetationObject and PlantCover (graphic: District of Recklinghausen).</div>
 </div>
 </div>
 <div class="sect3">
@@ -6285,7 +6467,7 @@ A type of <a href="#abstract-occupied-space-concept">AbstractOccupiedSpace</a>.<
 <div class="content">
 <img src="figures/inwork/Figure_65_b.jpg" alt="Figure 65 b">
 </div>
-<div class="title">Figure 99. Visualisation of a vegetation object in different seasons (source: District of Recklinghausen).</div>
+<div class="title">Figure 105. Visualisation of a vegetation object in different seasons (source: District of Recklinghausen).</div>
 </div>
 <div class="paragraph">
 <p>A SolitaryVegetationObject or a PlantCover may have a different geometry in each LOD. Whereas a SolitaryVegetationObject is associated with the <code>Geometry</code> class representing an arbitrary geometry, a PlantCover is restricted to be either a <code>MultiSolid</code> or a <code>MultiSurface</code>. An example of a PlantCover modeled as MultiSolid is a ‘solid forest model’ (see <a href="#figure-66">Example for the visualisation/modelling of a solid forest (source: District of Recklinghausen).</a>).</p>
@@ -6294,7 +6476,7 @@ A type of <a href="#abstract-occupied-space-concept">AbstractOccupiedSpace</a>.<
 <div class="content">
 <img src="figures/Figure_66.png" alt="Figure 66">
 </div>
-<div class="title">Figure 100. Example for the visualisation/modelling of a solid forest (source: District of Recklinghausen).</div>
+<div class="title">Figure 106. Example for the visualisation/modelling of a solid forest (source: District of Recklinghausen).</div>
 </div>
 </div>
 <div class="sect3">
@@ -6315,7 +6497,7 @@ A type of <a href="#abstract-occupied-space-concept">AbstractOccupiedSpace</a>.<
 <div class="content">
 <img src="../standard/figures/Vegetation.png" alt="Vegetation">
 </div>
-<div class="title">Figure 101. UML diagram of the Vegetation Model.</div>
+<div class="title">Figure 107. UML diagram of the Vegetation Model.</div>
 </div>
 <div class="paragraph">
 <p>The ADE data types provided for the Vegetation module are illustrated in <a href="#vegetation-uml-ade-types">ADE classes of the CityGML Vegetation module.</a>.</p>
@@ -6324,7 +6506,7 @@ A type of <a href="#abstract-occupied-space-concept">AbstractOccupiedSpace</a>.<
 <div class="content">
 <img src="../standard/figures/Vegetation-ADE_Datatypes.png" alt="Vegetation ADE Datatypes">
 </div>
-<div class="title">Figure 102. ADE classes of the CityGML Vegetation module.</div>
+<div class="title">Figure 108. ADE classes of the CityGML Vegetation module.</div>
 </div>
 <div class="paragraph">
 <p>The Code Lists provided for the Vegetation module are illustrated in <a href="#vegetation-uml-codelists">Codelists from the CityGML Vegetation module.</a>.</p>
@@ -6333,7 +6515,7 @@ A type of <a href="#abstract-occupied-space-concept">AbstractOccupiedSpace</a>.<
 <div class="content">
 <img src="../standard/figures/Vegetation-Codelists.png" alt="Vegetation Codelists">
 </div>
-<div class="title">Figure 103. Codelists from the CityGML Vegetation module.</div>
+<div class="title">Figure 109. Codelists from the CityGML Vegetation module.</div>
 </div>
 </div>
 <div class="sect3">
@@ -6405,7 +6587,7 @@ A type of <a href="#abstract-version-transition-concept">AbstractVersionTransiti
 <div class="content">
 <img src="../standard/figures/Versioning.png" alt="Versioning">
 </div>
-<div class="title">Figure 104. UML diagram of the Versioning Model.</div>
+<div class="title">Figure 110. UML diagram of the Versioning Model.</div>
 </div>
 <div class="paragraph">
 <p>The ADE data types provided for the Versioning module are illustrated in <a href="#versioning-uml-ade-types">ADE classes of the CityGML Versioning module.</a>.</p>
@@ -6414,7 +6596,7 @@ A type of <a href="#abstract-version-transition-concept">AbstractVersionTransiti
 <div class="content">
 <img src="../standard/figures/Versioning-ADE_Datatypes.png" alt="Versioning ADE Datatypes">
 </div>
-<div class="title">Figure 105. ADE classes of the CityGML Versioning module.</div>
+<div class="title">Figure 111. ADE classes of the CityGML Versioning module.</div>
 </div>
 </div>
 <div class="sect3">
@@ -6473,7 +6655,7 @@ A type of <a href="#abstract-version-transition-concept">AbstractVersionTransiti
 <div class="content">
 <img src="figures/Figure_55.png" alt="Figure 55">
 </div>
-<div class="title">Figure 106. Illustration of a water body defined in CityGML (graphic: IGG Uni Bonn).</div>
+<div class="title">Figure 112. Illustration of a water body defined in CityGML (graphic: IGG Uni Bonn).</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -6519,7 +6701,7 @@ A type of <a href="#abstract-version-transition-concept">AbstractVersionTransiti
 <div class="content">
 <img src="../standard/figures/WaterBody.png" alt="WaterBody">
 </div>
-<div class="title">Figure 107. UML diagram of the Water Body Model.</div>
+<div class="title">Figure 113. UML diagram of the Water Body Model.</div>
 </div>
 <div class="paragraph">
 <p>The ADE data types provided for the Water Body module are illustrated in <a href="#waterbody-uml-ade-types">ADE classes of the CityGML Water Body module.</a>.</p>
@@ -6528,7 +6710,7 @@ A type of <a href="#abstract-version-transition-concept">AbstractVersionTransiti
 <div class="content">
 <img src="../standard/figures/WaterBody-ADE_Datatypes.png" alt="WaterBody ADE Datatypes">
 </div>
-<div class="title">Figure 108. ADE classes of the CityGML Water Body module.</div>
+<div class="title">Figure 114. ADE classes of the CityGML Water Body module.</div>
 </div>
 <div class="paragraph">
 <p>The Code Lists provided for the Water Body module are illustrated in <a href="#waterbody-uml-codelists">Codelists from the CityGML Water Body module.</a>.</p>
@@ -6537,7 +6719,7 @@ A type of <a href="#abstract-version-transition-concept">AbstractVersionTransiti
 <div class="content">
 <img src="../standard/figures/WaterBody-Codelists.png" alt="WaterBody Codelists">
 </div>
-<div class="title">Figure 109. Codelists from the CityGML Water Body module.</div>
+<div class="title">Figure 115. Codelists from the CityGML Water Body module.</div>
 </div>
 </div>
 <div class="sect3">
@@ -6690,7 +6872,7 @@ insert example here (GML?)
 <div class="content">
 <img src="../standard/figures/CityGMLPackageDiagram.png" alt="CityGMLPackageDiagram">
 </div>
-<div class="title">Figure 110. CityGML UML Packages</div>
+<div class="title">Figure 116. CityGML UML Packages</div>
 </div>
 <div class="sect2">
 <h3 id="ISO-classes-dd"><a class="anchor" href="#ISO-classes-dd"></a>9.1. ISO Classes</h3>
@@ -30475,7 +30657,7 @@ Volume is the measure of the physical space of any 3-D geometric object.<br>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-01-03 21:53:18 UTC
+Last updated 2021-01-05 02:15:03 UTC
 </div>
 </div>
 </body>

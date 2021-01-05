@@ -94,7 +94,7 @@ The following is a summary of the key concepts described by the Core Module. Thi
 [[implicit-geometry-concept]]
 *ImplicitGeometry*: A geometry representation where the shape is stored only once as a prototypical geometry, for example a tree or other vegetation object, a traffic light or a traffic sign. This prototypic geometry object can be re-used or referenced many times, wherever the corresponding feature occurs in the 3D city model. A type of <<abstract-feature-concept,Abstract Feature>>.
 
-[[ISO-dependencies-section]]
+[[ug-iso-dependencies-section]]
 ==== ISO Dependencies
 
 CityGML builds on the ISO 19100 family of standards. The applicable standards are identified in <<ISO-in-CityGML-diagram>>. A <<ISO-classes-dd,Data dictionaries>> is also included for all of the ISO-defined classes explicitly referenced in the CityGML UML model. These data dictionaries are provided for the convenience of the user. The ISO standards are the normative source.
@@ -103,7 +103,10 @@ CityGML builds on the ISO 19100 family of standards. The applicable standards ar
 .Use of ISO Standards in CityGML
 image::../standard/figures/Core/ISOandOASISstandardsinCityGML.png[align="center"]
 
-The ISO classes explicitly used in the CityGML UML model introduced in <<iso-class-table>>. Detailed descriptions are provided in the  <<ISO-classes-dd,Data Dictionary>>.
+[[ug-iso-classes-section]]
+===== ISO Classes 
+
+The ISO classes explicitly used in the CityGML UML model are introduced in <<iso-class-table>>. Detailed descriptions are provided in the  <<ISO-classes-dd,Data Dictionary>>.
 
 [[iso-class-table,Table {counter:table-num}]]
 .ISO Classes used in CityGML
@@ -125,6 +128,111 @@ The ISO classes explicitly used in the CityGML UML model introduced in <<iso-cla
 |<<SC_CRS-section,SC_CRS>> |Coordinate reference system which is usually single but may be compound.
 |<<TM_Position-section,TM_Position>> |A union class that consists of one of the data types listed as its attributes.
 |===
+
+[[ug-iso-geometry-section]]
+===== ISO Geometry
+
+The most common geometry concept found in the CityGML 3.0 Standard is the concept of <<ug-gm-multiprimitive-section,multi-primitives>>. These are homogeneous collections of <<ug-gm-primitive-section,GM_Primitives>> which are aggregated to form a more compex geometry. 
+
+<<ug-gm-composite-section,GM_Composites>> are another form of <<ug-gm-primitive-section,GM_Primitive>> collection. These differ from <<ug-gm-multiprimitive-section,GM_MultiPrimitive>> in that the collection can be heterogeneous. It should be  noted that none of the classes in the CityGML 3.0 Standard are decended from <<ug-gm-composite-section,GM_Composites>>. However, the terms "CompositeCurve", "CompositeSurface", and "CompositeSolid" do appear in the text. The `composit` concept can also be seen in the assocation between spaces and surfaces. Therefore, an explanation of `composits` has been included for completeness.
+
+[[ug-gm-primitive-section]]
+====== GM_Primitive
+
+GM_Primitive is the abstract root class of the geometric primitives. Its main purpose is to define the basic "boundary" operation that ties the primitives in each dimension together. A geometric primitive (GM_Primitive) is a geometric object that is not decomposed further into other primitives in the system. This includes curves and surfaces, even though they are composed of curve segments and surface patches, respectively. This composition is a strong aggregation: curve segments and surface patches cannot exist outside the context of a primitive.
+
+NOTE Most geometric primitives are decomposable infinitely many times. Adding a centre point to a line may split that line into two separate lines. A new curve drawn across a surface may divide that surface into two parts, each of which is a surface. This is the reason that the normal definition of primitive as "non-decomposable" is not plausible in a geometry model - the only non-decomposable object in geometry is a point.
+
+[[ug-gm-multiprimitive-section]]
+====== GM_MultiPrimitive
+
+Any geometric object that is used to describe a feature is a collection of <<ug-gm-primitive-section,geometric primitives>>. A homogeneous collection of geometric primitives may be a multi-primitive (GM_MultiPrimitive). Geometric complexes have additional properties specific to the type of <<ug-gm-primitive-section,geometric primitive>> they aggregate.
+
+[[gm-aggregate-figure]]
+.GM_MultiPrimitive Context Diagram
+image::figures/GM_Aggregate.png[align="center"]
+
+[[ug-gm-complex-section]]
+====== GM_Complex
+
+A GM_Complex is a set of disjoint geometric primitives (<<ug-gm-primitive-section,GM_Primitive>>) such that the boundary of each primitive can be represented as the union of other geometric primitives within the complex.
+
+Any geometric object that is used to describe a feature is a collection of <<ug-gm-primitive-section,geometric primitives>>. A collection of geometric primitives may be a geometric complex (GM_Complex). Geometric complexes have additional properties such as closure by boundary operations and mutually exclusive component parts.
+
+[[gm-complex-figure]]
+.GM_Complex Context Diagram
+image::figures/GM_Complex.png[align="center"]
+
+<<ug-gm-primitive-section,GM_Primitive>> and GM_Complex share most semantics, in the meaning of operations, attributes and associations. There is an exception in that a GM_Primitive shall not contain its boundary (except in the trivial case of GM_Point where the boundary is empty), while a GM_Complex shall contain its boundary in all cases. This means that if an instantiated object implements GM_Object operations both as GM_Primitive and as a GM_Complex, the semantics of each set theoretic operation is determined by the its name resolution. Specifically, for a particular object such as GM_CompositeCurve, GM_Primitive::contains (returns FALSE for end points) is different from GM_Complex::contains (returns TRUE for end points). Further, if that object is cast as a GM_Primitive value and as a GM_Complex value, then the two values need not be equal as GM_Objects.
+
+GM_Complex aggregates GM_Primitives through the `element` property. Since this is an aggregation, the target GM_Primitive may be associated with more than one GM_Complex.
+
+A GM_Complex object can also have a whole/part relationship with other GM_Complex objects. The `contains` association is used to associate the `superComplex` instance with the `subComplex` instance.
+
+Note that the geometric primitives in the set are mutually exclusive in the sense that no point is interior to more than one primitive.  The set is closed under boundary operations, meaning that for each element in the complex, there is a collection (also a complex) of geometric primitives that represents the boundary of that element.
+
+[[ug-gm-composite-section]]
+====== GM_Composite
+
+GM_Composite is a subclass of <<ug-gm-complex-section,GM_Complex>>. Like <<ug-gm-complex-section,GM_Complex>>, it has an association with <<ug-gm-primitive-section,GM_Primitives>>. In this case this is an `composition` association with a `composite` role (GM_Composite) and a `generator` role (GM_Primitive). As with the GM_Complex, the GM_Primitve may be associated with more than one GM_Composite.
+
+[[gm-composite-figure]]
+.GM_Composite Context Diagram
+image::figures/GM_Composite.png[align="center"]
+
+====== GM_CompositeSurface
+
+A GM_Composite where the <<ug-gm-primitive-section,GM_Primitives>> is a <<ug-gm-orientable-surface-section,GM_OrientatableSurface>>.
+
+A GM_CompositeSurface is also a subclass of <<ug-gm-primitive-section,GM_Primitives>> is a <<ug-gm-orientable-surface-section,GM_OrientatableSurface>>. One of the few examples of multiple inheritance.
+
+[[gm-composite-surface-figure]]
+.GM_CompositeSurface Context Diagram
+image::figures/GM_CompositeSurface.png[align="center"]
+
+[[ug-gm-orientable-surface-section]]
+====== GM_OrientatableSurface
+
+GM_OrientableSurface consists of a surface and an orientation inherited from GM_OrientablePrimitive. If the orientation is "+", then the GM_OrientableSurface is a GM_Surface. If the orientation is "-", then the GM_OrientableSurface is a reference to a GM_Surface with an upNormal that reverses the direction for this GM_OrientableSurface, the sense of "the top of the surface" (see 6.4.33.2).
+
+  GM_OrientableSurface: 
+  {Orientation = "+" implies primitive = self}; 
+  {(Orientation = "-" and TransfiniteSet::contains(p : DirectPosition)) implies (primitive.upNormal(p) = - self.upNormal(p))};
+
+[[gm-composite-curve-section]]  
+====== GM_CompositeCurve
+
+A GM_CompositeCurve is a list of geometric curves such that the each geometric curve in the set terminates at the start point of the subsequent curve in the list
+
+The `generator` is a GM_OrientableCurve. 
+
+A GM_CompositCurve is also a subclass of GM_OrientatableCurve. One of the few examples of multiple inheritance.
+
+[[gm-composite-curve-figure]]
+.GM_CompositeCurve Context Diagram
+image::figures/GM_CompositeCurve.png[align="center"]
+
+[[ug-gm-orientable-curve-section]]
+====== GM_OrientatableCurve
+
+GM_OrientableCurve consists of a curve and an orientation inherited from GM_OrientablePrimitive. If the orientation is "+", then the GM_OrientableCurve is a <<GM_curve-section,GM_Curve>>. If the orientation is "-", then the GM_OrientableCurve is related to another <<GM_curve-section,GM_Curve>> with a parameterization that reverses the sense of the curve traversal.
+
+  GM_OrientableCurve:
+  {Orientation = "+" implies primitive = self}; +
+  {Orientation = "-" implies primitive.parameterization(length()-s) = parameterization(s)};
+
+[[gm-composite-solid-section]]  
+====== GM_CompositeSolid
+
+A GM_CompositeSolid is a set of geometric solids adjoining one another along common boundary geometric surfaces.
+
+The `generator` is a <<GM_Solid-section,GM_Solid>>. 
+
+A GM_CompositSolid is also a subclass of <<GM_Solid-section,GM_Solid>>. One of the few examples of multiple inheritance.
+
+[[gm-composite-solid-figure]]
+.GM_CompositeSolid Context Diagram
+image::figures/GM_CompositeSolid.png[align="center"]
 
 [[city-objects-section]]
 ==== City Models and City Objects
@@ -156,6 +264,12 @@ All city objects are differentiated into <<abstract-space-concept,spaces>> and <
 <<abstract-space-concept,Spaces>> are entities of volumetric extent in the real world. Buildings, water bodies, trees, rooms, and traffic spaces, for instance, have a volumetric extent. Spaces can be classified into physical spaces and logical spaces. Physical spaces, in turn, can be further classified into occupied spaces and unoccupied spaces.
 
 <<abstract-space-boundary-concept,Space boundaries>>, in contrast, are entities with areal extent in the real world. Space boundaries can be differentiated into different types of thematic surfaces, such as wall surfaces and roof surfaces.
+
+The term `Boundary Surface` is used in the CityGML 3.0 Standard but it is not defined. It is best understood as an artiface of the B_Rep model (<<Foley2002,Foley et al. 2002>>). 
+
+The <<abstract-space-concept,AbstractSpace>> class has a `boundary` association (property) with the <<abstract-space-boundary-concept,AbstractSpaceBoundary>> class. <<abstract-space-boundary-concept,AbstractSpaceBoundary>> is specialized into <<abstract-thematic-surface,thematic surfaces>>. It is the subclassing of the <<abstract-thematic-surface,thematic surfaces>> which gives semantics to the CityGML surfaces. Note that a <<closure-surface-concept,Closure Surface>> is also a thematic surface. so a solid can be fully B_Rep enclosed even if part of the surface does not physically exist.
+
+Consider that the AbstractSpaceBoundary is a Multi-Surface. So it stands to reason that a `space boundary` is an <<abstract-space-boundary-concept,AbstractSpaceBoundary>> which is composed of one or more `Boundary Surfaces`. Per the B_Rep concept, those `Boundary Surfaces` must completely enclose the Abstract Space. This may include the addition of surfaces both internal (but visible) as well as external. Hence, the distinction between internal and external space is moot. Internal surfaces are just a continuation of the space boundary around the solid. 
 
 <<core-boundaries-table>> lists the surfaces that are allowed as thematic surface boundaries of the space classes defined in the Core module:
 
