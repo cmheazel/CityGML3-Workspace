@@ -461,7 +461,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Approval Date:   &lt;yyyy-mm-dd&gt;</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Publication Date:   &lt;2021-01-07&gt;</p></td>
+<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Publication Date:   &lt;2021-01-12&gt;</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">External identifier of this OGC&#174; document: <a href="http://www.opengis.net/doc/EG/CityGML/3.0" class="bare">http://www.opengis.net/doc/EG/CityGML/3.0</a></p></td>
@@ -1977,8 +1977,8 @@ view of the real or hypothetical world that includes everything of interest<br>
 <table id="citygml-core-table" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 1. CityGML Core Sections</caption>
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col style="width: 25%;">
+<col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
@@ -2028,11 +2028,23 @@ Each entry sould include a link to the section which provides the next level of 
 </tr>
 </table>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Alternatly, clicking on the topic should send the user to a discussion of this topic. Consider adding a link to the data dictionary as a separate link.
+</td>
+</tr>
+</table>
+</div>
 <div id="city-model-concept" class="paragraph">
-<p><a href="#CityModel-section"><strong>CityModel</strong></a>: The CityModel class is the root class of every CityGML conceptual model. It&#8217;s primary purpose is to aggregate CityModelMembers.</p>
+<p><a href="#ug-city-model-section"><strong>CityModel</strong></a>: (<a href="#CityModel-section">Data Dictionary</a>) The CityModel class is the root class of every CityGML conceptual model. It&#8217;s primary purpose is to aggregate CityModelMembers.</p>
 </div>
 <div id="city-model-member-concept" class="paragraph">
-<p><a href="#CityModelMember-section"><strong>CityModelMember</strong></a>: CityModelMember is a Union of all possible classes which can be included in a city model. Those classes are summarized in <a href="#city-model-member-table">Table 2</a>.</p>
+<p><a href="#ug-city-model-member-section"><strong>CityModelMember</strong></a>: (<a href="#CityModelMember-section">Data Dictionary</a>) CityModelMember is a Union of all possible classes which can be included in a city model. Those classes are summarized in <a href="#city-model-member-table">Table 2</a>.</p>
 </div>
 <table id="city-model-member-table" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 2. City Model Members</caption>
@@ -2064,10 +2076,10 @@ Each entry sould include a link to the section which provides the next level of 
 </tbody>
 </table>
 <div id="abstract-feature-concept" class="paragraph">
-<p><a href="#AbstractFeature-section"><strong>AbstractFeature</strong></a>: AbstractFeature is a subclass of the AnyFeature class from the ISO General Feature Model. Every &#171;FeatureType&#187; class in a CityGML model is descended from this class. <code>AbstractFeature</code> also defines identifying attributes which are common across the model. Finally, <code>AbstractFeature</code> allows an <a href="#ug-ade-section">ADE</a> to be associated with any &#171;FeatureType&#187; class.</p>
+<p><a href="#ug-abstract-feature-section"><strong>AbstractFeature</strong></a>: (<a href="#AbstractFeature-section">Data Dictionary</a>) AbstractFeature is a subclass of the AnyFeature class from the ISO General Feature Model. Every &#171;FeatureType&#187; class in a CityGML model is descended from this class. <code>AbstractFeature</code> also defines identifying attributes which are common across the model. Finally, <code>AbstractFeature</code> allows an <a href="#ug-ade-section">ADE</a> to be associated with any &#171;FeatureType&#187; class.</p>
 </div>
 <div id="abstract-feature-with-lifespan-concept" class="paragraph">
-<p><a href="#AbstractFeatureWithLifespan-section"><strong>AbstractFeatureWithLifespan</strong></a>: This class extends <a href="#abstract-feature-concept">AbstractFeature</a> with temporal properties for the classes. Most Feature classes in the CityGML model are descended from this class. As such they contain the following attributes:</p>
+<p><a href="#AbstractFeatureWithLifespan-section"><strong>AbstractFeatureWithLifespan</strong></a>: (<a href="#ug-abstract-feature-with-lifespan-section">Data Dictionary</a>)This class extends <a href="#abstract-feature-concept">AbstractFeature</a> with temporal properties for the classes. Most Feature classes in the CityGML model are descended from this class. As such they contain the following attributes:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2101,37 +2113,37 @@ Each entry sould include a link to the section which provides the next level of 
 </ul>
 </div>
 <div id="abstract-appearance-concept" class="paragraph">
-<p><a href="#AbstractAppearace-section"><strong>AbstractAppearance</strong></a>: The root class for all classes related to the rendering of the model including textures and materials.</p>
+<p><a href="#ug-abstract-appearace-section"><strong>AbstractAppearance</strong></a>: (<a href="#AbstractAppearance-section">Data Dictionary</a>) The root class for all classes related to the rendering of the model including textures and materials.</p>
 </div>
 <div id="abstract-version-concept" class="paragraph">
-<p><a href="#AbstractVersion-section"><strong>AbstractVersion</strong></a>: a defined state of a city model consisting of the dedicated versions of all city object instances that belong to the respective city model version.</p>
+<p><a href="#ug-abstract-version-section"><strong>AbstractVersion</strong></a>: (<a href="#AbstractVersion-section">Data Dictionary</a>) a defined state of a city model consisting of the dedicated versions of all city object instances that belong to the respective city model version.</p>
 </div>
 <div id="abstract-version-transition-concept" class="paragraph">
-<p><a href="#AbstractVersionTransition-section"><strong>AbstractVersionTransition</strong></a>: describes the change of the state of a city model from one version to another.</p>
+<p><a href="#ug-abstract-version-transition-section"><strong>AbstractVersionTransition</strong></a>: (<a href="#AbstractVersionTransition-section">Data Dictionary</a>) describes the change of the state of a city model from one version to another.</p>
 </div>
 <div id="abstract-city-object-concept" class="paragraph">
-<p><a href="#AbstractCityObject-section"><strong>AbstractCityObject</strong></a>: The superclass of all thematic classes within the CityGML conceptual model. Significant subclasses of <code>AbstractCityObject</code> are <a href="#abstract-space-concept">AbstractSpace</a> and <a href="#abstract-space-boundary-concept">AbstractSpaceBoundary</a>. These subclasses provide CityGML objects with location, geometry and boundary properties.</p>
+<p><a href="#ug-abstract-city-object-section"><strong>AbstractCityObject</strong></a>: (<a href="#AbstractCityObject-section">Data Dictionary</a>) The superclass of all thematic classes within the CityGML conceptual model. Significant subclasses of <code>AbstractCityObject</code> are <a href="#abstract-space-concept">AbstractSpace</a> and <a href="#abstract-space-boundary-concept">AbstractSpaceBoundary</a>. These subclasses provide CityGML objects with location, geometry and boundary properties.</p>
 </div>
 <div id="abstract-space-concept" class="paragraph">
-<p><a href="#AbstractSpace-setion"><strong>AbstractSpace</strong></a>: Classes which have a volumetric extent in the real world.</p>
+<p><a href="#ug-space-concepts-section"><strong>AbstractSpace</strong></a>: (<a href="#AbstractSpace-section">Data Dictionary</a>) Classes which have a volumetric extent in the real world.</p>
 </div>
 <div id="abstract-occupied-space-concept" class="paragraph">
-<p><a href="#AbstractOccupiedSpace-section"><strong>AbstractOccupiedSpace</strong></a>: Classes which describe <a href="#abstract-space-concept">spaces</a> that are partially or entirely filled with matter.</p>
+<p><a href="#ug-space-concepts-section"><strong>AbstractOccupiedSpace</strong></a>: (<a href="#AbstractOccupiedSpace-section">Data Dictionary</a>) Classes which describe <a href="#abstract-space-concept">spaces</a> that are partially or entirely filled with matter.</p>
 </div>
 <div id="abstract-unoccupied-space-concept" class="paragraph">
-<p><a href="#AbstractUnoccupiedSpace-section"><strong>AbstractUnccupiedSpace</strong></a>: Classes which describe <a href="#abstract-space-concept">spaces</a> that are entirely or mostly free of matter.</p>
+<p><a href="#ug-space-concepts-section"><strong>AbstractUnccupiedSpace</strong></a>: (<a href="#AbstractUnoccupiedSpace-section">Data Dictionary</a>) Classes which describe <a href="#abstract-space-concept">spaces</a> that are entirely or mostly free of matter.</p>
 </div>
 <div id="abstract-logical-space-concept" class="paragraph">
-<p><a href="#AbstractLogicalSpace-section"><strong>AbstractLogicalSpace</strong></a>: Classes which describe <a href="#abstract-space-concept">spaces</a> that are not bounded by physical surfaces but are defined according to thematic considerations.</p>
+<p><a href="#ug-space-concepts-section"><strong>AbstractLogicalSpace</strong></a>: (<a href="#AbstractLogicalSpace-section">Data Dictionary</a>) Classes which describe <a href="#abstract-space-concept">spaces</a> that are not bounded by physical surfaces but are defined according to thematic considerations.</p>
 </div>
 <div id="abstract-space-boundary-concept" class="paragraph">
-<p><a href="#AbstractSpaceBoundary-section"><strong>AbstractSpaceBoundary</strong></a>: Classes which bound a space.</p>
+<p><a href="#ug-space-concepts-section"><strong>AbstractSpaceBoundary</strong></a>: (<a href="#AbstractSpaceBoundary-section">Data Dictionary</a>) Classes which bound a space.</p>
 </div>
 <div id="abstract-thematic-surface-concept" class="paragraph">
-<p><a href="#AbstractThematicSurface-section"><strong>AbstractThematicSurface</strong></a>: The superclass for all thematic surfaces. A type of <a href="#abstract-space-boundary-concept">Space Boundary</a>.</p>
+<p><a href="#ug-space-concepts-section"><strong>AbstractThematicSurface</strong></a>: (<a href="#AbstractThematicSurface-section">Data Dictionary</a>) The superclass for all thematic surfaces. A type of <a href="#abstract-space-boundary-concept">Space Boundary</a>.</p>
 </div>
 <div id="implicit-geometry-concept" class="paragraph">
-<p><a href="#ImplicitGeometry-section"><strong>ImplicitGeometry</strong></a>: A geometry representation where the shape is stored only once as a prototypical geometry, for example a tree or other vegetation object, a traffic light or a traffic sign. This prototypic geometry object can be re-used or referenced many times, wherever the corresponding feature occurs in the 3D city model. A type of <a href="#abstract-feature-concept">Abstract Feature</a>.</p>
+<p><a href="#ug-space-concepts-section"><strong>ImplicitGeometry</strong></a>: (<a href="#ImplicitGeometry-section">Data Dictionary</a>) A geometry representation where the shape is stored only once as a prototypical geometry, for example a tree or other vegetation object, a traffic light or a traffic sign. This prototypic geometry object can be re-used or referenced many times, wherever the corresponding feature occurs in the 3D city model. A type of <a href="#abstract-feature-concept">Abstract Feature</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -2290,7 +2302,7 @@ Each entry sould include a link to the section which provides the next level of 
 </div>
 </div>
 <div class="sect4">
-<h5 id="_gm_compositesurface"><a class="anchor" href="#_gm_compositesurface"></a>GM_CompositeSurface</h5>
+<h5 id="ug-gm_composite-surface-section"><a class="anchor" href="#ug-gm_composite-surface-section"></a>GM_CompositeSurface</h5>
 <div class="paragraph">
 <p>A GM_Composite where the <a href="#ug-gm_primitive-section">GM_Primitives</a> is a <a href="#ug-gm_orientable-surface-section">GM_OrientatableSurface</a>.</p>
 </div>
@@ -2409,13 +2421,45 @@ Each entry sould include a link to the section which provides the next level of 
 </li>
 </ul>
 </div>
+<div class="sect4">
+<h5 id="ug-city-model-section"><a class="anchor" href="#ug-city-model-section"></a>CityModel</h5>
+
+</div>
+<div class="sect4">
+<h5 id="ug-city-model-member-section"><a class="anchor" href="#ug-city-model-member-section"></a>CityModelMember</h5>
+
+</div>
+<div class="sect4">
+<h5 id="ug-abstract-feature-section"><a class="anchor" href="#ug-abstract-feature-section"></a>AbstractFeature</h5>
+
+</div>
+<div class="sect4">
+<h5 id="ug-abstract-feature-with-lifespan-section"><a class="anchor" href="#ug-abstract-feature-with-lifespan-section"></a>AbstractFeatureWithLifespan</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_abstractappearance"><a class="anchor" href="#_abstractappearance"></a>AbstractAppearance</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_abstractversion"><a class="anchor" href="#_abstractversion"></a>AbstractVersion</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_abstractversiontransition"><a class="anchor" href="#_abstractversiontransition"></a>AbstractVersionTransition</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_abstractcityobject"><a class="anchor" href="#_abstractcityobject"></a>AbstractCityObject</h5>
+
+</div>
 </div>
 <div class="sect3">
 <h4 id="ug-space-concepts-section"><a class="anchor" href="#ug-space-concepts-section"></a>8.1.4. Space Concept</h4>
 <div class="paragraph">
 <p>All city objects are differentiated into <a href="#abstract-space-concept">spaces</a> and <a href="#abstract-space-boundary-concept">space boundaries</a>.</p>
 </div>
-<div id="ug-abstract-space-section" class="paragraph">
+<div class="paragraph">
 <p><a href="#abstract-space-concept">Spaces</a> are entities of volumetric extent in the real world. Buildings, water bodies, trees, rooms, and traffic spaces, for instance, have a volumetric extent. Spaces can be classified into physical spaces and logical spaces. Physical spaces, in turn, can be further classified into occupied spaces and unoccupied spaces.</p>
 </div>
 <div id="abstract-space-boundary-section" class="paragraph">
@@ -30670,7 +30714,7 @@ Volume is the measure of the physical space of any 3-D geometric object.<br>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-01-07 20:22:36 UTC
+Last updated 2021-01-12 23:31:48 UTC
 </div>
 </div>
 </body>
