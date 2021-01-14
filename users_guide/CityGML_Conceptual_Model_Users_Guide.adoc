@@ -17,7 +17,7 @@
 |[big]*Open Geospatial Consortium*
 |Submission Date: <yyyy-mm-dd>
 |Approval Date:   <yyyy-mm-dd>
-|Publication Date:   <2021-01-07>
+|Publication Date:   <2021-01-14>
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/EG/CityGML/3.0
 |Internal reference number of this OGC(R) document:    20-066
 |Version: 0.1
@@ -86,9 +86,24 @@ include::clause_4_terms_and_definitions.adoc[]
 
 include::clause_5_conventions.adoc[]
 
+[[ug-citygml-foundations-section]]
+== CityGML Foundations
+
 include::clause_6_foundations.adoc[]
 
-[[citygml_model_section]]
+include::clause_6_1_modularization.adoc[]
+
+include::clause_6_2_modeling_principles.adoc[]
+
+include::clause_6_3_spatial_properties.adoc[]
+
+include::clause_6_4_appearances.adoc[]
+
+include::clause_6_5_dynamic_data.adoc[]
+
+include::clause_6_6_extensions.adoc[]
+
+[[ug-citygml-model-section]]
 == CityGML Model
 
 include::clause_7_1_core.adoc[]
